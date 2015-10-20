@@ -1,13 +1,15 @@
-Warhammer 40,000 Epic Armageddon
+Warhammer 40,000: Epic Armageddon
 ================
 
 ####Contents####
 
 * [Overview][]
+* [Notes][]
 * [Links][]
 
 
 [Overview]: #overview
+[Notes]: #notes
 [Links]: #links
 
 
@@ -22,6 +24,21 @@ to develop - cool! We need you! Take a look at [Getting Started wiki][]
 __Okay, nice project. Is it actually working?__ _I just want those files..._
 
 Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][]
+
+
+##Notes##
+
+__Groups__
+
+The datafiles are cross-compatible with army lists currently published and maintained by NetEA, F-ERC, or EpicUK, where applicable. When you create a new roster, you should begin by selecting the community to which you belong, before adding your units.
+
+__Translations__
+
+You may notice the french language rules have variations. Each active community has made developments to suit the needs of their group; the french translations come from F-ERC and reflect their particular developments.
+
+__Army Lists__
+
+The first 50 datafiles provided here cover 126 of the _180+_ army lists currently available, as well as incorporating supplementary features, like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from GW, NetEA, F-ERC, or EpicUK, to avoid any confusion.)
 
 
 ##Links##
