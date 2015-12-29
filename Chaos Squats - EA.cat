@@ -300,7 +300,14 @@
     <entry id="0633-7284-04c7-b20c" name="Chaos Squat Hellbore" points="125.0" categoryId="e551-c527-434e-59a5" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="b56b-3825-52c1-28cc" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -812,7 +819,7 @@
         <link id="61ac-514b-a938-1bf8" targetId="1171-99c8-3276-432d" linkType="rule">
           <modifiers/>
         </link>
-        <link id="8eaa-34fa-dc8e-1e66" targetId="1071-9fce-b1be-c852" linkType="rule">
+        <link id="8eaa-34fa-dc8e-1e66" targetId="7f77-d072-455e-b5f3" linkType="rule">
           <modifiers/>
         </link>
         <link id="467e-1bf6-f318-d11c" targetId="67ce-430b-24dd-ffbc" linkType="entry">
@@ -1409,7 +1416,14 @@
     <entry id="7f90-0db2-93ce-b27e" name="2x Mole" points="50.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="b56b-3825-52c1-28cc" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -1660,14 +1674,7 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
     <rule id="7f77-d072-455e-b5f3" name="Critical Hit: Damaged" hidden="false">
       <description>Takes 1 additional point of damage.
 &lt;I&gt;&lt;B&gt;Touche Critique: Endommagé:&lt;/B&gt; Perd un point de dommage supplémentaire.&lt;/I&gt;</description>
-      <modifiers>
-        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
     </rule>
     <rule id="2884-3f68-00cb-49d5" name="Critical Hit: Destroyed" hidden="false">
       <description>The unit is destroyed.
@@ -1677,10 +1684,6 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
     <rule id="21d4-a98c-b744-ed73" name="Critical Hit: Explosion" hidden="false">
       <description>Destroyed, units within 5cm hit on D6 roll of 6.
 &lt;I&gt;&lt;B&gt;Touche Critique: Explosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche sur un 6.&lt;/I&gt;</description>
-      <modifiers/>
-    </rule>
-    <rule id="1071-9fce-b1be-c852" name="Critical Hit: Kollossus" hidden="false">
-      <description>Lose an extra DC.</description>
       <modifiers/>
     </rule>
     <rule id="bc1f-9a32-1f7f-f660" name="Critical Hit: Lord of Battle" hidden="false">
@@ -2257,7 +2260,7 @@ S&apos;il y a plus d&apos;une unité de Tunnelier qui émerge, après le placeme
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Disrupt, Indirect Fire, Single Shot&lt;BR&gt;Titan Killer (D3+1)&lt;BR&gt;Ignore Cover, Indirect Fire&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Fearless, Inspiring, Invulnerable Save, Reinforced Armour, Thick Rear Armour, Walker"/>
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="8"/>
-        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Kollossus"/>
+        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Damaged"/>
       </characteristics>
       <modifiers/>
     </profile>
