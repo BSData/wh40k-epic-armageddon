@@ -38,7 +38,7 @@ You may notice the french language rules have variations. Each active community 
 
 __Army Lists__
 
-The first 50 datafiles provided here covered more than 120 of the _180+_ army lists currently available, as well as incorporating supplementary features, like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
+The first 50 datafiles provided here covered more than 120 of the _200plus_ army lists currently available, as well as incorporating supplementary features, like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
 
 
 ##Links##
