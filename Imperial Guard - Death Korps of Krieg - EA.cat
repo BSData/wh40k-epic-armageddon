@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd67-0a74-1614-f112" revision="2" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Imperial Guard: Death Korps of Krieg" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd67-0a74-1614-f112" revision="3" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Imperial Guard: Death Korps of Krieg" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="e6de-b411-49c2-a59c" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -1144,10 +1144,23 @@
             <link id="5a3f-9649-b8bb-e2ae" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
               <modifiers>
                 <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+                            <condition parentId="230e-66d6-231c-0d18" childId="ff0c-da3a-b012-b64e" field="selections" type="equal to" value="1.0"/>
+                          </conditions>
+                          <conditionGroups/>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </link>
@@ -1257,7 +1270,14 @@
           <modifiers/>
           <links>
             <link id="f4b3-2e62-e687-0356" targetId="6b11-3346-af7f-fedf" linkType="entry">
-              <modifiers/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
             <link id="0f9b-0f58-4b7e-7646" targetId="ff0c-da3a-b012-b64e" linkType="entry">
               <modifiers/>
@@ -1406,7 +1426,7 @@
         </link>
       </links>
     </entry>
-    <entry id="4610-e1e0-672f-0e88" name="Heavy Tank Platoon" points="350.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="4610-e1e0-672f-0e88" name="Heavy Tank Platoon" points="325.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="4ac6-868f-591c-483e" name="Macharius" points="0.0" categoryId="(No Category)" type="unit" minSelections="2" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries/>
@@ -2307,17 +2327,10 @@
       <entryGroups>
         <entryGroup id="4442-010a-ccea-9be9" name="Tanks" defaultEntryId="3c80-6484-5ff6-a522" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="6391-cf65-d49a-6aba" name="Vanquisher" points="45.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="6391-cf65-d49a-6aba" name="Vanquisher" points="50.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
               <entries/>
               <entryGroups/>
-              <modifiers>
-                <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="force type" childId="5d7a-3784-2eea-3ae6" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
               <rules/>
               <profiles/>
               <links>
@@ -3445,31 +3458,66 @@
       <profiles/>
       <links/>
     </entry>
-    <entry id="6b59-1c81-5479-cd40" name="Gorgon Siege Transporters" points="25.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+    <entry id="6b59-1c81-5479-cd40" name="Gorgon Siege Transporters" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries/>
       <entryGroups>
-        <entryGroup id="1a20-0ec6-5dd7-7e87" name="Squadron" defaultEntryId="c067-dcdf-d8fd-02dd" minSelections="2" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
+        <entryGroup id="1a20-0ec6-5dd7-7e87" name="Squadron" defaultEntryId="b7f5-512f-4bdd-2694" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="9894-a548-cb15-7b56" name="2x Gorgon w/ Mortars" points="225.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="924a-9030-2af6-70ed" targetId="66fe-0215-7b1f-d718" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="a270-126d-67a1-615c" targetId="8f40-5c50-5ddf-3305" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="b66d-73bb-75cd-479d" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="2416-3ab3-ef31-da18" targetId="eed6-65a3-079c-59f8" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="0992-d35b-81a8-037c" targetId="2fd7-1aa7-5114-2151" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="9e3b-da45-1498-b5c1" targetId="6a62-b80f-636e-6e84" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+            <entry id="b7f5-512f-4bdd-2694" name="2x Gorgon" points="200.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="f302-3caf-cbf0-7f43" targetId="21b5-d6dd-44eb-b55c" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="6946-8e3f-092d-9a1f" targetId="8f40-5c50-5ddf-3305" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="a16d-9b82-a7b2-764b" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="9494-4e8e-2119-e738" targetId="eed6-65a3-079c-59f8" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="2ab0-4c62-dd1e-a135" targetId="2fd7-1aa7-5114-2151" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
           <entryGroups/>
           <modifiers/>
-          <links>
-            <link id="c067-dcdf-d8fd-02dd" targetId="6b11-3346-af7f-fedf" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-            <link id="9de0-7b9a-2554-1e31" targetId="ff0c-da3a-b012-b64e" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-          </links>
+          <links/>
         </entryGroup>
       </entryGroups>
       <modifiers>
@@ -3664,12 +3712,16 @@
         <entryGroup id="48da-37a0-cb05-c8b3" name="Transport" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <links>
             <link id="033b-f890-d2cc-5c96" targetId="6b11-3346-af7f-fedf" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="bdc9-c53c-c1b2-ce4d" targetId="ff0c-da3a-b012-b64e" linkType="entry">
               <modifiers/>
             </link>
           </links>
@@ -4366,7 +4418,14 @@
         <entry id="387c-df1a-30ae-47c7" name="3x Trojan Tractor" points="0.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries/>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="points" value="25.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <rules/>
           <profiles/>
           <links>
@@ -4519,7 +4578,7 @@ You may not include more than one Commissar per formation. You may not add a Com
       <modifiers/>
     </rule>
     <rule id="8f40-5c50-5ddf-3305" name="Critical Hit: May Not Move" hidden="false">
-      <description>The unit is immobilised. Subsequent critical hits destroy the unit.
+      <description>Immobilised and D6 units being transported are hit. Subsequent critical hits destroy the unit.
 &lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;</description>
       <modifiers>
         <modifier type="set" field="description" value="May not move, D3 units hit, further critical hits destroy the unit." repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -4676,7 +4735,7 @@ Les boucliers désactivés peuvent être réparés. Un engin de guerre peu répa
       <modifiers/>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2015-12-02
+      <description>netea-tournament-pack-2016-02-18
 siege #mossino campaign version 3</description>
       <modifiers/>
     </rule>
@@ -5078,6 +5137,12 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Walker" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
     </profile>
     <profile id="d231-c93f-c2f3-b28b" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Death Riders Scouts" hidden="false">
@@ -5156,7 +5221,20 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Massive Explosion"/>
       </characteristics>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Indirect Fire, One Shot, Titan Killer (D6)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="fb51-1ee4-ea0e-41eb" value="2" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </profile>
     <profile id="e021-b0ae-55d5-cb67" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Earthshaker Platform" hidden="false">
       <characteristics>
@@ -5304,7 +5382,14 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="May Not Move"/>
       </characteristics>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="2x Twin Heavy Stubber&lt;BR&gt;2x Twin Heavy Bolter" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </profile>
     <profile id="92a1-89e4-71d0-6132" profileTypeId="87ab-2658-3f0c-128d" name="Gorgon HF" hidden="false">
       <characteristics>
@@ -5762,6 +5847,28 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         </modifier>
       </modifiers>
     </profile>
+    <profile id="83ec-8e63-bf24-471f" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Leman Russ Vanquisher" hidden="true">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="20cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="4+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Vanquisher&lt;BR&gt;Lascannon&lt;BR&gt;2x Heavy Bolter&lt;BR&gt;Autocannon"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="75cm&lt;BR&gt;45cm&lt;BR&gt;30cm&lt;BR&gt;45cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP4+/AT2+&lt;BR&gt;AT5+&lt;BR&gt;AP5+&lt;BR&gt;AP5+/AT6+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour"/>
+      </characteristics>
+      <modifiers>
+        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="5d7a-3784-2eea-3ae6" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+    </profile>
     <profile id="b200-e009-fd1a-c6d9" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Leman Russ Vanquisher Mossino" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
@@ -6171,14 +6278,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="6"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Reactor Damage"/>
       </characteristics>
-      <modifiers>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;Forward Arc" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
     </profile>
     <profile id="1def-1ade-1d34-ca49" profileTypeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" name="Rocket Launcher" hidden="false">
       <characteristics>
@@ -6575,28 +6675,6 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Reactor Damage"/>
       </characteristics>
       <modifiers/>
-    </profile>
-    <profile id="83ec-8e63-bf24-471f" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Leman Russ Vanquisher" hidden="true">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="20cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="4+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Vanquisher&lt;BR&gt;Lascannon&lt;BR&gt;2x Heavy Bolter&lt;BR&gt;Autocannon"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="75cm&lt;BR&gt;45cm&lt;BR&gt;30cm&lt;BR&gt;45cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP4+/AT2+&lt;BR&gt;AT5+&lt;BR&gt;AP5+&lt;BR&gt;AP5+/AT6+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour"/>
-      </characteristics>
-      <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="5d7a-3784-2eea-3ae6" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
     </profile>
   </sharedProfiles>
 </catalogue>

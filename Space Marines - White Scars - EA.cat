@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7b3b-7bb3-b6ea-8deb" revision="1" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Space Marines: White Scars" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7b3b-7bb3-b6ea-8deb" revision="2" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Space Marines: White Scars" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="5a05-95e5-0ba7-4228" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -533,6 +533,25 @@
         </link>
       </links>
     </entry>
+    <entry id="5d7a-3784-2eea-3ae6" name="Intervention Force" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="6686-229d-c8ad-3fa7" targetId="f1f4-f8e9-72b0-ee46" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
     <entry id="b41e2320-2fb8-75a8-06fb-4e8c98f3d8aa" name="Land Raiders" points="350.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true" page="0">
       <entries>
         <entry id="7d06-4744-ae98-a900" name="Land Raider" points="0.0" categoryId="(No Category)" type="model" minSelections="4" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -733,7 +752,7 @@
             </entry>
           </entries>
           <entryGroups>
-            <entryGroup id="97cf-cc23-888a-73e3" name="Typhoons" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entryGroup id="97cf-cc23-888a-73e3" name="Typhoons" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries>
                 <entry id="a281-c5f5-d049-b3d6" name="1x Land Speeder Typhoon" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
                   <entries/>
@@ -1789,10 +1808,10 @@
             <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
-                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                    <condition parentId="force type" childId="5d7a-3784-2eea-3ae6" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="force type" childId="5535-5d7a-519a-e9b4" field="selections" type="equal to" value="1.0"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -1974,6 +1993,12 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="7a5cde4c-addd-9a47-958c-b5cd13f6fce7" childId="eadade8a-545f-ce5e-94ad-9bda51717b37" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
               </modifiers>
               <rules/>
               <profiles/>
@@ -2016,6 +2041,22 @@
       <links>
         <link id="8e53473c-008e-7799-7ea4-f317f71c2bdd" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" linkType="entry group">
           <modifiers/>
+        </link>
+        <link id="7e62-1eee-3405-80b9" targetId="eadade8a-545f-ce5e-94ad-9bda51717b37" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="force type" childId="5d7a-3784-2eea-3ae6" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -2592,25 +2633,6 @@
       <profiles/>
       <links>
         <link id="3585-5e28-dd77-06bb" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" linkType="entry group">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="5d7a-3784-2eea-3ae6" name="Intervention Force" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
-      <entries/>
-      <entryGroups/>
-      <modifiers>
-        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="6686-229d-c8ad-3fa7" targetId="f1f4-f8e9-72b0-ee46" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -3389,6 +3411,10 @@ Les boucliers désactivés peuvent être réparés. Un engin de guerre peu répa
 &lt;I&gt;&lt;B&gt;Charismatique:&lt;/B&gt; Chaque unité ou personnage Charismatique prenant part à un assaut ajoute +1 au résultat du dé (tant qu&apos;il ou elle reste en vie bien sûr).&lt;/I&gt;</description>
       <modifiers/>
     </rule>
+    <rule id="f1f4-f8e9-72b0-ee46" name="Intervention Force" hidden="false">
+      <description>Adjusted profile and point values for the Mossinian Intervention Force army list featured in Siege.</description>
+      <modifiers/>
+    </rule>
     <rule id="1171-99c8-3276-432d" name="Invulnerable Save" hidden="false">
       <description>Units with an invulnerable save receive a second save of 6+ if they fail their first save for any reason. They may take this second save against any form of attack, even attacks that would normally not allow a save to be taken. No modifiers ever apply to the second save.
 &lt;I&gt;&lt;B&gt;Sauvegarde Invulnérable:&lt;/B&gt; Une unité ayant cette capacité reçoit une deuxième sauvegarde de 6+ si elle rate sa première sauvegarde. Elles peuvent effectuer cette deuxième tentative contre n&apos;importe quelle attaque, même celles qui annulent normalement les sauvegardes d&apos;armures. Aucun modificateur ne s&apos;applique jamais à cette deuxième sauvegarde.&lt;/I&gt;</description>
@@ -3415,7 +3441,7 @@ Les boucliers désactivés peuvent être réparés. Un engin de guerre peu répa
       <modifiers/>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2015-12-02
+      <description>netea-tournament-pack-2016-02-18
 siege #mossino campaign version 3</description>
       <modifiers/>
     </rule>
@@ -3620,10 +3646,6 @@ Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter l
 Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks).
 En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par des modules d’atterrissage. Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur White Scar ou d’une barge de bataille pour déployer les modules d’atterrissage.
 Les formations étant marquées « plus transports » ne peuvent pas abandonner leurs transports pour être mise à pied, elles doivent être déployées en Module d’atterrissage ou Thunderhawk/Barge d’assaut à la place. De plus si l’option drop pod est utilisée, toutes les formations marqué « plus transports » devront être déployé en drop pod.&lt;/I&gt;</description>
-      <modifiers/>
-    </rule>
-    <rule id="f1f4-f8e9-72b0-ee46" name="Intervention Force" hidden="false">
-      <description>Adjusted profile and point values for the Mossinian Intervention Force army list featured in Siege.</description>
       <modifiers/>
     </rule>
   </sharedRules>
@@ -4372,14 +4394,7 @@ Les formations étant marquées « plus transports » ne peuvent pas abandonner 
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="6"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Reactor Damage"/>
       </characteristics>
-      <modifiers>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;Forward Arc" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
     </profile>
     <profile id="2815-61f6-bad0-120e" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Rhino" hidden="false">
       <characteristics>
