@@ -30,7 +30,7 @@ Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][
 
 __Groups__
 
-The datafiles are cross-compatible with army lists currently published and maintained by NetEA, F-ERC, or EpicUK, where applicable. When you create a new roster, you should begin by selecting the community to which you belong, before adding your units.
+The datafiles are cross-compatible with army lists currently published and maintained by NetEA, F-ERC, or EpicUK, where applicable. When you create a new roster, you should begin by selecting the community to which you belong, before adding your units. The Horus Heresy files use army lists from EpicAU.
 
 __Translations__
 
