@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c175-4d7a-3512-4722" revision="0" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Space Marines: Raven Guard" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c175-4d7a-3512-4722" revision="1" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Space Marines: Raven Guard" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="5a05-95e5-0ba7-4228" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -137,6 +137,16 @@
         <link id="1f35-c2f4-f1d3-ba84" targetId="2351-0e48-1b2a-b67f" linkType="entry group">
           <modifiers/>
         </link>
+        <link id="e648-c0aa-7403-2ae1" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
       </links>
     </entry>
     <entry id="8b0b99e9-b90e-02d1-9c8b-1b9eed5c0886" name="Bikes" points="200.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -197,6 +207,16 @@
         </link>
         <link id="335a-c291-6975-aeda" targetId="2351-0e48-1b2a-b67f" linkType="entry group">
           <modifiers/>
+        </link>
+        <link id="3d1f-e4fc-52ae-b6a3" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -1589,6 +1609,16 @@
             </modifier>
           </modifiers>
         </link>
+        <link id="e336-d4cd-4bf4-c842" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
       </links>
     </entry>
     <entry id="7a5cde4c-addd-9a47-958c-b5cd13f6fce7" name="Terminator" points="350.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -1990,7 +2020,13 @@
       </links>
     </entry>
   </entries>
-  <rules/>
+  <rules>
+    <rule id="a977-3c81-b7e5-bc3c" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
+      <description>&lt;small&gt;This BattleScribe datafile is an unofficial player aid for the Warhammer 40,000 universe; it is not endorsed by Games Workshop Limited.
+GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhammer 40,000, the ‘Aquila’ Double-headed Eagle logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likenesses thereof, are either ® or ™, and/or © Games Workshop Limited, variably registered around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners.&lt;/small&gt;</description>
+      <modifiers/>
+    </rule>
+  </rules>
   <links>
     <link id="a2c6-a634-b834-32f5" targetId="bf2f-04f5-37fe-59aa" linkType="rule">
       <modifiers/>
@@ -2882,7 +2918,14 @@ You don’t have to take Rhinos if you don’t want to. If you’d rather field 
 You may choose to replace a detachment’s Rhinos with Drop Pods. If you do this then the detachment will enter play in a Drop Pod using the rules for planetfall. Note that if you choose to do this you will also require at least one Space Marine Strike Cruiser or Battle Barge to deploy the drop pods from.
 &lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines étant une armée très mobile, ils ont toujours la possibilité de partir au combat avec leurs transports emblématiques que sont les Rhinos.
 Les formations ayant cette caractéristique dans la description des unités, peuvent prendre autant de Rhinos que nécessaire pour pouvoir transporter la formation sans coût supplémentaire. Il ne peuvent se voir attribuer plus de Rhinos que nécessaire pour le transport de la formation. Vous pouvez également décider de remplacer les rhinos par des modules d&apos;atterrissage. Dans ce cas, les unités entreront en jeu avec ces modules en suivant les règles d&apos;Assaut Planétaire.&lt;/I&gt;</description>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="fbc9-d148-2c44-1226" name="Strategy Rating &amp; Initiative (RG)" hidden="false">
       <description>Raven Guard Space Marine armies have a Strategy rating of 5. All Raven Guard and Titan Legion Battlegroups have an initiative rating of 1+. Imperial Navy aircraft formations have an initiative rating of 2+.
