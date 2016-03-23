@@ -973,73 +973,66 @@
         </entry>
       </entries>
       <entryGroups>
-        <entryGroup id="833f-96b2-d07c-be5d" name="Transport" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="7aad-8fb2-c319-4729" name="APC Transport" minSelections="0" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
-          <entryGroups>
-            <entryGroup id="2597-6306-5e4a-436d" name="APC" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="7aad-8fb2-c319-4729" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="b562-3bab-9950-062c" targetId="bd4a-d64e-f47f-c866" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="7dd5-6c09-a4f7-61ef" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="e557-0b9c-25af-b683" targetId="9137-5e3b-d46c-79a2" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+        <entryGroup id="67f8-8018-1790-db03" name="Airborne Transport" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="e74b-7e0b-7803-3a3a" childId="eadade8a-545f-ce5e-94ad-9bda51717b37" field="selections" type="at least" value="1.0"/>
+                    <condition parentId="e74b-7e0b-7803-3a3a" childId="7aad-8fb2-c319-4729" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="eca1-8788-ffec-9ba3" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
               <modifiers>
-                <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="2597-6306-5e4a-436d" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
+                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="e74b-7e0b-7803-3a3a" childId="7aee-b076-109e-b10c" field="selections" type="at least" value="1.0"/>
+                  </conditions>
                   <conditionGroups/>
                 </modifier>
               </modifiers>
-              <links>
-                <link id="3641-c768-6c19-014b" targetId="bd4a-d64e-f47f-c866" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="1612-1c3b-c453-6285" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="15e9-8aa7-033f-3725" targetId="9137-5e3b-d46c-79a2" linkType="entry">
-                  <modifiers/>
-                </link>
-              </links>
-            </entryGroup>
-            <entryGroup id="9439-61c0-1904-e69f" name="Airborne" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
+            </link>
+            <link id="c880-96cd-422c-f0b1" targetId="fe9c-3e26-da3c-2d08" linkType="entry">
               <modifiers>
                 <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition parentId="e74b-7e0b-7803-3a3a" childId="2597-6306-5e4a-436d" field="selections" type="at least" value="1.0"/>
-                        <condition parentId="e74b-7e0b-7803-3a3a" childId="eadade8a-545f-ce5e-94ad-9bda51717b37" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition parentId="e74b-7e0b-7803-3a3a" childId="2351-0e48-1b2a-b67f" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
                 </modifier>
               </modifiers>
-              <links>
-                <link id="5edc-fa86-a495-d3b7" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
-                  <modifiers>
-                    <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions>
-                        <condition parentId="e74b-7e0b-7803-3a3a" childId="7aee-b076-109e-b10c" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                </link>
-                <link id="7bca-e79d-34ed-b4b1" targetId="fe9c-3e26-da3c-2d08" linkType="entry">
-                  <modifiers>
-                    <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions>
-                        <condition parentId="e74b-7e0b-7803-3a3a" childId="2351-0e48-1b2a-b67f" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                </link>
-              </links>
-            </entryGroup>
-          </entryGroups>
-          <modifiers/>
-          <links/>
+            </link>
+          </links>
         </entryGroup>
       </entryGroups>
       <modifiers>
@@ -1202,7 +1195,7 @@
               <modifiers>
                 <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
-                    <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
                   </conditions>
                   <conditionGroups/>
                 </modifier>
@@ -1336,124 +1329,26 @@
           <modifiers/>
           <links/>
         </entryGroup>
-        <entryGroup id="9c66-ea41-1a1b-ff05" name="Transport" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="8ae4-485c-d2eb-e84b" name="APC Transport" minSelections="0" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
-          <entryGroups>
-            <entryGroup id="f6a5-026f-4ed7-d82d" name="APC" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers>
-                <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="f6a5-026f-4ed7-d82d" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-                <modifier type="increment" field="maxSelections" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="18f9-798a-4c41-9d67" field="selections" type="equal to" value="1.0"/>
-                        <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="460d-e951-1a3a-46a7" field="selections" type="equal to" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <links>
-                <link id="4172-d96a-b57f-785d" targetId="bd4a-d64e-f47f-c866" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="a2cb-da43-4fc0-ea9a" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="c60c-9917-e993-f55b" targetId="9137-5e3b-d46c-79a2" linkType="entry">
-                  <modifiers/>
-                </link>
-              </links>
-            </entryGroup>
-            <entryGroup id="491b-3fe8-6d0c-1969" name="Airborne" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries>
-                <entry id="38f6-233b-082f-fc3c" name="6x Land Speeder Storm" points="150.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-                  <entries/>
-                  <entryGroups/>
-                  <modifiers>
-                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions/>
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="fa7f-73da-59aa-12c5" field="selections" type="equal to" value="1.0"/>
-                            <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="e6fe-dbfc-2228-74c5" field="selections" type="equal to" value="1.0"/>
-                          </conditions>
-                          <conditionGroups/>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                  <rules/>
-                  <profiles/>
-                  <links>
-                    <link id="d3cc-4b42-6e66-50a0" targetId="176c-0f3b-ffbb-e680" linkType="profile">
-                      <modifiers/>
-                    </link>
-                    <link id="a029-2094-0e16-361a" targetId="5742-8344-ce29-fe2a" linkType="rule">
-                      <modifiers/>
-                    </link>
-                    <link id="e816-ccd8-e2da-ab62" targetId="7fb6-14cc-145e-77be" linkType="rule">
-                      <modifiers/>
-                    </link>
-                  </links>
-                </entry>
-                <entry id="8f56-044a-8247-e1c5" name="4x Land Speeder Storm" points="100.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-                  <entries/>
-                  <entryGroups/>
-                  <modifiers>
-                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions/>
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="460d-e951-1a3a-46a7" field="selections" type="equal to" value="1.0"/>
-                            <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="18f9-798a-4c41-9d67" field="selections" type="equal to" value="1.0"/>
-                          </conditions>
-                          <conditionGroups/>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                  <rules/>
-                  <profiles/>
-                  <links>
-                    <link id="3c4a-f25b-30f9-f03a" targetId="176c-0f3b-ffbb-e680" linkType="profile">
-                      <modifiers/>
-                    </link>
-                    <link id="662e-3bb6-acb8-ef2a" targetId="5742-8344-ce29-fe2a" linkType="rule">
-                      <modifiers/>
-                    </link>
-                    <link id="c61c-567e-a2b2-7073" targetId="7fb6-14cc-145e-77be" linkType="rule">
-                      <modifiers/>
-                    </link>
-                  </links>
-                </entry>
-              </entries>
-              <entryGroups/>
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <entryGroups/>
+          <modifiers>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="8ae4-485c-d2eb-e84b" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
                   <conditions>
-                    <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="f6a5-026f-4ed7-d82d" field="selections" type="at least" value="1.0"/>
+                    <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="460d-e951-1a3a-46a7" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="18f9-798a-4c41-9d67" field="selections" type="equal to" value="1.0"/>
                   </conditions>
                   <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <links>
-                <link id="6bf7-6e58-8c60-206f" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
-                  <modifiers/>
-                </link>
-              </links>
-            </entryGroup>
-          </entryGroups>
-          <modifiers>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
             <modifier type="hide" field="minSelections" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
@@ -1461,7 +1356,103 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
-          <links/>
+          <links>
+            <link id="5cd7-cc36-91f3-98c5" targetId="bd4a-d64e-f47f-c866" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="26f4-2de5-92f9-a6bf" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="c914-5637-938d-b1c1" targetId="9137-5e3b-d46c-79a2" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+        <entryGroup id="8dd8-0bf4-9880-a50f" name="Airborne Transport" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="c0e4-b3dc-a088-9e8e" name="6x Land Speeder Storm" points="150.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="fa7f-73da-59aa-12c5" field="selections" type="equal to" value="1.0"/>
+                        <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="e6fe-dbfc-2228-74c5" field="selections" type="equal to" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="4576-f45e-db4e-137a" targetId="176c-0f3b-ffbb-e680" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="1c8b-a7b7-5da7-a029" targetId="5742-8344-ce29-fe2a" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="99d4-1eff-bb9e-a5ef" targetId="7fb6-14cc-145e-77be" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+            <entry id="3e1c-c4f8-c97a-7601" name="4x Land Speeder Storm" points="100.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="460d-e951-1a3a-46a7" field="selections" type="equal to" value="1.0"/>
+                        <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="18f9-798a-4c41-9d67" field="selections" type="equal to" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="b828-c803-6c88-5323" targetId="176c-0f3b-ffbb-e680" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="db1b-e21e-64e0-6afc" targetId="5742-8344-ce29-fe2a" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="9f2a-5bed-4175-fcbf" targetId="7fb6-14cc-145e-77be" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="b2e922d1-036a-0225-a147-1825633d1f7b" childId="8ae4-485c-d2eb-e84b" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="hide" field="minSelections" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="b744-777b-d15b-fa6e" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
         </entryGroup>
       </entryGroups>
       <modifiers/>
@@ -1536,65 +1527,22 @@
         </entry>
       </entries>
       <entryGroups>
-        <entryGroup id="76f6-9db2-c58f-d7ca" name="Transport" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="684d-f047-d6b0-6593" name="Airborne Transport" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
-          <entryGroups>
-            <entryGroup id="932f-6cf7-c841-6687" name="APC" minSelections="0" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers>
-                <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="932f-6cf7-c841-6687" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <links>
-                <link id="4138-142a-daf7-0ac0" targetId="bd4a-d64e-f47f-c866" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="b1d7-ee6f-9138-a58a" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="c36b-ddce-ae84-307a" targetId="9137-5e3b-d46c-79a2" linkType="entry">
-                  <modifiers/>
-                </link>
-              </links>
-            </entryGroup>
-            <entryGroup id="644c-b8ff-844d-4459" name="Airborne" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="932f-6cf7-c841-6687" field="selections" type="at least" value="1.0"/>
-                        <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="eadade8a-545f-ce5e-94ad-9bda51717b37" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <links>
-                <link id="1c7a-5efb-13d8-d53f" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="183d-177a-3719-f8c0" targetId="fe9c-3e26-da3c-2d08" linkType="entry">
-                  <modifiers>
-                    <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions>
-                        <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="2351-0e48-1b2a-b67f" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                </link>
-              </links>
-            </entryGroup>
-          </entryGroups>
+          <entryGroups/>
           <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="eadade8a-545f-ce5e-94ad-9bda51717b37" field="selections" type="at least" value="1.0"/>
+                    <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="e999-cd33-c88a-661b" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
             <modifier type="hide" field="minSelections" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
@@ -1602,7 +1550,48 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
-          <links/>
+          <links>
+            <link id="1d20-cae0-1b4c-a567" targetId="8d5c-e6bc-54ab-1352" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="71e4-56e5-4b50-dbd0" targetId="fe9c-3e26-da3c-2d08" linkType="entry">
+              <modifiers>
+                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="2351-0e48-1b2a-b67f" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+          </links>
+        </entryGroup>
+        <entryGroup id="e999-cd33-c88a-661b" name="APC Transport" minSelections="0" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="e999-cd33-c88a-661b" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="hide" field="minSelections" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="3e53-111b-88fd-e6c1" targetId="bd4a-d64e-f47f-c866" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="cfcc-b9c3-ade4-6c64" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="70ca-0763-e44e-1881" targetId="9137-5e3b-d46c-79a2" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
         </entryGroup>
       </entryGroups>
       <modifiers/>
