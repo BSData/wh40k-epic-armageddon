@@ -736,21 +736,7 @@
       <entryGroups>
         <entryGroup id="c7c8-163a-687c-8c14" name="APC" minSelections="0" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
-          <entryGroups>
-            <entryGroup id="4deb-0d72-f2af-8839" name="Razorbacks" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <links>
-                <link id="d148-9c76-9d20-c34d" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="93b6-08f3-22d9-d07a" targetId="9137-5e3b-d46c-79a2" linkType="entry">
-                  <modifiers/>
-                </link>
-              </links>
-            </entryGroup>
-          </entryGroups>
+          <entryGroups/>
           <modifiers>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="c7c8-163a-687c-8c14" incrementChildId="b1d6-9710-e7c4-46a6" incrementField="selections" incrementValue="1.0">
               <conditions>
@@ -767,6 +753,12 @@
           </modifiers>
           <links>
             <link id="53eb-6c20-6166-43b0" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="4996-1aa1-b75f-9d27" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="348a-9405-cb8a-3d8a" targetId="9137-5e3b-d46c-79a2" linkType="entry">
               <modifiers/>
             </link>
           </links>
@@ -788,10 +780,16 @@
               <conditionGroups/>
             </modifier>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="2f67-4894-a61e-7ebc" childId="4deb-0d72-f2af-8839" field="selections" type="at least" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="2f67-4894-a61e-7ebc" childId="4e1f-46d7-c8f1-e11b" field="selections" type="at least" value="1.0"/>
+                    <condition parentId="2f67-4894-a61e-7ebc" childId="9137-5e3b-d46c-79a2" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <links>
@@ -1019,48 +1017,36 @@
       <entryGroups>
         <entryGroup id="618b-64b1-3ef7-8d44" name="APC" minSelections="0" maxSelections="0" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
-          <entryGroups>
-            <entryGroup id="689d-d240-d469-0202" name="Razorbacks" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="d8bd-89b4-4ac5-b1f4" childId="40da-c89f-4a9e-236d" field="selections" type="at least" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <links>
-                <link id="6316-5273-b0fd-8e41" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
-                  <modifiers/>
-                </link>
-                <link id="ab07-2903-1dc1-7ef2" targetId="9137-5e3b-d46c-79a2" linkType="entry">
-                  <modifiers/>
-                </link>
-              </links>
-            </entryGroup>
-          </entryGroups>
+          <entryGroups/>
           <modifiers>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="618b-64b1-3ef7-8d44" incrementChildId="b1d6-9710-e7c4-46a6" incrementField="selections" incrementValue="1.0">
-              <conditions/>
+              <conditions>
+                <condition parentId="d8bd-89b4-4ac5-b1f4" childId="ca32-b888-b477-6ec5" field="selections" type="equal to" value="0.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="d8bd-89b4-4ac5-b1f4" incrementChildId="8d5f-af23-f642-9741" incrementField="selections" incrementValue="1.0">
-              <conditions/>
+              <conditions>
+                <condition parentId="d8bd-89b4-4ac5-b1f4" childId="ca32-b888-b477-6ec5" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="d8bd-89b4-4ac5-b1f4" childId="ca32-b888-b477-6ec5" field="selections" type="at least" value="1.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <links>
             <link id="90cb-9371-4959-7f2e" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="d8bd-89b4-4ac5-b1f4" childId="40da-c89f-4a9e-236d" field="selections" type="at least" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
+            </link>
+            <link id="9ea2-0328-50f1-8b47" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="f35d-c44a-2045-c984" targetId="9137-5e3b-d46c-79a2" linkType="entry">
+              <modifiers/>
             </link>
           </links>
         </entryGroup>
@@ -1069,10 +1055,16 @@
           <entryGroups/>
           <modifiers>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="d8bd-89b4-4ac5-b1f4" childId="689d-d240-d469-0202" field="selections" type="at least" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="d8bd-89b4-4ac5-b1f4" childId="4e1f-46d7-c8f1-e11b" field="selections" type="at least" value="1.0"/>
+                    <condition parentId="d8bd-89b4-4ac5-b1f4" childId="9137-5e3b-d46c-79a2" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
