@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d1e9-60eb-b49e-7da8" revision="2" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Adeptus Arbites" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d1e9-60eb-b49e-7da8" revision="3" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Adeptus Arbites" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
-    <entry id="5a05-95e5-0ba7-4228" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="5a05-95e5-0ba7-4228" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="d9f8-5bcf-f76a-a9b8" name="Source" defaultEntryId="2b17-ee1b-4fcd-af7c" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -34,10 +34,16 @@
       <entryGroups/>
       <modifiers>
         <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="b56b-3825-52c1-28cc" field="selections" type="instance of" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="force type" childId="b56b-3825-52c1-28cc" field="selections" type="instance of" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules/>
@@ -51,10 +57,89 @@
         </link>
       </links>
     </entry>
+    <entry id="7470-cb43-1518-25d3" name="Bikes" points="200.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="868e-22a1-e134-39cd" name="Mounted Patrol" points="0.0" categoryId="(No Category)" type="unit" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="a7a9-d83f-ee7d-c188" targetId="0eeb-b32b-c9f8-2fe4" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="4de6-6b52-badb-a93f" targetId="ff79-2dfa-da56-58a5" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="8f0f-bab2-20b1-438e" targetId="8b94-7110-e025-24fe" linkType="entry group">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="8b52-ec89-3e47-1a5a" name="Blockhouse" points="100.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="6dad-7aba-4960-e20e" name="Fortified Structure" points="0.0" categoryId="(No Category)" type="model" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="e1d2-a713-9802-de87" targetId="d4fa-20c3-cb4c-ba5c" linkType="profile">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="d3f8-eaa6-59d5-e4d3" targetId="2828-47fd-076d-c08b" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
     <entry id="08db-939e-364a-5502" name="Courthouse" points="200.0" categoryId="2e76-3c1e-639f-a0a7" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -427,7 +512,14 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -457,10 +549,16 @@
       <entryGroups/>
       <modifiers>
         <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="b56b-3825-52c1-28cc" field="selections" type="instance of" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="force type" childId="b56b-3825-52c1-28cc" field="selections" type="instance of" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules/>
@@ -489,7 +587,14 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links/>
@@ -513,11 +618,172 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
         <link id="5003-ffad-579b-2dd1" targetId="250b-c434-a82d-0a3c" linkType="entry group">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="bcf2-ae45-396d-74c0" name="Interdiction Team" points="50.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+      <entries/>
+      <entryGroups>
+        <entryGroup id="8293-9ef0-94be-0731" name="Adeptus Arbites" defaultEntryId="8551-19e7-325c-6dc2" minSelections="4" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <links>
+            <link id="8551-19e7-325c-6dc2" targetId="9847-afa2-9b14-45ba" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="7dcd-6d67-375e-2a8b" targetId="b577-e88a-5b93-a64b" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+        <entryGroup id="111b-4a3b-dcf8-73af" name="Transport" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="bcf2-ae45-396d-74c0" childId="67a5-c335-bc80-34e2" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="bcf2-ae45-396d-74c0" childId="51b0-ce8c-6f5d-f436" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="bcf2-ae45-396d-74c0" childId="cbba-71e3-dda9-1d9b" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="bcf2-ae45-396d-74c0" childId="8293-9ef0-94be-0731" field="selections" type="at least" value="5.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="bcf2-ae45-396d-74c0" childId="8293-9ef0-94be-0731" field="selections" type="at least" value="7.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="bcf2-ae45-396d-74c0" childId="8293-9ef0-94be-0731" field="selections" type="at least" value="9.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="a24c-37d0-f030-d0cd" targetId="280e-2ea3-5265-dd9e" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="9384-e5eb-e3fc-e340" targetId="097d-b16b-11b9-6615" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="797e-8ae6-608f-7945" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="c2e9-2abc-b219-5cdb" targetId="8b94-7110-e025-24fe" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="37be-3cd6-2c21-a543" targetId="c233-8797-e533-2ed8" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="e2b5-7b4a-7db7-3d40" targetId="cbba-71e3-dda9-1d9b" linkType="entry group">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="ef87-3db2-dc06-c47f" name="Kill Team" points="175.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="fe27-929a-e4bf-a723" name="Execution Team" points="0.0" categoryId="(No Category)" type="unit" minSelections="4" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="fc23-5814-50d3-9c89" targetId="6537-5b43-41fb-ffdb" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="bb22-bfab-f251-b1bd" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="44ab-7487-bd12-21b5" targetId="5e51-7364-9a58-1f9e" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups>
+        <entryGroup id="75a8-0f24-1c66-f0e1" name="Transport" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="ef87-3db2-dc06-c47f" childId="67a5-c335-bc80-34e2" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="9be9-4d23-ff87-ac4d" targetId="280e-2ea3-5265-dd9e" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="75af-ad27-6c01-9336" targetId="097d-b16b-11b9-6615" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="125b-b1c2-eee5-bf21" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="0f64-3df2-bb93-63f1" targetId="67a5-c335-bc80-34e2" linkType="entry">
           <modifiers/>
         </link>
       </links>
@@ -565,7 +831,7 @@
             <link id="25e8-f185-bbfe-d99e" targetId="24af-3984-2ae1-3b1e" linkType="profile">
               <modifiers/>
             </link>
-            <link id="53f5-4b8d-cef1-e7d7" targetId="b280-d188-15c5-6ea1" linkType="rule">
+            <link id="930f-07b2-c297-6814" targetId="b280-d188-15c5-6ea1" linkType="rule">
               <modifiers/>
             </link>
           </links>
@@ -587,7 +853,14 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -618,7 +891,14 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links/>
@@ -663,7 +943,7 @@
             <link id="1323-7845-0dd4-a98b" targetId="7870-5771-f158-6f7c" linkType="entry">
               <modifiers/>
             </link>
-            <link id="c614-3799-d605-3c2b" targetId="456e-b669-2d50-b6bd" linkType="entry">
+            <link id="c614-3799-d605-3c2b" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
               <modifiers/>
             </link>
             <link id="2fb7-9ade-cd1d-ab55" targetId="280e-2ea3-5265-dd9e" linkType="entry">
@@ -672,7 +952,14 @@
           </links>
         </entryGroup>
       </entryGroups>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -724,7 +1011,14 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links/>
@@ -753,7 +1047,7 @@
             <link id="03a9-be65-50d5-54e1" targetId="7870-5771-f158-6f7c" linkType="entry">
               <modifiers/>
             </link>
-            <link id="47a8-770c-70b8-7667" targetId="456e-b669-2d50-b6bd" linkType="entry">
+            <link id="47a8-770c-70b8-7667" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
               <modifiers/>
             </link>
             <link id="140d-2775-c72d-60f8" targetId="280e-2ea3-5265-dd9e" linkType="entry">
@@ -762,7 +1056,14 @@
           </links>
         </entryGroup>
       </entryGroups>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -776,6 +1077,198 @@
           <modifiers/>
         </link>
       </links>
+    </entry>
+    <entry id="02d2-f97f-ec24-9c36" name="Roadblock" points="50.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="3" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="057d-5cc9-1206-1eaa" name="Roadblocks" points="0.0" categoryId="(No Category)" type="model" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="bcb8-55d8-ea5a-fb5a" targetId="46a7-9a76-021d-8952" linkType="profile">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="a1da-8f4a-3c71-3a48" targetId="2828-47fd-076d-c08b" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="1abc-ed78-826c-c980" name="Snatch Squad" points="125.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+      <entries>
+        <entry id="91f5-a3cf-c237-331d" name="Valkyrie" points="0.0" categoryId="(No Category)" type="model" minSelections="2" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="5be1-f646-6874-a2e5" targetId="d96c-c7ca-ac15-3bd9" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="dcd3-1ecd-4298-722a" targetId="5742-8344-ce29-fe2a" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="0ac8-dc6f-d309-4832" targetId="fb90-2af2-c6a6-4ab0" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="7696-ee94-98b2-4c5c" targetId="e95d-3da9-0519-d02a" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="a9d4-78c1-f716-8910" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups>
+        <entryGroup id="34e5-7d21-777b-44b8" name="Adeptus Arbites" defaultEntryId="f59c-1263-9956-33d0" minSelections="4" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <links>
+            <link id="f59c-1263-9956-33d0" targetId="9847-afa2-9b14-45ba" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="a2bb-884b-14be-1755" targetId="b577-e88a-5b93-a64b" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="56e1-325c-b3ad-493d" targetId="8b94-7110-e025-24fe" linkType="entry group">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="6ff9-9e4a-ec64-d58a" name="Tarantulas" points="0.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+      <entries/>
+      <entryGroups>
+        <entryGroup id="83fc-11cc-44a7-5e81" name="Sentry Guns" defaultEntryId="5352-6ce4-ded1-a050" minSelections="4" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="440d-532f-e3db-c5e0" name="Hyperios Tarantula" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="set" field="maxSelections" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="6ff9-9e4a-ec64-d58a" childId="83fc-11cc-44a7-5e81" field="selections" type="equal to" value="5.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="maxSelections" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="6ff9-9e4a-ec64-d58a" childId="83fc-11cc-44a7-5e81" field="selections" type="equal to" value="6.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="26fb-afad-ff53-1996" targetId="5851-3a39-64da-def3" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="7a20-c278-680d-92fa" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
+          <links>
+            <link id="5352-6ce4-ded1-a050" targetId="1833-f722-2b50-9320" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="49f6-2952-0d2c-b7f0" targetId="3291-9b18-af48-b203" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="608e-9f52-125d-7483" targetId="2898-607b-f55a-7d2e" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+        <entryGroup id="da48-c7d8-d566-caf8" name="Transport" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6ff9-9e4a-ec64-d58a" childId="83fc-11cc-44a7-5e81" field="selections" type="at least" value="5.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="minSelections" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6ff9-9e4a-ec64-d58a" childId="da48-c7d8-d566-caf8" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition parentId="6ff9-9e4a-ec64-d58a" childId="83fc-11cc-44a7-5e81" field="selections" type="at least" value="5.0"/>
+                    <condition parentId="6ff9-9e4a-ec64-d58a" childId="da48-c7d8-d566-caf8" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="71ab-ca64-71cd-0ae6" targetId="280e-2ea3-5265-dd9e" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="95ab-8fa6-f83e-4709" targetId="097d-b16b-11b9-6615" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="668f-150b-4abb-d080" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links/>
     </entry>
     <entry id="4516-d883-c857-fca2" name="Tormentor Squadron" points="350.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries>
@@ -802,7 +1295,14 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -813,6 +1313,55 @@
           <modifiers/>
         </link>
       </links>
+    </entry>
+    <entry id="155b-faa6-548e-dcc5" name="Uprising" points="200.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="b688-b846-5f34-bf4a" name="2D6+2 Militia" points="0.0" categoryId="(No Category)" type="unit" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="bd0b-cb44-7e88-3f87" targetId="4481-365d-6a4f-ab2d" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="c6c3-0578-0d28-68ad" targetId="e3be-109c-fb77-c554" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+        <entry id="083a-4ef0-0f28-f8ff" name="Espionist" points="0.0" categoryId="(No Category)" type="model" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="f6f0-9ad3-714b-6a3e" targetId="2bb5-a963-8749-e21d" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="449a-12d0-5a9f-a7bb" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="f317-264d-2058-0567" targetId="0259-7b22-7a62-b06f" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links/>
     </entry>
     <entry id="e380-7808-7d10-5626" name="Wolf Squadron" points="150.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries>
@@ -839,10 +1388,109 @@
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links/>
+    </entry>
+    <entry id="79c8-14fa-7c3f-0902" name="Patrol" points="50.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+      <entries/>
+      <entryGroups>
+        <entryGroup id="897e-94b7-b596-e796" name="Adeptus Arbites" defaultEntryId="9839-9a63-9438-4158" minSelections="6" maxSelections="12" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <links>
+            <link id="9839-9a63-9438-4158" targetId="9847-afa2-9b14-45ba" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="e7ac-ce8f-9e5d-3cc7" targetId="b577-e88a-5b93-a64b" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+        <entryGroup id="c248-9db9-3dab-2192" name="Transport" minSelections="0" maxSelections="3" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="79c8-14fa-7c3f-0902" childId="51b0-ce8c-6f5d-f436" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="79c8-14fa-7c3f-0902" childId="67a5-c335-bc80-34e2" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="79c8-14fa-7c3f-0902" childId="cbba-71e3-dda9-1d9b" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="79c8-14fa-7c3f-0902" childId="897e-94b7-b596-e796" field="selections" type="at least" value="11.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="79c8-14fa-7c3f-0902" childId="897e-94b7-b596-e796" field="selections" type="at least" value="7.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="79c8-14fa-7c3f-0902" childId="897e-94b7-b596-e796" field="selections" type="at least" value="9.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <links>
+            <link id="abcf-2121-5327-0a10" targetId="280e-2ea3-5265-dd9e" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="3d50-89eb-bfec-a061" targetId="097d-b16b-11b9-6615" linkType="entry">
+              <modifiers/>
+            </link>
+            <link id="8db4-61fa-8ca3-849b" targetId="b1d6-9710-e7c4-46a6" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="303a-8584-ad92-0ff2" targetId="8b94-7110-e025-24fe" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="0627-fba9-89e0-5562" targetId="c233-8797-e533-2ed8" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="e7bf-e169-6361-23a0" targetId="cbba-71e3-dda9-1d9b" linkType="entry group">
+          <modifiers/>
+        </link>
+      </links>
     </entry>
   </entries>
   <rules>
@@ -861,6 +1509,39 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     </link>
   </links>
   <sharedEntries>
+    <entry id="67a5-c335-bc80-34e2" name="2x Cyber Mastiffs" points="50.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="e33e-1c7d-5bc7-a3a3" targetId="5430-dc4f-40b1-7ca8" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="d502-9a23-fe5d-1995" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="e712-a3d0-ad46-b96f" targetId="f83b-820d-1b95-e28a" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="9847-afa2-9b14-45ba" name="Arbite Patrol" points="25.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="6f41-a5a2-225f-5a10" targetId="cf44-a68f-4d87-51a1" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="2e74-bf9d-5838-b712" targetId="fb90-2af2-c6a6-4ab0" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
     <entry id="7870-5771-f158-6f7c" name="Chimera" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
@@ -912,6 +1593,36 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
+    <entry id="1833-f722-2b50-9320" name="Heavy Bolter Tarantula" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="ef7e-e994-300f-6351" targetId="f861-1e77-0615-9d40" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="55ef-be3e-fb54-10c1" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="bccb-b17b-bde6-9f6c" name="Hyperios Tarantula" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="7d4c-48ec-4815-2302" targetId="5851-3a39-64da-def3" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="db7c-f476-9bcd-71ed" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
     <entry id="a1f7-3344-e757-9c21" name="Judge" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
@@ -938,9 +1649,48 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
         </link>
         <link id="c338-a20e-fbb4-5b6f" targetId="f7ca-2656-2916-3ce1" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="bdb4-3103-b4b1-1410" targetId="1171-99c8-3276-432d" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="00b3-eb5e-a85d-d933" targetId="a80d-55e2-a973-56ac" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+      </links>
+    </entry>
+    <entry id="3291-9b18-af48-b203" name="Lascannon Tarantula" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="9b14-dec6-ed17-6876" targetId="ec89-de1c-3393-9ca8" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="fd29-fb01-74e2-4b04" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -952,7 +1702,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <rules/>
       <profiles/>
       <links>
-        <link id="abf0-07da-c173-214d" targetId="d63d-66a4-ec44-ed8e" linkType="profile">
+        <link id="abf0-07da-c173-214d" targetId="3b75-d654-294e-73fc" linkType="profile">
           <modifiers/>
         </link>
         <link id="7da6-203d-21cc-164f" targetId="0259-7b22-7a62-b06f" linkType="rule">
@@ -963,7 +1713,52 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
-    <entry id="edea-8b4e-a6c5-af5b" name="NetEA" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="f917-6e7b-e6b9-d8f4" name="Mortiurge" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="29d2-50fb-f5c7-827a" targetId="3590-9869-65a4-d9c3" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="6832-4eb8-b89e-6f86" targetId="0259-7b22-7a62-b06f" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="56ea-8e24-eec5-d6d8" targetId="6251-b414-cd5f-3537" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="3bea-97f9-8be4-adec" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="05f0-bb41-4a12-aad5" targetId="a80d-55e2-a973-56ac" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="9dbb-5b68-1216-d59a" targetId="f83b-820d-1b95-e28a" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="2898-607b-f55a-7d2e" name="Multi-melta Tarantula" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="60db-ca33-c57f-e9a5" targetId="ab7c-bce8-9ffc-b52f" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="2806-d8f7-95ed-8a1a" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="c788-0704-2c47-36c3" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="edea-8b4e-a6c5-af5b" name="NetEA" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -978,7 +1773,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     <entry id="280e-2ea3-5265-dd9e" name="Repressor" points="15.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="points" value="25.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -993,17 +1795,35 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
-    <entry id="456e-b669-2d50-b6bd" name="Rhino" points="10.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="097d-b16b-11b9-6615" name="Repressor w/ Heavy Webber" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
       <rules/>
       <profiles/>
       <links>
-        <link id="c549-aed5-4dd4-189b" targetId="2815-61f6-bad0-120e" linkType="profile">
+        <link id="290c-27ec-6f88-687b" targetId="5ee5-3b9b-3b3e-2d0f" linkType="profile">
           <modifiers/>
         </link>
-        <link id="ff58-9bf1-09a9-5842" targetId="e95d-3da9-0519-d02a" linkType="rule">
+        <link id="d39a-8307-613f-64cc" targetId="fb90-2af2-c6a6-4ab0" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="8181-442a-b931-1fe6" targetId="e95d-3da9-0519-d02a" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="b1d6-9710-e7c4-46a6" name="Rhino" points="10.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="6f9e-1528-83ec-fb2b" targetId="2815-61f6-bad0-120e" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="526a-0b37-8355-2c18" targetId="e95d-3da9-0519-d02a" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -1022,6 +1842,39 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
         </link>
         <link id="1a34-5fa1-a704-0953" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="b577-e88a-5b93-a64b" name="Suppression Team" points="25.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="c3c6-24e8-1bf8-5aab" targetId="6185-c6a7-9a7e-6270" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="92e6-88d8-9b12-537f" targetId="1171-99c8-3276-432d" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="51b0-ce8c-6f5d-f436" name="2x Execution Team" points="75.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="b60f-4a1c-1004-7771" targetId="6537-5b43-41fb-ffdb" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="942c-22fe-8d8c-e320" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="96d4-9783-6092-e695" targetId="5e51-7364-9a58-1f9e" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -1140,6 +1993,92 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entryGroup>
+    <entryGroup id="c233-8797-e533-2ed8" name="Precinct Defense Auxiliaries" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="cafc-61c2-f922-7734" name="Deputised Militia" points="10.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="5ea8-80dd-e075-7c6e" targetId="947c-b05e-76fb-befb" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="b77b-b5df-95ce-9b9f" targetId="b280-d188-15c5-6ea1" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="a2cf-9cad-80e9-271b" targetId="e3be-109c-fb77-c554" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers/>
+      <links>
+        <link id="7716-c81d-fa52-37b5" targetId="67a5-c335-bc80-34e2" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="8774-cde9-39bf-8501" targetId="51b0-ce8c-6f5d-f436" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
+    </entryGroup>
+    <entryGroup id="8b94-7110-e025-24fe" name="Precinct Defense Command" defaultEntryId="db1e-ed2f-afea-b83d" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="db1e-ed2f-afea-b83d" name="Proctor" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="f678-706e-265a-a5a5" targetId="d63d-66a4-ec44-ed8e" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="a31f-7e1e-13c7-495f" targetId="0259-7b22-7a62-b06f" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="69b1-ae6e-10c1-494a" targetId="c200-fea3-6320-ce51" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="91fe-2fa3-e968-46e8" targetId="a80d-55e2-a973-56ac" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers/>
+      <links>
+        <link id="9fe4-78eb-7b22-cc2a" targetId="a1f7-3344-e757-9c21" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="3d3f-4935-d789-91db" targetId="f917-6e7b-e6b9-d8f4" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
+    </entryGroup>
+    <entryGroup id="cbba-71e3-dda9-1d9b" name="Sentry Gun Support" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <links>
+        <link id="a496-60e9-6ff8-cf3b" targetId="1833-f722-2b50-9320" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="4ecf-2920-09be-8851" targetId="bccb-b17b-bde6-9f6c" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="15ba-cb73-b3ff-f9e3" targetId="3291-9b18-af48-b203" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="ec0d-19da-6a01-45b6" targetId="2898-607b-f55a-7d2e" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
+    </entryGroup>
   </sharedEntryGroups>
   <sharedRules>
     <rule id="8fef-1a4f-990c-5040" name="&lt;I&gt;d&apos;Esquive&lt;/I&gt;" hidden="false">
@@ -1154,7 +2093,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <description>Arbites Adeptus forces can be integrated with any army list of the imperium by taking the third of points normally reserved for Spacecraft / Aircraft / Titans.
 You still need to observe the restrictions on the Adeptus Arbites army list.
 &lt;I&gt;&lt;B&gt;Alliés:&lt;/B&gt; Les forces de l’adeptus arbites peuvent être intégrées à n’importe quelle liste d’armée de l’imperium. Dans ce cas là, vous pouvez les prendre dans le tiers de points réservé aux forces de l’aérospatiale/aériennes/titans. Vous devez ensuite respecter les restrictions de la liste d’armée Adeptus Arbites.&lt;/I&gt;</description>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="878d-6ee8-b0a3-6319" name="Bunkers" hidden="false">
       <description>Upon deployment, bunkers are initially attached to a formation of the defending player’s choice. The formation is not obligated to maintain coherency with the bunkers, however, and may move from them, allowing other formations to move into them. Bunkers count as war engines, so they may not conceal, and the formation attached to them is therefore ineligible as well. 
@@ -1207,8 +2153,7 @@ Contrairement à plusieurs tranchées ou terrassements complexes, les positions 
       <modifiers/>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
-      <description>CodexImperialGuard #011214
-CodexSpaceMarines #070414</description>
+      <description>none</description>
       <modifiers/>
     </rule>
     <rule id="14ed-3b38-2edc-ddf5" name="Executioner Ammunition" hidden="false">
@@ -1231,6 +2176,11 @@ Les unités Sans peur démoralisée ou devant effectuer un mouvement de retraite
 Les unités Sans peur font parties d&apos;une formation et pourront ainsi être parfois « emportées » par le mouvement de retraite de celle-ci même si elles sont normalement immunisées à de tels mouvements obligatoires, simplement parce qu&apos;elles doivent respecter la cohésion de la formation . Enfin, notez que le fait d&apos;être immunisé aux mouvements de retraite obligatoires peut permettre à une unités Sans Peur de terminer un assaut dans la zone de contrôle d&apos;un ennemi, ou même en contact socle à socle avec celui-ci.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
+    <rule id="6251-b414-cd5f-3537" name="First Strike" hidden="false">
+      <description>Weapons with the first strike ability attack first in an assault. Resolve the attack and inflict damage for the weapon before any enemy units make their attacks. This may result in some enemy units being destroyed before they can attack. If the ability is noted for a weapon with extra attacks then only the extra attacks gets the first strike ability; otherwise it will count for all close combat attacks if noted for an assault weapon, or all firefight attacks if noted for small arms. If opposing units both have first strike weapons then all first strike attacks are resolved simultaneously and their results applied to both sides before other attacks are resolved.
+&lt;I&gt;&lt;B&gt;Frappe en Premier:&lt;/B&gt; Les armes ayant la capacité Frappe en Premier s&apos;utilisent en assaut. Résolvez les attaques et les dommages de l&apos;arme avant de faire attaquer les unités ennemies. Cela peut aboutir à la destruction d&apos;unités ennemies avant qu&apos;elles ne puissent riposter. Si cette capacité s&apos;applique à une arme ayant des Attaques supplémentaires, alors seules les Attaques Supplémentaires bénéficient de la capacité Frappe en Premier. Cette dernière s&apos;applique sinon pour toutes les attaques d&apos;une arme d&apos;assaut ordinaire ou pour les armes légères dans le cas d&apos;une Fusillade. Si deux unités ennemies ont la capacité Frappe en premier, leurs attaques sont résolues simultanément et les résultats appliqués avant que les autres attaques ne soient effectuées.&lt;/I&gt;</description>
+      <modifiers/>
+    </rule>
     <rule id="2828-47fd-076d-c08b" name="Fortified Positions" hidden="false">
       <description>Fortified positions must be set up after Objectives, but before Spacecraft and Garrisons are deployed. They may be set up anywhere a vehicle may deploy in the controlling players&apos; half of the table. You may split up a set of fortified positions as desired, as long as the rules for formation coherence are adhered to. For example, you could split up trenches into several lines, as long as there are 5cm ‘links’ between the different parts of the position. Fortified positions count as having a move of zero, and may ‘garrison’ (eg, they can be set up in positions that garrison units can be set up in). It goes without saying that they may not be transported, and any players that were considering transporting them onto the table should be deeply ashamed of themselves!
 Once set up fortified positions may be used by any unit, not just the units they were purchased for. They may be captured and used by enemy units too.
@@ -1242,13 +2192,14 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
 &lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
 Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-m1320001_EPIC_updated_rulebook-sections_5_Oct09
-m1320002_EPIC_updated_rulebook-sections_6_Oct09
-m1320005_EPIC_updated_rulebook-ref_Oct09
-m1320006_Epic_Errata_2008
-m1320007_Epic_FAQ
+none
 Fanatic #02
 Fanatic #13</description>
+      <modifiers/>
+    </rule>
+    <rule id="a80d-55e2-a973-56ac" name="Hold the Line" hidden="false">
+      <description>Arbite formations that include a character with the Hold the Line rule that are attempting to take a Marshall action receive a +1 modifier to their action test roll. Additionally, Arbite formations that Marshall do not receive the -1 to hit modifier when electing to shoot rather than move.
+&lt;I&gt;&lt;B&gt;Rester en Ligne:&lt;/B&gt; Formations Arbite qui incluent un caractère à la règle Rester en Ligne qui tentent de prendre une action Regroupement reçoivent un modificateur de +1 à son jet de test d&apos;action. En outre, les formations Arbite que Regroupement ne reçoivent pas les -1 pour toucher modificateur lors de l&apos;élection de tirer plutôt que de déménager.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
     <rule id="a975-d30d-e788-5d1f" name="Ignore Cover" hidden="false">
@@ -1292,8 +2243,7 @@ Fanatic #13</description>
       <modifiers/>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2015-05-28
-netea_army_list_compendium_2014-01-14</description>
+      <description>Adeptus Arbites Precinct Defense List v1.3</description>
       <modifiers/>
     </rule>
     <rule id="771a-e7e6-a7f8-4ef8" name="One Shot" hidden="false">
@@ -1340,9 +2290,16 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <modifiers/>
     </rule>
     <rule id="8ef4-092d-eda0-ec50" name="Strategy Rating &amp; Initiative (AA)" hidden="true">
-      <description>Adeptus Arbites have a Strategy rating of 3. Adeptus Arbites  formations accompanied by a character have an initiative rating of 1+; other formations have an initiative rating of 2+.
+      <description>Adeptus Arbites have a Strategy rating of 3. Adeptus Arbites formations accompanied by a character have an initiative rating of 1+; other formations have an initiative rating of 2+.
 &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;Adeptus Arbites a une Valeur Stratégique de 3. Les troupes de l’Adeptus Arbites accompagnées d’un personnage disposent d&apos;une valeur d&apos;initiative de 1+, toutes les autres troupes de l’Adeptus Arbites ont une initiative de 2+.&lt;/I&gt;</description>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="Adeptus Arbites have a Strategy rating of 3. Adeptus Arbites formations have an initiative rating of 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;Adeptus Arbites a une Valeur Stratégique de 3. Les troupes de l’Adeptus Arbites ont une initiative de 2+.&lt;/I&gt;" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="ef42-3efb-0c94-4e35" name="Stubborn" hidden="false">
       <description>The Redemptionists are stubborn and hard to defeat by assault. Their nature also makes them rally more quickly than the other units to return to the battle!
@@ -1358,6 +2315,15 @@ Lorsqu&apos;une formation Redemptionists perd un assaut, elle subit une perte de
 &lt;I&gt;&lt;B&gt;Commandant Suprême:&lt;/B&gt; Les Commandants Suprêmes représentent des gradés de haut rang. Ils comptent à la fois comme des Commandants et des Meneurs. De plus, chaque Commandant Suprême de l&apos;armée permet au joueur de relancer un seul test d&apos;initiative raté (de tout type) une fois par tour.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
+    <rule id="e3be-109c-fb77-c554" name="Teleport" hidden="false">
+      <description>Formations where all of the units have this ability may be kept off the table, and can appear at the start of any turn. Simply place the unit anywhere you like on the table at the start of any turn, before determining who wins the strategy roll. The unit must be placed within 5cms of another unit from its own formation if there are any already in play. So, for example, if a whole formation teleported into play then the first unit could be placed anywhere, but any other units would need to be placed within 5cms of a unit that had already been placed. All units must be placed outside enemy zones of control. If placed in dangerous terrain then a dangerous terrain test must be taken when the unit is placed on the table.
+Teleporting is an inherently dangerous business, and doesn’t always go as planned. To represent this roll a D6 for each unit that teleports into play. On a roll of a 1 the formation that the unit belongs to receives a Blast marker.
+&lt;I&gt;&lt;B&gt;Téléportation:&lt;/B&gt; Les formations dont toutes les unités ont cette capacité peuvent être gardées en dehors de la table pour apparaître au début de n&apos;importe quel tour. Placez une unité de la formation à téléporter n&apos;importe où sur la table avant de déterminer qui gagne le jet de stratégie. Les unités restantes doivent être placées à moins de 5 cm des unités de la même formation déjà en jeu.
+Par exemple, si une formation entière se téléporte, la première unité peut être placée n&apos;importe où, mais les autres doivent ensuite être placées à moins de 5 cm d&apos;une unité de la même formation déjà en jeu.
+Toutes les unités doivent être placées en-dehors des zones de contrôles ennemies. Si elles sont placées en terrain dangereux, un test de terrain dangereux doit être effectué lorsque l&apos;unité est placée sur la table.
+Se téléporter comporte de nombreux risques et peut avoir des impondérables aux conséquences catastrophiques : lancez 1D6 par unité quand elles se téléportent. Sur un résultat de 1 la formation de l&apos;unité reçoit un pion d&apos;impact.&lt;/I&gt;</description>
+      <modifiers/>
+    </rule>
     <rule id="1b9a-dd01-5309-8a92" name="Titan Kiler" hidden="false">
       <description>Enemy units hit by such weapons may not take a cover or armour save, even if they have reinforced armour. Further special rules apply if the target unit is a war engine. In all other ways, Titan killers are treated as macro-weapons.
 Titan Killer weapons will usually have a dice roll noted in brackets on their data sheet. If such a weapon hits a war engine then the war engine suffers damage equal to the roll of the appropriate sort of dice. Each point of damage will reduce the war engine’s damage capacity by 1 point. Roll for critical hits for each point of damage inflicted. Titan Killer weapons that do not have a dice roll in brackets only inflict one point of damage.
@@ -1369,17 +2335,17 @@ Lorsque vous allouez une touche Tueuse de Titans infligeant plusieurs points de 
     </rule>
     <rule id="e95d-3da9-0519-d02a" name="Transport (AA)" hidden="false">
       <description>As follows-
-Chimera: 2 units of: Shock Troops, Support Squads, Snipers, Assault Squads, K9 Units.
-Courthouse: 8 units of: Shock Troops, Support Squads, Snipers, Assault Squads, K9 Units, Bikes.
-Repressor: 2 units of: Shock Troops, Support Squads, Snipers, Assault Squads, K9 Units.
-Rhinos: 2 units of: Shock Troops, Support Squads, Snipers, Assault Squads, K9 Units.
-Valkyrie: 2 units of: Shock Troops, Support Squads, Snipers, Assault Squads, K9 Units.
+Chimera: 2 infantry units or tarantulas.
+Courthouse: 8 infantry units or tarantulas.
+Repressor: 2 infantry units or tarantulas.
+Rhinos: 2 infantry units or tarantulas.
+Valkyrie: 2 infantry units or tarantulas.
 &lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Chimère: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’assaut, K9 team.
-Courthouse: 8 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’assaut, K9 team, motos.
-Repressor: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’assaut, K9 team.
-Rhinos: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’assaut, K9 team.
-Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’assaut, K9 team.&lt;/I&gt;</description>
+Chimère: 2 unités d&apos;infanterie ou tarentules.
+Courthouse: 8 unités d&apos;infanterie ou tarentules.
+Repressor: 2 unités d&apos;infanterie ou tarentules.
+Rhinos: 2 unités d&apos;infanterie ou tarentules.
+Valkyrie: 2 unités d&apos;infanterie ou tarentules.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
     <rule id="2fd7-1aa7-5114-2151" name="Walker" hidden="false">
@@ -1389,6 +2355,21 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
     </rule>
   </sharedRules>
   <sharedProfiles>
+    <profile id="cf44-a68f-4d87-51a1" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Arbite Patrol" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="5+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="4+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Shotguns&lt;BR&gt;&lt;BR&gt;Choke Grenade Launcher"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(15cm)&lt;BR&gt;&lt;BR&gt;15cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;&lt;BR&gt;Disrupt"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="18ab-8ced-98cb-d5b3" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Avenger" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Aircraft"/>
@@ -1516,6 +2497,36 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
       </characteristics>
       <modifiers/>
     </profile>
+    <profile id="5430-dc4f-40b1-7ca8" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Cyber Mastiffs" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="20cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="6+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="4+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="-"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Jaws and Claws"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapon"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Infiltrators, Scout"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="947c-b05e-76fb-befb" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Deputised Militia" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="-"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="6+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Autoweapons"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(15cm)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Small Arms"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Expendable, Teleport"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="3915-e47c-e162-75d3" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Devout Redemptionists" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
@@ -1540,12 +2551,81 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
       </characteristics>
       <modifiers/>
     </profile>
+    <profile id="2bb5-a963-8749-e21d" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Espionist" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="n/a"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="n/a"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="n/a"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Power Weapon"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapon"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Leader"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="6537-5b43-41fb-ffdb" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Execution Team" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="5+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="4+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Heavy Stubbers and Sniper Rifles"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP5+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Scout, Sniper"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="d4fa-20c3-cb4c-ba5c" profileTypeId="6883-a6ac-0b20-eb62" name="Fortified Structure" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="36c8-6d92-af3f-a836" name="Infantry" value="3+ Cover Save"/>
+        <characteristic characteristicId="1297-f4e7-4126-0a6a" name="Vehicle" value="Impassable"/>
+        <characteristic characteristicId="8902-a4d6-b39b-ca60" name="War Engine" value="Impassable"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Notes" value=""/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="8e96-a79a-4fc3-7a50" profileTypeId="6883-a6ac-0b20-eb62" name="Gun Emplacement " hidden="false">
       <characteristics>
         <characteristic characteristicId="36c8-6d92-af3f-a836" name="Infantry" value="4+ Cover Save"/>
         <characteristic characteristicId="1297-f4e7-4126-0a6a" name="Vehicle" value="5+ Cover Save"/>
         <characteristic characteristicId="8902-a4d6-b39b-ca60" name="War Engine" value="No Effect"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Notes" value="Gun emplacements provide vehicles with a Cover Save that works in the same manner as an infantry Cover Save. Can hold 1 unit."/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="f861-1e77-0615-9d40" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Heavy Bolter Tarantula Sentry Gun" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="0cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Twin Heavy Bolter"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP4+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Scout"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="5851-3a39-64da-def3" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Hyperios Tarantula Sentry Gun" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Light Vehicle"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="0cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="-"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Hyperios"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AA4+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value=""/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Scout"/>
       </characteristics>
       <modifiers/>
     </profile>
@@ -1562,7 +2642,14 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Fearless, Inspiring, Invulnerable Save, Supreme Commander"/>
       </characteristics>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Hold the Line, Inspiring, Supreme Commander" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </profile>
     <profile id="2dd4-fde7-0ab5-182f" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="K9 Unit" hidden="false">
       <characteristics>
@@ -1596,6 +2683,21 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
       </characteristics>
       <modifiers/>
     </profile>
+    <profile id="ec89-de1c-3393-9ca8" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Lascannon Tarantula Sentry Gun" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="0cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="6+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Twin Lascannon"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="45cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AT4+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Scout"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="9f15-3db2-30b9-81e9" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Leman Russ" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
@@ -1611,7 +2713,7 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="d63d-66a4-ec44-ed8e" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Marshal" hidden="false">
+    <profile id="3b75-d654-294e-73fc" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Marshal" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
@@ -1626,12 +2728,72 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
       </characteristics>
       <modifiers/>
     </profile>
+    <profile id="4481-365d-6a4f-ab2d" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Militia" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="-"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="6+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Autoweapons"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(15cm)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Small Arms"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Teleport"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="324e-a7b9-2e57-6529" profileTypeId="6883-a6ac-0b20-eb62" name="Minefield" hidden="false">
       <characteristics>
         <characteristic characteristicId="36c8-6d92-af3f-a836" name="Infantry" value="Dangerous"/>
         <characteristic characteristicId="1297-f4e7-4126-0a6a" name="Vehicle" value="Dangerous"/>
         <characteristic characteristicId="8902-a4d6-b39b-ca60" name="War Engine" value="Dangerous"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Notes"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="3590-9869-65a4-d9c3" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Mortiurge" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="n/a"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="n/a"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="n/a"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Power Weapon"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapon"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="First Strike, Macro-weapon, +1A"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Hold the Line, Infiltrator, Leader"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="0eeb-b32b-c9f8-2fe4" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Mounted Patrol" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="35cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="5+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Bolters"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(15cm)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Small Arms"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value=""/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Mounted"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="ab7c-bce8-9ffc-b52f" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Multi-melta Tarantula Sentry Gun" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="0cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Multi-melta&lt;BR&gt;and"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="15cm&lt;BR&gt;and (15cm)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="MW5+&lt;BR&gt;and Small Arms"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;and Macro-weapon"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Scout"/>
       </characteristics>
       <modifiers/>
     </profile>
@@ -1712,6 +2874,21 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
       </characteristics>
       <modifiers/>
     </profile>
+    <profile id="d63d-66a4-ec44-ed8e" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Proctor" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="n/a"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="n/a"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="n/a"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Power Weapon"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapon"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Commander, Hold the Line, Leader"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="74cd-cb9a-9e46-a974" profileTypeId="6883-a6ac-0b20-eb62" name="Razor Wire" hidden="false">
       <characteristics>
         <characteristic characteristicId="36c8-6d92-af3f-a836" name="Infantry" value="Dangerous"/>
@@ -1749,6 +2926,46 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;and Ignore Cover"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Transport"/>
       </characteristics>
+      <modifiers>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+&lt;BR&gt;and Small Arms" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="15cm&lt;BR&gt;and (15cm)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Flamer&lt;BR&gt;and" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Ignore Cover&lt;BR&gt;and Ignore Cover" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+    </profile>
+    <profile id="5ee5-3b9b-3b3e-2d0f" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Repressor HW" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="30cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Heavy Webber"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="15cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP5+/AT6+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Disrupt"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Transport"/>
+      </characteristics>
       <modifiers/>
     </profile>
     <profile id="2815-61f6-bad0-120e" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Rhino" hidden="false">
@@ -1778,6 +2995,15 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapon&lt;BR&gt;&lt;BR&gt;Assault Weapon"/>
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="46a7-9a76-021d-8952" profileTypeId="6883-a6ac-0b20-eb62" name="Roadblocks" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="36c8-6d92-af3f-a836" name="Infantry" value="5+ Cover Save"/>
+        <characteristic characteristicId="1297-f4e7-4126-0a6a" name="Vehicle" value="Impassable"/>
+        <characteristic characteristicId="8902-a4d6-b39b-ca60" name="War Engine" value="Dangerous"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Notes" value="Up to 30cm"/>
       </characteristics>
       <modifiers/>
     </profile>
@@ -1871,6 +3097,21 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
       </characteristics>
       <modifiers/>
     </profile>
+    <profile id="6185-c6a7-9a7e-6270" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Suppression Team" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="5+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="-"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Power Mauls and Suppression Shield"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapon"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="+1A"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Invulnerable Save"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="7efe-05ce-4321-dd78" profileTypeId="6883-a6ac-0b20-eb62" name="Tank Traps" hidden="false">
       <characteristics>
         <characteristic characteristicId="36c8-6d92-af3f-a836" name="Infantry" value="6+ Cover Save"/>
@@ -1902,7 +3143,14 @@ Valkyrie: 2 socles parmi troupe de choc, troupe de soutien, snipers, troupe d’
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Disrupt, One Shot"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Skimmer, Transport"/>
       </characteristics>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Scout, Skimmer, Transport" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </profile>
   </sharedProfiles>
 </catalogue>
