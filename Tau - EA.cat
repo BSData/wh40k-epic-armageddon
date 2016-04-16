@@ -5418,14 +5418,21 @@ Toutes les unités doivent être placées en-dehors des zones de contrôles enne
 Se téléporter comporte de nombreux risques et peut avoir des impondérables aux conséquences catastrophiques : lancez 1D6 par unité quand elles se téléportent. Sur un résultat de 1 la formation de l&apos;unité reçoit un pion d&apos;impact.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
-    <rule id="88f5-dbd7-ae54-e0e7" name="Tiger Shark" hidden="true">
-      <description>Transported Gun Drone formations may be split across multiple Tiger Sharks as an exception to the normal aircraft transport rules. The Tiger Shark cannot land, make an Engagement, or embark units, but can disembark transported Drones after an approach move. The Drone formation may shoot when it disembarks as normal, and counts as having activated for that turn. After this initial deployment the Gun Drones are a completely independent formation. Gun Drones being transported by Tiger Sharks do not generate blast markers for being destroyed until after they are disembarked.</description>
+    <rule id="88f5-dbd7-ae54-e0e7" name="Tiger Shark Gun Drones" hidden="true">
+      <description>Tiger Shark Squadrons may be given a Gun Drone formation to transport. Transported Gun Drone formations may be split across multiple Tiger Sharks as an exception to the normal aircraft transport rules. The Tiger Shark cannot land, make an Engagement, or embark units, but can disembark transported Drones after an approach move. The Drone formation may shoot when it disembarks as normal, and counts as having activated for that turn. After this initial deployment the Gun Drones are a completely independent formation. Gun Drones being transported by Tiger Sharks do not generate blast markers for being destroyed until after they are disembarked.
+&lt;I&gt;&lt;B&gt;Drones d&apos;Attaque du Tiger Shark:&lt;/B&gt; Escadrons Tiger Shark peuvent recevoir une formation de drones d&apos;attaque pour le transport. Formations transportées de drones d&apos;attaque peuvent être répartis sur plusieurs Tiger Sharks comme une exception aux règles de transport des avions normaux. Les Sharks Tiger ne peut pas atterrir, faire un engagement, ou embarquer des unités, mais peut débarquer des drones d&apos;attaque transportés après un mouvement d&apos;approche. La formation de drones d&apos;attaque peut tirer quand il débarque comme normal (voir Transporter des Unités Terrestres), et compte comme ayant activé pour ce tour. Après ce déploiement initial, les drones d&apos;attaque sont une formation totalement indépendante. Drones d&apos;attaque étant transportés par Tiger Sharks ne génèrent pas de pions d&apos;impact pour être détruits jusqu&apos;à ce qu&apos;ils soient débarqués.&lt;/I&gt;</description>
       <modifiers>
         <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </rule>
@@ -7391,15 +7398,9 @@ Hero Class Cruiser: 6 Orcas ou 2 Mantas&lt;/I&gt;</description>
         <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;15cm&lt;BR&gt;45cm"/>
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP3+/AT4+/AA4+&lt;BR&gt;AA6+&lt;BR&gt;AP5+/AT6+"/>
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Fixed Forward Arc&lt;BR&gt;-&lt;BR&gt;Fixed Forward Arc"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Transport (3)"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Transport, Tiger Shark Gun Drones"/>
       </characteristics>
       <modifiers>
-        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Tiger Shark" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions/>
           <conditionGroups>
