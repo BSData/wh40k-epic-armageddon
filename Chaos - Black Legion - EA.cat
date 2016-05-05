@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b051-f90a-50b1-7dfd" revision="3" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Chaos: Black Legion" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b051-f90a-50b1-7dfd" revision="4" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Chaos: Black Legion" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="5a05-95e5-0ba7-4228" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -317,6 +317,16 @@
             <link id="48be-75f4-56e9-c81a" targetId="1b9a-dd01-5309-8a92" linkType="rule">
               <modifiers/>
             </link>
+            <link id="1310-faa5-c18a-1e70" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
           </links>
         </entry>
         <entry id="bf2d-1a5e-c98c-5525" name="Battlehead" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -343,6 +353,16 @@
             </link>
             <link id="5322-9eb1-4914-187f" targetId="6a62-b80f-636e-6e84" linkType="rule">
               <modifiers/>
+            </link>
+            <link id="3c44-65de-b420-906a" targetId="a975-d30d-e788-5d1f" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
           </links>
         </entry>
@@ -1915,7 +1935,14 @@
               <modifiers/>
             </link>
             <link id="90e8-da2a-a1c4-fef9" targetId="a975-d30d-e788-5d1f" linkType="rule">
-              <modifiers/>
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
             <link id="8c91-264c-5a63-52c7" targetId="07cd-b5ce-d893-9b83" linkType="rule">
               <modifiers/>
@@ -3004,7 +3031,14 @@
           <profiles/>
           <links>
             <link id="9114-c7b0-4229-600d" targetId="e8d8-29cf-d711-9797" linkType="profile">
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
           </links>
         </entry>
@@ -3159,10 +3193,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <link id="c2b5-eb4e-49f8-0439" targetId="1171-99c8-3276-432d" linkType="rule">
           <modifiers>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </link>
@@ -3350,10 +3390,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <link id="dc79-8dae-300f-0011" targetId="1171-99c8-3276-432d" linkType="rule">
           <modifiers>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </link>
@@ -3499,10 +3545,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <link id="fcf5-cda2-c283-59d9" targetId="1171-99c8-3276-432d" linkType="rule">
           <modifiers>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </link>
@@ -3839,6 +3891,36 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                   <conditionGroups/>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="8c25-ac1e-5d57-f02c" targetId="6978-d61d-58b1-f2fc" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="9bc9-5860-8875-81aa" targetId="1171-99c8-3276-432d" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="e7f9-9ea7-6038-2034" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
         </link>
@@ -4664,6 +4746,36 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             </modifier>
           </modifiers>
         </link>
+        <link id="2877-245a-b14e-4eca" targetId="6978-d61d-58b1-f2fc" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="d92a-28cf-d034-3e3d" targetId="1171-99c8-3276-432d" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="ec51-4538-536c-89fd" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
       </links>
     </entry>
   </sharedEntries>
@@ -4739,6 +4851,36 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 </modifier>
               </modifiers>
             </link>
+            <link id="01df-cb66-ac25-4ccd" targetId="6978-d61d-58b1-f2fc" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="c8eb-6641-713d-7045" targetId="1171-99c8-3276-432d" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="b902-23a1-41c9-ca9a" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
           </links>
         </entry>
         <entry id="ef0f-2f82-352d-d910" name="Winged Daemon Prince" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -4810,6 +4952,36 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                       <conditionGroups/>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="85fb-e6af-45c9-0579" targetId="6978-d61d-58b1-f2fc" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="c5a0-1ff3-014b-5b51" targetId="1171-99c8-3276-432d" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="6f1b-225f-8c76-7b35" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+              <modifiers>
+                <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
                 </modifier>
               </modifiers>
             </link>
@@ -5037,6 +5209,11 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
 &lt;I&gt;&lt;B&gt;Touche Critique: Détruit:&lt;/B&gt; L&apos;unité est détruite.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
+    <rule id="705d-3406-4984-8522" name="Critical Hit: Large Explosion" hidden="false">
+      <description>Destroyed, units within 5cm hit on D6 roll of 5.
+&lt;I&gt;&lt;B&gt;Touche Critique: Grande Explosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche sur un 5.&lt;/I&gt;</description>
+      <modifiers/>
+    </rule>
     <rule id="03a1-9e3f-8009-42f2" name="Critical Hit: Partial Collapse" hidden="false">
       <description>Armour value reduced by 1.
 &lt;I&gt;&lt;B&gt;Touche Critique: Effondrement Partiel:&lt;/B&gt; Perd un point de blindé.&lt;/I&gt;</description>
@@ -5058,6 +5235,11 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+ (Rav
 4-6: la fissure est réparée.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
+    <rule id="0a83-fa24-f456-ed81" name="Critical Hit: Very Large Explosion" hidden="false">
+      <description>Destroyed, units within 5cm hit on D6 roll of 4.
+&lt;I&gt;&lt;B&gt;Touche Critique: Très Grande Explosion:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 5cm subissent une touche sur 4+.&lt;/I&gt;</description>
+      <modifiers/>
+    </rule>
     <rule id="0c98-f37b-b1ba-1bef" name="Daemon Prince" hidden="false">
       <description>Replaces the unit in the formation that includes the Chaos Lord or Warlord character with a Daemon Prince unit. One Daemon Prince may be included in an army for each Chaos faction present in the army.
 &lt;I&gt;&lt;B&gt;Prince Démon:&lt;/B&gt; Remplacez un Seigneur de Guerre du Chaos ou un Seigneur du Chaos par un Prince Démon. Un Prince Démon peut être inclus dans l’armée pour chaque déité représentée.&lt;/I&gt;</description>
@@ -5076,9 +5258,10 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+ (Rav
       <modifiers/>
     </rule>
     <rule id="9b7f-a16c-efaa-c053" name="Daemonic Pact" hidden="false">
-      <description>Allows the formation to summon Daemons from the Daemon Pool.</description>
+      <description>Allows the formation to summon Daemons from the Daemon Pool.
+&lt;I&gt;&lt;B&gt;Pacte Démoniaque:&lt;/B&gt; Il permet la formation de convoquer des démons.&lt;/I&gt;</description>
       <modifiers>
-        <modifier type="append" field="description" value=" Add one Lesser Daemon to the Daemon Pool." repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="description" value="Add one Lesser Daemon to the daemon pool. Allows the formation to summon daemons from the daemon pool.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Pacte Démoniaque:&lt;/B&gt; Ajouter un Démon Mineur au groupement de démons. Il permet la formation de convoquer des démons.&lt;/I&gt;" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
@@ -5144,7 +5327,8 @@ Ceci est représenté par les règles suivantes : Khorne hait Slaanesh et vice-v
       <modifiers/>
     </rule>
     <rule id="2f00-6e1a-a835-6f12" name="Favour of the Gods" hidden="false">
-      <description>In the strategy phase if the Chaos player rolls a 6 they are rewarded with an additional 1D3 summoning points to add to any lesser daemon pool, however, if they roll a 1 then they lose 1D3 summoning points from any lesser daemon pool.</description>
+      <description>In the strategy phase if the Chaos player rolls a 6 they are rewarded with an additional 1D3 summoning points to add to any lesser daemon pool, however, if they roll a 1 then they lose 1D3 summoning points from any lesser daemon pool.
+&lt;I&gt;&lt;B&gt;Faveur des Dieux:&lt;/B&gt; Dans la phase de stratégie si le joueur Chaos obtient un 6, ils sont récompensés par 1D3 points d&apos;invocation supplémentaire à ajouter à tout groupe de démon mineur, cependant, s&apos;ils roulent un 1 alors ils perdent 1D3 points d&apos;invocation de tout groupe de démon mineur.&lt;/I&gt;</description>
       <modifiers>
         <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
@@ -5258,7 +5442,8 @@ Les unités atterrissant par un Assaut Planétaire peuvent effectuer une action 
       <modifiers/>
     </rule>
     <rule id="8e81-6caa-fe75-6eb4" name="Sacrifice" hidden="true">
-      <description>A unit with a Champion of Chaos character may be sacrificed to generate 6 summoning points to summon a Greater Daemon. The Greater Daemon must be placed within 10cm of the unit with the Champion of Chaos, which is then removed from play.</description>
+      <description>A unit with a Champion of Chaos character may be sacrificed to generate 6 summoning points to summon a Greater Daemon. The Greater Daemon must be placed within 10cm of the unit with the Champion of Chaos, which is then removed from play.
+&lt;I&gt;&lt;B&gt;Sacrifier:&lt;/B&gt; Une unité avec un personnage de Champion du Chaos peut être sacrifié pour générer 6 points d&apos;invocation pour invoquer un Démon Majeur. Le Démon Majeur doit être placé dans 10cm de l&apos;unité avec le Champion du Chaos, qui est ensuite retiré du jeu.&lt;/I&gt;</description>
       <modifiers>
         <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions/>
@@ -5449,7 +5634,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="*"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Fearless, Reinforced Armour, Thick Rear Armour, Walker (Titan), 6 Sh"/>
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="8"/>
-        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Reactor Damage"/>
+        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Rampage"/>
       </characteristics>
       <modifiers>
         <modifier type="set" field="3c70-22c1-1ecf-35c4" value="Reactor Damage" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -5589,7 +5774,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="61de-c80d-2ce5-a76a" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Champion of Chaos (Khornate, Nurgle or Undivided)" hidden="false">
+    <profile id="61de-c80d-2ce5-a76a" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Champion of Chaos (Khorne, Nurgle or Undivided)" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
@@ -5608,6 +5793,18 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
             <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Sacrifice" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </profile>
@@ -5630,6 +5827,18 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
             <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Sacrifice" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </profile>
@@ -5681,7 +5890,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapons"/>
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Invulnerable Save, Leader, Commander"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Commander, Invulnerable Save, Leader"/>
       </characteristics>
       <modifiers/>
     </profile>
@@ -5712,6 +5921,12 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
           </conditionGroups>
         </modifier>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -5834,6 +6049,12 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Commander, Fearless, Inspiring, Invulnerable Save, Leader, Reinforced Armour, Teleport, Thick Rear Armour" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
     </profile>
     <profile id="1fcc-2211-ddc6-e0c5" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Daemon Prince Warlord" hidden="false">
@@ -5864,6 +6085,12 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
           </conditionGroups>
         </modifier>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Inspiring, Invulnerable Save, Reinforced Armour, Supreme Commander, Teleport, Thick Rear Armour" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -5933,14 +6160,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="4x AP4+/AT4+"/>
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Forward Arc"/>
       </characteristics>
-      <modifiers>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
     </profile>
     <profile id="15bd-920d-773a-6858" profileTypeId="87ab-2658-3f0c-128d" name="Death Wheel" hidden="false">
       <characteristics>
@@ -6184,6 +6404,12 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt; or (contact)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;and Macro-weapon, Titan Killer (D3), +2A" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -6560,7 +6786,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP3+/AC5+/AA4+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP3+/AT5+/AA4+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -6821,7 +7047,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         </modifier>
       </modifiers>
     </profile>
-    <profile id="9b27-6766-4d00-63f0" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Obliterators" hidden="true">
+    <profile id="9b27-6766-4d00-63f0" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Obliterators" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
@@ -6835,9 +7061,9 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour, Thick Rear Armour, Fearless, Teleport"/>
       </characteristics>
       <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7151,9 +7377,9 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
     </profile>
     <profile id="9a5c-832b-ecf5-06e0" profileTypeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" name="Tail" hidden="false">
       <characteristics>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="75cm&lt;BR&gt; or (contact)"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP4+/AT4+&lt;BR&gt; or Assault Weapons"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt; or +1A"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="75cm&lt;BR&gt;and (contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP4+/AT4+&lt;BR&gt;and Assault Weapons"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;and +1A"/>
       </characteristics>
       <modifiers>
         <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT4+&lt;BR&gt; or Small Arms" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -7268,7 +7494,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         </modifier>
       </modifiers>
     </profile>
-    <profile id="4d97-a983-9655-9bb8" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Vindicator" hidden="true">
+    <profile id="4d97-a983-9655-9bb8" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Vindicator" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="25cm"/>
@@ -7282,9 +7508,9 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour"/>
       </characteristics>
       <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7323,6 +7549,12 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Commander, Fearless, Inspiring, Invulnerable Save, Jump Packs, Leader, Reinforced Armour, Teleport, Thick Rear Armour" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
     </profile>
     <profile id="dded-9d77-b1f9-33c4" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Winged Daemon Prince Warlord" hidden="false">
@@ -7353,6 +7585,12 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
           </conditionGroups>
         </modifier>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Inspiring, Invulnerable Save, Jump Packs, Reinforced Armour, Supreme Commander, Teleport, Thick Rear Armour" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>

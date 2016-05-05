@@ -3471,19 +3471,19 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <link id="cecd-b009-9a6f-2cce" targetId="21d4-a98c-b744-ed73" linkType="rule">
           <modifiers/>
         </link>
-        <link id="1def-d74f-7e9d-5cb0" targetId="4a16-c3c2-92f9-902c" linkType="profile">
-          <modifiers/>
-        </link>
-        <link id="0eb3-968b-69fd-56e2" targetId="1b03-a956-eb25-c942" linkType="profile">
-          <modifiers/>
-        </link>
         <link id="5bea-b3e6-3b08-d327" targetId="07cd-b5ce-d893-9b83" linkType="rule">
           <modifiers>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+                    <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </link>
@@ -3674,13 +3674,13 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
-    <entry id="9e92-dac0-a429-1959" name="Spirit Stones" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="9e92-dac0-a429-1959" name="Spirit Stones" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers>
-        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -3896,13 +3896,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <modifiers/>
     </rule>
     <rule id="49ea-2d6a-c60e-c366" name="Avatar" hidden="false">
-      <description>In Grand Tournament games the Avatar must start off the table. At the start of any turn (including the first) they may be set up on the table within 15cms of a Farseer. In the End Phase of the turn the Avatar returns to the Webway and is removed from play. Once the Avatar has left they may not return. Note that if there are no Farseers in play then the Avatar may not be used.
-&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes :
-1) De manière classique lors du déploiement en début de partie
-2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve
-3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation
-Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;</description>
-      <modifiers/>
+      <description>In the Strategy Phase of any turn place the Avatar within 15cm of a Farseer before making a strategy roll. The Avatar counts as its own formation and may only enter play in this manner. In the End Phase of that turn remove the Avatar before rallying formations. Once the Avatar has been removed it may not return.
+&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; Dans la phase de la stratégie d&apos;un tour position l&apos;Avatar au sein de 15cm d&apos;un Farseer avant de faire un jet de stratégie. L&apos;Avatar compte comme sa propre formation et ne peut entrer en jeu de cette manière. Dans la phase de fin de ce tour supprimer l&apos;Avatar avant de rallier les formations. Une fois que l&apos;Avatar a été supprimé, il ne peut pas revenir.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="The avatar may appear on the battlefield in three different ways:&lt;BR&gt; 1) The usual manner of deploying at the start of the game;&lt;BR&gt; 2) Through a portal like any formation held in reserve;&lt;BR&gt; 3) Summoning within 15 cm of a Farseer during the teleportation phase.&lt;BR&gt; It is in any case, from its inception, an independent, permanent formation, until the end of the game or its destruction. However it can only contest objectives.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes:&lt;BR&gt; 1) De manière classique lors du déploiement en début de partie&lt;BR&gt; 2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve&lt;BR&gt; 3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation&lt;BR&gt; Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="878d-6ee8-b0a3-6319" name="Bunkers" hidden="false">
       <description>Upon deployment, bunkers are initially attached to a formation of the defending player’s choice. The formation is not obligated to maintain coherency with the bunkers, however, and may move from them, allowing other formations to move into them. Bunkers count as war engines, so they may not conceal, and the formation attached to them is therefore ineligible as well. 
@@ -4111,7 +4114,7 @@ Les formations de Guerriers Aspects peuvent toujours consolider de leur mouvemen
       <modifiers/>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2015-12-02</description>
+      <description>netea-tournament-pack-2016-02-18</description>
       <modifiers/>
     </rule>
     <rule id="3bb9-7150-cead-3726" name="Pillboxes" hidden="false">
@@ -4168,7 +4171,8 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <modifiers/>
     </rule>
     <rule id="a79c-d954-04b6-e14d" name="Spirit Stones" hidden="false">
-      <description>Formations that purchase the Spirit Stone upgrade gain the Leader ability. This is a formation wide ability and is not tied to any one unit.</description>
+      <description>Formations that purchase the Spirit Stone upgrade gain the Leader ability. This is a formation wide ability and is not tied to any one unit.
+&lt;I&gt;&lt;B&gt;Pierres-esprits:&lt;/B&gt; Formations qui achètent l&apos;amélioration pierre-esprit acquièrent la capacité de meneur. Ceci est une capacité à l&apos;échelle de la formation et ne soit pas lié à une quelconque unité.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
     <rule id="99bf-6b33-bb51-d0e5" name="Strategy Rating &amp; Initiative (Eldar)" hidden="false">
@@ -4299,7 +4303,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;and (contact)"/>
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="MW5+&lt;BR&gt;and Assault Weapon"/>
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;and Macro-weapon, +1A"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Commander, Inspiring, Fearless, Invulnerable Save, Walker"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Commander, Fearless, Inspiring, Invulnerable Save, Walker"/>
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Falls"/>
       </characteristics>
@@ -4378,7 +4382,19 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Explosion"/>
       </characteristics>
       <modifiers>
-        <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover, Macro-weapon, Fixed Forward Arc&lt;BR&gt;or Ignore Cover, Titan Killer (D3+1), Fixed Forward Arc" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;&lt;BR&gt;2BP&lt;BR&gt;or MW4+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Shuriken Cannon&lt;BR&gt;&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;&lt;BR&gt;Cobra D-Cannon&lt;BR&gt;or" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
@@ -4390,51 +4406,33 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
             </conditionGroup>
           </conditionGroups>
         </modifier>
-      </modifiers>
-    </profile>
-    <profile id="4a16-c3c2-92f9-902c" profileTypeId="87ab-2658-3f0c-128d" name="Cobra" hidden="true">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="War Engine"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="25cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Shuriken Cannon&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;Cobra D-Cannon&lt;BR&gt;or"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;45cm&lt;BR&gt;30cm&lt;BR&gt;or 30cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP5+&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;2BP&lt;BR&gt;or MW4+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;-&lt;BR&gt;Ignore Cover, Macro-weapon, Fixed Forward Arc&lt;BR&gt;or Ignore Cover, Titan Killer (D3+1), Fixed Forward Arc"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Skimmer, Reinforced Armour"/>
-        <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
-        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Explosion"/>
-      </characteristics>
-      <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;or 30cm" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;&lt;BR&gt;3BP&lt;BR&gt;or MW3+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-      </modifiers>
-    </profile>
-    <profile id="1b03-a956-eb25-c942" profileTypeId="87ab-2658-3f0c-128d" name="Cobra" hidden="true">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="War Engine"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="25cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Shuriken Cannon&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;Cobra D-Cannon&lt;BR&gt;or"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;45cm&lt;BR&gt;30cm&lt;BR&gt;or 30cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP5+&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;3BP&lt;BR&gt;or MW3+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;-&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;or Titan Killer (D6), Fixed Forward Arc"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Skimmer, Reinforced Armour"/>
-        <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
-        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Explosion"/>
-      </characteristics>
-      <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;-&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;or Titan Killer (D6), Fixed Forward Arc" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;-&lt;BR&gt;Fixed Forward Arc, Macro-weapon, Titan Killer (D3+1), Ignore Cover" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4505,7 +4503,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="e62c-7f07-dc6b-3746" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Dire Avenger Exarch" hidden="true">
+    <profile id="e62c-7f07-dc6b-3746" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Dire Avenger Exarch" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
@@ -4519,9 +4517,9 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Inspiring"/>
       </characteristics>
       <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4652,7 +4650,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="e83e-ba66-aa48-c5ba" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Fire Dragon Exarch" hidden="true">
+    <profile id="e83e-ba66-aa48-c5ba" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Fire Dragon Exarch" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
@@ -4666,9 +4664,9 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Inspiring"/>
       </characteristics>
       <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4873,7 +4871,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="2ca7-d5a3-73f2-3ba7" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Howling Banshee Exarch" hidden="true">
+    <profile id="2ca7-d5a3-73f2-3ba7" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Howling Banshee Exarch" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
@@ -4887,9 +4885,9 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Inspiring"/>
       </characteristics>
       <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5146,9 +5144,9 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
     </profile>
     <profile id="d439-ab49-46e0-fd0e" profileTypeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" name="Power Fist" hidden="false">
       <characteristics>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;or (15cm)&lt;BR&gt;or (contact)"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="6x AP4+/AT4+&lt;BR&gt;or Small Arms&lt;BR&gt;or Assault Weapon"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;or +3A&lt;BR&gt;or +2A, Titan Killer (D3)"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;and (15cm)&lt;BR&gt;or (contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="6x AP4+/AT4+&lt;BR&gt;and Small Arms&lt;BR&gt;or Assault Weapon"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;and +3A&lt;BR&gt;or +2A, Titan Killer (D3)"/>
       </characteristics>
       <modifiers/>
     </profile>
@@ -5244,7 +5242,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         </modifier>
       </modifiers>
     </profile>
-    <profile id="3af2-d287-8e7c-b1b4" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Shining Spear Exarch" hidden="true">
+    <profile id="3af2-d287-8e7c-b1b4" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Shining Spear Exarch" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
@@ -5258,9 +5256,9 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Inspiring"/>
       </characteristics>
       <modifiers>
-        <modifier type="show" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5697,16 +5695,9 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="36c8-6d92-af3f-a836" name="Infantry" value="May use"/>
         <characteristic characteristicId="1297-f4e7-4126-0a6a" name="Vehicle" value="Light Vehicles &amp; Armoured Vehicles that have Walker may use"/>
         <characteristic characteristicId="8902-a4d6-b39b-ca60" name="War Engine" value="Impassable"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Notes" value="The Eldar player may choose to replace one of the Objective markers in his half of the table with a Wraithgate. It functions both as a Webway portal and as an objective for rules purposes. It may not be attacked or destroyed."/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Notes" value=""/>
       </characteristics>
-      <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Après placement des objectifs, le joueur eldar remplace l&apos;un des objectifs de sa moitié de table par un portail fantôme. Celui-ci est indestructible et fonctionne à la fois comme un objectif et un portail fantôme d&apos;un point de vue des règles du jeu." repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
     </profile>
     <profile id="9311-d638-3d00-9523" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Wraithguard" hidden="false">
       <characteristics>
