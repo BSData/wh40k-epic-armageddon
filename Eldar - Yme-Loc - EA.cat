@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a850-4741-5719-fd3f" revision="3" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Eldar: Yme-Loc Craftworld" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a850-4741-5719-fd3f" revision="4" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Eldar: Yme-Loc Craftworld" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="e6de-b411-49c2-a59c" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -703,16 +703,16 @@
           <entryGroups/>
           <modifiers>
             <modifier type="set" field="minSelections" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-                    <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <links>
@@ -735,13 +735,7 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="points" value="25.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="minInForce" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -772,6 +766,9 @@
         <link id="f946-1174-53ba-1e4a" targetId="9e92-dac0-a429-1959" linkType="entry">
           <modifiers/>
         </link>
+        <link id="4d58-2c6c-57c3-52d3" targetId="e32b-f799-1eb1-5e5e" linkType="entry">
+          <modifiers/>
+        </link>
       </links>
     </entry>
     <entry id="c291-804f-22e4-33db" name="Engine of Vaul Warhost" points="25.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
@@ -795,12 +792,6 @@
         </entryGroup>
       </entryGroups>
       <modifiers>
-        <modifier type="set" field="minInForce" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions/>
           <conditionGroups>
@@ -824,6 +815,9 @@
           <modifiers/>
         </link>
         <link id="2bbe-46a1-3bf5-b5e8" targetId="9e92-dac0-a429-1959" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="369e-1819-f61a-a094" targetId="e32b-f799-1eb1-5e5e" linkType="entry">
           <modifiers/>
         </link>
       </links>
@@ -857,6 +851,9 @@
       <profiles/>
       <links>
         <link id="7128-a620-5d49-4b55" targetId="9e92-dac0-a429-1959" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="cf7d-c6ba-a9be-419e" targetId="e32b-f799-1eb1-5e5e" linkType="entry">
           <modifiers/>
         </link>
       </links>
@@ -1715,11 +1712,7 @@
           </entries>
           <entryGroups/>
           <modifiers/>
-          <links>
-            <link id="bfa8-9d1f-f996-0e51" targetId="68c7-8163-c607-b259" linkType="entry">
-              <modifiers/>
-            </link>
-          </links>
+          <links/>
         </entryGroup>
       </entryGroups>
       <modifiers>
@@ -1738,7 +1731,7 @@
         </link>
       </links>
     </entry>
-    <entry id="bfa2-4f9c-da43-8e2d" name="Mounted Guardian Troupe" points="325.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="bfa2-4f9c-da43-8e2d" name="Mounted Guardian Troupe" points="300.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="1136-f700-7781-680a" name="Wave Serpent" points="0.0" categoryId="(No Category)" type="model" minSelections="2" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -3034,6 +3027,53 @@
         </link>
       </links>
     </entry>
+    <entry id="0206-b85d-1fdd-ce65" name="Lynx Troupe" points="300.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="0eb8-d262-dda6-6942" name="Lynx" points="0.0" categoryId="(No Category)" type="model" minSelections="2" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="cc41-e491-e714-9ccf" targetId="77f6-9fd8-4ce8-83b0" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="5b57-a15c-521f-e6b2" targetId="a975-d30d-e788-5d1f" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="f2fe-88ad-714a-f603" targetId="5742-8344-ce29-fe2a" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="2b09-fc06-ca7f-02df" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="e82c-e78a-0023-6d05" targetId="2884-3f68-00cb-49d5" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="4721-d075-bf6e-eae3" targetId="fb90-2af2-c6a6-4ab0" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="d26f-3e49-da6e-32b6" targetId="9e92-dac0-a429-1959" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
   </entries>
   <rules>
     <rule id="a977-3c81-b7e5-bc3c" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
@@ -3202,6 +3242,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
         <link id="0eb3-968b-69fd-56e2" targetId="1b03-a956-eb25-c942" linkType="profile">
           <modifiers/>
+        </link>
+        <link id="338a-0687-621c-a9c3" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -3745,6 +3795,37 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
+    <entry id="e32b-f799-1eb1-5e5e" name="Bonesinger" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="31a2-bfad-9019-0a4b" targetId="11ee-0f75-67e2-41d4" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="2d11-4423-707c-a37a" targetId="5387-8977-f259-e7f5" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="62c3-f6c6-e9b4-671b" targetId="0259-7b22-7a62-b06f" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="10f2-d44b-7b35-304d" targetId="c200-fea3-6320-ce51" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="7ae0-7ebb-413f-bb31" targetId="1171-99c8-3276-432d" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
   </sharedEntries>
   <sharedEntryGroups>
     <entryGroup id="b58a-1b42-a2e8-165d" name="Aspect Warriors" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -4027,8 +4108,8 @@ Contrairement à plusieurs tranchées ou terrassements complexes, les positions 
       <modifiers/>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
-      <description>YmeLocQuickRef #07042014
-CodexCraftworldEldar #070414</description>
+      <description>YmeLocQuickRef #14052016
+CodexCraftworldEldar #140516</description>
       <modifiers/>
     </rule>
     <rule id="6869-aba0-7c24-df30" name="Farsight" hidden="false">
@@ -4430,7 +4511,7 @@ Toutes formations peuvent utiliser les grande portails fantôme.&lt;/I&gt;</desc
         <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Shuriken Cannon&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;Cobra D-Cannon&lt;BR&gt;or"/>
         <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;45cm&lt;BR&gt;30cm&lt;BR&gt;or 30cm"/>
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP5+&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;3BP&lt;BR&gt;or MW3+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;-&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;or Titan Killer (D6), Fixed Forward Arc"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;-&lt;BR&gt;Macro-weapon, Ignore Cover, Fixed Forward Arc&lt;BR&gt;or Titan Killer (D6), Fixed Forward Arc"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Skimmer, Reinforced Armour"/>
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Explosion"/>
@@ -4443,23 +4524,6 @@ Toutes formations peuvent utiliser les grande portails fantôme.&lt;/I&gt;</desc
           <conditionGroups/>
         </modifier>
       </modifiers>
-    </profile>
-    <profile id="4a16-c3c2-92f9-902c" profileTypeId="87ab-2658-3f0c-128d" name="Cobra (netea - unused this list)" hidden="true">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="War Engine"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="25cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Shuriken Cannon&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;Cobra D-Cannon&lt;BR&gt;or"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;45cm&lt;BR&gt;30cm&lt;BR&gt;or 30cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP5+&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;2BP&lt;BR&gt;or MW4+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;-&lt;BR&gt;Ignore Cover, Macro-weapon, Fixed Forward Arc&lt;BR&gt;or Ignore Cover, Titan Killer (D3+1), Fixed Forward Arc"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Skimmer, Reinforced Armour"/>
-        <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
-        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Explosion"/>
-      </characteristics>
-      <modifiers/>
     </profile>
     <profile id="f745-3475-ce52-655a" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Dark Reapers" hidden="false">
       <characteristics>
@@ -4996,6 +5060,23 @@ Toutes formations peuvent utiliser les grande portails fantôme.&lt;/I&gt;</desc
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value=""/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour"/>
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
+        <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Destroyed"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="77f6-9fd8-4ce8-83b0" profileTypeId="87ab-2658-3f0c-128d" name="Lynx S" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="War Engine"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="35cm"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Sonic Lance&lt;BR&gt;&lt;BR&gt;Shuriken Cannon"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="45cm&lt;BR&gt;&lt;BR&gt;30cm"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="2BP&lt;BR&gt;&lt;BR&gt;AP5+"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Disrupt, Ignore Cover&lt;BR&gt;&lt;BR&gt;-"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour, Skimmer"/>
+        <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="2"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Destroyed"/>
       </characteristics>
       <modifiers/>
@@ -5655,6 +5736,21 @@ Toutes formations peuvent utiliser les grande portails fantôme.&lt;/I&gt;</desc
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="4BP&lt;BR&gt;or MW2+"/>
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon&lt;BR&gt;or Titan Killer (D3)"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Choose weapon system at the start of the battle."/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="11ee-0f75-67e2-41d4" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Master Bonesinger" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="n/a"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="n/a"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="n/a"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="none"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value=""/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value=""/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value=""/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Invulnerable Save, Supreme Commander"/>
       </characteristics>
       <modifiers/>
     </profile>

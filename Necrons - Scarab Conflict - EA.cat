@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fa19-4529-1c5a-95f9" revision="2" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Necrons: Scarab Conflict" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fa19-4529-1c5a-95f9" revision="3" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Necrons: Scarab Conflict" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="e6de-b411-49c2-a59c" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -113,40 +113,23 @@
       </links>
     </entry>
     <entry id="606a-dd62-1f8f-7f61" name="Armoured Phalanx Obelisk Recon Maniple" points="300.0" categoryId="7bf8-d208-dd76-9088" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries>
-        <entry id="948b-aeed-6c14-4f07" name="Obelisk" points="0.0" categoryId="(No Category)" type="model" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles/>
-          <links>
-            <link id="f34a-5456-060c-50d2" targetId="e8e2-ccf0-b697-b818" linkType="profile">
-              <modifiers/>
-            </link>
-            <link id="1894-7cf2-a3b2-f244" targetId="5742-8344-ce29-fe2a" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="b813-21d4-1a20-c644" targetId="f7ca-2656-2916-3ce1" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="102d-5d34-5969-6f26" targetId="5fc4-93c0-07df-fea8" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="caee-a4b8-3fd4-b054" targetId="e3be-109c-fb77-c554" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="0f2e-199f-d082-7c2c" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
-              <modifiers/>
-            </link>
-          </links>
-        </entry>
-      </entries>
+      <entries/>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
-      <links/>
+      <links>
+        <link id="7f2d-ac29-c99d-7d9d" targetId="3e55-2143-2543-a34b" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
     </entry>
     <entry id="46cd-4e4b-ab70-14d3" name="C’tan" points="0.0" categoryId="4f35-97c0-fae0-922d" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -165,7 +148,14 @@
           </links>
         </entryGroup>
       </entryGroups>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links/>
@@ -174,7 +164,7 @@
       <entries/>
       <entryGroups/>
       <modifiers>
-        <modifier type="set" field="points" value="300.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -637,13 +627,13 @@
             </link>
           </links>
         </entry>
-        <entry id="5d5c-2ced-45a5-a280" name="3x Immortals" points="100.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="5d5c-2ced-45a5-a280" name="2x Immortals" points="75.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -710,10 +700,12 @@
           <entryGroups/>
           <modifiers/>
           <links>
-            <link id="9c1f-8ae6-f8d3-6efc" targetId="e10e-247c-8b53-f644" linkType="entry">
+            <link id="9c1f-8ae6-f8d3-6efc" targetId="ba58-5232-07d8-44c8" linkType="entry">
               <modifiers>
-                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
                   <conditionGroups/>
                 </modifier>
               </modifiers>
@@ -722,6 +714,16 @@
               <modifiers>
                 <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="603c-a7e4-5fd5-ef52" targetId="99e2-76dc-cb9c-dfb8" linkType="entry">
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
                   <conditionGroups/>
                 </modifier>
               </modifiers>
@@ -738,6 +740,12 @@
             <modifier type="set" field="maxSelections" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="force type" childId="5535-5d7a-519a-e9b4" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -824,12 +832,12 @@
       <profiles/>
       <links/>
     </entry>
-    <entry id="0ece-7f52-347c-734c" name="Monolith Maniple (EpicUK)" points="200.0" categoryId="7bf8-d208-dd76-9088" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="0ece-7f52-347c-734c" name="Monolith Maniple (EpicUK)" points="200.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="783e-d766-bcfd-2e35" name="Constructs" defaultEntryId="4fad-a94f-6f2a-894e" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="4fad-a94f-6f2a-894e" name="1x Monolith, 2x Obelisk" points="0.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="4fad-a94f-6f2a-894e" name="1x Monolith, 2x Obelisk" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -865,7 +873,7 @@
                 </link>
               </links>
             </entry>
-            <entry id="fa20-c792-fe2b-2f3d" name="3x Monolith" points="75.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="fa20-c792-fe2b-2f3d" name="3x Monolith" points="100.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -895,6 +903,42 @@
                 </link>
               </links>
             </entry>
+            <entry id="146a-264e-3666-ee8a" name="2x Monolith, 1x Obelisk" points="50.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="d023-5422-e140-8f14" targetId="8407-e820-0d64-b7db" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="92f8-52ed-05d5-29bd" targetId="5742-8344-ce29-fe2a" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="6270-2d4c-40e6-dd18" targetId="f7ca-2656-2916-3ce1" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="0c79-e0d2-0db4-b3d0" targetId="ac4e-183a-3c2a-3f03" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="6369-a49f-3f0b-c19d" targetId="e3be-109c-fb77-c554" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="7f9d-a690-0ffc-ed28" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="643b-8199-bbb1-6381" targetId="ad15-66e0-9c25-1e04" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="12f5-366d-f126-21b2" targetId="e8e2-ccf0-b697-b818" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="b686-78e5-3b66-1484" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
           </entries>
           <entryGroups/>
           <modifiers/>
@@ -913,7 +957,7 @@
       <profiles/>
       <links/>
     </entry>
-    <entry id="e071-460d-16fc-d66b" name="Monolith Maniple (GW)" points="75.0" categoryId="7bf8-d208-dd76-9088" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="e071-460d-16fc-d66b" name="Monolith Maniple" points="75.0" categoryId="7bf8-d208-dd76-9088" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="659b-08ca-1437-f9cd" name="Obelisk" points="50.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="3" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -1270,34 +1314,16 @@
       </links>
     </entry>
     <entry id="d0a9-ba48-511b-465b" name="Venator Flayer Maniple" points="200.0" categoryId="7bf8-d208-dd76-9088" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries>
-        <entry id="0b0a-6b03-4798-3f2a" name="Flayed Ones" points="0.0" categoryId="(No Category)" type="unit" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles/>
-          <links>
-            <link id="847a-1af8-ff1d-2f95" targetId="9adc-f71d-e87a-a60b" linkType="profile">
-              <modifiers/>
-            </link>
-            <link id="11b0-4780-6554-1812" targetId="f83b-820d-1b95-e28a" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="c27c-48a4-5970-baed" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="9b6e-79b3-88f0-7c3d" targetId="52d0-4e26-834e-94b3" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="6981-b473-cef7-b2cf" targetId="e3be-109c-fb77-c554" linkType="rule">
-              <modifiers/>
-            </link>
-          </links>
-        </entry>
-      </entries>
+      <entries/>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -1311,6 +1337,9 @@
           <modifiers/>
         </link>
         <link id="4a8e-ae1e-4d67-72e9" targetId="967f-2200-2098-7bc9" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="881d-0e1f-79f2-9ece" targetId="bbb4-619b-ca43-1ea2" linkType="entry">
           <modifiers/>
         </link>
       </links>
@@ -1333,8 +1362,19 @@
                 </modifier>
               </modifiers>
             </link>
-            <link id="d351-aa85-e832-8f4f" targetId="e10e-247c-8b53-f644" linkType="entry">
-              <modifiers/>
+            <link id="d351-aa85-e832-8f4f" targetId="ba58-5232-07d8-44c8" linkType="entry">
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="points" value="325.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
             <link id="3806-85ab-8c51-32a4" targetId="21cb-1b32-b78b-24ec" linkType="entry">
               <modifiers/>
@@ -1345,6 +1385,20 @@
                   <conditions>
                     <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
                   </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="b376-ee05-ac17-45d3" targetId="99e2-76dc-cb9c-dfb8" linkType="entry">
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="points" value="325.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
                   <conditionGroups/>
                 </modifier>
               </modifiers>
@@ -1392,6 +1446,115 @@
         </link>
       </links>
     </entry>
+    <entry id="9aeb-b995-a44a-9337" name="Wraith Maniple" points="200.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="2a01-96f1-7a30-8e51" name="Wraiths" points="0.0" categoryId="(No Category)" type="unit" minSelections="4" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="3e71-c0eb-3677-0334" targetId="c86d-1383-6e3a-ec51" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="37b1-112e-bf54-f479" targetId="0bfa-4e24-f050-5715" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="7f5b-1726-69a4-8966" targetId="6251-b414-cd5f-3537" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="6de8-c64b-896a-3c5e" targetId="1171-99c8-3276-432d" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="17d2-65c7-55b9-4f7d" targetId="52d0-4e26-834e-94b3" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links/>
+    </entry>
+    <entry id="39b1-5961-c1c8-51e4" name="Obelisk Maniple" points="300.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="d956-7abd-6e54-69a8" targetId="3e55-2143-2543-a34b" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="75b1-442c-550b-4699" name="Destroyer Maniple" points="300.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="c47e-894a-7434-f944" targetId="6eb9-b8f3-018b-8438" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="ca44-245e-b8fb-c0fc" targetId="24eb-f52d-a745-8c9f" linkType="entry group">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="de30-e548-e667-f09a" name="Flayer Maniple" points="200.0" categoryId="2e76-3c1e-639f-a0a7" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="69c1-1322-d20b-0687" targetId="6eb9-b8f3-018b-8438" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="349a-2cd1-1c66-c59c" targetId="04e1-2bd3-bbc3-9ef0" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="2507-f974-c921-9cbe" targetId="967f-2200-2098-7bc9" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="5488-1623-af5a-d9a2" targetId="bbb4-619b-ca43-1ea2" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
   </entries>
   <rules>
     <rule id="a977-3c81-b7e5-bc3c" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
@@ -1421,45 +1584,6 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     </link>
   </links>
   <sharedEntries>
-    <entry id="e10e-247c-8b53-f644" name="Add C&apos;Tan to Formation" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="0" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
-      <entries/>
-      <entryGroups/>
-      <modifiers>
-        <modifier type="set" field="minInForce" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-                <condition parentId="force type" childId="46cd-4e4b-ab70-14d3" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="maxInForce" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-                <condition parentId="force type" childId="46cd-4e4b-ab70-14d3" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles/>
-      <links/>
-    </entry>
     <entry id="ba58-5232-07d8-44c8" name="C&apos;Tan The Deceiver" points="300.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
@@ -1841,6 +1965,57 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
+    <entry id="3e55-2143-2543-a34b" name="Obelisk" points="0.0" categoryId="(No Category)" type="model" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="1b9d-d9eb-2fe5-5b26" targetId="e8e2-ccf0-b697-b818" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="dd67-6fa5-83f0-34d5" targetId="5742-8344-ce29-fe2a" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="d905-41ac-d7f3-746e" targetId="f7ca-2656-2916-3ce1" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="4766-0308-eb08-054f" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="bcda-2e0f-2cf2-e4ac" targetId="e3be-109c-fb77-c554" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="00e9-759a-2247-6e62" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="bbb4-619b-ca43-1ea2" name="Flayed Ones" points="0.0" categoryId="(No Category)" type="unit" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="6c8d-dfaf-2895-0605" targetId="9adc-f71d-e87a-a60b" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="c4e5-09bd-5552-8c25" targetId="f83b-820d-1b95-e28a" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="95b6-1b7f-78ad-d547" targetId="32ee-a9b0-a7a8-d9b5" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="f41e-cd64-0c0e-2e92" targetId="52d0-4e26-834e-94b3" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="1be7-5fdb-ba81-1135" targetId="e3be-109c-fb77-c554" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
   </sharedEntries>
   <sharedEntryGroups>
     <entryGroup id="24eb-f52d-a745-8c9f" name="Cavalry" defaultEntryId="235e-96e7-263e-636a" minSelections="6" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -1900,11 +2075,36 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <link id="136e-8f83-4854-a3c3" targetId="60d0-1487-0bdb-0f12" linkType="entry">
           <modifiers/>
         </link>
-        <link id="4a6f-ab86-0671-7819" targetId="e10e-247c-8b53-f644" linkType="entry">
-          <modifiers/>
-        </link>
         <link id="0203-2a70-d0e0-e8fb" targetId="21cb-1b32-b78b-24ec" linkType="entry">
           <modifiers/>
+        </link>
+        <link id="5602-761e-825c-7b67" targetId="ba58-5232-07d8-44c8" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="points" value="325.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="ae81-a37e-1800-61e0" targetId="99e2-76dc-cb9c-dfb8" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="points" value="325.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entryGroup>
@@ -1972,7 +2172,7 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
       <description>The unit is destroyed. All units within 5cm suffer a macro-weapon hit on a roll of 4+.
 &lt;I&gt;&lt;B&gt;Touche Critique: C&apos;Tan:&lt;/B&gt; Le C&apos;tan est détruit, toute unité situé à moins de 5cm subit une touche MA4+.&lt;/I&gt;</description>
       <modifiers>
-        <modifier type="set" field="description" value="The unit is destroyed. All units within 5cm suffer a hit on a roll of 5+." repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="description" value="Auto-hit. All units within 5cm suffer a hit on a roll of 5+." repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -2036,8 +2236,8 @@ Contrairement à plusieurs tranchées ou terrassements complexes, les positions 
       <modifiers/>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
-      <description>CodexNecrons #140612
-NecronQuickRef #140612</description>
+      <description>CodexNecrons #140516
+NecronQuickRef #140516</description>
       <modifiers/>
     </rule>
     <rule id="f7ca-2656-2916-3ce1" name="Fearless" hidden="false">
@@ -2859,6 +3059,12 @@ Ghost Arc: 2 unités.&lt;/I&gt;</description>
         <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value=", +1A" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="5535-5d7a-519a-e9b4" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>

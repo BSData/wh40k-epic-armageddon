@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d9ab-6165-cd82-d566" revision="1" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Eldar: Ulthwé Craftworld" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d9ab-6165-cd82-d566" revision="2" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Eldar: Ulthwé Craftworld" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="e6de-b411-49c2-a59c" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -2168,6 +2168,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     <link id="97de-f787-d238-a4a5" targetId="f34f-3803-2af7-0b91" linkType="rule">
       <modifiers/>
     </link>
+    <link id="d9b2-6e12-9a6e-5c18" targetId="27b3-0e23-61ca-1d45" linkType="rule">
+      <modifiers/>
+    </link>
   </links>
   <sharedEntries>
     <entry id="18c7-2be1-6ce1-d94f" name="3x Support Weapon Platforms" points="50.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -2285,6 +2288,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
         <link id="0eb3-968b-69fd-56e2" targetId="1b03-a956-eb25-c942" linkType="profile">
           <modifiers/>
+        </link>
+        <link id="7a8a-1997-6911-3662" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -2918,8 +2931,8 @@ Contrairement à plusieurs tranchées ou terrassements complexes, les positions 
       <modifiers/>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
-      <description>UlthweQuickRef #16062014
-CodexCraftworldEldar #070414</description>
+      <description>UlthweQuickRef #14052016
+CodexCraftworldEldar #140516</description>
       <modifiers/>
     </rule>
     <rule id="6869-aba0-7c24-df30" name="Farsight" hidden="false">
@@ -3102,13 +3115,19 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <modifiers/>
     </rule>
     <rule id="0dbc-9ca6-b5ea-0f9b" name="Strategy Rating &amp; Initiative (Ulthwé)" hidden="false">
-      <description>Ulthwé armies have Strategy Rating 5. 
-Ulthwé Avatars, Aspect Warriors, Revenants, Phantom Titans and Warlock Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.
+      <description>Ulthwé armies have Strategy Rating 5. Ulthwé Avatars, Aspect Warriors, Revenants, Phantom Titans and Warlock Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.
 Harlequins have Strategy Rating 5 and an Initiative rating of 1+.
 &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt;Ulthwé ont une Valeur Stratégique de 5. 
 L’Avatar, les Guerriers Aspect et les Titans ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.
 Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+&lt;/I&gt;</description>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="Ulthwé armies have Strategy Rating 4. Ulthwé Avatars, Aspect Warriors, Revenants, Phantom Titans and Warlock Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.&lt;BR&gt; Harlequins have Strategy Rating 5 and an Initiative rating of 1+." repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="5387-8977-f259-e7f5" name="Supreme Commander" hidden="false">
       <description>Supreme Commanders represent high-level command units. They count as Commanders and Leaders. In addition, each supreme commander unit in the army allows a player to re-roll one failed initiative test (of any type) once per turn.
@@ -3175,6 +3194,17 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
 &lt;I&gt;&lt;B&gt;Les Portails Fantôme:&lt;/B&gt; Chaque portail fantôme inclus dans une armée permet au joueur Eldar de prendre trois autres formations, et de les conserver en réserve sur son vaisseau monde. Les formations en réserve sur le vaisseau monde peuvent entrer en jeux par le portail, en réalisant une action qui comporte un mouvement. Ce mouvement est alors mesuré à partir de la position du portail sur la table de jeu. Notez que les formations peuvent apparaître à travers n’importe quel portail, mais une seule formation peut voyager à travers un même portail par tour. Notez qu&apos;une formation qui rate son activation en tentant de franchir un portail prendra automatiquement l&apos;ordre tenir (donc peut entrer en jeu en réalisant un simple mouvement en prenant 1 PI pour l&apos;activation ratée ou alors rester hors de table et se regrouper). Si elle choisit de se regrouper en restant hors de table, cela permettra à une autre formation de pouvoir utiliser ce portail car il ne sera pas considéré comme utilisé par la formation précédente ayant raté son activation.
 Seules les unités d&apos;infanterie, les véhicules légers et les véhicules blindés avec la capacité marcheur peuvent utiliser les portails fantôme.&lt;/I&gt;</description>
       <modifiers/>
+    </rule>
+    <rule id="27b3-0e23-61ca-1d45" name="Seers of Ulthwé" hidden="false">
+      <description>Ulthwé armies have a strategy rating of 4. However for all deployment purposes (such as choosing teleport order or picking spaceship arrival turn) Ulthwé armies count as having a strategy rating of 5. An Ulthwé army gets +1 to the strategy roll on the turn the Avatar arrives.</description>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -3271,7 +3301,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Shuriken Cannon&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;Cobra D-Cannon&lt;BR&gt;or"/>
         <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="30cm&lt;BR&gt;45cm&lt;BR&gt;30cm&lt;BR&gt;or 30cm"/>
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP5+&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;3BP&lt;BR&gt;or MW3+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;-&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;or Titan Killer (D6), Fixed Forward Arc"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;-&lt;BR&gt;Macro-weapon, Ignore Cover, Fixed Forward Arc&lt;BR&gt;or Titan Killer (D6), Fixed Forward Arc"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Skimmer, Reinforced Armour"/>
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="3"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Explosion"/>
