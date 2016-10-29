@@ -38,7 +38,7 @@ You may notice the french language rules have variations. Each active community 
 
 __Army Lists__
 
-Our Repo includes over 100 faction, forces, chapters & regiments, detailed by more than 230 of the _300plus_ army lists currently available, as well as incorporating supplementary features, like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
+Our Repo includes over 100 factions, forces, chapters & regiments, detailed by more than 230 of the _300plus_ army lists currently available, as well as incorporating supplementary features like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
 
 
 ##Links##
