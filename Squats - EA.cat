@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="782f-e39b-52fc-5ffc" revision="4" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Squats" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="782f-e39b-52fc-5ffc" revision="5" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" battleScribeVersion="1.15" name="Squats" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="e6de-b411-49c2-a59c" name="-Group- -Groupe-" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="1" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -4367,6 +4367,11 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
         </modifier>
       </modifiers>
     </rule>
+    <rule id="73ee-c5a5-1ebd-c31d" name="Critical Hit: Large Blast" hidden="false">
+      <description>Destroyed, every unit within 15cm takes a BM
+&lt;I&gt;&lt;B&gt;Touche Critique: Grande Détonation:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 15cm prend un PI.&lt;/I&gt;</description>
+      <modifiers/>
+    </rule>
     <rule id="705d-3406-4984-8522" name="Critical Hit: Large Explosion" hidden="false">
       <description>Destroyed, units within 5cm hit on D6 roll of 5.
 &lt;I&gt;&lt;B&gt;Touche Critique: Grande Explosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche sur un 5.&lt;/I&gt;</description>
@@ -4412,11 +4417,6 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
           <conditionGroups/>
         </modifier>
       </modifiers>
-    </rule>
-    <rule id="73ee-c5a5-1ebd-c31d" name="Critical Hit: Large Blast" hidden="false">
-      <description>Destroyed, every unit within 15cm takes a BM
-&lt;I&gt;&lt;B&gt;Touche Critique: Grande Détonation:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 15cm prend un PI.&lt;/I&gt;</description>
-      <modifiers/>
     </rule>
     <rule id="0a83-fa24-f456-ed81" name="Critical Hit: Very Large Explosion" hidden="false">
       <description>Destroyed, units within 5cm hit on D6 roll of 4.
@@ -4696,14 +4696,18 @@ A pair of Moles or a single Hellebore count as independent formations and follow
       </modifiers>
     </rule>
     <rule id="ef42-3efb-0c94-4e35" name="Stubborn" hidden="false">
-      <description>Squat formations may only take a single maximum withdrawal move of 15cm when breaking. However, the formations only take hack down kills within 5cm instead of the typical 15cm.
-&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Les Squats sont un Peuple Obstiné et difficile à vaincre en assaut. Leur nature bornée les pousse également à se rallier plus vite que les autres races pour retourner au combat!
-Une formation Squat est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités).
-Lorsqu&apos;une formation Squat perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;</description>
+      <description>Stubborn formations may only take a single maximum withdrawal move of 15cm when breaking. However, the formations only take hack down kills within 5cm instead of the typical 15cm.
+&lt;I&gt;&lt;B&gt;Têtu:&lt;/B&gt; Les formations têtu ne peuvent prendre qu&apos;un seul mouvement de retrait maximum de 15 cm lorsqu&apos;elles deviennent démoralisées. Cependant, les formations ne subissent que des tueries de massacre de moins de 5cm au lieu des 15cm typiques.&lt;/I&gt;</description>
       <modifiers>
         <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="4a86-7376-5d23-e95d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>

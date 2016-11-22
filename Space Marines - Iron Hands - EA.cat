@@ -156,49 +156,10 @@
         </entry>
       </entries>
       <entryGroups>
-        <entryGroup id="6daa-2446-aae4-38d4" name="Dreadnought" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="a45e-6050-be86-1d25" name="APCs" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
-          <links>
-            <link id="4d46-d5ba-e6c0-b7e0" targetId="2de9-f52c-e404-bd53" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="fb28-b6c1-c19a-9b77" targetId="9d6d-e048-1ce2-d9e3" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="points" value="25.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition parentId="b531731f-f157-fd01-5dc8-9a405796d22b" childId="8d5c-e6bc-54ab-1352" field="selections" type="equal to" value="0.0"/>
-                        <condition parentId="b531731f-f157-fd01-5dc8-9a405796d22b" childId="bd4a-d64e-f47f-c866" field="selections" type="equal to" value="0.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </link>
-          </links>
-        </entryGroup>
-        <entryGroup id="a45e-6050-be86-1d25" name="APCs" minSelections="0" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="a45e-6050-be86-1d25" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="2.0" repeat="true" numRepeats="1" incrementParentId="b531731f-f157-fd01-5dc8-9a405796d22b" incrementChildId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="2.0" repeat="true" numRepeats="1" incrementParentId="b531731f-f157-fd01-5dc8-9a405796d22b" incrementChildId="81d7-f6d8-ef39-0373" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
           <links>
             <link id="f2c2-983f-a865-59f0" targetId="bd4a-d64e-f47f-c866" linkType="entry">
               <modifiers/>
@@ -248,6 +209,9 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+        </link>
+        <link id="c853-8601-f257-79d0" targetId="a36e-f1af-e764-6501" linkType="entry group">
+          <modifiers/>
         </link>
       </links>
     </entry>
@@ -334,7 +298,7 @@
     </entry>
     <entry id="1f4d-461a-3369-372a" name="Fortifications" points="0.0" categoryId="1280-1024-f2ef-261b" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="3429-9c80-3e1d-e1ca" name="Bunker" points="35.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="3429-9c80-3e1d-e1ca" name="Command Bunker" points="35.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -651,10 +615,16 @@
       </entryGroups>
       <modifiers>
         <modifier type="set" field="maxInForce" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="c21a10fe-a11a-af95-9c8c-3b18ad266cb8" field="selections" type="at least" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="6825-81ef-8417-05d9" field="selections" type="at least" value="1.0"/>
+                <condition parentId="force type" childId="116b-cc79-dd96-6cf6" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules/>
@@ -802,39 +772,11 @@
           <modifiers/>
           <links/>
         </entryGroup>
-        <entryGroup id="44c5-82d4-992d-2ddf" name="APCs" minSelections="0" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="44c5-82d4-992d-2ddf" name="APCs" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="44c5-82d4-992d-2ddf" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition parentId="44c5-82d4-992d-2ddf" childId="bd4a-d64e-f47f-c866" field="selections" type="equal to" value="0.0"/>
-                    <condition parentId="44c5-82d4-992d-2ddf" childId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" field="selections" type="equal to" value="0.0"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition parentId="d07a-9182-2f7b-c6fa" childId="f6f7-504e-e410-1a2e" field="selections" type="equal to" value="1.0"/>
-                        <condition parentId="d07a-9182-2f7b-c6fa" childId="1393-ceea-1e66-3dfb" field="selections" type="equal to" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="44c5-82d4-992d-2ddf" incrementChildId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="set" field="maxSelections" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="44c5-82d4-992d-2ddf" childId="84e2-11d4-a22b-85ce" field="selections" type="equal to" value="1.0"/>
               </conditions>
@@ -994,7 +936,7 @@
             </link>
             <link id="84e6-2883-07f1-0900" targetId="7ddf-9cfb-3903-f151" linkType="entry">
               <modifiers>
-                <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                <modifier type="decrement" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -1022,7 +964,7 @@
             </link>
             <link id="a3aa-9696-2386-6c84" targetId="b99d-e3cf-6e0e-55be" linkType="entry">
               <modifiers>
-                <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                <modifier type="decrement" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -1103,95 +1045,9 @@
         </link>
       </links>
     </entry>
-    <entry id="10c1-fef9-67ff-7000" name="Land Raider Helios" points="-100.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-      <entries>
-        <entry id="d47a-2846-827e-6b9c" name="Land Raider Helios" points="125.0" categoryId="(No Category)" type="model" minSelections="4" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-          <entries/>
-          <entryGroups/>
-          <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="10c1-fef9-67ff-7000" incrementChildId="880c-3249-2272-5e7f" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="10c1-fef9-67ff-7000" childId="bff2-89ab-889c-5387" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <rules/>
-          <profiles/>
-          <links>
-            <link id="c555-8c6c-89b1-fb10" targetId="91cb-be26-3778-9800" linkType="profile">
-              <modifiers/>
-            </link>
-            <link id="253d-633b-8df9-581c" targetId="d45e-5e06-5992-e478" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="7143-6679-897a-d36d" targetId="5fc4-93c0-07df-fea8" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="2ba7-6917-59ef-7f8e" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
-              <modifiers/>
-            </link>
-            <link id="f556-28c6-23bc-83ac" targetId="6a62-b80f-636e-6e84" linkType="rule">
-              <modifiers/>
-            </link>
-          </links>
-        </entry>
-      </entries>
-      <entryGroups>
-        <entryGroup id="880c-3249-2272-5e7f" name="Heavy Support" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers>
-            <modifier type="increment" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="10c1-fef9-67ff-7000" childId="d47a-2846-827e-6b9c" field="selections" type="equal to" value="3.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <links>
-            <link id="b739-069f-fa7e-1cb5" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="1b87-a593-34be-b21f" targetId="bff2-89ab-889c-5387" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="0c34-af67-e646-df66" targetId="86c418d1-ee0e-e1d7-a358-a09c9d09138c" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="3e71-ca64-8270-cb96" targetId="6d85-db9a-1c31-0231" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="121d-9ab3-63a2-8ca7" targetId="ac5a-584b-3459-2a18" linkType="entry">
-              <modifiers/>
-            </link>
-          </links>
-        </entryGroup>
-      </entryGroups>
-      <modifiers>
-        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="3436-8424-83bc-b8fa" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" linkType="entry group">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
     <entry id="702a-a4c6-1bec-1cdc" name="Land Raiders" points="50.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-      <entries/>
-      <entryGroups>
-        <entryGroup id="f574-3f4a-0b57-470b" name="Land Raiders" defaultEntryId="f345-2a56-0817-379e" minSelections="4" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries>
+        <entry id="9fe5-db07-90a4-f5cd" name="Land Raider" points="75.0" categoryId="(No Category)" type="model" minSelections="4" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries/>
           <entryGroups/>
           <modifiers>
@@ -1200,18 +1056,25 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
+          <rules/>
+          <profiles/>
           <links>
-            <link id="f345-2a56-0817-379e" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" linkType="entry">
+            <link id="e841-514e-17e3-7e97" targetId="4dd1-e47f-2832-2ba6" linkType="profile">
               <modifiers/>
             </link>
-            <link id="64aa-e15e-c45b-1c90" targetId="81d7-f6d8-ef39-0373" linkType="entry">
+            <link id="c9e2-7892-d81d-5a28" targetId="d45e-5e06-5992-e478" linkType="rule">
               <modifiers/>
             </link>
-            <link id="fba8-b362-c35d-4cc1" targetId="bff2-89ab-889c-5387" linkType="entry">
+            <link id="ed31-0f1e-29d9-0e57" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="3873-f7fc-13d3-d7a8" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
               <modifiers/>
             </link>
           </links>
-        </entryGroup>
+        </entry>
+      </entries>
+      <entryGroups>
         <entryGroup id="46da-0b47-a00b-7755" name="Heavy Support" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
@@ -1371,12 +1234,6 @@
         </entryGroup>
       </entryGroups>
       <modifiers>
-        <modifier type="set" field="maxInForce" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="b2e922d1-036a-0225-a147-1825633d1f7b" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
@@ -1517,10 +1374,16 @@
       <entryGroups/>
       <modifiers>
         <modifier type="set" field="maxInForce" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="c21a10fe-a11a-af95-9c8c-3b18ad266cb8" field="selections" type="at least" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="6825-81ef-8417-05d9" field="selections" type="at least" value="1.0"/>
+                <condition parentId="force type" childId="116b-cc79-dd96-6cf6" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules/>
@@ -1550,7 +1413,7 @@
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="b23af3d0-8df7-d559-1fec-69a8891576c5" incrementChildId="1f08-eec4-b9bf-fd99" incrementField="selections" incrementValue="1.0">
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="b23af3d0-8df7-d559-1fec-69a8891576c5" incrementChildId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -1581,12 +1444,6 @@
           </modifiers>
           <links>
             <link id="6195-0075-225a-0045" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="1405-b55e-86a5-de18" targetId="bff2-89ab-889c-5387" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="49ed-c00b-58ce-cecd" targetId="81d7-f6d8-ef39-0373" linkType="entry">
               <modifiers/>
             </link>
             <link id="e180-a3a7-6599-1300" targetId="86c418d1-ee0e-e1d7-a358-a09c9d09138c" linkType="entry">
@@ -1756,15 +1613,11 @@
         </entry>
       </entries>
       <entryGroups>
-        <entryGroup id="a351-9931-1833-0fff" name="APCs" minSelections="0" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="a351-9931-1833-0fff" name="APCs" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="a351-9931-1833-0fff" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="set" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="a351-9931-1833-0fff" childId="84e2-11d4-a22b-85ce" field="selections" type="equal to" value="1.0"/>
               </conditions>
@@ -1903,32 +1756,6 @@
     <entry id="7671fecc-f6c1-1353-8042-0fceed28ec79" name="Tactical" points="275.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries/>
       <entryGroups>
-        <entryGroup id="4302-5c57-5cfb-71c9" name="Dreadnought" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <links>
-            <link id="d89d-1b61-181d-81a8" targetId="2de9-f52c-e404-bd53" linkType="entry">
-              <modifiers/>
-            </link>
-            <link id="8722-dc42-d469-8d64" targetId="9d6d-e048-1ce2-d9e3" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="points" value="25.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="8d5c-e6bc-54ab-1352" field="selections" type="equal to" value="0.0"/>
-                        <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="bd4a-d64e-f47f-c866" field="selections" type="equal to" value="0.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </link>
-          </links>
-        </entryGroup>
         <entryGroup id="8b02-a916-5696-8d4a" name="Core" defaultEntryId="7aaa-ea93-8947-ad23" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
             <entry id="7aaa-ea93-8947-ad23" name="6x Tactical Squad" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -1979,54 +1806,39 @@
           <modifiers/>
           <links/>
         </entryGroup>
-        <entryGroup id="5059-e971-c4fc-2278" name="APCs" minSelections="0" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="5059-e971-c4fc-2278" incrementChildId="bd4a-d64e-f47f-c866" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="and">
+        <entryGroup id="5059-e971-c4fc-2278" name="APCs" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="4d04-43b5-ae2a-2171" name="Land Raider" points="50.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
-                    <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="26ac-aaf2-a44a-ab6f" field="selections" type="equal to" value="1.0"/>
-                    <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="bd4a-d64e-f47f-c866" field="selections" type="equal to" value="0.0"/>
+                    <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="26ac-aaf2-a44a-ab6f" field="selections" type="equal to" value="0.0"/>
                   </conditions>
                   <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="2.0" repeat="true" numRepeats="1" incrementParentId="7671fecc-f6c1-1353-8042-0fceed28ec79" incrementChildId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="2.0" repeat="true" numRepeats="1" incrementParentId="7671fecc-f6c1-1353-8042-0fceed28ec79" incrementChildId="81d7-f6d8-ef39-0373" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="maxSelections" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="26ac-aaf2-a44a-ab6f" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" field="selections" type="at least" value="1.0"/>
-                        <condition parentId="7671fecc-f6c1-1353-8042-0fceed28ec79" childId="81d7-f6d8-ef39-0373" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="10c4-5154-b86f-399c" targetId="4dd1-e47f-2832-2ba6" linkType="profile">
+                  <modifiers/>
+                </link>
+                <link id="6054-6670-792e-845d" targetId="d45e-5e06-5992-e478" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="4b73-8afe-55fb-7a3e" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="a0f6-ac09-e08c-eecc" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
           <links>
             <link id="18c6-7e1a-1f39-fe64" targetId="bd4a-d64e-f47f-c866" linkType="entry">
               <modifiers/>
@@ -2076,6 +1888,68 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+        </link>
+        <link id="8b6e-ce39-fe0a-9659" targetId="a36e-f1af-e764-6501" linkType="entry group">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="6cc7-e1e2-062c-2de5" name="Terminators" points="300.0" categoryId="e551-c527-434e-59a5" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+      <entries>
+        <entry id="9d87-5dfa-fba2-51c4" name="Morlock Terminators" points="0.0" categoryId="(No Category)" type="unit" minSelections="4" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="23d5-cc12-f4b7-7d54" targetId="7356-6536-4f53-dd4a" linkType="profile">
+              <modifiers/>
+            </link>
+            <link id="0f2a-53ad-9eeb-5723" targetId="07cd-b5ce-d893-9b83" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="af12-39e4-fdc2-3de8" targetId="5fc4-93c0-07df-fea8" linkType="rule">
+              <modifiers/>
+            </link>
+            <link id="9915-dd65-d438-f8e6" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+        <entry id="14e3-3af1-8f05-3e7b" name="Téléportation" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="fc60-a5b7-8c6f-9bc8" targetId="e3be-109c-fb77-c554" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
+        </entry>
+      </entries>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="7ff5-6f1f-5a03-5ba7" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="a6a0-e8f8-5056-2952" targetId="a36e-f1af-e764-6501" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="5efa-77b6-d72e-2bc1" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" linkType="entry">
+          <modifiers/>
         </link>
       </links>
     </entry>
@@ -2461,6 +2335,53 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     </link>
   </links>
   <sharedEntries>
+    <entry id="84e2-11d4-a22b-85ce" name="4x Razorback" points="75.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+      <entries/>
+      <entryGroups>
+        <entryGroup id="df2a-7dd2-435e-e92f" name="APCs" defaultEntryId="f562-9275-7f5a-3589" minSelections="4" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <links>
+            <link id="57d1-e594-6f5a-a094" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
+              <modifiers>
+                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="f3c4-d006-d24c-8170" targetId="9137-5e3b-d46c-79a2" linkType="entry">
+              <modifiers>
+                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="f562-9275-7f5a-3589" targetId="ee43-65d6-76e6-c67d" linkType="entry">
+              <modifiers>
+                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+          </links>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links/>
+    </entry>
     <entry id="116b-cc79-dd96-6cf6" name="Battle Barge" points="150.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries/>
       <entryGroups/>
@@ -2487,10 +2408,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <entryGroups/>
       <modifiers>
         <modifier type="set" field="maxInForce" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="c21a10fe-a11a-af95-9c8c-3b18ad266cb8" field="selections" type="equal to" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition parentId="force type" childId="116b-cc79-dd96-6cf6" field="selections" type="equal to" value="0.0"/>
+                <condition parentId="force type" childId="6825-81ef-8417-05d9" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
@@ -2636,57 +2563,6 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
         </link>
         <link id="8a6e-d7bc-e3b7-8744" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="81d7-f6d8-ef39-0373" name="Land Raider Helios" points="125.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-      <entries/>
-      <entryGroups/>
-      <modifiers/>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="2011-e354-d2d4-6a71" targetId="91cb-be26-3778-9800" linkType="profile">
-          <modifiers/>
-        </link>
-        <link id="a005-42dc-a91a-14af" targetId="d45e-5e06-5992-e478" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="dc5d-f8ad-ce31-b5b1" targetId="5fc4-93c0-07df-fea8" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="8abb-de73-476b-b6dc" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="ec19-5871-f3a4-9680" targetId="6a62-b80f-636e-6e84" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="bff2-89ab-889c-5387" name="Land Raider Terminus Ultra" points="125.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-      <entries/>
-      <entryGroups/>
-      <modifiers/>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="8353-18a0-5095-7dde" targetId="0731-a18c-f03d-4fcd" linkType="profile">
-          <modifiers/>
-        </link>
-        <link id="463c-4c21-2603-5da9" targetId="5fc4-93c0-07df-fea8" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="2600-ac2e-a8aa-a2a2" targetId="f320-3f7e-4f56-fd5b" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="1e04-ff95-5c97-fd80" targetId="1b9a-dd01-5309-8a92" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="bd54-9b6b-619f-e250" targetId="c254-9e95-67c9-1bd4" linkType="profile">
-          <modifiers/>
-        </link>
-        <link id="4161-84cd-975b-1014" targetId="af21-3628-ea02-979c" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -2940,55 +2816,17 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
-    <entry id="2de9-f52c-e404-bd53" name="Thunderfire Cannon" points="25.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+    <entry id="7ddf-9cfb-3903-f151" name="Venerable Hellfire Dreadnought" points="100.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries/>
       <entryGroups/>
-      <modifiers/>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="28e8-0c77-dc1f-dc39" targetId="b2ca-e62d-66e1-ace2" linkType="profile">
-          <modifiers/>
-        </link>
-        <link id="abb6-bb03-034e-b3c7" targetId="ff79-2dfa-da56-58a5" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="e019-bdc2-99f5-c139" targetId="2fd7-1aa7-5114-2151" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="da16-9e99-8e6e-c467" targetId="a975-d30d-e788-5d1f" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="9d6d-e048-1ce2-d9e3" name="Venerable Dreadnought" points="75.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-      <entries/>
-      <entryGroups/>
-      <modifiers/>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="2227-649e-b7ba-d68f" targetId="7f5e-5cf5-849e-ecc7" linkType="profile">
-          <modifiers/>
-        </link>
-        <link id="855f-6258-364f-48b0" targetId="2fd7-1aa7-5114-2151" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="d6df-10d8-2d36-b8af" targetId="f7ca-2656-2916-3ce1" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="2be7-feaf-3589-aec4" targetId="0259-7b22-7a62-b06f" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="88c5-c9d1-cc18-77b8" targetId="5fc4-93c0-07df-fea8" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="7ddf-9cfb-3903-f151" name="Venerable Hellfire Dreadnought" points="100.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-      <entries/>
-      <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="points" value="75.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -3002,10 +2840,34 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
         </link>
         <link id="63a3-b9bb-7192-a96f" targetId="6978-d61d-58b1-f2fc" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="b5d8-d021-a21b-0197" targetId="5fc4-93c0-07df-fea8" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="742d-bc08-4c16-6aaf" targetId="0259-7b22-7a62-b06f" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -3036,10 +2898,17 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
-    <entry id="b99d-e3cf-6e0e-55be" name="Venerable Tactical Dreadnought" points="100.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+    <entry id="b99d-e3cf-6e0e-55be" name="Venerable Tactical Dreadnought" points="100.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries/>
       <entryGroups/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="points" value="75.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links>
@@ -3053,13 +2922,37 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
         </link>
         <link id="e3b9-6f6a-f3ef-3474" targetId="6978-d61d-58b1-f2fc" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="352a-469a-0d83-00e9" targetId="5fc4-93c0-07df-fea8" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="f3c6-644d-4904-2bef" targetId="07cd-b5ce-d893-9b83" linkType="rule">
           <modifiers/>
+        </link>
+        <link id="5ef3-4815-e2e0-a7cd" targetId="0259-7b22-7a62-b06f" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -3247,53 +3140,6 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entry>
-    <entry id="84e2-11d4-a22b-85ce" name="4x Razorback" points="75.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-      <entries/>
-      <entryGroups>
-        <entryGroup id="df2a-7dd2-435e-e92f" name="APCs" defaultEntryId="f562-9275-7f5a-3589" minSelections="4" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <links>
-            <link id="57d1-e594-6f5a-a094" targetId="4e1f-46d7-c8f1-e11b" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-            <link id="f3c4-d006-d24c-8170" targetId="9137-5e3b-d46c-79a2" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-            <link id="f562-9275-7f5a-3589" targetId="ee43-65d6-76e6-c67d" linkType="entry">
-              <modifiers>
-                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-          </links>
-        </entryGroup>
-      </entryGroups>
-      <modifiers>
-        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles/>
-      <links/>
-    </entry>
   </sharedEntries>
   <sharedEntryGroups>
     <entryGroup id="4ff6-07c9-e4f0-1386" name="Armoured Support" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -3417,12 +3263,6 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <link id="9cf6-b05a-06d3-fcf5" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" linkType="entry">
           <modifiers/>
         </link>
-        <link id="8c6c-4313-fe3f-9ec8" targetId="bff2-89ab-889c-5387" linkType="entry">
-          <modifiers/>
-        </link>
-        <link id="be47-1829-e7d9-74e4" targetId="81d7-f6d8-ef39-0373" linkType="entry">
-          <modifiers/>
-        </link>
         <link id="a3e8-ccbf-9313-7f5a" targetId="86c418d1-ee0e-e1d7-a358-a09c9d09138c" linkType="entry">
           <modifiers/>
         </link>
@@ -3434,7 +3274,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entryGroup>
-    <entryGroup id="46be-5156-f1af-ba27" name="Venerable Dreadnoughts" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entryGroup id="46be-5156-f1af-ba27" name="Venerable Dreadnought" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -3453,11 +3293,36 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         </link>
       </links>
     </entryGroup>
+    <entryGroup id="a36e-f1af-e764-6501" name="Venerable Dreadnoughts" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <links>
+        <link id="f611-7c6e-cd46-47d3" targetId="7ddf-9cfb-3903-f151" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="bcac-c112-a3fe-69c9" targetId="b99d-e3cf-6e0e-55be" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
+    </entryGroup>
   </sharedEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
       <description>&lt;I&gt;none&lt;/I&gt;</description>
       <modifiers/>
+    </rule>
+    <rule id="ce54-8694-5ef2-ae73" name="Bionics" hidden="false">
+      <description>All Inf stands become Armour 3+.
+&lt;I&gt;&lt;B&gt;Les Bioniques:&lt;/B&gt; Tous les socles d&apos;infanterie deviennent des Armures 3+.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="878d-6ee8-b0a3-6319" name="Bunkers" hidden="false">
       <description>Upon deployment, bunkers are initially attached to a formation of the defending player’s choice. The formation is not obligated to maintain coherency with the bunkers, however, and may move from them, allowing other formations to move into them. Bunkers count as war engines, so they may not conceal, and the formation attached to them is therefore ineligible as well. 
@@ -3659,7 +3524,7 @@ Les formations qui ont des Rhinos porte la mention &quot;plus transports&quot; d
 Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.
 Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas.
 Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks).
-En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought Vénérable Iron Hands pour +25pts OU par des modules d’atterrissage.
+En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par des modules d’atterrissage.
 Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur Space Marine ou d’une barge de bataille pour déployer les modules d’atterrissage.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
@@ -3759,9 +3624,8 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <modifiers/>
     </rule>
     <rule id="d4d3-69f8-d169-0ec3" name="Sons of Mars" hidden="false">
-      <description>All Iron Hands units except Scouts have an Invulnerable Save.
-&lt;I&gt;&lt;B&gt;Fils de Mars:&lt;/B&gt; Les bioniques pour l&apos;infanterie, ainsi que le soutien de l&apos;Adeptus Mechanicus et la présence des Révérends de Fer pour les véhicules, font que l&apos;armée Iron Hands dans son ensemble est plus résistante. 
-Pour représenter ceci, toutes les unités Iron Hands (à l’exception des Scouts, qui n&apos;ont pas encore de bioniques), bénéficient de la règle Sauvegarde invulnérable.&lt;/I&gt;</description>
+      <description>Infantry units (Tactical, Assault, Devastator and Terminator formations) have an Invulnerable Save. Note that upgrades to the formation do not benefit from this save.
+&lt;I&gt;&lt;B&gt;Fils de Mars:&lt;/B&gt;Les unités de type &quot;Infanterie&quot; (formation tactique, formation d&apos;assaut, formation devastator et formation de terminator) bénéficient d’une sauvegarde invulnérable. Notez que les éventuelles améliorations de la formation ne bénéficient pas de cette sauvegarde.&lt;/I&gt;</description>
       <modifiers>
         <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
@@ -3867,18 +3731,6 @@ May step over units and pieces of terrain that that are lower lower than the uni
 Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux du titan et au maximum de 2cm de large.&lt;/I&gt;</description>
       <modifiers/>
     </rule>
-    <rule id="ce54-8694-5ef2-ae73" name="Bionics" hidden="false">
-      <description>All Inf stands become Armour 3+.
-&lt;I&gt;&lt;B&gt;Les Bioniques:&lt;/B&gt; Tous les socles d&apos;infanterie deviennent des Armures 3+.&lt;/I&gt;</description>
-      <modifiers>
-        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="5558-8155-00f3-4619" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Archiviste" hidden="false">
@@ -3976,7 +3828,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="47eb-5f71-832d-a13e" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Bike Squadron" hidden="false">
+    <profile id="47eb-5f71-832d-a13e" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Bike" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="35cm"/>
@@ -4000,7 +3852,22 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="803e-2941-8178-34fc" profileTypeId="87ab-2658-3f0c-128d" name="Bunker A" hidden="false">
+    <profile id="7c75-037b-b71f-a9da" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Captain" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
+        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
+        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="n/a"/>
+        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="n/a"/>
+        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="n/a"/>
+        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Power Weapon"/>
+        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
+        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapons"/>
+        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A"/>
+        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Commander, Invulnerable Save, Leader"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="803e-2941-8178-34fc" profileTypeId="87ab-2658-3f0c-128d" name="Command Bunker" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="War Engine"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="Immobile"/>
@@ -4014,21 +3881,6 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Thick Rear Armour, Transport"/>
         <characteristic characteristicId="fb51-1ee4-ea0e-41eb" name="DC" value="2"/>
         <characteristic characteristicId="3c70-22c1-1ecf-35c4" name="Crit" value="Bunkers, Partial Collapse"/>
-      </characteristics>
-      <modifiers/>
-    </profile>
-    <profile id="7c75-037b-b71f-a9da" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Captain" hidden="false">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Character"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="n/a"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="n/a"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="n/a"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="n/a"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Power Weapon"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapons"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Commander, Invulnerable Save, Leader"/>
       </characteristics>
       <modifiers/>
     </profile>
@@ -4204,36 +4056,6 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AT4+&lt;BR&gt;&lt;BR&gt;AP4+"/>
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour, Thick Rear Armour, Transport"/>
-      </characteristics>
-      <modifiers/>
-    </profile>
-    <profile id="91cb-be26-3778-9800" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Land Raider Helios" hidden="false">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="25cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="4+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="5+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Whirlwind Missile Launcher"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="45cm&lt;BR&gt;&lt;BR&gt;45cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AT4+&lt;BR&gt;&lt;BR&gt;1BP"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="-&lt;BR&gt;&lt;BR&gt;Indirect Fire"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour, Thick Rear Armour, Transport"/>
-      </characteristics>
-      <modifiers/>
-    </profile>
-    <profile id="0731-a18c-f03d-4fcd" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Land Raider Terminus Ultra" hidden="false">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="25cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="4+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="4+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="3x Twin Lascannon&lt;BR&gt;&lt;BR&gt;2x Lascannon"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="45cm&lt;BR&gt;&lt;BR&gt;45cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AT4+&lt;BR&gt;&lt;BR&gt;AT5+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value=""/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Reinforced Armour, Thick Rear Armour, Terminus"/>
       </characteristics>
       <modifiers/>
     </profile>
@@ -4784,21 +4606,6 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="b2ca-e62d-66e1-ace2" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Thunderfire Cannon" hidden="false">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Infantry"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="6+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="4+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Thunderfire Cannon"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="60cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="AP4+/AT6+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Ignore Cover"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Mounted, Walker"/>
-      </characteristics>
-      <modifiers/>
-    </profile>
     <profile id="1c71-94a8-df92-2490" profileTypeId="87ab-2658-3f0c-128d" name="Thunderhawk Gunship" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="War Engine, Aircraft"/>
@@ -4832,21 +4639,6 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="7f5e-5cf5-849e-ecc7" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Venerable Dreadnought" hidden="false">
-      <characteristics>
-        <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
-        <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="15cm"/>
-        <characteristic characteristicId="3755f816-2110-e470-2e5f-20ba636cb7f1" name="Armour" value="5+"/>
-        <characteristic characteristicId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" name="CC" value="3+"/>
-        <characteristic characteristicId="0b1a118d-1f21-3fd1-9167-471a3032e35b" name="FF" value="3+"/>
-        <characteristic characteristicId="1160-63e7-57ca-722d" name="Weapons" value="Power Fist&lt;BR&gt;&lt;BR&gt;Twin Assault Cannon"/>
-        <characteristic characteristicId="02c3b688-b804-6ce1-b101-b7f9436877bf" name="Range" value="(contact)&lt;BR&gt;&lt;BR&gt;30cm"/>
-        <characteristic characteristicId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" name="Firepower" value="Assault Weapons&lt;BR&gt;&lt;BR&gt;AP4+/AT4+"/>
-        <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-"/>
-        <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Fearless, Leader, Reinforced Armour, Walker"/>
-      </characteristics>
-      <modifiers/>
-    </profile>
     <profile id="5c0d-95f8-bebe-f913" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Venerable Dreadnought (Hellfire)" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
@@ -4860,7 +4652,26 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Fearless, Inspiring, Reinforced Armour, Walker"/>
       </characteristics>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Leader, Walker" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="3+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </profile>
     <profile id="60fa-2235-4831-0962" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Venerable Dreadnought (Tactical)" hidden="false">
       <characteristics>
@@ -4875,7 +4686,26 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         <characteristic characteristicId="b8cc-b32c-b8bd-ac4a" name="Notes" value="Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-"/>
         <characteristic characteristicId="9be9-cd8c-f54b-69d7" name="Unit Notes" value="Fearless, Inspiring, Reinforced Armour, Walker"/>
       </characteristics>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Leader, Walker" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="3+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </profile>
     <profile id="c136-4d60-be85-8b51" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Veteran Sergeant" hidden="false">
       <characteristics>
@@ -4914,7 +4744,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
         </modifier>
       </modifiers>
     </profile>
-    <profile id="b27e-e2d1-c3c3-9426" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Vindicator (netea)" hidden="false">
+    <profile id="b27e-e2d1-c3c3-9426" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Vindicator" hidden="false">
       <characteristics>
         <characteristic characteristicId="be964774-1659-c1e9-573f-be7c258d4b74" name="Type" value="Armoured Vehicle"/>
         <characteristic characteristicId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" name="Speed" value="25cm"/>
@@ -4930,7 +4760,7 @@ Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux
       <modifiers>
         <modifier type="hide" field="be964774-1659-c1e9-573f-be7c258d4b74" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="2a9e-17ba-642a-dfd1" field="selections" type="equal to" value="1.0"/>
+            <condition parentId="force type" childId="edea-8b4e-a6c5-af5b" field="selections" type="equal to" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
