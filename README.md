@@ -34,7 +34,7 @@ The datafiles are cross-compatible with army lists currently published and maint
 
 __Translations__
 
-You may notice the french language rules have variations. Each active community has made developments to suit the needs of their group; the french translations come from F-ERC and reflect their particular developments.
+You may notice the french language rules have variations. Each active community has made developments to suit the needs of their group; the french translations come from F-ERC and reflect their particular developments. The Spanish language support is only experimental at this stage.
 
 __Army Lists__
 
