@@ -2572,7 +2572,7 @@ Comme avec tout ce que nous, les bunkers ne prêtent leur DC de départ pour dé
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Comandantes: &lt;/B&gt;Los comandantes pueden ordenar hasta a tres formaciones de tropas que los sigan cuando realizan un asalto, siempre que las formaciones tengan al menos una unidad a 5cm de una unidad de la formación del comandante. Haz una única tirada de iniciativa por todas las formaciones, contando un -1 si alguna tiene marcadores de explosión. Si el chequeo se falla entonces la formación del comandante recibe un marcador de explosión y debe realizar una acción hold(aguantar), pero las otras formaciones no se ven afectadas (y pueden llevar a cabo una acción más tarde a lo largo del turno). Si el chequeo es superado entonces las tres formaciones pueden realizar una acción engage(asaltar). Trata estas formaciones como si fueran una sola para lo que concierne a reglas en el transcurso del asalto. Se usa una tirada de 2D6 para resolver este asalto combinado. Si el atacante pierde entonces cada formación es desmoralizada(broken). Si ganan entonces cada formación recibe un número de marcadores de explosión igual a las bajas sufridas en combate.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Comandantes: &lt;/B&gt;Los comandantes pueden ordenar hasta a tres formaciones de tropas que los sigan cuando realizan un asalto, siempre que las formaciones tengan al menos una unidad a 5cm de una unidad de la formación del comandante. &lt;BR&gt;Haz una única tirada de iniciativa por todas las formaciones, contando un -1 si alguna tiene marcadores de explosión. Si el chequeo se falla entonces la formación del comandante recibe un marcador de explosión y debe realizar una acción hold (aguantar), pero las otras formaciones no se ven afectadas (y pueden llevar a cabo una acción más tarde a lo largo del turno). &lt;BR&gt;Si el chequeo es superado entonces las tres formaciones pueden realizar una acción engage (asaltar). Trata estas formaciones como si fueran una sola para lo que concierne a reglas en el transcurso del asalto. Se usa una tirada de 2D6 para resolver este asalto combinado. Si el atacante pierde entonces cada formación es desmoralizada (broken). Si ganan entonces cada formación recibe un número de marcadores de explosión igual a las bajas sufridas en combate.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -2770,7 +2770,15 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+ (Rea
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Disrupción: &lt;/B&gt;Ciertas armas están diseñadas para trastornar a las formaciones enemigas además de para matar a sus tropas. Para representar esto, las armas con la habilidad de disrupción infligen un marcador de explosión a la unidad enemiga por cada impacto que logren en vez de por cada baja. Los impactos hechos por armas disruptoras se salvan de manera normal. Cualquier unidad que falle su salvación se retira como baja pero no provoca que se coloque un segundo marcador en la formación objetivo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Weapons noted as having the disrupt ability inflict a Blast marker on an enemy formation for each hit they inflict instead of for each kill they inflict. Note that the hits inflicted by disruptor weapons are saved for normally. Any units that fail their save are removed as casualties but do not cause a second Blast marker to be placed on the target formation.
 &lt;I&gt;&lt;B&gt;Rupture:&lt;/B&gt; Les armes de Rupture ajoutent un pion d&apos;impact aux formations ennemies pour chaque touche qu&apos;elles infligent plutôt que pour chaque perte. Notez que les touches des armes de Rupture sont sauvegardées normalement. Les unités ratant leur sauvegarde sont retirées comme pertes mais n&apos;ajoutent pas de pions d&apos;impact supplémentaires à la formation.&lt;/I&gt;</description>
     </rule>
@@ -2798,7 +2806,15 @@ Expendable units killed in an assault count for the purposes of working out its 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Sin Miedo: &lt;/B&gt;Estas unidades son o extraordinariamente valientes o tan enajenadas que nunca huirán incluso si su formación es desmoralizada (aunque puedes elegir que hagan un movimiento de retirada si lo deseas).  &lt;BR&gt;Las unidades que son fearless son inmunes al daño por perder un asalto (tanto los impactos adicionales como el ser aniquiladas si estaban desmoralizadas) y por los marcadores de explosión asignados si están desmoralizadas. Cuando sean desmoralizadas o de cualquier otra manera forzadas a realizar un movimiento de retirada, las unidades fearless pueden escoger no retirarse, y si la unidad escoge retirarse solamente será destruida si termina su movimiento a 5cm del enemigo en vez de los 15cm habituales. Las unidades fearless que permanecen estacionarias no sufren daño adicional. Otras unidades en la formación que no son fearless serán afectadas normalmente por los impactos adicionales de los marcadores de explosión o por perder un asalto o lo que sea, simplemente no asignes ninguno de los impactos a las unidades inmunes, pero repártelos de manera normal al resto de unidades.  &lt;BR&gt;Las unidades fearless siguen contando como parte de la formación, por lo que a veces pueden ser &apos;arrastradas&apos; cuando su formación se retira incluso cuando ellas no tienen por que hacerlo, simplemente para estar en formación. Finalmente, hay que tener en cuenta que el no tener que retirarse puede significar que las unidades fearless pueden acabar un asalto en una zona de control enemiga, o incluso en contacto base con base.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Units that are Fearless are immune to damage from losing an assault (both the additional hits and being wiped out if already broken) and from the damage inflicted by Blast markers if broken. When broken or otherwise forced to take a withdrawal move, Fearless units may choose not to withdraw, and if the unit elects to withdraw it will be destroyed only if it ends its move within 5cm of the enemy rather than 15cm. Fearless units that remain stationary do not take additional damage. Note that other units in the formation that are not fearless will be affected normally by additional hits for Blast markers or losing an assault or whatever—just don’t allocate any of the hits to the units that are immune, but hand them out as normal to units that are not. 
 Fearless units still count as part of a formation, and so will sometimes be “dragged along” as their formation withdraws even though they don’t have to, simply in order to stay in formation. Finally, note that not needing to withdraw can mean that fearless units can end an assault still in an enemy zone of control, or even in base-to-base contact with the enemy.
 &lt;I&gt;&lt;B&gt;Sans Peur:&lt;/B&gt; Les unités Sans peur sont immunisées aux dommages entrainés par une défaite lors d&apos;un assaut (touches supplémentaires ou destruction si la formation était déjà démoralisée), et aux dégâts infligés par les pions d&apos;impact en cas de démoralisation.
@@ -2809,7 +2825,15 @@ Les unités Sans peur font parties d&apos;une formation et pourront ainsi être 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Golpea Primero: &lt;/B&gt;Las armas con la habilidad first strike atacan primero en un asalto. Resuelve el ataque e inflige el daño antes de que las unidades enemigas hagan sus ataques. Esto puede resultar en algunas unidades enemigas destruidas antes de que puedan atacar. Si la habilidad está listada para un arma con extra attacks o ataques extra entonces solamente los ataques extra tienen la habilidad de golpear primero; de otra manera contará para todos los ataques cuerpo a cuerpo si está listada para un arma de asalto, o para todos los ataques de tiroteo si está listada para armas ligeras. Si ambas unidades que se enfrentan tienen armas que golpean primero entonces todos los ataques first strike se resuelven simultáneamente y sus resultados se aplican a ambos bandos antes de resolver otros ataques. &lt;BR&gt;Las habilidades especiales que aparecen en la sección notas(notes) de un arma solamente se aplican a ese arma, mientras que las habilidades especiales que aparecen en la sección notas(notes) de una unidad (la que está en la parte de abajo perfil) se aplican a todos los ataques que hace la unidad. Por lo que si un arma tiene ataques extra(+X) y golpea primero, entonces la habilidad golpea primero solamente se aplica a los ataques extra añadidos por ese arma. Pero si la unidad tiene first strike en su sección de notas entonces todos los ataques, incluyendo los añadidos por un arma específica, tendrían first strike.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Weapons with the first strike ability attack first in an assault. Resolve the attack and inflict damage for the weapon before any enemy units make their attacks. This may result in some enemy units being destroyed before they can attack. If the ability is noted for a weapon with extra attacks then only the extra attacks gets the first strike ability; otherwise it will count for all close combat attacks if noted for an assault weapon, or all firefight attacks if noted for small arms. If opposing units both have first strike weapons then all first strike attacks are resolved simultaneously and their results applied to both sides before other attacks are resolved.
 &lt;I&gt;&lt;B&gt;Frappe en Premier:&lt;/B&gt; Les armes ayant la capacité Frappe en Premier s&apos;utilisent en assaut. Résolvez les attaques et les dommages de l&apos;arme avant de faire attaquer les unités ennemies. Cela peut aboutir à la destruction d&apos;unités ennemies avant qu&apos;elles ne puissent riposter. Si cette capacité s&apos;applique à une arme ayant des Attaques supplémentaires, alors seules les Attaques Supplémentaires bénéficient de la capacité Frappe en Premier. Cette dernière s&apos;applique sinon pour toutes les attaques d&apos;une arme d&apos;assaut ordinaire ou pour les armes légères dans le cas d&apos;une Fusillade. Si deux unités ennemies ont la capacité Frappe en premier, leurs attaques sont résolues simultanément et les résultats appliqués avant que les autres attaques ne soient effectuées.&lt;/I&gt;</description>
     </rule>
@@ -2839,7 +2863,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ignorar Cobertura: &lt;/B&gt;Estas armas están diseñadas para negar los efectos de la cobertura, ya sea volándola por los aires o evitándola. Estas armas ignoran los modificadores al impactar por cobertura, y niegan las salvaciones por cobertura de la infantería.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>These weapons ignore cover to hit modifiers, and negate infantry cover saves.
 &lt;I&gt;&lt;B&gt;Ignore les Couverts:&lt;/B&gt; Elles sont conçues pour annuler la protection conférée par des couverts, en les disloquant ou les contournant. Ces armes ignorent les modificateurs de jet pour toucher conférés par les couverts et annulent les sauvegardes de couverts.&lt;/I&gt;</description>
     </rule>
@@ -2847,7 +2879,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Fuego Indirecto: &lt;/B&gt;Algunas armas que pueden disparar bombardeos tiene la habilidad de fuego indirecto (indirect fire). Las unidades armadas con armas de fuego indirecto pueden hacer ataques indirectos si su formación realiza una acción sustained fire (fuego sostenido). Unidades que pertenezcan a una formación que falla su chequeo de acción pueden disparar normalmente como parte de su acción hold (aguantar), pero no pueden disparar indirectamente. &lt;BR&gt;Las unidades que disparen un ataque o bombardeo indirecto reciben el modificador de +1 al impactar de manera normal por hacer fuego sostenido. Además, no se requiere línea de tiro para disparar, ya que se supone que los disparos se realizan con un gran ángulo de manera que los proyectiles llueven sobre el objetivo e ignoran cualquier terreno intermedio. La coordinación necesaria es proporcionada por observadores situados o bien en otras formaciones amigas con línea de tiro o bien en satélites o aeronaves espías. Finalmente, la trayectoria usada por las armas que disparan indirectamente incrementa considerablemente su alcance, pero significa también que no pueden disparar a objetivos demasiado cercanos. Para representar esto, las armas que disparan en fuego indirecto duplican su alcance, pero tienen un alcance mínimo de 30cm.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Units armed with indirect fire weapons are allowed to fire indirectly if their formation takes a sustained fire action. Units belonging to a formation that fails the action test may shoot normally as part of their hold action, but may not fire indirectly. Units firing an indirect barrage receive the +1 modifier for taking a sustained fire action. In addition, no line of fire is required for an indirect barrage, as it is assumed that the barrage is fired high in the air so that the shots rain down on the target and ignore any intervening terrain. Co-ordinates for the barrage are provided by “spotters” that are either in other friendly formations that do have a line of fire, or from orbiting spy satellites or planes. Finally, the high trajectory used by weapons firing indirectly greatly increases their range, but means they cannot fire at targets that are too close by. To represent this, weapons firing indirectly double their range, but have a minimum range of 30cms.
 &lt;I&gt;&lt;B&gt;Tir Indirect:&lt;/B&gt; Les armes ayant cette capacité peuvent effectuer des tirs indirects lors d&apos;une action de Tir soutenu. Si la formation rate son test d&apos;action, les unités de Tir indirect pourront faire feu dans le cadre de l&apos;action Tenir, mais il s&apos;agira de Tirs directs. Les unités effectuant un barrage en Tir indirect bénéficient du bonus de +1 pour toucher dû au Tir soutenu. De plus, elles n&apos;ont pas besoin d&apos;avoir une ligne de vue sur leur cible, et ignorent les éléments de décor qui se trouvent sur le chemin : le barrage est tiré en cloche de façon à ce que les projectiles passent par dessus les obstacles. On considère que les coordonnées de la cible sont transmises aux tireurs par un satellite, des observateurs avancés etc. Enfin, les Tirs indirects bénéficient d&apos;une portée doublée, mais sont soumis à une portée minimum de 30 cm.&lt;/I&gt;</description>
     </rule>
@@ -2855,7 +2895,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Infiltradores: &lt;/B&gt;Estas unidades pueden duplicar su velocidad cuando hacen un movimiento de carga (¡y solamente cuando cargan!), y pueden ignorar las zonas de control enemigas de la formación a la que están cargando. Estas dos habilidades les permiten deslizarse entre las unidades enemigas cuando cargan para atacar a las tropas más retrasadas. La coherencia de unidades se les aplica normalmente.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>These are allowed to double their speed when they make a charge move (and only when they charge!), and they can also ignore enemy zones of control from the formation they are charging. These two special abilities allow them to sneak past enemy units when they charge in order to attack enemy units that are further back. Note that the unit coherency rules still apply to infiltrators.
 &lt;I&gt;&lt;B&gt;Infiltrateurs:&lt;/B&gt; Elles sont autorisées à doubler leur vitesse lorsqu&apos;elles chargent (et seulement quand elles chargent!) et peuvent ignorer les zones de contrôle de la formation qu&apos;elles attaquent. Ces deux règles spéciales leur permettent de se faufiler au milieu de l&apos;ennemi pour attaquer les unités en retrait dans la formation. Notez que les règles de cohésion de formation s&apos;appliquent normalement aux Infiltrateurs.&lt;/I&gt;</description>
     </rule>
@@ -2863,7 +2911,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Inspirador: &lt;/B&gt;Cada unidad inspiradora envuelta en un asalto añade +1 al resultado (siempre y cuando sobreviva al combate por supuesto).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Each inspiring unit involved in an assault adds +1 to the result roll (as long as it survives the combat of course!)
 &lt;I&gt;&lt;B&gt;Charismatique:&lt;/B&gt; Chaque unité ou personnage Charismatique prenant part à un assaut ajoute +1 au résultat du dé (tant qu&apos;il ou elle reste en vie bien sûr).&lt;/I&gt;</description>
     </rule>
@@ -2871,7 +2927,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Salvaciones Invulnerables: &lt;/B&gt;Estas unidades tienen dispositivos protectores o bien una vitalidad sobrenatural que les permite sobrevivir a un ataque que mataría a cualquier otra criatura. Para representar esto, las unidades con salvación invulnerable reciben una segunda tirada de salvación de 6+ si fallan su primera salvación por cualquier razón. Se hace esta segunda salvación contra cualquier forma de ataque, incluso ataques que no permiten normalmente tiradas de salvación. Nunca se aplican modificadores a esta segunda tirada.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Units with an invulnerable save receive a second save of 6+ if they fail their first save for any reason. They may take this second save against any form of attack, even attacks that would normally not allow a save to be taken. No modifiers ever apply to the second save.
 &lt;I&gt;&lt;B&gt;Sauvegarde Invulnérable:&lt;/B&gt; Une unité ayant cette capacité reçoit une deuxième sauvegarde de 6+ si elle rate sa première sauvegarde. Elles peuvent effectuer cette deuxième tentative contre n&apos;importe quelle attaque, même celles qui annulent normalement les sauvegardes d&apos;armures. Aucun modificateur ne s&apos;applique jamais à cette deuxième sauvegarde.&lt;/I&gt;</description>
     </rule>
@@ -2887,7 +2951,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Retro-Reactores o Mochilas de Salto: &lt;/B&gt;Estas unidades están equipadas con dispositivos especiales que les permiten volar cortas distancias, normalmente en una serie de largos saltos.  &lt;BR&gt;Las unidades equipadas con retro-reactores pueden ignorar el terreno peligroso o impasable al moverse (saltan sobre él). Sin embargo no pueden aterrizar sobre terreno impasable, y si aterrizan sobre terreno peligroso deben realizar el chequeo de terreno peligroso. Las unidades con retro-reactores también pueden mover sobre otras unidades amigas al desplazarse, pero no pueden aterrizar sobre ellas. Las unidades con retro-reactores son afectadas por las zonas de control enemigas de manera normal, y no pueden saltar por encima del enemigo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Units equipped with jump packs may ignore dangerous or impassable terrain as they move (they jump over it). They may not land on impassable terrain, and if they land in dangerous terrain they must take a dangerous terrain test. Units equipped with jump packs may also move over other friendly units as they move, but may not land on them. Units with jump packs are affected by enemy units and zones of control normally, and cannot jump over enemy formations.
 &lt;I&gt;&lt;B&gt;Réacteurs Dorsaux:&lt;/B&gt; Les unités équipées de Réacteurs dorsaux peuvent ignorer les terrains dangereux et infranchissables lorsqu&apos;elles se déplacent (elles sautent par-dessus). Elles ne peuvent pas atterrir sur un terrain infranchissable et doivent effectuer un test de terrain dangereux si elles atterrissent dans un terrain dangereux. Les unités équipées de Réacteurs dorsaux peuvent aussi passer par-dessus des unités amies pendant leur mouvement, mais ne peuvent pas atterrir sur ces dernières. Elles sont affectées normalement par les zones de contrôle et les unités de l&apos;ennemi et ne peuvent pas se déplacer par-dessus des formations ennemies.&lt;/I&gt;</description>
     </rule>
@@ -2903,7 +2975,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Líderes: &lt;/B&gt;Un formación que incluya líderes puede retirar un marcador de explosión extra por cada líder cuando se reagrupa(regroup) o reorganiza(rally).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>A formation that includes any leaders may remove one extra Blast marker for each leader whenever it regroups or successfully rallies.
 &lt;I&gt;&lt;B&gt;Meneurs:&lt;/B&gt; Une formation incluant des Meneurs peut retirer un pion d&apos;impact supplémentaire par Meneur quand elle se regroupe ou réussit à se rallier.&lt;/I&gt;</description>
     </rule>
@@ -2919,7 +2999,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Mega-Armas: &lt;/B&gt;Solamente las unidades con blindaje reforzado o salvación invulnerable reciben una tirada de salvación contra impactos de mega-armas. Cualquier otro tipo de objetivo impactado no puede hacer tiradas de salvación.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Only units with reinforced armour or invulnerable saves receive a saving throw against hits from a macro-weapon. Any other type of target that is hit does not get a saving throw at all.
 &lt;I&gt;&lt;B&gt;Macro-armes:&lt;/B&gt; Seules les unités ayant Blindage renforcé ou une Sauvegarde invulnérable peuvent tenter une sauvegarde contre les touches d&apos;une Macro-arme. Les autres cibles touchées n&apos;ont droit à aucune sauvegarde.&lt;/I&gt;</description>
     </rule>
@@ -2935,7 +3023,15 @@ Elles peuvent aussi être capturées et utilisées par l’ennemi.&lt;/I&gt;</de
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Montados: &lt;/B&gt;Algunas unidades de infantería se consideran montadas, y estarán a lomos bien de motocicletas o criaturas vivientes como caballos. Las unidades montadas cuentan como vehículos para efectos de terreno, y como infantería para cualquier otro propósito.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Mounted units count as vehicles for terrain effects, and as infantry units for all other purposes.
 &lt;I&gt;&lt;B&gt;Montés:&lt;/B&gt; Les unités Montées comptent comme des véhicules pour les effets du terrain et comme de l&apos;infanterie dans tous les autres cas.&lt;/I&gt;</description>
     </rule>
@@ -2957,7 +3053,15 @@ Tous les casemates impliqués dans un CC perdante sont détruits, car ils ne peu
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Planet-fall: &lt;/B&gt;Puedes hacer un descenso planetario el turno en el que la nave que transporte las unidades entre en juego. Lleva a cabo el descenso planetario después de efectuar cualquier bombardeo y/o ataque dirigido. Coge una de las unidades con la habilidad planetfall y colócala en cualquier sitio de la mesa a 15cm de las coordenadas de la zona de desembarco descritas al principio del turno, cada transporte puede tener su propia zona de desembarco. La unidad se desvía entonces 2D6cm en una dirección aleatoria. &lt;BR&gt;Cualesquiera unidades transportadas pueden desembarcar inmediatamente al aterrizar, o permanecer abordo y desembarcar más tarde. El aterrizar no cuenta como movimiento para activar el fuego de overwatch enemigo, pero desembarcar sí activa el fuego de overwatch de forma normal. &lt;BR&gt;Sigue con el procedimiento hasta que todas las unidades con la habilidad planetfall que están en la nave espacial hayan aterrizado. Las unidades que terminen fuera de formación debido a la dispersión según toman tierra deben moverse para estar de nuevo en una formación legal la próxima vez que realicen una acción. &lt;BR&gt;Las unidades que entran en juego vía descenso planetario o planetfall son destruidas si aterrizan fuera de la mesa. Si la unidad aterriza en terreno peligroso o impasable, o encima de una unidad (amiga o enemiga), o en una zona de control enemiga, se supone que los sistemas automáticos de guía de abordo la redirigen hacia un punto seguro y la unidad es desplazada por el oponente al área libre más cercana en la que pueda aterrizar. &lt;BR&gt;Las unidades que toman tierra por descenso planetario pueden efectuar una acción más tarde en el turno. De hecho las unidades aterrizan desde la nave espacial cuando ésta realiza su acción, y pueden hacer una acción por si mismas más tarde en el turno. Recuerda que las formaciones que aterrizan de esta manera y se dispersan fuera de formación deben moverse para reestablecer la coherencia cuando lleven a cabo una acción. Las aeronaves que toman tierra mediante descenso planetario se tratan de la misma manera que las aeronaves que han aterrizado, y podrán despegar de nuevo más tarde en la partida.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>You can make a planetfall on the turn the spacecraft transporting the units enters play. Carry out the planetfall after carrying out any bombardments and/or pin-point attacks. Take one of the units with the planetfall ability and place it anywhere on the table that is within 15cms of the drop zone co-ordinates recorded at the start of the game. The unit then scatters 2D6cms in a random direction. Any units being transported are allowed to disembark immediately on landing, or stay on board and disembark later. Landing does not count as movement for the purposes of triggering enemy overwatch fire. Disembarking triggers overwatch fire as normal.
 Carry on doing this until all of the units with the planetfall ability that are on the spacecraft have landed. Units that end up out of formation due to scattering as they land must move back into a legal formation when they next take an action. Units entering play by planetfall are destroyed if they land off the table. If the unit lands on terrain that is impassable or dangerous for it, or on top of any sort of unit (friend or foe), or in an enemy zone of control, the unit is moved by the opposing player to the nearest area of clear ground where it can land.
 Units that land by planetfall may take an action later in the turn. Aircraft that land by planetfall are treated in the same manner as a landed aircraft.
@@ -2969,7 +3073,15 @@ Les unités atterrissant par un Assaut Planétaire peuvent effectuer une action 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Blindaje Reforzado: &lt;/B&gt;Las unidades con blindaje reforzado están protegidas por planchas varias veces más gruesas que las encontradas en la mayoría de vehículos acorazados y tienen una construcción interna extremadamente robusta. Debido a esto pueden realizar sus tiradas de salvación por blindaje cuando son impactadas por mega-armas. Además, pueden repetir una tirada de blindaje fallida contra impactos de armas que no sean mega-armas, incluidos aquellos infligidos en un asalto.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>They still take their saving throw when hit by macro-weapons. In addition, they may re-roll a failed save against any non-macro-weapon hit, including those inflicted during an assault.
 &lt;I&gt;&lt;B&gt;Blindage Renforcé:&lt;/B&gt; Les unités ayant un Blindage renforcé sont protégées par un blindage bien plus épais que ceux des véhicules ordinaires et sont d&apos;une construction particulièrement robuste, les Macro-armes n&apos;annulent donc pas leur sauvegarde d&apos;armure. De plus, elles peuvent relancer leurs sauvegardes d&apos;armures ratées contre les touches n&apos;étant pas infligées par des Macro-armes, y compris celles subies lors d&apos;un assaut.&lt;/I&gt;</description>
     </rule>
@@ -2977,7 +3089,15 @@ Les unités atterrissant par un Assaut Planétaire peuvent effectuer une action 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Exploradores: &lt;/B&gt;Estas unidades están entrenadas para operar por su cuenta, explorando por delante de su formación para buscar al enemigo. Las unidades de exploradores pueden estar hasta a 20cm de otra unidad de su formación, en vez de los 5cm habituales. Además, los exploradores están entrenados para desplegarse de manera que puedan cubrir una gran área, por lo que tienen una zona de control de 10cm. Estas habilidades solamente se aplican a las unidades de scouts y no se transfieren a otras unidades de la misma formación o a unidades de transporte que los llevan.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Scout units only have to remain within 20cm of another unit from their formation, rather than 5cm as would normally be the case. In addition, scouts are trained to spread out so they can cover a wide area, and so have a 10cm zone of control. Note that these abilities only apply to scout units and cannot be transferred to other units in the same formation or transport units carrying the scouts.
 &lt;I&gt;&lt;B&gt;Éclaireurs:&lt;/B&gt; Elles sont entraînées à opérer seules à l&apos;avant de leur formation afin de débusquer l&apos;ennemi. Les unités d&apos;Éclaireurs ne doivent rester qu&apos;à moins de 20 cm de leur formation au lieu des 5 cm habituels. De plus, les Éclaireurs sont entraînés à se déployer en tirailleurs pour occuper un maximum d&apos;espace, leur zone de contrôle est donc de 10 cm. Notez que ces capacités ne s&apos;appliquent qu&apos;aux unités d&apos;Éclaireurs et ne peuvent pas être transférées à d&apos;autres unités de la même formation ou à un éventuel véhicule transportant des Éclaireurs.&lt;/I&gt;</description>
     </rule>
@@ -2996,7 +3116,15 @@ Lors du tour désigné, la formation d&apos;Assaut Planétaire Indépendant est 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Vehículos Gravitatorios o Deslizadores: &lt;/B&gt;Estas unidades están equipadas con dispositivos que les permiten flotar a una pequeña distancia sobre el suelo, de manera que pueden sobrevolar el terreno que ralentizaría a otras unidades. Los deslizadores no siguen las reglas relativas a aeronaves. &lt;BR&gt;Los deslizadores pueden ignorar el terreno peligroso o impasable mientras mueven. Pero no pueden terminar un movimiento en terreno impasable, y si finalizan un movimiento en terreno peligroso deben hacer un chequeo de terreno peligroso. Los deslizadores también pueden mover sobre otras unidades amigas al mover, pero no pueden acabar su movimiento encima de ellas. Las zonas de control enemigas afectan a los deslizadores de manera normal. Un deslizador con la habilidad de transporte que embarque o desembarque tropas en terreno peligroso deberá realizar un chequeo de terreno peligroso aunque no comenzara o termine su movimiento en él. &lt;BR&gt;Los vehículos skimmer siempre pueden escoger utilizar su valor de tiroteo(firefight) en un asalto, incluso si hay unidades enemigas en contacto con el vehículo. Si hacen esto, entonces la unidad enemiga debe usar también su valor de tiroteo en vez del de combate cuerpo a cuerpo. Esto es así incluso si ambas unidades en contacto son skimmers. Esto representa al deslizador elevándose fuera del alcance de las unidades de tierra. Esta habilidad no cambia el estatus de las unidades en contacto, si el deslizador usa su valor de tiroteo en un asalto, él y las unidades en contacto base con base siguen considerándose en contacto. &lt;BR&gt;Un deslizador puede declarar que va hacer una elevación o pop-up al comienzo de cualquier acción, incluyendo también cuando entre en overwatch. Un deslizador no puede hacer pop-up como parte de una acción de sustained fire(fuego sostenido) o marshal(reformar), pero puede elevarse cuando hace overwatch. Elevarse cuenta como movimiento para activar el fuego de un enemigo en overwatch. &lt;BR&gt;Un deslizador que se ha elevado, &apos;descenderá&apos; al final de su acción. Los deslizadores en overwatch no descienden hasta después de que hagan su ataque de overwatch. Los deslizadores con capacidad de transporte no pueden embarcar o desembarcar unidades mientras están elevados, y si son destruidos mientras están elevados cualquier unidad a bordo será destruida sin posibilidad de salvación. &lt;BR&gt;Un deslizador que se ha elevado se supone que está volando suficientemente alto para que el terreno intermedio que está más cerca del deslizador que de la unidad objetivo no bloquee la línea de tiro. &lt;BR&gt;Para comprobar si la línea de tiro está bloqueada, simplemente mide la distancia entre el deslizador y el terreno, y la distancia entre la unidad objetivo y el terreno. Si el deslizador está más cerca del terreno intermedio que la unidad objetivo, entonces la línea de tiro no está bloqueada. Si el deslizador está más lejos entonces la línea de tiro se bloquearía de manera normal. Si las distancias al terreno son iguales, la visión parcialmente obstaculizada implica que tanto el deslizador como la unidad objetivo cuentan como si estuvieran en cobertura cuando se disparen el uno al otro, y se aplicará el modificador al impactar. &lt;BR&gt;La limitación de tener línea de tiro de como mucho a 10cm a través de terreno boscoso se aplica de manera normal a los skimmers. La regla de línea de tiro para deslizadores se usaría para determinar si puede ver a una unidad enemiga al otro lado del bosque. &lt;BR&gt;Los deslizadores directamente envueltos en asaltos pueden elevarse durante una carga o contra-carga para por ejemplo ganar línea de tiro al enemigo, pero los deslizadores de formaciones que presten apoyo no podrán, ya que elevarse solamente está permitido durante el movimiento.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Note that skimmers do not follow any of the rules for aircraft. May ignore dangerous or impassable terrain. They may not land on impassable terrain, and if they land in dangerous terrain they must take a dangerous terrain test. May also move over other friendly units as they move, but may not land on them. Enemy units and zones of control affect skimmers normally.
 May declare that it is popping up at the start of any action that it takes, including when the skimmer goes into overwatch. May not pop up as part of a sustained fire action or a marshal action, but may pop-up when it goes onto overwatch. Popping up counts as movement for the purposes of triggering firing by enemy units on overwatch.
 A skimmer that has popped up, “pops down” at the conclusion of the action. Skimmers on overwatch do not pop down until after they make their overwatch attack. Skimmers with a transport capacity may not embark or disembark units while they are popped up, and if they are destroyed while they are popped up then any units on board will be destroyed with no save.
@@ -3020,7 +3148,15 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Recarga Lenta: &lt;/B&gt;Estas armas han de tomarse un turno entero para recargar después de que hayan sido disparadas. Esto significa que si se dispara un turno no pueden usarse el siguiente. Puedes usar marcadores para indicar las unidades que necesitan ser recargadas. Las unidades con armas de recarga lenta pueden ser elegidas para ser suprimidas incluso si no pueden disparar ese turno.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>These weapons must take one turn to reload after they have fired. This means that if they fire on one turn they may not fire during the next.
 &lt;I&gt;&lt;B&gt;Rechargement:&lt;/B&gt; Elles doivent passer un tour entier à se recharger en munitions après qu&apos;elles ont tiré. Cela signifie que si elles tirent lors d&apos;un tour, elles ne pourront pas le faire au suivant.&lt;/I&gt;</description>
     </rule>
@@ -3028,7 +3164,15 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Francotirador: &lt;/B&gt;Tira para impactar de forma separada cuando dispares con una unidad sniper. Si impacta, el atacante puede escoger que unidad enemiga es impactada entre aquellas en alcance y línea de tiro de la unidad francotirador, incluso si ya tienen asignado uno o varios impactos. Además el objetivo sufre un modificador a su salvación de -1.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Roll separately when attacking with a sniper unit. If they hit, the attacker can choose which enemy unit is hit from those within range and in the line of fire of the sniper unit. In addition the target suffers a -1 save modifier.
 &lt;I&gt;&lt;B&gt;Snipers:&lt;/B&gt; Lancez les dés séparément quand vous attaquez avec une unité de Snipers. Si elle touche, vous pouvez choisir quelle unité ennemie est touchée parmi celles à portées et dans la ligne de vue de l&apos;unité Sniper. De plus, la cible subit un modificateur de sauvegarde de -1.&lt;/I&gt;</description>
     </rule>
@@ -3044,7 +3188,15 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Comandantes Supremos: &lt;/B&gt;Los comandantes supremos representan unidades de mando de alto nivel. Cuentan como comandantes y como líderes. Además, cada unidad de comandante supremo en el ejército permite al jugador repetir un chequeo de iniciativa fallado (de cualquier tipo) por turno.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Supreme Commanders represent high-level command units. They count as Commanders and Leaders. In addition, each supreme commander unit in the army allows a player to re-roll one failed initiative test (of any type) once per turn.
 &lt;I&gt;&lt;B&gt;Commandant Suprême:&lt;/B&gt; Les Commandants Suprêmes représentent des gradés de haut rang. Ils comptent à la fois comme des Commandants et des Meneurs. De plus, chaque Commandant Suprême de l&apos;armée permet au joueur de relancer un seul test d&apos;initiative raté (de tout type) une fois par tour.&lt;/I&gt;</description>
     </rule>
@@ -3052,7 +3204,15 @@ Peuvent toujours choisir d&apos;utiliser leur caractéristique de Fusillade lors
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Teletransporte: &lt;/B&gt;Las unidades con la habilidad de teletransporte pueden aparecer súbitamente en el campo de batalla, ya sea por tener acceso a dispositivos tecnológicos o arcanos que les permiten moverse instantáneamente de un lugar a otro, o porque son capaces de ocultarse extremadamente bien y aparecen de forma inesperada &apos;desde la nada&apos;. &lt;BR&gt;Las formaciones en las que todas las unidades tienen esta habilidad pueden dejarse fuera del campo de batalla, y aparecer al comienzo de cualquier turno. Simplemente coloca la unidad en cualquier sitio del campo de batalla al comienzo de cualquier turno, antes de determinar quien gana en la tirada de estrategia. La unidad debe ser colocada a 5cm de otra unidad de su propia formación si ya hay alguna en juego. &lt;BR&gt;Por ejemplo, si una formación es teletransportada a la batalla entonces la primera unidad se puede situar en cualquier sitio, pero las otras unidades deben ser situadas a 5cm de una unidad que ya ha sido colocada. Todas las unidades deben situarse fuera de zonas de control enemigas. Si se colocan en terreno peligroso entonces deberá hacerse un chequeo de terreno peligroso cuando la unidad sea situada en el campo de batalla. &lt;BR&gt;El teletransporte es un asunto peligroso, y no siempre va como se había planeado. Para representar esto tira un D6 por cada unidad que se teletransporta a la partida. Con un resultado de 1 la formación a la que pertenece recibe un marcador de explosión.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Formations where all of the units have this ability may be kept off the table, and can appear at the start of any turn. Simply place the unit anywhere you like on the table at the start of any turn, before determining who wins the strategy roll. The unit must be placed within 5cms of another unit from its own formation if there are any already in play. So, for example, if a whole formation teleported into play then the first unit could be placed anywhere, but any other units would need to be placed within 5cms of a unit that had already been placed. All units must be placed outside enemy zones of control. If placed in dangerous terrain then a dangerous terrain test must be taken when the unit is placed on the table.
 Teleporting is an inherently dangerous business, and doesn’t always go as planned. To represent this roll a D6 for each unit that teleports into play. On a roll of a 1 the formation that the unit belongs to receives a Blast marker.
 &lt;I&gt;&lt;B&gt;Téléportation:&lt;/B&gt; Les formations dont toutes les unités ont cette capacité peuvent être gardées en dehors de la table pour apparaître au début de n&apos;importe quel tour. Placez une unité de la formation à téléporter n&apos;importe où sur la table avant de déterminer qui gagne le jet de stratégie. Les unités restantes doivent être placées à moins de 5 cm des unités de la même formation déjà en jeu.
@@ -3064,7 +3224,15 @@ Se téléporter comporte de nombreux risques et peut avoir des impondérables au
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Blindaje Trasero Grueso: &lt;/B&gt;Las unidades con esta habilidad tienen el mismo blindaje todo a su alrededor, por lo que ignoran el modificador de -1 a la salvación cuando están en un fuego cruzado.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>These vehicles have equally thick armour all round, and so ignore the -1 save modifier when they are caught in a crossfire.
 &lt;I&gt;&lt;B&gt;Blindage Arrière Renforcé:&lt;/B&gt; Ces véhicules ont un blindage de la même épaisseur sur toute leur coque et ignorent le modificateur de sauvegarde de -1 lorsqu&apos;ils sont pris dans un Feu croisé.&lt;/I&gt;</description>
     </rule>
@@ -3072,7 +3240,15 @@ Se téléporter comporte de nombreux risques et peut avoir des impondérables au
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Mata-Titanes: &lt;/B&gt;Algunas unidades están equipadas con armas listadas como Titan Killers, Mata-Titanes o simplemente TK. Muchas de estas armas son capaces de derribar a una máquina de guerra de un solo disparo. Las unidades impactadas por estas armas no pueden realizar tirada de salvación por cobertura o blindaje, incluso si tienen blindaje reforzado (reinforced armour). Los modificadores al impactar por cobertura se siguen aplicando. &lt;BR&gt;Además, las armas mata-titanes tendrán habitualmente una tirada de dado indicada entre paréntesis en su perfil. Por ejemplo, el Cañón Volcano montado en un Shadowsword imperial es un arma TK (D3). Si tal arma impacta en una máquina de guerra entonces ésta sufre un daño igual a la tirada apropiada que se indica. Cada punto de daño reducirá la DC de la máquina de guerra en un punto. Tira para calcular los daños críticos por cada punto de daño infligido. Las armas mata-titanes que no indican una tirada de dado entre paréntesis sólo infligen un punto de daño. &lt;BR&gt;Cuando se asignen impactos de armas TK que puedan causar múltiples puntos de daño, tira para calcular el daño inmediatamente después de asignar el impacto. La máquina de guerra cuenta como si se le hubieran asignado un número de impactos igual al daño obtenido en la tirada. Esto es así solamente para propósito de asignación de impactos. El daño se aplica de manera normal, solamente después de que todos los impactos hayan sido asignados.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Enemy units hit by such weapons may not take a cover or armour save, even if they have reinforced armour. Further special rules apply if the target unit is a war engine. In all other ways, Titan killers are treated as macro-weapons.
 Titan Killer weapons will usually have a dice roll noted in brackets on their data sheet. If such a weapon hits a war engine then the war engine suffers damage equal to the roll of the appropriate sort of dice. Each point of damage will reduce the war engine’s damage capacity by 1 point. Roll for critical hits for each point of damage inflicted. Titan Killer weapons that do not have a dice roll in brackets only inflict one point of damage.
 When allocating Titan killer hits that may cause multiple points of damage, roll for damage immediately after allocating the hit. The War Engine counts as having been allocated a number of hits equal to the damage rolled. This is solely for purposes of allocation. Damage is applied as normal, only after all hits have been allocated.
@@ -3114,7 +3290,15 @@ Les boucliers désactivés peuvent être réparés. Un engin de guerre peu répa
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Vehículos Caminantes: &lt;/B&gt;Estos vehículos son capaces de tratar con el terreno peligroso más fácilmente que otros. Para representar esto pueden repetir los chequeos de terreno peligroso fallidos.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Walkers are able to negotiate dangerous terrain more easily than other vehicles. To represent this they may re-roll any failed dangerous terrain tests.
 &lt;I&gt;&lt;B&gt;Marcheurs:&lt;/B&gt; Ils peuvent facilement traverser des terrains que d&apos;autres véhicules auraient du mal à négocier. Les Marcheurs peuvent relancer leurs tests de terrains dangereux ratés.&lt;/I&gt;</description>
     </rule>
@@ -3122,9 +3306,17 @@ Les boucliers désactivés peuvent être réparés. Un engin de guerre peu répa
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Vehículos Caminantes (Titanes): &lt;/B&gt;Estos vehículos son capaces de tratar con el terreno peligroso más fácilmente que otros. Para representar esto pueden repetir los chequeos de terreno peligroso fallidos.&lt;BR&gt;Puede pasar por encima de unidades y pedazos de terreno que son más bajos que las rodillas del Titan y menos de 2 cm de ancho.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Walkers are able to negotiate dangerous terrain more easily than other vehicles. To represent this they may re-roll any failed dangerous terrain tests. 
-May step over units and pieces of terrain that that are lower lower than the unit’s knees and less than 2cm wide.
+May step over units and pieces of terrain that that are lower than the unit’s knees and less than 2cm wide.
 &lt;I&gt;&lt;B&gt;Marcheurs (Titan):&lt;/B&gt; Ils peuvent facilement traverser des terrains que d&apos;autres véhicules auraient du mal à négocier. Les Marcheurs peuvent relancer leurs tests de terrains dangereux ratés.
 Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux du titan et au maximum de 2cm de large.&lt;/I&gt;</description>
     </rule>
