@@ -84,7 +84,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="6.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -101,7 +101,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="4.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -118,7 +118,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -135,7 +135,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -152,7 +152,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -169,7 +169,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -186,7 +186,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -203,7 +203,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -220,14 +220,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -244,7 +244,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -261,14 +261,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -285,7 +285,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -384,7 +384,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="6.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -401,7 +401,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="4.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -418,7 +418,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -435,7 +435,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -452,7 +452,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -469,7 +469,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -486,7 +486,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -503,7 +503,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -520,14 +520,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -544,7 +544,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -561,14 +561,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -585,7 +585,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -684,7 +684,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="6.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -701,7 +701,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="4.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -718,7 +718,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -735,7 +735,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -752,7 +752,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -769,7 +769,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -786,7 +786,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -803,7 +803,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -820,14 +820,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -844,7 +844,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -861,14 +861,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -885,7 +885,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -984,7 +984,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="6.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1001,7 +1001,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="4.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1018,7 +1018,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1035,7 +1035,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1052,7 +1052,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1069,7 +1069,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1086,7 +1086,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1103,7 +1103,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1120,14 +1120,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1144,7 +1144,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1161,14 +1161,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1185,7 +1185,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1282,7 +1282,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="6.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1299,7 +1299,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="4.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1316,7 +1316,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1333,7 +1333,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1350,7 +1350,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1367,7 +1367,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1384,7 +1384,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1401,7 +1401,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1418,14 +1418,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1442,7 +1442,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1459,14 +1459,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1483,7 +1483,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1587,7 +1587,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="6.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1604,7 +1604,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="4.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1621,7 +1621,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1638,7 +1638,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1655,7 +1655,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1672,7 +1672,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="3.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1689,7 +1689,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1706,7 +1706,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1723,14 +1723,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="2.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01c-3159-3cef-e12d" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1747,7 +1747,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1764,14 +1764,14 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="2e76-3c1e-639f-a0a7" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1788,7 +1788,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
               <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1"/>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2688,7 +2688,8 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Moves 3D6cm in a random direction. If this move takes the unit into impassable terrain or another unit it can’t move over then it stops when it contacts the obstruction and suffers an extra point of damage. If the unit rampages into or over any units then they will take a hit on a D6 roll of 4+ (make saving throws for the units normally).</description>
+      <description>Moves 3D6cm in a random direction. If this move takes the unit into impassable terrain or another unit it can’t move over then it stops when it contacts the obstruction and suffers an extra point of damage. If the unit rampages into or over any units then they will take a hit on a D6 roll of 4+ (make saving throws for the units normally).
+&lt;I&gt;&lt;B&gt;Touche Critique: Déchaînement:&lt;/B&gt; Déplace 3D6cm dans une direction aléatoire. Si ce mouvement prend l&apos;appareil dans des terrains impraticables ou d&apos;une autre unité, il ne peut pas se déplacer sur il arrête quand il contacte l&apos;obstruction et perd un point de dégâts supplémentaires. Si l&apos;unité saccages dans ou sur des unités, puis ils vont prendre un coup sur un jet de 4+.&lt;/I&gt;</description>
     </rule>
     <rule id="8375-0b22-f332-1964" name="Critical Hit: Reactor Breach" hidden="false">
       <profiles/>
