@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c55-2560-a9a0-f22e" name="Orks: Warlord Snagga-snagga&apos;s Feral Ork Horde" revision="20" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c55-2560-a9a0-f22e" name="Orks: Warlord Snagga-snagga&apos;s Feral Ork Horde" revision="21" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -3200,7 +3200,15 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Ruptura de la Caldera&lt;/B&gt;La unidad es destruida. Todas las unidades a 2D6cm sufren un impacto.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Destroyed, all units within 2D6cm suffer a hit.
 &lt;I&gt;&lt;B&gt;Touche Critique: Rupture de la Chaudière:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 2D6cm subissent une touche.&lt;/I&gt;</description>
     </rule>
@@ -3215,6 +3223,19 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
           <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Rabioso&lt;/B&gt;La unidad sufre 1 punto de daño adicional. Mueve a la unidad 3D6cm en una dirección aleatoria. Si mueve a terreno intransitable, se detiene y es destruida. Si mueve a otra unidad, se detiene y esa unidad sufre un impacto de macro-arma.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>The Orkeosaurus rampages 3D6cm in a random direction, stopping immediately if it encounters impassable terrain or another unit or once the move has finished. If it stops because it moved into another unit, then the unit suffers a hit that counts as having been inflicted by a Macro-weapon. If it crashes into impassable terrain then the Orkeosaurus is killed.
@@ -3232,7 +3253,15 @@ CodexOrks #011214</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Cuantoz Máz Mejor: &lt;/B&gt;Los Orkos creen que, mientas queden suficientes de ellos (¡lo ideal es algunos más de los que puedan contar!), siempre tienen las de ganar. Para representar esto, las formaciones Orkas de más de cinco unidades (es decir, más de los dedos de una mano) sin incluir a los Kanijoz ni a los Kañonez, recibirán un +1 a los chequeos de reagrupamiento. Las formaciones con más de diez unidades de este tipo recibirán un +2. Para estos propósitos, cada máquina de guerra cuenta como un número de unidades igual a su factor de daños inicial.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Ork formations with more than five units (ie, too many to count on the fingers of one hand), not including Grotz or Squig Katapultz units, receive a +1 modifier to any Rally rolls they make, and formations with more than 10 such units receive a +2 modifier. For the purposes of this rule War Engines count each point of starting damage capacity as a unit.
 &lt;I&gt;&lt;B&gt;R&apos;mise en Bande:&lt;/B&gt; Lorsque les bandes Orks tentent un test de ralliement, ils reçoivent un bonus de +1 lorsqu&apos;ils sont plus de 5 et de +2 lorsqu&apos;ils sont plus de 10. Les engins de guerre faisant partis de ces bandes comptent pour autant d&apos;unités que leur capacité de dommage de départ. Ne sont pas comptabilisables dans le calcul les grots et les groskalibr&apos;.&lt;/I&gt;</description>
     </rule>
@@ -3240,7 +3269,15 @@ CodexOrks #011214</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Kaudillo: &lt;/B&gt;Cada ejército Orko debe incluir un comandante en jefe llamado Kaudillo. El Kaudillo es gratuito, no hay que pagar puntos por él. El Kaudillo Orko debe añadirse a la formación con mayor número de unidades. Las máquinas de guerra cuentan como tantas unidades como factor de daños inicial tengan. Si hay varias formaciones empatadas, puedes elegir cualquiera de ellas.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Every Feral Ork army must include a supreme commander character called a Warlord. The Warlord character is free; you don’t have to pay any points for it. The Warlord character must be added to the formation in the army with the most units (war engines count as a number of units equal to their starting damage capacity).
 &lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée d’Orks Sauvages doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit être ajoutée à la formation de votre armée comportant le plus d’unités. Les engins de guerre comptent un nombre d’unités égal à leur capacité de dommages de départ. En cas d’égalité choisissez quelle formation doit rejoindre le Seigneur de Guerre.&lt;/I&gt;</description>
     </rule>
@@ -3248,7 +3285,15 @@ CodexOrks #011214</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;El Poder del ¡Waaaagh!: &lt;/B&gt;Las formaciones Orkas que declaren acciones Dobles o de Atacar, recibirán un +2 a su chequeo de acción.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Ork formations that are attempting to take Charge or Double actions receive a +2 modifier to their Action test roll.
 &lt;I&gt;&lt;B&gt;Pouvoir de la Waaagh:&lt;/B&gt; Les Orks ne sont pas de fins stratèges mais la perspective d&apos;une bonne bagarre les galvanise toujours. Afin de représenter ceci, une formation tentant une action d&apos;avance rapide ou d&apos;assaut reçoit toujours +2 à l&apos;initiative pour son test d&apos;action. Les formations aériennes, ont toujours +2 de bonus pour les tests d&apos;actions lorsqu&apos;elles tentent une Interception ou une Attaque au sol.&lt;/I&gt;</description>
     </rule>
@@ -3276,7 +3321,15 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Orkosaurios: &lt;/B&gt;Los Orkosaurios que formen parte de una Partida de Guerra tan sólo podrán transportar unidades de su misma formación.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Orkeosaurus that are part of a warband may only transport units from their own formation.
 &lt;I&gt;&lt;B&gt;Orkeosaurus:&lt;/B&gt; Ces unités peuvent seulement transporter les unités de leur propre formation.&lt;/I&gt;</description>
     </rule>
@@ -3284,7 +3337,15 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 3. &lt;BR&gt; Todas las formaciones: 3+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Ork armies have Strategy Rating 3. 
 Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.
 &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Waaagh Ork a une valeur stratégique de 3. 
@@ -3304,14 +3365,6 @@ Junkatrukk: 1 unité parmi: Boyz, Nobz, Wildboyz et une unité de Grots. Les uni
 Squiggoths: 4 unités parmi: Boyz, Nobz, Wildboyz, peut transporter 2 unités de Grots en plus des autres unités.
 Orkeosaurus: 12 unités parmi: Boyz, Nobz, Wildboyz. Peut embarquer 6 unité de Grots en plus des autres unités&lt;/I&gt;
 </description>
-    </rule>
-    <rule id="37a6-20ea-1baf-2e78" name="Trappa" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>All units in the formation count as being Scouts.
-&lt;I&gt;&lt;B&gt;Trappeurz:&lt;/B&gt; Toutes les unités de la formation reçoivent la capacité Eclaireur gratuitement.&lt;/I&gt;</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

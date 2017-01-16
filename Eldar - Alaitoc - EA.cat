@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4bbb-8d08-72fe-860c" name="Eldar: Alaitoc Craftworld" revision="20" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4bbb-8d08-72fe-860c" name="Eldar: Alaitoc Craftworld" revision="21" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -919,7 +919,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="02e5-5572-860e-ae27" hidden="false" targetId="49ea-2d6a-c60e-c366" type="rule">
+        <infoLink id="02e5-5572-860e-ae27" hidden="false" targetId="f683-58a7-f502-1938" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4470,18 +4470,6 @@
       <modifiers/>
       <description>&lt;I&gt;none&lt;/I&gt;</description>
     </rule>
-    <rule id="49ea-2d6a-c60e-c366" name="Avatar" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>In Grand Tournament games the Avatar must start off the table. At the start of any turn (including the first) they may be set up on the table within 15cms of a Farseer. In the End Phase of the turn the Avatar returns to the Webway and is removed from play. Once the Avatar has left they may not return. Note that if there are no Farseers in play then the Avatar may not be used.
-&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes :
-1) De manière classique lors du déploiement en début de partie
-2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve
-3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation
-Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;</description>
-    </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
       <rules/>
@@ -4511,8 +4499,21 @@ Fanatic #13</description>
       <modifiers>
         <modifier type="set" field="description" value="Only Alaitoc Eldar Pathfinders, Rangers and War Walkers are allowed to garrison objectives in the Epic tournament game scenario.">
           <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avanzadilla: &lt;/B&gt;Sólo los Pioneros, Exploradores y los Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
+          <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4534,8 +4535,21 @@ Fanatic #13</description>
       <modifiers>
         <modifier type="set" field="description" value="Eldar Alaitoc Craftworld armies have a strategy rating of 4. Avatar, Aspect Warrior and Pathfinder formations have an initiative rating of 1+. All other formations have an initiative rating of 2+.&lt;BR&gt; Harlequins have Strategy Rating 5 and an Initiative rating of 1+.">
           <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 4. &lt;BR&gt; Avatar, Hueste Especialista, Phantom, Revenants y Warlock: 1+. &lt;BR&gt; Resto de formaciones: 2+.&lt;/I&gt;">
+          <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5735,6 +5749,13 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Al principio del juego, designa un objetivo de tu mitad de la mesa como Puerta Fantasmal, antes del despliegue de naves espaciales y patrullas. Para propósitos de reglas, la Puerta Fantasmal funciona como un portal a la telaraña, y como un objetivo. No puede ser destruida.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>

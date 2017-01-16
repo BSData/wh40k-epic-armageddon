@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar Kabal" revision="20" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar Kabal" revision="21" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9827,11 +9827,19 @@ Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidrave
       <description>Phantom Lances destroyed. Additional Critical hits will cause an extra point of damage.
 &lt;I&gt;&lt;B&gt;Touche Critique: Executioner:&lt;/B&gt; le dispositif optique de brouillage du Moissonneur est détruit. Celui-ci perd la capacité Bouclier d’ombre. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;</description>
     </rule>
-    <rule id="8c9d-fee4-93f4-2aa4" name="Critical Hit: Explodes" hidden="false">
+    <rule id="8c9d-fee4-93f4-2aa4" name="Critical Hit: Vessel of Pain" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Barcaza del Dolor&lt;/B&gt;La unidad es destruida. Todas las unidades a 5cm sufren un ataque AP5+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>The unit is destroyed. All units within 5cm are subject to an AP5+ attack.</description>
     </rule>
     <rule id="b24b-6e03-45bb-88fe" name="Critical Hit: Moissonneur" hidden="false">
@@ -9845,7 +9853,15 @@ Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidrave
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Atormentador&lt;/B&gt;La unidad pierde su retrorreactor, y su VEL se reduce a 25cm. Subsiguientes daños críticos producirán 1 punto de daño adicional.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Movement is reduced to 25cm and it loses the Jump Pack ability for the rest of the game. Further critical hits cause an extra point of damage.
 &lt;I&gt;&lt;B&gt;Touche Critique: Tormentor:&lt;/B&gt; le dispositif optique de brouillage du titan est détruit. Celui-ci perd les capacités Bouclier d’ombre et Champ éclipsant. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;</description>
     </rule>
@@ -9866,6 +9882,13 @@ Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidrave
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Armas dañadas&lt;/B&gt;La unidad pierde todas sus armas y ya no puede disparar, ni tiene valores de CC ni TT. Daños críticos subsiguientes la destruirán.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <description>Unit may no longer fire any weapons, close combat, or firefight (transported units may still fight using the Assault Deck ability). Additional Critical hits will cause an extra point of damage.</description>
@@ -9896,6 +9919,13 @@ DarkEldarQuickRef #05062015</description>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Flota a Pie: &lt;/B&gt;Las formaciones de Eldar Oscuros no se ven afectadas por las típicas penalizaciones que las formaciones de otras razas tienen por llevar a cabo acciones de Marcha. Las formaciones Eldar que hayan Marchado pueden prestar fuego de apoyo en un asalto, cuentan para el fuego cruzado, e incluso pueden realizar disparos antiaéreos.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Dark Eldar formations do not incur the typical penalties that other races would after taking a March action. Dark Eldar formations that have marched may lend support in assaults, help claim a crossfire bonus, and even fire flak shots.</description>
     </rule>
@@ -9916,7 +9946,15 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tácticas de Ataque y Retirada: &lt;/B&gt;Las formaciones de Eldar Oscuros que realicen acciones Dobles o de Avanzar pueden elegir disparar antes o después de cualquier movimiento. Por supuesto, sólo podrán disparar una vez durante la acción. Es decir: si realiza una acción de Avanzar, una formación Eldar Oscura podrá disparar y luego mover, o mover y luego disparar, mientras que si realiza una acción Doble podrá mover dos veces y disparar, o disparar y mover dos veces, o mover, disparar y volver a mover. &lt;BR&gt; Además, las formaciones de Eldar Oscuros que ganen un asalto pueden mover toda su Velocidad cuando se consolidan, en vez de estar limitados a 5cm, como normalmente ocurriría.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Dark Eldar formations that take advance or double actions may choose to shoot either before or after each move. However, they may still only shoot once during the action. For example, a Dark Eldar formation taking an advance action could shoot and then move or move and then shoot, while a formation taking a double action could shoot and move twice, move twice and then shoot, or move then shoot and then move again.
 In addition, a Dark Eldar formation that wins an assault is allowed to move any distance up to its speed value when they consolidate, rather than being limited to a move of 5cms as would normally be the case.
 &lt;I&gt;&lt;B&gt;Tactique du Tirer et Courir:&lt;/B&gt; Les formations Eldars Noirs qui reçoivent l’ordre avance ou avance rapide peuvent choisir de tirer soit avant soit après chaque mouvement. Elles ne peuvent néanmoins tirer qu’une seule fois durant l’action. Par exemple, une formation Eldar Noir avec un ordre avance peut tirer puis se déplacer ou se déplacer puis tirer, de même une formation avec un ordre de avance rapide peut tirer et se déplacer deux fois, se déplacer deux fois et tirer, ou se déplacer puis tirer puis encore bouger. 
@@ -9930,16 +9968,34 @@ Les formations de Cérastes ; Maîtresses de sang ; Hellions et Reavers peuvent 
       <modifiers>
         <modifier type="set" field="description" value="The Kashnarak is a massive, enraged animal that squeezes through a Webway portal and is set loose on the battlefield at the beginning of any turn the Dark Eldar desire (before strategy roll) and acts as a “third” player. It will always attempt a barging, close combat assault on the closest formation(s), even Dark Eldar formations! If unable to reach base-to-base contact, the beast will march toward the closest formation, to its maximum movement. If it reaches an enemy zone of control, the beast stops its move. Consolidation moves are also toward the closest formation. From then on, it is the first activation of subsequent turns, before the strategy roll or teleport, following the model above. A broken Kashnarak will remain in place on the board and will not attempt a move until it rallies.&lt;BR&gt;The exceptions are when in the presence of a Wych unit. If within 15cm of a Wych unit at the beginning of the Kashnarak activation (see above), its assault or move may be directed by the Dark Eldar player. This includes a Wych unit within 15cm of the Kashnarak’s Webway portal. In addition, the Kashnarak will never move toward or assault a Wych formation; instead it will choose the next closest formation. These directed actions still take place prior to the strategy roll for the turn.&lt;BR&gt;Regardless of its actions, the Kashnarak is not considered part of the Dark Eldar force for the purposes of placing formations, holding objectives, calculating crossfire, or determining victory conditions and tie-breaker calculations. It neither counts toward Dark Eldar activations nor does it count toward Webway Portal use. It does not benefit from Hit &amp; Run tactics. The Kashnarak can contest objectives for both the Dark Eldar (except when within 15cm of a Wych unit) and their opponents.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Kashnarak: &lt;/B&gt;El Kashnarak es un enorme y rabioso animal que emerge a través de un portal a la telaraña para sembrar la devastación en el campo de batalla al comienzo del turno que desee el jugador Eldar Oscuro (antes de la tirada de estrategia), y actúa como un “tercer jugador”. Siempre intentará lanzarse al combate cuerpo a cuerpo contra la formación (o formaciones) más cercana, ¡incluso formaciones de los Eldar Oscuros! Si le resulta imposible alcanzar el contacto peana con peana, la bestia Marchará hacia la formación más cercana. En cada turno subsiguiente, tendrá la primera activación del turno, antes de la tirada de estrategia y de los teletransportes. Un Kashnarak desmoralizado permanecerá inmóvil en el campo de batalla hasta que se reorganice. &lt;BR&gt; La excepción es cuando esté presente una unidad de Brujas. Si el Kashnarak está a 15cm o menos de una unidad de Brujas al comienzo de su activación, su asalto o movimiento podrá ser dirigido por el jugador Eldar Oscuro. Esto también se cumplirá si hay una unidad de Brujas a 15cm o menos del portal a la telaraña a través del que el Kashnarak va a entrar en juego. Además, el Kashnarak nunca asaltará ni moverá hacia una formación de Brujas; en lugar de eso, deberá elegirse la siguiente formación más cercana. Estas acciones dirigidas tendrán también tendrán lugar antes de la tirada de estrategia del turno. &lt;BR&gt; Sin importar qué acciones realice, el Kashnarak no se considera parte del ejército Eldar Oscuro a efectos de desplegar formaciones, controlar objetivos, calcular el fuego cruzado, o determinar condiciones de victoria o desempate. Tampoco cuenta como una activación de formación de los Eldar Oscuros, ni para el uso del portal a la telaraña. No se beneficia de la regla tácticas de ataque y retirada. El Kashnarak puede disputar objetivos, tanto los del jugador Eldar Oscuro (salvo que esté a 15cm o menos de una unidad de Brujas) como los de su oponente.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>It will always attack the closest formation on the next available activation, even Dark Eldar formations. If unable to attack, the beast will march or move toward the closest formation to its maximum movement. If it reaches impassable terrain, the beast stops its move. From then on, it activates on the first move of subsequent turns, following the model above.
 The exception is when in the presence of a Wych formation. If within 15cm of a Wych formation at the beginning of its activation, the Kashnarak&apos;s attack or move may be directed by the Dark Eldar player. This includes a Wych formation within 15cm of the Kashnarak&apos;s Webway portal. In addition, the Kashnarak will never attack a Wych formation; instead it will choose the next closest formation.
-Regardless of its actions, the Kashnarak is not considered part of the Dark Eldar force for the purposes of holding/contesting objectives or for determining victory conditions. It neither counts toward Dark Eldar activations nor does it count toward Webway portal use. It does not benefit from Hit &amp; Run tactics.
-&lt;I&gt;&lt;B&gt;:&lt;/B&gt; &lt;/I&gt;</description>
+Regardless of its actions, the Kashnarak is not considered part of the Dark Eldar force for the purposes of holding/contesting objectives or for determining victory conditions. It neither counts toward Dark Eldar activations nor does it count toward Webway portal use. It does not benefit from Hit &amp; Run tactics.</description>
     </rule>
     <rule id="b786-c22d-2443-b225" name="May Not Garrison" hidden="false">
       <profiles/>
@@ -9948,10 +10004,16 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
       <modifiers>
         <modifier type="set" field="description" value="Dark Eldar are forbidden from garrisoning any formations in the Epic tournament game scenario.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="description" value="Only Mandrake formations may set up using the tournament game garrison rule.">
           <repeats/>
@@ -9959,6 +10021,19 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
           <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Los Eldar Oscuros tienen prohibido hacer patrullas en las batallas de torneo.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>Only formations made solely of Hellions may garrison objectives in the Grand Tournament game scenario.
@@ -9991,6 +10066,13 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Auto-caída Orbital: &lt;/B&gt;Las reglas de auto-caída orbital se tratan igual que las reglas de las caídas orbitales, con la única excepción de, al tratarse de unidades mucho más pequeñas, se puede elegir cualquier turno, incluidos aquellos en los que esté presente cualquier nave espacial. &lt;BR&gt; El turno de llegada de la formación y el punto elegido para el despliegue debe anotarse en secreto con antelación. La formación con auto-caída orbital debe activarse de manera normal, igual que una nave espacial. Designa la formación y realiza el chequeo de acción. Si se falla el chequeo, la llegada se retrasará al turno siguiente. Si la activación es exitosa, coloca la formación en el punto previamente anotado y calcula la dispersión. Las unidades a bordo de transportes pueden desembarcar a 5 cm de los mismos. La acción de la formación proseguirá con normalidad. En otras palabras, la formación obtendrá el “movimiento gratuito” de la caída orbital al comienzo de su acción, pero, para todo lo demás, su activación es normal.&lt;BR&gt; (Nota: la acción es elegida en la activación, antes de determinar la dispersión. Elige con cuidado, ya que una dispersión desafortunada podría dificultar o impedir ciertas acciones).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Self planetfall is plotted exactly as planetfall. Both the turn in which the formation arrives and the landing location is plotted. The only exception is that, because these units are much smaller than orbiting spacecraft, they may be plotted to arrive in the same turn that an enemy spacecraft is present.
 On the designated turn the self planetfalling unit is activated in the normal activation sequence, as with spacecraft. Nominate the action for the formation and roll to activate. If the unit fails to activate its arrival is delayed to the next following turn. If the activation is successful, place the formation at the plotted landing zone and determine scatter as if it were a normal Planetfall, including loaded units disembarking up to 5cm. The formation’s action proceeds as normal in all respects from that point. In other words, the formation gets the “free move” from planetfall placement at the beginning of its action but in all other ways activates as normal.
@@ -10002,7 +10084,15 @@ Lors du tour désigné, la formation d&apos;Assaut Planétaire Indépendant est 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pantallas de Sombras: &lt;/B&gt;Cada pantalla de sombras absorberá un impacto exitoso antes de desactivarse; no se colocan marcadores de explosión por estos impactos. Pueden usarse también contra ataques TT, pero no CC. Una máquina de guerra que conserve al menos una pantalla de sombras al final de la Fase de Finalización reactivará automáticamente una de ellas. Si la máquina de guerra ha perdido todas sus pantallas de sombras no podrá volver a reactivarlas durante el resto de la batalla. Una máquina de guerra nunca podrá reactivar pantallas de sombras por encima de su número original. Adicionalmente, las máquinas de guerra que tengan al menos una pantalla de sombras activa se considerarán a cubierto (se benefician del -1 para impactar), pero este efecto no podrá emplearse contra ataques realizados en un asalto (sean CC o TT).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Each Shadowfield will absorb one successful hit before going down; no blast markers are caused for this hit. A war engine with at least one Shadowfield remaining regains an additional field at the end of the rally phase of each turn. The war engine can never have more shadowfields than originally allotted. In addition an active Shadowfield always counts as being in cover (apply -1 cover modifier). This has no effect on engagements, however (close combat or firefight).
 &lt;B&gt;Bouclier d&apos;Ombre:&lt;/B&gt; Les Boucliers d&apos;Ombre sont des dispositifs sophistiqués qui drainent littéralement la lumière des objets,
 empêchant ainsi les Eldars Noirs d&apos;être pris pour cible. Les Boucliers d&apos;Ombre affectent d&apos;un malus de -1 tout tir porté contre
@@ -10012,7 +10102,15 @@ l&apos;unité équipée, ce malus étant cumulatif avec les malus rencontrés en
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 3. &lt;BR&gt; Formaciones de Cábalas de Eldar Oscuros, Atormentador y Ejecutor: 1+. &lt;BR&gt; Resto de formaciones: 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>DArk Eldar armies have a Strategy rating of  3+.
 Most Dark Eldar formations have an Initiative of  2+.
 Kabals, Ravager Armadas, Vessels of Pain, Tormentors, and Executor Landing Modules have an initiative of  1+.
@@ -10029,6 +10127,13 @@ Les autres formations possèdent une initiative de 2+.&lt;/I&gt;</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Nave de Apoyo: &lt;/B&gt;Las naves de apoyo son como un híbrido entre los vehículos gravitatorios y las aeronaves. Permanecen siempre a gran distancia del suelo, sobrevolando el terreno para tener buena posición de disparo. Una nave de apoyo funciona exactamente como una unidad gravitatoria que esté siempre en vuelo alto. Las naves de apoyo disparan, y son afectadas por los disparos, exactamente igual que cualquier otra unidad (es decir, no se requiere la habilidad antiaérea). En un asalto, las naves de apoyo forzarán automáticamente el uso de TT, de la misma forma que los gravitatorios que así lo deseen. Se asume que las tropas a bordo de las naves de apoyo con capacidad de transporte estarán dotadas de los medios necesarios para embarcar y desembarcar de ellas con normalidad.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -10071,7 +10176,15 @@ Venom: 1 unité d’infanterie parmi : Grand Voïvode ; Guerrier cabaliste ; Imm
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portal a la Telaraña: &lt;/B&gt;Cada portal a la telaraña que se incluya en el ejército permitirá al jugador Eldar Oscuro elegir hasta otras tres formaciones y dejarlas atrás en Commorragh. Cualquiera de estas formaciones podrá entrar en el campo de batalla a través del portal a la telaraña, realizando una acción que les permita mover, y midiendo su primer movimiento desde el mismo portal. Sólo una formación puede entrar por el mismo portal en el mismo turno. El uso de estas puertas espectrales está limitado a formaciones compuestas únicamente por infantería, vehículos ligeros y vehículos blindados que sean bípodes (el temido Kashnarak es la única excepción a la regla).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Each Webway portal included in the army allows the Dark Eldar player to keep up to three formations back in Commorragh. Any of these reserve formations may enter play via a Webway portal by taking an action that allows them to move, then measuring its first move from the portal on the tabletop. No more than one formation may travel through a single portal each turn.
 &lt;I&gt;&lt;B&gt;Les Portails Noirs et Fantômes:&lt;/B&gt; Chaque portail inclus dans une armée permet au joueur Eldar Noir de prendre trois formations et de les conserver en réserve dans la toile. Les formations en réserve dans la toile peuvent entrer en jeu par un portail, en réalisant une action qui comporte un mouvement. Ce mouvement est alors mesuré à partir de la position du portail sur la table de jeu. Notez que les formations peuvent apparaître à travers n’importe quel portail, pas seulement celui qui a été « utilisé » pour permettre de conserver la formation en réserve. Une seule formation peut voyager à travers chaque portail chaque tour. Notez qu&apos;une formation qui rate son activation en tentant de franchir un portail recevra automatiquement l&apos;ordre tenir (donc peut entrer en jeu en réalisant un simple mouvement en prenant 1 PI pour l&apos;activation ratée, ou alors rester hors de table et se regrouper). Si elle choisit de se regrouper en restant hors de table, cela permettra à une autre formation de pouvoir utiliser ce portail car il ne sera pas considéré comme utilisé par la formation précédente ayant raté son activation. Toute formation voyageant à travers un portail noir porté par une unité démoralisée, recevra immédiatement un PI.
 Seules les unités d&apos;infanterie, les véhicules légers et les véhicules blindés avec la capacité marcheur peuvent utiliser les portails noirs et portails fantômes.&lt;/I&gt;</description>
@@ -11835,7 +11948,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="3c70-22c1-1ecf-35c4" value="Explodes">
+        <modifier type="set" field="3c70-22c1-1ecf-35c4" value="Vessel of Pain">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
