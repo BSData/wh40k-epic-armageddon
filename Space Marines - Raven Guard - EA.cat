@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c175-4d7a-3512-4722" name="Space Marines: Raven Guard" revision="20" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c175-4d7a-3512-4722" name="Space Marines: Raven Guard" revision="21" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -207,7 +207,7 @@
         <cost name="pts" costTypeId="points" value="175.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4687-9a33-2783-94c4" name="Assault Terminator" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="4687-9a33-2783-94c4" name="Assault Terminator" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -220,9 +220,7 @@
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-      </constraints>
+      <constraints/>
       <selectionEntries>
         <selectionEntry id="d84c-e364-806e-7586" name="Assault Terminator Squad" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
           <profiles/>
@@ -315,7 +313,7 @@
         <cost name="pts" costTypeId="points" value="275.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8b0b99e9-b90e-02d1-9c8b-1b9eed5c0886" name="Bikes" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="8b0b99e9-b90e-02d1-9c8b-1b9eed5c0886" name="Bikes" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -594,7 +592,7 @@
         <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ec0d-51e7-9415-bb36" name="Devastator" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="ec0d-51e7-9415-bb36" name="Devastator" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -606,9 +604,16 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="increment" field="maxInForce" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78ab1503-9559-1605-4687-c2f32d161ff7" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="035d-db65-2384-7ccf" name="Devastators Squad" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
@@ -651,11 +656,47 @@
           <modifiers/>
           <constraints/>
         </entryLink>
-        <entryLink id="364e-32ee-45ac-8ec5" hidden="false" targetId="01c6-cea9-dd5c-f79c" type="selectionEntryGroup">
+        <entryLink id="364e-32ee-45ac-8ec5" hidden="false" targetId="1e39-37f1-7b01-5488" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
+          <constraints/>
+        </entryLink>
+        <entryLink id="891e-7a13-7712-03b1" name="New EntryLink" hidden="false" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="ac8f-1810-401c-35af" value="0.0">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d5c-e6bc-54ab-1352" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints/>
+        </entryLink>
+        <entryLink id="a841-47eb-d504-757a" name="New EntryLink" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e39-37f1-7b01-5488" type="atLeast"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints/>
         </entryLink>
       </entryLinks>
@@ -663,7 +704,7 @@
         <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="702a-a4c6-1bec-1cdc" name="Land Raiders" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="702a-a4c6-1bec-1cdc" name="Land Raiders" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -732,12 +773,19 @@
           <modifiers/>
           <constraints/>
         </entryLink>
+        <entryLink id="ec19-4e84-ca87-102d" name="" hidden="false" targetId="a010-2a42-32ec-e0e8" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="350.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="229a-a9f4-415d-8e91" name="Land Speeders" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="229a-a9f4-415d-8e91" name="Land Speeders" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -850,7 +898,7 @@
         <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b796-fb10-ae0b-82a4" name="Landing Craft (+400)" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="model">
+    <selectionEntry id="b796-fb10-ae0b-82a4" name="Landing Craft (+400)" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="model">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -981,7 +1029,7 @@
         <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b23af3d0-8df7-d559-1fec-69a8891576c5" name="Predators" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="b23af3d0-8df7-d559-1fec-69a8891576c5" name="Predators" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -998,7 +1046,42 @@
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="95a9-5072-1d9d-c877" name="Vindicator" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="eeda-d743-ee4e-f2e9" hidden="false" targetId="4d97-a983-9655-9bb8" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="42cf-3334-71cc-4947" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="3f86-d6c9-74cd-9829" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4a00-6de5-ab84-ad73" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="65.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d859-73d7-1e1e-3f3e" name="Tanks" hidden="false" collective="false" defaultSelectionEntryId="6618-8a9f-0600-a32c">
           <profiles/>
@@ -1076,6 +1159,13 @@
           <constraints/>
         </entryLink>
         <entryLink id="16d2-e0e5-73ad-200f" hidden="false" targetId="eadade8a-545f-ce5e-94ad-9bda51717b37" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
+        <entryLink id="e6d9-c6b4-8ee6-143e" name="" hidden="false" targetId="a010-2a42-32ec-e0e8" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1657,7 +1747,7 @@
           <modifiers/>
           <constraints/>
         </entryLink>
-        <entryLink id="9ea2-4d64-32c5-00e7" hidden="false" targetId="2aae-82b8-08f3-e766" type="selectionEntry">
+        <entryLink id="9ea2-4d64-32c5-00e7" name="" hidden="false" targetId="2aae-82b8-08f3-e766" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1686,11 +1776,70 @@
           <modifiers/>
           <constraints/>
         </entryLink>
-        <entryLink id="7168-7bb7-212f-2448" hidden="false" targetId="01c6-cea9-dd5c-f79c" type="selectionEntryGroup">
+        <entryLink id="7168-7bb7-212f-2448" hidden="false" targetId="1e39-37f1-7b01-5488" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+        </entryLink>
+        <entryLink id="b859-437a-b4b7-1c1f" name="New EntryLink" hidden="false" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="ac8f-1810-401c-35af" value="0.0">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d5c-e6bc-54ab-1352" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints/>
+        </entryLink>
+        <entryLink id="d531-8694-9c6f-002c" name="New EntryLink" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d3bb-c477-1acb-becf" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f8b-e7c7-b274-d728" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2aae-82b8-08f3-e766" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e39-37f1-7b01-5488" type="atLeast"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints/>
         </entryLink>
       </entryLinks>
@@ -2074,7 +2223,7 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c21a10fe-a11a-af95-9c8c-3b18ad266cb8" name="Strike Cruiser" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="model">
+    <selectionEntry id="c21a10fe-a11a-af95-9c8c-3b18ad266cb8" name="Strike Cruiser" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="model">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2274,7 +2423,7 @@
         <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8042-cfcb-871a-a65d" name="Tactical" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="8042-cfcb-871a-a65d" name="Tactical" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2286,9 +2435,16 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="increment" field="minSelections" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78ab1503-9559-1605-4687-c2f32d161ff7" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="1a93-a386-aeee-d46e" name="Tactical Squad" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
@@ -2316,102 +2472,75 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="fa79-fba6-ce05-5750" name="Transport" hidden="false" collective="false">
+        <selectionEntryGroup id="d8d3-58a6-9ba3-c7ed" name="APCs" hidden="false" collective="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="0fec-6d83-e499-b022" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0fec-6d83-e499-b022" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="fc3e-1b4a-1caa-6e48" name="3x Rhino" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
-              <profiles/>
-              <rules/>
-              <infoLinks>
-                <infoLink id="1816-5fd9-188e-daea" hidden="false" targetId="2815-61f6-bad0-120e" type="profile">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-                <infoLink id="df25-0b30-3f85-1afa" hidden="false" targetId="7fb6-14cc-145e-77be" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-              </infoLinks>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="56d1-0f50-d8e2-8d5b" name="Thunderhawk" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
-              <profiles/>
-              <rules/>
-              <infoLinks>
-                <infoLink id="7ddd-d3c5-efd1-c2f7" hidden="false" targetId="1c71-94a8-df92-2490" type="profile">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-                <infoLink id="7721-f0b3-a0a9-286f" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-                <infoLink id="adcd-8b37-0f66-1197" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-                <infoLink id="2116-fc93-a1e8-353b" hidden="false" targetId="7fb6-14cc-145e-77be" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-                <infoLink id="0a00-8f3e-7ead-3dad" hidden="false" targetId="04a7-803d-31d7-c42c" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-              </infoLinks>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="175.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="3b38-efcc-3391-283d" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+            <entryLink id="2e35-adfe-960d-d566" hidden="false" targetId="bd4a-d64e-f47f-c866" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+            <entryLink id="bf31-4e6c-3ac8-131e" hidden="false" targetId="4e1f-46d7-c8f1-e11b" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+            <entryLink id="a6f6-d113-4bee-2aa1" hidden="false" targetId="9137-5e3b-d46c-79a2" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4206-20f2-5d91-ab5b" name="Airborne" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="cbf9-ac3c-ac32-0cb4" value="0.0">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8d3-58a6-9ba3-c7ed" type="atLeast"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cbf9-ac3c-ac32-0cb4" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="94fc-cde0-26df-63ea" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+            <entryLink id="61c1-de4e-fd1d-d1f3" name="New EntryLink" hidden="false" targetId="4586-3b73-d9c0-db55" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -2434,6 +2563,35 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
+          <constraints/>
+        </entryLink>
+        <entryLink id="7340-eb1a-e3a1-9536" name="New EntryLink" hidden="false" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="ac8f-1810-401c-35af" value="0.0">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d5c-e6bc-54ab-1352" type="equalTo"/>
+                    <condition field="selections" scope="8042-cfcb-871a-a65d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2351-0e48-1b2a-b67f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4586-3b73-d9c0-db55" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints/>
         </entryLink>
       </entryLinks>
@@ -2648,7 +2806,7 @@
         <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c92-2546-ffe1-2919" name="Thunderhawk (+225)" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="model">
+    <selectionEntry id="4c92-2546-ffe1-2919" name="Thunderhawk (+225)" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="model">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -3002,7 +3160,7 @@
         <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="30c02ff3-4873-aad3-c070-3bcd63685643" name="Vindicators" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="30c02ff3-4873-aad3-c070-3bcd63685643" name="Vindicators" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -3071,6 +3229,13 @@
           <modifiers/>
           <constraints/>
         </entryLink>
+        <entryLink id="5a48-0938-f48e-9fec" name="" hidden="false" targetId="a010-2a42-32ec-e0e8" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="250.0"/>
@@ -3109,6 +3274,7 @@
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c92-2546-ffe1-2919" type="atLeast"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b796-fb10-ae0b-82a4" type="atLeast"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4586-3b73-d9c0-db55" type="atLeast"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -3122,6 +3288,7 @@
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c92-2546-ffe1-2919" type="atLeast"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b796-fb10-ae0b-82a4" type="atLeast"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4586-3b73-d9c0-db55" type="atLeast"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -3146,9 +3313,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="points" value="225.0">
+            <modifier type="increment" field="points" value="225">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c92-2546-ffe1-2919" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="points" value="200">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4586-3b73-d9c0-db55" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -3323,7 +3497,7 @@
         <cost name="pts" costTypeId="points" value="850.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d7528879-8479-eb16-fcea-4ba61b23db02" name="Whirlwinds" page="0" hidden="false" collective="false" categoryEntryId="7bf8-d208-dd76-9088" type="unit">
+    <selectionEntry id="d7528879-8479-eb16-fcea-4ba61b23db02" name="Whirlwinds" page="0" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -3387,42 +3561,98 @@
           <modifiers/>
           <constraints/>
         </entryLink>
+        <entryLink id="186a-695d-a987-4f9d" name="" hidden="false" targetId="a010-2a42-32ec-e0e8" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="300.0"/>
       </costs>
     </selectionEntry>
-  </selectionEntries>
-  <entryLinks/>
-  <sharedSelectionEntries>
-    <selectionEntry id="8e24-62e5-4ae7-2240" name="2x Rhino" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+    <selectionEntry id="4621-bdb2-5aa3-5c96" name="Stormravens" page="0" hidden="false" collective="false" categoryEntryId="4f35-97c0-fae0-922d" type="unit">
       <profiles/>
       <rules/>
-      <infoLinks>
-        <infoLink id="f53b-12c7-f99b-b5f5" hidden="false" targetId="2815-61f6-bad0-120e" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="f149-1dc9-937d-be0c" hidden="false" targetId="7fb6-14cc-145e-77be" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-      </infoLinks>
-      <modifiers/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="91ea-1c41-fe24-2398" type="min"/>
       </constraints>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="c425-8a21-5841-ac4d" name="Stormraven" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="6032-109f-4d31-d58b" hidden="false" targetId="a0e4-d7fe-2d4e-bb81" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="ac67-3b14-70c1-cd52" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="5008-77bc-db0f-6503" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="4f62-68c7-5cec-7ed2" hidden="false" targetId="7fb6-14cc-145e-77be" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="b158-c290-fcd1-90d1" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0924-0655-defa-0ab6" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="55ae-2469-3191-6479" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="125.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="25.0"/>
       </costs>
     </selectionEntry>
+  </selectionEntries>
+  <entryLinks/>
+  <sharedSelectionEntries>
     <selectionEntry id="5363-0dc7-dfe3-f21e" name="Aircraft" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules/>
@@ -4030,6 +4260,104 @@
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4586-3b73-d9c0-db55" name="Thunderhawk (+200)" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="ea35-9068-5a0f-441b" hidden="false" targetId="1c71-94a8-df92-2490" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="494a-fbc8-36e6-1d20" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="94fc-fd62-c65f-4a23" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="9311-087d-b9b1-0f01" hidden="false" targetId="7fb6-14cc-145e-77be" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="be11-bb5d-c59b-9d62" hidden="false" targetId="04a7-803d-31d7-c42c" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="0979-e181-a4df-a07c" hidden="false" targetId="c4df-7c14-20e7-c343" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cfe5-1f82-edb7-a06d" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a010-2a42-32ec-e0e8" name="Armour" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="bebc-fa7f-9bd8-9272" name="" hidden="false" targetId="e4db-c3df-5977-f470" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" field="4306-0177-fc14-76b7" value="1">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b796-fb10-ae0b-82a4" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="21e5-597d-734a-cb4f" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efd2-d8c9-d9a3-becb" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa4b-7056-82f0-3f4f" type="max"/>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4306-0177-fc14-76b7" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4759,7 +5087,7 @@
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="01c6-cea9-dd5c-f79c" name="Transport" hidden="false" collective="false">
+    <selectionEntryGroup id="c365-c2e4-f7c6-4076" name="Free Dreadnought" hidden="false" collective="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -4773,60 +5101,116 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4e99-ddf3-4930-672d" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ac8f-1810-401c-35af" type="max"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de22-a914-d2e4-dd46" type="min"/>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ef8-7af4-413d-bed8" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e30-057f-316f-01e0" type="min"/>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a68c-86ea-a2d1-760c" type="max"/>
+        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f03e-d66d-bd81-7c1c" type="min"/>
+        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="24fe-0655-b60f-6d95" type="max"/>
       </constraints>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="283e-05dc-47f9-abb1" name="Hellfire Dreadnought" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="31eb-e519-0d44-da83" hidden="false" targetId="010e-164f-1824-70eb" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="269c-5098-1121-8982" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="924a-bc60-d8ce-5f06" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0731-9aa3-05fc-c4be" name="Tactical Dreadnought" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="a794-d616-0232-903a" hidden="false" targetId="4d37-22a0-7daa-e381" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="7a81-b638-800c-7885" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="68af-d266-4f68-a08d" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="a202-e9b3-1957-a245" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ede2-5fa3-41b7-680c" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="e4d9-fcbf-5a23-6431" hidden="false" targetId="8e24-62e5-4ae7-2240" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-        <entryLink id="a337-6a4b-56e1-62fc" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="b14e-9745-15dd-663a" name="*From the Shadows We Strike" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The Raven Guard is a highly mobile and discreet army, skilled in infiltration, thus you can place formations of any composition in garrison.
-Otherwise, Raven Guard Tactical, Devastator and Terminator formations may only be deployed in Thunderhawks, Landing Craft or Drop Pods. If you choose Drop Pods, formations come into play using the Planetfall rule. You will  require at least one Strike Cruiser or Battle Barge to deploy the Drop Pods from. When attempting Planetfall, each roll for scatter may be re-rolled once.
-&lt;I&gt;&lt;B&gt;Depuis les ombres nous frappons:&lt;/B&gt; La Raven Guard est une armée extrêmement mobile et discrète, spécialiste de l&apos;infiltration, de ce fait, vous pouvez placer des formations de n&apos;importe quelle composition en garnison.
-En outre, les formations Raven Guard de tactiques, devastators et terminators ne pourront être déployées qu&apos;en thunderhawk, barge d’assaut ou module atterrissage. Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur ou d’une barge de bataille pour déployer les modules d’atterrissage. Lors de ces assauts planétaires, vous pouvez relancer une fois chaque jet (de 3 dès) de dispersion.&lt;/I&gt;</description>
-    </rule>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;Raven Guard Test #Version F-ERC du 13.03.16&lt;/I&gt;</description>
+      <description>&lt;I&gt;Raven Guard Test #Version F-ERC du 25.10.16&lt;/I&gt;</description>
     </rule>
     <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
       <profiles/>
@@ -4837,6 +5221,13 @@ En outre, les formations Raven Guard de tactiques, devastators et terminators ne
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance&lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4886,8 +5277,13 @@ netea_army_list_compendium_2014-01-14</description>
       <description>The Raven Guard are a highly mobile army. Because of this, the points cost of certain formations includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. Determine the number of Rhinos needed after all upgrades have been purchased. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along to cover any losses.
 Formations that come with Rhinos will be noted as having &quot;plus transport&quot; in the units section of the army list. Raven Guard formations must take the transport vehicles, you cannot leave them behind in order to garrison the formation. You can only choose to ignore this if the formation is entering play via a special rule (e.g. planetfall or teleport) or an aircraft.
 You may choose to replace a formation’s Rhinos with Drop Pods before each game, after the opposing army is known but before objectives are placed. Formations making a planetfall via Drop Pods (or by another unit with that ability) may be upgraded with Land Speeders, these are assumed to make planetfall alongside the infantry.
-&lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines étant une armée très mobile, ils ont toujours la possibilité de partir au combat avec leurs transports emblématiques que sont les Rhinos.
-Les formations ayant cette caractéristique dans la description des unités, peuvent prendre autant de Rhinos que nécessaire pour pouvoir transporter la formation sans coût supplémentaire. Il ne peuvent se voir attribuer plus de Rhinos que nécessaire pour le transport de la formation. Vous pouvez également décider de remplacer les rhinos par des modules d&apos;atterrissage. Dans ce cas, les unités entreront en jeu avec ces modules en suivant les règles d&apos;Assaut Planétaire. Les formations tactiques de la Raven Guard peuvent remplacer leurs rhinos par un thunderhawk, dans ce acs il ne coute que 175pts.&lt;/I&gt;</description>
+&lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter.
+Les formations qui ont des Rhinos porte la mention &quot; plus transports &quot; dans leur composition.
+Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.
+Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas.
+Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks).
+En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des modules d’atterrissage.
+Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur Space Marine ou d’une barge de bataille pour déployer les modules d’atterrissage.&lt;/I&gt;</description>
     </rule>
     <rule id="fbc9-d148-2c44-1226" name="Strategy Rating &amp; Initiative (RG)" hidden="false">
       <profiles/>
@@ -4903,21 +5299,34 @@ Les formations ayant cette caractéristique dans la description des unités, peu
         </modifier>
       </modifiers>
       <description>Raven Guard Space Marine armies have a Strategy rating of 5. All Raven Guard and Titan Legion Battlegroups have an initiative rating of 1+. Imperial Navy aircraft formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Raven Guard a une Valeur Stratégique de 5. Les formations de la Raven Guard ont une initiative de 1+, les formations des soutiens titaniques ont une initiative de 1+ et les formations des appareils de la flotte, ont une initiative de 2+.&lt;/I&gt;
-
-
-
-
-
-
-
-</description>
+&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Raven Guard a une Valeur Stratégique de 5. Les formations de la Raven Guard ont une initiative de 1+, les formations des soutiens titaniques ont une initiative de 1+ et les formations des appareils de la flotte, ont une initiative de 2+.&lt;/I&gt;</description>
     </rule>
     <rule id="67ee-f518-772b-1152" name="They Shall Know No Fear" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Y No Conocerán el Miedo…: &lt;/B&gt;Se requieren dos marcadores de explosión para acobardar una unidad de Marines Espaciales o para eliminar una unidad de Marines Espaciales de una formación desmoralizada (ignora los marcadores de explosión sobrantes). &lt;BR&gt; Las formaciones de Marines Espaciales sólo son desmoralizadas al acumular dos marcadores de explosión por cada unidad en la formación. &lt;BR&gt; En la resolución del combate, los Marines Espaciales sólo cuentan la mitad de los marcadores de rxplosión que tengan, redondeando hacia abajo (nótese que no recibirán el +1 por no tener marcadores de explosión si al menos tienen uno antes de dividirlo por dos). Divide por dos el número de impactos adicionales sufridos por una formación de Marines Espaciales cuando es desmoralizada, redondeando hacia abajo a favor de los Marines. &lt;BR&gt; Cuando una formación de Marines Espaciales se reorganiza, recibe un número de marcadores de explosión igual al número de unidades que tenga, en vez de la mitad. Las unidades de Marines Espaciales con la habilidad de líder permiten retirar dos marcadores de explosión adicionales, en lugar de uno.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="It takes 2 Blast Markers to suppress a Space Marine unit. &lt;BR&gt; Space Marine formations are only broken if they have 2BMs per unit. &lt;BR&gt; Space Marine formations count as having half the number of BMs (rounding down to a minimum of one) for assault resolution purposes. &lt;BR&gt; Broken formations receive 1BM per unit when rallying. &lt;BR&gt; Space Marine Leaders remove 2BMs when rallying.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <description>It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any left over BMs).
 Space Marine formations are only broken if they have 2BMs per unit.
 Space Marine formations count as having half the number of BMs (rounding down- notethat assault resolution will not receive +1 for having no BM if the formation has 1BM before rounding down) for assault resolution purposes.
@@ -4937,7 +5346,7 @@ Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habit
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Battle Barge: 60 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts; plus 60 Land Raiders, Rhinos, Razorbacks, Whirlwinds, Hunters, Predators &amp; Vindicators; plus 9 Thunderhawk Gunships; and enough Drop Pods or Landing Craft.&lt;BR&gt; Drop Pods: may only transport units of Tactical, Devastator, Scout, Assault Terminators &amp; Dreadnoughts.&lt;BR&gt; Land Speeder Storm: 1 Scout unit.&lt;BR&gt; Landing Craft: 12 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts. Terminators &amp; Dreadnoughts use 2 spaces each. Plus 4 Land Raiders or 6 of the following: Rhinos, Razorbacks, Whirlwinds, Hunters, Predators &amp; Vindicators.&lt;BR&gt; Strike Cruiser: 20 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts; plus 20 Land Raiders, Rhinos, Razorbacks, Whirlwinds, Hunters, Predators &amp; Vindicators; plus 6 Thunderhawk Gunships; and enough Drop Pods or Landing Craft.&lt;BR&gt; Thunderhawk: 8 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts. Terminators &amp; Dreadnoughts use 2 spaces each.&lt;BR&gt; &lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-&lt;BR&gt; Battle Barge: 60 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators d&apos;assaut, dreadnoughts, motos ainsi que 60 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 9 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement.&lt;BR&gt; Drop Pods: ne peut transporter que des unités tactiques, dévastators, scouts, terminators d&apos;assaut et dreadnoughts.&lt;BR&gt; Land Speeder Storm: 1 Scout.&lt;BR&gt; Landing Craft: 12 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators d&apos;assaut et dreadnoughts. Les terminators et dreadnoughts prennent 2 places. En plus il peut transporter 4 land raiders ou 6 de ces unités suivantes : rhinos, razorbacks, whirlwinds, hunters, predators et vindicators.&lt;BR&gt; Strike Cruiser: 20 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators d&apos;assaut, dreadnoughts, motos ainsi que 20 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 6 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement.&lt;BR&gt; Thunderhawk: 8 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators d&apos;assaut, dreadnoughts. Les terminators et dreadnoughts prennent 2 emplacements.&lt;/I&gt;">
+        <modifier type="set" field="description" value="As follows-&lt;BR&gt;  Battle Barge: 60 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts; plus 60 Land Raiders, Rhinos, Razorbacks, Whirlwinds, Hunters, Predators &amp; Vindicators; plus 9 Thunderhawk Gunships; and enough Drop Pods or Landing Craft.&lt;BR&gt;  Drop Pods: may only transport units of Tactical, Devastator, Scout, Assault Terminators &amp; Dreadnoughts.&lt;BR&gt;  Land Speeder Storm: 1 Scout unit.&lt;BR&gt;  Landing Craft: 12 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts. Terminators &amp; Dreadnoughts use 2 spaces each. Plus 4 Land Raiders or 6 of the following: Rhinos, Razorbacks, Whirlwinds, Hunters, Predators &amp; Vindicators.&lt;BR&gt;  Razorback: 1 of the following: Tactical, Devastator, Scout.&lt;BR&gt;  Rhinos: 2 of the following: Tactical, Devastator, Scout.&lt;BR&gt;  Stormraven: May carry 1 Dreadnought; plus 2 of the following: Tactical, Assault, Devastator, Scout, Terminator. Terminators &amp; Assault units with Jump Packs use 2 spaces each.&lt;BR&gt;  Strike Cruiser: 20 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts; plus 20 Land Raiders, Rhinos, Razorbacks, Whirlwinds, Hunters, Predators &amp; Vindicators; plus 6 Thunderhawk Gunships; and enough Drop Pods or Landing Craft.&lt;BR&gt;  Thunderhawk: 8 of the following: Tactical, Devastator, Assault, Scout, Bikes, Attack Bikes, Assault Terminators &amp; Dreadnoughts. Terminators &amp; Dreadnoughts use 2 spaces each.&lt;BR&gt;  &lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt;  Comme suit-&lt;BR&gt;  Battle Barge: 60 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators d&apos;assaut, dreadnoughts, motos ainsi que 60 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 9 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement.&lt;BR&gt;  Drop Pods: ne peut transporter que des unités tactiques, dévastators, scouts, terminators d&apos;assaut et dreadnoughts.&lt;BR&gt;  Land Speeder Storm: 1 Scout.&lt;BR&gt;  Landing Craft: 12 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators d&apos;assaut et dreadnoughts. Les terminators et dreadnoughts prennent 2 places. En plus il peut transporter 4 land raiders ou 6 de ces unités suivantes : rhinos, razorbacks, whirlwinds, hunters, predators et vindicators.&lt;BR&gt;  Razorback: 1 de ces unités suivantes: tactiques, dévatators, scouts.&lt;BR&gt;  Rhinos: 2 des unités suivantes: tactiques, dévatators, scouts.&lt;BR&gt;  Stormraven: 2 unités parmi : tactiques, assaut, devastator, scout, terminator. Les terminators et les assauts avec jump packs prennent 2 places. Un dreadnought peut toujours être embarqué en plus de ces unités.&lt;BR&gt;  Strike Cruiser: 20 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators d&apos;assaut, dreadnoughts, motos ainsi que 20 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 6 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement.&lt;BR&gt;  Thunderhawk: 8 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators d&apos;assaut, dreadnoughts. Les terminators et dreadnoughts prennent 2 emplacements.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
@@ -4974,6 +5383,14 @@ Thunderhawk Transporter: il peut transporter 1 land raiders ou 2 des unités sui
       <modifiers/>
       <description>Although Thunderhawks &amp; Landing Craft are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Support. To select any of these the &quot;War Engine Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further pods are taken.
 &lt;I&gt;&lt;B&gt;Engins de Guerre:&lt;/B&gt; Bien que les Thunderhawks et Barges de Débarquement sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Avions et Soutien. Pour sélectionner l&apos;une de ces &quot;War Engine Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres capsules sont prises.&lt;/I&gt;</description>
+    </rule>
+    <rule id="e4db-c3df-5977-f470" name="Armour" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>If you want to select a second (or more) Land Raider, Predator, Vindicator or Whirlwind formation, then they must be airborne.
+&lt;I&gt;&lt;B&gt;Blindés:&lt;/B&gt; Si vous souhaitez sélectionner une seconde (ou plus) formations de land raiders, predators, vindicators ou de whirlwinds, elles doivent alors obligatoirement être aéroportées.&lt;/I&gt;</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -5577,13 +5994,6 @@ Thunderhawk Transporter: il peut transporter 1 land raiders ou 2 des unités sui
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
           <repeats/>
           <conditions>
@@ -6096,6 +6506,24 @@ Thunderhawk Transporter: il peut transporter 1 land raiders ou 2 des unités sui
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="1BP"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Indirect Fire"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7"/>
+      </characteristics>
+    </profile>
+    <profile id="a0e4-d7fe-2d4e-bb81" name="Stormraven Gunship" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Aircraft"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Bomber"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Twin Multi-melta&lt;BR&gt;and&lt;BR&gt;&lt;BR&gt;Twin Assault Cannon&lt;BR&gt;&lt;BR&gt;Bloodstrike Missile"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="15cm&lt;BR&gt;and (15cm)&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="MW4+&lt;BR&gt;and Small Arms&lt;BR&gt;&lt;BR&gt;AP4+/AT4+/AA5+&lt;BR&gt;&lt;BR&gt;AT4+"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;and Macro-weapon, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Forward Arc&lt;BR&gt;&lt;BR&gt;Forward Arc"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Planetfall, Reinforced Armour, Transport"/>
       </characteristics>
     </profile>
   </sharedProfiles>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c147-90f0-d4ac-32ac" name="Eldar: Saim-Hann Craftworld" revision="20" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c147-90f0-d4ac-32ac" name="Eldar: Saim-Hann Craftworld" revision="21" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -244,7 +244,7 @@
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -258,7 +258,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="maxSelections" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c378-7bf2-0437-bba1" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
@@ -462,10 +470,16 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -495,7 +509,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1e22-3f40-40f0-9fbb" name="Super-heavy Grav-tanks" hidden="false" collective="false">
+        <selectionEntryGroup id="1e22-3f40-40f0-9fbb" name="Super-heavy Grav-tanks" hidden="false" collective="false" defaultSelectionEntryId="8757-85c2-f523-c54e">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -619,7 +633,7 @@
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -729,7 +743,15 @@
                   <modifiers/>
                 </infoLink>
               </infoLinks>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="maxSelections" value="2">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -832,7 +854,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints/>
         </entryLink>
       </entryLinks>
@@ -1203,12 +1233,6 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="4d66-218e-68f0-54cc" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
           </infoLinks>
           <modifiers/>
           <constraints>
@@ -1536,7 +1560,15 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
       <selectionEntries>
         <selectionEntry id="b6ce-0041-ba08-e1f7" name="Night Spinner" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
@@ -1616,10 +1648,16 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1676,10 +1714,16 @@
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1736,7 +1780,7 @@
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -2098,13 +2142,20 @@
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="increment" field="maxInForce" value="1.0">
+        <modifier type="increment" field="maxInForce" value="1">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db7-c67a-c640-cf0d" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="increment" field="maxInForce" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e47-7d15-21fc-f4e9" repeats="1" roundUp="false"/>
           </repeats>
           <conditions/>
           <conditionGroups/>
@@ -2330,10 +2381,10 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="set" field="maxSelections" value="6.0">
+            <modifier type="set" field="maxSelections" value="6">
               <repeats/>
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -2370,19 +2421,62 @@
                 <modifier type="set" field="hidden" value="true">
                   <repeats/>
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="points" value="50">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-              </constraints>
+              <constraints/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="65.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1e9c-1afd-48cc-6d45" name="Warp Hunter" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="c587-8d83-2adb-7c22" hidden="false" targetId="e805-47ab-6992-9e63" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="5bed-d333-dfb1-027f" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="9124-ee54-2c61-1e05" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="a948-5023-60df-d8ee" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2458,10 +2552,16 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="points" value="275.0">
           <repeats/>
@@ -2899,6 +2999,1203 @@
         <cost name="pts" costTypeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="daf0-c7d0-bed5-7d22" name="Avatar" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="5028-766e-1004-cde1" hidden="false" targetId="49ea-2d6a-c60e-c366" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="f226-6e1e-c61e-d5a0" hidden="false" targetId="46a6-6136-19c8-b9f8" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="2da2-d151-aa2e-16c4" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="bbd7-2fe3-a290-9cbf" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="873e-57c7-2419-df2a" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="9a5f-8565-5eac-96d1" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="0b79-b0ec-0d97-013d" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="b23f-df8d-2005-be1a" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="c925-a9d5-c544-38c6" hidden="false" targetId="4495-3e3b-c06c-878f" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="432c-328d-29c0-4e7a" type="min"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e5fc-9c87-5704-b7e8" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e034-23b2-6d7b-04e3" name="Nightwings" hidden="false" collective="false" categoryEntryId="4f35-97c0-fae0-922d" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="aa6f-2473-ad01-aabd" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="9978-7ac3-bc11-8a2f" name="Nightwing Interceptor" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="f3cc-509d-27c6-83d4" hidden="false" targetId="847d-be0c-fc83-981e" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="5138-bd9a-eb6f-85f8" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9843-32b8-fe17-816b" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9278-aba5-cbc8-a457" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs/>
+    </selectionEntry>
+    <selectionEntry id="1618-9e8b-13cf-9a9b" name="Phoenix Bombers" hidden="false" collective="false" categoryEntryId="4f35-97c0-fae0-922d" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1ece-1b52-8e9c-b68e" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="5251-61c0-b3b2-290b" name="Phoenix Bomber" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="cf31-d811-9220-babd" hidden="false" targetId="68bd-88d3-26f8-6560" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="4c65-a8fc-b6f9-d4ad" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="5cd6-1d7c-d4e1-8184" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8c73-bbe0-3911-7e35" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4958-4f4a-fc50-65ab" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7cd5-b8ca-64e5-9a55" name="Vampire Hunters" hidden="false" collective="false" categoryEntryId="4f35-97c0-fae0-922d" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0a93-1209-a858-47f3" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="611d-8172-6c6a-d22d" name="Vampire Hunter" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="f40a-b4c5-453d-47ae" hidden="false" targetId="b70e-1190-b5bb-cea9" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="05f4-59a2-6654-2793" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="6584-5b6d-ab31-5e65" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="3bfb-7658-f5ab-6398" hidden="false" targetId="04a7-803d-31d7-c42c" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="14b6-f01d-ac4d-7ecb" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9651-d1a8-a116-4e0b" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="175.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3202-9cff-f8eb-2712" name="Nightshade Interceptors" hidden="false" collective="false" categoryEntryId="4f35-97c0-fae0-922d" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="526d-689c-c7b3-b6cb" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="99e7-467a-36bf-5e71" name="Nightshade Crimson Hunter" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="fc65-6eff-abf0-d1a4" hidden="false" targetId="27f0-872f-5b83-c2ab" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="677d-8304-5a9e-11c4" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="94da-21c3-633b-bc4e" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4137-0388-6a25-205b" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4e47-7d15-21fc-f4e9" name="Wild Rider Warhost" hidden="false" collective="false" categoryEntryId="e551-c527-434e-59a5" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="21bc-7b6f-de2c-bdac" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="7a6d-1f88-d395-fc2d" name="Wild Rider Saim-Hann Cavaliers" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="0ca9-8cdf-125b-f2f7" hidden="false" targetId="50a8-d89d-49b0-9b1e" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="395e-0fd4-69be-64b3" hidden="false" targetId="b8d0-37df-68cc-da5e" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="e726-459e-d18e-048c" hidden="false" targetId="41f1-f905-05ae-7828" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="8e33-854a-6f51-fae1" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a1a0-5d58-58b5-b52d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ca77-34cc-f588-b48f" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2860-fe0f-d5e0-1d2f" name="3x Shining Spears" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="36fb-f300-757b-a956" hidden="false" targetId="b619-3cb4-757e-f3cf" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="a991-6b58-7196-8aa1" hidden="false" targetId="b8d0-37df-68cc-da5e" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="2427-d681-c723-2588" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="4928-6349-347b-a321" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f5ef-782c-211f-7dd2" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d889-ecf6-6fc5-99fc" name="Host" hidden="false" collective="false" defaultSelectionEntryId="d9bc-1a2c-f09f-b6fc">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="86c8-3c36-7d6f-fa7a" value="3">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="abe5-a5c4-e8f0-a298" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="ec24-3346-43da-d38c" value="6">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db95-3dee-4b62-c3f2" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="86c8-3c36-7d6f-fa7a" value="6">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db95-3dee-4b62-c3f2" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="ec24-3346-43da-d38c" value="3">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="abe5-a5c4-e8f0-a298" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ec24-3346-43da-d38c" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="86c8-3c36-7d6f-fa7a" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="d9bc-1a2c-f09f-b6fc" hidden="false" targetId="a9ff-6d0b-6c23-0ad7" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="points" value="0.0">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+            </entryLink>
+            <entryLink id="9519-492e-346c-54a2" hidden="false" targetId="6379-2a91-5d08-7d50" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="points" value="0.0">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f417-5816-9453-85b0" name="Command" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bd2-3bdb-b7ea-7bad" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a99f-4626-5afc-8aab" name="Farseer Jetbike" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="5960-34be-9fb8-9ff5" hidden="false" targetId="24ab-936a-8b79-a3d7" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="38e1-2a5c-f93d-ef85" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="06a3-d73d-b356-553c" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="71ef-59ed-11d7-1861" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="d9d7-2fba-d03f-d4f7" hidden="false" targetId="2e2e-4c1b-5edb-1fcb" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="17e1-f4be-b550-e505" hidden="false" targetId="b8d0-37df-68cc-da5e" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="2d3c-52b5-4231-546f" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c3ea-0ed1-9c16-d583" name="Farseer Vyper" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="68a7-6582-ee5a-ab2b" hidden="false" targetId="5507-2843-2ea9-a4ad" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="833b-8b8b-468f-545e" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="4425-cc14-9069-38bb" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="cd7f-4bec-7057-299d" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="3030-a635-2f6a-49c8" hidden="false" targetId="2e2e-4c1b-5edb-1fcb" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="2f49-02ac-d3a6-26f7" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="dbbc-d099-ae93-284b" name="Host Size" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1641-0c72-0731-8db6" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="abe5-a5c4-e8f0-a298" name="Add 3" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="100.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="db95-3dee-4b62-c3f2" name="Add 6" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="200.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="815c-5ae5-e3ef-b19e" hidden="false" targetId="6556-b781-a5ba-d6ba" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" costTypeId="points" value="250.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b68f-38b8-22dd-9227" name="Exodite Clan" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="increment" field="a27a-486b-aed1-3bbf" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e47-7d15-21fc-f4e9" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="increment" field="a27a-486b-aed1-3bbf" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8109-cce0-36d5-8f06" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a27a-486b-aed1-3bbf" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="b0bf-a91e-0e05-daa0" name="Triceratops Gunner" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="c5b4-11c1-0815-3df0" hidden="false" targetId="d095-40f5-2040-c953" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="28e7-73c6-e6c3-f714" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="c0bc-1cc5-2b27-2a9c" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="e617-28d2-d563-f7b1" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="d705-758b-55ec-df81" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1d5b-0231-209e-1f17" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="66ce-6e87-2a0a-51cf" name="Clan Chieftain" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="e47c-24bd-0d6f-771f" hidden="false" targetId="8a08-1131-4c79-0a73" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="f941-3ae1-20f9-4649" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="c610-921c-b59e-a36d" hidden="false" targetId="41f1-f905-05ae-7828" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="92e5-85f6-3b58-be7b" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="8f18-381f-08c6-7aed" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6628-4daf-51d0-f226" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7ba8-ae8b-1aeb-4f6a" name="Clan" hidden="false" collective="false" defaultSelectionEntryId="e94f-3aed-772b-fd4f">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="5d55-a077-7ad8-b0ce" value="9">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3efe-240c-12a2-7920" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="ab34-6de0-1144-ae44" value="9">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3efe-240c-12a2-7920" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ab34-6de0-1144-ae44" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5d55-a077-7ad8-b0ce" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e94f-3aed-772b-fd4f" name="Exodite Dragon Rider" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="3354-92bf-89e4-e7bc" hidden="false" targetId="fac9-09e1-465a-537c" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="6f73-4251-964b-0e9c" hidden="false" targetId="15c7-e4da-84dc-417d" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="f19f-b532-b5dc-599d" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="12ee-c7d7-8730-6cfc" hidden="false" targetId="b8d0-37df-68cc-da5e" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="e17b-b07c-0515-864c" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8c2b-de93-ab1a-b6fd" name="Pterosaur Rider" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="1b33-eee2-9c06-55f3" hidden="false" targetId="5621-3060-89c0-2388" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="f2f9-0cf1-d339-356d" hidden="false" targetId="15c7-e4da-84dc-417d" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="15f5-b26a-c2db-fbcf" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="ece7-436d-7170-df04" hidden="false" targetId="b8d0-37df-68cc-da5e" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="3008-66f8-78e2-c8e7" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="199a-8dc4-b308-9257" name="Clan Size" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2a2c-4eaa-48ee-9170" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3efe-240c-12a2-7920" name="Add 3" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0c3b-e7cf-1c96-0705" name="Hornet Troupe" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c4af-56bf-c844-0511" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="7c09-ae76-11d6-c451" name="Hornet" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="c873-5daf-e64b-96d3" hidden="false" targetId="6fee-f3a8-4fb8-9697" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="cc2a-bbce-a738-08cf" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="0e7e-6c71-74fc-eacf" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bf0d-a65d-b46e-203e" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f0c1-e9f6-f203-02b3" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="300.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4a3d-b9dd-b7c4-6f7a" name="Shields of Vaul Troupe" hidden="false" collective="false" categoryEntryId="2e76-3c1e-639f-a0a7" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c3d-2946-88ea-ec11" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="bd5b-e346-24f8-3fdd" name="Grav-tanks" hidden="false" collective="false" defaultSelectionEntryId="fb8c-b8bd-8335-10e9">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05aa-99a8-733e-b1f6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c284-1b60-5476-8f34" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fb8c-b8bd-8335-10e9" name="3x Night Spinner" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="6d1c-9c24-97c2-ba24" hidden="false" targetId="67d1-8322-30ee-7304" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="b7c8-5e08-7de4-5285" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="e982-4faf-cca4-e347" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="36e3-3847-7a31-8039" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="76c3-8c68-3124-dfee" name="1x Firestorm, 2x Night Spinner" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="2466-5f1b-fd35-c657" hidden="false" targetId="67d1-8322-30ee-7304" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="138b-a65d-14d8-9b70" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="687e-ba49-dc19-ea83" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="c82a-05b2-90c8-e4a9" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="a49a-a5df-ce8b-7667" hidden="false" targetId="16ad-b714-f42a-1bfe" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5e18-75ef-65b7-f48f" name="2x Firestorm, 1x Night Spinner" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="ceec-32da-fa31-8f67" hidden="false" targetId="67d1-8322-30ee-7304" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="b45a-e6d2-3557-1aac" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="bc0e-3392-5d6d-a424" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="dc07-c3d8-ee74-8138" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="4a4f-6bdd-67f4-1211" hidden="false" targetId="16ad-b714-f42a-1bfe" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="be59-db7d-74f9-6e80" name="3x Firestorm" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="58d3-3c24-390c-9682" hidden="false" targetId="16ad-b714-f42a-1bfe" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="37bb-a323-02fb-7e7e" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="175.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks/>
   <sharedSelectionEntries>
@@ -3039,7 +4336,7 @@
             <modifier type="set" field="hidden" value="true">
               <repeats/>
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -3047,7 +4344,7 @@
         </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="set" field="points" value="200.0">
+        <modifier type="set" field="points" value="200">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
@@ -3131,7 +4428,7 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2a9e-17ba-642a-dfd1" name="F-ERC" hidden="true" collective="false" categoryEntryId="(No Category)" type="upgrade">
+    <selectionEntry id="2a9e-17ba-642a-dfd1" name="F-ERC" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -3286,7 +4583,15 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="points" value="75">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
@@ -3793,6 +5098,59 @@
         <cost name="pts" costTypeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="6556-b781-a5ba-d6ba" name="Autarch Chieftain" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="def8-bd11-e3f5-3fa1" hidden="false" targetId="3396-4bf2-d859-10b5" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="2324-aafe-d803-b5da" hidden="false" targetId="1512-ccaf-4038-276f" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="2ded-66ef-decb-d05a" hidden="false" targetId="41f1-f905-05ae-7828" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="f811-ce70-5e5b-3e0b" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="b170-b784-301f-1e39" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="eed1-9e62-4fd8-4aba" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="263e-6b96-a9f6-c79c" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="13d8-dda2-4344-5ca2" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="75.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b58a-1b42-a2e8-165d" name="Aspect Warriors" hidden="false" collective="false">
@@ -3934,6 +5292,21 @@
           <modifiers/>
           <constraints/>
         </entryLink>
+        <entryLink id="6d06-a912-c084-c20c" hidden="false" targetId="45c3-ccca-da71-b232" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9aa8-cc35-c8ba-6640" name="Ranged Aspect" hidden="false" collective="false">
@@ -3991,19 +5364,33 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;none&lt;/I&gt;</description>
+      <description>&lt;I&gt;saim_hann_2016_03_29_beta #v2
+Biel-tan_master_ferc_01-2013 #18 janvier 2013
+Vaisseau-monde Mymeara.0.3
+http://epic-fr.niceboard.com/t5425-nouveaux-volants-eldar (pour l&apos;intercepteur nightshade / chasseur écarlate)&lt;/I&gt;</description>
     </rule>
     <rule id="49ea-2d6a-c60e-c366" name="Avatar" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>In Grand Tournament games the Avatar must start off the table. At the start of any turn (including the first) they may be set up on the table within 15cms of a Farseer. In the End Phase of the turn the Avatar returns to the Webway and is removed from play. Once the Avatar has left they may not return. Note that if there are no Farseers in play then the Avatar may not be used.
-&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes :
-1) De manière classique lors du déploiement en début de partie
-2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve
-3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation
-Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar: &lt;/B&gt;Al comienzo de cualquier turno coloca al Avatar a 15cm o menos de una formación que incluya una unidad con videncia, antes de realizar la tirada de estrategia. El Avatar contará como parte de la formación, y sólo puede entrar en juego de esta manera. En la Fase de Finalización de ese turno, retira al Avatar antes de reorganizar formaciones. Una vez haya abandonado el campo de batalla, el Avatar no podrá regresar.&lt;/I&gt; ">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="The avatar may appear on the battlefield in three different ways:&lt;BR&gt; 1) The usual manner of deploying at the start of the game;&lt;BR&gt; 2) Through a portal like any formation held in reserve;&lt;BR&gt; 3) Summoning within 15 cm of a Farseer during the teleportation phase.&lt;BR&gt; It is in any case, from its inception, an independent, permanent formation, until the end of the game or its destruction. However it can only contest objectives.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes:&lt;BR&gt; 1) De manière classique lors du déploiement en début de partie&lt;BR&gt; 2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve&lt;BR&gt; 3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation&lt;BR&gt; Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>In the Strategy Phase of any turn place the Avatar within 15cm of a Farseer before making a strategy roll. The Avatar counts as its own formation and may only enter play in this manner. In the End Phase of that turn remove the Avatar before rallying formations. Once the Avatar has been removed it may not return.
+&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; Dans la phase de la stratégie d&apos;un tour position l&apos;Avatar au sein de 15cm d&apos;un Farseer avant de faire un jet de stratégie. L&apos;Avatar compte comme sa propre formation et ne peut entrer en jeu de cette manière. Dans la phase de fin de ce tour supprimer l&apos;Avatar avant de rallier les formations. Une fois que l&apos;Avatar a été supprimé, il ne peut pas revenir.&lt;/I&gt;</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -4038,6 +5425,13 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Sólo las formaciones de Exploradores y de Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Only Eldar Rangers and War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.
 &lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;</description>
@@ -4047,13 +5441,21 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>netea-tournament-pack-2017-01-03</description>
+      <description>netea-tournament-pack-2017-01-17</description>
     </rule>
     <rule id="99bf-6b33-bb51-d0e5" name="Strategy Rating &amp; Initiative (Eldar)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="Saim-Hann armies have Strategy Rating 5 in turn 1, 4 in turn 2, 3 in turn 3 and 4.&lt;BR&gt;  Saim-Hann Avatars, Aspect Warriors, Revenants, Phantom Titans and Warlock Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.&lt;BR&gt;  Harlequins have Strategy Rating 5 and an Initiative rating of 1+.&lt;BR&gt;  &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;armée Saim Hann a une Valeur Stratégique de 5 au tour 1, 4 au tour 2, 3 au tour 3 et 4.&lt;BR&gt;  Les Formations de Guerriers Aspects, l’Avatar et les titans ont une initiative de 1+, toutes les autres formations ont une initiative de 2+.&lt;BR&gt;  Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Saim-Hann armies have Strategy Rating 4. 
 Saim-Hann Avatars, Aspect Warriors, Revenants, Phantom Titans and Warlock Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.
 Harlequins have Strategy Rating 5 and an Initiative rating of 1+.
@@ -4132,6 +5534,34 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;&lt;BR&gt;2BP">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, Macro-weapon, Titan Killer (D3+1), Ignore Cover">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Shuriken Cannon&lt;BR&gt;&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;&lt;BR&gt;Cobra D-Cannon">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
@@ -4199,15 +5629,15 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
       </characteristics>
     </profile>
-    <profile id="e62c-7f07-dc6b-3746" name="Dire Avenger Exarch" hidden="true" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+    <profile id="e62c-7f07-dc6b-3746" name="Dire Avenger Exarch" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4229,7 +5659,22 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="2+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
@@ -4279,7 +5724,7 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Inspiring"/>
       </characteristics>
     </profile>
-    <profile id="cd50-355d-2c62-f0ed" name="Exarch CCW" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+    <profile id="cd50-355d-2c62-f0ed" name="Exarch" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -4402,15 +5847,28 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
       <modifiers>
         <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT2+">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT3+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4578,7 +6036,29 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="6+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x AT3+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Light Vehicle"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="40cm"/>
@@ -4630,12 +6110,25 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="2+">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
-        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="2+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Shuriken Pistols&lt;BR&gt;&lt;BR&gt;Banshee Mask"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)"/>
@@ -4653,6 +6146,13 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="40cm">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4736,7 +6236,15 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AA5+&lt;BR&gt;&lt;BR&gt;2x AT3+&lt;BR&gt;&lt;BR&gt;1BP">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Aircraft"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Fighter Bomber"/>
@@ -4780,6 +6288,13 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x MW4+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+/AA6+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
@@ -4800,7 +6315,22 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm&lt;BR&gt;&lt;BR&gt;30cm">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x MW3+&lt;BR&gt;&lt;BR&gt;AP5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="25cm"/>
@@ -4846,17 +6376,70 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value="&lt;BR&gt;&lt;BR&gt;-">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Twin Shuriken Catapults">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Power Lances&lt;BR&gt;&lt;BR&gt;Twin Shuriken Catapults"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;&lt;BR&gt;(15cm)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapon&lt;BR&gt;&lt;BR&gt;Small Arms"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Lance&lt;BR&gt;&lt;BR&gt;-"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Power Lances"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapon"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Lance"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Mounted, Skimmer"/>
       </characteristics>
     </profile>
@@ -4961,6 +6544,27 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;45cm">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT5+/AA5+&lt;BR&gt;&lt;BR&gt;2x MW3+&lt;BR&gt;&lt;BR&gt;AP4+/AT5+/AA5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, Titan Killer&lt;BR&gt;&lt;BR&gt;-">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5212,12 +6816,27 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Al principio del juego, designa un objetivo de tu mitad de la mesa como Puerta Fantasmal, antes del despliegue de naves espaciales y patrullas. Para propósitos de reglas, la Puerta Fantasmal funciona como un portal a la telaraña, y como un objetivo. No puede ser destruida.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Après placement des objectifs, le joueur eldar remplace l&apos;un des objectifs de sa moitié de table par un portail fantôme. Celui-ci est indestructible et fonctionne à la fois comme un objectif et un portail fantôme d&apos;un point de vue des règles du jeu.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Infantry" characteristicTypeId="36c8-6d92-af3f-a836" value="May use"/>
         <characteristic name="Vehicle" characteristicTypeId="1297-f4e7-4126-0a6a" value="Light Vehicles &amp; Armoured Vehicles that have Walker may use"/>
         <characteristic name="War Engine" characteristicTypeId="8902-a4d6-b39b-ca60" value="Impassable"/>
-        <characteristic name="Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
+        <characteristic name="Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="The Eldar player may choose to replace one of the Objective markers in his half of the table with a Wraithgate. It functions both as a Webway portal and as an objective for rules purposes. It may not be attacked or destroyed."/>
       </characteristics>
     </profile>
     <profile id="9311-d638-3d00-9523" name="Wraithguard" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -5268,10 +6887,208 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Orbital Bombardment&lt;BR&gt;or Pin Point Attack"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="n/a&lt;BR&gt;n/a"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="n/a&lt;BR&gt;or n/a"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="4BP&lt;BR&gt;or MW2+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon&lt;BR&gt;or Titan Killer (D3)"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Choose weapon system at the start of the battle."/>
+      </characteristics>
+    </profile>
+    <profile id="fac9-09e1-465a-537c" name="Exodite Dragon Rider" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Exodite Weapons&lt;BR&gt;and"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;and (contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;and Assault Weapons"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="First Strike&lt;BR&gt;and First Strike"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Infiltrators, Mounted, Scout"/>
+      </characteristics>
+    </profile>
+    <profile id="5621-3060-89c0-2388" name="Pterosaur Rider" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="5+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="6+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Exodite Weapons&lt;BR&gt;and"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;and (contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;and Assault Weapons"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="First Strike&lt;BR&gt;and First Strike"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Infiltrators, Mounted, Skimmer"/>
+      </characteristics>
+    </profile>
+    <profile id="d095-40f5-2040-c953" name="Triceratops" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Light Vehicle"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bright Lance&lt;BR&gt;and"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;and (contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT5+&lt;BR&gt;and Assault Weapon"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Lance&lt;BR&gt;and Macro-weapon, +1A"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Thick Rear Armour"/>
+      </characteristics>
+    </profile>
+    <profile id="e805-47ab-6992-9e63" name="Warp Hunter" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Armoured Vehicle"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="D-Cannon&lt;BR&gt;and"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;and (15cm)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="MW4+&lt;BR&gt;and Small Arms"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc, Ignore Cover&lt;BR&gt;and Macro-weapon"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Skimmer"/>
+      </characteristics>
+    </profile>
+    <profile id="c6d3-aa63-6374-d3cc" name="T-Rex Rider" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Exodite Weapons"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="+1A, Macro-weapon"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Leader, Reinforced Armour"/>
+      </characteristics>
+    </profile>
+    <profile id="50a8-d89d-49b0-9b1e" name="Wild Rider Saim-Hann Cavalier" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="40cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="5+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Shuriken Catapult&lt;BR&gt;&lt;BR&gt;Close Combat Weapons"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;+1A"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Leader, Mounted, Skimmer"/>
+      </characteristics>
+    </profile>
+    <profile id="24ab-936a-8b79-a3d7" name="Farseer Jetbike" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="40cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Shuriken Catapult&lt;BR&gt;&lt;BR&gt;Close Combat Weapons"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapon"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Commander, Farsight, Invulnerable Save, Mounted, Skimmer"/>
+      </characteristics>
+    </profile>
+    <profile id="5507-2843-2ea9-a4ad" name="Farseer Vyper Jetbike" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Light Vehicle"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="40cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Scatter Laser&lt;BR&gt;&lt;BR&gt;Close Combat Weapons"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;(contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapon"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Commander, Farsight, Invulnerable Save, Skimmer"/>
+      </characteristics>
+    </profile>
+    <profile id="27f0-872f-5b83-c2ab" name="Nightshade Crimson Hunter" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Aircraft"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Fighter"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Pulse Laser&lt;BR&gt;&lt;BR&gt;2x Bright Lance&lt;BR&gt;or Twin Bright Lance"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;or 30cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x AT4+&lt;BR&gt;&lt;BR&gt;AT5+/AA5+&lt;BR&gt;or AT4+/AA4+"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Lance&lt;BR&gt;or Lance"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7"/>
+      </characteristics>
+    </profile>
+    <profile id="3396-4bf2-d859-10b5" name="Wild Rider Chieftain Saim-Hann Autarch" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Character"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="n/a"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="n/a"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="none"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value=""/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value=""/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value=""/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Inspiring, Invulnerable Save, Supreme Commander"/>
+      </characteristics>
+    </profile>
+    <profile id="8a08-1131-4c79-0a73" name="Exodite Clan Chieftain" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Character"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="n/a"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="n/a"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Power Weapon &amp; T-Rex"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapon"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon, +1A"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Commander, Leader, Reinforced Armour"/>
       </characteristics>
     </profile>
   </sharedProfiles>
