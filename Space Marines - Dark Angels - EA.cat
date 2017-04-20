@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="21" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="22" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -50,7 +50,7 @@
   <profileTypes/>
   <forceEntries/>
   <selectionEntries>
-    <selectionEntry id="5a05-95e5-0ba7-4228" name="-Group- -Groupe-" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+    <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -61,7 +61,7 @@
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d9f8-5bcf-f76a-a9b8" name="Source" hidden="false" collective="false" defaultSelectionEntryId="d1eb-4f24-2225-bcec">
+        <selectionEntryGroup id="d9f8-5bcf-f76a-a9b8" name="Group" hidden="false" collective="false" defaultSelectionEntryId="d1eb-4f24-2225-bcec">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -111,7 +111,15 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="327a-30c1-c8c2-3040" hidden="false" targetId="277e-7539-0690-7a61" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -5693,15 +5701,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="7ca1-c308-bbad-d6c7" name="New EntryLink" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -5721,15 +5721,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="3eb3-8e1c-a528-a7f7" name="New EntryLink" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -5769,15 +5761,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="0d3b-1718-7201-473c" name="New EntryLink" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -6188,15 +6172,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="088f-397a-c007-4d93" name="New EntryLink" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -7695,15 +7671,29 @@
       <modifiers>
         <modifier type="set" field="description" value="The unit takes a point of damage and is moved D6cm in a random direction. If this move takes the titan into impassable terrain or another unit it can’t move over then it stops immediately and is destroyed. All units it moves into or over suffer a hit on a roll of 6+.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance&lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7833,15 +7823,29 @@ Cela remplace la condition de victoire Blitzkrieg pour le joueur Dark Angel.&lt;
       <modifiers>
         <modifier type="set" field="description" value="The Space Marines are a highly mobile army. The points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along. Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having ‘plus transport’ in the units section of the army list. You don’t have to take Rhinos if you don’t want to. If you’d rather field the formation on foot instead, so it can act as a garrison for example, or be transported in a Thunderhawk Gunship, then you may do so.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter.  Les formations qui ont des Rhinos porte la mention &quot; plus transports &quot; dans leur composition.  Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas.  Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks). &lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19b8-ed01-3816-2875" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19b8-ed01-3816-2875" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Transportes de los Marines Espaciales: &lt;/B&gt;Los Marines Espaciales son un ejército muy móvil. Por ello, el valor en puntos de un destacamento normalmente incluye suficientes Rhinos para transportar a todas las unidades, incluyendo las de cualquier mejora adquirida. Determina el número de Rhinos necesario después de adquirir las mejoras. El número de Rhinos obtenido siempre será el mínimo necesario para transportar a todas las unidades, ¡no puedes incluir Rhinos de sobra para cubrir las bajas! &lt;BR&gt; Nótese que algunos destacamentos no recibirán Rhinos, normalmente porque no caben en ellos. Los destacamentos que vienen con Rhinos tendrán la anotación “más transporte” en la lista de ejército. &lt;BR&gt; Nótese también que no es obligatorio adquirir los Rhinos si no se desea. Si prefieres que la formación vaya a pie, para poder actuar como patrulla, por ejemplo, o para poder ir en una Thunderhawk, puedes hacerlo sin problemas. &lt;BR&gt; Además, puedes elegir reemplazar los Rhinos por Cápsulas de Desembarco. Si lo haces, el destacamento entrará en juego vía caída orbital en sus Cápsulas de Desembarco. Si deseas elegir esta opción, será obligatorio adquirir un Crucero de Asalto o una Barcaza de Batalla para lanzar las cápsulas. &lt;BR&gt; Antes de empezar el juego, después de ver el ejército enemigo, pero antes de colocar los objetivos, el jugador Marine Espacial puede elegir de qué manera van a desplegar sus formaciones que tengan “más transporte”, pudiendo decidir que vayan a pie, en Rhinos, o en Cápsulas de Desembarco (siempre que se trate de una formación que tenga permitida esta opción).&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Trasporti Space Marine: &lt;/B&gt;Quello degli Space Marine e&apos; un esercito altamente mobile. Grazie a questo, il costo in punti di un distaccamento solitamente include abbastanza veicoli da trasporto Rhino per essere trasportato insieme a qualsiasi miglioria possa includere. Il numero di Rhino sara&apos; sempre il minimo necessario per trasportare la formazione.&lt;BR&gt; Nota che molte formazioni non ricevono Rhino, perche&apos; non possono entrarvi completamente. I distaccamenti che arrivano con i Rhino sono segnalati per avere un &apos;trasporto aggiuntivo&apos; nella lista dell&apos;esercito che segue.&lt;BR&gt; Nota inoltre che non devi avere Rhino se non vuoi. Se decidi di schierare la formazione a piedi, essa potra&apos; agire come un presidio per esempio, o essere trasportata in una Cannoniera Thunderhawk.&lt;BR&gt; In aggiunta, potresti scegliere di rimpiazzare i Rhino del distaccamento con le Capsule d&apos;Atterraggio. Se fai questo, allora il distaccamento entrera&apos; in gioco con le Capsule usando le regole per l&apos;assalto planetario. Nota che se scegli questa opzione avrai bisogno di almeno un Incrociatore d&apos;Assalto o una Battle Barge Space Marine da cui lanciare le capsule.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7917,10 +7921,18 @@ Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en 
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ed Essi Non Conosceranno La Paura: &lt;/B&gt;Ci vogliono due segnalini Esplosione per sopprimere un&apos;unita&apos; di Space Marine o per ucciderne una in rotta (ignora ogni segnalino Esplosione in eccesso).&lt;BR&gt; Le formazioni di Space Marine vanno in rotta solo con due segnalini Esplosione per unita&apos; nella formazione.&lt;BR&gt; Dimezza il numero di colpi aggiuntivi subiti da una formazione di Space Marine che abbia perso un assalto, arrotondando per difetto in favore degli Space Marine.&lt;BR&gt; Quando una formazione di Space Marine in rotta si riunisce riceve un numero di segnalini Esplosione pari al numero di unita&apos;, invece della meta&apos; di questo numero.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <description>It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any left over BMs).

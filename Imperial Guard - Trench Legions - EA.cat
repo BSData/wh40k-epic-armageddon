@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3d74-d3a7-8e47-dfcd" name="Imperial Guard: Trench Legions" revision="20" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3d74-d3a7-8e47-dfcd" name="Imperial Guard: Trench Legions" revision="21" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -14,7 +14,7 @@
   <profileTypes/>
   <forceEntries/>
   <selectionEntries>
-    <selectionEntry id="e6de-b411-49c2-a59c" name="-Group- -Groupe-" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+    <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -24,7 +24,7 @@
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f94d-01bf-650a-6a6f" name="Source" hidden="false" collective="false" defaultSelectionEntryId="e76a-6ec6-811b-7587">
+        <selectionEntryGroup id="f94d-01bf-650a-6a6f" name="Group" hidden="false" collective="false" defaultSelectionEntryId="e76a-6ec6-811b-7587">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -67,7 +67,15 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="1f9e-cf19-24a9-1ef1" hidden="false" targetId="277e-7539-0690-7a61" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -873,7 +881,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="f098-4bf9-4352-d43c" hidden="false" targetId="1fb9-2f48-2726-598c" type="rule">
+        <infoLink id="f098-4bf9-4352-d43c" hidden="false" targetId="bba3-22af-721e-3298" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1206,15 +1214,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="ab28-9b4f-9490-18d4" name="New EntryLink" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -1254,15 +1254,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="4f1f-f7e9-236b-d7e8" name="New EntryLink" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -1282,15 +1274,7 @@
       <constraints/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="5851-fb98-3883-f0f7" name="New EntryLink" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </entryLink>
-      </entryLinks>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -1787,6 +1771,13 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Strategia e Iniziativa: &lt;/B&gt;Le armate della Guardia Imperiale hanno un valore di strategia di 2. Le formazioni di Guardia Imperiale e di Marina Imperiale hanno un valore d&apos;iniziativa di 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Trench Legions have Strategy Rating 2. All formations have Initiative Rating 2+.
 &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Légions des Tranchés ont une valeur stratégique de 2. Toutes les formations de Légions des Tranchés, les formations des appareils de la flotte et les Bombardements ont une initiative de 2+.&lt;/I&gt;</description>
@@ -1826,22 +1817,6 @@ Zeppelin: 10 unité suivante: commandant suprême, commandant, gardes des tranch
       </modifiers>
       <description>Immobilised and D6 units being transported are hit. Subsequent critical hits destroy the unit.
 &lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;</description>
-    </rule>
-    <rule id="1fb9-2f48-2726-598c" name="Critical Hit: Massive Explosion" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Explosión Masiva&lt;/B&gt;La unidad es destruida. Cada unidad a 5cm sufre un ataque MA4+&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Destroyed, units within 5cm take a MW4+ hit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Explosion Énorme:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche MA4+.&lt;/I&gt;</description>
     </rule>
     <rule id="103c-eae5-2efb-2268" name="Death Defender Silo" hidden="false">
       <profiles/>
