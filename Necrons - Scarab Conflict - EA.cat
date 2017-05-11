@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fa19-4529-1c5a-95f9" name="Necrons: Scarab Conflict" revision="22" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fa19-4529-1c5a-95f9" name="Necrons: Scarab Conflict" revision="23" battleScribeVersion="2.00" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -27,7 +27,7 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="47d2-cc69-7c6b-e87b" hidden="false" targetId="b258-e1f9-896a-6f8e" type="rule">
+    <infoLink id="47d2-cc69-7c6b-e87b" hidden="false" targetId="53fd-fc60-1b4c-db1c" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1834,6 +1834,12 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
+        <infoLink id="dfea-2695-a929-78b2" hidden="false" targetId="a96b-f1f7-dce1-46b5" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1866,6 +1872,12 @@
           <modifiers/>
         </infoLink>
         <infoLink id="d8a2-cea8-5d01-5191" hidden="false" targetId="ad15-66e0-9c25-1e04" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="3fb3-c414-27f6-7c9b" hidden="false" targetId="a96b-f1f7-dce1-46b5" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3357,7 +3369,7 @@ Fanatic #13</description>
       </modifiers>
       <description>Necron formations may not garrison in the Epic Tournament scenario unless fielding a Tomb Complex. To represent that a tomb may contain active Necron, the player may choose to garrison up to two Infantry Phalanx formations at the Tomb Complex.</description>
     </rule>
-    <rule id="52d0-4e26-834e-94b3" name="Necron" hidden="false">
+    <rule id="52d0-4e26-834e-94b3" name="Necron - Reanimation Protocols" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -3370,19 +3382,6 @@ Fanatic #13</description>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="name" value="Necron Reanimation Protocols">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -3429,21 +3428,6 @@ Remettez en jeu une unité de la formation qui a été détruite ainsi qu&apos;u
       <infoLinks/>
       <modifiers/>
       <description>netea-tournament-pack-2017-01-03</description>
-    </rule>
-    <rule id="b258-e1f9-896a-6f8e" name="Phase Out" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Desmaterialización: &lt;/B&gt;En la Fase de Finalización del turno, retira a la formación del campo de batalla y ponla junto a las reservas, separada de las unidades destruidas. Podrá regresar al juego por un portal, o mediante el teletransporte. Deberá esperar hasta que haya un portal disponible. Si falla su chequeo de reorganización deberá permanecer fuera de la mesa hasta que lo supere. Nótese que, con la excepción de los C’tan, ninguna máquina de guerra Necrona podrá desmaterializarse.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>In the end phase of the turn, before any rallying, remove broken formations in the army from the board and into the reserves. Keep these formations separate from any destroyed units. All broken formations in reserve will then roll to rally. Formations that rally may re-enter the table the following turn through a portal, or with their teleport ability. If any formation fails to rally then it must remain in the reserves until it does rally. Formations in the army in reserve are considered destroyed for the Break Their Spirit goal and for the purpose of calculating tiebreaker victory points. With the exception of the C’tan, no War Engines in the army may phase out.</description>
     </rule>
     <rule id="ad15-66e0-9c25-1e04" name="Portal" hidden="false">
       <profiles/>
@@ -3510,7 +3494,9 @@ If, at the end of the movement, a unit is out of formation it is destroyed.
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
+      <description>As follows-
+Ghost Arc: 2 units.
+&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
 Ghost Arc: 2 unités.&lt;/I&gt;</description>
     </rule>
   </sharedRules>
@@ -4044,6 +4030,18 @@ Ghost Arc: 2 unités.&lt;/I&gt;</description>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="+1A"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="First Strike, Invulnerable Save, Jump Packs, Necron"/>
+      </characteristics>
+    </profile>
+    <profile id="a96b-f1f7-dce1-46b5" name="Portal" hidden="false" profileTypeId="6883-a6ac-0b20-eb62">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Infantry" characteristicTypeId="36c8-6d92-af3f-a836" value="May use"/>
+        <characteristic name="Vehicle" characteristicTypeId="1297-f4e7-4126-0a6a" value="Armoured Vehicles with Walker &amp; all Light Vehicles may use"/>
+        <characteristic name="War Engine" characteristicTypeId="8902-a4d6-b39b-ca60" value="Impassable"/>
+        <characteristic name="Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
       </characteristics>
     </profile>
   </sharedProfiles>

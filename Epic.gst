@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="10" battleScribeVersion="2.00" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="11" battleScribeVersion="2.00" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
@@ -276,6 +276,30 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryEntry>
+        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="d43e-35f1-c413-6653" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="d43e-35f1-c413-6653" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="4f35-97c0-fae0-922d" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="d43e-35f1-c413-6653" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
@@ -578,6 +602,30 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
         </categoryEntry>
+        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="7435-d7bd-6dfe-ae81" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="7435-d7bd-6dfe-ae81" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="4f35-97c0-fae0-922d" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="7435-d7bd-6dfe-ae81" type="max"/>
+          </constraints>
+        </categoryEntry>
         <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
           <profiles/>
           <rules/>
@@ -876,6 +924,30 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryEntry>
+        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="9b03-de62-5c04-8058" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="9b03-de62-5c04-8058" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="4f35-97c0-fae0-922d" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="9b03-de62-5c04-8058" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
@@ -1178,6 +1250,30 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
         </categoryEntry>
+        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="fb5f-e274-d3b4-d4f8" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="fb5f-e274-d3b4-d4f8" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="4f35-97c0-fae0-922d" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="fb5f-e274-d3b4-d4f8" type="max"/>
+          </constraints>
+        </categoryEntry>
         <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
           <profiles/>
           <rules/>
@@ -1474,6 +1570,30 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryEntry>
+        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="f860-74fd-c5dd-a4e2" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="f860-74fd-c5dd-a4e2" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="4f35-97c0-fae0-922d" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="f860-74fd-c5dd-a4e2" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
@@ -1779,6 +1899,30 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryEntry>
+        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="632b-f034-7769-2044" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="632b-f034-7769-2044" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="4f35-97c0-fae0-922d" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="632b-f034-7769-2044" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
@@ -2796,7 +2940,7 @@ Si le test réussi alors toutes les formations concernées peuvent recevoir un o
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Explosión Enorme&lt;/B&gt;La unidad es destruida. Todas las unidades a 5cm o menos sufren un impacto macro-armas.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Explosión Enorme: &lt;/B&gt;La unidad es destruida. Todas las unidades a 5cm o menos sufren un impacto macro-armas.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -4293,14 +4437,6 @@ En outre, si une unité d&apos;automates est frappé par une arme à perturber n
       <description>If a unit firing a weapon with the Feedback rule fails to cause damage when hitting an enemy unit, roll  1D6 for each successful armour save the enemy unit made. The firing unit takes a blast marker for each 1 rolled.
 &lt;I&gt;&lt;B&gt;Rétroaction:&lt;/B&gt; Si une unité de tir d&apos;une arme à la règle de rétroaction ne parvient pas à causer des dommages lors de la frappe une unité ennemie, lancer 1D6 pour chaque armure réussie sauver l&apos;unité ennemie fait. L&apos;unité de tir prend un pion d&apos;impact pour chaque 1 roulé.&lt;/I&gt;</description>
     </rule>
-    <rule id="50b7-2139-759c-6695" name="Prometheus" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>Any unit in the same formation as this unit may ignore the 5cm restriction when using Commander.
-&lt;I&gt;&lt;B&gt;Le Prométhée:&lt;/B&gt; Toute unité dans la même formation que cette unité peut ignorer la restriction 5cm lors de l&apos;utilisation de la règle spéciale Commandant.&lt;/I&gt;</description>
-    </rule>
     <rule id="8295-b3a1-e20b-f3ee" name="Tau Jetpacks" hidden="false">
       <profiles/>
       <rules/>
@@ -4674,7 +4810,7 @@ Un chevalier ne peut utiliser ces boucliers en deux circonstances:
         </modifier>
       </modifiers>
       <description>The first objective the Necron player places on their own table edge functions both as a Portal and as an objective for the rules purposes. It may not be destroyed. Formations using the Portal should measure from the edge of the board as the formation’s starting point.
-&lt;I&gt;&lt;B&gt;Mausolée:&lt;/B&gt; Le premier objectif du joueur Nécron placé sur leur propre bord de table fonctions à la fois comme un portail et comme un objectif pour l&apos;application des règles. Il ne peut être détruit. Formations en utilisant le portail devraient mesurer à partir du bord de la carte comme les formations point de départ.&lt;/I&gt;</description>
+&lt;I&gt;&lt;B&gt;Mausolée:&lt;/B&gt; Le Mausolée remplace votre objectif Blitzkrieg sur votre bord de table. Il est toujours considéré comme votre objectif Blitzkrieg et ne peut être détruit.&lt;/I&gt;</description>
     </rule>
     <rule id="a8a2-5006-78f3-979f" name="Implacable Advance" hidden="false">
       <profiles/>
@@ -4690,7 +4826,7 @@ Un chevalier ne peut utiliser ces boucliers en deux circonstances:
         </modifier>
       </modifiers>
       <description>Necron formations receive a +1 bonus to Marshal Actions. Due to their steady, deliberate nature, Necron formations cannot take a March action.
-&lt;I&gt;&lt;B&gt;Marche Inéxorable:&lt;/B&gt; Formations Nécrons reçoivent un bonus de +1 à des actions de regroupement. En raison de leur nature constante et délibérée, formations Nécrons ne peuvent pas initier une action en redéploiement.&lt;/I&gt;</description>
+&lt;I&gt;&lt;B&gt;Marche Inéxorable:&lt;/B&gt; Les nécrons ne peuvent pas redéployer. L&apos;action “rassemblement” dispose d&apos;un bonus de +1.&lt;/I&gt;</description>
     </rule>
     <rule id="6773-a96f-3c1e-0906" name="Critical Hit: Warbarque" hidden="false">
       <profiles/>
@@ -4800,6 +4936,178 @@ Notez que les unités avec cette capacité confèrent la capacité de tir coordo
       </modifiers>
       <description>A formation with an Ethereal becomes fearless. Lose fearless and take extra D3 blast markers if he is killed.
 &lt;I&gt;&lt;B&gt;Éthéré:&lt;/B&gt; Une formation rejoint par un Éthéré devient sans peur, mais perd sans peur et prend un supplément de D3 Pions d&apos;Impact s&apos;il est tué.&lt;/I&gt;</description>
+    </rule>
+    <rule id="4f5f-fb28-1efe-d44c" name="Improved Comms" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Unit may ignore the 5cm restriction when using the Commander ability.
+&lt;I&gt;&lt;B&gt;Comms Améliorées:&lt;/B&gt; L&apos;unité peut ignorer la restriction 5cm lors de l&apos;utilisation de la capacité &quot;Commandant&quot;.&lt;/I&gt;</description>
+    </rule>
+    <rule id="36a6-5593-892d-9f40" name="Damocles" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>May provide Leader to any one formation on the table each turn. Select which formation when the Damocles&apos; formation is activated.
+&lt;I&gt;&lt;B&gt;Damoclès:&lt;/B&gt; Peut fournir la capacité de Meneur d&apos;une formation sur la table à chaque tour. Choisir quelle formation lorsque la formation du Damoclès est activée.&lt;/I&gt;</description>
+    </rule>
+    <rule id="928a-7e32-f91d-b56b" name="Support Staff" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Each unit of support staff gives the Inquisitor or one unit of warrior henchmen one re-roll per turn, which can be used to re-roll any attack dice or armour save.
+&lt;I&gt;&lt;B&gt;Le Personnel de Soutien:&lt;/B&gt; Chaque unité du personnel de soutien donne l&apos;Inquisiteur ou une unité des acolytes guerrier un re-roll par tour, qui peut être utilisé pour relancer tous les dés d&apos;attaque ou de sauvegarde d&apos;armure.&lt;/I&gt;</description>
+    </rule>
+    <rule id="f1b1-e895-6564-d7a1" name="Unblooded" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>All Blood Claw, Skyclaw and Swiftclaw formations that are attempting to take engage actions receive a +1 modifier to their action test roll. Additionally, they must always make their complete counter charge move (unless they reach base contact with an enemy unit before then) so long as they remain a legal formation.
+&lt;I&gt;&lt;B&gt;Encore pour le Goût de Sang:&lt;/B&gt; Toutes les formations Blood Claw, Skyclaw et Swiftclaw qui tentent de prendre des actions engagées reçoivent un modificateur +1 à son jet de test d&apos;action. De plus, ils doivent toujours faire leur mouvement complet contre-charge (à moins qu&apos;ils atteignent le contact de base avec une unité ennemie avant alors) tant qu&apos;ils restent une formation juridique.&lt;/I&gt;</description>
+    </rule>
+    <rule id="5de6-c7cc-3258-caa1" name="Tiger Shark Gun Drones" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Drones de Armas del Tiburón Tigre: &lt;/B&gt;Los Escuadrones de Tiburones Tigre pueden tener una formación de Drones de Armas para transportar. Las formaciones de Drones de Armas transportadas pueden ser distribuidas entre múltiples Tiburones Tigre, lo cual es una excepción a las reglas normales de transporte en aeronaves. Los Tiburones Tigre no pueden aterrizar, lanzar un asalto ni embarcar unidades, pero pueden desembarcar los Drones de Armas después de su movimiento de aproximación. La formación de Drones de Armas podrá disparar cuando desembarque, como ocurre normalmente, y se considerará que ya ha sido activada ese turno. Después de este despliegue inicial, la formación de Drones de Armas se comportará como una formación totalmente independiente. Los Drones de Armas transportados por los Tiburones Tigre no generan marcadores de explosión por ser destruidos hasta después de haber sido desembarcados.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Tiger Shark Squadrons may be given a Gun Drone formation to transport. Transported Gun Drone formations may be split across multiple Tiger Sharks as an exception to the normal aircraft transport rules. The Tiger Shark cannot land, make an Engagement, or embark units, but can disembark transported Drones after an approach move. The Drone formation may shoot when it disembarks as normal, and counts as having activated for that turn. After this initial deployment the Gun Drones are a completely independent formation. Gun Drones being transported by Tiger Sharks do not generate blast markers for being destroyed until after they are disembarked.
+&lt;I&gt;&lt;B&gt;Drones d&apos;Attaque du Tiger Shark:&lt;/B&gt; Escadrons Tiger Shark peuvent recevoir une formation de drones d&apos;attaque pour le transport. Formations transportées de drones d&apos;attaque peuvent être répartis sur plusieurs Tiger Sharks comme une exception aux règles de transport des avions normaux. Les Sharks Tiger ne peut pas atterrir, faire un engagement, ou embarquer des unités, mais peut débarquer des drones d&apos;attaque transportés après un mouvement d&apos;approche. La formation de drones d&apos;attaque peut tirer quand il débarque comme normal (voir Transporter des Unités Terrestres), et compte comme ayant activé pour ce tour. Après ce déploiement initial, les drones d&apos;attaque sont une formation totalement indépendante. Drones d&apos;attaque étant transportés par Tiger Sharks ne génèrent pas de pions d&apos;impact pour être détruits jusqu&apos;à ce qu&apos;ils soient débarqués.&lt;/I&gt;</description>
+    </rule>
+    <rule id="11b8-48f3-2b3b-d658" name="Critical Hit: Abattoir" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Arca de Sacrificios&lt;/B&gt;La unidad, y todas las unidades a 5cm o menos, sufren un impacto matatitanes con un 4+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Causes an automatic hit to the Abattoir and also inflicts a hit to any unit within 5cm on a 5+. Saves are allowed as normal.
+&lt;I&gt;&lt;B&gt;Touche Critique: Abattoir:&lt;/B&gt; L&apos;Abattoir subit un dégat, son portail est inutilisable pour le reste de la partie.&lt;/I&gt;</description>
+    </rule>
+    <rule id="5617-50af-cac5-a133" name="Living Metal" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Metal Viviente: &lt;/B&gt;Las unidades hechas de metal viviente reciben automáticamente la habilidad de blindaje reforzado, y pueden emplearla contra armas normales, lanzas e, incluso, contra macro-armas. Además, su salvación no se reduce por la habilidad de francotirador. Contra armas matatitanes, el metal viviente puede realizar una única salvación por Blindaje y, además, el arma matatitanes queda reducida a matatitanes (1).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Units made of living metal receive a Reinforced Armour saving throw against normal weapons, lance weapons, and even macro-weapons. In addition, their save is not reduced by sniper abilities. Living Metal units are permitted a single armour save against Titan Killer attacks, this save has to be taken against each point of TK damage.
+&lt;I&gt;&lt;B&gt;Métal Organique:&lt;/B&gt; Ignorez toutes les règles modifiant les valeurs de blindage. La sauvegarde est toujours relançable. Les armes tueurs de titans infligent l&apos;ensemble de leur dégats (Tt Dx) puis chaque domage est sauvegardé indépendament. Une seule unité encaisse l&apos;ensemble de ces domages.&lt;/I&gt;</description>
+    </rule>
+    <rule id="2bbb-7702-d694-287a" name="Necron (Reanimation Protocols)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Necrón: &lt;/B&gt;Las unidades con esta habilidad que hayan sido destruidas pueden ser regeneradas. En cada Fase de Finalización, las formaciones pueden devolver al juego una unidad Necrona que haya sido previamente destruida. Esto puede hacerse incluso si la formación está fuera del campo de batalla. Adicionalmente, una formación sobre la mesa que se reagrupe puede emplear el resultado del dado para regenerar unidades Necronas perdidas, o para retirar marcadores de explosión, o incluso para ambas cosas (por ejemplo: un resultado de 2 permite regenerar dos unidades Necronas, quitar dos marcadores de explosión o regenerar una unidad y quitar un marcador de explosión). Las formaciones que se encuentren fuera de la mesa de juego deberán emplear el resultado del dado exclusivamente para retirar marcadores de explosión cuando se reagrupen.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Units with the Necron ability that have been destroyed can regenerate. Formations can return one previously destroyed Necron unit in the end phase of each turn either on or off the board. In addition, if a formation regroups on board it can use the dice rolls to either return units with the Necron ability to play or to remove blast markers or both (e.g., if you rolled a ‘2’ you could return 2 units to play, remove 2 blast markers, or return 1 unit and remove 1 blast marker). Formations off board are restricted to using their regroup function to remove blast markers only.
+&lt;I&gt;&lt;B&gt;Nécron Résurrection:&lt;/B&gt; Jouez cette phase à la fin d&apos;un regroupement et à la fin de la phase de ralliement pour chaque formation non démoralisée. Remettez en jeu une unité “nécron” à 5 cm de la formation ainsi qu&apos;un pion d&apos;impact.
+Remettez en jeu une unité de la formation qui a été détruite ainsi qu&apos;un pion d&apos;impact par capacité “résurrection” présente dans la formation. Cette action n&apos;est pas imposée et peut être ignorée.&lt;/I&gt;</description>
+    </rule>
+    <rule id="01e1-aa84-7e69-5eac" name="Necron Reserves" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Reservas de los Necrones: &lt;/B&gt;Cualquier formación Necrona puede ser dejada atrás en reserva (con las excepciones del Orbe Eónico y el Arca de Sacrificios) si estás jugando un escenario de batalla de torneo. Nótese que las formaciones que no puedan teletransportarse tan sólo podrán entrar en batalla a través de un portal. Cualquier formación Necrona en reserva por cualquier razón (ya sea por no haber entrado aún en juego, o por haberse desmaterializado) se considerará destruida a efectos de desempate, o para el éxito Romper su Espíritu.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Any Necron formation may be held back &quot;in reserve&quot; (with the exception of the Aeonic Orb and Abattoir) if you are playing the Epic Tournament scenario. Note that formations that do not have teleport will only be able to enter play through portals. Any Necron formation in the reserves for any reason (either because it has not yet entered play or it is broken) is considered destroyed for the purpose of tiebreak, or the &quot;Break Their Spirit&quot; goal.
+&lt;I&gt;&lt;B&gt;Réserves Nécrons:&lt;/B&gt; Seules les formations capables de se téléporter ou de franchir un portail peuvent être mises en réserve. En cas de tie break, toutes les formations en réserve sauf l&apos;aérospatiale sont considérées comme détruites.&lt;/I&gt;</description>
+    </rule>
+    <rule id="53fd-fc60-1b4c-db1c" name="Phase Out" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Desmaterialización: &lt;/B&gt;En la Fase de Finalización del turno, retira a la formación del campo de batalla y ponla junto a las reservas, separada de las unidades destruidas. Podrá regresar al juego por un portal, o mediante el teletransporte. Deberá esperar hasta que haya un portal disponible. Si falla su chequeo de reorganización deberá permanecer fuera de la mesa hasta que lo supere. Nótese que, con la excepción de los C’tan, ninguna máquina de guerra Necrona podrá desmaterializarse.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>In the end phase of the turn, before any rallying, remove broken formations in the army from the board and into the reserves. Keep these formations separate from any destroyed units. All broken formations in reserve will then roll to rally. Formations that rally may re-enter the table the following turn through a portal, or with their teleport ability. If any formation fails to rally then it must remain in the reserves until it does rally. Formations in the army in reserve are considered destroyed for the Break Their Spirit goal and for the purpose of calculating tiebreaker victory points. With the exception of the C’tan, no War Engines in the army may phase out.
+&lt;I&gt;&lt;B&gt;Dématérialisation:&lt;/B&gt; Les formations entièrement composées d&apos;unités “nécron” du type &quot;infanterie&quot; ou possedant la compétence “dématérialisation” sont obligées de dématérialiser immédiatement à la fin d&apos;une action qui cause leur démoralisation. Elles sont placées démoralisées hors table en reserve. Lorsqu&apos;elles sont ralliées, elles peuvent revenir à leur activation par un portail disponible, ou par téléportation si leur profil le leur permet.
+Les formations mixtes comprenant des infanteries et des unités d&apos;un autre type : véhicule léger, blindé ou engin de guerre, perdent cette aptitude à se dématérialiser tant qu&apos;il existe au moins une unité de la formation n&apos;ayant pas cette capacité. Une telle formation, si elle est démoralisée, reste en jeu et se comporte selon la règle normale et peut faire ses mouvements de retraite.&lt;/I&gt;</description>
+    </rule>
+    <rule id="81f7-2bdf-cad7-37b1" name="Portal" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portal: &lt;/B&gt;Cualquier formación en reserva, ya sea porque no entró en juego, o porque salió del juego por cualquier razón, puede entrar en el campo de batalla a través de un portal si realiza cualquier acción que permita mover. Mide el movimiento desde el portal. Adicionalmente, cualquier formación puede abandonar el campo de batalla si entran en el portal, y pasarán a estar en reserva. Nótese que estas formaciones podrán regresar al juego inmediatamente por otro portal, siempre que dispongan de movimiento, o permanecer en reserva. &lt;BR&gt; Los portales de los Necrones sólo pueden ser usados por vehículos blindados que sean bípodes, vehículos ligeros o infantería. Cada portal sólo puede ser usado una vez por turno, ya sea para entrar o para salir del campo de batalla, no para ambas cosas. Pero una formación sí que podría salir por un portal como parte de su movimiento, y volver por otro portal que no haya sido usado este turno, continuando su movimiento desde este segundo portal. &lt;BR&gt; Si, al final del movimiento, una unidad queda fuera de coherencia de formación, será destruida. Ejemplo: si movieras una formación de cuatro unidades para entrar en un portal y salir por otro, y dos de ellas fueran incapaces de llegar (es decir, se quedan en el primero), el jugador Necrón debería decidir qué dos unidades se considerarían fuera de coherencia y serían destruidas (las que llegaron al segundo portal, o las que no llegaron).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Any formation that is in the reserves, either because it has not entered play or has left the board for any reason, may enter play via a portal as part of any activation that allows movement. Measure their movement using the portal as the starting point. Additionally, formations may leave the board by entering a portal, taking them into the reserves. Note that once in the reserves they can either re-enter play immediately via another portal, provided they have movement, or remain in the reserves.
+Necron Portals can only be used by armoured vehicles with walker, infantry, or light vehicles units. Each portal can be used only once per turn for either entering or exiting the battlefield, not for both. Thus a formation may enter one portal with part of their movement, and exit from a second, unused portal, continuing their movement from that portal. 
+If, at the end of the movement, a unit is out of formation it is destroyed.
+&lt;I&gt;&lt;B&gt;Portails:&lt;/B&gt; Les formations d&apos;infanteries et les véhicules légers “marcheurs” peuvent emprunter les portails suite à une action permettant au moins un mouvement. Il est possible de sortir par un autre portail dans la même action mais deux mouvements et deux portails disponibles sont alors nécessaires. Chaque portail ne peut être utilisé qu&apos;une fois dans le tour. Il est possible de retourner en réserve grâce à un portail.&lt;/I&gt;</description>
+    </rule>
+    <rule id="5319-e4b0-7bad-9ed0" name="Critical Hit: Aeonic Orb" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Orbe Eónico&lt;/B&gt;Centra la plantilla de 12cm en la unidad. Cada unidad cubierta sufre el equivalente a un ataque de artillería de potencia de fuego “3PA, MA”.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Center the barrage template that is 12cm across on the unit and resolve the effect as if it were a 3BP macro-weapon barrage.
+&lt;I&gt;&lt;B&gt;Touche Critique: Aeonic Orb:&lt;/B&gt; L&apos;Orbe subit un dégat. Centrez ensuite un gabarit Orbital sur l&apos;orbe, toutes unités (orbe comprise) située sous le gabarit subit une attaque de 3PB (Macro Arme).&lt;/I&gt;</description>
+    </rule>
+    <rule id="c55d-ddbe-071c-c528" name="Ponderous" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Units with this rule may only make a single withdrawal move when broken, not the usual two.
+&lt;I&gt;&lt;B&gt;Pesant:&lt;/B&gt; Les unités avec cette règle ne peut faire un mouvement de retrait unique lorsque démoralisé, pas des deux habituels.&lt;/I&gt;</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
