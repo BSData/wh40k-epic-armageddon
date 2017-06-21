@@ -42,7 +42,7 @@ Our Repo includes over 135 factions, forces, chapters & regiments, as described 
 
 __Release Numbers__
 
-Release Numbers are shown in four parts. The first part is the _.gst_ version. The second part is a simple counter, starting from 00 and incrementing by 1 with each release since the _.gst_ was last updated. The thrid part is the number of standard _.cat_ files, while the fourth part is the number of forces covered by those _.cat_ files. The third & fourth are not displayed if they are unchanged since the previous release, and they never include Riot, Insurgency, nor the forces contained within those two files.
+Release Numbers are shown in 4 parts. The 1st is the _.gst_ version. The 2nd is a simple counter, starting from 00 and incrementing by 1 with each release since the _.gst_ was last updated. The 3rd is the number of standard _.cat_ files, while the 4th is the number of forces covered by those _.cat_ files. The 3rd & 4th parts are not displayed if they are unchanged since the previous release, and they never include Riot & Insurgency, nor the forces contained within those 2 files.
 
 
 ## Links ##
