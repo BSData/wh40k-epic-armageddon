@@ -1,7 +1,7 @@
 Warhammer 40,000: Epic Armageddon
 ================
 
-####Contents####
+#### Contents ####
 
 * [Overview][]
 * [Notes][]
@@ -13,7 +13,7 @@ Warhammer 40,000: Epic Armageddon
 [Links]: #links
 
 
-##Overview##
+## Overview ##
 
 __What's this?__
 
@@ -26,7 +26,7 @@ __Okay, nice project. Is it actually working?__ _I just want those files..._
 Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][]
 
 
-##Notes##
+## Notes ##
 
 __Groups__
 
@@ -40,8 +40,12 @@ __Army Lists__
 
 Our Repo includes over 135 factions, forces, chapters & regiments, as described by 270 of the _300plus_ army lists currently available, as well as incorporating supplementary features like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
 
+__Release Numbers__
 
-##Links##
+Release Numbers are shown in four parts. The first part is the _.gst_ version. The second part is a simple counter, starting from 00 and incrementing by 1 with each release since the _.gst_ was last updated. The thrid part is the number of standard _.cat_ files, while the fourth part is the number of forces covered by those _.cat_ files. The third & fourth are not displayed if they are unchanged since the previous release, and they never include Riot, Insurgency, nor the forces contained within those two files.
+
+
+## Links ##
 
 * [BattleScribe homepage][]
 * [BattleScribe Data on Appspot][]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="11" battleScribeVersion="2.00" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="12" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
@@ -62,6 +62,169 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <categoryEntries>
+    <categoryEntry id="e551-c527-434e-59a5" name="Formations" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1785-50eb-7344-cc5a" name="4 per Formation" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="7bf8-d208-dd76-9088" name="3 per Formation" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="767a-6731-1c8e-886f" name="Siegeline" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1280-1024-f2ef-261b" name="Assault!" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+  </categoryEntries>
   <forceEntries>
     <forceEntry id="f12d-4f60-fe2d-1813" name="Epic Armageddon" hidden="false">
       <profiles/>
@@ -69,15 +232,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="e551-c527-434e-59a5" name="Formations" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="f12d-4f60-fe2d-1813-e551-c527-434e-59a5" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false" targetId="adbb-a1ac-4aa2-20e2" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -93,8 +257,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1785-50eb-7344-cc5a" name="4 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-1785-50eb-7344-cc5a" name="4 per Formation" hidden="false" targetId="1785-50eb-7344-cc5a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -110,8 +274,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="7bf8-d208-dd76-9088" name="3 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-7bf8-d208-dd76-9088" name="3 per Formation" hidden="false" targetId="7bf8-d208-dd76-9088" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -127,8 +291,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false" targetId="85e9-51cc-7763-21d8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -144,25 +308,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxSelections" value="3.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false" targetId="8a5d-ca48-de54-aff0" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -178,8 +325,25 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false" targetId="0933-5ff7-c37b-6aa8" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -195,8 +359,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false" targetId="43a6-2b0d-c3ff-c576" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -212,8 +376,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false" targetId="1753-1742-2884-6133" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -236,8 +400,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-a01c-3159-3cef-e12d" name="1 per Formation" hidden="false" targetId="a01c-3159-3cef-e12d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -253,8 +417,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -277,8 +441,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false" targetId="9629-6b9c-185f-4112" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -301,8 +465,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="d43e-35f1-c413-6653" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false" targetId="2acd-5f8a-20f0-7ab4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -318,8 +482,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -327,8 +491,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="50.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -336,8 +500,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -345,8 +509,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -354,8 +518,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -363,8 +527,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -372,8 +536,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="17.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f12d-4f60-fe2d-1813-36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -381,9 +545,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="10.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="b56b-3825-52c1-28cc" name="Minigeddon" hidden="false">
       <profiles/>
@@ -393,15 +556,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <constraints>
         <constraint field="points" scope="parent" value="1000.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
       </constraints>
-      <categoryEntries>
-        <categoryEntry id="e551-c527-434e-59a5" name="Formations" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="b56b-3825-52c1-28cc-e551-c527-434e-59a5" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false" targetId="adbb-a1ac-4aa2-20e2" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -417,8 +581,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1785-50eb-7344-cc5a" name="4 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-1785-50eb-7344-cc5a" name="4 per Formation" hidden="false" targetId="1785-50eb-7344-cc5a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -434,8 +598,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="7bf8-d208-dd76-9088" name="3 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-7bf8-d208-dd76-9088" name="3 per Formation" hidden="false" targetId="7bf8-d208-dd76-9088" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -451,8 +615,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false" targetId="85e9-51cc-7763-21d8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -468,25 +632,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxSelections" value="3.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false" targetId="8a5d-ca48-de54-aff0" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -502,8 +649,25 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false" targetId="0933-5ff7-c37b-6aa8" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -519,8 +683,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false" targetId="43a6-2b0d-c3ff-c576" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -536,8 +700,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false" targetId="1753-1742-2884-6133" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -560,8 +724,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-a01c-3159-3cef-e12d" name="1 per Formation" hidden="false" targetId="a01c-3159-3cef-e12d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -577,8 +741,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -601,8 +765,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false" targetId="9629-6b9c-185f-4112" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -625,8 +789,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="7435-d7bd-6dfe-ae81" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false" targetId="2acd-5f8a-20f0-7ab4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -642,8 +806,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="69e2-980b-6869-e4b8" name="One Half" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-69e2-980b-6869-e4b8" name="One Half" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -651,8 +815,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="points" scope="parent" value="500.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="4f35-97c0-fae0-922d" name="One Third" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-4f35-97c0-fae0-922d" name="One Third" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -660,8 +824,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-9b1c-7eb7-417a-4e13" name="One Third - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -669,8 +833,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - Group B" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-870e-22d9-c2a9-31e6" name="One Third - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -678,8 +842,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-8c78-0a75-b6c3-343a" name="One Quarter" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -687,8 +851,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="points" scope="parent" value="250.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9535-122d-c109-24d4" name="One Sixth" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-9535-122d-c109-24d4" name="One Sixth" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -696,8 +860,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="points" scope="parent" value="167.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth" hidden="false">
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-36c2-fa8b-6cfc-be84" name="One Tenth" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -705,9 +869,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="points" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="336d-8892-b061-d24f" name="Allies - 33%" hidden="false">
       <profiles/>
@@ -717,15 +880,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <constraints>
         <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
       </constraints>
-      <categoryEntries>
-        <categoryEntry id="e551-c527-434e-59a5" name="Formations" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="336d-8892-b061-d24f-e551-c527-434e-59a5" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false" targetId="adbb-a1ac-4aa2-20e2" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -741,8 +905,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1785-50eb-7344-cc5a" name="4 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-1785-50eb-7344-cc5a" name="4 per Formation" hidden="false" targetId="1785-50eb-7344-cc5a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -758,8 +922,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="7bf8-d208-dd76-9088" name="3 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-7bf8-d208-dd76-9088" name="3 per Formation" hidden="false" targetId="7bf8-d208-dd76-9088" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -775,8 +939,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false" targetId="85e9-51cc-7763-21d8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -792,25 +956,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxSelections" value="3.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false" targetId="8a5d-ca48-de54-aff0" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -826,8 +973,25 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false" targetId="0933-5ff7-c37b-6aa8" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -843,8 +1007,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false" targetId="43a6-2b0d-c3ff-c576" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -860,8 +1024,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false" targetId="1753-1742-2884-6133" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -884,8 +1048,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-a01c-3159-3cef-e12d" name="1 per Formation" hidden="false" targetId="a01c-3159-3cef-e12d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -901,8 +1065,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -925,8 +1089,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false" targetId="9629-6b9c-185f-4112" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -949,8 +1113,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="9b03-de62-5c04-8058" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false" targetId="2acd-5f8a-20f0-7ab4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -966,8 +1130,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -975,8 +1139,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="50.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -984,8 +1148,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -993,8 +1157,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1002,8 +1166,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1011,8 +1175,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1020,8 +1184,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="17.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false">
+        </categoryLink>
+        <categoryLink id="336d-8892-b061-d24f-36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1029,9 +1193,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="10.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="c451-df17-24ae-254d" name="Allies - 25%" hidden="false">
       <profiles/>
@@ -1041,15 +1204,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <constraints>
         <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
       </constraints>
-      <categoryEntries>
-        <categoryEntry id="e551-c527-434e-59a5" name="Formations" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="c451-df17-24ae-254d-e551-c527-434e-59a5" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false" targetId="adbb-a1ac-4aa2-20e2" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1065,8 +1229,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1785-50eb-7344-cc5a" name="4 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-1785-50eb-7344-cc5a" name="4 per Formation" hidden="false" targetId="1785-50eb-7344-cc5a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1082,8 +1246,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="7bf8-d208-dd76-9088" name="3 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-7bf8-d208-dd76-9088" name="3 per Formation" hidden="false" targetId="7bf8-d208-dd76-9088" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1099,8 +1263,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false" targetId="85e9-51cc-7763-21d8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1116,25 +1280,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxSelections" value="3.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false" targetId="8a5d-ca48-de54-aff0" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1150,8 +1297,25 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false" targetId="0933-5ff7-c37b-6aa8" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1167,8 +1331,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false" targetId="43a6-2b0d-c3ff-c576" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1184,8 +1348,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false" targetId="1753-1742-2884-6133" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1208,8 +1372,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-a01c-3159-3cef-e12d" name="1 per Formation" hidden="false" targetId="a01c-3159-3cef-e12d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1225,8 +1389,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1249,8 +1413,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false" targetId="9629-6b9c-185f-4112" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1273,8 +1437,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="fb5f-e274-d3b4-d4f8" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false" targetId="2acd-5f8a-20f0-7ab4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1290,8 +1454,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1299,8 +1463,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="50.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1308,8 +1472,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1317,8 +1481,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1326,8 +1490,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1335,8 +1499,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1344,8 +1508,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="17.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false">
+        </categoryLink>
+        <categoryLink id="c451-df17-24ae-254d-36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1353,9 +1517,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="10.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="f79a-b263-908a-1db8" name="Siegeline" hidden="false">
       <profiles/>
@@ -1363,15 +1526,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="e551-c527-434e-59a5" name="Formations" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="f79a-b263-908a-1db8-e551-c527-434e-59a5" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false" targetId="adbb-a1ac-4aa2-20e2" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1387,8 +1551,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1785-50eb-7344-cc5a" name="4 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-1785-50eb-7344-cc5a" name="4 per Formation" hidden="false" targetId="1785-50eb-7344-cc5a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1404,8 +1568,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="7bf8-d208-dd76-9088" name="3 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-7bf8-d208-dd76-9088" name="3 per Formation" hidden="false" targetId="7bf8-d208-dd76-9088" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1421,8 +1585,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false" targetId="85e9-51cc-7763-21d8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1438,25 +1602,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxSelections" value="3.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false" targetId="8a5d-ca48-de54-aff0" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1472,8 +1619,25 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false" targetId="0933-5ff7-c37b-6aa8" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1489,8 +1653,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false" targetId="43a6-2b0d-c3ff-c576" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1506,8 +1670,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false" targetId="1753-1742-2884-6133" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1530,8 +1694,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-a01c-3159-3cef-e12d" name="1 per Formation" hidden="false" targetId="a01c-3159-3cef-e12d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1547,8 +1711,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1571,8 +1735,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false" targetId="9629-6b9c-185f-4112" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1595,8 +1759,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="f860-74fd-c5dd-a4e2" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false" targetId="2acd-5f8a-20f0-7ab4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1612,8 +1776,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1621,8 +1785,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="50.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1630,8 +1794,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1639,8 +1803,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1648,8 +1812,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1657,8 +1821,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1666,8 +1830,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="17.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1675,16 +1839,15 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="10.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="767a-6731-1c8e-886f" name="Siegeline" hidden="false">
+        </categoryLink>
+        <categoryLink id="f79a-b263-908a-1db8-767a-6731-1c8e-886f" name="Siegeline" hidden="false" targetId="767a-6731-1c8e-886f" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="8028-1888-3867-395a" name="Assault!" hidden="false">
       <profiles/>
@@ -1692,15 +1855,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="e551-c527-434e-59a5" name="Formations" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="8028-1888-3867-395a-e551-c527-434e-59a5" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-adbb-a1ac-4aa2-20e2" name="6 per Formation" hidden="false" targetId="adbb-a1ac-4aa2-20e2" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1716,8 +1880,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1785-50eb-7344-cc5a" name="4 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-1785-50eb-7344-cc5a" name="4 per Formation" hidden="false" targetId="1785-50eb-7344-cc5a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1733,8 +1897,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="7bf8-d208-dd76-9088" name="3 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-7bf8-d208-dd76-9088" name="3 per Formation" hidden="false" targetId="7bf8-d208-dd76-9088" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1750,8 +1914,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-85e9-51cc-7763-21d8" name="3 per Formation - Extra" hidden="false" targetId="85e9-51cc-7763-21d8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1767,25 +1931,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxSelections" value="3.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-8a5d-ca48-de54-aff0" name="3 per 2 Formations" hidden="false" targetId="8a5d-ca48-de54-aff0" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1801,8 +1948,25 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-0933-5ff7-c37b-6aa8" name="3 per 2 Formations - Extra" hidden="false" targetId="0933-5ff7-c37b-6aa8" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxSelections" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-2e76-3c1e-639f-a0a7" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1818,8 +1982,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-43a6-2b0d-c3ff-c576" name="2 per Formation - Group A" hidden="false" targetId="43a6-2b0d-c3ff-c576" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1835,8 +1999,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-1753-1742-2884-6133" name="2 per Formation - Extra" hidden="false" targetId="1753-1742-2884-6133" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1859,8 +2023,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-a01c-3159-3cef-e12d" name="1 per Formation" hidden="false" targetId="a01c-3159-3cef-e12d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1876,8 +2040,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1900,8 +2064,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false" targetId="9629-6b9c-185f-4112" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1924,8 +2088,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="632b-f034-7769-2044" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false" targetId="2acd-5f8a-20f0-7ab4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1941,8 +2105,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1950,8 +2114,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="50.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1959,8 +2123,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1968,8 +2132,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1977,8 +2141,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1986,8 +2150,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1995,8 +2159,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="17.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2004,8 +2168,8 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="10.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1280-1024-f2ef-261b" name="Assault!" hidden="false">
+        </categoryLink>
+        <categoryLink id="8028-1888-3867-395a-1280-1024-f2ef-261b" name="Assault!" hidden="false" targetId="1280-1024-f2ef-261b" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2013,13 +2177,12 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="limit::points" scope="roster" value="20.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="b367-f0f3-9ce9-2595" name="Orbital Defence Battery" hidden="false" collective="false" categoryEntryId="767a-6731-1c8e-886f" type="model">
+    <selectionEntry id="b367-f0f3-9ce9-2595" name="Orbital Defence Battery" hidden="false" collective="false" type="model">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -2058,6 +2221,15 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <constraints>
         <constraint field="selections" scope="force" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c45c-24d3-ccde-3b22" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="b367-f0f3-9ce9-2595-767a-6731-1c8e-886f" hidden="false" targetId="767a-6731-1c8e-886f" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -2065,7 +2237,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <cost name="pts" costTypeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0062-423c-bf57-1b0e" name="Fortified Positions" hidden="false" collective="false" categoryEntryId="767a-6731-1c8e-886f" type="unit">
+    <selectionEntry id="0062-423c-bf57-1b0e" name="Fortified Positions" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -2078,8 +2250,17 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       </infoLinks>
       <modifiers/>
       <constraints/>
+      <categoryLinks>
+        <categoryLink id="0062-423c-bf57-1b0e-767a-6731-1c8e-886f" hidden="false" targetId="767a-6731-1c8e-886f" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="4a61-3642-36a6-0ab7" name="Trenches, Earthworks, Barricades" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+        <selectionEntry id="4a61-3642-36a6-0ab7" name="Trenches, Earthworks, Barricades" page="0" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks>
@@ -2107,6 +2288,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3725-be5d-e1df-29f6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9df1-12e1-2561-e8c1" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -2124,8 +2306,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1200-903d-b147-839b" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="6f01-8798-5d72-5d15" name="Gun Emplacement" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="6f01-8798-5d72-5d15" name="Gun Emplacement" page="0" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2138,6 +2321,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               </infoLinks>
               <modifiers/>
               <constraints/>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2145,7 +2329,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2fac-22e4-83d1-b6a4" name="Bunker" page="0" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="2fac-22e4-83d1-b6a4" name="Bunker" page="0" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2158,6 +2342,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               </infoLinks>
               <modifiers/>
               <constraints/>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2177,8 +2362,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4cf7-a1da-a802-e400" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="922a-61dd-010f-8d57" name="Minefield" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="922a-61dd-010f-8d57" name="Minefield" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2193,6 +2379,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="660e-fe84-b44a-972b" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2200,7 +2387,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7fa0-353b-fc2e-8c3b" name="Tank Traps, Razor Wire" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="7fa0-353b-fc2e-8c3b" name="Tank Traps, Razor Wire" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2221,6 +2408,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5b56-9c52-e0ef-b270" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2240,8 +2428,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dcde-47c8-9e09-0756" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="d387-46e4-cd9c-eb26" name="Large Command Bunker" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="d387-46e4-cd9c-eb26" name="Large Command Bunker" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2266,6 +2455,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               </infoLinks>
               <modifiers/>
               <constraints/>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2273,7 +2463,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3b96-0769-074e-4239" name="Small Command Bunker" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="3b96-0769-074e-4239" name="Small Command Bunker" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2298,6 +2488,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               </infoLinks>
               <modifiers/>
               <constraints/>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2315,14 +2506,23 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <cost name="pts" costTypeId="points" value="125.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1f5c-9bb7-3181-4e9c" name="Fortifications" hidden="false" collective="false" categoryEntryId="1280-1024-f2ef-261b" type="unit">
+    <selectionEntry id="1f5c-9bb7-3181-4e9c" name="Fortifications" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
+      <categoryLinks>
+        <categoryLink id="1f5c-9bb7-3181-4e9c-1280-1024-f2ef-261b" hidden="false" targetId="1280-1024-f2ef-261b" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="572b-7a10-76e6-295b" name="Command Bunker" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+        <selectionEntry id="572b-7a10-76e6-295b" name="Command Bunker" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks>
@@ -2347,6 +2547,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </infoLinks>
           <modifiers/>
           <constraints/>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -2354,7 +2555,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2ba5-4847-8d5c-68ec" name="Minefields" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+        <selectionEntry id="2ba5-4847-8d5c-68ec" name="Minefields" hidden="false" collective="false" type="unit">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2362,8 +2563,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b8-7dff-a7bb-754e" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="ea2d-26fe-a08d-27c9" name="Minefield" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="ea2d-26fe-a08d-27c9" name="Minefield" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2379,6 +2581,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd67-8fd5-5220-55c9" type="min"/>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dd1a-a6ee-904d-b2f2" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2393,7 +2596,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ecba-094a-0168-55db" name="Razor Wire" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+        <selectionEntry id="ecba-094a-0168-55db" name="Razor Wire" hidden="false" collective="false" type="unit">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2401,8 +2604,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df87-58ce-d72b-b6fb" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="dc61-2fcc-f269-3389" name="Razor Wire" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="dc61-2fcc-f269-3389" name="Razor Wire" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2418,6 +2622,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9503-2333-9431-ad5d" type="min"/>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1fc1-9107-6ea2-dbba" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2432,7 +2637,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <cost name="pts" costTypeId="points" value="25.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6bad-bb70-2539-13aa" name="Tank Traps" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
+        <selectionEntry id="6bad-bb70-2539-13aa" name="Tank Traps" hidden="false" collective="false" type="unit">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2440,8 +2645,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="81df-f7ee-a0c7-7079" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="1249-b6ea-cfaa-73c3" name="Tank Trap" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+            <selectionEntry id="1249-b6ea-cfaa-73c3" name="Tank Trap" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2457,6 +2663,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bafd-2a49-e3d5-bef9" type="min"/>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f916-842a-619b-8f2d" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2481,8 +2688,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6838-1734-658b-7836" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="7bfd-f047-6abf-1739" name="Pillbox w/ Battlecannon" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="7bfd-f047-6abf-1739" name="Pillbox w/ Battlecannon" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2503,6 +2711,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c52f-96c8-e451-53ec" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2510,7 +2719,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <cost name="pts" costTypeId="points" value="20.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6490-aafd-ac2f-65f8" name="Pillbox w/ Twin Lascannon" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="6490-aafd-ac2f-65f8" name="Pillbox w/ Twin Lascannon" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2531,6 +2740,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b4bf-8748-6a91-243a" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2538,7 +2748,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <cost name="pts" costTypeId="points" value="15.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0ef3-d0f0-9d18-4d99" name="Pillbox w/ Twin Heavy Bolter" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="0ef3-d0f0-9d18-4d99" name="Pillbox w/ Twin Heavy Bolter" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2559,6 +2769,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="70f4-542f-2a59-f88a" type="max"/>
               </constraints>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2576,8 +2787,9 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <infoLinks/>
           <modifiers/>
           <constraints/>
+          <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="944d-496b-5aa1-0394" name="Per Infantry Stand" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="944d-496b-5aa1-0394" name="Per Infantry Stand" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2590,6 +2802,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               </infoLinks>
               <modifiers/>
               <constraints/>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2597,7 +2810,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <cost name="pts" costTypeId="points" value="2.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="98b8-de89-b66a-fb5c" name="Per War Engine" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="98b8-de89-b66a-fb5c" name="Per War Engine" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2610,6 +2823,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               </infoLinks>
               <modifiers/>
               <constraints/>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2617,7 +2831,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
                 <cost name="pts" costTypeId="points" value="5.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d551-ae6a-d915-96e3" name="Per Vehicle" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="d551-ae6a-d915-96e3" name="Per Vehicle" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -2630,6 +2844,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
               </infoLinks>
               <modifiers/>
               <constraints/>
+              <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
@@ -2665,6 +2880,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6297-03a5-0eab-4f8d" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -2687,6 +2903,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7c4-1f3b-541d-cd1b" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -2705,6 +2922,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bec0-df92-973c-5a3f" type="max"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a317-f42d-a2bb-3757" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks>
@@ -2714,6 +2932,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <infoLinks/>
           <modifiers/>
           <constraints/>
+          <categoryLinks/>
         </entryLink>
         <entryLink id="3dbe-d1c2-ce33-ff0d" hidden="false" targetId="3715-341b-881c-9c4c" type="selectionEntry">
           <profiles/>
@@ -2721,6 +2940,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <infoLinks/>
           <modifiers/>
           <constraints/>
+          <categoryLinks/>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
