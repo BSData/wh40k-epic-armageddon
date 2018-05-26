@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c778-0b85-617e-8acb" name="Adeptus Mechanicus: Titan Legions" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c778-0b85-617e-8acb" name="Adeptus Mechanicus: Titan Legions" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9046,11 +9046,19 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="a793-fb3b-df62-d8a3" hidden="false" targetId="0941-b258-e2e4-581c" type="rule">
+        <infoLink id="a793-fb3b-df62-d8a3" name="Flame Templates" hidden="false" targetId="180f-baf4-0061-0663" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
       </infoLinks>
       <modifiers/>
@@ -11718,8 +11726,7 @@
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -11739,9 +11746,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.
-&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;</description>
+      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -11756,14 +11769,14 @@ AMTLQuickRef #06042015</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="name" value="All barrage weapons gain indirect fire">
+        <modifier type="set" field="description" value="All barrage weapons gain indirect fire">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -11776,28 +11789,15 @@ AMTLQuickRef #06042015</description>
           </conditions>
           <conditionGroups/>
         </modifier>
-      </modifiers>
-      <description>Re-roll one failed to-hit roll on one of the Titan’s weapon systems per turn.
-&lt;I&gt;&lt;B&gt;Plate-forme d&apos;Atterissage:&lt;/B&gt; Relancer un échec jet pour toucher sur l&apos;un des systèmes d&apos;armes du Titan par tour.&lt;/I&gt;</description>
-    </rule>
-    <rule id="0941-b258-e2e4-581c" name="Flame Templates" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Plate-forme d&apos;Atterissage:&lt;/B&gt; Relancer un échec jet pour toucher sur l&apos;un des systèmes d&apos;armes du Titan par tour.&lt;/I&gt;">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Certain weapons, such as the Light Inferno Gun, make use of the flame template when attacking the enemy. When resolving these attacks, use the following steps:
-1- Position the template so that it is touching the end of the barrel of the weapon, and with the entire template within the firing arc of the weapon. If using more then one template then they must be placed at the same time and may overlap.
-2- The template must be placed to cover as many enemy units from the target formation as possible, within the arc of the weapon, or the template can be repositioned by the opponent to any other position that is in LOF. If multiple templates are being used then each succeeding template must cover as many units as possible from those that are not already being attacked by another template.
-3- Determine how many units are under the template, a unit is under the template if; (a) Any part of the model falls under the template; (b) At least one enemy model on a stand falls under the template.
-4- Roll a die for each infantry unit (as one block) and each vehicle unit (as a second block), scoring hits and carrying out saves as would normally be done for shooting.</description>
+      <description>Re-roll one failed to-hit roll on one of the Titan’s weapon systems per turn.</description>
     </rule>
     <rule id="5802-cba4-897b-d500" name="God Machines" hidden="false">
       <profiles/>
@@ -11818,19 +11818,22 @@ AMTLQuickRef #06042015</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Machines Dieu:&lt;/B&gt; Toutes les formations Légion Titanique avec une unité avec une ligne de tir à une formation Scout ou Battle Titan qui a été détruit reçoivent un pion d&apos;impact.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>All Titan Legion formations with a unit with a line of fire to a Scout or Battle Titan formation that has been destroyed receive a Blast marker.
-&lt;I&gt;&lt;B&gt;Machines Dieu:&lt;/B&gt; Toutes les formations Légion Titanique avec une unité avec une ligne de tir à une formation Scout ou Battle Titan qui a été détruit reçoivent un pion d&apos;impact.&lt;/I&gt;</description>
+      <description>All Titan Legion formations with a unit with a line of fire to a Scout or Battle Titan formation that has been destroyed receive a Blast marker.</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-Specialist Games Forum AMTL-v2_oct-2005 #2
+      <description>Specialist Games Forum AMTL-v2_oct-2005 #2
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -11859,9 +11862,15 @@ Fanatic #13</description>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Noter:&lt;/B&gt; Formations principales doivent constituer 50% des points de l&apos;armée minimum.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>A Titan Legion army list must have at least 50% of their points spent on Legio Formations.
-&lt;I&gt;&lt;B&gt;Noter:&lt;/B&gt; Formations principales doivent constituer 50% des points de l&apos;armée minimum.&lt;/I&gt;</description>
+      <description>A Titan Legion army list must have at least 50% of their points spent on Legio Formations.</description>
     </rule>
     <rule id="c789-addc-e3c7-b2cc" name="Note" hidden="false">
       <profiles/>
@@ -11890,14 +11899,17 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Space Marines ont une Valeur Stratégique de 5.  Les Légions Titaniques de l’Adeptus Mechanicus ont une Valeur Stratégique de 3.  Les Titans ont une Initiative de 1+.  Les autres formations des Légions Titaniques et celles des Appareils la Flotte ont une Initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Titan Legion armies have a strategy rating of 3. 
 Battle and Scout Titan formations have an initiative rating of 1+. 
-All other formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Space Marines ont une Valeur Stratégique de 5. 
-Les Légions Titaniques de l’Adeptus Mechanicus ont une Valeur Stratégique de 3.
-Les Titans ont une Initiative de 1+.
-Les autres formations des Légions Titaniques et celles des Appareils la Flotte ont une Initiative de 2+.&lt;/I&gt;</description>
+All other formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="07ae-e4b7-db58-cf28" name="Surcharge" hidden="false">
       <profiles/>
@@ -11911,9 +11923,15 @@ Les autres formations des Légions Titaniques et celles des Appareils la Flotte 
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Surtaxe:&lt;/B&gt; Chaque formation de titan Scout ou bataille doit sélectionner au moins deux armes différentes ou de payer une surtaxe de +25 points en plus.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Each Scout or Battle Titan formation must select at least two different weapons or pay a surcharge of an additional +25 points.
-&lt;I&gt;&lt;B&gt;Surtaxe:&lt;/B&gt; Chaque formation de titan Scout ou bataille doit sélectionner au moins deux armes différentes ou de payer une surtaxe de +25 points en plus.&lt;/I&gt;</description>
+      <description>Each Scout or Battle Titan formation must select at least two different weapons or pay a surcharge of an additional +25 points.</description>
     </rule>
     <rule id="525f-18fb-6df5-3afb" name="Transport (AMTL)" hidden="false">
       <profiles/>
@@ -11927,14 +11945,24 @@ Les autres formations des Légions Titaniques et celles des Appareils la Flotte 
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Chimera: 1 Canon de Bataille ou 2 Skitarii, Prétoriens. &lt;BR&gt; Corvus Assault Pod: 8 Skitarii, Prétoriens.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <description>As follows-
 Corvus Assault Pod: 10 infantry units without Jump Packs or Mounted.
 Imperator Class Titan: 10 infantry units without Jump Packs or Mounted.
-Warmonger Class Titan: 10 infantry units without Jump Packs or Mounted.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Chimera: 1 Canon de Bataille ou 2 Skitarii, Prétoriens.
-Corvus Assault Pod: 8 Skitarii, Prétoriens.&lt;/I&gt;</description>
+Warmonger Class Titan: 10 infantry units without Jump Packs or Mounted.</description>
     </rule>
     <rule id="8b83-3f49-5800-6551" name="Veteran Princeps" hidden="false">
       <profiles/>
@@ -11948,9 +11976,15 @@ Corvus Assault Pod: 8 Skitarii, Prétoriens.&lt;/I&gt;</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Princeps Veteran:&lt;/B&gt; Si elles sont ajoutées à un titan de combat, permet une arme tactique supplémentaire soit remplacée par une arme d&apos;appui.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>If added to a Battle Titan allows one additional tactical weapon to be replaced by a support weapon.
-&lt;I&gt;&lt;B&gt;Princeps Veteran:&lt;/B&gt; Si elles sont ajoutées à un titan de combat, permet une arme tactique supplémentaire soit remplacée par une arme d&apos;appui.&lt;/I&gt;</description>
+      <description>If added to a Battle Titan allows one additional tactical weapon to be replaced by a support weapon.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

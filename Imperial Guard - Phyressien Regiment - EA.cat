@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="598c-79ef-c81b-8940" name="Imperial Guard: Phyressien Armoured Regiment" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="598c-79ef-c81b-8940" name="Imperial Guard: Phyressien Armoured Regiment" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2250,12 +2250,20 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="24ed-2541-dcdd-0744" name="&lt;I&gt;Commissaires&lt;/I&gt;" hidden="false">
+    <rule id="24ed-2541-dcdd-0744" name="Commissars" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>&lt;I&gt;Pour chaque grande compagnie de la Garde qu&apos;inclut votre armée (QG Régimentaire, compagnie mécanisée, compagnie d&apos;infanterie, compagnie d&apos;artillerie, compagnie blindée, compagnie de blindés supers lourds) un commissaire est automatiquement intégré dans leur effectif. De plus vous pouvez ajouter un commissaire dans les pelotons de Troupes de Choc et les pelotons de cavaliers impériaux / motos impériales pour 50pts chaque.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Pour chaque grande compagnie de la Garde qu&apos;inclut votre armée (QG Régimentaire, compagnie mécanisée, compagnie d&apos;infanterie, compagnie d&apos;artillerie, compagnie blindée, compagnie de blindés supers lourds) un commissaire est automatiquement intégré dans leur effectif. De plus vous pouvez ajouter un commissaire dans les pelotons de Troupes de Choc et les pelotons de cavaliers impériaux / motos impériales pour 50pts chaque.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>For every major Guard company included in your army (Regimental HQ, Mechanised Company, Infantry Company, Artillery Company, Armoured Company, Super Heavy Armored Company) a Commissar is automatically integrated into their manpower. In addition, you can add a Commissar to Storm Trooper platoons and Imperial Cavalry / Imperial Motorbike platoons for 50pts each.</description>
     </rule>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
       <profiles/>
@@ -2268,9 +2276,16 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>The unit is immobilised. Further Critical Hits cause 1 additional point of damage.
-&lt;I&gt;&lt;B&gt;Touche Critique: Ne Peut Plus Bouger:&lt;/B&gt; L&apos;unité ne peut plus bouger. Les prochaines touches critiques causeront la perte d’un point de dommage supplémentaire.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Ne Peut Plus Bouger:&lt;/B&gt; L&apos;unité ne peut plus bouger. Les prochaines touches critiques causeront la perte d’un point de dommage supplémentaire.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The unit is immobilised. Further Critical Hits cause 1 additional point of damage.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -2284,10 +2299,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -2302,25 +2314,35 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Garde Impériale a une valeur stratégique de 2.  Toutes les formations de la Garde Impériale, les formations des appareils de la flotte et les vaisseaux spatiaux ont une initiative de 2+.  Les formations de soutien titanique ont une initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Imperial Guard armies have a strategy rating of 2. 
 Titan Legion battlegroup formations have an initiative rating of 1+. 
-All other formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Garde Impériale a une valeur stratégique de 2. 
-Toutes les formations de la Garde Impériale, les formations des appareils de la flotte et les vaisseaux spatiaux ont une initiative de 2+. 
-Les formations de soutien titanique ont une initiative de 1+.&lt;/I&gt;</description>
+All other formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="878a-da24-44dc-dbac" name="Transport (RBP)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Chimera: 2 unités de Fantassins de la Garde. &lt;BR&gt; Leviathan: 17 unités de Fantassins de la Garde.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Chimera: 2 Infantry units.
-Leviathan: 17 Infantry units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Chimera: 2 unités de Fantassins de la Garde.
-Leviathan: 17 unités de Fantassins de la Garde.&lt;/I&gt;</description>
+Leviathan: 17 Infantry units.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

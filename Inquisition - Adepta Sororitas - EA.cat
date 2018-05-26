@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a1f7-a7cd-8f96-ed57" name="Inquisition: Sisters of Battle, Orders Militant Adepta Sororitas" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a1f7-a7cd-8f96-ed57" name="Inquisition: Sisters of Battle, Orders Militant Adepta Sororitas" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -4642,32 +4642,74 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Any company formation with the Faithful special rule may perform the Acts of Faith, the formation activates at -1 initiative, however the Acts of Faith does not apply if the formation fails its initiative roll. The formation receives Fearless and Invulnerable Save special rules which lasts until the end phase.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Acte de Foi:&lt;/B&gt; Toute formation compagnie avec la capacité Fidèle peut accomplir les Actes de Foi, la formation s&apos;active à -1 initiative, mais les Actes de Foi ne s&apos;appliquent pas si la formation échoue son rôle d&apos;initiative. La formation reçoit des capacités de Sans Peur et Sauvegarde Invulnérable qui dure jusqu&apos;à la phase finale.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Acte de Foi:&lt;/B&gt; Toute formation compagnie avec la capacité Fidèle peut accomplir les Actes de Foi, la formation s&apos;active à -1 initiative, mais les Actes de Foi ne s&apos;appliquent pas si la formation échoue son rôle d&apos;initiative. La formation reçoit des capacités de Sans Peur et Sauvegarde Invulnérable qui dure jusqu&apos;à la phase finale.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Acte de Foi:&lt;/B&gt; Au moment d’être jouée, une formation de sœurs de bataille de type &apos;Conventus&apos; peut tenter un ordre d’Acte de Foi à la place des ordres classiques. Les autres types de formations ne peuvent pas tenter cet ordre. Annoncez l’acte de foi que votre formation va pratiquer puis faites un jet d’initiative avec les malus habituels pour activer votre formation. &lt;BR&gt; Si le jet est réussi, les unités de type infanterie bénéficient immédiatement du bonus liée au type d’acte de foi annoncé précédemment puis la formation peut choisir d’effectuer soit un mouvement, soit un tir. Si le jet est raté, la formation prendra un pion impact supplémentaire comme normalement et agira avec l’ordre Tenir. Aucune relance de Commandant suprême n’est possible dans ce cas, les sœurs étant trop déstabilisées par le fait que leurs prières n’aient pas été entendues. &lt;BR&gt; Le Divin Guide: Toutes les unités d’Infanterie de la Formation disposent des Capacités Sauvegarde Invulnérable et Sans Peur jusqu’à la fin du tour. &lt;BR&gt; La Lumière de L’Empereur: Toutes les unités d’Infanterie de la Formation disposent de la Capacité Sauvegarde Invulnérable et Relancent les jets de tirs ratés (à l’exception des 1) jusqu’à la fin du tour. &lt;BR&gt; Esprit des Martyrs: Toutes les unités d’Infanterie de la Formation disposent de la Capacité Sauvegarde Invulnérable et la Formation complète dispose d’un bonus de +1 à la résolution des Assauts jusqu’à la fin du tour.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Any company formation with the Faithful special rule may perform the Acts of Faith, the formation activates at -1 initiative, however the Acts of Faith does not apply if the formation fails its initiative roll. The formation receives Fearless and Invulnerable Save special rules which lasts until the end phase.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>When activated, a formation of Battle Sisters of the &apos;Conventus&apos; type may attempt an Order of Faith instead of classical orders. Other types of formation can not attempt this order. Announce the act of faith that your formation will practice and then make an initiative roll with the usual penalties to activate your formation.
 If the roll is successful, the infantry-type units immediately benefit from the bonus related to the type of act of faith previously announced, and then the formation may choose to perform either a movement or a shot. If the throw is missed, the formation will take an additional blast marker as normal and will act with the Hold order. No Supreme Commander re-roll is possible in this case, the sisters being too destabilized by the fact that their prayers have not been heard.
 The Divine Guide: All Infantry units in the formation have the Invulnerable Save and Fearless special rules until the end of the turn.
 The Emperor&apos;s Light: All Infantry units in the formation have the Invulnerable Save special rule and re-roll missed shots (except results of 1) until the end of the turn.
-Spirit of the Martyrs: All Infantry units in formation have the Invulnerable Save special rule and the entire formation gains a +1 bonus to their assault resolution until the end of the turn.
-&lt;I&gt;&lt;B&gt;Acte de Foi:&lt;/B&gt; Au moment d’être jouée, une formation de sœurs de bataille de type &apos;Conventus&apos; peut tenter un ordre d’Acte de Foi à la place des ordres classiques. Les autres types de formations ne peuvent pas tenter cet ordre. Annoncez l’acte de foi que votre formation va pratiquer puis faites un jet d’initiative avec les malus habituels pour activer votre formation.
-Si le jet est réussi, les unités de type infanterie bénéficient immédiatement du bonus liée au type d’acte de foi annoncé précédemment puis la formation peut choisir d’effectuer soit un mouvement, soit un tir. Si le jet est raté, la formation prendra un pion impact supplémentaire comme normalement et agira avec l’ordre Tenir. Aucune relance de Commandant suprême n’est possible dans ce cas, les sœurs étant trop déstabilisées par le fait que leurs prières n’aient pas été entendues.
-Le Divin Guide: Toutes les unités d’Infanterie de la Formation disposent des Capacités Sauvegarde Invulnérable et Sans Peur jusqu’à la fin du tour.
-La Lumière de L’Empereur: Toutes les unités d’Infanterie de la Formation disposent de la Capacité Sauvegarde Invulnérable et Relancent les jets de tirs ratés (à l’exception des 1) jusqu’à la fin du tour.
-Esprit des Martyrs: Toutes les unités d’Infanterie de la Formation disposent de la Capacité Sauvegarde Invulnérable et la Formation complète dispose d’un bonus de +1 à la résolution des Assauts jusqu’à la fin du tour.&lt;/I&gt;</description>
+Spirit of the Martyrs: All Infantry units in formation have the Invulnerable Save special rule and the entire formation gains a +1 bonus to their assault resolution until the end of the turn.</description>
     </rule>
     <rule id="02cd-253a-0477-ba88" name="Critical Hit: Immobilised" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>The unit is immobilised. Further Critical Hits cause 1 additional point of damage.
-&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt; Immobilisé, les critiques suivant lui font perdre 1CD.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt; Immobilisé, les critiques suivant lui font perdre 1CD.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The unit is immobilised. Further Critical Hits cause 1 additional point of damage.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -4681,10 +4723,7 @@ Esprit des Martyrs: Toutes les unités d’Infanterie de la Formation disposent 
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -4700,50 +4739,145 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Adepta Sororitas Army has a Strategy Rating of 3. All Sister of Battle formations have an initiative of 1+, Inquisitorial Warband, Crusaders, Inquisitorial Armoured Fist, Conclave, Penitence, Imperial Navy and War Engine formations have an initiative of 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade, Bande Inquisitoire,  Bande Inquisitoire Mécanisé, Conclave, Pénitence, Marine Impériale et l&apos;Engine de Guerre.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Adepta Sororitas Army has a Strategy Rating of 3. All Sister of Battle formations have an initiative of 1+, Inquisitorial Warband, Crusaders, Inquisitorial Armoured Fist, Conclave, Penitence, Imperial Navy and War Engine formations have an initiative of 2+.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade et la Marine Impériale.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade, Bande Inquisitoire,  Bande Inquisitoire Mécanisé, Conclave, Pénitence, Marine Impériale et l&apos;Engine de Guerre.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Adepta Sororitas Armies have a Strategy rating of 3. Sororitas Detachments have an initiative rating of 1+. Crusaders and Imperial Navy have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade et la Marine Impériale.&lt;/I&gt;</description>
+      <description>Adepta Sororitas Armies have a Strategy rating of 3. Sororitas Detachments have an initiative rating of 1+. Crusaders and Imperial Navy have an initiative rating of 2+.</description>
     </rule>
-    <rule id="ef42-3efb-0c94-4e35" name="Stubborn" hidden="false">
+    <rule id="ef42-3efb-0c94-4e35" name="Stubborn (SoB)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Têtu:&lt;/B&gt; Les formations têtu ne peuvent prendre qu&apos;un seul mouvement de retrait maximum de 15 cm lorsqu&apos;elles deviennent démoralisées. Cependant, les formations ne subissent que des tueries de massacre de moins de 5cm au lieu des 15cm typiques.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Stubborn formations may only take a single maximum withdrawal move of 15cm when breaking. However, the formations only take hack down kills within 5cm instead of the typical 15cm.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Stubborn formations may only take a single maximum withdrawal move of 15cm when breaking. However, the formations only take hack down kills within 5cm instead of the typical 15cm.
-&lt;I&gt;&lt;B&gt;Têtu:&lt;/B&gt; Les formations têtu ne peuvent prendre qu&apos;un seul mouvement de retrait maximum de 15 cm lorsqu&apos;elles deviennent démoralisées. Cependant, les formations ne subissent que des tueries de massacre de moins de 5cm au lieu des 15cm typiques.&lt;/I&gt;
-
-
-
-</description>
+      <description>A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.</description>
     </rule>
     <rule id="16a2-5164-43f1-d64a" name="Throne of Fury" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>The formation containing the Throne gains Fearless. If the Throne is destroyed, the formation is automatically broken.
-&lt;I&gt;&lt;B&gt;Trône de Fureur:&lt;/B&gt; La formation qui est avec le Trone gagne la règle Sans Peur. Si le Trône est détruit, la formation est automatiquement démoralisée.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Trône de Fureur:&lt;/B&gt; La formation qui est avec le Trone gagne la règle Sans Peur. Si le Trône est détruit, la formation est automatiquement démoralisée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The formation containing the Throne gains Fearless. If the Throne is destroyed, the formation is automatically broken.</description>
     </rule>
     <rule id="c879-796e-9904-151d" name="Transport (SoB)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Immolator: 1 unité parmi: Sœurs de Bataille, Dominions, Retributors,Repurgators, Soeurs Repentia. &lt;BR&gt; Rhino: 2 unités parmi: Sœurs de Bataille, Dominions, Retributors,Repurgators, Soeurs Repentia. &lt;BR&gt; Repressor: 2 unités parmi: Sœurs de Bataille, Dominions, Retributors,Repurgators, Soeurs Repentia.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Aquila Lander: 2 Infantry units.
 Arvus Lighter: 2 Infantry units.
@@ -4756,11 +4890,7 @@ Land Raider: 2 Infantry units.
 Razorback: 1 Infantry unit.
 Rhino: 2 Infantry units.
 Repressor: 2 Infantry units.
-Valkyrie: 2 Infantry units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Immolator: 1 unité parmi: Sœurs de Bataille, Dominions, Retributors,Repurgators, Soeurs Repentia.
-Rhino: 2 unités parmi: Sœurs de Bataille, Dominions, Retributors,Repurgators, Soeurs Repentia.
-Repressor: 2 unités parmi: Sœurs de Bataille, Dominions, Retributors,Repurgators, Soeurs Repentia.&lt;/I&gt;</description>
+Valkyrie: 2 Infantry units.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7f2b-aab8-5f6d-d163" name="Chaos: Daemon World, Ghallamore Cleansing Daemon Incursion" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7f2b-aab8-5f6d-d163" name="Chaos: Daemon World, Ghallamore Cleansing Daemon Incursion" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="61ab-00f3-d9df-6ab3" hidden="false" targetId="fa42-1d66-1166-9898" type="rule">
+    <infoLink id="61ab-00f3-d9df-6ab3" name="Strategy Rating &amp; Initiative (DW)" hidden="false" targetId="fa42-1d66-1166-9898" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -16,6 +16,12 @@
       <modifiers/>
     </infoLink>
     <infoLink id="9893-43b3-dd19-3389" hidden="false" targetId="4300-258f-1ecb-16f0" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="9f6c-2702-7f8d-6586" name="Strategy Rating &amp; Initiative (DW)*******" hidden="false" targetId="2264-5cdf-13d9-f055" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -3964,7 +3970,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="6b4b-cbf1-d77d-d6d9" hidden="false" targetId="0186-8bc1-5e69-1ca8" type="rule">
+            <infoLink id="6b4b-cbf1-d77d-d6d9" name="Infestation" hidden="false" targetId="6c81-26b9-07b4-02e1" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -8708,9 +8714,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Augmenter la Convocation:&lt;/B&gt; Les unités avec la capacité de Augmenter la Convocation ajoutent au jet de dés lorsque leur formation choisit de convoquer daemons. Par exemple, une unité avec Augmenter la Convocation (2D3) donnerait sa formation 4D3 des points d&apos;invocation quand il convoque daemons et une unité avec Augmenter la Convocation (6) donnerait sa formation 2D3 + 6 des points d&apos;invocation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Units with the augment summoning ability add to the dice roll when their formation summons daemons. For example a unit with Augment Summoning (2D3) would give its formation 4D3 summoning points when it summons daemons and a unit with Augment Summoning (6) would give its formation 2D3 + 6 summoning points.
-&lt;I&gt;&lt;B&gt;Augmenter la Convocation:&lt;/B&gt; Les unités avec la capacité de Augmenter la Convocation ajoutent au jet de dés lorsque leur formation choisit de convoquer daemons. Par exemple, une unité avec Augmenter la Convocation (2D3) donnerait sa formation 4D3 des points d&apos;invocation quand il convoque daemons et une unité avec Augmenter la Convocation (6) donnerait sa formation 2D3 + 6 des points d&apos;invocation.&lt;/I&gt;</description>
+      <description>Units with the augment summoning ability add to the dice roll when their formation summons daemons. For example a unit with Augment Summoning (2D3) would give its formation 4D3 summoning points when it summons daemons and a unit with Augment Summoning (6) would give its formation 2D3 + 6 summoning points.</description>
     </rule>
     <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
       <profiles/>
@@ -8731,33 +8743,60 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Move it D6 cm in a random direction. If this takes the Warhound into impassable terrain or another unit it can’t step over, then it stops when it contacts the obstruction and suffers another point of damage. If it staggers into or over any units, they take a hit on a D6 roll of 6+ (make saving throws for the units normally).
-&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;</description>
+      <description>Move it D6 cm in a random direction. If this takes the Warhound into impassable terrain or another unit it can’t step over, then it stops when it contacts the obstruction and suffers another point of damage. If it staggers into or over any units, they take a hit on a D6 roll of 6+ (make saving throws for the units normally).</description>
     </rule>
     <rule id="eae8-52c8-cfda-76ee" name="Critical Hit: Implosion" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Destroyed, units within 5cm suffer MW6+ attack.
-&lt;I&gt;&lt;B&gt;Touche Critique: Implosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche du MW6+.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Implosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche du MW6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Destroyed, units within 5cm suffer MW6+ attack.</description>
     </rule>
     <rule id="fa48-c44c-fb7e-daf4" name="Critical Hit: Internal Explosions" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Takes an extra point of damage and kill D3 selected passengers (no saves allowed). The player may choose which units are killed.
-&lt;I&gt;&lt;B&gt;Touche Critique: Explosions Internes:&lt;/B&gt; Prend un point de dégâts supplémentaires et tue D3 des passagers (pas sauvegarde autorisés). Le joueur peut choisir quelles unités sont tués.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Explosions Internes:&lt;/B&gt; Prend un point de dégâts supplémentaires et tue D3 des passagers (pas sauvegarde autorisés). Le joueur peut choisir quelles unités sont tués.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Takes an extra point of damage and kill D3 selected passengers (no saves allowed). The player may choose which units are killed.</description>
     </rule>
     <rule id="2bb5-8663-ddd3-54cb" name="Daemon Lord" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>To be confirmed.
-&lt;I&gt;&lt;B&gt;Seigneur Démon:&lt;/B&gt; À confirmer.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneur Démon:&lt;/B&gt; À confirmer.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>To be confirmed.</description>
     </rule>
     <rule id="0c98-f37b-b1ba-1bef" name="Daemon Prince" hidden="false">
       <profiles/>
@@ -8771,24 +8810,44 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Prince Démon:&lt;/B&gt; Remplacez un Aspirant Champion Marine du Chaos ou un Démagogue par un Prince Démon. Un Prince Démon peut être inclus dans l’armée pour chaque déité représentée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Replaces the unit in the formation that includes the Chaos Space Marine Aspiring Champion or Demagogue character with a Daemon Prince unit. One Daemon Prince may be included in an army for each Chaos faction present in the army.
-&lt;I&gt;&lt;B&gt;Prince Démon:&lt;/B&gt; Remplacez un Aspirant Champion Marine du Chaos ou un Démagogue par un Prince Démon. Un Prince Démon peut être inclus dans l’armée pour chaque déité représentée.&lt;/I&gt;</description>
+      <description>Replaces the unit in the formation that includes the Chaos Space Marine Aspiring Champion or Demagogue character with a Daemon Prince unit. One Daemon Prince may be included in an army for each Chaos faction present in the army.</description>
     </rule>
     <rule id="bfea-41fb-fa85-12a2" name="Daemonic Assault" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Before deployment, the daemon player may nominate  two formations in their army per full thousand points to deploy by teleport. These detachments may only enter play from the second turn and may only consist of formations made up wholly by Infantry, Light Vehicles, or Armoured Vehicles with the Walker ability.
-&lt;I&gt;&lt;B&gt;Assaut Daemonic:&lt;/B&gt; Avant le déploiement, le joueur démon peut désigner deux formations dans leur armée par plein millier de points à déployer par téléportation. Ces détachements ne peuvent entrer en jeu à partir du deuxième tour et ne peuvent consister en des formations composées entièrement par l&apos;infanterie, les véhicules légers, ou des véhicules blindés avec la capacité Marcheur.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Assaut Daemonic:&lt;/B&gt; Avant le déploiement, le joueur démon peut désigner deux formations dans leur armée par plein millier de points à déployer par téléportation. Ces détachements ne peuvent entrer en jeu à partir du deuxième tour et ne peuvent consister en des formations composées entièrement par l&apos;infanterie, les véhicules légers, ou des véhicules blindés avec la capacité Marcheur.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Before deployment, the daemon player may nominate  two formations in their army per full thousand points to deploy by teleport. These detachments may only enter play from the second turn and may only consist of formations made up wholly by Infantry, Light Vehicles, or Armoured Vehicles with the Walker ability.</description>
     </rule>
     <rule id="9b7f-a16c-efaa-c053" name="Daemonic Pact" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pacto Demoníaco: &lt;/B&gt;Las formaciones que adquieran la mejora Pacto Demoníaco serán capaces de invocar Demonios al campo de batalla. Añade 1 Demonio Menor a la reserva demoníaca.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pacte Démoniaque:&lt;/B&gt; Il permet la formation de convoquer des démons.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pacto Demoníaco: &lt;/B&gt;Las formaciones que adquieran la mejora Pacto Demoníaco serán capaces de invocar Demonios al campo de batalla.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -8818,32 +8877,27 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-Fanatic #95
+      <description>Fanatic #95
 Specialist Games Forum BlackLegion
 Specialist Games Forum LostnDamned
 Fanatic #02
 Fanatic #13</description>
     </rule>
-    <rule id="0186-8bc1-5e69-1ca8" name="Infestation" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>Treat placement just like Teleport, but after placing one unit roll 3D6 to see how many total stands of Plague Zombies there are, then roll for Blast Markers as usual for Teleporting.
-&lt;I&gt;&lt;B&gt;Infestation:&lt;/B&gt; Fonctionne exactement comme la règle Téléportation, mais après avoir placé une unité lancez 3D6 pour savoir combien de socles de Zombies de la Peste il y a. Testez ensuite normalement pour les pions impact pour la Téléportation.&lt;/I&gt;</description>
-    </rule>
     <rule id="4300-258f-1ecb-16f0" name="Instability" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Instabilité:&lt;/B&gt; Toute formation Monde Démon qui échoue à un test d&apos;initiative, pour une raison quelconque, perd immédiatement 1D3 Daemons Mineurs; ils sont retirés du jeu et non retournés. Formations sans Daemons Mineurs sont encore soumis à cette règle si, dans la pratique, il n&apos;a aucun effet sur eux. Ces pertes ne provoquent pas de Pions d&apos;Impact, bien que la formation peut se briser si cette perte les amène à avoir plus que Pions d&apos;Impact unités.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Any Daemon World formation that fails an initiative test, for any reason, immediately loses 1D3 Lesser Daemons; they are removed from play and not returned. Formations without Lesser Daemons are still subject to this rule though, in practice, it has no effect on them.
-These losses do not cause any Blast Markers, though the formation may break if this loss causes them to have more Blast Markers than units.
-&lt;I&gt;&lt;B&gt;Instabilité:&lt;/B&gt; Toute formation Monde Démon qui échoue à un test d&apos;initiative, pour une raison quelconque, perd immédiatement 1D3 Daemons Mineurs; ils sont retirés du jeu et non retournés. Formations sans Daemons Mineurs sont encore soumis à cette règle si, dans la pratique, il n&apos;a aucun effet sur eux.
-Ces pertes ne provoquent pas de Pions d&apos;Impact, bien que la formation peut se briser si cette perte les amène à avoir plus que Pions d&apos;Impact unités.&lt;/I&gt;</description>
+These losses do not cause any Blast Markers, though the formation may break if this loss causes them to have more Blast Markers than units.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -8857,16 +8911,30 @@ netea_army_list_compendium_2014-01-14</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>May contest objectives but may not hold objectives.
-&lt;I&gt;&lt;B&gt;Zombies de la Peste:&lt;/B&gt; Peuvent contester les objectifs mais pas les tenir.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Zombies de la Peste:&lt;/B&gt; Peuvent contester les objectifs mais pas les tenir.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>May contest objectives but may not hold objectives.</description>
     </rule>
     <rule id="fa42-1d66-1166-9898" name="Strategy Rating &amp; Initiative (DW)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Daemon World armies have a Strategy Rating of 2. All formations have an Initiative rating of 3+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées des Mondes Démon ont une valeur stratégique de 2. Toutes les formations ont une initiative de 3+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La liste de l&apos;armée de l&apos;Incursion Démoniaque de la Purge de Ghallamore a une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
@@ -8875,19 +8943,46 @@ netea_army_list_compendium_2014-01-14</description>
         </modifier>
       </modifiers>
       <description>The Ghallamore Cleansing Daemon Incursion army list has a Strategy Rating of 2. All Daemon Army formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La liste de l&apos;armée de l&apos;Incursion Démoniaque de la Purge de Ghallamore a une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;</description>
+</description>
     </rule>
     <rule id="17b0-4988-4a59-7ac9" name="Transport (DW)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Plague Tower: 16 des unités suivantes: Cultistes, Mutants, Chiens du Chaos, Bêtes Démoniaques, Portepestes, Prince Démon, Enfant du Chaos, Gros Mutants, Grand Immonde. Les quatre dernières unités comptent pour 2 pour ce qui est du transport. &lt;BR&gt; Rhino: 2 unités de Marine du Chaos.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Plague Tower: 16 of the following units: Daemon Prince, Chaos Spawn, Cultists, Mutants, Big Mutants, Chaos Hounds, Daemonic Beasts, Plague Bearers, Great Unclean One. Chaos Spawns, Big Mutants, Daemon Princes and Great Unclean Ones take up 2 transport spaces each.
-Rhino: 2 Chaos Space Marine units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Plague Tower: 16 des unités suivantes: Cultistes, Mutants, Chiens du Chaos, Bêtes Démoniaques, Portepestes, Prince Démon, Enfant du Chaos, Gros Mutants, Grand Immonde. Les quatre dernières unités comptent pour 2 pour ce qui est du transport.
-Rhino: 2 unités de Marine du Chaos.&lt;/I&gt;</description>
+Rhino: 2 Chaos Space Marine units.</description>
+    </rule>
+    <rule id="2264-5cdf-13d9-f055" name="Strategy Rating &amp; Initiative (DW)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées des Mondes Démon ont une valeur stratégique de 2. Toutes les formations ont une initiative de 3+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Daemon World armies have a Strategy Rating of 2. All formations have an Initiative rating of 3+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

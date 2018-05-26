@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4d54-6d4f-7455-d673" name="Tyranids" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4d54-6d4f-7455-d673" name="Tyranids" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -6761,9 +6761,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Déploiement:&lt;/B&gt; Seuls les essaims indépendants peuvent se déployer en garnison, s’ils respectent la règle le permettant.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Only independent swarms can deploy in garrison, if they respect the rule allowing it.
-&lt;I&gt;&lt;B&gt;Déploiement:&lt;/B&gt; Seuls les essaims indépendants peuvent se déployer en garnison, s’ils respectent la règle le permettant.&lt;/I&gt;</description>
+      <description>Only independent swarms can deploy in garrison, if they respect the rule allowing it.</description>
     </rule>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
       <profiles/>
@@ -6776,9 +6782,16 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>After the Spore Pod lands, its Acidic Spore Burst attacks all enemy units within 15cms. Each enemy formation attacked receives a Blast Marker for coming under fire, and Blast markers for each casualty as normal. Then any unit carried in the Spore Pod must disembark within 5cms of the Spore Pod or within 5cms of another unit from the same swarm that has already landed, so long as all units are placed within 15cms of the Spore Pod. Once all units have been placed, the Spore Pod is removed.
-&lt;I&gt;&lt;B&gt;Spores Mycétiques:&lt;/B&gt; Une fois que les Spores ont atterries, les tentacules éventreurs s&apos;attaquent a chaque unité ennemie dans un rayon de 15cm. Chaque formation ainsi attaquée recoit un pion impact pour etre sous le feu de l’ennemi puis résolvez les attaques. Enfin, toutes les troupes transportée doivent débarquer a moins de 5cm des Spores ou a moins de 5cm d’une autre unité ayant déja débarqué, du moment que toutes les unités soient placées dans un rayon de 15cm autour des spores.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Spores Mycétiques:&lt;/B&gt; Une fois que les Spores ont atterries, les tentacules éventreurs s&apos;attaquent a chaque unité ennemie dans un rayon de 15cm. Chaque formation ainsi attaquée recoit un pion impact pour etre sous le feu de l’ennemi puis résolvez les attaques. Enfin, toutes les troupes transportée doivent débarquer a moins de 5cm des Spores ou a moins de 5cm d’une autre unité ayant déja débarqué, du moment que toutes les unités soient placées dans un rayon de 15cm autour des spores.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>After the Spore Pod lands, its Acidic Spore Burst attacks all enemy units within 15cms. Each enemy formation attacked receives a Blast Marker for coming under fire, and Blast markers for each casualty as normal. Then any unit carried in the Spore Pod must disembark within 5cms of the Spore Pod or within 5cms of another unit from the same swarm that has already landed, so long as all units are placed within 15cms of the Spore Pod. Once all units have been placed, the Spore Pod is removed.</description>
     </rule>
     <rule id="787c-2f18-f129-e0a8" name="Objectives and Victory Conditions" hidden="false">
       <profiles/>
@@ -6792,41 +6805,64 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Objectifs et Conditions de Victoire:&lt;/B&gt; Seul les essaims indépendants et les créatures synapses (pas les essaims instinctifs) peuvent contrôler ou contester les objectifs. De même pour la condition de victoire ils ne passeront pas, seul les essaims indépendants et les créatures synapses (pas les essaims instinctifs) comptent s’ils sont dans la moitié de table adverse. &lt;BR&gt; Les unités de Termagants, d’Hormagaunts et de Gargouille détruites ne comptent pas dans le décompte des pertes pour déterminer le vainqueur d’un assaut tant qu’une créature synapse est présente dans la formation et si et seulement si Ie joueur tyranide a initié I’assaut.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Only independent swarms and synapse creatures (not instinctive swarms) can contest or control objectives. Similarly for victory conditions they will not pass (?), only independent swarms and synapse creatures (not instinctive swarms) count if they are in the opposing table half.
-Destroyed Termagants, Hormagaunts and Gargoyle units do not count when determining the winner of an assault, as long as a synapse creature is present in the formation, and if and only if the Tyranid player has initiated the assault.
-&lt;I&gt;&lt;B&gt;Objectifs et Conditions de Victoire:&lt;/B&gt; Seul les essaims indépendants et les créatures synapses (pas les essaims instinctifs) peuvent contrôler ou contester les objectifs. De même pour la condition de victoire ils ne passeront pas, seul les essaims indépendants et les créatures synapses (pas les essaims instinctifs) comptent s’ils sont dans la moitié de table adverse.
-Les unités de Termagants, d’Hormagaunts et de Gargouille détruites ne comptent pas dans le décompte des pertes pour déterminer le vainqueur d’un assaut tant qu’une créature synapse est présente dans la formation et si et seulement si Ie joueur tyranide a initié I’assaut.&lt;/I&gt;</description>
+Destroyed Termagants, Hormagaunts and Gargoyle units do not count when determining the winner of an assault, as long as a synapse creature is present in the formation, and if and only if the Tyranid player has initiated the assault.</description>
     </rule>
     <rule id="815e-22b9-e6c8-e67a" name="Broodmother (X)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Some of the larger organisms within the swarm are able to gestate and birth smaller lifeforms to support the invasion force in the gathering of biomass. A unit with the Broodmother(X) ability is able to spawn 1D3 units of X type at the start of the strategy phase. Broodmother units may not control more than 4x spawned units at any one time. Units are placed after Tunnellers and Teleporters, but before the roll for priority is made. All units entering play via the Broodmother become part of the Broodmother&apos;s formation and must be placed within 5cm of the unit from which it was spawned. If there is no room to place the model the unit is discarded.
-&lt;I&gt;&lt;B&gt;Broodmother (X):&lt;/B&gt; Certains des plus grands organismes au sein de l&apos;essaim sont en mesure de gestation et de donner naissance à des petits lifeforms pour soutenir la force d&apos;invasion dans la collecte de la biomasse. Une unité avec la capacité Broodmother (X) est capable de reproduire des unités 1D3 de type X au début de la phase de stratégie. Unités Broodmother ne peuvent pas contrôler plus de quatre unités pondus à un moment donné. Les unités sont placées après tunneliers et téléporteurs, mais avant que le rouleau pour la priorité est faite. Toutes les unités qui entrent dans le jeu via le Broodmother deviennent partie intégrante de la formation Broodmother et doivent être placés à l&apos;intérieur de 5cm de l&apos;unité à partir de laquelle il a été engendré. S&apos;il n&apos;y a pas de place pour placer le modèle de l&apos;appareil est mis au rebut.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Broodmother (X):&lt;/B&gt; Certains des plus grands organismes au sein de l&apos;essaim sont en mesure de gestation et de donner naissance à des petits lifeforms pour soutenir la force d&apos;invasion dans la collecte de la biomasse. Une unité avec la capacité Broodmother (X) est capable de reproduire des unités 1D3 de type X au début de la phase de stratégie. Unités Broodmother ne peuvent pas contrôler plus de quatre unités pondus à un moment donné. Les unités sont placées après tunneliers et téléporteurs, mais avant que le rouleau pour la priorité est faite. Toutes les unités qui entrent dans le jeu via le Broodmother deviennent partie intégrante de la formation Broodmother et doivent être placés à l&apos;intérieur de 5cm de l&apos;unité à partir de laquelle il a été engendré. S&apos;il n&apos;y a pas de place pour placer le modèle de l&apos;appareil est mis au rebut.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Some of the larger organisms within the swarm are able to gestate and birth smaller lifeforms to support the invasion force in the gathering of biomass. A unit with the Broodmother(X) ability is able to spawn 1D3 units of X type at the start of the strategy phase. Broodmother units may not control more than 4x spawned units at any one time. Units are placed after Tunnellers and Teleporters, but before the roll for priority is made. All units entering play via the Broodmother become part of the Broodmother&apos;s formation and must be placed within 5cm of the unit from which it was spawned. If there is no room to place the model the unit is discarded.</description>
     </rule>
     <rule id="cd22-73ab-e71d-64f8" name="Chameleonic Skin" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Lictors always receive a &quot;-1 To Hit&quot; modifier to enemy shooting.
-&lt;I&gt;&lt;B&gt;La Peau Chameleonic:&lt;/B&gt; Lictors bénéficient toujours d&apos;un modificateur &quot;-1 pour toucher&quot; appliqué aux tirs ennemis.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La Peau Chameleonic:&lt;/B&gt; Lictors bénéficient toujours d&apos;un modificateur &quot;-1 pour toucher&quot; appliqué aux tirs ennemis.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Lictors always receive a &quot;-1 To Hit&quot; modifier to enemy shooting.</description>
     </rule>
     <rule id="d61b-69b9-e9b5-03ec" name="Critical Hit: Wounded" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Blessé:&lt;/B&gt; Lancez 1D6 et consultez le tableau ci-dessous: &lt;BR&gt; 1 : Toute unité en contact avec son socle subit une attaque MA6+. &lt;BR&gt; 2-5 : Perd 1 CD supplémentaire. &lt;BR&gt; 6 : La Dominatrix perd 1D3 CD supplémentaires. Le Hierophant ou l&apos;Hydraphant est tuée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Roll a D6 and consult the chart below:
 1- Any other unit in base contact suffers a MW6+ attack.
 2-5- The creature loses 1DC.
-6- The creature is instantly killed.
-&lt;I&gt;&lt;B&gt;Touche Critique: Blessé:&lt;/B&gt; Lancez 1D6 et consultez le tableau ci-dessous:
-1 : Toute unité en contact avec son socle subit une attaque MA6+.
-2-5 : Perd 1 CD supplémentaire.
-6 : La Dominatrix perd 1D3 CD supplémentaires. Le Hierophant ou l&apos;Hydraphant est tuée.&lt;/I&gt;</description>
+6- The creature is instantly killed.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -6848,10 +6884,7 @@ TYRRef #110929</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -6859,9 +6892,16 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>A spacecraft with the Invasion Fleet special rule may arrive on the same turn as an opponents spacecraft.
-&lt;I&gt;&lt;B&gt;Flotte d&apos;Invasion:&lt;/B&gt; Un vaisseau spatial avec la règle spéciale Flotte d&apos;Invasion peut arriver sur le même tour que le vaisseau spatial d&apos;un adversaire.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Flotte d&apos;Invasion:&lt;/B&gt; Un vaisseau spatial avec la règle spéciale Flotte d&apos;Invasion peut arriver sur le même tour que le vaisseau spatial d&apos;un adversaire.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>A spacecraft with the Invasion Fleet special rule may arrive on the same turn as an opponents spacecraft.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -6874,82 +6914,126 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Tyranides possèdent une valeur stratégique de 1.  Les formations : Groupe Nexus ; Briseur de siège ; Bio-titan possèdent une initiative de 1+.  Toutes les autres formations possèdent une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Tyranid armies have a strategy rating of 1. 
-All Tyranid formations have an initiative rating of 2+, but receive modifiers depending on the action chosen when taking an action test.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Tyranides possèdent une valeur stratégique de 1. 
-Les formations : Groupe Nexus ; Briseur de siège ; Bio-titan possèdent une initiative de 1+. 
-Toutes les autres formations possèdent une initiative de 2+.&lt;/I&gt;</description>
+All Tyranid formations have an initiative rating of 2+, but receive modifiers depending on the action chosen when taking an action test.</description>
     </rule>
     <rule id="b0bf-6744-6d84-6a38" name="Synapse" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>A formation that has Synapse units in it can capture objectives, if the formation has lost its Synapse units or did not start with any then they may only contest an objective. Plus, formations that include at least one Synapse unit don&apos;t receive blast markers for Gargoyle, Hormagaunt or Termagant units that are killed, and don&apos;t count Gargoyle, Hormagaunt or Termagant units that are lost in an assault when working out who has won the combat.
-&lt;I&gt;&lt;B&gt;Synapse:&lt;/B&gt; Une créature synapse permet de retirer 1 pion impact supplémentaire au groupe synaptique si celui-ci réussi son jet de ralliement (une synapse ayant la capacité Meneur peut donc enlever 2 PI au groupe synaptique si le jet est réussi). Une Dominatrix peut toujours retirer 3 pions impacts supplémentaires au groupe Nexus (la capacité Meneur donnée par la capacité Commandant Suprême est déjà incluse dans ces 3 pions impacts).
-Tant qu’une créature synapse est vivante, le groupe synaptique lui correspondant bénéficie d’un bonus de +1 pour un jet de ralliement.
-Dans le cas où toutes les créatures synapses du groupe synaptique sont détruites, les essaims instinctifs associés continuent à agir comme une seule formation, mais celle-ci subie un malus de -2 à l’initiative et perd le bonus de +1 pour le jet de ralliement.
-Les races affrontant les Tyranides ont appris au fil des combats à identifier les créatures synapses pour désorganiser les essaims. Pour cette raison, certaines créatures qui normalement devraient être de type infanterie, sont définies comme des véhicules légers.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Synapse:&lt;/B&gt; Une créature synapse permet de retirer 1 pion impact supplémentaire au groupe synaptique si celui-ci réussi son jet de ralliement (une synapse ayant la capacité Meneur peut donc enlever 2 PI au groupe synaptique si le jet est réussi). Une Dominatrix peut toujours retirer 3 pions impacts supplémentaires au groupe Nexus (la capacité Meneur donnée par la capacité Commandant Suprême est déjà incluse dans ces 3 pions impacts). &lt;BR&gt; Tant qu’une créature synapse est vivante, le groupe synaptique lui correspondant bénéficie d’un bonus de +1 pour un jet de ralliement. &lt;BR&gt; Dans le cas où toutes les créatures synapses du groupe synaptique sont détruites, les essaims instinctifs associés continuent à agir comme une seule formation, mais celle-ci subie un malus de -2 à l’initiative et perd le bonus de +1 pour le jet de ralliement. &lt;BR&gt; Les races affrontant les Tyranides ont appris au fil des combats à identifier les créatures synapses pour désorganiser les essaims. Pour cette raison, certaines créatures qui normalement devraient être de type infanterie, sont définies comme des véhicules légers.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>A formation that has Synapse units in it can capture objectives, if the formation has lost its Synapse units or did not start with any then they may only contest an objective. Plus, formations that include at least one Synapse unit don&apos;t receive blast markers for Gargoyle, Hormagaunt or Termagant units that are killed, and don&apos;t count Gargoyle, Hormagaunt or Termagant units that are lost in an assault when working out who has won the combat.</description>
     </rule>
     <rule id="5668-ac1f-7934-1b89" name="The Fast &amp; The Slithering" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Tyranid war engines, armoured vehicles and light vehicles automatically pass difficult terrain tests. Impassable terrain is still impassable to them.
-&lt;I&gt;&lt;B&gt;Mobilité:&lt;/B&gt; Les véhicules blindés et les engins de guerre Tyranides ignorent tous les tests de terrain dangereux et les véhicules légers peuvent traverser les terrains et profiter des couverts comme de l’infanterie. Les éléments de fortification (champs de mines ; barbelés etc…) et les éléments de terrains spéciaux (rivière de lave ; etc…) affectent cependant les Tyranides normalement.
-Le Hierophant, l&apos;Hydraphant et la Dominatrix peut enjamber les unités et les terrains infranchissables moins hauts que son abdomen et d’au maximum 2cm de large.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Mobilité:&lt;/B&gt; Les véhicules blindés et les engins de guerre Tyranides ignorent tous les tests de terrain dangereux et les véhicules légers peuvent traverser les terrains et profiter des couverts comme de l’infanterie. Les éléments de fortification (champs de mines ; barbelés etc…) et les éléments de terrains spéciaux (rivière de lave ; etc…) affectent cependant les Tyranides normalement. &lt;BR&gt; Le Hierophant, l&apos;Hydraphant et la Dominatrix peut enjamber les unités et les terrains infranchissables moins hauts que son abdomen et d’au maximum 2cm de large.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Tyranid war engines, armoured vehicles and light vehicles automatically pass difficult terrain tests. Impassable terrain is still impassable to them.</description>
     </rule>
     <rule id="7970-32be-cf04-fa26" name="The Hunger" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>All Tyranid formations receive a +1 modifier to their action test roll if they are rolling for an Engage or Rally roll.
-&lt;I&gt;&lt;B&gt;Implacable:&lt;/B&gt; Un essaim tyranide bénéficie toujours d’un bonus de +1 au test d’action pour un ordre d’assaut.
-Un essaim tyranide devant effectuer l’action Tenir, peut uniquement effectuer un double mouvement sans possibilité d’effectuer de soutien d’assaut.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Implacable:&lt;/B&gt; Un essaim tyranide bénéficie toujours d’un bonus de +1 au test d’action pour un ordre d’assaut. &lt;BR&gt; Un essaim tyranide devant effectuer l’action Tenir, peut uniquement effectuer un double mouvement sans possibilité d’effectuer de soutien d’assaut.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>All Tyranid formations receive a +1 modifier to their action test roll if they are rolling for an Engage or Rally roll.</description>
     </rule>
     <rule id="4f66-3e9e-3414-b71e" name="The Sky Darkens" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>A Tyranid player gains The Sky Darkens special rule after activating a bio-ship and the rule remains in play until the end of the game. While The Sky Darkens is in effect all enemy aircraft formations gain a blast marker after they activate in addition to any other Blast Markers incurred for coming under fire or leaving the table by any board edge other than their own.
-&lt;I&gt;&lt;B&gt;Le Ciel Obscurcit:&lt;/B&gt; Un joueur de Tyranides gagne &quot;le ciel obscurcit&quot; règle spéciale après l&apos;activation d&apos;un bio-navire et la règle reste en jeu jusqu&apos;à la fin du jeu. Alors que &quot;le ciel obscurcit&quot; est en effet toutes les formations d&apos;avions ennemis gagnent un pion d&apos;impact après qu&apos;ils activent en plus des autres pions d&apos;impact engagés pour venir sous le feu ou de quitter la table par un bord de la carte autre que le leur.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Le Ciel Obscurcit:&lt;/B&gt; Un joueur de Tyranides gagne &quot;le ciel obscurcit&quot; règle spéciale après l&apos;activation d&apos;un bio-navire et la règle reste en jeu jusqu&apos;à la fin du jeu. Alors que &quot;le ciel obscurcit&quot; est en effet toutes les formations d&apos;avions ennemis gagnent un pion d&apos;impact après qu&apos;ils activent en plus des autres pions d&apos;impact engagés pour venir sous le feu ou de quitter la table par un bord de la carte autre que le leur.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>A Tyranid player gains The Sky Darkens special rule after activating a bio-ship and the rule remains in play until the end of the game. While The Sky Darkens is in effect all enemy aircraft formations gain a blast marker after they activate in addition to any other Blast Markers incurred for coming under fire or leaving the table by any board edge other than their own.</description>
     </rule>
     <rule id="09ab-cc61-362f-c373" name="Toxic Spore Cloud" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Confers a &quot;-1 To Hit&quot; modifier to all INF/LV/AV units within 15 cm of the Venomthrope. This is in addition to any other modifiers that may be confered to the unit from cover or obscuration.
-&lt;I&gt;&lt;B&gt;Nuage de Spores Toxiques:&lt;/B&gt; Confère un &quot;-1 pour toucher&quot; modificateur à toutes les unités Infanterie/Véhicule Léger/Véhicule Blindé au sein de 15cm du Venomthrope. Ceci est en plus des autres modificateurs qui peuvent être conférés à l&apos;unité de la couverture ou obscurcissement.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Nuage de Spores Toxiques:&lt;/B&gt; Confère un &quot;-1 pour toucher&quot; modificateur à toutes les unités Infanterie/Véhicule Léger/Véhicule Blindé au sein de 15cm du Venomthrope. Ceci est en plus des autres modificateurs qui peuvent être conférés à l&apos;unité de la couverture ou obscurcissement.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Confers a &quot;-1 To Hit&quot; modifier to all INF/LV/AV units within 15 cm of the Venomthrope. This is in addition to any other modifiers that may be confered to the unit from cover or obscuration.</description>
     </rule>
     <rule id="cff9-4ea8-8b49-6e48" name="Transport (Nid)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Harridan: 4 unités de Gargouilles. &lt;BR&gt; Malefactor: 2 unités des Termagants, Hormagaunts, Gargouilles, Guerriers Tyranides, Zoanthropes, Raveners, Biovores. Les véhicules légers prennent 2 places. &lt;BR&gt; Mycetic Spores: Peut transporter un groupe synaptique ne comprenant que les unités suivantes: Termagants, Hormagaunts, Biovores, Rodeur, Carnifex, Prince tyranide, Guerriers Tyranides, Zoanthropes. &lt;BR&gt; Razorfiend Cruiser: 2 spores mycétiques et tout ce qu’elles contiennent. &lt;BR&gt; Hive Ship: 5 spores mycétiques et tout ce qu’elles contiennent.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Harridan: 6 Gargoyle units.
 Hive Capital Bio-Ship: 80 of the following units: Hormagants, Termagants, or Gargoyles; plus 40 of the following units: Carnifex, Hive Tyrant, Tyranid Warrios, Zoanthrope, Venomthrope, or Raveners units.
 Hive Cruiser Bio-Ship: 40 of the following units: Hormagants, Termagants, or Gargoyles; plus 20 of the following units: Carnifex, Hive Tyrant, Tyranid Warrios, Zoanthrope, Venomthrope, or Raveners units.
-Tyrannocyte: 1 formation that includes only Brute Swarm or Assault Swarm units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Harridan: 4 unités de Gargouilles.
-Malefactor: 2 unités des Termagants, Hormagaunts, Gargouilles, Guerriers Tyranides, Zoanthropes, Raveners, Biovores. Les véhicules légers prennent 2 places.
-Mycetic Spores: Peut transporter un groupe synaptique ne comprenant que les unités suivantes: Termagants, Hormagaunts, Biovores, Rodeur, Carnifex, Prince tyranide, Guerriers Tyranides, Zoanthropes.
-Razorfiend Cruiser: 2 spores mycétiques et tout ce qu’elles contiennent.
-Hive Ship: 5 spores mycétiques et tout ce qu’elles contiennent.&lt;/I&gt;</description>
+Tyrannocyte: 1 formation that includes only Brute Swarm or Assault Swarm units.</description>
     </rule>
     <rule id="013c-5afc-2aa6-34b8" name="Tyrannocyte" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>After the Tyrannocyte lands, its Tyrannocyte Spore Clusters attack all enemy units within 15cm. Each enemy formation attacked recieves a blast marker for coming under fire and a blast maker for each casualty. Then any units carried in the Tyrannocyte must disembark within 5cm of the Tyrannocyte or within 5cm of another unit from the same formation that has already landed, so long as all units are placed within 15cm of the Tyrannocyte. Tyrannocyte&apos;s may not be used to claim crossfire.
-&lt;I&gt;&lt;B&gt;Tyrannocyte:&lt;/B&gt; Après les terres de Tyrannocyte, ses Tyrannocyte Spore Clusters attaquent toutes les unités ennemies dans les 15cm. Chaque formation ennemie attaqué recieves un pion d&apos;impact pour venir sous le feu et un pion d&apos;impact pour chaque victime. Ensuite, toutes les unités transportées dans le Tyrannocyte doivent descendre à l&apos;intérieur de 5cm de la Tyrannocyte ou à l&apos;intérieur de 5cm d&apos;une autre unité de la même formation qui a déjà reçu, pour autant que toutes les unités sont placées à l&apos;intérieur de 15 cm de Tyrannocyte. Tyrannocyte ne peut pas être utilisé pour réclamer des tirs croisés.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tyrannocyte:&lt;/B&gt; Après les terres de Tyrannocyte, ses Tyrannocyte Spore Clusters attaquent toutes les unités ennemies dans les 15cm. Chaque formation ennemie attaqué recieves un pion d&apos;impact pour venir sous le feu et un pion d&apos;impact pour chaque victime. Ensuite, toutes les unités transportées dans le Tyrannocyte doivent descendre à l&apos;intérieur de 5cm de la Tyrannocyte ou à l&apos;intérieur de 5cm d&apos;une autre unité de la même formation qui a déjà reçu, pour autant que toutes les unités sont placées à l&apos;intérieur de 15 cm de Tyrannocyte. Tyrannocyte ne peut pas être utilisé pour réclamer des tirs croisés.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>After the Tyrannocyte lands, its Tyrannocyte Spore Clusters attack all enemy units within 15cm. Each enemy formation attacked recieves a blast marker for coming under fire and a blast maker for each casualty. Then any units carried in the Tyrannocyte must disembark within 5cm of the Tyrannocyte or within 5cm of another unit from the same formation that has already landed, so long as all units are placed within 15cm of the Tyrannocyte. Tyrannocyte&apos;s may not be used to claim crossfire.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

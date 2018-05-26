@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c2cb-15e3-8abc-db7c" name="Necrons: Sautekh Legion" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c2cb-15e3-8abc-db7c" name="Necrons: Sautekh Legion" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2446,7 +2446,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="9a84-cfb6-fa65-21eb" hidden="false" targetId="e23e-dd77-d6b2-50df" type="rule">
+        <infoLink id="9a84-cfb6-fa65-21eb" name="Critical Hit: C&apos;Tan" hidden="false" targetId="c815-3665-399f-488c" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3014,21 +3014,20 @@
       <modifiers/>
       <description>&lt;I&gt;none&lt;/I&gt;</description>
     </rule>
-    <rule id="e23e-dd77-d6b2-50df" name="Critical Hit: C&apos;Tan" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>Destroyed. Every unit in base contact suffers a hit (armour saves allowed).
-&lt;I&gt;&lt;B&gt;Touche Critique: C&apos;Tan:&lt;/B&gt; Détruit. Chaque unité en contact de base subit une touche (sauvegarde d&apos;armure autorisé).&lt;/I&gt;</description>
-    </rule>
     <rule id="55a1-cd39-6b94-f1fa" name="Critical Hit: Tesseract Vault" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Centre the small template on the unit and resolve as if it were a 3BP barrage. The tesseract itself is hit automatically (so two hits for being under the center).
-&lt;I&gt;&lt;B&gt;Touche Critique: Crypte Tesseract:&lt;/B&gt; Centre le petit gabarit sur l&apos;unité et de résoudre comme si elle était un barrage 3PB. Le tesseract lui-même est touché automatiquement (donc deux touches pour être sous le centre).&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Crypte Tesseract:&lt;/B&gt; Centre le petit gabarit sur l&apos;unité et de résoudre comme si elle était un barrage 3PB. Le tesseract lui-même est touché automatiquement (donc deux touches pour être sous le centre).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Centre the small template on the unit and resolve as if it were a 3BP barrage. The tesseract itself is hit automatically (so two hits for being under the center).</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -3049,10 +3048,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -3060,9 +3056,16 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Necron formations may not garrison in the Epic Tournament scenario unless fielding a Tomb Complex. To represent that a tomb may contain active Necron, the player may choose to garrison up to two Phalanx formations at the Tomb Complex.
-&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Formations Nécrons ne peut garnison dans le scénario du tournoi Epic sauf lorsque avoir aligné un mausolée. Pour représenter qu&apos;un tombeau peut contenir Nécron actif, le joueur peut choisir de garnison jusqu&apos;à deux formations de phalange au mausolée.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Formations Nécrons ne peut garnison dans le scénario du tournoi Epic sauf lorsque avoir aligné un mausolée. Pour représenter qu&apos;un tombeau peut contenir Nécron actif, le joueur peut choisir de garnison jusqu&apos;à deux formations de phalange au mausolée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Necron formations may not garrison in the Epic Tournament scenario unless fielding a Tomb Complex. To represent that a tomb may contain active Necron, the player may choose to garrison up to two Phalanx formations at the Tomb Complex.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -3075,47 +3078,79 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Portal (one for the formation). Night scythes must land to use their portals, however they are unable to fire their weapons when landing except to participate as support in an engagement.
-&lt;I&gt;&lt;B&gt;Portail Moissonneur:&lt;/B&gt; Portail (un pour la formation). Moissonneurs doivent atterrir à utiliser leurs portails, mais ils sont incapables de tirer leurs armes lors de l&apos;atterrissage, sauf pour participer en tant que support dans un engagement.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portail Moissonneur:&lt;/B&gt; Portail (un pour la formation). Moissonneurs doivent atterrir à utiliser leurs portails, mais ils sont incapables de tirer leurs armes lors de l&apos;atterrissage, sauf pour participer en tant que support dans un engagement.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Portal (one for the formation). Night scythes must land to use their portals, however they are unable to fire their weapons when landing except to participate as support in an engagement.</description>
     </rule>
     <rule id="ad15-66e0-9c25-1e04" name="Sautekh Portals" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portails Sautekh:&lt;/B&gt; Toute formation qui est dans les réserves peut entrer en jeu par l&apos;intermédiaire d&apos;un portail comme faisant partie d&apos;une activation qui permet le mouvement. Mesurer leur mouvement à l&apos;aide du portail comme point de départ. Portails Sautekh ne peut être utilisé par des véhicules blindés avec la capacité de marcheurs, d&apos;infanterie, ou les véhicules légers. Chaque portail peut être utilisé qu&apos;une seule fois par tour. &lt;BR&gt; De plus, les formations peuvent sortir par un portail inutilisé lors du déplacement et entrer de nouveau par un autre portail inutilisé sur le bord, comme faisant partie du même mouvement. Les deux portails comptent comme ayant utilisé ce tour. Les Portails Sautekh ne peuvent pas être utilisés pour retourner dans les réserves. &lt;BR&gt; Formations démoralisées qui se déplacent à travers un portail gagner un pion d&apos;impact. Si pour une raison quelconque, à la fin du mouvement d&apos;une unité ne peut pas entrer dans le tableau, ou se trouve hors de la formation, elle est détruite.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Any formation that is in the reserves may enter play via a portal as part of any activation that allows movement. Measure their movement using the portal as the starting point. Sautekh Portals can only be used by Armoured Vehicles with the walker ability, Infantry, or Light Vehicles. Each portal can be used only once per turn.
 Additionally, formations may leave through an unused portal when moving and re-enter through another unused portal on the board, as part of the same movement. Both portals count as having being used that turn. Sautekh Portals may not be used to go back into reserves.
-Broken formations which move through a portal gain a blast marker. If for any reason, at the end of the movement a unit is unable to enter the board, or is found out of formation, it is destroyed.
-&lt;I&gt;&lt;B&gt;Portails Sautekh:&lt;/B&gt; Toute formation qui est dans les réserves peut entrer en jeu par l&apos;intermédiaire d&apos;un portail comme faisant partie d&apos;une activation qui permet le mouvement. Mesurer leur mouvement à l&apos;aide du portail comme point de départ. Portails Sautekh ne peut être utilisé par des véhicules blindés avec la capacité de marcheurs, d&apos;infanterie, ou les véhicules légers. Chaque portail peut être utilisé qu&apos;une seule fois par tour.
-De plus, les formations peuvent sortir par un portail inutilisé lors du déplacement et entrer de nouveau par un autre portail inutilisé sur le bord, comme faisant partie du même mouvement. Les deux portails comptent comme ayant utilisé ce tour. Les Portails Sautekh ne peuvent pas être utilisés pour retourner dans les réserves.
-Formations démoralisées qui se déplacent à travers un portail gagner un pion d&apos;impact. Si pour une raison quelconque, à la fin du mouvement d&apos;une unité ne peut pas entrer dans le tableau, ou se trouve hors de la formation, elle est détruite.&lt;/I&gt;</description>
+Broken formations which move through a portal gain a blast marker. If for any reason, at the end of the movement a unit is unable to enter the board, or is found out of formation, it is destroyed.</description>
     </rule>
     <rule id="7aa3-7f40-f33b-a23e" name="Strategy Rating &amp; Initiative (NSL)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Sautekh Legion armies have a strategy rating of 2. All formations have an initiative rating of 1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Armées Légion Sautekh ont une valeur stratégique 2. Toutes les formations ont une initiative de 1+.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Armées Légion Sautekh ont une valeur stratégique 2. Toutes les formations ont une initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Sautekh Legion armies have a strategy rating of 2. All formations have an initiative rating of 1+.</description>
     </rule>
     <rule id="477d-9cf6-6b97-9c60" name="Transport (NSL)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Ghost Arc: 2 unités.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
-Ghost Arc: 2 units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Ghost Arc: 2 unités.&lt;/I&gt;</description>
+Ghost Arc: 2 units.</description>
     </rule>
     <rule id="ccd2-aeec-8fe0-2b83" name="Gate Projector Array" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>When performing a ground attack action the Night Scythe formation may choose to use the gate projector array instead of firing. Choose one Night Scythe in the formation; treat that unit&apos;s base as a Sautekh Portal until the end of the turn.
-&lt;I&gt;&lt;B&gt;Assemblée de Projecteur de Porte:&lt;/B&gt; Lors de l&apos;exécution d&apos;une action d&apos;attaque au sol, la formation Night Scythe peut choisir d&apos;utiliser le projecteur de porte au lieu de tirer. Choisissez une Night Scythe dans la formation; traitez la base de cette unité comme un Portail Sautekh jusqu&apos;à la fin du tour.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Assemblée de Projecteur de Porte:&lt;/B&gt; Lors de l&apos;exécution d&apos;une action d&apos;attaque au sol, la formation Night Scythe peut choisir d&apos;utiliser le projecteur de porte au lieu de tirer. Choisissez une Night Scythe dans la formation; traitez la base de cette unité comme un Portail Sautekh jusqu&apos;à la fin du tour.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>When performing a ground attack action the Night Scythe formation may choose to use the gate projector array instead of firing. Choose one Night Scythe in the formation; treat that unit&apos;s base as a Sautekh Portal until the end of the turn.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cf3d-b34c-59c8-0d0f" name="Necrons: Nihilakh Dynasty" revision="21" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cf3d-b34c-59c8-0d0f" name="Necrons: Nihilakh Dynasty" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -1754,7 +1754,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="a22a-50a8-1bef-91d9" hidden="false" targetId="e23e-dd77-d6b2-50df" type="rule">
+        <infoLink id="a22a-50a8-1bef-91d9" name="Critical Hit: C&apos;Tan" hidden="false" targetId="c815-3665-399f-488c" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2579,22 +2579,6 @@
       <modifiers/>
       <description>&lt;I&gt;none&lt;/I&gt;</description>
     </rule>
-    <rule id="e23e-dd77-d6b2-50df" name="Critical Hit: C&apos;Tan" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: C&apos;Tan&lt;/B&gt;La unidad es destruida, y todas las unidades en contacto con la base sufren un impacto.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Destroyed. Every unit in base contact suffers a hit (armour saves allowed).
-&lt;I&gt;&lt;B&gt;Touche Critique: C&apos;Tan:&lt;/B&gt; Détruit. Chaque unité en contact de base subit une touche (sauvegarde d&apos;armure autorisé).&lt;/I&gt;</description>
-    </rule>
     <rule id="5ac7-a362-09c7-50c1" name="Critical Hit: Pylon" hidden="false">
       <profiles/>
       <rules/>
@@ -2607,9 +2591,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Pylon:&lt;/B&gt; Détruit. Chaque unité dans un rayon de 3D6cm subit une touche (sauvegarde d&apos;armure autorisé).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The unit is destroyed. All units within 3D6cm suffer a hit (armour saves allowed).
-&lt;I&gt;&lt;B&gt;Touche Critique: Pylon:&lt;/B&gt; Détruit. Chaque unité dans un rayon de 3D6cm subit une touche (sauvegarde d&apos;armure autorisé).&lt;/I&gt;</description>
+      <description>The unit is destroyed. All units within 3D6cm suffer a hit (armour saves allowed).</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -2623,10 +2613,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -2642,11 +2629,17 @@ netea-tournament-pack-2017-01-03</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Ghost Arc: 2 unités.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
-Ghost Arc: 2 units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Ghost Arc: 2 unités.&lt;/I&gt;</description>
+Ghost Arc: 2 units.</description>
     </rule>
     <rule id="2a7b-6992-6bb6-91b3" name="Strategy Rating &amp; Initiative (NDN)" hidden="false">
       <profiles/>
@@ -2666,43 +2659,76 @@ Ghost Arc: 2 unités.&lt;/I&gt;</description>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les nécrons ont une valeur stratégique de 2+, une valeur d&apos;initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Necron armies have a strategy rating of 2. All Necron formations have an initiative rating of 1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les nécrons ont une valeur stratégique de 2+, une valeur d&apos;initiative de 1+.&lt;/I&gt;</description>
+      <description>Necron armies have a strategy rating of 2. All Necron formations have an initiative rating of 1+.</description>
     </rule>
     <rule id="ab93-af53-5f75-ff58" name="This Is Our World" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Any time a Necron unit with Infantry or Armoured Vehicles in it falls back, it is removed from play and must be placed so that at least half (rounding up) of the models in the unit are within 20cm of an objective that is on the Necron side of the table in the same state as when they where removed. If it&apos;s impossible to place the unit like this the unit is removed from play and is considered destroyed. If the entire unit has the Teleport ability it can choose to be placed in reserve instead.
-&lt;I&gt;&lt;B&gt;C&apos;est Notre Monde:&lt;/B&gt; Chaque fois qu&apos;une unité Necron avec des véhicules blindés ou une infanterie recule, elle est retirée du jeu et doit être placée de telle sorte qu&apos;au moins la moitié (arrondi) des modèles dans l&apos;unité soit à moins de 20 cm d&apos;un objectif qui se trouve sur le côté Necron de la table, dans le même état que lorsqu&apos;ils sont supprimés. S&apos;il est impossible de placer l&apos;appareil comme ceci, l&apos;unité est retirée du jeu et est considérée comme détruite. Si l&apos;unité entière a la capacité de téléportation, il peut choisir d&apos;être mis en réserve au lieu.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;C&apos;est Notre Monde:&lt;/B&gt; Chaque fois qu&apos;une unité Necron avec des véhicules blindés ou une infanterie recule, elle est retirée du jeu et doit être placée de telle sorte qu&apos;au moins la moitié (arrondi) des modèles dans l&apos;unité soit à moins de 20 cm d&apos;un objectif qui se trouve sur le côté Necron de la table, dans le même état que lorsqu&apos;ils sont supprimés. S&apos;il est impossible de placer l&apos;appareil comme ceci, l&apos;unité est retirée du jeu et est considérée comme détruite. Si l&apos;unité entière a la capacité de téléportation, il peut choisir d&apos;être mis en réserve au lieu.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Any time a Necron unit with Infantry or Armoured Vehicles in it falls back, it is removed from play and must be placed so that at least half (rounding up) of the models in the unit are within 20cm of an objective that is on the Necron side of the table in the same state as when they where removed. If it&apos;s impossible to place the unit like this the unit is removed from play and is considered destroyed. If the entire unit has the Teleport ability it can choose to be placed in reserve instead.</description>
     </rule>
     <rule id="9e18-d679-2d86-08c4" name="Tomb Guardians" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Any valid formation in an N.D.N. army may garrison using the normal rules in the Grand Tournament Scenario.
-&lt;I&gt;&lt;B&gt;Gardiens de Tombe:&lt;/B&gt; Toute formation valide dans une armée NDN peut être garnie en utilisant les règles normales dans le scénario du grand tournoi.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Gardiens de Tombe:&lt;/B&gt; Toute formation valide dans une armée NDN peut être garnie en utilisant les règles normales dans le scénario du grand tournoi.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Any valid formation in an N.D.N. army may garrison using the normal rules in the Grand Tournament Scenario.</description>
     </rule>
     <rule id="aa15-24a4-d840-737f" name="The Line Is Drawn" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Formations receive +1 bonus to Marshal and Overwatch orders, and they can not take a March order. When any formation is broken it is still allowed its armour save for hits caused by blast markers.
-&lt;I&gt;&lt;B&gt;La Ligne est Tracée:&lt;/B&gt; Les formations reçoivent +1 bonus aux ordres Regroupement et l&apos;État d&apos;Alerte, et ils ne peuvent pas prendre une commande Redéploiement. Lorsque toute formation est démoralisée, il est encore permis son sauvegarde d&apos;armure pour les touches résultant des pions d&apos;impact.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La Ligne est Tracée:&lt;/B&gt; Les formations reçoivent +1 bonus aux ordres Regroupement et l&apos;État d&apos;Alerte, et ils ne peuvent pas prendre une commande Redéploiement. Lorsque toute formation est démoralisée, il est encore permis son sauvegarde d&apos;armure pour les touches résultant des pions d&apos;impact.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Formations receive +1 bonus to Marshal and Overwatch orders, and they can not take a March order. When any formation is broken it is still allowed its armour save for hits caused by blast markers.</description>
     </rule>
     <rule id="371b-03f6-0966-6831" name="Lesser Worlds" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Petits Mondes:&lt;/B&gt; La sauvegarde d&apos;armure de Guerriers et Dépeceurs est diminué de un (1), à partir de 4+ à 5+. &lt;BR&gt; Note du Développeur BattleScribe: la sauvegarde affichée dans le .pdf est encore 4+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Warriors and Flayed Ones armour save is reduced by one (1), from 4+ to 5+.
-BattleScribe Developer&apos;s Note: the save shown in the .pdf is still 4+.
-&lt;I&gt;&lt;B&gt;Petits Mondes:&lt;/B&gt; La sauvegarde d&apos;armure de Guerriers et Dépeceurs est diminué de un (1), à partir de 4+ à 5+.
-Note du Développeur BattleScribe: la sauvegarde affichée dans le .pdf est encore 4+.&lt;/I&gt;</description>
+BattleScribe Developer&apos;s Note: the save shown in the .pdf is still 4+.</description>
     </rule>
     <rule id="d5eb-058e-a61b-c3c8" name="Critical Hit: Matrix Failure" hidden="false">
       <profiles/>
@@ -2716,23 +2742,33 @@ Note du Développeur BattleScribe: la sauvegarde affichée dans le .pdf est enco
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Échec de la Matrice:&lt;/B&gt; Détruit. Chaque unité dans un rayon de D6cm subit une touche (sauvegarde d&apos;armure autorisé).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Destroyed. Every unit within D6cm suffers a hit (armour saves allowed).
-&lt;I&gt;&lt;B&gt;Touche Critique: Échec de la Matrice:&lt;/B&gt; Détruit. Chaque unité dans un rayon de D6cm subit une touche (sauvegarde d&apos;armure autorisé).&lt;/I&gt;</description>
+      <description>Destroyed. Every unit within D6cm suffers a hit (armour saves allowed).</description>
     </rule>
     <rule id="a083-548c-9e41-fbfe" name="Critical Hit: Tomb Sphynx" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Le Réacteur se Fissure:&lt;/B&gt; Lancez 1D6 à la fin de chaque tour pour chaque fissure. &lt;BR&gt; 6: le unité explose et inflige une touche sur un 5+ aux unités à 10cm &lt;BR&gt; 3-5: le unité perd 1 DC &lt;BR&gt; 1-2: la fissure est réparée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Roll a D6 in the end phase of each turn: 
 6: the unit is destroyed and all units within 510cm suffer a hit on a roll of 5+
 3-5: the unit suffers one more point of damage
-1-2: the breach has been repaired.
-&lt;I&gt;&lt;B&gt;Le Réacteur se Fissure:&lt;/B&gt; Lancez 1D6 à la fin de chaque tour pour chaque fissure.
-6: le unité explose et inflige une touche sur un 5+ aux unités à 10cm
-3-5: le unité perd 1 DC
-1-2: la fissure est réparée.&lt;/I&gt;</description>
+1-2: the breach has been repaired.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

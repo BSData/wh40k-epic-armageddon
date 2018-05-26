@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7c7f-2ed3-ccc3-ccd0" name="Imperial Guard: Catachan" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7c7f-2ed3-ccc3-ccd0" name="Imperial Guard: Catachan" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="61ab-00f3-d9df-6ab3" hidden="false" targetId="7221-1d6c-b69e-648b" type="rule">
+    <infoLink id="61ab-00f3-d9df-6ab3" name="Strategy Rating &amp; Initiative (Cat)" hidden="false" targetId="7221-1d6c-b69e-648b" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="dfb7-4bf3-573c-0ed4" name="Strategy Rating &amp; Initiative (Cat)************" hidden="false" targetId="b577-583a-f512-09a2" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -5694,7 +5700,13 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="aa30-211f-7c3a-2e22" hidden="false" targetId="5f23-2a7a-5162-9412" type="rule">
+        <infoLink id="aa30-211f-7c3a-2e22" name="Commissars" hidden="false" targetId="5f23-2a7a-5162-9412" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="b005-852d-9d7b-7cb2" name="Commissars**********" hidden="false" targetId="851d-f4a2-8d6f-7cb3" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -7274,47 +7286,66 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Objets Piégés:&lt;/B&gt; En cas de défense lors du premier tour d&apos;assaut, la moitié des unités avec la capacité pièges gagner la capacité de frappe en première pour toutes les armes. Comptez les unités dans la formation avec des pièges et divisez par deux, arrondissant, pour trouver le nombre d&apos;unités qui gagnent la capacité de la frappe en première.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>When defending during the first round of an assault, one unit in two with the Booby Traps rule gains the First Strike special rule on all weapons. Count up the units in the formation with Booby Traps and divide by two, rounding up, to find the number of units who gain the First Strike special rule.
-&lt;I&gt;&lt;B&gt;Objets Piégés:&lt;/B&gt; En cas de défense lors du premier tour d&apos;assaut, la moitié des unités avec la capacité pièges gagner la capacité de frappe en première pour toutes les armes. Comptez les unités dans la formation avec des pièges et divisez par deux, arrondissant, pour trouver le nombre d&apos;unités qui gagnent la capacité de la frappe en première.&lt;/I&gt;</description>
+      <description>When defending during the first round of an assault, one unit in two with the Booby Traps rule gains the First Strike special rule on all weapons. Count up the units in the formation with Booby Traps and divide by two, rounding up, to find the number of units who gain the First Strike special rule.</description>
     </rule>
     <rule id="454e-d063-7679-aaa9" name="Catachan Devils" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>May be split up and added to the Regimental HQ or Catachan Infantry Companies, or may be fielded as a single formation in their own right.
-&lt;I&gt;&lt;B&gt;Diables de Catachan:&lt;/B&gt; Peut être divisé et ajouté à la QG Régimentaire ou les Compagnies d&apos;Infanterie de Catachan, ou peut être mis en service en une seule formation dans leur propre droit.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Diables de Catachan:&lt;/B&gt; Peut être divisé et ajouté à la QG Régimentaire ou les Compagnies d&apos;Infanterie de Catachan, ou peut être mis en service en une seule formation dans leur propre droit.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>May be split up and added to the Regimental HQ or Catachan Infantry Companies, or may be fielded as a single formation in their own right.</description>
     </rule>
     <rule id="5f23-2a7a-5162-9412" name="Commissars" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Each primary formation in your army must take one Commissar.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Pour chaque grande compagnie de la Garde qu&apos;inclut votre armée un commissaire est automatiquement intégré dans leur effectif.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Each primary formation in your army must take one Commissar.">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="Mobile Forces of Catachan may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points. Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Les Forces Mobiles de Catachan gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Mobile Forces of Catachan may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points. Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7a7-6f49-82df-8a67" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="An Imperial Guard army may include up 2D6 Commissar Characters. The Commissar characters are a free upgrade. If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Une armée de la Garde Impériale peut inclure jusqu&apos;à 2D6 commissaires. Les commissaires sont une mise à jour gratuite. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaires peuvent être attachés à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un commissaire par formation. Si vous avez plus que commissaires formations tout excès sont perdus.&lt;/I&gt;">
+        <modifier type="set" field="description" value="An Imperial Guard army may include up 2D6 Commissar Characters. The Commissar characters are a free upgrade. If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost.">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Catachan Deathworld Veteran armies include one Commissar for every 1000 points. If there is a Supreme Commander present, then the first Commissar must join that formation. Subsequent Commissars can be allocated to any unit in any order, though no formation may have more than one Commissar. Any excess Commissars are lost.
-&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Armées Vétérans du Monde Hostile de Catachan inclure un commissaire pour chaque 1000 points. S&apos;il y a un commandant suprême présent, le premier commissaire doit se joindre à cette formation. Commissaires suivants peuvent être attribués à une unité dans un ordre quelconque, mais aucune formation ne peut avoir plus d&apos;un commissaire. Tout excédent commissaires sont perdus.&lt;/I&gt;</description>
+      <description>Catachan Deathworld Veteran armies include one Commissar for every 1000 points. If there is a Supreme Commander present, then the first Commissar must join that formation. Subsequent Commissars can be allocated to any unit in any order, though no formation may have more than one Commissar. Any excess Commissars are lost.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -7335,10 +7366,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-Specialist Games Forum CatachanArmylist
+      <description>Specialist Games Forum CatachanArmylist
 m1320001_EPIC_updated_rulebook-sections_5_Oct09
 m1320002_EPIC_updated_rulebook-sections_6_Oct09
 m1320005_EPIC_updated_rulebook-ref_Oct09
@@ -7351,9 +7379,16 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Enables the mechanised «Mobile Forces of Catachan» army list instead of the «Catachan Deathworld Veterans».
-&lt;I&gt;&lt;B&gt;Forces Mobiles de Catachan:&lt;/B&gt; Permet la liste mécanisée des «Forces Mobiles de Catachan» au lieu de les «Vétérans du Monde Hostile de Catachan».&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Forces Mobiles de Catachan:&lt;/B&gt; Permet la liste mécanisée des «Forces Mobiles de Catachan» au lieu de les «Vétérans du Monde Hostile de Catachan».&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Enables the mechanised «Mobile Forces of Catachan» army list instead of the «Catachan Deathworld Veterans».</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -7368,30 +7403,36 @@ Mobile Forces Of Catachan rev 0.3.4</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Catachan armies have Strategy Rating 2. All formations have Initiative Rating 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Catachan armies have Strategy Rating 2. All formations have Initiative Rating 2+.">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="Warriors of Catachan have Strategy Rating 2. All formations have Initiative Rating 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Guerriers de Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Warriors of Catachan have Strategy Rating 2. All formations have Initiative Rating 2+.">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="Mobile Forces of Catachan have Strategy Rating 2. All formations have Initiative Rating 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Forces Mobiles de Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Mobile Forces of Catachan have Strategy Rating 2. All formations have Initiative Rating 2+.">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7a7-6f49-82df-8a67" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Catachan Deathworld Veterans have Strategy Rating 2. All formations have Initiative Rating 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Vétérans du Monde Hostile de Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;</description>
+      <description>Catachan Deathworld Veterans have Strategy Rating 2. All formations have Initiative Rating 2+.</description>
     </rule>
     <rule id="9357-feab-06ce-5e84" name="Transport (Cat)" hidden="false">
       <profiles/>
@@ -7403,13 +7444,79 @@ Albatross: 8 Infantry units, Ogryns count as 2.
 Chimera: 2 Infantry units or 1 Ogryn unit.
 Valkyrie: 2 Infantry units or 1 Ogryn unit.
 Valkyrie Sky Talon: 2 Sentinels.
-Vendetta: 2 Infantry units or 1 Ogryn unit.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Albatross: 8 unités d’infanterie, les ogryns comptent pour 2 unités.
-Chimera: 2 unités d’infanterie, les ogryns comptent pour 2 unités.
-Valkyrie: 2 unités d’infanterie, les ogryns comptent pour 2 unités.
-Valkyrie Sky Talon: 2 Sentinelles.
-Vendetta: 2 unités d’infanterie, les ogryns comptent pour 2 unités.&lt;/I&gt;</description>
+Vendetta: 2 Infantry units or 1 Ogryn unit.</description>
+    </rule>
+    <rule id="b577-583a-f512-09a2" name="Strategy Rating &amp; Initiative (Cat)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Guerriers de Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Forces Mobiles de Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7a7-6f49-82df-8a67" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Vétérans du Monde Hostile de Catachan ont une valeur stratégique de 2. Toutes les formations ont une initiative de 2+.&lt;/I&gt;</description>
+    </rule>
+    <rule id="851d-f4a2-8d6f-7cb3" name="Commissars" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Pour chaque grande compagnie de la Garde qu&apos;inclut votre armée un commissaire est automatiquement intégré dans leur effectif.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Les Forces Mobiles de Catachan gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7a7-6f49-82df-8a67" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Une armée de la Garde Impériale peut inclure jusqu&apos;à 2D6 commissaires. Les commissaires sont une mise à jour gratuite. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaires peuvent être attachés à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un commissaire par formation. Si vous avez plus que commissaires formations tout excès sont perdus.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Armées Vétérans du Monde Hostile de Catachan inclure un commissaire pour chaque 1000 points. S&apos;il y a un commandant suprême présent, le premier commissaire doit se joindre à cette formation. Commissaires suivants peuvent être attribués à une unité dans un ordre quelconque, mais aucune formation ne peut avoir plus d&apos;un commissaire. Tout excédent commissaires sont perdus.&lt;/I&gt;</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

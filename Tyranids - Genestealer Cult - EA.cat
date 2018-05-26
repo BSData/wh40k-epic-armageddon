@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8d00-769c-30c4-2880" name="Tyranids: Genestealer Cult" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8d00-769c-30c4-2880" name="Tyranids: Genestealer Cult" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -997,7 +997,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="b5f7-af77-c4b8-1292" hidden="false" targetId="277e-7539-0690-7a61" type="selectionEntryGroup">
+        <entryLink id="b5f7-af77-c4b8-1292" name="Lang (beta)" hidden="false" targetId="277e-7539-0690-7a61" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5256,9 +5256,16 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Psychic Amplifier destroyed. Further Critical cause additional DC of damage.
-&lt;I&gt;&lt;B&gt;Touche Critique: Ark:&lt;/B&gt; L&apos;amplificateur psychique est détruit. Les touches critiques postérieur provoquent un CD supplémentaire de dommages.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Ark:&lt;/B&gt; L&apos;amplificateur psychique est détruit. Les touches critiques postérieur provoquent un CD supplémentaire de dommages.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Psychic Amplifier destroyed. Further Critical cause additional DC of damage.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -5271,9 +5278,16 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Fanatics making an attack in base contact (contact) are immediately removed following resolution of their attack. Any Fanatics removed in this way are not counted as a casualty when resolving the combat.
-&lt;I&gt;&lt;B&gt;Les Fanatiques:&lt;/B&gt; Les fanatiques qui font une attaque dans le contact de base (contact) sont immédiatement retirés après la résolution de leur attaque. Tous les fanatiques retirés de cette manière ne sont pas comptés comme une victime lors de la résolution du combat.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Fanatiques:&lt;/B&gt; Les fanatiques qui font une attaque dans le contact de base (contact) sont immédiatement retirés après la résolution de leur attaque. Tous les fanatiques retirés de cette manière ne sont pas comptés comme une victime lors de la résolution du combat.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Fanatics making an attack in base contact (contact) are immediately removed following resolution of their attack. Any Fanatics removed in this way are not counted as a casualty when resolving the combat.</description>
     </rule>
     <rule id="2420-bf00-cdb4-353d" name="Father&apos;s Will" hidden="false">
       <profiles/>
@@ -5287,21 +5301,23 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Volonté du Père:&lt;/B&gt;Une formation qui contient une unité avec &quot;La Volonté du Père&quot; ne reçoit pas des Pions d&apos;Impact pour aucun Hybride ou des Frères Brood tués et ne compte pas ces unités lors du calcul perd dans une agression lors du calcul de qui a gagné le combat. &lt;BR&gt; Les formations qui contenaient une unité avec «La Volonté du Père» ne peuvent pas capturer un objectif s&apos;ils ont perdu cette unité. Ils peuvent toujours contester les objectifs.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>A formation that contains a unit with &quot;The Father&apos;s Will&quot; do not receive blast markers for any Hybrid or Brood Brothers killed and don’t count these units when calculating loses in an assault when calculating who has won combat.
-Formations that contained a unit with &quot;The Father&apos;s Will&quot; cannot capture an objective if they have lost this unit. They may still contest objectives.
-&lt;I&gt;&lt;B&gt;Volonté du Père:&lt;/B&gt;Une formation qui contient une unité avec &quot;La Volonté du Père&quot; ne reçoit pas des Pions d&apos;Impact pour aucun Hybride ou des Frères Brood tués et ne compte pas ces unités lors du calcul perd dans une agression lors du calcul de qui a gagné le combat.
-Les formations qui contenaient une unité avec «La Volonté du Père» ne peuvent pas capturer un objectif s&apos;ils ont perdu cette unité. Ils peuvent toujours contester les objectifs.&lt;/I&gt;</description>
+Formations that contained a unit with &quot;The Father&apos;s Will&quot; cannot capture an objective if they have lost this unit. They may still contest objectives.</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -5317,11 +5333,16 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Au Nom du Père!:&lt;/B&gt; L’unité qui contient le patriarche devient sans peur. Si Ce dernier est détruit, l’unité démoralise automatiquement et toutes les unités de l’armée gagnent un pion impact. &lt;BR&gt; Si la formation qui contient le patriarche ou le magus est motorisée, elle reçoit gratuitement une limousine blindée afin de transporter ceux-ci (une limousine par patriarche/magus présent dans la formation).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The unit that contains the Patriarch gains Fearless. If he is destroyed, the unit is automatically broken and all army units take a Blast Marker.
-If the formation that contains the Patriarch or the Magus is mechanised, it receives 1 free Armoured Limousine to transport them (1 limousine per Patriarch / Magus present in the formation).
-&lt;I&gt;&lt;B&gt;Au Nom du Père!:&lt;/B&gt; L’unité qui contient le patriarche devient sans peur. Si Ce dernier est détruit, l’unité démoralise automatiquement et toutes les unités de l’armée gagnent un pion impact.
-Si la formation qui contient le patriarche ou le magus est motorisée, elle reçoit gratuitement une limousine blindée afin de transporter ceux-ci (une limousine par patriarche/magus présent dans la formation).&lt;/I&gt;</description>
+If the formation that contains the Patriarch or the Magus is mechanised, it receives 1 free Armoured Limousine to transport them (1 limousine per Patriarch / Magus present in the formation).</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -5335,35 +5356,53 @@ GENESTEALER CULT Reference Sheet</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Genestealer Cult armies have a Strategy rating of 2. All formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La secte genestealer a une valeur stratégique de 2. Toutes les formations de la secte genestealer ont une initiative de 2+. Les formations de gangers ont une initiative de 3+. Les unités de genestealers et de zoats ont une iniative de 1+.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La secte genestealer a une valeur stratégique de 2. Toutes les formations de la secte genestealer ont une initiative de 2+. Les formations de gangers ont une initiative de 3+. Les unités de genestealers et de zoats ont une iniative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Genestealer Cult armies have a Strategy rating of 2. All formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="4b83-b47b-a40f-14da" name="Transport (GC)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Armoured Limousine: 1 Patriarche ou 1 socle d’infanterie. &lt;BR&gt; Chimera: 1 unité d&apos;ogryns ou 2 unités de gardes impériaux, commandants, commandant suprême, snipers, escouades d&apos;appui feu. &lt;BR&gt; Land Transporter: 2 socles d’infanterie ou un canon antiaérien.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Cult Civilian Vehicle: 2 of the following units: Brood Brothers, Brood Fire Support, Genestealers, Genestealer Hybrid, Genestealer Patriarch.
-Chimera: 2 of the following units: Brood Brothers, Brood Fire Support, Genestealers, Genestealer Hybrid, Genestealer Patriarch.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Armoured Limousine: 1 Patriarche ou 1 socle d’infanterie.
-Chimera: 1 unité d&apos;ogryns ou 2 unités de gardes impériaux, commandants, commandant suprême, snipers, escouades d&apos;appui feu.
-Land Transporter: 2 socles d’infanterie ou un canon antiaérien.&lt;/I&gt;</description>
+Chimera: 2 of the following units: Brood Brothers, Brood Fire Support, Genestealers, Genestealer Hybrid, Genestealer Patriarch.</description>
     </rule>
-    <rule id="1e82-3795-6d57-a9a4" name="Tunneller" hidden="false">
+    <rule id="1e82-3795-6d57-a9a4" name="Tunneller (GC)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tunnelier:&lt;/B&gt; Un tunnelier est déployé au même moment et de la même manière qu’un vaisseau spatial. Les unités transportées dans un tunnelier sont gardées en réserve. Définissez ensuite une zone de largage. Un tunnelier peut apparaître dans votre moitié de table dès le deuxième tour et dans la moitié de table adverse dès le troisième tour. Il est déployé avant le jet de stratégie au début du tour indiqué, aux coordonnées prédéfinies. Un tunnelier et toutes les unités qu’il transporte peuvent agir normalement dès leur tour d’arrivée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Formations where all of the units have Tunneller (or are transported in units that have the ability) may be kept off the table and can appear at the start of the second turn or after. Set up the units touching their own side&apos;s table edge before the battle starts at the same time that spacecraft are setup. Any units transported in the tunneler should be placed to one side at this time too.
 Secretly write down the location where the tunneller will surface at the same time and in the same manner that you record the coordinates of a drop zone. You must also secretly record when the tunneller will surface. If it is going to surface in your half of the table it may arrive from the second turn onwards. If it is going to surface in the opposing half of the table, it may arrive from turn three onwards.
 Set up the tunneller at the start of the stated turn, before placing units with teleport, at the location you wrote down. Any units being transported are allowed to disembark immediately upon surfacing. Surfacing does not count as movement for the purposes of triggering overwatch fire. Disembarking triggers overwatch fire as normal.
 If the tunneller surfaces on terrain that is impassable for it, under a friendly unit, or in an enemy zone of control then the unit should be moved by the opposing player to the nearest area where it can surface.
 Formations of multiple tunnellers need only record one location where they will surface. Place a unit at this location, or within 5cm of another unit that has already been placed, so long as all units are placed within 15cm of the location and on the appropriate half of the table.
-Tunnellers, and any units being transported in them, may take an action on the turn they appear.
-&lt;I&gt;&lt;B&gt;Tunnelier:&lt;/B&gt; Un tunnelier est déployé au même moment et de la même manière qu’un vaisseau spatial. Les unités transportées dans un tunnelier sont gardées en réserve. Définissez ensuite une zone de largage. Un tunnelier peut apparaître dans votre moitié de table dès le deuxième tour et dans la moitié de table adverse dès le troisième tour. Il est déployé avant le jet de stratégie au début du tour indiqué, aux coordonnées prédéfinies. Un tunnelier et toutes les unités qu’il transporte peuvent agir normalement dès leur tour d’arrivée.&lt;/I&gt;</description>
+Tunnellers, and any units being transported in them, may take an action on the turn they appear.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

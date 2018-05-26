@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a01c-140c-6763-9a8f" name="Eldar: Fir Iolarion Titan Clan" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a01c-140c-6763-9a8f" name="Eldar: Fir Iolarion Titan Clan" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2363,10 +2363,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #55
 Fanatic #02
 Fanatic #13</description>
@@ -2383,9 +2380,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Only War Walkers are allowed to garrison in the Grand Tournament game scenario.
-&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;</description>
+      <description>Only War Walkers are allowed to garrison in the Grand Tournament game scenario.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -2406,21 +2409,32 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Fir Iolarion possède une Valeur Stratégique de 4. Les Titans ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.  Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Fir Iolarion armies have a Strategy rating of 4. All Titan formations have an initiative rating of 1+. All other formations have an initiative rating of 2+.
-Harlequins have Strategy Rating 5 and an Initiative rating of 1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Fir Iolarion possède une Valeur Stratégique de 4. Les Titans ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.
-Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+&lt;/I&gt;</description>
+Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
     </rule>
     <rule id="3ff6-3d61-f51c-6e0c" name="Transport (FI)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Wave Serpent: 2 unités d&apos;infanterie (sauf Plateformes de Support, Réacteurs Dorsaux, ou Montés).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
-Wave Serpent: 2 infantry units (except Support Weapon Platforms, Jump Packs or Mounted).
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Wave Serpent: 2 unités d&apos;infanterie (sauf Plateformes de Support, Réacteurs Dorsaux, ou Montés).&lt;/I&gt;</description>
+Wave Serpent: 2 infantry units (except Support Weapon Platforms, Jump Packs or Mounted).</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2854,12 +2868,27 @@ Wave Serpent: 2 unités d&apos;infanterie (sauf Plateformes de Support, Réacteu
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Après placement des objectifs, le joueur eldar remplace l&apos;un des objectifs de sa moitié de table par un portail fantôme. Celui-ci est indestructible et fonctionne à la fois comme un objectif et un portail fantôme d&apos;un point de vue des règles du jeu.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Al principio del juego, designa un objetivo de tu mitad de la mesa como Puerta Fantasmal, antes del despliegue de naves espaciales y patrullas. Para propósitos de reglas, la Puerta Fantasmal funciona como un portal a la telaraña, y como un objetivo. No puede ser destruida.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Infantry" characteristicTypeId="36c8-6d92-af3f-a836" value="May use"/>
         <characteristic name="Vehicle" characteristicTypeId="1297-f4e7-4126-0a6a" value="Light Vehicles &amp; Armoured Vehicles that have Walker may use"/>
         <characteristic name="War Engine" characteristicTypeId="8902-a4d6-b39b-ca60" value="Impassable"/>
-        <characteristic name="Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
+        <characteristic name="Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="The Eldar player may choose to replace one of the Objective markers in his half of the table with a Wraithgate. It functions both as a Webway portal and as an objective for rules purposes. It may not be attacked or destroyed."/>
       </characteristics>
     </profile>
     <profile id="c0d1-e8b5-3700-3a7e" name="Wraithship" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">

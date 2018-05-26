@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="782f-e39b-52fc-5ffc" name="Squats" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="782f-e39b-52fc-5ffc" name="Squats" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -7875,17 +7875,30 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Sagesse ancestrale:&lt;/B&gt; Le joueur Squat peut ignorer la peine -1 à reprendre l&apos;initiative pour une quelconque formation par tour.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Squat player may ignore the -1 penalty to retain for any one formation per turn.
-&lt;I&gt;&lt;B&gt;Sagesse ancestrale:&lt;/B&gt; Le joueur Squat peut ignorer la peine -1 à reprendre l&apos;initiative pour une quelconque formation par tour.&lt;/I&gt;</description>
+      <description>Squat player may ignore the -1 penalty to retain for any one formation per turn.</description>
     </rule>
-    <rule id="c062-677c-71a5-c01c" name="Automaton" hidden="false">
+    <rule id="c062-677c-71a5-c01c" name="Automaton (Squat)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Units with this rule have a very limited capacity to carry out independent actions. Unless they are part of a formation that includes other units that do not have this rule the formation can only take Hold, Engage, Marshall, Sustained Fire and Overwatch actions.
-&lt;I&gt;&lt;B&gt;Automate:&lt;/B&gt; Les unités avec cette règle ont une capacité très limitée de mener des actions indépendantes. À moins qu&apos;ils font partie d&apos;une formation qui comprend d&apos;autres unités qui ne possèdent pas cette règle, la formation ne peut prendre les actions suivement: Tenir, Assaut, Regroupement, Tir Soutenu et l&apos;État d&apos;Alerte.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Automate:&lt;/B&gt; Les unités avec cette règle ont une capacité très limitée de mener des actions indépendantes. À moins qu&apos;ils font partie d&apos;une formation qui comprend d&apos;autres unités qui ne possèdent pas cette règle, la formation ne peut prendre les actions suivement: Tenir, Assaut, Regroupement, Tir Soutenu et l&apos;État d&apos;Alerte.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Units with this rule have a very limited capacity to carry out independent actions. Unless they are part of a formation that includes other units that do not have this rule the formation can only take Hold, Engage, Marshall, Sustained Fire and Overwatch actions.</description>
     </rule>
     <rule id="14c0-78b7-232f-6f79" name="Critical Hit: Overlord" hidden="false">
       <profiles/>
@@ -7899,9 +7912,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: L&apos;appareil s&apos;écrase:&lt;/B&gt; 3D6cm disperse de façon aléatoire et est détruit. Toute unité à moins de 5 cm du site du crash est soumis à une touche sur le Tableau des Barrages égal à 3PB.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Scatters 3D6cm randomly and is destroyed. Any unit within 5cm of the crash site is subject to a hit on the Blast Template chart equal to 3BP.
-&lt;I&gt;&lt;B&gt;Touche Critique: L&apos;appareil s&apos;écrase:&lt;/B&gt; 3D6cm disperse de façon aléatoire et est détruit. Toute unité à moins de 5 cm du site du crash est soumis à une touche sur le Tableau des Barrages égal à 3PB.&lt;/I&gt;</description>
+      <description>Scatters 3D6cm randomly and is destroyed. Any unit within 5cm of the crash site is subject to a hit on the Blast Template chart equal to 3BP.</description>
     </rule>
     <rule id="4dad-8ccb-e76d-dba5" name="Critical Hit: Colossus" hidden="false">
       <profiles/>
@@ -7915,69 +7934,61 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="Immobilised, subsequent critical hits cause an additional 1DC of damage.&lt;BR&gt;&lt;I&gt;&lt;B&gt;Touche Critique: Leviathan:&lt;/B&gt; Immobilisé, tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Leviathan:&lt;/B&gt; Immobilisé, tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Immobilised, subsequent critical hits cause an additional 1DC of damage.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Colossus:&lt;/B&gt; Prend 1 point de dégâts supplémentaires et se immobilisé. Touches critiques ultérieures détruire l&apos;unité.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Takes 1 additional point of damage and is immobilised. Subsequent critical hits destroy the unit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Colossus:&lt;/B&gt; Prend 1 point de dégâts supplémentaires et se immobilisé. Touches critiques ultérieures détruire l&apos;unité.&lt;/I&gt;</description>
+      <description>Takes 1 additional point of damage and is immobilised. Subsequent critical hits destroy the unit.</description>
     </rule>
     <rule id="62ac-72dd-a352-b3ad" name="Critical Hit: Cyclops" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="On a roll of 5+, the Cyclops takes 1DC damage when the Hellfury Cannon fires. Subsequent critical hits cause an additional 1DC of damage.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Touche Critique: Cyclope:&lt;/B&gt; Sur un résultat de 5+, le Cyclope subit des dégâts 1CD lorsque le Canon Furie est tiré. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Takes 1 additional point of damage and may no longer fire its Hellfury Canon. Subsequent critical hits destroy the unit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Cyclope:&lt;/B&gt; Prend 1 point de dégâts supplémentaires et ne peut plus tirer son Canon Furie. Touches critiques ultérieures détruire l&apos;unité.&lt;/I&gt;</description>
-    </rule>
-    <rule id="102f-1957-326a-439e" name="Critical Hit: Land Train" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="The last battle car in line is destroyed.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Touche Critique: Train Blindé:&lt;/B&gt; Le dernier wagon de bataille en ligne est détruite.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The last battle car in line is destroyed. If no battle cars remain the Land Train is destroyed.
-&lt;I&gt;&lt;B&gt;Touche Critique: Train Blindé:&lt;/B&gt; Le dernier wagon de bataille en ligne est détruite. Si aucun des wagons de bataille restent le Train Blindé est détruit.&lt;/I&gt;</description>
-    </rule>
-    <rule id="73ee-c5a5-1ebd-c31d" name="Critical Hit: Large Blast" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>Destroyed, every unit within 15cm takes a BM
-&lt;I&gt;&lt;B&gt;Touche Critique: Grande Détonation:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 15cm prend un PI.&lt;/I&gt;</description>
-    </rule>
-    <rule id="3463-a07d-4574-389e" name="Critical Hit: Leviathan" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="Takes 1 additional point of damage and D3 units transported suffer 1 hit. Additional critical hit will destroy the War Engine.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Touche Critique: Leviathan:&lt;/B&gt; Prend 1 point de dégâts supplémentaires et D3 unités transportées subissent 1 coup. Touches critiques ultérieures détruire l&apos;unité.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
@@ -7985,9 +7996,187 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Cyclope:&lt;/B&gt; Sur un résultat de 5+, le Cyclope subit des dégâts 1CD lorsque le Canon Furie est tiré. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="On a roll of 5+, the Cyclops takes 1DC damage when the Hellfury Cannon fires. Subsequent critical hits cause an additional 1DC of damage.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Cyclope:&lt;/B&gt; Prend 1 point de dégâts supplémentaires et ne peut plus tirer son Canon Furie. Touches critiques ultérieures détruire l&apos;unité.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
-      <description>Immobilised, subsequent critical hits cause an additional 1DC of damage.
-&lt;I&gt;&lt;B&gt;Touche Critique: Leviathan:&lt;/B&gt; Immobilisé, tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;</description>
+      <description>Takes 1 additional point of damage and may no longer fire its Hellfury Canon. Subsequent critical hits destroy the unit.</description>
+    </rule>
+    <rule id="102f-1957-326a-439e" name="Critical Hit: Land Train" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Train Blindé:&lt;/B&gt; Le dernier wagon de bataille en ligne est détruite.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="The last battle car in line is destroyed.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Train Blindé:&lt;/B&gt; Le dernier wagon de bataille en ligne est détruite. Si aucun des wagons de bataille restent le Train Blindé est détruit.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>The last battle car in line is destroyed. If no battle cars remain the Land Train is destroyed.</description>
+    </rule>
+    <rule id="73ee-c5a5-1ebd-c31d" name="Critical Hit: Large Blast" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Grande Détonation:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 15cm prend un PI.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Destroyed, every unit within 15cm takes a BM</description>
+    </rule>
+    <rule id="3463-a07d-4574-389e" name="Critical Hit: Leviathan" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Takes 1 additional point of damage and D3 units transported suffer 1 hit. Additional critical hit will destroy the War Engine.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Leviathan:&lt;/B&gt; Prend 1 point de dégâts supplémentaires et D3 unités transportées subissent 1 coup. Touches critiques ultérieures détruire l&apos;unité.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Leviathan:&lt;/B&gt; Immobilisé, tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>Immobilised, subsequent critical hits cause an additional 1DC of damage.</description>
     </rule>
     <rule id="d1f8-5e57-5ddf-145b" name="Critical Hit: Reactor is Struck" hidden="false">
       <profiles/>
@@ -8001,15 +8190,18 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Le Réacteur se Foudroyé:&lt;/B&gt; Lancer 1D6 à la fin de chaque tour pour chaque coup critique reçu: &lt;BR&gt; 1: Le réacteur à plasma explose détruisant le véhicule et infligeant une touche sur 5+ à toutes les unités dans un rayon de 5cm. &lt;BR&gt; 2-3: Le Gyrocoptère qui accompagne le Colossus est détruit et les armes du Colossus perdent la capacité tir indirect.  Le Leviathan est immobilisé. Le Cyclope perd la capacité Disrupteur. Il n’est plus possible pour le Train Blindé de réparer les boucliers. Si l&apos;engin de guerre est déjà immobilisé, ou si cette capacité a déjà été perdue, l&apos;engin de guerre perd un point de structure supplémentaire. &lt;BR&gt; 4-6: La fissure est réparée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Roll 1D6 at the end of each round for each critical strike received:
 1: The plasma reactor explodes destroying the vehicle and inflicting a hit on a 5+ to all units within 5cm.
 2-3: The Gyrocopter accompanying the Colossus is destroyed and the Colossus weapons lose &apos;Indirect Fire&apos;. The Leviathan is immobilised. The Cyclops loses &apos;Disruptor&apos;. It is no longer possible for the Land Train to repair shields. If the war engine is already immobilised, or if these abilities have already been lost, the war engine loses an additional point of DC.
-4-6: The crack is repaired.
-&lt;I&gt;&lt;B&gt;Touche Critique: Le Réacteur se Foudroyé:&lt;/B&gt; Lancer 1D6 à la fin de chaque tour pour chaque coup critique reçu:
-1: Le réacteur à plasma explose détruisant le véhicule et infligeant une touche sur 5+ à toutes les unités dans un rayon de 5cm.
-2-3: Le Gyrocoptère qui accompagne le Colossus est détruit et les armes du Colossus perdent la capacité tir indirect.  Le Leviathan est immobilisé. Le Cyclope perd la capacité Disrupteur. Il n’est plus possible pour le Train Blindé de réparer les boucliers. Si l&apos;engin de guerre est déjà immobilisé, ou si cette capacité a déjà été perdue, l&apos;engin de guerre perd un point de structure supplémentaire.
-4-6: La fissure est réparée.&lt;/I&gt;</description>
+4-6: The crack is repaired.</description>
     </rule>
     <rule id="b7ae-0bbb-b5e5-6642" name="Disruptor" hidden="false">
       <profiles/>
@@ -8023,9 +8215,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Disrupteur:&lt;/B&gt; Les Squats utilisent des canons de vaisseau spatial appelé Canon Furie, monté sur forteresse mobile. Ce canon projette un rayon continu très puissant faisant rapidement surchauffer les systèmes de protection. Chaque Touche avec ces armes détruit deux Boucliers (ou autre appareil de protection ayant les mêmes effets) au lieu d&apos;un.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Squats use spacecraft guns called Hellfury Canon mounted on mobile fortresses. This gun projects a solid, powerful beam to rapidly overheat protection systems. Each hit with these weapons destroys two shields (or other fields, etc) instead of one.
-&lt;I&gt;&lt;B&gt;Disrupteur:&lt;/B&gt; Les Squats utilisent des canons de vaisseau spatial appelé Canon Furie, monté sur forteresse mobile. Ce canon projette un rayon continu très puissant faisant rapidement surchauffer les systèmes de protection. Chaque Touche avec ces armes détruit deux Boucliers (ou autre appareil de protection ayant les mêmes effets) au lieu d&apos;un.&lt;/I&gt;</description>
+      <description>Squats use spacecraft guns called Hellfury Canon mounted on mobile fortresses. This gun projects a solid, powerful beam to rapidly overheat protection systems. Each hit with these weapons destroys two shields (or other fields, etc) instead of one.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -8046,10 +8244,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -8057,9 +8252,16 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Squat armies may have up to three formations per Mine Portal enter play by taking an action that allows them to move, then measuring its first move from the Mine Portal on the tabletop. No more than one formation may travel through a single Mine Portal per turn, but the formation does not have to be assigned to any particular Mine Portal. It is assumed that large networks of tunnels connect the Mine Portals together.
-&lt;I&gt;&lt;B&gt;Portail des Mines:&lt;/B&gt; Les armées Squat peuvent avoir jusqu&apos;à trois formations par portal des mines entrent en jeu en prenant une action qui permet le mouvement, puis en mesurant son premier mouvement à partir du portail des mines sur la table. Pas plus d&apos;une formation peut se déplacer à travers chaque portail des mines par tour, mais la formation ne doit pas être affecté à un portail des mines particulier. On suppose que les grands réseaux de tunnels relient les portails des mines ensemble.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portail des Mines:&lt;/B&gt; Les armées Squat peuvent avoir jusqu&apos;à trois formations par portal des mines entrent en jeu en prenant une action qui permet le mouvement, puis en mesurant son premier mouvement à partir du portail des mines sur la table. Pas plus d&apos;une formation peut se déplacer à travers chaque portail des mines par tour, mais la formation ne doit pas être affecté à un portail des mines particulier. On suppose que les grands réseaux de tunnels relient les portails des mines ensemble.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Squat armies may have up to three formations per Mine Portal enter play by taking an action that allows them to move, then measuring its first move from the Mine Portal on the tabletop. No more than one formation may travel through a single Mine Portal per turn, but the formation does not have to be assigned to any particular Mine Portal. It is assumed that large networks of tunnels connect the Mine Portals together.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -8080,9 +8282,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Esprit des Ancêtres:&lt;/B&gt;&lt;/I&gt; Tant qu&apos;il se trouve dans la formation, un ancêtre vivant confère à l&apos;ensemble des unités qui la compose la règle Sauvegarde Invulnérable.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>A formation containing a Living Ancestor may ignore the -1 penalty to action test rolls when attempting to retain the initiative.
-&lt;I&gt;&lt;B&gt;Esprit des Ancêtres:&lt;/B&gt;&lt;/I&gt; Tant qu&apos;il se trouve dans la formation, un ancêtre vivant confère à l&apos;ensemble des unités qui la compose la règle Sauvegarde Invulnérable.&lt;/I&gt;</description>
+      <description>A formation containing a Living Ancestor may ignore the -1 penalty to action test rolls when attempting to retain the initiative.</description>
     </rule>
     <rule id="8dce-3119-8494-baaa" name="Spotter" hidden="false">
       <profiles/>
@@ -8096,19 +8304,20 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Observateur:&lt;/B&gt; Toute unité ennemie qui se trouve à moins de 60 cm et a une ligne de vision pour un Gyrocopter Squat ou Overlord, qui ne sont pas démoralisés, est considérée comme Observé. &lt;BR&gt; Les armes des machines de guerre suivantes n&apos;ont pas besoin d&apos;une ligne de vue pour une unité ennemie qui est Observé. &lt;BR&gt; * Leviathan: Doomsday Cannon &lt;BR&gt; * Colossus: Doomsday Cannon, Plasma Missiles &lt;BR&gt; * Cyclops: Doomstorm Missiles &lt;BR&gt; * Land Train: Doomsday Cannon, Siege Mortar, Rad Bomb.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Any enemy unit that is within 60cm and has Line of Fire to an unbroken Squat Gyrocopter or Overlord is considered to be Spotted.
 The following War Machine weapons do not need Line of fire to an enemy unit that is Spotted.
-&amp;emsp; Leviathan: Doomsday Cannon
-&amp;emsp; Colossus: Doomsday Cannon, Plasma Missiles
-&amp;emsp; Cyclops: Doomstorm Missiles
-&amp;emsp; Land Train: Doomsday Cannon, Siege Mortar, Rad Bomb.
-&lt;I&gt;&lt;B&gt;Observateur:&lt;/B&gt; Toute unité ennemie qui se trouve à moins de 60 cm et a une ligne de vision pour un Gyrocopter Squat ou Overlord, qui ne sont pas démoralisés, est considérée comme Observé.
-Les armes des machines de guerre suivantes n&apos;ont pas besoin d&apos;une ligne de vue pour une unité ennemie qui est Observé.
-&amp;emsp; Leviathan: Doomsday Cannon
-&amp;emsp; Colossus: Doomsday Cannon, Plasma Missiles
-&amp;emsp; Cyclops: Doomstorm Missiles
-&amp;emsp; Land Train: Doomsday Cannon, Siege Mortar, Rad Bomb.&lt;/I&gt;</description>
+* Leviathan: Doomsday Cannon
+* Colossus: Doomsday Cannon, Plasma Missiles
+* Cyclops: Doomstorm Missiles
+* Land Train: Doomsday Cannon, Siege Mortar, Rad Bomb.</description>
     </rule>
     <rule id="bea4-278d-9ddd-11e6" name="Squat Transport" hidden="false">
       <profiles/>
@@ -8142,23 +8351,89 @@ A pair of Moles or a single Hellebore count as independent formations and follow
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Squat armies have a strategy rating of 3. The Colossus, Cyclops and Land Train have an Initiative of 1+. All other formations have an Initiative of 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Squats ont une Valeur Stratégique de 3. Le Colossus, le Cyclope et le Train Blindé ont une initiative de 1+. Les autres formations Squats ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Squat armies have a strategy rating of 3. The Colossus, Cyclops and Land Train have an Initiative of 1+. All other formations have an Initiative of 2+.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
-        <modifier type="set" field="description" value="Squat armies have a strategy rating of 2. All Squat formations have an initiative rating of 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Squats ont une Valeur Stratégique de 2. Les formations Squats ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Squat armies have a strategy rating of 2. All Squat formations have an initiative rating of 2+.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Squats ont une Valeur Stratégique de 2. Les formations Squats ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Thurgrimm ont une Valeur Stratégique de 2. Toutes les formations ont une initiative de 2+. Toutes les formations se rallient sur un 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Squats ont une Valeur Stratégique de 3. Le Colossus, le Cyclope et le Train Blindé ont une initiative de 1+. Les autres formations Squats ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Thurgrimm armies have a strategy rating of 2. All formations have an Initiative of 2+. All formations rally on a 1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées Thurgrimm ont une Valeur Stratégique de 2. Toutes les formations ont une initiative de 2+. Toutes les formations se rallient sur un 1+.&lt;/I&gt;</description>
+      <description>Thurgrimm armies have a strategy rating of 2. All formations have an Initiative of 2+. All formations rally on a 1+.</description>
     </rule>
     <rule id="ef42-3efb-0c94-4e35" name="Stubborn" hidden="false">
       <profiles/>
@@ -8172,8 +8447,15 @@ A pair of Moles or a single Hellebore count as independent formations and follow
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;</description>
+      <description>A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.</description>
     </rule>
     <rule id="56ea-92cf-2be1-7816" name="Termite" hidden="false">
       <profiles/>
@@ -8187,9 +8469,15 @@ A pair of Moles or a single Hellebore count as independent formations and follow
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Termite:&lt;/B&gt; Les termites ne sont pas des unités. Traiter en tant que ruines sur le revêtement. La zone du terrain de la ruine devrait être à peu près égale à l&apos;empreinte des unités transportées.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Termites are not units at all. Treat as ruins upon surfacing. The area of the ruin terrain should be roughly equal to the footprint of the transported units.
-&lt;I&gt;&lt;B&gt;Termite:&lt;/B&gt; Les termites ne sont pas des unités. Traiter en tant que ruines sur le revêtement. La zone du terrain de la ruine devrait être à peu près égale à l&apos;empreinte des unités transportées.&lt;/I&gt;</description>
+      <description>Termites are not units at all. Treat as ruins upon surfacing. The area of the ruin terrain should be roughly equal to the footprint of the transported units.</description>
     </rule>
     <rule id="7b7d-9dd4-9cd1-c87d" name="Transport (Squat)" hidden="false">
       <profiles/>
@@ -8203,36 +8491,35 @@ A pair of Moles or a single Hellebore count as independent formations and follow
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Berserker Battle Car: 8 Warriors, Berserkers, Bikers, Trikes, Thunderers ou 4 Hearthguard. &lt;BR&gt; Hellbore: 16 Berserkers ou 8 Hearthguard. &lt;BR&gt; Land Raider: 2 unités ou 1 Hearthguard. &lt;BR&gt; Leviathan: 16 Warriors, Berserkers, Bikers, Trikes, Thunderers ou 8 Hearthguard. &lt;BR&gt; Mole: 8 Berserkers. &lt;BR&gt; Rhino: 2 Thunderers. &lt;BR&gt; Termite: 2 Berserkers.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>As follows-
 Hellbore: 16 infantry units. Bikes, Trikes, Guildmasters, Robots, Tarantulas, Rapiers, Thudd Guns, Thunderfires take up 2 spaces each.
 Leviathan: 16 infantry units. Bikes, Trikes, Guildmasters, Robots, Tarantulas, Rapiers, Thudd Guns, Thunderfires take up 2 spaces each.
 Mole: 10 infantry units. Bikes, Trikes, Guildmasters, Robots, Tarantulas, Rapiers, Thudd Guns, Thunderfires take up 2 spaces each.
 Rhino: 2 infantry units. Bikes, Trikes, Guildmasters, Robots, Tarantulas, Rapiers, Thudd Guns, Thunderfires take up 2 spaces each.
-Termite: 2 infantry units. Bikes, Trikes, Guildmasters, Robots, Tarantulas, Rapiers, Thudd Guns, Thunderfires take up 2 spaces each.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Berserker Battle Car: 8 Warriors, Berserkers, Bikers, Trikes, Thunderers ou 4 Hearthguard.
-Hellbore: 16 Berserkers ou 8 Hearthguard.
-Land Raider: 2 unités ou 1 Hearthguard.
-Leviathan: 16 Warriors, Berserkers, Bikers, Trikes, Thunderers ou 8 Hearthguard.
-Mole: 8 Berserkers.
-Rhino: 2 Thunderers.
-Termite: 2 Berserkers.&lt;/I&gt;</description>
+Termite: 2 infantry units. Bikes, Trikes, Guildmasters, Robots, Tarantulas, Rapiers, Thudd Guns, Thunderfires take up 2 spaces each.</description>
     </rule>
     <rule id="1e82-3795-6d57-a9a4" name="Tunneller" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Tunnellers are set up touching their own side&apos;s table edge before the battle starts at the same time that spacecraft are set up. Any units transported in tunnellers should be placed to one side at this time too. Secretly write down the location where the tunneller will surface at the same time and in the same manner that you record the coordinates of a drop zone. You must also secretly record the turn the tunneller will surface. If it is going to surface in your half of the table it may arrive from the second turn onwards. If it is going to surface in the opposing half of the table, it may arrive from turn three onwards. Set up the tunneller units at the start of the stated turn, before determining who wins the strategy roll, at the location you wrote down. Surfacing does not count as movement for the purposes of triggering enemy overwatch fire. If a tunneller would have surfaced on terrain that is impassable for it, under a friendly unit, or in an enemy zone of control, then it is assumed that on-board sensor equipment would divert it towards another entry point. The unit should be moved to the nearest area where it can surface. Formations of multiple tunnellers need only record one location where they will surface. Place the first tunneller unit at this location. All other tunneller units must be placed within 5cm of another tunneller unit that has already been placed and fully within a 15cm radius of the original surfacing coordinates. After all tunnellers have been placed any units being transported are allowed to disembark immediately. Disembarking triggers overwatch fire as normal. Tunnellers, and any units being transported in them, may take an action on the turn they appear.
-&lt;I&gt;&lt;B&gt;Tunnelier:&lt;/B&gt; Les Squats utilisent des Tunneiiers pour mener sans danger par voie souterraine les Squats à des lieux clés du champ de bataille.
-Il est possible de mixer toute sorte de Tunneiiers mais vous devez occuper toutes les places disponibles.
-Les tunneiiers sont déployés sur leur bord de table avant la bataille, au même moment que les vaisseaux spatiaux, ils n&apos;interviennent pas directement dans lejeu tant qu&apos;ils n&apos;émergent pas.
-Noter secrètement au début de quel tour ils feront surface ainsi que les coordonnées (à partir de la pointe de la ou d&apos;une des foreuses) où vous voulez qu&apos;ils émergent, de la même façon que vous notez celles de vos zones de largage.
-Si les tunneiiers apparaissent dans votre moitié de table, ils ne peuvent le faire qu&apos;à partir du second tour et s&apos;ils comptent émerger dans la moitié de table ennemie, ils ne peuvent le faire qu&apos;à partir du troisième tour.
-Les tunneiiers émergeant sont placés en début de tour, avant le jet de stratégie. Une fois les tunneiiers placés vous pouvez faire débarquer vos troupes de suite.
-Il n&apos;y a pas de déviation mais si toutefois, ils émergent sous les pieds de n&apos;importe quel type d&apos;unité (amie ou ennemie) ou dans une zone de contrôle ennemie, l&apos;unité est placée par l&apos;adversaire dans la zone dégagée la plus proche pouvant la recevoir.
-S&apos;il y a plus d&apos;une unité de Tunnelier qui émerge, après le placement de la première, les autres sont toutes placées à 15cm maximum de celle-ci tout en restant en formation.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tunnelier:&lt;/B&gt; Les Squats utilisent des Tunneiiers pour mener sans danger par voie souterraine les Squats à des lieux clés du champ de bataille. &lt;BR&gt; Il est possible de mixer toute sorte de Tunneiiers mais vous devez occuper toutes les places disponibles. &lt;BR&gt; Les tunneiiers sont déployés sur leur bord de table avant la bataille, au même moment que les vaisseaux spatiaux, ils n&apos;interviennent pas directement dans lejeu tant qu&apos;ils n&apos;émergent pas. &lt;BR&gt; Noter secrètement au début de quel tour ils feront surface ainsi que les coordonnées (à partir de la pointe de la ou d&apos;une des foreuses) où vous voulez qu&apos;ils émergent, de la même façon que vous notez celles de vos zones de largage. &lt;BR&gt; Si les tunneiiers apparaissent dans votre moitié de table, ils ne peuvent le faire qu&apos;à partir du second tour et s&apos;ils comptent émerger dans la moitié de table ennemie, ils ne peuvent le faire qu&apos;à partir du troisième tour. &lt;BR&gt; Les tunneiiers émergeant sont placés en début de tour, avant le jet de stratégie. Une fois les tunneiiers placés vous pouvez faire débarquer vos troupes de suite. &lt;BR&gt; Il n&apos;y a pas de déviation mais si toutefois, ils émergent sous les pieds de n&apos;importe quel type d&apos;unité (amie ou ennemie) ou dans une zone de contrôle ennemie, l&apos;unité est placée par l&apos;adversaire dans la zone dégagée la plus proche pouvant la recevoir. &lt;BR&gt; S&apos;il y a plus d&apos;une unité de Tunnelier qui émerge, après le placement de la première, les autres sont toutes placées à 15cm maximum de celle-ci tout en restant en formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Tunnellers are set up touching their own side&apos;s table edge before the battle starts at the same time that spacecraft are set up. Any units transported in tunnellers should be placed to one side at this time too. Secretly write down the location where the tunneller will surface at the same time and in the same manner that you record the coordinates of a drop zone. You must also secretly record the turn the tunneller will surface. If it is going to surface in your half of the table it may arrive from the second turn onwards. If it is going to surface in the opposing half of the table, it may arrive from turn three onwards. Set up the tunneller units at the start of the stated turn, before determining who wins the strategy roll, at the location you wrote down. Surfacing does not count as movement for the purposes of triggering enemy overwatch fire. If a tunneller would have surfaced on terrain that is impassable for it, under a friendly unit, or in an enemy zone of control, then it is assumed that on-board sensor equipment would divert it towards another entry point. The unit should be moved to the nearest area where it can surface. Formations of multiple tunnellers need only record one location where they will surface. Place the first tunneller unit at this location. All other tunneller units must be placed within 5cm of another tunneller unit that has already been placed and fully within a 15cm radius of the original surfacing coordinates. After all tunnellers have been placed any units being transported are allowed to disembark immediately. Disembarking triggers overwatch fire as normal. Tunnellers, and any units being transported in them, may take an action on the turn they appear.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

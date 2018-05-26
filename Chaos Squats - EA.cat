@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4eff-d067-f3f7-c752" name="Chaos Squats" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4eff-d067-f3f7-c752" name="Chaos Squats" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2679,10 +2679,7 @@ This is to represent the attack being delivered at the cost of the unit.</descri
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -2717,11 +2714,17 @@ A formation with both Resolute and non-Resolute units retains this skill as long
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Chaos Squats ont une Valeur Stratégique de 3.  Les formations Chaos Squats ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Chaos Squats armies have a strategy rating of 3.
-Chaos Squats formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Chaos Squats ont une Valeur Stratégique de 3.
-Les formations Chaos Squats ont une initiative de 2+.&lt;/I&gt;</description>
+Chaos Squats formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="55f0-8d14-e195-d359" name="Summoned Units (Hashvaht’s Favour)" hidden="false">
       <profiles/>
@@ -2737,7 +2740,15 @@ Summoned units remain on the battlefield until the end phase of the turn in whic
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Death Dealer: 2 Obsidian Guard. &lt;BR&gt; Hellbore: 16 unités d&apos;infanterie (sauf Slaves ou Damburi). Large Mutants prennent 2 emplacements. &lt;BR&gt; Mole: 4 unités d&apos;infanterie. &lt;BR&gt; Truck: 2 unités d&apos;infanterie. Large Mutants prennent 2 emplacements. &lt;BR&gt; Vedaj: 2 des unités suivantes: Chaos Squats ou Annihilators. &lt;BR&gt; Zhatan: 4 unités d&apos;infanterie. &lt;BR&gt; Zigganook: 8 unités d&apos;infanterie.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Death Dealer: 2 Obsidian Guard.
 Hellbore: 16 Infantry units except Slaves or Damburi. Large Mutants count as 2.
@@ -2745,15 +2756,7 @@ Mole: 4 Infantry units.
 Truck: 2 Infantry units. Large Mutants count as 2.
 Vedaj: 2 Chaos Squats or Annihilators.
 Zhatan: 4 Infantry units.
-Zigganook: 8 Infantry units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Death Dealer: 2 Obsidian Guard.
-Hellbore: 16 unités d&apos;infanterie (sauf Slaves ou Damburi). Large Mutants prennent 2 emplacements.
-Mole: 4 unités d&apos;infanterie.
-Truck: 2 unités d&apos;infanterie. Large Mutants prennent 2 emplacements.
-Vedaj: 2 des unités suivantes: Chaos Squats ou Annihilators.
-Zhatan: 4 unités d&apos;infanterie.
-Zigganook: 8 unités d&apos;infanterie.&lt;/I&gt;</description>
+Zigganook: 8 Infantry units.</description>
     </rule>
     <rule id="1e82-3795-6d57-a9a4" name="Tunneller" hidden="false">
       <profiles/>
@@ -2774,21 +2777,20 @@ Zigganook: 8 unités d&apos;infanterie.&lt;/I&gt;</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tunnelier:&lt;/B&gt; Les Squats utilisent des Tunneiiers pour mener sans danger par voie souterraine les Squats à des lieux clés du champ de bataille. &lt;BR&gt; Il est possible de mixer toute sorte de Tunneiiers mais vous devez occuper toutes les places disponibles. &lt;BR&gt; Les tunneiiers sont déployés sur leur bord de table avant la bataille, au même moment que les vaisseaux spatiaux, ils n&apos;interviennent pas directement dans lejeu tant qu&apos;ils n&apos;émergent pas. &lt;BR&gt; Noter secrètement au début de quel tour ils feront surface ainsi que les coordonnées (à partir de la pointe de la ou d&apos;une des foreuses) où vous voulez qu&apos;ils émergent, de la même façon que vous notez celles de vos zones de largage. &lt;BR&gt; Si les tunneiiers apparaissent dans votre moitié de table, ils ne peuvent le faire qu&apos;à partir du second tour et s&apos;ils comptent émerger dans la moitié de table ennemie, ils ne peuvent le faire qu&apos;à partir du troisième tour. &lt;BR&gt; Les tunneiiers émergeant sont placés en début de tour, avant le jet de stratégie. Une fois les tunneiiers placés vous pouvez faire débarquer vos troupes de suite. &lt;BR&gt; Il n&apos;y a pas de déviation mais si toutefois, ils émergent sous les pieds de n&apos;importe quel type d&apos;unité (amie ou ennemie) ou dans une zone de contrôle ennemie, l&apos;unité est placée par l&apos;adversaire dans la zone dégagée la plus proche pouvant la recevoir. &lt;BR&gt; S&apos;il y a plus d&apos;une unité de Tunnelier qui émerge, après le placement de la première, les autres sont toutes placées à 15cm maximum de celle-ci tout en restant en formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Formations where all of the units have Tunneller (or are transported in units that have the ability) may be kept off the table and can appear at the start of the second turn or after. Set up the units touching their own side&apos;s table edge before the battle starts at the same time that spacecraft are setup. Any units transported in the tunneler should be placed to one side at this time too.
 Secretly write down the location where the tunneller will surface at the same time and in the same manner that you record the coordinates of a drop zone. You must also secretly record when the tunneller will surface. If it is going to surface in your half of the table it may arrive from the second turn onwards. If it is going to surface in the opposing half of the table, it may arrive from turn three onwards.
 Set up the tunneller at the start of the stated turn, before placing units with teleport, at the location you wrote down. Any units being transported are allowed to disembark immediately upon surfacing. Surfacing does not count as movement for the purposes of triggering overwatch fire. Disembarking triggers overwatch fire as normal.
 If the tunneller surfaces on terrain that is impassable for it, under a friendly unit, or in an enemy zone of control then the unit should be moved by the opposing player to the nearest area where it can surface.
 Formations of multiple tunnellers need only record one location where they will surface. Place a unit at this location, or within 5cm of another unit that has already been placed, so long as all units are placed within 15cm of the location and on the appropriate half of the table.
-Tunnellers, and any units being transported in them, may take an action on the turn they appear.
-&lt;I&gt;&lt;B&gt;Tunnelier:&lt;/B&gt; Les Squats utilisent des Tunneiiers pour mener sans danger par voie souterraine les Squats à des lieux clés du champ de bataille.
-Il est possible de mixer toute sorte de Tunneiiers mais vous devez occuper toutes les places disponibles.
-Les tunneiiers sont déployés sur leur bord de table avant la bataille, au même moment que les vaisseaux spatiaux, ils n&apos;interviennent pas directement dans lejeu tant qu&apos;ils n&apos;émergent pas.
-Noter secrètement au début de quel tour ils feront surface ainsi que les coordonnées (à partir de la pointe de la ou d&apos;une des foreuses) où vous voulez qu&apos;ils émergent, de la même façon que vous notez celles de vos zones de largage.
-Si les tunneiiers apparaissent dans votre moitié de table, ils ne peuvent le faire qu&apos;à partir du second tour et s&apos;ils comptent émerger dans la moitié de table ennemie, ils ne peuvent le faire qu&apos;à partir du troisième tour.
-Les tunneiiers émergeant sont placés en début de tour, avant le jet de stratégie. Une fois les tunneiiers placés vous pouvez faire débarquer vos troupes de suite.
-Il n&apos;y a pas de déviation mais si toutefois, ils émergent sous les pieds de n&apos;importe quel type d&apos;unité (amie ou ennemie) ou dans une zone de contrôle ennemie, l&apos;unité est placée par l&apos;adversaire dans la zone dégagée la plus proche pouvant la recevoir.
-S&apos;il y a plus d&apos;une unité de Tunnelier qui émerge, après le placement de la première, les autres sont toutes placées à 15cm maximum de celle-ci tout en restant en formation.&lt;/I&gt;</description>
+Tunnellers, and any units being transported in them, may take an action on the turn they appear.</description>
     </rule>
     <rule id="204b-f591-5bba-6d14" name="Undisciplined" hidden="false">
       <profiles/>

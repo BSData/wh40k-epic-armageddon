@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e836-6838-4a7e-fbae" name="Eldar: Exodite Maiden World" revision="21" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e836-6838-4a7e-fbae" name="Eldar: Exodite Maiden World" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2335,10 +2335,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #55
 Fanatic #02
 Fanatic #13</description>
@@ -2355,9 +2352,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Only Eldar Rangers and War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.
-&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;</description>
+      <description>Only Eldar Rangers and War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -2379,57 +2382,94 @@ netea-tournament-pack-2017-01-03</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Exodites ont une Valeur Stratégique de 4.  Les Créatures Massives ont une initiative de 1+.  Toutes les autres formations ont une initiative de 2+.  Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Exodite armies have Strategy Rating 4. 
 Massive Creatures have an Initiative rating of 1+.
 All other formations have an Initiative rating of 2+.
-Harlequins have Strategy Rating 5 and an Initiative rating of 1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Exodites ont une Valeur Stratégique de 4. 
-Les Créatures Massives ont une initiative de 1+.
-Toutes les autres formations ont une initiative de 2+.
-Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+.&lt;/I&gt;</description>
+Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
     </rule>
     <rule id="57ee-34e7-0538-6992" name="Megadon" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>An Exodite formation that includes Megadons receives a -2 modifier to any initiative tests it takes if it has more than one blast marker.
-&lt;I&gt;&lt;B&gt;Mégadon:&lt;/B&gt; Une formation d&apos;exodite qui inclut Megadons reçoit un modificateur -2 pour les tests d&apos;initiative qu&apos;il faut si elle possède plus d&apos;une pion d&apos;impact.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Mégadon:&lt;/B&gt; Une formation d&apos;exodite qui inclut Megadons reçoit un modificateur -2 pour les tests d&apos;initiative qu&apos;il faut si elle possède plus d&apos;une pion d&apos;impact.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>An Exodite formation that includes Megadons receives a -2 modifier to any initiative tests it takes if it has more than one blast marker.</description>
     </rule>
     <rule id="5701-fc11-19d4-3385" name="World Spirit" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>All Exodite formations comprised of Infantry, Light Vehicles and Armoured Vehicles located in woods or jungles receive a -2 to hit modifier. Normal cover saves apply.
-&lt;I&gt;&lt;B&gt;Esprit du Monde:&lt;/B&gt; Toutes les formations Exodites composées d&apos;infanterie, des véhicules légers et des véhicules blindés situés dans les bois ou jungle reçoivent un modificateur de -2 à toucher. Les sauvegardes de couverture normales s&apos;appliquent toujours.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Esprit du Monde:&lt;/B&gt; Toutes les formations Exodites composées d&apos;infanterie, des véhicules légers et des véhicules blindés situés dans les bois ou jungle reçoivent un modificateur de -2 à toucher. Les sauvegardes de couverture normales s&apos;appliquent toujours.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>All Exodite formations comprised of Infantry, Light Vehicles and Armoured Vehicles located in woods or jungles receive a -2 to hit modifier. Normal cover saves apply.</description>
     </rule>
     <rule id="6a86-1fbe-5506-8dd4" name="Critical Hit: Falling Knight" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>The Knight staggers D6cm in a random direction and is destroyed. Any units struck by the falling Knight suffer a hit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Chevalier en Chute:&lt;/B&gt; Le Chevalier trébuche D6cm dans un sens aléatoire et est détruit. Toutes les unités frappées par le Chevalier qui tombe souffrent d&apos;une touche.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Chevalier en Chute:&lt;/B&gt; Le Chevalier trébuche D6cm dans un sens aléatoire et est détruit. Toutes les unités frappées par le Chevalier qui tombe souffrent d&apos;une touche.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The Knight staggers D6cm in a random direction and is destroyed. Any units struck by the falling Knight suffer a hit.</description>
     </rule>
     <rule id="6527-d60b-01df-41f0" name="Critical Hit: Trample" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>The Megadon tramples 2D6cm in a random direction and is destroyed. Any units in the path of the Megadon suffer a macro-weapon hit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Piétine:&lt;/B&gt; Le Mégadon piétinent 2D6cm dans un sens aléatoire et est détruit. Toutes les unités dans le chemin du Mégadon souffrent d&apos;une touche macro-armée.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Piétine:&lt;/B&gt; Le Mégadon piétinent 2D6cm dans un sens aléatoire et est détruit. Toutes les unités dans le chemin du Mégadon souffrent d&apos;une touche macro-armée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The Megadon tramples 2D6cm in a random direction and is destroyed. Any units in the path of the Megadon suffer a macro-weapon hit.</description>
     </rule>
     <rule id="e274-77e6-6f80-6c84" name="Transport (Exo)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
-Dragonship: 12 Vampires and the units being transported on them.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.&lt;/I&gt;</description>
+Dragonship: 12 Vampires and the units being transported on them.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2700,7 +2740,7 @@ Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.&
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Après placement des objectifs, le joueur eldar remplace l&apos;un des objectifs de sa moitié de table par un portail fantôme. Celui-ci est indestructible et fonctionne à la fois comme un objectif et un portail fantôme d&apos;un point de vue des règles du jeu.">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2f25-1fc9-6431-c32f" name="Orks: Freebooterz" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2f25-1fc9-6431-c32f" name="Orks: Freebooterz" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2300,10 +2300,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -2333,25 +2330,34 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Orks a une valeur stratégique de 3.  Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Ork armies have Strategy Rating 3. 
-Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Orks a une valeur stratégique de 3. 
-Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;</description>
+Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.</description>
     </rule>
     <rule id="743a-4f1c-c507-06eb" name="Transport (OF)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Klippa: 8 des unités suivantes: Kaptin, Bosun, Piratz, Bukkineers. Peut embarquer 4 Powda Monkee en plus des autres. &lt;BR&gt; Kutta: 2 des unités suivantes: Kaptin, Bosun, Piratz, Bukkineers. Peut embarquer 1 Powda Monkee en plus des autres. &lt;BR&gt; Shippa da Line: 8 des unités suivantes: Kaptin, Bosun, Piratz, Bukkineers. Peut embarquer 4 Powda Monkee en plus des autres.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Klippa: 8 of the following: Kaptin, Bosun, Piratz, Bukkineers, plus 4 Powda Monkeez.
 Kutta: 2 of the following: Kaptin, Bosun, Piratz, Bukkineers, plus 1 Powda Monkee.
-Shippa da Line: 8 of the following: Kaptin, Bosun, Piratz, Bukkineers, plus 4 Powda Monkeez.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Klippa: 8 des unités suivantes: Kaptin, Bosun, Piratz, Bukkineers. Peut embarquer 4 Powda Monkee en plus des autres.
-Kutta: 2 des unités suivantes: Kaptin, Bosun, Piratz, Bukkineers. Peut embarquer 1 Powda Monkee en plus des autres.
-Shippa da Line: 8 des unités suivantes: Kaptin, Bosun, Piratz, Bukkineers. Peut embarquer 4 Powda Monkee en plus des autres.&lt;/I&gt;</description>
+Shippa da Line: 8 of the following: Kaptin, Bosun, Piratz, Bukkineers, plus 4 Powda Monkeez.</description>
     </rule>
     <rule id="b328-7046-400d-ea24" name="Powda Monkeez" hidden="false">
       <profiles/>
@@ -2365,65 +2371,120 @@ Shippa da Line: 8 des unités suivantes: Kaptin, Bosun, Piratz, Bukkineers. Peut
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Grots:&lt;/B&gt; Les formation incluant au moins 1 unité d&apos;Ork ne reçoivent pas de pion d&apos;impact pour les unités de Powda Monkeez détruite, et ces dernières ne compte pas pour déterminer le vainqueur d&apos;un assaut.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>No blast markers for Powda Monkeez that are killed; don’t count Powda Monkeez that are lost in assault.
-&lt;I&gt;&lt;B&gt;Grots:&lt;/B&gt; Les formation incluant au moins 1 unité d&apos;Ork ne reçoivent pas de pion d&apos;impact pour les unités de Powda Monkeez détruite, et ces dernières ne compte pas pour déterminer le vainqueur d&apos;un assaut.&lt;/I&gt;</description>
+      <description>No blast markers for Powda Monkeez that are killed; don’t count Powda Monkeez that are lost in assault.</description>
     </rule>
     <rule id="df7d-56ab-8166-300d" name="Freebooterz" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>All units in a Freebooterz force are considered Freebooterz for all rules purposes. All Freebooter vehicles treat water areas as dangerous terrain.
-&lt;I&gt;&lt;B&gt;Freebooters:&lt;/B&gt; Toutes les unités dans une force Freebooters sont considérées Freebooters pour toutes les règles. Tous les véhicules Freebooter traitent les zones d&apos;eau comme des terrains dangereux.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Freebooters:&lt;/B&gt; Toutes les unités dans une force Freebooters sont considérées Freebooters pour toutes les règles. Tous les véhicules Freebooter traitent les zones d&apos;eau comme des terrains dangereux.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>All units in a Freebooterz force are considered Freebooterz for all rules purposes. All Freebooter vehicles treat water areas as dangerous terrain.</description>
     </rule>
     <rule id="45bc-b975-0b84-91ab" name="Abandon Ship!" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>All Freebooterz get a 4+ Invulnerable Save to survive a vehicle&apos;s destruction.
-&lt;I&gt;&lt;B&gt;Vaisseau Abandonné!:&lt;/B&gt; Tous les Freebooters obtiennent une sauvegarde invulnérable (4+) pour survivre à la destruction d&apos;un véhicule.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Abandonnez le Bateau!:&lt;/B&gt; Tous les Freebooters obtiennent une sauvegarde invulnérable (4+) pour survivre à la destruction d&apos;un véhicule.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>All Freebooterz get a 4+ Invulnerable Save to survive a vehicle&apos;s destruction.</description>
     </rule>
     <rule id="d7fe-a593-9903-4d7c" name="Pakk da Dekks!" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>A Freebooterz transport can attempt to transport additional crewmen. Any transport can overcrowded by an additional 50% capacity of Freebooterz and/or an unlimited amount of Powda Monkeez. Dingeez may attempt to transport one unit. Each INF stand trying to overcrowd a transport must pass a difficult terrain test.
-&lt;I&gt;&lt;B&gt;Emballer les Ponts!:&lt;/B&gt; Un transport Freebooters peut tenter de transporter des équipages supplémentaires. Tout transport peut surpeuplé par une capacité additionnelle de 50% de Freebooters et/ou n&apos;importe quelle quantité de Powda Monkeez. Dingeez peut tenter de transporter une unité. Chaque plinthe d&apos;infanterie essayant de surcharger sur un transport doit passer un test de terrain difficile.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Emballer les Ponts!:&lt;/B&gt; Un transport Freebooters peut tenter de transporter des équipages supplémentaires. Tout transport peut surpeuplé par une capacité additionnelle de 50% de Freebooters et/ou n&apos;importe quelle quantité de Powda Monkeez. Dingeez peut tenter de transporter une unité. Chaque plinthe d&apos;infanterie essayant de surcharger sur un transport doit passer un test de terrain difficile.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>A Freebooterz transport can attempt to transport additional crewmen. Any transport can overcrowded by an additional 50% capacity of Freebooterz and/or an unlimited amount of Powda Monkeez. Dingeez may attempt to transport one unit. Each INF stand trying to overcrowd a transport must pass a difficult terrain test.</description>
     </rule>
     <rule id="47fd-3612-d334-e005" name="Swing Like a Pirate!" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>All Freebooterz may disembark 10cm from a vehicle if they first pass a difficult terrain test. If they choose to &quot;swing like a pirate&quot;, they can ignore models already engaged in close combat and can move through occupied friendly and enemy models. Units may disembark using the &quot;swing like a pirate&quot; rule even for a counter charge regardless of how many models are in base contact with the vehicle.
-&lt;I&gt;&lt;B&gt;Balançoire Comme un Pirate!:&lt;/B&gt; Tous les Freebooters peuvent débarquer à 10cm d&apos;un véhicule s&apos;ils passent d&apos;abord un test de terrain difficile. S&apos;ils choisissent de «balançoire comme un pirate», ils peuvent ignorer les modèles déjà engagés dans le corps à corps et peuvent se déplacer à travers occupé modèles amicaux et ennemis. Les unités peuvent débarquer en utilisant la règle «balançoire comme un pirate» même pour une contre-charge, peu importe le nombre de modèles en contact de base avec le véhicule.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Balançoire Comme un Pirate!:&lt;/B&gt; Tous les Freebooters peuvent débarquer à 10cm d&apos;un véhicule s&apos;ils passent d&apos;abord un test de terrain difficile. S&apos;ils choisissent de «balançoire comme un pirate», ils peuvent ignorer les modèles déjà engagés dans le corps à corps et peuvent se déplacer à travers occupé modèles amicaux et ennemis. Les unités peuvent débarquer en utilisant la règle «balançoire comme un pirate» même pour une contre-charge, peu importe le nombre de modèles en contact de base avec le véhicule.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>All Freebooterz may disembark 10cm from a vehicle if they first pass a difficult terrain test. If they choose to &quot;swing like a pirate&quot;, they can ignore models already engaged in close combat and can move through occupied friendly and enemy models. Units may disembark using the &quot;swing like a pirate&quot; rule even for a counter charge regardless of how many models are in base contact with the vehicle.</description>
     </rule>
     <rule id="383e-35c5-1450-0430" name="Pirate King" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>The Freebooterz army must include a Pirate King character. The Pirate King character is free; you don&apos;t have to pay any points for it. He must be used to upgrade a Kaptin.
-&lt;I&gt;&lt;B&gt;Roi des Pirates:&lt;/B&gt; L&apos;armée de Freebooters doit inclure un personnage de roi des pirates. Ce personnage est gratuit; vous n&apos;avez pas à payer de points pour cela. Il doit être utilisé pour améliorer un Kapitaine.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Roi des Pirates:&lt;/B&gt; L&apos;armée de Freebooters doit inclure un personnage de roi des pirates. Ce personnage est gratuit; vous n&apos;avez pas à payer de points pour cela. Il doit être utilisé pour améliorer un Kapitaine.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The Freebooterz army must include a Pirate King character. The Pirate King character is free; you don&apos;t have to pay any points for it. He must be used to upgrade a Kaptin.</description>
     </rule>
     <rule id="b71e-7514-c3c6-f5c7" name="Witch-Dokta" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Witch-dokta can use Hurrikane even when embarked.
-&lt;I&gt;&lt;B&gt;Sorcière Médecin:&lt;/B&gt; La Sorcière Médecin peut utiliser Hurrikane même lorsqu&apos;elle est embarqué.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Sorcière Médecin:&lt;/B&gt; La Sorcière Médecin peut utiliser Hurrikane même lorsqu&apos;elle est embarqué.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Witch-dokta can use Hurrikane even when embarked.</description>
     </rule>
     <rule id="e68f-b441-01b8-b6b0" name="Kannon" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Choose one weapon profile per turn.
-&lt;I&gt;&lt;B&gt;Kanon:&lt;/B&gt; Choisissez un profil d&apos;arme par tour.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Kanon:&lt;/B&gt; Choisissez un profil d&apos;arme par tour.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Choose one weapon profile per turn.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

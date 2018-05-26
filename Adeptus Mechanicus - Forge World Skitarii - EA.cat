@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e143-8005-f1f8-58f4" name="Adeptus Mechanicus: Forge World Skitarii Planetary Defence Force" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e143-8005-f1f8-58f4" name="Adeptus Mechanicus: Forge World Skitarii Planetary Defence Force" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -8085,11 +8085,19 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="a793-fb3b-df62-d8a3" hidden="false" targetId="0941-b258-e2e4-581c" type="rule">
+        <infoLink id="a793-fb3b-df62-d8a3" name="Flame Templates" hidden="false" targetId="180f-baf4-0061-0663" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
       </infoLinks>
       <modifiers/>
@@ -10395,8 +10403,7 @@ amtl_ferc_13.03.2013 #Version F-ERC 4.1 du 13 mars 2013&lt;/I&gt;</description>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -10416,49 +10423,100 @@ amtl_ferc_13.03.2013 #Version F-ERC 4.1 du 13 mars 2013&lt;/I&gt;</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.
-&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;</description>
+      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
     <rule id="8f40-5c50-5ddf-3305" name="Critical Hit: Immobilised" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="May not move, D3 units hit, further critical hits destroy the unit.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé, D3 unités prendre une touche. La prochaine touche critique détruit l&apos;unité.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé, D3 unités prendre une touche. La prochaine touche critique détruit l&apos;unité.&lt;/I&gt;">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>The unit is immobilised. Subsequent critical hits destroy the unit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit l&apos;unité.&lt;/I&gt;</description>
+      <description>May not move, D3 units hit, further critical hits destroy the unit.</description>
     </rule>
     <rule id="e594-f9ee-29c6-e5c9" name="Critical Hit: Large Explosion" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Destroyed, units within 15cm hit on D6 roll of 5+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Touche Critique: Grande Explosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 15cm subissent une touche sur un 5+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Grande Explosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 15cm subissent une touche sur un 5+.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Grande Explosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche sur un 5+.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Destroyed, units within 15cm hit on D6 roll of 5+.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Destroyed, units within 5cm hit on D6 roll of 5+.
-&lt;I&gt;&lt;B&gt;Touche Critique: Grande Explosion:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 5cm subissent une touche sur un 5+.&lt;/I&gt;</description>
+      <description>Destroyed, units within 5cm hit on D6 roll of 5+.</description>
     </rule>
     <rule id="739f-d5a8-b6f8-9e24" name="Critical Hit: Terrible Explosion" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Destroyed. All units within 15cm suffer a hit on a 5+. Friendly formations with line of sight to the explosion receive 1 Blast marker.
-&lt;I&gt;&lt;B&gt;Touche Critique: Explosion Terrible:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 15cm subissent une touche sur un 5+. Formations amies avec la ligne de vue à l&apos;explosion reçoivent 1 PI.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Explosion Terrible:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 15cm subissent une touche sur un 5+. Formations amies avec la ligne de vue à l&apos;explosion reçoivent 1 PI.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Destroyed. All units within 15cm suffer a hit on a 5+. Friendly formations with line of sight to the explosion receive 1 Blast marker.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -10487,39 +10545,22 @@ SkitariiQuickRef #21012015</description>
           </conditions>
           <conditionGroups/>
         </modifier>
-      </modifiers>
-      <description>Re-roll one failed to-hit roll on one of the Titan’s weapon systems per turn.
-&lt;I&gt;&lt;B&gt;Plate-forme d&apos;Atterissage:&lt;/B&gt; Relancer un échec jet pour toucher sur l&apos;un des systèmes d&apos;armes du Titan par tour.&lt;/I&gt;</description>
-    </rule>
-    <rule id="0941-b258-e2e4-581c" name="Flame Templates" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Plate-forme d&apos;Atterissage:&lt;/B&gt; Relancer un échec jet pour toucher sur l&apos;un des systèmes d&apos;armes du Titan par tour.&lt;/I&gt;">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Certain weapons, such as the Light Inferno Gun, make use of the flame template when attacking the enemy. When resolving these attacks, use the following steps:
-1- Position the template so that it is touching the end of the barrel of the weapon, and with the entire template within the firing arc of the weapon. If using more then one template then they must be placed at the same time and may overlap.
-2- The template must be placed to cover as many enemy units from the target formation as possible, within the arc of the weapon, or the template can be repositioned by the opponent to any other position that is in LOF. If multiple templates are being used then each succeeding template must cover as many units as possible from those that are not already being attacked by another template.
-3- Determine how many units are under the template, a unit is under the template if; (a) Any part of the model falls under the template; (b) At least one enemy model on a stand falls under the template.
-4- Roll a die for each infantry unit (as one block) and each vehicle unit (as a second block), scoring hits and carrying out saves as would normally be done for shooting.
-&lt;I&gt;&lt;B&gt;Gabarit Lance-Flammes:&lt;/B&gt; Pour utiliser le gabarit de lance flamme, placer le gabarit en forme de goutte de façon à ce que l’extrémité la plus fine soit en contact avec l’unité faisant feu et que la totalité du gabarit soit dans l’arc de tir de l’arme , placez le de manière à couvrir le plus possible d’unités ennemies de la formation visée. Effectuez les jets pour toucher les unités (amies et ennemies) sous le gabarit avec les valeurs appropriées selon l’arme. De manière à accélérer les jets de dés, nous vous recommandons de résoudre les touches en les regroupant par type d’unités identiques en même temps, et d’en retirer les pertes en partant des plus proches vers les plus éloignées de l’unité ayant fait feu. Une unité est touchée par un (des) gabarit(s) si n’importe quelle partie la composant, ou au moins une figurine sur le socle est recouverte. Chaque formation attaquée par une arme utilisant ce type de gabarit reçoit un Pion d’impact pour être pris sous le feu de l’ennemi, à l’instar d’un tir classique.&lt;/I&gt;</description>
+      <description>Re-roll one failed to-hit roll on one of the Titan’s weapon systems per turn.</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -10543,33 +10584,85 @@ netea_army_list_compendium_2014-01-14</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Noter:&lt;/B&gt; Formations principales peuvent faire jusqu&apos;à 50% des points de l&apos;armée maximum.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Principal formations can make up to a maximum of 50% of points of the army.
-&lt;I&gt;&lt;B&gt;Noter:&lt;/B&gt; Formations principales peuvent faire jusqu&apos;à 50% des points de l&apos;armée maximum.&lt;/I&gt;</description>
+      <description>Principal formations can make up to a maximum of 50% of points of the army.</description>
     </rule>
     <rule id="5389-5ecd-3f87-6d4c" name="Strategy Rating &amp; Initiative (AMS)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Adeptus Mechanicus Gryphonne IV Skitarii Legions armies have a Strategy rating of 2. All formations have an initiative rating of 2+ unless otherwise noted.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées des Légions Skitarii Gryphonne IV de l&apos;Adeptus Mechanicus ont une Valeur Stratégique de 2. Toutes les formations ont une Initiative de 2+ sauf indication contraire.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Adeptus Mechanicus Gryphonne IV Skitarii Legions armies have a Strategy rating of 2. All formations have an initiative rating of 2+ unless otherwise noted.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les formations du Monde Forge de Viridian ont une Valeur Stratégique de 3. Les formations du Monde Forge et celles des Appareils la Flotte ont une Initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées des Légions Skitarii Gryphonne IV de l&apos;Adeptus Mechanicus ont une Valeur Stratégique de 2. Toutes les formations ont une Initiative de 2+ sauf indication contraire.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Adeptus Mechanicus Skitarii armies have a strategy rating of 3. All Knight Households, Titans and Ordinatus Majoris have an initiative rating of 1+. All other Skitarii and Auxilia formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les formations du Monde Forge de Viridian ont une Valeur Stratégique de 3. Les formations du Monde Forge et celles des Appareils la Flotte ont une Initiative de 2+.&lt;/I&gt;</description>
+      <description>Adeptus Mechanicus Skitarii armies have a strategy rating of 3. All Knight Households, Titans and Ordinatus Majoris have an initiative rating of 1+. All other Skitarii and Auxilia formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="07ae-e4b7-db58-cf28" name="Surcharge" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Each Scout or Battle Titan formation must select at least two different weapons or pay a surcharge of an additional +25 points.
-&lt;I&gt;&lt;B&gt;Surtaxe:&lt;/B&gt; Chaque formation de titan Scout ou bataille doit sélectionner au moins deux armes différentes ou de payer une surtaxe de +25 points en plus.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Surtaxe:&lt;/B&gt; Chaque formation de titan Scout ou bataille doit sélectionner au moins deux armes différentes ou de payer une surtaxe de +25 points en plus.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Each Scout or Battle Titan formation must select at least two different weapons or pay a surcharge of an additional +25 points.</description>
     </rule>
     <rule id="f2fc-1a96-0f37-6d70" name="Transport (AMS)" hidden="false">
       <profiles/>
@@ -10590,21 +10683,24 @@ netea_army_list_compendium_2014-01-14</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Chimera: 1 Canon de Bataille ou 2 Skitarii, Prétoriens. &lt;BR&gt; Corvus Assault Pod: 8 Skitarii, Prétoriens.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <description>As follows-
 Ark Mechanicus: 40 Infantry or Light Vehicles; and 20 Armoured Vehicles or War Engines; plus 4 Tetrarch Landers. Praetorians and Rapiers take 2 slots each, War Engines require 1 slot per DC.
 Chimedon: 1 Infantry (except Praetorians or Rapiers).
-Corvus Assault Pod/Head: 10 infantry (except mounted). Praetorians take 2 slots.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Chimera: 1 Canon de Bataille ou 2 Skitarii, Prétoriens.
-Corvus Assault Pod: 8 Skitarii, Prétoriens.&lt;/I&gt;
-
-
-
-
-
-
-</description>
+Corvus Assault Pod/Head: 10 infantry (except mounted). Praetorians take 2 slots.</description>
     </rule>
     <rule id="8b83-3f49-5800-6551" name="Veteran Princeps" hidden="false">
       <profiles/>
@@ -10618,9 +10714,15 @@ Corvus Assault Pod: 8 Skitarii, Prétoriens.&lt;/I&gt;
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Princeps Veteran:&lt;/B&gt; Si elles sont ajoutées à un titan de combat, permet une arme tactique supplémentaire soit remplacée par une arme d&apos;appui.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>If added to a Battle Titan allows one additional tactical weapon to be replaced by a support weapon.
-&lt;I&gt;&lt;B&gt;Princeps Veteran:&lt;/B&gt; Si elles sont ajoutées à un titan de combat, permet une arme tactique supplémentaire soit remplacée par une arme d&apos;appui.&lt;/I&gt;</description>
+      <description>If added to a Battle Titan allows one additional tactical weapon to be replaced by a support weapon.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

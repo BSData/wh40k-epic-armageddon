@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3d89-2ba7-0332-6d2d" name="Chaos: Daemonic Hordes" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3d89-2ba7-0332-6d2d" name="Chaos: Daemonic Hordes" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -4722,7 +4722,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="c980-ce9a-4ee0-4f7e" hidden="false" targetId="477b-9327-ba5b-ad26" type="rule">
+        <infoLink id="c980-ce9a-4ee0-4f7e" name="Dreadclaws" hidden="false" targetId="bbf4-e6ee-ded1-3597" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5934,9 +5934,16 @@ netea_army_list_compendium_2014-01-14 (Daemon World) - pour les Bêtes de Nurgle
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>One objective may be replaced with a chaos gate.
-&lt;I&gt;&lt;B&gt;Portail Démoniaque:&lt;/B&gt; Un objectif peut être remplacé par un portail démoniaque.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portail Démoniaque:&lt;/B&gt; Un objectif peut être remplacé par un portail démoniaque.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>One objective may be replaced with a chaos gate.</description>
     </rule>
     <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
       <profiles/>
@@ -5957,24 +5964,44 @@ netea_army_list_compendium_2014-01-14 (Daemon World) - pour les Bêtes de Nurgle
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Move it D6 cm in a random direction. If this takes the Warhound into impassable terrain or another unit it can’t step over, then it stops when it contacts the obstruction and suffers another point of damage. If it staggers into or over any units, they take a hit on a D6 roll of 6+ (make saving throws for the units normally).
-&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;</description>
+      <description>Move it D6 cm in a random direction. If this takes the Warhound into impassable terrain or another unit it can’t step over, then it stops when it contacts the obstruction and suffers another point of damage. If it staggers into or over any units, they take a hit on a D6 roll of 6+ (make saving throws for the units normally).</description>
     </rule>
     <rule id="0c98-f37b-b1ba-1bef" name="Daemon Prince" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Replaces the unit in the formation that includes the Chaos Lord character with a Daemon Prince unit.
-&lt;I&gt;&lt;B&gt;Prince Démon:&lt;/B&gt; Remplacez un Seigneur du Chaos par un Prince Démon.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Prince Démon:&lt;/B&gt; Remplacez un Seigneur du Chaos par un Prince Démon.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Replaces the unit in the formation that includes the Chaos Lord character with a Daemon Prince unit.</description>
     </rule>
     <rule id="9b7f-a16c-efaa-c053" name="Daemonic Pact" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pacto Demoníaco: &lt;/B&gt;Las formaciones que adquieran la mejora Pacto Demoníaco serán capaces de invocar Demonios al campo de batalla. Añade 1 Demonio Menor a la reserva demoníaca.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pacte Démoniaque:&lt;/B&gt; Il permet la formation de convoquer des démons.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pacto Demoníaco: &lt;/B&gt;Las formaciones que adquieran la mejora Pacto Demoníaco serán capaces de invocar Demonios al campo de batalla.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -5982,42 +6009,37 @@ netea_army_list_compendium_2014-01-14 (Daemon World) - pour les Bêtes de Nurgle
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Allows the formation to summon Daemons from the Daemon Pool.
-&lt;I&gt;&lt;B&gt;Pacte Démoniaque:&lt;/B&gt; Il permet la formation de convoquer des démons.&lt;/I&gt;</description>
+      <description>Allows the formation to summon Daemons from the Daemon Pool.</description>
     </rule>
     <rule id="dd78-bd93-c078-368e" name="Daemonic Reserve" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Up to a maximum of 3 formations of Daemons (Lesser or Greater) may be deployed in reserve and enter play via a Daemonic Pact or via a Chaos Gate.
-&lt;I&gt;&lt;B&gt;Portail Démoniaque:&lt;/B&gt; Jusqu’à 3 Formation maximum de Démons (Mineurs ou Majeurs) peuvent être
-déployés en réserve et rentrer en jeu soit via un Pacte Démoniaque, soit via un Portail Démoniaque.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portail Démoniaque:&lt;/B&gt; Jusqu’à 3 Formation maximum de Démons (Mineurs ou Majeurs) peuvent être déployés en réserve et rentrer en jeu soit via un Pacte Démoniaque, soit via un Portail Démoniaque.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Up to a maximum of 3 formations of Daemons (Lesser or Greater) may be deployed in reserve and enter play via a Daemonic Pact or via a Chaos Gate.</description>
     </rule>
-    <rule id="477b-9327-ba5b-ad26" name="Dreadclaws" hidden="false">
+    <rule id="bbf4-e6ee-ded1-3597" name="Dreadclaws" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Garra de Muerte: &lt;/B&gt;La Garra de Muerte no se dispersa 2D6cm después de ser colocada a 15cm de las coordenadas anotadas como punto de caída orbital. Las unidades transportadas deben desembarcar a 5cm de la Garra de Muerte o de una unidad ya desplegada, siempre que ninguna unidad quede a más de 15cm de la Garra de Muerte. Las miniaturas de Garra de Muerte deberían retirarse al final del proceso de desembarco.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Module d&apos;atterrissage:&lt;/B&gt; Placez le module sur la coordonnée, lancez le dé de dispersion +2D6cm. Une fois atterrit le deathwing attaque toutes unités ennemies dans un rayon de 15cm. Ensuite disposez les unités à 5cm du module ou les unes des autres tout en restant dans un rayon de 15cm du module.&lt;/I&gt;">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>After the Dreadclaw lands, its Deathwind attacks all enemy units within 15cms. Each enemy formation attacked receives a Blast marker for coming under fire, and an extra Blast marker for each casualty as normal. Then any troops carried in the Dreadclaw must disembark within 5cms of the drop pod or within 5cms of another unit from the same formation that has already landed, so long as all units are placed within 15cms of the drop pod. The Dreadclaw model is only used as a marker and does not count as a unit in any respect. It may not be used to claim crossfire and the armour value is for comparative purposes only.
-&lt;I&gt;&lt;B&gt;Module d&apos;atterrissage:&lt;/B&gt; Placez le module sur la coordonnée, lancez le dé de dispersion +2D6cm. Une fois atterrit le deathwing attaque toutes unités ennemies dans un rayon de 15cm. Ensuite disposez les unités à 5cm du module ou les unes des autres tout en restant dans un rayon de 15cm du module.&lt;/I&gt;
-
-
-</description>
+      <description>The Dreadclaw scatters 2D6cm from its coordinates. Once landed the deathwind attacks all enemy units within a radius of 15cm. Then disembark any transported units 5cm from the module or from each other while remaining within 15cm of the module.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -6038,22 +6060,11 @@ déployés en réserve et rentrer en jeu soit via un Pacte Démoniaque, soit via
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-Fanatic #95
+      <description>Fanatic #95
 Specialist Games Forum BlackLegion
 Specialist Games Forum LostnDamned
 Fanatic #02
 Fanatic #13</description>
-    </rule>
-    <rule id="0186-8bc1-5e69-1ca8" name="Infestation" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>Treat placement just like Teleport, but after placing one unit roll 3D6 to see how many total stands of Plague Zombies there are, then roll for Blast Markers as usual for Teleporting.
-&lt;I&gt;&lt;B&gt;Infestation:&lt;/B&gt; Fonctionne exactement comme la règle Téléportation, mais après avoir placé une unité lancez 3D6 pour savoir combien de socles de Zombies de la Peste il y a. Testez ensuite normalement pour les pions impact pour la Téléportation.&lt;/I&gt;</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -6066,9 +6077,16 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Daemonic Hordes have a Strategy Rating of 2. Plague Marines, Khorne Berserkers, Chaos Space Marines, Titans and Greater Daemons (or hordes containing a Greater Daemon) have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Hordes Démoniaques ont une valeur stratégique de 2. Marines de la Peste, Berserks de Khorne, Marines du Chaos, Titans et Démon Majeur (ou Horde Démoniaque contenant un Démon Majeur) ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Hordes Démoniaques ont une valeur stratégique de 2. Marines de la Peste, Berserks de Khorne, Marines du Chaos, Titans et Démon Majeur (ou Horde Démoniaque contenant un Démon Majeur) ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Daemonic Hordes have a Strategy Rating of 2. Plague Marines, Khorne Berserkers, Chaos Space Marines, Titans and Greater Daemons (or hordes containing a Greater Daemon) have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.</description>
     </rule>
     <rule id="addf-f90c-81ef-07c0" name="Transport (DH)" hidden="false">
       <profiles/>
@@ -6081,14 +6099,7 @@ Despoiler Class Battleship: 40 units that can be deployed with Dreadclaws.
 Devastation Class Cruiser: 20 units that can be deployed with Dreadclaws.
 Dreadclaw: May only transport Infantry units, Daemon Princes and Chaos Dreadnoughts.
 Land Raider: 2 Infantry units.
-Rhino: 2 Infantry units. May not carry Chosen Terminators or Daemon Princes.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Corvus Assault Pod: 8 unités d’Infanterie.
-Despoiler Class Battleship: Peut transporter jusqu’à 40 unités qui peuvent être déployées en Dreadclaws.
-Devastation Class Cruiser: Peut transporter jusqu’à 20 unités qui peuvent être déployées en Dreadclaws.
-Dreadclaw: Ne peut transporter que des unités d’Infanterie, des Princes Démons et des Dreadnoughts.
-Land Raider: 2 unités d’Infanterie.
-Rhino: 2 unités d’Infanterie. Peut ne pas transporter les Elus Terminators ou Princes Démons.&lt;/I&gt;</description>
+Rhino: 2 Infantry units. May not carry Chosen Terminators or Daemon Princes.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

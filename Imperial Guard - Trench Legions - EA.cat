@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3d74-d3a7-8e47-dfcd" name="Imperial Guard: Trench Legions" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3d74-d3a7-8e47-dfcd" name="Imperial Guard: Trench Legions" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -1954,10 +1954,7 @@ DKoKv4 (Pour les touches critiques sur le Gorgone et Silo)&lt;/I&gt;</descriptio
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -1987,23 +1984,33 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Légions des Tranchés ont une valeur stratégique de 2. Toutes les formations de Légions des Tranchés, les formations des appareils de la flotte et les Bombardements ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Trench Legions have Strategy Rating 2. All formations have Initiative Rating 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Légions des Tranchés ont une valeur stratégique de 2. Toutes les formations de Légions des Tranchés, les formations des appareils de la flotte et les Bombardements ont une initiative de 2+.&lt;/I&gt;</description>
+      <description>Trench Legions have Strategy Rating 2. All formations have Initiative Rating 2+.</description>
     </rule>
     <rule id="536f-abec-c645-e62c" name="Transport (LdT)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Brunhilde: 1 unité parmi: Canon Bombarde, Gotterhammer ou Blitzen AA. &lt;BR&gt; Gorgone: 10 unités parmi: commandant suprême, commandant, gardes des tranchés. &lt;BR&gt; Zeppelin: 10 unité suivante: commandant suprême, commandant, gardes des tranchés, grenadier, rapière, thund gun, mortier lourd.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Bruennhilde: 1 Bombard Cannon, Götterhammer or Blitzen AA Gun.
 Gorgon: 10 of the following units: Supreme Commander, Commander, Trench Guard.
-Zeppelin: 10 of the following units: Supreme Commander, Commander, Trench Guard, Grenadier, Rapier, Thund Gun, Heavy Mortar.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Brunhilde: 1 unité parmi: Canon Bombarde, Gotterhammer ou Blitzen AA.
-Gorgone: 10 unités parmi: commandant suprême, commandant, gardes des tranchés.
-Zeppelin: 10 unité suivante: commandant suprême, commandant, gardes des tranchés, grenadier, rapière, thund gun, mortier lourd.&lt;/I&gt;</description>
+Zeppelin: 10 of the following units: Supreme Commander, Commander, Trench Guard, Grenadier, Rapier, Thund Gun, Heavy Mortar.</description>
     </rule>
     <rule id="8f40-5c50-5ddf-3305" name="Critical Hit: May Not Move" hidden="false">
       <profiles/>
@@ -2023,25 +2030,45 @@ Zeppelin: 10 unité suivante: commandant suprême, commandant, gardes des tranch
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Immobilised and D6 units being transported are hit. Subsequent critical hits destroy the unit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;</description>
+      <description>Immobilised and D6 units being transported are hit. Subsequent critical hits destroy the unit.</description>
     </rule>
     <rule id="103c-eae5-2efb-2268" name="Death Defender Silo" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Although having an unlimited range value and not a barrage unit, the silo still needs a Sustained Fire order to reach a target that is not directly in its line of sight . This is why the death defender missile has the Indirect Fire capacity.
-&lt;I&gt;&lt;B&gt;Silo Death Defendeur:&lt;/B&gt; Bien qu&apos;ayant une valeur de portée illimité et n&apos;étant pas une unité de tir de barrage, le silo a tout de même besoin d&apos;un ordre de tir soutenu pour pouvoir atteindre une cible ne se trouvant pas directement dans sa ligne de vue. C&apos;est pourquoi le missile death defender possède la capacité tir indirect.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Silo Défenseur de la Mort:&lt;/B&gt; Bien qu&apos;il ne s&apos;agisse pas d&apos;une unité de barrage et qu&apos;elle ait une valeur de portée illimitée, le silo a toujours besoin d&apos;un ordre de Tir Soutenu pour atteindre une cible qui n&apos;est pas directement dans sa ligne de vue. C&apos;est pourquoi le missile du défenseur de la mort a la capacité Incendie Indirect.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Although having an unlimited range value and not a barrage unit, the silo still needs a Sustained Fire order to reach a target that is not directly in its line of sight . This is why the death defender missile has the Indirect Fire capacity.</description>
     </rule>
     <rule id="5d4e-59c6-52f5-8742" name="Preliminary Bombardment" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>The Trench Legions rarely have Orbital Support but can be supported by heavy land artillery (with their considerable range). As a result, the Preliminary Bombardment uses the orbital bombardment template and acts as an Orbital Bombardment (activation, one use and coordinated bombardment), except that Preliminary Bombardment can occur even when an enemy ship is in orbit.
-&lt;I&gt;&lt;B&gt;Bombardement Préliminaire:&lt;/B&gt; La légions des tranchés, dispose rarement de soutient orbital, mais peut se faire soutenir par l&apos;artillerie lourde terrestre (et leur portée considérable). De ce fait, le bombardement préliminaire utilise le gabarit de bombardement orbital et agit comme un bombardement spatial (activation, utilisable une seule fois et coordonnée de bombardements), sauf que le bombardement préliminaire peut avoir lieu même quand un vaisseau ennemis est en orbite.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Bombardement Préliminaire:&lt;/B&gt; La légions des tranchés, dispose rarement de soutient orbital, mais peut se faire soutenir par l&apos;artillerie lourde terrestre (et leur portée considérable). De ce fait, le bombardement préliminaire utilise le gabarit de bombardement orbital et agit comme un bombardement spatial (activation, utilisable une seule fois et coordonnée de bombardements), sauf que le bombardement préliminaire peut avoir lieu même quand un vaisseau ennemis est en orbite.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The Trench Legions rarely have Orbital Support but can be supported by heavy land artillery (with their considerable range). As a result, the Preliminary Bombardment uses the orbital bombardment template and acts as an Orbital Bombardment (activation, one use and coordinated bombardment), except that Preliminary Bombardment can occur even when an enemy ship is in orbit.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

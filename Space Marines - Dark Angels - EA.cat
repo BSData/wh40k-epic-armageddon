@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -8404,8 +8404,7 @@
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -8425,17 +8424,30 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.
-&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;</description>
+      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
     <rule id="22d9-4c81-8e71-deee" name="Darkshroud" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Grants cover to all friendly units within it&apos;s zone of control
-&lt;I&gt;&lt;B&gt;Darkshroud:&lt;/B&gt; Donne la couverture à toutes les unités amies dans sa zone de contrôle.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Darkshroud:&lt;/B&gt; Donne la couverture à toutes les unités amies dans sa zone de contrôle.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Grants cover to all friendly units within it&apos;s zone of control</description>
     </rule>
     <rule id="5e97-1849-1ef8-517f" name="Deathwing" hidden="false">
       <profiles/>
@@ -8455,18 +8467,56 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="description" value="Formation containing any Deathwing removes one extra blast marker on rally or regroup.&lt;BR&gt;  &lt;I&gt;&lt;B&gt;Deathwing:&lt;/B&gt; Formations contenant toute Deathwing supprime un pion d&apos;impact supplémentaire sur rallye ou regroupement.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Deathwing:&lt;/B&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Deathwing ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). Divisez par trois le nombre de touches supplémentaires subies par une formation de la Deathwing perdant un assaut, en arrondissant à l’entier inférieur en faveur de la Deathwing. &lt;BR&gt; La règle spéciale Deathwing est appliquée en cas de litige avec la règle &quot;Et Ils Ne Connaitront Pas La Peur&quot;.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Formation containing any Deathwing removes one extra blast marker on rally or regroup.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Deathwing:&lt;/B&gt; Formations contenant toute Deathwing supprime un pion d&apos;impact supplémentaire sur rallye ou regroupement.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>It takes 2 Blast Markers to suppress a Deathwing unit or destroy a broken unit (ignore additional Blast Markers). Divide the number of extra hits suffered by a Deathwing formation losing an assault by three, rounding down in favor of the Deathwing.
-The &quot;Deathwing&quot; rule takes precedence in case of any dispute with the rule &quot;They Shall Know No Fear&quot;.
-&lt;I&gt;&lt;B&gt;Deathwing:&lt;/B&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Deathwing ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). Divisez par trois le nombre de touches supplémentaires subies par une formation de la Deathwing perdant un assaut, en arrondissant à l’entier inférieur en faveur de la Deathwing .
-La règle spéciale Deathwing est appliquée en cas de litige avec la règle &quot;Et Ils Ne Connaitront Pas La Peur&quot;.&lt;/I&gt;</description>
+The &quot;Deathwing&quot; rule takes precedence in case of any dispute with the rule &quot;They Shall Know No Fear&quot;.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -8489,10 +8539,7 @@ DarkAngelsQuickRef #024052014</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -8508,11 +8555,16 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La Recherche des Déchus:&lt;/B&gt; Avant le déploiement: Le joueur Dark Angels décide d&apos;utiliser la condition de victoire de La Recherche des Déchus. Si elle est utilisée, l&apos;adversaire choisit un de ses formations qui a soit au moins une unité d&apos;infanterie ou une amélioration de personnage et désigne que la formation que celui contenant le Fallen. Le joueur Dark Angels doit détruire cette formation complètement pour gagner la condition de victoire de La Recherche des Déchus. &lt;BR&gt; Cela remplace la condition de victoire Blitzkrieg pour le joueur Dark Angel.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Before deployment: The Dark Angels player decides whether to use the Hunt for the Fallen VC. If it is used, the opponent chooses one of his/her formations that has either at least one infantry unit or a character upgrade and nominates that formation as the one containing the Fallen. The Dark Angels player must destroy this formation completely to score the Hunt for the Fallen VC.
-This replaces the Blitzkrieg victory condition for the Dark Angel player.
-&lt;I&gt;&lt;B&gt;La Recherche des Déchus:&lt;/B&gt; Avant le déploiement: Le joueur Dark Angels décide d&apos;utiliser la condition de victoire de La Recherche des Déchus. Si elle est utilisée, l&apos;adversaire choisit un de ses formations qui a soit au moins une unité d&apos;infanterie ou une amélioration de personnage et désigne que la formation que celui contenant le Fallen. Le joueur Dark Angels doit détruire cette formation complètement pour gagner la condition de victoire de La Recherche des Déchus.
-Cela remplace la condition de victoire Blitzkrieg pour le joueur Dark Angel.&lt;/I&gt;</description>
+This replaces the Blitzkrieg victory condition for the Dark Angel player.</description>
     </rule>
     <rule id="7057-9e52-5ade-bb05" name="Intractable" hidden="false">
       <profiles/>
@@ -8523,6 +8575,13 @@ Cela remplace la condition de victoire Blitzkrieg pour le joueur Dark Angel.&lt;
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Intraitable:&lt;/B&gt; Lorsqu&apos;elle est forcée de prendre une action Tenir, une formation Dark Angel ne peut pas bouger mais gagne la capacité spéciale Sans Peur pour le reste du tour. Les unités Ravenwing sont exemptées de cette règle.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -8540,24 +8599,30 @@ Cela remplace la condition de victoire Blitzkrieg pour le joueur Dark Angel.&lt;
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Land Speeders (all variants) have the Scout ability. Attack Bikes have Teleport Homers which allows Terminator to re-roll a failed Teleport test if within 15cm.
-&lt;I&gt;&lt;B&gt;Ravenwing:&lt;/B&gt; Land Speeders (toutes les variantes) ont la capacité d&apos;Éclaireurs. Motos d&apos;attaque ont Radiophare de Téléportation qui permettent Terminators de re-roll un test de Téléportation échoué si dans les 15cm.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ravenwing:&lt;/B&gt; Land Speeders (toutes les variantes) ont la capacité d&apos;Éclaireurs. Motos d&apos;attaque ont Radiophare de Téléportation qui permettent Terminators de re-roll un test de Téléportation échoué si dans les 15cm.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Land Speeders (all variants) have the Scout ability. Attack Bikes have Teleport Homers which allows Terminator to re-roll a failed Teleport test if within 15cm.</description>
     </rule>
     <rule id="bf2f-04f5-37fe-59aa" name="Space Marine Transports" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="The Space Marines are a highly mobile army. The points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along. Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having ‘plus transport’ in the units section of the army list. You don’t have to take Rhinos if you don’t want to. If you’d rather field the formation on foot instead, so it can act as a garrison for example, or be transported in a Thunderhawk Gunship, then you may do so.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter.  Les formations qui ont des Rhinos porte la mention &quot; plus transports &quot; dans leur composition.  Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas.  Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks). &lt;/I&gt;">
+        <modifier type="set" field="description" value="The Space Marines are a highly mobile army. The points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along. Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having ‘plus transport’ in the units section of the army list. You don’t have to take Rhinos if you don’t want to. If you’d rather field the formation on foot instead, so it can act as a garrison for example, or be transported in a Thunderhawk Gunship, then you may do so.">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19b8-ed01-3816-2875" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -8577,34 +8642,94 @@ Cela remplace la condition de victoire Blitzkrieg pour le joueur Dark Angel.&lt;
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter. &lt;BR&gt; Les formations qui ont des Rhinos porte la mention &quot; plus transports &quot; dans leur composition. &lt;BR&gt; Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas. &lt;BR&gt; Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks). &lt;BR&gt; En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des modules d’atterrissage. &lt;BR&gt; Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur Space Marine ou d’une barge de bataille pour déployer les modules d’atterrissage.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter.  Les formations qui ont des Rhinos porte la mention &quot; plus transports &quot; dans leur composition.  Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas.  Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks). &lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19b8-ed01-3816-2875" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <description>The Space Marines are a highly mobile army. The points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along.
 Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having ‘plus transport’ in the units section of the army list.
 You don’t have to take Rhinos if you don’t want to. If you’d rather field the formation on foot instead, so it can act as a garrison for example, or be transported in a Thunderhawk Gunship, then you may do so.
-You may choose to replace a detachment’s Rhinos with Drop Pods. If you do this then the detachment will enter play in a Drop Pod using the rules for planetfall. Note that if you choose to do this you will also require at least one Space Marine Strike Cruiser or Battle Barge to deploy the drop pods from.
-&lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter. 
-Les formations qui ont des Rhinos porte la mention &quot; plus transports &quot; dans leur composition. 
-Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage. 
-Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas. 
-Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks). 
-En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des modules d’atterrissage.
-Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur Space Marine ou d’une barge de bataille pour déployer les modules d’atterrissage.&lt;/I&gt;</description>
+You may choose to replace a detachment’s Rhinos with Drop Pods. If you do this then the detachment will enter play in a Drop Pod using the rules for planetfall. Note that if you choose to do this you will also require at least one Space Marine Strike Cruiser or Battle Barge to deploy the drop pods from.</description>
     </rule>
     <rule id="cf55-3f29-d117-fd31" name="Strategy Rating &amp; Initiative (DA)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Dark Angel Space Marine armies have a strategy rating of 5. All Dark Angel formations have an initiative rating of 1+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Space Marines ont une Valeur Stratégique de 5. Toutes les formations ont une initiative de 1+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Space Marines ont une Valeur Stratégique de 5. Toutes les formations ont une initiative de 1+.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19b8-ed01-3816-2875" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19b8-ed01-3816-2875" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Space Marines ont une Valeur Stratégique de 5. Les formations Space Marines ont une initiative de 1+ et les formations des soutiens titaniques ont une initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Dark Angel Space Marine armies have a strategy rating of 5. All Dark Angel formations have an initiative rating of 1+.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19b8-ed01-3816-2875" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Dark Angel Space Marine armies have a strategy rating of 5. All Dark Angel formations have an initiative rating of 1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Space Marines ont une Valeur Stratégique de 5. Les formations Space Marines ont une initiative de 1+ et les formations des soutiens titaniques ont une initiative de 1+.&lt;/I&gt;</description>
+      <description>Dark Angel Space Marine armies have a strategy rating of 5. All Dark Angel formations have an initiative rating of 1+.</description>
     </rule>
     <rule id="6e08-893d-2ba5-793c" name="Superior Tactics" hidden="false">
       <profiles/>
@@ -8618,6 +8743,13 @@ Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en 
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tactiques Supérieures:&lt;/B&gt; L&apos;armée du Space Marines est une armée très flexible et tactique. Avant chaque match du tournoi le joueur Space Marine peut choisir des formations avec l&apos;aspect «plus transport» sont déployés dans Rhinos, Modules d’Atterrissage ou à pied. Si la formation a des unités qui ne peuvent se déployer en Modules d’Atterrissage alors cette option ne peut pas être sélectionné.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The Space Marine army is a highly flexible and tactical army. Before each tournament game the Space Marine player may choose which formations with the ‘plus transport’ aspect are deployed in Rhinos, Drop Pods or on foot. If the formation has any units unable to deploy in Drop Pods then that option cannot be selected.</description>
     </rule>
@@ -8625,9 +8757,16 @@ Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Ravenwing Bike units have the Teleport Homer special ability which allows Terminator units to re-roll a &apos;1&apos; on the Teleport test if they appear on the table within 15cm of a Ravenwing Bike unit.
-&lt;I&gt;&lt;B&gt;Balise de Téléportation:&lt;/B&gt; Une unité se téléportant dans les 15 cm d&apos;une unité de cette formation peut relancer son jet de téléportation. Seules les unités de la Deathwing possèdent cette compétence.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Balise de Téléportation:&lt;/B&gt; Une unité se téléportant dans les 15 cm d&apos;une unité de cette formation peut relancer son jet de téléportation. Seules les unités de la Deathwing possèdent cette compétence.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Ravenwing Bike units have the Teleport Homer special ability which allows Terminator units to re-roll a &apos;1&apos; on the Teleport test if they appear on the table within 15cm of a Ravenwing Bike unit.</description>
     </rule>
     <rule id="67ee-f518-772b-1152" name="They Shall Know No Fear" hidden="false">
       <profiles/>
@@ -8648,8 +8787,7 @@ Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en 
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -8662,26 +8800,33 @@ Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en 
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Et Ils Ne Connaitront Pas La Peur:&lt;/B&gt; La bravoure et la ténacité des Space Marines sont légendaires. Ces traits de caractère sont représentés par les règles suivantes: &lt;BR&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Space Marines ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). &lt;BR&gt; Les formations Space Marines ne sont démoralisées qu’à partir du moment où elles ont deux pions d&apos;impact ou plus par unité. &lt;BR&gt; Lorsqu’une formation de Space Marines démoralisée subit un tir, comptez le nombre de pions impacts pour retirer les pertes subies à la fin de la phase de tir ennemi. &lt;BR&gt; Lors d&apos;une résolution d&apos;assaut, le fait d&apos;être plus nombreux que les Space Marines ne compte pas. Par contre le fait d&apos;être plus de deux fois plus nombreux que les Space Marines s&apos;applique toujours. &lt;BR&gt; Réduisez de moitié le nombre de touches supplémentaires subies par une formation de Space Marines perdant un assaut, en arrondissant à l’entier inférieur en faveur des Space Marines. &lt;BR&gt; Lorsqu’une formation Space Marines démoralisée se rallie, elle reçoit un nombre de pions impact égal au nombre d’unités plutôt qu’à la moitié du nombre d’unités. &lt;BR&gt; Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habituellement un seul.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any left over BMs).
 Space Marine formations are only broken if they have 2BMs per unit.
 Space Marine formations count as having half the number of BMs (rounding down- notethat assault resolution will not receive +1 for having no BM if the formation has 1BM before rounding down) for assault resolution purposes.
 Broken formations receive 1BM per unit when rallying.
-Space Marine Leaders remove 2BMs when rallying.
-&lt;I&gt;&lt;B&gt;Et Ils Ne Connaitront Pas La Peur:&lt;/B&gt; La bravoure et la ténacité des Space Marines sont légendaires. Ces traits de caractère sont représentés par les règles suivantes:
-Il faut deux pions d&apos;impact pour neutraliser une unité Space Marines ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus).
-Les formations Space Marines ne sont démoralisées qu’à partir du moment où elles ont deux pions d&apos;impact ou plus par unité.
-Lorsqu’une formation de Space Marines démoralisée subit un tir, comptez le nombre de pions impacts pour retirer les pertes subies à la fin de la phase de tir ennemi.
-Lors d&apos;une résolution d&apos;assaut, le fait d&apos;être plus nombreux que les Space Marines ne compte pas. Par contre le fait d&apos;être plus de deux fois plus nombreux que les Space Marines s&apos;applique toujours.
-Réduisez de moitié le nombre de touches supplémentaires subies par une formation de Space Marines perdant un assaut, en arrondissant à l’entier inférieur en faveur des Space Marines.
-Lorsqu’une formation Space Marines démoralisée se rallie, elle reçoit un nombre de pions impact égal au nombre d’unités plutôt qu’à la moitié du nombre d’unités.
-Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habituellement un seul.&lt;/I&gt;</description>
+Space Marine Leaders remove 2BMs when rallying.</description>
     </rule>
     <rule id="4c1d-6518-b50f-6b49" name="Transport (DA)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- Battle Barge: 60 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators, dreadnoughts, motos ainsi que 60 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 9 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement. &lt;BR&gt; Drop Pods: ne peut transporter que des unités tactiques, dévastators, scouts et dreadnoughts. &lt;BR&gt; Land Raider: 1 terminator, 2 tactiques, 2 dévastators. &lt;BR&gt; Land Raider Achilles: 1 terminator ou 2 unites d&apos;infantry (sauf réacteurs dorsaux ou montés). &lt;BR&gt; Land Raider Crusader: 2 terminator ou 3 unites d&apos;infantry (sauf réacteurs dorsaux ou montés). &lt;BR&gt; Landing Craft: 12 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators et dreadnoughts. Les terminators et dreadnoughts prennent 2 places. En plus il peut transporter 4 land raiders ou 6 de ces unités suivantes : rhinos, razorbacks, whirlwinds, hunters, predators et vindicators. &lt;BR&gt; Razorback: 1 tactique, 1 dévastator, 1 scout. &lt;BR&gt; Rhinos: 2 tactiques, 2 dévastators, 2 scouts. &lt;BR&gt; Strike Cruiser: 20 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators, dreadnoughts, motos ainsi que 20 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 6 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement. &lt;BR&gt; Thunderhawk: 8 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators, dreadnoughts. Les terminators et dreadnoughts prennent 2 emplacements. &lt;BR&gt; Thunderhawk Transporter: il peut transporter 1 land raiders ou 2 des unités suivantes : rhinos, razorbacks, whirlwinds, hunters, predators et vindicators plus toutes les unités transportées par ces véhicules.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Battle Barge: 60 Tactical, Assault, Devastator, Scout, Attack Bike, Bike, Terminator or Dreadnought units. Plus sixty Rhinos, Land Raiders, Razorbacks, Hunters, Whirlwinds, Predators or Vindicators plus nine Thunderhawks and enough drop pods or landing craft to carry any other units on board.
 Drop Pods: 1 formation that includes only Tactical, Devastator and Dreadnought units.
@@ -8692,19 +8837,7 @@ Landing Craft: 12 Tactical, Assault, Devastator, Scout, Attack Bike, Bike, Termi
 Razorback: 1 unit of Tactical, Devastator or Scout.
 Rhinos: 2 units of Tactical, Devastator or Scout.
 Strike Cruiser: 20 Tactical, Assault, Devastator, Scout, Attack Bike, Bike, Terminator or Dreadnought units, plus twenty Rhinos, Land Raiders, Razorbacks, Hunters, Whirlwinds, Predators or Vindicators, plus six Thunderhawks and enough drop pods or landing craft to carry other units on board.
-Thunderhawk: 8 Tactical, Assault, Devastator, Scout, Attack Bike, Bike, Terminator or Dreadnought units. Terminators or Dreadnoughts use 2 spaces each.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Battle Barge: 60 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators, dreadnoughts, motos ainsi que 60 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 9 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement.
-Drop Pods: ne peut transporter que des unités tactiques, dévastators, scouts et dreadnoughts.
-Land Raider: 1 terminator, 2 tactiques, 2 dévastators.
-Land Raider Achilles: 1 terminator ou 2 unites d&apos;infantry (sauf réacteurs dorsaux ou montés).
-Land Raider Crusader: 2 terminator ou 3 unites d&apos;infantry (sauf réacteurs dorsaux ou montés).
-Landing Craft: 12 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators et dreadnoughts. Les terminators et dreadnoughts prennent 2 places. En plus il peut transporter 4 land raiders ou 6 de ces unités suivantes : rhinos, razorbacks, whirlwinds, hunters, predators et vindicators.
-Razorback: 1 tactique, 1 dévastator, 1 scout.
-Rhinos: 2 tactiques, 2 dévastators, 2 scouts.
-Strike Cruiser: 20 des unités suivantes: tactiques, dévatators, scouts, assauts, terminators, dreadnoughts, motos ainsi que 20 rhinos, whirlwinds, hunters, predators, vindicators, land raiders plus 6 thunderhawks et assez de modules d&apos;atterrissage et de barge de débarquement.
-Thunderhawk: 8 de ces unités suivantes: tactiques, dévastators, assauts, scouts, motos, terminators, dreadnoughts. Les terminators et dreadnoughts prennent 2 emplacements.
-Thunderhawk Transporter: il peut transporter 1 land raiders ou 2 des unités suivantes : rhinos, razorbacks, whirlwinds, hunters, predators et vindicators plus toutes les unités transportées par ces véhicules.&lt;/I&gt;</description>
+Thunderhawk: 8 Tactical, Assault, Devastator, Scout, Attack Bike, Bike, Terminator or Dreadnought units. Terminators or Dreadnoughts use 2 spaces each.</description>
     </rule>
     <rule id="a4a8-531b-887c-dfbe" name="Unforgiven, The Great Secret" hidden="false">
       <profiles/>
@@ -8724,9 +8857,15 @@ Thunderhawk Transporter: il peut transporter 1 land raiders ou 2 des unités sui
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Impardonnés, Le Grand Secret:&lt;/B&gt; Alliés Impériaux ne peuvent pas être prises à cette force Dark Angel.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>A Dark Angels army may never ally itself with any other Forces of the Imperium.
-&lt;I&gt;&lt;B&gt;Les Impardonnés, Le Grand Secret:&lt;/B&gt; Alliés Impériaux ne peuvent pas être prises à cette force Dark Angel.&lt;/I&gt;</description>
+      <description>A Dark Angels army may never ally itself with any other Forces of the Imperium.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

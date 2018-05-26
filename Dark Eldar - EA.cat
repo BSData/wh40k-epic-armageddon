@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar: Kabal" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar: Kabal" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -64,7 +64,7 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="0c77-d914-8852-6fd5" hidden="false" targetId="5535-5d7a-519a-e9b4" type="selectionEntry">
+            <entryLink id="0c77-d914-8852-6fd5" name="GW" hidden="false" targetId="5535-5d7a-519a-e9b4" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -72,7 +72,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="f8ce-950e-e06c-ece8" hidden="false" targetId="edea-8b4e-a6c5-af5b" type="selectionEntry">
+            <entryLink id="f8ce-950e-e06c-ece8" name="NetEA" hidden="false" targetId="edea-8b4e-a6c5-af5b" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -80,7 +80,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="4b0b-1d16-0545-5edd" hidden="false" targetId="4a86-7376-5d23-e95d" type="selectionEntry">
+            <entryLink id="4b0b-1d16-0545-5edd" name="EpicUK" hidden="false" targetId="4a86-7376-5d23-e95d" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -88,7 +88,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="e76a-6ec6-811b-7587" hidden="false" targetId="2a9e-17ba-642a-dfd1" type="selectionEntry">
+            <entryLink id="e76a-6ec6-811b-7587" name="F-ERC" hidden="false" targetId="2a9e-17ba-642a-dfd1" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1457,11 +1457,19 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="cd5b-32cb-92d6-f1ca" hidden="false" targetId="f323-329d-c2a3-a2b4" type="rule">
+        <infoLink id="cd5b-32cb-92d6-f1ca" name="Support Craft" hidden="false" targetId="d6d1-bfb3-a140-3947" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="a037-4119-55e6-edd3" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
           <profiles/>
@@ -1553,11 +1561,19 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="9297-b17f-5af9-51dd" hidden="false" targetId="967a-083c-c13f-3be6" type="rule">
+        <infoLink id="9297-b17f-5af9-51dd" name="Self Planetfall" hidden="false" targetId="153c-568d-4500-6123" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
       </infoLinks>
       <modifiers>
@@ -10434,27 +10450,37 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;B&gt;Champ Éclipsant:&lt;/B&gt; Les champs éclipsants sont des champs de force optiques qui brouillent les systèmes de visée adverses. Ils confèrent une sauvegarde invulnérable de 6+ aux véhicules Eldars Noirs qui les portent.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Eclipse Fields are optical force fields that interfere with enemy targeting systems. They give a 6+ Invulnerable Save to the Dark Eldar vehicles that carry them.
-&lt;B&gt;Champ Éclipsant:&lt;/B&gt; Les champs éclipsants sont des champs de force optiques qui brouillent les systèmes de visée adverses. Ils confèrent une sauvegarde invulnérable de 6+ aux véhicules Eldars Noirs qui les portent.&lt;/I&gt;</description>
+      <description>Eclipse Fields are optical force fields that interfere with enemy targeting systems. They give a 6+ Invulnerable Save to the Dark Eldar vehicles that carry them.</description>
     </rule>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;eldars noirs codex #FERC BETA-TEST 10/09/13&lt;/I&gt;
-
-
-&lt;I&gt;&lt;B&gt;:&lt;/B&gt; &lt;/I&gt;</description>
+      <description>&lt;I&gt;eldars noirs codex #FERC BETA-TEST 10/09/13&lt;/I&gt;</description>
     </rule>
     <rule id="3438-028c-bc71-b4c4" name="Grand Voivode" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Replace a unit in the formation with a Grand Voivode and its court.
-&lt;I&gt;&lt;B&gt;Grand Voïvode:&lt;/B&gt; Remplacez une unité de la formation par une unité de Grand Voïvode et sa Cour.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Grand Voïvode:&lt;/B&gt; Remplacez une unité de la formation par une unité de Grand Voïvode et sa Cour.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Replace a unit in the formation with a Grand Voivode and its court.</description>
     </rule>
     <rule id="6c36-a804-c29d-0a8b" name="Strength Comes from Suffering" hidden="false">
       <profiles/>
@@ -10468,11 +10494,16 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;B&gt;La Puissance Vient de la Souffrance:&lt;/B&gt; Les Eldars Noirs se nourrissent de la souffrance de leurs adversaires. Ainsi, pour chaque perte infligée (assaut ou tir) par une unité Eldar Noir non démoralisée, sa formation pourra retirer un pion impact, à la fin de son action. En assaut, les pertes dues à la différence de résultat du combat comptent. &lt;BR&gt; Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidraven.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The Dark Eldar feed on the suffering of their opponents. Thus, for each loss inflicted (in assault or shooting) by an unbroken Dark Eldar unit, its formation can remove a blast marker at the end of its action. In assault, losses due to combat resolution count.
-This rule applies to all units except: Harvester, Razorwing, Voidraven
-&lt;B&gt;La Puissance Vient de la Souffrance:&lt;/B&gt; Les Eldars Noirs se nourrissent de la souffrance de leurs adversaires. Ainsi, pour chaque perte infligée (assaut ou tir) par une unité Eldar Noir non démoralisée, sa formation pourra retirer un pion impact, à la fin de son action. En assaut, les pertes dues à la différence de résultat du combat comptent.
-Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidraven.&lt;/I&gt;</description>
+This rule applies to all units except: Harvester, Razorwing, Voidraven</description>
     </rule>
     <rule id="bdc9-4199-e910-40ae" name="Assault Deck" hidden="false">
       <profiles/>
@@ -10514,9 +10545,15 @@ Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidrave
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Barge:&lt;/B&gt; Le moteur à antimatière explose et détruit la barge. Toutes les unités en contact subissent une touche MA sur du 5+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>FF reduced to 6+. Additional Critical hits will cause an extra point of damage.
-&lt;I&gt;&lt;B&gt;Touche Critique: Barge:&lt;/B&gt; Le moteur à antimatière explose et détruit la barge. Toutes les unités en contact subissent une touche MA sur du 5+.&lt;/I&gt;</description>
+      <description>FF reduced to 6+. Additional Critical hits will cause an extra point of damage.</description>
     </rule>
     <rule id="2037-88f2-3f69-4f4e" name="Critical Hit: Executioner" hidden="false">
       <profiles/>
@@ -10530,9 +10567,15 @@ Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidrave
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Executioner:&lt;/B&gt; le Phantom Lance est détruit. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Phantom Lances destroyed. Additional Critical hits will cause an extra point of damage.
-&lt;I&gt;&lt;B&gt;Touche Critique: Executioner:&lt;/B&gt; le dispositif optique de brouillage du Moissonneur est détruit. Celui-ci perd la capacité Bouclier d’ombre. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;</description>
+      <description>Phantom Lances destroyed. Additional Critical hits will cause an extra point of damage.</description>
     </rule>
     <rule id="8c9d-fee4-93f4-2aa4" name="Critical Hit: Vessel of Pain" hidden="false">
       <profiles/>
@@ -10553,8 +10596,16 @@ Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidrave
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>&lt;I&gt; le dispositif optique de brouillage du Moissonneur est détruit. Celui-ci perd la capacité Bouclier d’ombre. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Moissonneur:&lt;/B&gt; le dispositif optique de brouillage du Moissonneur est détruit. Celui-ci perd la capacité Bouclier d’ombre. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Shadowfield destroyed. Additional Critical hits will cause an extra point of damage.</description>
     </rule>
     <rule id="bd5b-22a7-9fa7-ebe7" name="Critical Hit: Tormentor" hidden="false">
       <profiles/>
@@ -10568,9 +10619,15 @@ Cette règle vaut pour toutes les unités sauf: Moissonneur, Razorwing, Voidrave
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Tormentor:&lt;/B&gt; le dispositif optique de brouillage du titan est détruit. Celui-ci perd les capacités Bouclier d’ombre et Champ éclipsant. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Movement is reduced to 25cm and it loses the Jump Pack ability for the rest of the game. Further critical hits cause an extra point of damage.
-&lt;I&gt;&lt;B&gt;Touche Critique: Tormentor:&lt;/B&gt; le dispositif optique de brouillage du titan est détruit. Celui-ci perd les capacités Bouclier d’ombre et Champ éclipsant. Tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;</description>
+      <description>Movement is reduced to 25cm and it loses the Jump Pack ability for the rest of the game. Further critical hits cause an extra point of damage.</description>
     </rule>
     <rule id="9b65-5720-4824-2ef8" name="Critical Hit: Weapons Damaged" hidden="false">
       <profiles/>
@@ -10641,10 +10698,7 @@ DarkEldarQuickRef #05062015</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-Fanatic #70
+      <description>Fanatic #70
 Fanatic #55
 Fanatic #02
 Fanatic #13</description>
@@ -10661,12 +10715,16 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tactique du Tirer et Courir:&lt;/B&gt; Les formations Eldars Noirs qui reçoivent l’ordre avance ou avance rapide peuvent choisir de tirer soit avant soit après chaque mouvement. Elles ne peuvent néanmoins tirer qu’une seule fois durant l’action. Par exemple, une formation Eldar Noir avec un ordre avance peut tirer puis se déplacer ou se déplacer puis tirer, de même une formation avec un ordre de avance rapide peut tirer et se déplacer deux fois, se déplacer deux fois et tirer, ou se déplacer puis tirer puis encore bouger.  &lt;BR&gt; De plus, les formations Eldars Noirs qui remportent un assaut sont autorisées à utiliser la totalité de leur mouvement lorsqu&apos;elles consolident leur position, au lieu d&apos;être limitées à un mouvement de 5cm comme cela devrait être normalement le cas. Cependant (hormis pour les formations de Cérastes ; Maîtresses de sang ; Hellions et Reavers), les formations Eldars Noirs qui choisissent de consolider de leur mouvement complet, ne peuvent en aucun cas prétendre au soutien d&apos;un autre assaut. Les formations qui souhaitent soutenir un nouvel assaut ne doivent alors consolider que de 5cm. &lt;BR&gt; Les formations de Cérastes ; Maîtresses de sang ; Hellions et Reavers peuvent toujours consolider de leur mouvement complet et soutenir d&apos;autres assauts.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Dark Eldar formations that take advance or double actions may choose to shoot either before or after each move. However, they may still only shoot once during the action. For example, a Dark Eldar formation taking an advance action could shoot and then move or move and then shoot, while a formation taking a double action could shoot and move twice, move twice and then shoot, or move then shoot and then move again.
-In addition, a Dark Eldar formation that wins an assault is allowed to move any distance up to its speed value when they consolidate, rather than being limited to a move of 5cms as would normally be the case.
-&lt;I&gt;&lt;B&gt;Tactique du Tirer et Courir:&lt;/B&gt; Les formations Eldars Noirs qui reçoivent l’ordre avance ou avance rapide peuvent choisir de tirer soit avant soit après chaque mouvement. Elles ne peuvent néanmoins tirer qu’une seule fois durant l’action. Par exemple, une formation Eldar Noir avec un ordre avance peut tirer puis se déplacer ou se déplacer puis tirer, de même une formation avec un ordre de avance rapide peut tirer et se déplacer deux fois, se déplacer deux fois et tirer, ou se déplacer puis tirer puis encore bouger. 
-De plus, les formations Eldars Noirs qui remportent un assaut sont autorisées à utiliser la totalité de leur mouvement lorsqu&apos;elles consolident leur position, au lieu d&apos;être limitées à un mouvement de 5cm comme cela devrait être normalement le cas. Cependant (hormis pour les formations de Cérastes ; Maîtresses de sang ; Hellions et Reavers), les formations Eldars Noirs qui choisissent de consolider de leur mouvement complet, ne peuvent en aucun cas prétendre au soutien d&apos;un autre assaut. Les formations qui souhaitent soutenir un nouvel assaut ne doivent alors consolider que de 5cm.
-Les formations de Cérastes ; Maîtresses de sang ; Hellions et Reavers peuvent toujours consolider de leur mouvement complet et soutenir d&apos;autres assauts.&lt;/I&gt;</description>
+In addition, a Dark Eldar formation that wins an assault is allowed to move any distance up to its speed value when they consolidate, rather than being limited to a move of 5cms as would normally be the case.</description>
     </rule>
     <rule id="4499-a5cb-23c7-3f35" name="Kashnarak" hidden="false">
       <profiles/>
@@ -10716,9 +10774,17 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
               </conditions>
-              <conditionGroups/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -10742,9 +10808,42 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seules les formations de Fléaux et de Maîtres des bêtes peuvent se déployer en garnison.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Only formations of Scourges or Warp Beasts / Beast Masters may garrison.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
-      <description>Only formations made solely of Hellions may garrison objectives in the Grand Tournament game scenario.
-&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seules les formations de Fléaux et de Maîtres des bêtes peuvent se déployer en garnison.&lt;/I&gt;</description>
+      <description>Only formations made solely of Hellions may garrison objectives in the Grand Tournament game scenario.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -10757,35 +10856,16 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>This portable webway portal may be used once in the game. After the characters formation completes an action you may place a barrage template marker completely within 15cm of the character and outside any enemy zones of control. This marker counts as a webway portal which may not be attacked or damaged in any way. Remove this webway portal marker in the end phase of the turn before any rallying.
-&lt;I&gt;&lt;B&gt;Portail Noir:&lt;/B&gt; Un personnage de la formation ou un Grand Voïvode gagne la capacité Portail Noir. Si le personnage est détruit, le portail noir également.&lt;/I&gt;</description>
-    </rule>
-    <rule id="967a-083c-c13f-3be6" name="Self Planetfall" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portail Noir:&lt;/B&gt; Un personnage de la formation ou un Grand Voïvode gagne la capacité Portail Noir. Si le personnage est détruit, le portail noir également.&lt;/I&gt;">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Auto-caída Orbital: &lt;/B&gt;Las reglas de auto-caída orbital se tratan igual que las reglas de las caídas orbitales, con la única excepción de, al tratarse de unidades mucho más pequeñas, se puede elegir cualquier turno, incluidos aquellos en los que esté presente cualquier nave espacial. &lt;BR&gt; El turno de llegada de la formación y el punto elegido para el despliegue debe anotarse en secreto con antelación. La formación con auto-caída orbital debe activarse de manera normal, igual que una nave espacial. Designa la formación y realiza el chequeo de acción. Si se falla el chequeo, la llegada se retrasará al turno siguiente. Si la activación es exitosa, coloca la formación en el punto previamente anotado y calcula la dispersión. Las unidades a bordo de transportes pueden desembarcar a 5 cm de los mismos. La acción de la formación proseguirá con normalidad. En otras palabras, la formación obtendrá el “movimiento gratuito” de la caída orbital al comienzo de su acción, pero, para todo lo demás, su activación es normal.&lt;BR&gt; (Nota: la acción es elegida en la activación, antes de determinar la dispersión. Elige con cuidado, ya que una dispersión desafortunada podría dificultar o impedir ciertas acciones).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Self planetfall is plotted exactly as planetfall. Both the turn in which the formation arrives and the landing location is plotted. The only exception is that, because these units are much smaller than orbiting spacecraft, they may be plotted to arrive in the same turn that an enemy spacecraft is present.
-On the designated turn the self planetfalling unit is activated in the normal activation sequence, as with spacecraft. Nominate the action for the formation and roll to activate. If the unit fails to activate its arrival is delayed to the next following turn. If the activation is successful, place the formation at the plotted landing zone and determine scatter as if it were a normal Planetfall, including loaded units disembarking up to 5cm. The formation’s action proceeds as normal in all respects from that point. In other words, the formation gets the “free move” from planetfall placement at the beginning of its action but in all other ways activates as normal.
-Note: The action is chosen at activation, before scatter is determined. Choose the action carefully as a poor scatter role could render some actions ineffective.
-&lt;I&gt;&lt;B&gt;Assaut Planétaire Indépendant:&lt;/B&gt; L&apos;Assaut Planétaire Indépendant s&apos;effectue exactement comme expliqué dans la regle Assaut Planétaire. L&apos;exception que constitue ces unités ayant cette capacité réside dans le fait qu&apos;elles sont beaucoup plus petites que les Vaisseaux Spatiaux en orbite et par conséquent, elles peuvent éxécuter un Assaut Planétaire lors d&apos;un même tour voyant la présence d&apos;un vaisseau spatial ennemi. 
-Lors du tour désigné, la formation d&apos;Assaut Planétaire Indépendant est normalement activée dans la séquence d&apos;activation tout comme un vaisseau spatial. Lancez le dé pour le test d&apos;action. Si la formation rate son jet, son arrivée est retardée pour le tour prochain. Si le jet est réussi, placez la formation aux coordonnées d&apos;atterrisage et faites un jet de dispersion. Les troupes embarquées dans une unité ayant la capacité Assaut Planétaire Indépendant bénéficient des possibilitées permises lors d&apos;un Assaut Planétaire.&lt;/I&gt;</description>
+      <description>This portable webway portal may be used once in the game. After the characters formation completes an action you may place a barrage template marker completely within 15cm of the character and outside any enemy zones of control. This marker counts as a webway portal which may not be attacked or damaged in any way. Remove this webway portal marker in the end phase of the turn before any rallying.</description>
     </rule>
     <rule id="70fd-9974-2fb9-2e6d" name="Shadowfields" hidden="false">
       <profiles/>
@@ -10799,11 +10879,15 @@ Lors du tour désigné, la formation d&apos;Assaut Planétaire Indépendant est 
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;B&gt;Bouclier d&apos;Ombre:&lt;/B&gt; Les Boucliers d&apos;Ombre sont des dispositifs sophistiqués qui drainent littéralement la lumière des objets, empêchant ainsi les Eldars Noirs d&apos;être pris pour cible. Les Boucliers d&apos;Ombre affectent d&apos;un malus de -1 tout tir porté contre l&apos;unité équipée, ce malus étant cumulatif avec les malus rencontrés en jeu.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Each Shadowfield will absorb one successful hit before going down; no blast markers are caused for this hit. A war engine with at least one Shadowfield remaining regains an additional field at the end of the rally phase of each turn. The war engine can never have more shadowfields than originally allotted. In addition an active Shadowfield always counts as being in cover (apply -1 cover modifier). This has no effect on engagements, however (close combat or firefight).
-&lt;B&gt;Bouclier d&apos;Ombre:&lt;/B&gt; Les Boucliers d&apos;Ombre sont des dispositifs sophistiqués qui drainent littéralement la lumière des objets,
-empêchant ainsi les Eldars Noirs d&apos;être pris pour cible. Les Boucliers d&apos;Ombre affectent d&apos;un malus de -1 tout tir porté contre
-l&apos;unité équipée, ce malus étant cumulatif avec les malus rencontrés en jeu.&lt;/I&gt;</description>
+      <description>Each Shadowfield will absorb one successful hit before going down; no blast markers are caused for this hit. A war engine with at least one Shadowfield remaining regains an additional field at the end of the rally phase of each turn. The war engine can never have more shadowfields than originally allotted. In addition an active Shadowfield always counts as being in cover (apply -1 cover modifier). This has no effect on engagements, however (close combat or firefight).</description>
     </rule>
     <rule id="d006-8f66-bf62-dfd1" name="Strategy Rating &amp; Initiative (DE)" hidden="false">
       <profiles/>
@@ -10817,35 +10901,17 @@ l&apos;unité équipée, ce malus étant cumulatif avec les malus rencontrés en
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; D’Eldars noirs possède une valeur stratégique de 5 pour le tour 1 puis de 4 pour les tours suivants. &lt;BR&gt; Les formations d’Immaculés; Incubes; Maîtresses de sang; Mandragores; Titan Tourmenteur; Moissonneur possèdent une initiative de 1+.  &lt;BR&gt; Les autres formations possèdent une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Dark Eldar armies have a Strategy rating of  3+.
 Most Dark Eldar formations have an Initiative of  2+.
-Kabals, Ravager Armadas, Vessels of Pain, Tormentors, and Executor Landing Modules have an initiative of  1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; D’Eldars noirs possède une valeur stratégique de 5 pour le tour 1 puis de 4 pour les tours suivants.
-Les formations d’Immaculés; Incubes; Maîtresses de sang; Mandragores; Titan Tourmenteur; Moissonneur possèdent une initiative de 1+. 
-Les autres formations possèdent une initiative de 2+.&lt;/I&gt;</description>
-    </rule>
-    <rule id="f323-329d-c2a3-a2b4" name="Support Craft" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Nave de Apoyo: &lt;/B&gt;Las naves de apoyo son como un híbrido entre los vehículos gravitatorios y las aeronaves. Permanecen siempre a gran distancia del suelo, sobrevolando el terreno para tener buena posición de disparo. Una nave de apoyo funciona exactamente como una unidad gravitatoria que esté siempre en vuelo alto. Las naves de apoyo disparan, y son afectadas por los disparos, exactamente igual que cualquier otra unidad (es decir, no se requiere la habilidad antiaérea). En un asalto, las naves de apoyo forzarán automáticamente el uso de TT, de la misma forma que los gravitatorios que así lo deseen. Se asume que las tropas a bordo de las naves de apoyo con capacidad de transporte estarán dotadas de los medios necesarios para embarcar y desembarcar de ellas con normalidad.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Support Craft function identically to a Skimmer unit that is always ‘popped up’. Support Craft fire and are fired at normally (i.e. anti- aircraft ability is not required). In an assault, Support Craft automatically force a firefight in the same manner Skimmers may choose. It is assumed that Support Craft transports or the troops they carry are appropriately equipped to embark and disembark troops as normal.</description>
+Kabals, Ravager Armadas, Vessels of Pain, Tormentors, and Executor Landing Modules have an initiative of  1+.</description>
     </rule>
     <rule id="d477-8c10-e1bf-37fb" name="Transport (DE)" hidden="false">
       <profiles/>
@@ -10866,6 +10932,19 @@ Les autres formations possèdent une initiative de 2+.&lt;/I&gt;</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Raider: 2 unités d’infanterie parmi : Grand Voïvode ; Guerrier cabaliste ; Immaculé ; Incube ;.Céraste ; Maîtresse de sang Hekatrix ; Gorgones ; Grotesques. Les Grotesques prennent deux places. &lt;BR&gt; Barge Tantale: 3 unités d’infanterie parmi : Grand Voïvode ; Immaculé ; Incube ; Maîtresse de sang. &lt;BR&gt; Venom: 1 unité d’infanterie parmi : Grand Voïvode ; Guerrier cabaliste ; Immaculé ; Incube ;.Céraste ; Maîtresse de sang Hekatrix ; Gorgones.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <description>As follows-
 Barge of Pleasure: 4 of the following units: Warriors, Incubi, Haemonculi, Grotesques, Wyches; in addition may transport up to 2 Mandrake units.
@@ -10873,11 +10952,7 @@ Corsair Class Escort: 3 Slavebringer Assault Boats and 1 Executor Module if Pin 
 Executor: 8 Light Vehicles and Armoured Vehicles; War Engines (not including Slavebringers) count as their Damage Capacity. In addition may carry up to 16 infantry units of any type.
 Raider: 2 of the following units: Warriors, Incubi, Haemonculi, Grotesques, and Wyches: may transport 1 Mandrake unit in addition to these two units.
 Slavebringer: 8 of the following units: Warriors, Incubi, Haemonculi, Grotesques, Wyches; Talos count as 2 infantry units, Perditor count as four infantry units. In addition may transport up to 4 Mandrake units.
-Torture Class Cruiser: 6 Slavebringer Assault Boats, or 10 Slavebringer Assault Boats and 2 Executor Modules if Pin Point Attacks are forfeit.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Raider: 2 unités d’infanterie parmi : Grand Voïvode ; Guerrier cabaliste ; Immaculé ; Incube ;.Céraste ; Maîtresse de sang Hekatrix ; Gorgones ; Grotesques. Les Grotesques prennent deux places.
-Barge Tantale: 3 unités d’infanterie parmi : Grand Voïvode ; Immaculé ; Incube ; Maîtresse de sang.
-Venom: 1 unité d’infanterie parmi : Grand Voïvode ; Guerrier cabaliste ; Immaculé ; Incube ;.Céraste ; Maîtresse de sang Hekatrix ; Gorgones.&lt;/I&gt;</description>
+Torture Class Cruiser: 6 Slavebringer Assault Boats, or 10 Slavebringer Assault Boats and 2 Executor Modules if Pin Point Attacks are forfeit.</description>
     </rule>
     <rule id="cbe6-d542-4bd4-854a" name="Webway Portals" hidden="false">
       <profiles/>
@@ -10891,10 +10966,15 @@ Venom: 1 unité d’infanterie parmi : Grand Voïvode ; Guerrier cabaliste ; Imm
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Portails Noirs et Fantômes:&lt;/B&gt; Chaque portail inclus dans une armée permet au joueur Eldar Noir de prendre trois formations et de les conserver en réserve dans la toile. Les formations en réserve dans la toile peuvent entrer en jeu par un portail, en réalisant une action qui comporte un mouvement. Ce mouvement est alors mesuré à partir de la position du portail sur la table de jeu. Notez que les formations peuvent apparaître à travers n’importe quel portail, pas seulement celui qui a été « utilisé » pour permettre de conserver la formation en réserve. Une seule formation peut voyager à travers chaque portail chaque tour. Notez qu&apos;une formation qui rate son activation en tentant de franchir un portail recevra automatiquement l&apos;ordre tenir (donc peut entrer en jeu en réalisant un simple mouvement en prenant 1 PI pour l&apos;activation ratée, ou alors rester hors de table et se regrouper). Si elle choisit de se regrouper en restant hors de table, cela permettra à une autre formation de pouvoir utiliser ce portail car il ne sera pas considéré comme utilisé par la formation précédente ayant raté son activation. Toute formation voyageant à travers un portail noir porté par une unité démoralisée, recevra immédiatement un PI.  Seules les unités d&apos;infanterie, les véhicules légers et les véhicules blindés avec la capacité marcheur peuvent utiliser les portails noirs et portails fantômes.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Each Webway portal included in the army allows the Dark Eldar player to keep up to three formations back in Commorragh. Any of these reserve formations may enter play via a Webway portal by taking an action that allows them to move, then measuring its first move from the portal on the tabletop. No more than one formation may travel through a single portal each turn.
-&lt;I&gt;&lt;B&gt;Les Portails Noirs et Fantômes:&lt;/B&gt; Chaque portail inclus dans une armée permet au joueur Eldar Noir de prendre trois formations et de les conserver en réserve dans la toile. Les formations en réserve dans la toile peuvent entrer en jeu par un portail, en réalisant une action qui comporte un mouvement. Ce mouvement est alors mesuré à partir de la position du portail sur la table de jeu. Notez que les formations peuvent apparaître à travers n’importe quel portail, pas seulement celui qui a été « utilisé » pour permettre de conserver la formation en réserve. Une seule formation peut voyager à travers chaque portail chaque tour. Notez qu&apos;une formation qui rate son activation en tentant de franchir un portail recevra automatiquement l&apos;ordre tenir (donc peut entrer en jeu en réalisant un simple mouvement en prenant 1 PI pour l&apos;activation ratée, ou alors rester hors de table et se regrouper). Si elle choisit de se regrouper en restant hors de table, cela permettra à une autre formation de pouvoir utiliser ce portail car il ne sera pas considéré comme utilisé par la formation précédente ayant raté son activation. Toute formation voyageant à travers un portail noir porté par une unité démoralisée, recevra immédiatement un PI.
-Seules les unités d&apos;infanterie, les véhicules légers et les véhicules blindés avec la capacité marcheur peuvent utiliser les portails noirs et portails fantômes.&lt;/I&gt;</description>
+      <description>Each Webway portal included in the army allows the Dark Eldar player to keep up to three formations back in Commorragh. Any of these reserve formations may enter play via a Webway portal by taking an action that allows them to move, then measuring its first move from the portal on the tabletop. No more than one formation may travel through a single portal each turn.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -12855,7 +12935,7 @@ Seules les unités d&apos;infanterie, les véhicules légers et les véhicules b
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Après placement des objectifs, le joueur eldar remplace l&apos;un des objectifs de sa moitié de table par un portail fantôme. Celui-ci est indestructible et fonctionne à la fois comme un objectif et un portail fantôme d&apos;un point de vue des règles du jeu.">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>

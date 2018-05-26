@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e51f-013a-33ef-0295" name="Eldar: Mymeara Craftworld" book="" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e51f-013a-33ef-0295" name="Eldar: Mymeara Craftworld" book="" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -6091,31 +6091,78 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="In the Strategy Phase of any turn place the Avatar within 15cm of a Farseer before making a strategy roll. The Avatar counts as its own formation and may only enter play in this manner. In the End Phase of that turn remove the Avatar before rallying formations. Once the Avatar has been removed it may not return.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; Dans la phase de la stratégie d&apos;un tour position l&apos;Avatar au sein de 15cm d&apos;un Farseer avant de faire un jet de stratégie. L&apos;Avatar compte comme sa propre formation et ne peut entrer en jeu de cette manière. Dans la phase de fin de ce tour supprimer l&apos;Avatar avant de rallier les formations. Une fois que l&apos;Avatar a été supprimé, il ne peut pas revenir.&lt;/I&gt;">
+        <modifier type="set" field="description" value="In the Strategy Phase of any turn place the Avatar within 15cm of a Farseer before making a strategy roll. The Avatar counts as its own formation and may only enter play in this manner. In the End Phase of that turn remove the Avatar before rallying formations. Once the Avatar has been removed it may not return.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar: &lt;/B&gt;Al comienzo de cualquier turno coloca al Avatar a 15cm o menos de una formación que incluya una unidad con videncia, antes de realizar la tirada de estrategia. El Avatar contará como parte de la formación, y sólo puede entrar en juego de esta manera. En la Fase de Finalización de ese turno, retira al Avatar antes de reorganizar formaciones. Una vez haya abandonado el campo de batalla, el Avatar no podrá regresar.&lt;/I&gt; ">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes:&lt;BR&gt; 1) De manière classique lors du déploiement en début de partie&lt;BR&gt; 2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve&lt;BR&gt; 3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation&lt;BR&gt; Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; Dans la phase de la stratégie d&apos;un tour position l&apos;Avatar au sein de 15cm d&apos;un Farseer avant de faire un jet de stratégie. L&apos;Avatar compte comme sa propre formation et ne peut entrer en jeu de cette manière. Dans la phase de fin de ce tour supprimer l&apos;Avatar avant de rallier les formations. Une fois que l&apos;Avatar a été supprimé, il ne peut pas revenir.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>The avatar may appear on the battlefield in three different ways:
 1) The usual manner of deploying at the start of the game;
 2) Through a portal like any formation held in reserve;
 3) Summoning within 15 cm of a Farseer during the teleportation phase.
-It is in any case, from its inception, an independent, permanent formation, until the end of the game or its destruction. However it can only contest objectives.
-&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes :
-1) De manière classique lors du déploiement en début de partie
-2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve
-3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation
-Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;</description>
+It is in any case, from its inception, an independent, permanent formation, until the end of the game or its destruction. However it can only contest objectives.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -6138,10 +6185,7 @@ CodexCraftworldEldar #070414</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #55
 Fanatic #02
 Fanatic #13</description>
@@ -6158,9 +6202,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Only Eldar War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.
-&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;</description>
+      <description>Only Eldar War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -6181,44 +6231,110 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Eldars ont une Valeur Stratégique de 4.  Les formation de Titans et de Guerriers Aspect ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.  Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Mymearan armies have Strategy Rating 4. 
 Mymearan Aspect Warriors, Revenants, Phantom Titans and Warlock Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.
-Harlequins have Strategy Rating 5 and an Initiative rating of 1+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Eldars ont une Valeur Stratégique de 4. 
-Les formation de Titans et de Guerriers Aspect ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.
-Les Arlequins ont une Valeur Stratégique de 5 et une initiative de 1+.&lt;/I&gt;</description>
+Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
     </rule>
-    <rule id="46cd-7181-5118-8c84" name="Transport (Eldar)" hidden="false">
+    <rule id="46cd-7181-5118-8c84" name="Transport (Mym)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="As follows-&lt;BR&gt; Dragonship: 12 Vampires and the units being transported on them.&lt;BR&gt; Falcon: 1 infantry unit (except Support Weapon Platforms, Wraithguard, Jump Packs or Mounted).&lt;BR&gt; Firestorm: 1 infantry unit (except Support Weapon Platforms, Wraithguard, Jump Packs or Mounted).&lt;BR&gt; Night Spinner: 1 infantry unit (except Support Weapon Platforms, Wraithguard, Jump Packs or Mounted).&lt;BR&gt; Vampire Raider: 8 infantry units (except Mounted).&lt;BR&gt; Wave Serpent: 1 Wraithguard or any 2 infantry units (except Support Weapon Platforms, Jump Packs or Mounted).&lt;BR&gt; &lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-&lt;BR&gt; Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.&lt;BR&gt; Falcon: 1 unité d&apos;infanterie (sauf Plateformes de Support, Garde Fantôme, Réacteurs Dorsaux, ou Montés).&lt;BR&gt; Firestorm: 1 unité d&apos;infanterie (sauf Plateformes de Support, Garde Fantôme, Réacteurs Dorsaux, ou Montés).&lt;BR&gt; Night Spinner: 1 unité d&apos;infanterie (sauf Plateformes de Support, Garde Fantôme, Réacteurs Dorsaux, ou Montés).&lt;BR&gt; Vampire Raider: 8 unités d&apos;infanterie (sauf Montés).&lt;BR&gt; Wave Serpent: 1 Garde Fantôme ou 2 unités d&apos;infanterie (sauf Plateformes de Support, Réacteurs Dorsaux, ou Montés).&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-&lt;BR&gt; Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.&lt;BR&gt; Falcon: 1 unité d&apos;infanterie (sauf Plateformes de Support, Garde Fantôme, Réacteurs Dorsaux, ou Montés).&lt;BR&gt; Firestorm: 1 unité d&apos;infanterie (sauf Plateformes de Support, Garde Fantôme, Réacteurs Dorsaux, ou Montés).&lt;BR&gt; Night Spinner: 1 unité d&apos;infanterie (sauf Plateformes de Support, Garde Fantôme, Réacteurs Dorsaux, ou Montés).&lt;BR&gt; Vampire Raider: 8 unités d&apos;infanterie (sauf Montés).&lt;BR&gt; Wave Serpent: 1 Garde Fantôme ou 2 unités d&apos;infanterie (sauf Plateformes de Support, Réacteurs Dorsaux, ou Montés).&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
-        <modifier type="set" field="description" value="As follows-&lt;BR&gt; Dragonship: 12 Vampires and the units being transported on them.&lt;BR&gt; Falcon: 1 of the following: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.&lt;BR&gt; Vampire Raider: 8 of the following: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Shadow Spectres, Swooping Hawks, Warp Spiders, Dark Reapers, Heavy Weapon Platform, Support Weapon Platform, Wraithguard, Rangers.&lt;BR&gt; Wave Serpent: 1 Wraithguard or any 2 of the following: Autarch, Farseer, Guardian, Heavy Weapon Platform, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.&lt;BR&gt; &lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-&lt;BR&gt; Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.&lt;BR&gt; Falcon: 1 Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.&lt;BR&gt; Vampire Raider: 8 des unités suivant: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Shadow Spectres, Swooping Hawks, Warp Spiders, Dark Reapers, Heavy Weapon Platform, Support Weapon Platform, Wraithguard, Rangers.&lt;BR&gt; Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Autarch, Farseer, Guardian, Heavy Weapon Platform, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-&lt;BR&gt; Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.&lt;BR&gt; Falcon: 1 Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.&lt;BR&gt; Vampire Raider: 8 des unités suivant: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Shadow Spectres, Swooping Hawks, Warp Spiders, Dark Reapers, Heavy Weapon Platform, Support Weapon Platform, Wraithguard, Rangers.&lt;BR&gt; Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Autarch, Farseer, Guardian, Heavy Weapon Platform, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur. &lt;BR&gt; Falcon: 1 Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers. &lt;BR&gt; Vampire Raider: 8 des unités suivant: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Swooping Hawks, Warp Spiders, Dark Reapers, Heavy Weapon Platform, Support Weapon Platform, Wraithguard, Rangers. &lt;BR&gt; Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="As follows-&lt;BR&gt; Dragonship: 12 Vampires and the units being transported on them.&lt;BR&gt; Falcon: 1 of the following: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.&lt;BR&gt; Vampire Raider: 8 of the following: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Shadow Spectres, Swooping Hawks, Warp Spiders, Dark Reapers, Heavy Weapon Platform, Support Weapon Platform, Wraithguard, Rangers.&lt;BR&gt; Wave Serpent: 1 Wraithguard or any 2 of the following: Autarch, Farseer, Guardian, Heavy Weapon Platform, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Shadow Spectres, Swooping Hawks.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="As follows-&lt;BR&gt; Dragonship: 12 Vampires and the units being transported on them.&lt;BR&gt; Falcon: 1 infantry unit (except Support Weapon Platforms, Wraithguard, Jump Packs or Mounted).&lt;BR&gt; Firestorm: 1 infantry unit (except Support Weapon Platforms, Wraithguard, Jump Packs or Mounted).&lt;BR&gt; Night Spinner: 1 infantry unit (except Support Weapon Platforms, Wraithguard, Jump Packs or Mounted).&lt;BR&gt; Vampire Raider: 8 infantry units (except Mounted).&lt;BR&gt; Wave Serpent: 1 Wraithguard or any 2 infantry units (except Support Weapon Platforms, Jump Packs or Mounted).">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>As follows-
 Dragonship: 12 Vampires and the units being transported on them.
 Falcon: 1 of the following: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Swooping Hawks.
 Vampire Raider: 8 of the following: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Swooping Hawks, Warp Spiders, Dark Reapers, Heavy Weapon Platform, Support Weapon Platform, Wraithguard, Rangers.
-Wave Serpent: 1 Wraithguard or any 2 of the following: Autarch, Farseer, Guardian, Heavy Weapon Platform, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Swooping Hawks.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Dragonship: 12 Vampires ainsi que les troupes se trouvant à l&apos;intérieur.
-Falcon: 1 Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers.
-Vampire Raider: 8 des unités suivant: Autarch, Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Swooping Hawks, Warp Spiders, Dark Reapers, Heavy Weapon Platform, Support Weapon Platform, Wraithguard, Rangers.
-Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farseer, Guardian, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers.&lt;/I&gt;</description>
+Wave Serpent: 1 Wraithguard or any 2 of the following: Autarch, Farseer, Guardian, Heavy Weapon Platform, Striking Scorpions, Howling Banshees, Fire Dragons, Dire Avengers, Dark Reapers, Swooping Hawks.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -7594,7 +7710,7 @@ Wave Serpent: 1 Wraithguard, 1 Heavy Weapons Platform ou 2 unités parmi: Farsee
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Après placement des objectifs, le joueur eldar remplace l&apos;un des objectifs de sa moitié de table par un portail fantôme. Celui-ci est indestructible et fonctionne à la fois comme un objectif et un portail fantôme d&apos;un point de vue des règles du jeu.">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>

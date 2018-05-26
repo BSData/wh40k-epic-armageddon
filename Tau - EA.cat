@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1738-2794-14e7-e532" name="Tau" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1738-2794-14e7-e532" name="Tau" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="2389-41d6-1f04-c7d0" hidden="false" targetId="f284-0b20-ba26-4299" type="rule">
+    <infoLink id="2389-41d6-1f04-c7d0" name="Strategy Rating &amp; Initiative (Tau)" hidden="false" targetId="f284-0b20-ba26-4299" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="a0bb-d700-f24b-6f1d" name="Strategy Rating &amp; Initiative (Tau 3rd Sphere)" hidden="false" targetId="a45c-f74a-5c6d-0013" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -4803,11 +4809,17 @@ tau_troisième phase #Version F-ERC du 23 novembre 2009 (Dernière mise à jour 
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Drones:&lt;/B&gt; L&apos;adjonction de drones a une formation n&apos;empêche pas celle-ci de débuter en garnison si elle dispose des prérequis pour le faire. Une formation composée uniquement de drones (suite a des pertes, ou dans le cas d&apos;un escadron de drones lourds) ne peuvent pas tenir un objectif, mais sont capable de contester celui-ci. &lt;BR&gt; Certaines unités sont perçues par leurs alliés comme Sacrifiables. Ceci est surement à cause du fait que ces unités sont spécialement créées pour se sacrifier car ces unités n&apos;ont simplement pas de valeur parmis tant d&apos;autres raison. Les unités qui sont considérées comme Sacrifiables, ne génèrent pas de pion d&apos;impact lorsqu&apos;elles sont détruites. Ceci inclus les effets spéciaux créant des pions d&apos;impact lorsqu’une unité sacrifiable est ciblée, c&apos;est à dire lorsque les touches sont allouées à l&apos;unité. Cependant, les unités Sacrifiables comptent dans le calcul des pertes lors de la résolution d&apos;un assaut.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>The addition of drones to a formation does not prevent it from starting in garrison if it has the prerequisites to do so. A formation consisting only of drones (due to losses, or in the case of a squadron of heavy drones) can not hold an objective but are able to contest it.
-Some units are perceived by their allies as Expendable. This is probably because these units are specially created to sacrifice themselves, because these units simply have no value, among so many other reasons. Units that are considered Expendable do not generate a Blast Marker when destroyed. This includes special effects that result in a Blast Marker when an Expendable unit is targeted, ie when the hits are allocated to the unit. However, Expendable units count in calculating losses when resolving an assault.
-&lt;I&gt;&lt;B&gt;Drones:&lt;/B&gt; L&apos;adjonction de drones a une formation n&apos;empêche pas celle-ci de débuter en garnison si elle dispose des prérequis pour le faire. Une formation composée uniquement de drones (suite a des pertes, ou dans le cas d&apos;un escadron de drones lourds) ne peuvent pas tenir un objectif, mais sont capable de contester celui-ci.
-Certaines unités sont perçues par leurs alliés comme Sacrifiables. Ceci est surement à cause du fait que ces unités sont spécialement créées pour se sacrifier car ces unités n&apos;ont simplement pas de valeur parmis tant d&apos;autres raison. Les unités qui sont considérées comme Sacrifiables, ne génèrent pas de pion d&apos;impact lorsqu&apos;elles sont détruites. Ceci inclus les effets spéciaux créant des pions d&apos;impact lorsqu’une unité sacrifiable est ciblée, c&apos;est à dire lorsque les touches sont allouées à l&apos;unité. Cependant, les unités Sacrifiables comptent dans le calcul des pertes lors de la résolution d&apos;un assaut.&lt;/I&gt;</description>
+Some units are perceived by their allies as Expendable. This is probably because these units are specially created to sacrifice themselves, because these units simply have no value, among so many other reasons. Units that are considered Expendable do not generate a Blast Marker when destroyed. This includes special effects that result in a Blast Marker when an Expendable unit is targeted, ie when the hits are allocated to the unit. However, Expendable units count in calculating losses when resolving an assault.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -4829,20 +4841,22 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Armes Guidées et Désignateur Laser:&lt;/B&gt; Pour utiliser un désignateur lors d&apos;un tir, la formation ne doit pas être démoralisée, les unités neutralisées ne peuvent pas utiliser leur capacité de ciblage. Un désignateur laser touche automatiquement sa cible en tir. Pour chaque touche effectuée lors d&apos;un tir, la formation peut effectuer l&apos;une de ces actions : &lt;BR&gt; - tirer avec une arme guidée d’une et unique formation non démoralisée si celle-ci est à portée de la cible. Une formation ne peut tirer qu’une fois par tour avec ses armes guidées. Seules les unités non neutralisées peuvent utiliser leurs armes guidées. &lt;BR&gt; - relancer un dé de tir raté de la formation contenant les cibleurs. &lt;BR&gt; Une formation doit allouer ses tirs de ciblage avant de lancer les dés de tir. Exemple: si une formation 6 tetras cible une autre formation, vous pouvez allouer 6 touches de ciblage qui peuvent vous permettre 4 tirs de missiles et 2 relances de tir. &lt;BR&gt; Un désignateur laser touche automatiquement en fusillade. Pour chaque touche effectuée, la formation peut relancer un dé de fusillade ratée parmi les unités engagées. (cela n&apos;inclus pas les soutiens). &lt;BR&gt; Les armes guidées sont des armes disposant d&apos;un système de localisation, et un calculateur de trajectoire. Ces armes sont capables d&apos;atteindre une cible hors de ligne de vue, et ceci de façon autonome. Les armes guidées ne peuvent être employées que sur des cibles préalablement marquées par une désignation laser. Elles ne peuvent tirer qu’une fois par tour. Due à leur système de calcul de tir, les armes guidées ne nécessitent pas de ligne de vue, et ne sont jamais affectés par les modificateurs pour toucher due à une action (+1 de tir soutenu ou -1 d&apos;avance rapide), ou de couverts. Notez qu&apos;une unité à couvert disposera toujours de sa sauvegarde de couvert, seul le modificateur pour toucher sera ignoré, excepté si l&apos;arme en question dispose de la capacité de les ignorer).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>To use a Markerlight when shooting, the formation must not be broken, and suppressed units can not use their targeting ability. A Markerlight automatically hits his target in shooting. For each hit made during shooting, the formation can perform one of these actions:
 - Fire with the guided weapon of a single unbroken formation if it is within range of the target. A formation can only fire once per turn with its guided weapons. Only non-suppressed units can use their guided weapons.
 - Reroll a failed firing die from a formation containing Pathfinders.
 A formation must allocate its targeting shots before rolling to hit. 
 Example: If a 6 tetras formation targets another formation, you can allocate 6 targeting hits that can allow you 4 missile shots and 2 to-hit rerolls.
 A Markerlight automatically hits. For each hit made, the formation may re-roll a failed roll-to-hit among the engaged units. (This does not include support units added to the formation).
-Guided weapons are weapons with a location system, and a trajectory calculator. These weapons are capable of reaching a target out of line of sight, and do this autonomously. Guided weapons can only be used on targets previously marked with a Markerlight. They can only fire once per turn. Due to their fire calculation system, guided weapons do not require line of sight, and are never affected by modifiers to hit due to an action (+1 sustained fire or -1 double), or cover. Note that a unit in cover will always have its cover save, only the modifier to hit will be ignored, except if the weapon in question has the ability to ignore them).
-&lt;I&gt;&lt;B&gt;Armes Guidées et Désignateur Laser:&lt;/B&gt; Pour utiliser un désignateur lors d&apos;un tir, la formation ne doit pas être démoralisée, les unités neutralisées ne peuvent pas utiliser leur capacité de ciblage. Un désignateur laser touche automatiquement sa cible en tir. Pour chaque touche effectuée lors d&apos;un tir, la formation peut effectuer l&apos;une de ces actions :
-- tirer avec une arme guidée d’une et unique formation non démoralisée si celle-ci est à portée de la cible. Une formation ne peut tirer qu’une fois par tour avec ses armes guidées. Seules les unités non neutralisées peuvent utiliser leurs armes guidées.
-- relancer un dé de tir raté de la formation contenant les cibleurs.
-Une formation doit allouer ses tirs de ciblage avant de lancer les dés de tir. Exemple: si une formation 6 tetras cible une autre formation, vous pouvez allouer 6 touches de ciblage qui peuvent vous permettre 4 tirs de missiles et 2 relances de tir.
-Un désignateur laser touche automatiquement en fusillade. Pour chaque touche effectuée, la formation peut relancer un dé de fusillade ratée parmi les unités engagées. (cela n&apos;inclus pas les soutiens).
-Les armes guidées sont des armes disposant d&apos;un système de localisation, et un calculateur de trajectoire. Ces armes sont capables d&apos;atteindre une cible hors de ligne de vue, et ceci de façon autonome. Les armes guidées ne peuvent être employées que sur des cibles préalablement marquées par une désignation laser. Elles ne peuvent tirer qu’une fois par tour. Due à leur système de calcul de tir, les armes guidées ne nécessitent pas de ligne de vue, et ne sont jamais affectés par les modificateurs pour toucher due à une action (+1 de tir soutenu ou -1 d&apos;avance rapide), ou de couverts. Notez qu&apos;une unité à couvert disposera toujours de sa sauvegarde de couvert, seul le modificateur pour toucher sera ignoré, excepté si l&apos;arme en question dispose de la capacité de les ignorer).&lt;/I&gt;</description>
+Guided weapons are weapons with a location system, and a trajectory calculator. These weapons are capable of reaching a target out of line of sight, and do this autonomously. Guided weapons can only be used on targets previously marked with a Markerlight. They can only fire once per turn. Due to their fire calculation system, guided weapons do not require line of sight, and are never affected by modifiers to hit due to an action (+1 sustained fire or -1 double), or cover. Note that a unit in cover will always have its cover save, only the modifier to hit will be ignored, except if the weapon in question has the ability to ignore them).</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -4856,78 +4870,141 @@ Les armes guidées sont des armes disposant d&apos;un système de localisation, 
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="The Tau Third Phase army has Strategy Rating 3. Exo Armour Riptide and KX-139 formations have an Initiative rating of 1+, all other formations have an Initiative rating of 2+.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;armée Tau Troisième Sphère a une Valeur Stratégique de 3. Les Exo armure Riptide et KX-139 disposent d&apos;une valeur d&apos;initiative de 1+, toutes les autres formations ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8251-3ffd-a26f-80ce" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;armée Tau a une Valeur Stratégique de 3. Les Groupes de chasse Exo armure Crisis et Mantas disposent d&apos;une valeur d&apos;initiative de 1+, toutes les autres formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The Tau army has Strategy Rating 3. Crisis Exo Armour formations and Mantas have an Initiative rating of 1+, all other formations have an Initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;armée Tau a une Valeur Stratégique de 3. Les Groupes de chasse Exo armure Crisis et Mantas disposent d&apos;une valeur d&apos;initiative de 1+, toutes les autres formations ont une initiative de 2+.&lt;/I&gt;</description>
+      <description>The Tau army has Strategy Rating 3. Crisis Exo Armour formations and Mantas have an Initiative rating of 1+, all other formations have an Initiative rating of 2+.</description>
     </rule>
     <rule id="ef42-3efb-0c94-4e35" name="Stubborn" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.
-&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.</description>
     </rule>
     <rule id="7287-8e3b-fe88-eee4" name="Tau Deflector Shields" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Tau deflector shields grant an lnvulnerable Save of 4+.
-&lt;I&gt;&lt;B&gt;Bouclier Tau:&lt;/B&gt; Les appareils de la flotte Tau sont équipés d&apos;un système de boucliers spéciaux fournissant une sauvegarde de type invulnérable de 4+.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Bouclier Tau:&lt;/B&gt; Les appareils de la flotte Tau sont équipés d&apos;un système de boucliers spéciaux fournissant une sauvegarde de type invulnérable de 4+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Tau deflector shields grant an lnvulnerable Save of 4+.</description>
     </rule>
     <rule id="58f3-6ece-c4ba-85a2" name="Tau Jetpacks" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Propulseurs Tau:&lt;/B&gt; Les Propulseurs Tau fonctionnent exactement comme des Réacteurs Dorsaux. (Les unités équipées de Réacteurs dorsaux peuvent ignorer les terrains dangereux et infranchissables lorsqu&apos;elles se déplacent (elles sautent par-dessus). Elles ne peuvent pas atterrir sur un terrain infranchissable et doivent effectuer un test de terrain dangereux si elles atterrissent dans un terrain dangereux. Les unités équipées de Réacteurs dorsaux peuvent aussi passer par-dessus des unités amies pendant leur mouvement, mais ne peuvent pas atterrir sur ces dernières. Elles sont affectées normalement par les zones de contrôle et les unités de l&apos;ennemi et ne peuvent pas se déplacer par-dessus des formations ennemies.) &lt;BR&gt; Additionnements à cela, les unités disposant de propulseurs Tau peuvent utiliser la règle spéciale du tirer et courir. (Les formations disposant de propulseurs Tau qui reçoivent l’ordre avance ou avance rapide peuvent choisir de tirer soit avant soit après chaque mouvement. Elles ne peuvent néanmoins tirer qu’une seule fois durant l’action. Par exemple, une telle formation avec un ordre avance peut tirer puis se déplacer ou se déplacer puis tirer, de même une formation avec un ordre d&apos;avance rapide mouvement peut tirer et se déplacer deux fois, se déplacer deux fois et tirer, ou se déplacer puis tirer puis encore bouger.)&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Tau Jetpacks follow all the rules for Jump Packs. (Units equipped with jump packs may ignore dangerous or impassable terrain as they move. They may not land on impassable terrain, and if they land in dangerous terrain they must take a dangerous terrain test. Units equipped with jump packs may also move over other friendly units as they move, but may not land on them. Units with jump packs are affected by enemy units and zones of control normally, and cannot jump over enemy formations.) 
-Additionally, units with Tau Jetpacks can use the special rule to shoot and run. (Formations with Tau Jetpacks that receive the advance or double order can choose to shoot either before or after each movement, but can only shoot once during the action, for example, such formations with an order Advance can shoot then move or move then shoot, similarly a formation with a double motion command can shoot and move twice, move twice and shoot, or move then shoot and then move again.)
-&lt;I&gt;&lt;B&gt;Propulseurs Tau:&lt;/B&gt; Les Propulseurs Tau fonctionnent exactement comme des Réacteurs Dorsaux. (Les unités équipées de Réacteurs dorsaux peuvent ignorer les terrains dangereux et infranchissables lorsqu&apos;elles se déplacent (elles sautent par-dessus). Elles ne peuvent pas atterrir sur un terrain infranchissable et doivent effectuer un test de terrain dangereux si elles atterrissent dans un terrain dangereux. Les unités équipées de Réacteurs dorsaux peuvent aussi passer par-dessus des unités amies pendant leur mouvement, mais ne peuvent pas atterrir sur ces dernières. Elles sont affectées normalement par les zones de contrôle et les unités de l&apos;ennemi et ne peuvent pas se déplacer par-dessus des formations ennemies.) 
-Additionnements à cela, les unités disposant de propulseurs Tau peuvent utiliser la règle spéciale du tirer et courir. (Les formations disposant de propulseurs Tau qui reçoivent l’ordre avance ou avance rapide peuvent choisir de tirer soit avant soit après chaque mouvement. Elles ne peuvent néanmoins tirer qu’une seule fois durant l’action. Par exemple, une telle formation avec un ordre avance peut tirer puis se déplacer ou se déplacer puis tirer, de même une formation avec un ordre d&apos;avance rapide mouvement peut tirer et se déplacer deux fois, se déplacer deux fois et tirer, ou se déplacer puis tirer puis encore bouger.)&lt;/I&gt;</description>
+Additionally, units with Tau Jetpacks can use the special rule to shoot and run. (Formations with Tau Jetpacks that receive the advance or double order can choose to shoot either before or after each movement, but can only shoot once during the action, for example, such formations with an order Advance can shoot then move or move then shoot, similarly a formation with a double motion command can shoot and move twice, move twice and shoot, or move then shoot and then move again.)</description>
     </rule>
     <rule id="376e-38ed-082f-02fc" name="Tau Third Sphere" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Displays units from the Tau Third Sphere army list.
-&lt;I&gt;&lt;B&gt;Tau Troisième Sphère:&lt;/B&gt; Affiche les unités de la liste d&apos;armée Tau troisième sphère.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tau Troisième Sphère:&lt;/B&gt; Affiche les unités de la liste d&apos;armée Tau troisième sphère.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Displays units from the Tau Third Sphere army list.</description>
     </rule>
     <rule id="cc0f-0954-94c7-4bf7" name="Transport (Tau)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Chimera: 2 des unités suivantes: Gue’vesa, commandants, commandant suprême, snipers, escouades d&apos;appui feu. &lt;BR&gt; Custodian Cruiser: jusqu&apos;à 18 appareils Orca ou Manta ainsi que les troupes qu&apos;ils contiennent. Le Manta compte pour 3. &lt;BR&gt; Devilfish: 2 des unités suivantes: Guerriers de Feu, Cibleurs. &lt;BR&gt; Hero Cruiser: jusqu&apos;à 6 appareils Orca ou Manta ainsi que les troupes qu&apos;ils contiennent. Le Manta compte pour 3. &lt;BR&gt; Manta: 16 des unités suivantes: Guerriers de Feu, Cibleurs, Stealths, Broadsides, Crisis (prennent 2 places), Drones d&apos;attaque, Drones lourds, Mentor Kroot, Carnivores Kroots, Krootox, Tetras (prennent 2 places), Piranhas (prennent 2 places). Le Manta peut embarquer en plus 4 des unités suivantes : Devilfish, Hammerhead, Skyray, Stingray. &lt;BR&gt; Orca: 12 des unités suivantes: Guerriers de Feu, Cibleurs, Stealths, Broadsides, Crisis (prennent 2 places), Drones d&apos;attaque, Drones lourd, Mentor Kroot, Carnivores Kroots.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Chimera: 2 of the following: Gue’vesa, Commander, Supreme Commander, Snipers, Fire Support Squads.
 Custodian Cruiser: up to 18 Orca or Manta aircraft and the troops they contain. Mantas count as 3.
 Devilfish: 2 of the following: Fire Warriors, Pathfinders.
 Hero Cruiser: up to 6 Orca or Manta aircraft and the troops they contain. Mantas count as 3.
 Manta: 16 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside Battlesuits, Crisis Battlesuits (take 2 places), Attack Drones, Heavy Drones, Kroot Master Shapers, Kroot Carnivores, Krootox, Tetras (take 2 places), Piranhas (take 2 places). In addition, the Manta may carry up to 4 of the following vehicles: Devilfish, Hammerhead, Skyray, Stingray.
-Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside Battlesuits, Crisis Battlesuits (take 2 places), Attack Drones, Heavy Drones, Kroot Master Shapers, Kroot Carnivores.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Chimera: 2 des unités suivantes: Gue’vesa, commandants, commandant suprême, snipers, escouades d&apos;appui feu.
-Custodian Cruiser: jusqu&apos;à 18 appareils Orca ou Manta ainsi que les troupes qu&apos;ils contiennent. Le Manta compte pour 3.
-Devilfish: 2 des unités suivantes: Guerriers de Feu, Cibleurs.
-Hero Cruiser: jusqu&apos;à 6 appareils Orca ou Manta ainsi que les troupes qu&apos;ils contiennent. Le Manta compte pour 3.
-Manta: 16 des unités suivantes: Guerriers de Feu, Cibleurs, Stealths, Broadsides, Crisis (prennent 2 places), Drones d&apos;attaque, Drones lourds, Mentor Kroot, Carnivores Kroots, Krootox, Tetras (prennent 2 places), Piranhas (prennent 2 places). Le Manta peut embarquer en plus 4 des unités suivantes : Devilfish, Hammerhead, Skyray, Stingray.
-Orca: 12 des unités suivantes: Guerriers de Feu, Cibleurs, Stealths, Broadsides, Crisis (prennent 2 places), Drones d&apos;attaque, Drones lourd, Mentor Kroot, Carnivores Kroots.&lt;/I&gt;</description>
+Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside Battlesuits, Crisis Battlesuits (take 2 places), Attack Drones, Heavy Drones, Kroot Master Shapers, Kroot Carnivores.</description>
     </rule>
     <rule id="c4df-7c14-20e7-c343" name="War Engine Support" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Although KX139 Ta&apos;unar Supremacy Battlesuits are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Air Caste Formations. To select any of these the &quot;War Engine Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further pods are taken.
-&lt;I&gt;&lt;B&gt;Engins de Guerre:&lt;/B&gt; Bien que les KX139 Ta&apos;unar Supremacy Battlesuits sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Formations de la Caste de l&apos;air. Pour sélectionner l&apos;une de ces &quot;War Engine Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres capsules sont prises.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Engins de Guerre:&lt;/B&gt; Bien que les KX139 Ta&apos;unar Supremacy Battlesuits sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Formations de la Caste de l&apos;air. Pour sélectionner l&apos;une de ces &quot;War Engine Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres capsules sont prises.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Although KX139 Ta&apos;unar Supremacy Battlesuits are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Air Caste Formations. To select any of these the &quot;War Engine Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further pods are taken.</description>
+    </rule>
+    <rule id="a45c-f74a-5c6d-0013" name="Strategy Rating &amp; Initiative (Tau 3rd Sphere)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8251-3ffd-a26f-80ce" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;armée Tau Troisième Sphère a une Valeur Stratégique de 3. Les Exo armure Riptide et KX-139 disposent d&apos;une valeur d&apos;initiative de 1+, toutes les autres formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The Tau Third Phase army has Strategy Rating 3. Exo Armour Riptide and KX-139 formations have an Initiative rating of 1+, all other formations have an Initiative rating of 2+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

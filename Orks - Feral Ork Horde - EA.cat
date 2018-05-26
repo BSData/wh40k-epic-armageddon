@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c55-2560-a9a0-f22e" name="Orks: Warlord Snagga-snagga&apos;s Feral Ork Horde" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c55-2560-a9a0-f22e" name="Orks: Warlord Snagga-snagga&apos;s Feral Ork Horde" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -3374,9 +3374,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Rupture de la Chaudière:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 2D6cm subissent une touche.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Destroyed, all units within 2D6cm suffer a hit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Rupture de la Chaudière:&lt;/B&gt; Détruit. Toutes les unités dans un rayon de 2D6cm subissent une touche.&lt;/I&gt;</description>
+      <description>Destroyed, all units within 2D6cm suffer a hit.</description>
     </rule>
     <rule id="fa67-a012-432e-1f98" name="Critical Hit: Enraged" hidden="false">
       <profiles/>
@@ -3397,15 +3403,43 @@
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
-              <conditionGroups/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Enragé:&lt;/B&gt; L&apos;Orkeosaurus charge immédiatement de 3D6cm dans une direction aléatoire, s’arrêtant immédiatement s’il percute un terrain infranchissable, ou une autre unité. S’il est stoppé par une autre unité, celle-ci subit une touche automatique Macro Arme. S’il percute un terrain infranchissable, l’Orkeosaurus est détruit.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <description>The Orkeosaurus rampages 3D6cm in a random direction, stopping immediately if it encounters impassable terrain or another unit or once the move has finished. If it stops because it moved into another unit, then the unit suffers a hit that counts as having been inflicted by a Macro-weapon. If it crashes into impassable terrain then the Orkeosaurus is killed.
-&lt;I&gt;&lt;B&gt;Touche Critique: Enragé:&lt;/B&gt; L&apos;Orkeosaurus charge immédiatement de 3D6cm dans une direction aléatoire, s’arrêtant immédiatement s’il percute un terrain infranchissable, ou une autre unité. S’il est stoppé par une autre unité, celle-ci subit une touche automatique Macro Arme. S’il percute un terrain infranchissable, l’Orkeosaurus est détruit.&lt;/I&gt;</description>
+      <description>The Orkeosaurus rampages 3D6cm in a random direction, stopping immediately if it encounters impassable terrain or another unit or once the move has finished. If it stops because it moved into another unit, then the unit suffers a hit that counts as having been inflicted by a Macro-weapon. If it crashes into impassable terrain then the Orkeosaurus is killed.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -3434,9 +3468,15 @@ CodexOrks #011214</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;R&apos;mise en Bande:&lt;/B&gt; Lorsque les bandes Orks tentent un test de ralliement, ils reçoivent un bonus de +1 lorsqu&apos;ils sont plus de 5 et de +2 lorsqu&apos;ils sont plus de 10. Les engins de guerre faisant partis de ces bandes comptent pour autant d&apos;unités que leur capacité de dommage de départ. Ne sont pas comptabilisables dans le calcul les grots et les groskalibr&apos;.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Ork formations with more than five units (ie, too many to count on the fingers of one hand), not including Grotz or Squig Katapultz units, receive a +1 modifier to any Rally rolls they make, and formations with more than 10 such units receive a +2 modifier. For the purposes of this rule War Engines count each point of starting damage capacity as a unit.
-&lt;I&gt;&lt;B&gt;R&apos;mise en Bande:&lt;/B&gt; Lorsque les bandes Orks tentent un test de ralliement, ils reçoivent un bonus de +1 lorsqu&apos;ils sont plus de 5 et de +2 lorsqu&apos;ils sont plus de 10. Les engins de guerre faisant partis de ces bandes comptent pour autant d&apos;unités que leur capacité de dommage de départ. Ne sont pas comptabilisables dans le calcul les grots et les groskalibr&apos;.&lt;/I&gt;</description>
+      <description>Ork formations with more than five units (ie, too many to count on the fingers of one hand), not including Grotz or Squig Katapultz units, receive a +1 modifier to any Rally rolls they make, and formations with more than 10 such units receive a +2 modifier. For the purposes of this rule War Engines count each point of starting damage capacity as a unit.</description>
     </rule>
     <rule id="c192-872e-9418-de72" name="Feral Ork Warlords" hidden="false">
       <profiles/>
@@ -3450,9 +3490,15 @@ CodexOrks #011214</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée d’Orks Sauvages doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit être ajoutée à la formation de votre armée comportant le plus d’unités. Les engins de guerre comptent un nombre d’unités égal à leur capacité de dommages de départ. En cas d’égalité choisissez quelle formation doit rejoindre le Seigneur de Guerre.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Every Feral Ork army must include a supreme commander character called a Warlord. The Warlord character is free; you don’t have to pay any points for it. The Warlord character must be added to the formation in the army with the most units (war engines count as a number of units equal to their starting damage capacity).
-&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée d’Orks Sauvages doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit être ajoutée à la formation de votre armée comportant le plus d’unités. Les engins de guerre comptent un nombre d’unités égal à leur capacité de dommages de départ. En cas d’égalité choisissez quelle formation doit rejoindre le Seigneur de Guerre.&lt;/I&gt;</description>
+      <description>Every Feral Ork army must include a supreme commander character called a Warlord. The Warlord character is free; you don’t have to pay any points for it. The Warlord character must be added to the formation in the army with the most units (war engines count as a number of units equal to their starting damage capacity).</description>
     </rule>
     <rule id="90ee-3f3e-ff41-a1b2" name="Feral Power of the Waaagh!" hidden="false">
       <profiles/>
@@ -3473,19 +3519,22 @@ CodexOrks #011214</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pouvoir de la Waaagh:&lt;/B&gt; Les Orks ne sont pas de fins stratèges mais la perspective d&apos;une bonne bagarre les galvanise toujours. Afin de représenter ceci, une formation tentant une action d&apos;avance rapide ou d&apos;assaut reçoit toujours +2 à l&apos;initiative pour son test d&apos;action. Les formations aériennes, ont toujours +2 de bonus pour les tests d&apos;actions lorsqu&apos;elles tentent une Interception ou une Attaque au sol.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Ork formations that are attempting to take Charge or Double actions receive a +2 modifier to their Action test roll.
-&lt;I&gt;&lt;B&gt;Pouvoir de la Waaagh:&lt;/B&gt; Les Orks ne sont pas de fins stratèges mais la perspective d&apos;une bonne bagarre les galvanise toujours. Afin de représenter ceci, une formation tentant une action d&apos;avance rapide ou d&apos;assaut reçoit toujours +2 à l&apos;initiative pour son test d&apos;action. Les formations aériennes, ont toujours +2 de bonus pour les tests d&apos;actions lorsqu&apos;elles tentent une Interception ou une Attaque au sol.&lt;/I&gt;</description>
+      <description>Ork formations that are attempting to take Charge or Double actions receive a +2 modifier to their Action test roll.</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-Swordwind
+      <description>Swordwind
 m1320006_Epic_Errata_2008
 Fanatic #02
 Fanatic #13</description>
@@ -3509,9 +3558,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Orkeosaurus:&lt;/B&gt; Ces unités peuvent seulement transporter les unités de leur propre formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Orkeosaurus that are part of a warband may only transport units from their own formation.
-&lt;I&gt;&lt;B&gt;Orkeosaurus:&lt;/B&gt; Ces unités peuvent seulement transporter les unités de leur propre formation.&lt;/I&gt;</description>
+      <description>Orkeosaurus that are part of a warband may only transport units from their own formation.</description>
     </rule>
     <rule id="ca58-0f2a-e7c4-3570" name="Strategy Rating &amp; Initiative (Feral)" hidden="false">
       <profiles/>
@@ -3532,26 +3587,34 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Waaagh Ork a une valeur stratégique de 3.  Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Ork armies have Strategy Rating 3. 
-Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Waaagh Ork a une valeur stratégique de 3. 
-Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;</description>
+Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.</description>
     </rule>
     <rule id="8004-63fd-95a5-eeb2" name="Transport (Feral)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Junkatrukk: 1 unité parmi: Boyz, Nobz, Wildboyz et une unité de Grots. Les unités transportées peuvent tirer en étant embarquées. &lt;BR&gt; Squiggoths: 4 unités parmi: Boyz, Nobz, Wildboyz, peut transporter 2 unités de Grots en plus des autres unités. &lt;BR&gt; Orkeosaurus: 12 unités parmi: Boyz, Nobz, Wildboyz. Peut embarquer 6 unité de Grots en plus des autres unités&lt;/I&gt; ">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Junkatrukk: 1 Grot plus any 1 of the following units: Boyz, Nobz, Wildboyz. Units being transported may fire with any ranged weapons, and use their firefight value in an assault or to lend supporting fire.
 Squiggoths: 4 of the following units: Boyz, Nobz, Wildboyz. May carry 2 Grotz in addition to any other units.
-Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz in addition to any other units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Junkatrukk: 1 unité parmi: Boyz, Nobz, Wildboyz et une unité de Grots. Les unités transportées peuvent tirer en étant embarquées.
-Squiggoths: 4 unités parmi: Boyz, Nobz, Wildboyz, peut transporter 2 unités de Grots en plus des autres unités.
-Orkeosaurus: 12 unités parmi: Boyz, Nobz, Wildboyz. Peut embarquer 6 unité de Grots en plus des autres unités&lt;/I&gt;
-</description>
+Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz in addition to any other units.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

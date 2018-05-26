@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -27,7 +27,7 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="a8ce-7be2-2fe2-bf4b" hidden="false" targetId="e466-7cec-f500-ac22" type="rule">
+    <infoLink id="a8ce-7be2-2fe2-bf4b" name="Battlefortresses &amp; Gunfortresses" hidden="false" targetId="3a58-160c-8b1b-f962" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -8719,29 +8719,6 @@
       <modifiers/>
       <description>&lt;I&gt;FERC_Orkimedes Big Mob_2015 04 22 (1) #V. 10/05/2016&lt;/I&gt;</description>
     </rule>
-    <rule id="e466-7cec-f500-ac22" name="Battlefortresses &amp; Gunfortresses" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Fortezze da Battaglia &amp; Artiglieria: &lt;/B&gt;Nelle partite da torneo, queste unita&apos; possono solo trasportare unita&apos; della propria formazione (le regole per le Macchine da Guerra da trasporto non si applicano in questo caso).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Fortalezas Rodantes y Fortalezas Kañoneraz: &lt;/B&gt;En batallas de torneo, estas unidades únicamente podrán transportar unidades de su propia formación. Las reglas normales de las máquinas de guerra de transporte no se aplicarán en este caso.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>In tournament games, these units may only transport units from their own formation (i.e., the rules for War Engine transports do not apply to them when using the tournament army lists).
-&lt;I&gt;&lt;B&gt;Forteresses De Bataille &amp; Forteresses a Kanons:&lt;/B&gt; Dans les parties de tournois, ces unités peuvent seulement transporter les unités de leur propre formation.&lt;/I&gt;</description>
-    </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
       <rules/>
@@ -8760,27 +8737,38 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Re-roll one roll-to-hit per turn.
-&lt;I&gt;&lt;B&gt;Grot Bidouilleur:&lt;/B&gt; Permet de relancer un jet de feu/jet d’incendie par tour.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Grot Bidouilleur:&lt;/B&gt; Permet de relancer un jet de feu/jet d’incendie par tour.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Re-roll one roll-to-hit per turn.</description>
     </rule>
     <rule id="9641-5d1a-2bc6-d87c" name="Grot Pathfinders" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Add an AA5+ attack to all Big Gunz in one unit.
-&lt;I&gt;&lt;B&gt;Cibleurs Grots:&lt;/B&gt; Ajoute une attaque AA5+ à tous les Gros Kanons d’une unité.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Cibleurs Grots:&lt;/B&gt; Ajoute une attaque AA5+ à tous les Gros Kanons d’une unité.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Add an AA5+ attack to all Big Gunz in one unit.</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -8788,9 +8776,16 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>All non-Gargant formations within 15cm of the Gargant may add the DC of the Gargant to their formation size when using the &quot;Mob Rule&quot; special rule.
-&lt;I&gt;&lt;B&gt;Tête de Mork/Gork:&lt;/B&gt; Toutes les formations non-Gargant moins de 15 cm du Gargant peuvent ajouter le DC du Gargant à la taille de leur formation lors de l&apos;utilisation du &quot;R&apos;mise en Bande&quot; règle spéciale.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tête de Mork/Gork:&lt;/B&gt; Toutes les formations non-Gargant moins de 15 cm du Gargant peuvent ajouter le DC du Gargant à la taille de leur formation lors de l&apos;utilisation du &quot;R&apos;mise en Bande&quot; règle spéciale.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>All non-Gargant formations within 15cm of the Gargant may add the DC of the Gargant to their formation size when using the &quot;Mob Rule&quot; special rule.</description>
     </rule>
     <rule id="fb7e-7dcf-821d-1022" name="Kustom Weapons and Upgrades" hidden="true">
       <profiles/>
@@ -8804,23 +8799,68 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Armes et Ekip&apos;ment Kustom:&lt;/B&gt; Chaque unité de Gargant ou Super Krabouillator peut choisir un ensemble d’armes dans les tableaux des Armes Kustom dans le respect des limitations de son profil.  Chaque unité doit posséder une combinaison d’armes distincte des autres unités de sa formation. &lt;BR&gt; Un ou plusieurs Ekip’ment Kustom peuvent être sélectionnés pour une unité de Gargant ou de Super Krabouillator. Un Ekip’ment Kustom ne peut être pris qu’une seule fois pour chaque unité.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Each Gargant or Super-Stompa mob can choose a set of weapons from the Kustom Weapons table, in compliance with the limitations of its profile. Each unit must have a different combination of weapons from other units in its formation.
-One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A  Kustom Upgrade may only be taken once for each unit.
-&lt;I&gt;&lt;B&gt;Armes et Ekip&apos;ment Kustom:&lt;/B&gt; Chaque unité de Gargant ou Super Krabouillator peut choisir un ensemble d’armes dans les tableaux des Armes Kustom dans le respect des limitations de son profil.  Chaque unité doit posséder une combinaison d’armes distincte des autres unités de sa formation.
-Un ou plusieurs Ekip’ment Kustom peuvent être sélectionnés pour une unité de Gargant ou de Super Krabouillator. Un Ekip’ment Kustom ne peut être pris qu’une seule fois pour chaque unité.&lt;/I&gt;</description>
+One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A  Kustom Upgrade may only be taken once for each unit.</description>
     </rule>
     <rule id="fad2-33ee-137b-ec10" name="Mekboy Big Boss" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Every Gargant Big Mob army must include a Mekboy Big Boss for no cost. The character goes in the most expensive Gargant formation in the army.&lt;BR&gt; &lt;I&gt;&lt;B&gt;Seigneur Mekboy:&lt;/B&gt; Un Gargant doit être commandé par un Seigneur Mekboy. C’est un personnage gratuit. Et doit être placé dans un Grand Gargant ou un Gargant si l’armée en dispose.  Le personnage entre dans la formation Gargant plus cher dans l&apos;armée.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneur Mekboy:&lt;/B&gt; Un Gargant doit être commandé par un Seigneur Mekboy. C’est un personnage gratuit. Et doit être placé dans un Grand Gargant ou un Gargant si l’armée en dispose.  Le personnage entre dans la formation Gargant plus cher dans l&apos;armée.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneur Mekboy:&lt;/B&gt; Un Gargant peut être commandé par un Seigneur Mekboy. C’est un personnage gratuit. Et doit être placé dans un Grand Gargant ou un Gargant si l’armée en dispose. Sans quoi le Seigneur Mekboy n’est pas disponible.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Every Gargant Big Mob army must include a Mekboy Big Boss for no cost. The character goes in the most expensive Gargant formation in the army.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>The army receives one free Mekboy Big Boss that may be added to any Gargant or Great Gargant in the army.
@@ -8839,9 +8879,16 @@ Gargant Big Mob reference sheet 3.5</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Upgrades Big Gun to Soopagun or Supa-Zzap Gun.
-&lt;I&gt;&lt;B&gt;Brikolo:&lt;/B&gt; Le Brikolo transforme l&apos;un Big Gun en Supa-Zzap-Gun ou Soopagun.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Brikolo:&lt;/B&gt; Le Brikolo transforme l&apos;un Big Gun en Supa-Zzap-Gun ou Soopagun.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Upgrades Big Gun to Soopagun or Supa-Zzap Gun.</description>
     </rule>
     <rule id="355c-302f-9b6c-1bd7" name="Push &apos;em Arder, Ladz" hidden="false">
       <profiles/>
@@ -8855,38 +8902,31 @@ Gargant Big Mob reference sheet 3.5</description>
           </conditions>
           <conditionGroups/>
         </modifier>
-      </modifiers>
-      <description>Whenever a Gargant passes an action test that allows movement, the player may opt to change the Gargant&apos;s speed rating to 20cm for the duration of the chosen action, however if this ability is used the model will receive a critical hit for each move it is used.
-&lt;I&gt;&lt;B&gt;Pousser Plus Vite, les Gars:&lt;/B&gt; Chaque fois qu&apos;un Gargant passe un test d&apos;action qui permet le mouvement, le joueur peut opter pour changer la vitesse du Gargant à 20cm pour la durée de l&apos;action choisie, mais si cette capacité est utilisée, le modèle recevra un touch critique pour chaque mouvement il est utilisé..&lt;/I&gt;</description>
-    </rule>
-    <rule id="967a-083c-c13f-3be6" name="Self Planetfall" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pousser Plus Vite:&lt;/B&gt; Chaque fois qu&apos;un Gargant passe un test d&apos;action qui permet le mouvement, le joueur peut opter pour changer la vitesse du Gargant à 20cm pour la durée de l&apos;action choisie, mais si cette capacité est utilisée, le modèle recevra un touch critique pour chaque mouvement il est utilisé..&lt;/I&gt;">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Self planetfall is plotted exactly as planetfall. Both the turn in which the formation arrives and the landing location is plotted. The only exception is that, because these units are much smaller than orbiting spacecraft, they may be plotted to arrive in the same turn that an enemy spacecraft is present.
-On the designated turn the self planetfalling unit is activated in the normal activation sequence, as with spacecraft. Nominate the action for the formation and roll to activate. If the unit fails to activate its arrival is delayed to the next following turn. If the activation is successful, place the formation at the plotted landing zone and determine scatter as if it were a normal Planetfall, including loaded units disembarking up to 5cm. The formation’s action proceeds as normal in all respects from that point. In other words, the formation gets the &quot;free move&quot; from planetfall placement at the beginning of its action but in all other ways activates as normal.
-Note: The action is chosen at activation, before scatter is determined. Choose the action carefully as a poor scatter role could render some actions ineffective.
-&lt;I&gt;&lt;B&gt;Assaut Planétaire Indépendant:&lt;/B&gt; L&apos;Assaut Planétaire Indépendant s&apos;effectue exactement comme expliqué dans la regle Assaut Planétaire. L&apos;exception que constitue ces unités ayant cette capacité réside dans le fait qu&apos;elles sont beaucoup plus petites que les Vaisseaux Spatiaux en orbite et par conséquent, elles peuvent éxécuter un Assaut Planétaire lors d&apos;un même tour voyant la présence d&apos;un vaisseau spatial ennemi. 
-Lors du tour désigné, la formation d&apos;Assaut Planétaire Indépendant est normalement activée dans la séquence d&apos;activation tout comme un vaisseau spatial. Lancez le dé pour le test d&apos;action. Si la formation rate son jet, son arrivée est retardée pour le tour prochain. Si le jet est réussi, placez la formation aux coordonnées d&apos;atterrisage et faites un jet de dispersion. Les troupes embarquées dans une unité ayant la capacité Assaut Planétaire Indépendant bénéficient des possibilitées permises lors d&apos;un Assaut Planétaire.&lt;/I&gt;</description>
+      <description>Whenever a Gargant passes an action test that allows movement, the player may opt to change the Gargant&apos;s speed rating to 20cm for the duration of the chosen action, however if this ability is used the model will receive a critical hit for each move it is used.</description>
     </rule>
     <rule id="1b28-cf03-5bc2-060e" name="Strategy Rating &amp; Initiative (GBM)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Une Bande Gargants a une valeur stratégique de 2.  Toutes les formations ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Gargant Bigmob armies have a Strategy rating of 3. All formations have an initiative rating of 3+.
-For the purposes of Mob Rule, Gargant formations always count as having more than 10 models and Supa-Stompas always counts as having more than 5 models.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Une Bande Gargants a une valeur stratégique de 2. 
-Toutes les formations ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;</description>
+For the purposes of Mob Rule, Gargant formations always count as having more than 10 models and Supa-Stompas always counts as having more than 5 models.</description>
     </rule>
     <rule id="63e9-7b1c-0361-3187" name="Tellyportas" hidden="false">
       <profiles/>
@@ -8900,43 +8940,41 @@ Toutes les formations ont une valeur d&apos;initiative de 3+ mais reçoivent des
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tela Tepula:&lt;/B&gt; Le Tela Tepula permet aux unités se trouvant dans un vaisseau spatial d’être téléportées directement sur le champ de bataille. &lt;BR&gt; Cette technologie, reste (pour les orks) encore mal maitrisée et plusieurs règles s’appliquent : &lt;BR&gt; Le Tela pula ne peut être utilisé que si le joueur ork a sélectionné un vaisseau spatial. &lt;BR&gt; Le Tela Tepula ne peut être utilisé que sur une bande de Gargant. &lt;BR&gt; La règle Assaut Planétaire sera utilisée plutôt que la règle Téléportation (Coordonnées secrètement choisies, Activation du vaisseau, déviation, etc...). &lt;BR&gt; Lors de l’arrivée sur le champ de bataille, lancer 1D6 par point de structures de la formation. Sur un résultat de 1 la formation reçoit un pion impact. Les unités supplémentaires comptent comme équivalent à 1 point de structure. &lt;BR&gt; Un Kroiseur Kitu peut transporter l’équivalemment de 10 points de structure. Un Kroiseur d’la Mort peut transporter l’équivalent de 20 points de structure. Les unités supplémentaires comptent comme équivalentes à 1 point de structure.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The Tellyporta allows units in a spaceship to be teleported directly onto the battlefield. This technology remains (for the Orks) still poorly mastered and several rules apply:
 The Tellyporta can be used only if the Ork player has selected a spacecraft.
 The Tellyporta can only be used on a Gargant Mob (any type of Gargant).
 The Planetfall rule is used rather than the Teleport rule (secretly chosen coordinates, Activation of the vessel, deviation, etc ...).
 Upon arrival on the battlefield, roll 1D6 per point of DC in the formation. On a roll of 1 the formation receives a blast marker. Additional units count as having 1 point of DC.
-A Kill Kroozer can transport the equivalent of 10 DC. A Battle Kroozer can carry the equivalent of 20 DC.
-&lt;I&gt;&lt;B&gt;Tela Tepula:&lt;/B&gt; Le Tela Tepula permet aux unités se trouvant dans un vaisseau spatial d’être téléportées directement sur le champ de bataille.
-Cette technologie, reste (pour les orks) encore mal maitrisée et plusieurs règles s’appliquent :
-Le Tela pula ne peut être utilisé que si le joueur ork a sélectionné un vaisseau spatial.
-Le Tela Tepula ne peut être utilisé que sur une bande de Gargant.
-La règle Assaut Planétaire sera utilisée plutôt que la règle Téléportation (Coordonnées secrètement choisies, Activation du vaisseau, déviation, etc...).
-Lors de l’arrivée sur le champ de bataille, lancer 1D6 par point de structures de la formation. Sur un résultat de 1 la formation reçoit un pion impact. Les unités supplémentaires comptent comme équivalent à 1 point de structure.
-Un Kroiseur Kitu peut transporter l’équivalemment de 10 points de structure. Un Kroiseur d’la Mort peut transporter l’équivalent de 20 points de structure. Les unités supplémentaires comptent comme équivalentes à 1 point de structure.&lt;/I&gt;</description>
+A Kill Kroozer can transport the equivalent of 10 DC. A Battle Kroozer can carry the equivalent of 20 DC.</description>
     </rule>
     <rule id="364f-4acb-9f26-4a97" name="Transport (GBM)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Battle Kroozer: 12 Landas plus le troupes qu&apos;ils transportent. &lt;BR&gt; Battlefortress: 8 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres. &lt;BR&gt; Battlewagon: 2 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres. &lt;BR&gt; Drop Rok: 10 unités des Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Les véhicules légers et les Dreadnoughts (mais pas les Killa Kans) occupent 2 emplacements. Peut embarquer 4 Grotz en plus des autres. &lt;BR&gt; Flakwagon: 1 Boyz, Kommandos, Nobz, Big Gunz. &lt;BR&gt; Gunfortress: 4 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres. &lt;BR&gt; Gunwagon: 1 Boyz, Kommandos, Nobz, Big Gunz. &lt;BR&gt; Transporta: 10 unités. Peut embarquer 4 Grotz en plus des autres.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Battle Kroozer: up to 12 Ork Landas plus troops.
 Battlefortress: up to 8 units of Boyz, Kommandos or Nobz. 1 unit transported may be a Big Gunz. May carry 4 Grotz in addition to any other units.
 Drop Rok: up to 20 units of Boyz, Nobz, Kommandos, Stormboyz, Big Guns, Deth Koptas, Dreadnoughts, Killa Kans, Skorchas, War Bikes, War Buggies. Dreadnoughts and Light Vehicles (but not Killa Kans) take up 2 spaces each. May also carry 8 Grotz units in addition any other units.
 Flakwagon: 1 unit of Boyz, Kommandos, Grotz, Nobz or Big Gunz.
 Gunfortress: up to 4 units of Boyz, Kommandos or Nobz. 1 unit transported may be a Big Gunz. May carry 4 Grotz in addition to any other units.
-Transporta: Supa-Stompa: 8 infantry units, plus 4 Grotz. Gargant: 16 infantry units, plus 8 Grotz. Great Gargant: 24 infantry units, plus 12 Grotz. Mega Gargant: 32 infantry units, plus 16 Grotz. Dreadnoughts and Light Vehicles may be carried by all but take up 2 infantry spaces each (Killa Kans only take up 1 infantry space).
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Battle Kroozer: 12 Landas plus le troupes qu&apos;ils transportent.
-Battlefortress: 8 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres.
-Battlewagon: 2 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres.
-Drop Rok: 10 unités des Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Les véhicules légers et les Dreadnoughts (mais pas les Killa Kans) occupent 2 emplacements. Peut embarquer 4 Grotz en plus des autres.
-Flakwagon: 1 Boyz, Kommandos, Nobz, Big Gunz.
-Gunfortress: 4 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres.
-Gunwagon: 1 Boyz, Kommandos, Nobz, Big Gunz.
-Transporta: 10 unités. Peut embarquer 4 Grotz en plus des autres.&lt;/I&gt;
-</description>
+Transporta: Supa-Stompa: 8 infantry units, plus 4 Grotz. Gargant: 16 infantry units, plus 8 Grotz. Great Gargant: 24 infantry units, plus 12 Grotz. Mega Gargant: 32 infantry units, plus 16 Grotz. Dreadnoughts and Light Vehicles may be carried by all but take up 2 infantry spaces each (Killa Kans only take up 1 infantry space).</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

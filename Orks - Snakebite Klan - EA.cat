@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e07a-3fc1-7ef9-92d9" name="Orks: Snakebite Klan" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e07a-3fc1-7ef9-92d9" name="Orks: Snakebite Klan" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -3865,13 +3865,6 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="The Orkeosaurus immediately rampages a full 3D6cm in a random direction and takes an additional point of damage. If this move takes it into impassable terrain then it stops immediately and is destroyed. If this move takes it into a War Engine then it stops immediately and takes an additional point of damage. Any units moved over or contacted take a macro weapon hit on a D6 roll of 4+.">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Rabioso: &lt;/B&gt;La unidad sufre 1 punto de daño adicional. Mueve a la unidad 3D6cm en una dirección aleatoria. Si mueve a terreno intransitable, se detiene y es destruida. Si mueve a otra unidad, se detiene y esa unidad sufre un impacto de macro-arma.&lt;/I&gt;">
           <repeats/>
           <conditions/>
@@ -3879,15 +3872,50 @@
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
-              <conditionGroups/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="The Orkeosaurus immediately rampages a full 3D6cm in a random direction and takes an additional point of damage. If this move takes it into impassable terrain then it stops immediately and is destroyed. If this move takes it into a War Engine then it stops immediately and takes an additional point of damage. Any units moved over or contacted take a macro weapon hit on a D6 roll of 4+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Enragé:&lt;/B&gt; L&apos;Orkeosaurus charge immédiatement de 3D6cm dans une direction aléatoire, s’arrêtant immédiatement s’il percute un terrain infranchissable, ou une autre unité. S’il est stoppé par une autre unité, celle-ci subit une touche automatique Macro Arme. S’il percute un terrain infranchissable, l’Orkeosaurus est détruit.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <description>The Orkeosaurus rampages 3D6cm in a random direction, stopping immediately if it encounters impassable terrain or another unit or once the move has finished. If it stops because it moved into another unit, then the unit suffers a hit that counts as having been inflicted by a Macro-weapon. If it crashes into impassable terrain then the Orkeosaurus is killed.
-&lt;I&gt;&lt;B&gt;Touche Critique: Enragé:&lt;/B&gt; L&apos;Orkeosaurus charge immédiatement de 3D6cm dans une direction aléatoire, s’arrêtant immédiatement s’il percute un terrain infranchissable, ou une autre unité. S’il est stoppé par une autre unité, celle-ci subit une touche automatique Macro Arme. S’il percute un terrain infranchissable, l’Orkeosaurus est détruit.&lt;/I&gt;</description>
+      <description>The Orkeosaurus rampages 3D6cm in a random direction, stopping immediately if it encounters impassable terrain or another unit or once the move has finished. If it stops because it moved into another unit, then the unit suffers a hit that counts as having been inflicted by a Macro-weapon. If it crashes into impassable terrain then the Orkeosaurus is killed.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -3902,10 +3930,7 @@ CodexOrks #011214</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-m1320001_EPIC_updated_rulebook-sections_5_Oct09
+      <description>m1320001_EPIC_updated_rulebook-sections_5_Oct09
 m1320002_EPIC_updated_rulebook-sections_6_Oct09
 m1320005_EPIC_updated_rulebook-ref_Oct09
 m1320006_Epic_Errata_2008
@@ -3924,9 +3949,16 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Every Ork army must include a supreme commander character called a Warlord. The Warlord character is free and must be added to the formation with the most units. War machines have a number of units equal to their starting damage capacity. If tied then the Warlord may be added to any unit.
-&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du klan snakebites doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit être ajoutée à la formation de votre armée comportant le plus d’unités. Les engins de guerre comptent un nombre d’unités égal à leur capacité de dommages de départ. En cas d’égalité choisissez quelle formation doit rejoindre le Seigneur de Guerre.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du klan snakebites doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit être ajoutée à la formation de votre armée comportant le plus d’unités. Les engins de guerre comptent un nombre d’unités égal à leur capacité de dommages de départ. En cas d’égalité choisissez quelle formation doit rejoindre le Seigneur de Guerre.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Every Ork army must include a supreme commander character called a Warlord. The Warlord character is free and must be added to the formation with the most units. War machines have a number of units equal to their starting damage capacity. If tied then the Warlord may be added to any unit.</description>
     </rule>
     <rule id="b7ab-6659-4911-254b" name="Strategy Rating &amp; Initiative (Ork)" hidden="false">
       <profiles/>
@@ -3947,17 +3979,30 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Orks a une valeur stratégique de 3.  Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Ork armies have Strategy Rating 3. 
-Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Orks a une valeur stratégique de 3. 
-Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;</description>
+Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.</description>
     </rule>
     <rule id="990e-6c21-d3df-90fa" name="Transport (SK)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Battle Kroozer: 12 Landas plus le troupes qu&apos;ils transportent. &lt;BR&gt; Battlewagon: 2 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres. &lt;BR&gt; Gunfortress: 4 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres. &lt;BR&gt; Gunwagon: 1 Boyz, Kommandos, Nobz, Big Gunz. &lt;BR&gt; Flakwagon: 1 Boyz, Kommandos, Nobz, Big Gunz. &lt;BR&gt; Landa: 10 unités des Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Les véhicules légers et les Dreadnoughts (mais pas les Killa Kans) occupent 2 emplacements. Peut embarquer 4 Grotz en plus des autres. &lt;BR&gt; Orkeosaurus: 12 unités parmi: Boyz, Nobz, Wildboyz, peut transporter 6 unités de Grots en plus des autres unités. &lt;BR&gt; Squiggoth: 4 unités parmi: Boyz, Nobz, Wildboyz, peut transporter 2 unités de Grots en plus des autres unités.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Battle Kroozer: up to 12 Ork Landas plus troops.
 Battlewagon: up to 2 units of Boyz, Kommandos or Nobz. 1 unit transported may be a Big Gunz. May carry 1 Grotz in addition to any other units.
@@ -3966,16 +4011,7 @@ Gunwagon: 1 unit of Boyz, Kommandos, Nobz or Big Gunz.
 Flakwagon: 1 unit of Boyz, Kommandos, Nobz or Big Gunz.
 Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Light vehicles and Dreadnoughts count as two units. May carry 4 Grotz in addition to any other units.
 Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz in addition to any other units.
-Squiggoths: 4 of the following units: Boyz, Nobz, Wildboyz. May carry 2 Grotz in addition to any other units.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Battle Kroozer: 12 Landas plus le troupes qu&apos;ils transportent.
-Battlewagon: 2 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres.
-Gunfortress: 4 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres.
-Gunwagon: 1 Boyz, Kommandos, Nobz, Big Gunz.
-Flakwagon: 1 Boyz, Kommandos, Nobz, Big Gunz.
-Landa: 10 unités des Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Les véhicules légers et les Dreadnoughts (mais pas les Killa Kans) occupent 2 emplacements. Peut embarquer 4 Grotz en plus des autres.
-Orkeosaurus: 12 unités parmi: Boyz, Nobz, Wildboyz, peut transporter 6 unités de Grots en plus des autres unités.
-Squiggoth: 4 unités parmi: Boyz, Nobz, Wildboyz, peut transporter 2 unités de Grots en plus des autres unités.&lt;/I&gt;</description>
+Squiggoths: 4 of the following units: Boyz, Nobz, Wildboyz. May carry 2 Grotz in addition to any other units.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

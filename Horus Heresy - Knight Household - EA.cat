@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7b07-8151-d99c-2ded" name="Horus Heresy: Knight Household" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7b07-8151-d99c-2ded" name="Horus Heresy: Knight Household" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -1351,17 +1351,23 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;- Disposition des Alliés&lt;/I&gt;
-Cohesive&lt;I&gt;- Cohésif&lt;/I&gt;: Legio Titanicus, Mechanicum Taghmata.
-Disruptive&lt;I&gt;- Perturbateur&lt;/I&gt;: Imperial Militia, Legion Astartes, Solar Auxilia.</description>
+      <description>Cohesive: Legio Titanicus, Mechanicum Taghmata.
+Disruptive: Imperial Militia, Legion Astartes, Solar Auxilia.</description>
     </rule>
     <rule id="3782-b9e0-2f32-148c" name="Aspirants" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Formation suffers -1 to Advance, Overwatch, March, Marshall and Sustained Fire actions.
-&lt;I&gt;&lt;B&gt;Les Aspirants:&lt;/B&gt; La formation souffre -1 à les actions de Tir Soutenu, État d&apos;Alerte, Redéploiement, Regroupement et l&apos;Avance.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Aspirants:&lt;/B&gt; La formation souffre -1 à les actions de Tir Soutenu, État d&apos;Alerte, Redéploiement, Regroupement et l&apos;Avance.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Formation suffers -1 to Advance, Overwatch, March, Marshall and Sustained Fire actions.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -1371,59 +1377,82 @@ Disruptive&lt;I&gt;- Perturbateur&lt;/I&gt;: Imperial Militia, Legion Astartes, 
       <description>http://epicau.com/mw/index.php/Knight_Household
 http://epicau.com/mw/index.php/Knight_Household_Reference_List
 http://epicau.com/mw/index.php/Mechanicum_Taghmata
-12 february 2017</description>
-    </rule>
-    <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
-Fanatic #02
-Fanatic #13</description>
+16 may 2018</description>
     </rule>
     <rule id="a2e4-a9cd-b276-8daa" name="Ion Gauntlet" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Grants a 4+ save vs Normal, MW &amp; TK shooting and FF hits and a 5+ save against Normal, MW and TK CC hits. Each point of TK damage must be saved. Failed saves may use RA rerolls against the Knights armour if not negated by TK, MW or Lance special rules. May not be used in a crossfire.
-&lt;I&gt;&lt;B&gt;Les Gantelet Ionique:&lt;/B&gt; Accorde une 4+ de sauvegarde contre normal, MW et TK coups de tir et fusillades. Accorde une 4+ de sauvegarde contre normal, MW et TK coups de corps à corps. Chaque point de dégât TK doit être sauvé. Échec économise peut utiliser RA Relances contre l&apos;armure Chevaliers sinon niée par TK, MW ou des règles spéciales Lance. Ne peut pas être utilisé dans un feu croisé.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Gantelet Ionique:&lt;/B&gt; Accorde une 4+ de sauvegarde contre normal, MW et TK coups de tir et fusillades. Accorde une 4+ de sauvegarde contre normal, MW et TK coups de corps à corps. Chaque point de dégât TK doit être sauvé. Échec économise peut utiliser RA Relances contre l&apos;armure Chevaliers sinon niée par TK, MW ou des règles spéciales Lance. Ne peut pas être utilisé dans un feu croisé.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Grants a 4+ save vs Normal, MW &amp; TK shooting and FF hits and a 5+ save against Normal, MW and TK CC hits. Each point of TK damage must be saved. Failed saves may use RA rerolls against the Knights armour if not negated by TK, MW or Lance special rules. May not be used in a crossfire.</description>
     </rule>
     <rule id="419c-efc8-fbc9-bd81" name="Ion Shield" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Grants a 4+ save vs Normal, MW &amp; TK shooting and FF hits. Each point of TK damage must be saved. Failed saves may use RA rerolls against the Knights armour if not negated by TK, MW or Lance special rules. May not be used in a crossfire.
-&lt;I&gt;&lt;B&gt;Les Bouclier Ionique:&lt;/B&gt; Accorde une 4+ de sauvegarde contre normal, MW et TK coups de tir et fusillades. Chaque point de dégât TK doit être sauvé. Échec économise peut utiliser RA Relances contre l&apos;armure Chevaliers sinon niée par TK, MW ou des règles spéciales Lance. Ne peut pas être utilisé dans un feu croisé.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Bouclier Ionique:&lt;/B&gt; Accorde une 4+ de sauvegarde contre normal, MW et TK coups de tir et fusillades. Chaque point de dégât TK doit être sauvé. Échec économise peut utiliser RA Relances contre l&apos;armure Chevaliers sinon niée par TK, MW ou des règles spéciales Lance. Ne peut pas être utilisé dans un feu croisé.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Grants a 4+ save vs Normal, MW &amp; TK shooting and FF hits. Each point of TK damage must be saved. Failed saves may use RA rerolls against the Knights armour if not negated by TK, MW or Lance special rules. May not be used in a crossfire.</description>
     </rule>
     <rule id="cc26-0abb-64f8-6bed" name="Knight Bravery" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Knight formations receive a +1 modifier to their action test when carrying out an Engage action, and a +1 modifier to their rally test.
-&lt;I&gt;&lt;B&gt;La Bravoure des Chevaliers:&lt;/B&gt; Formations Chevalier reçoivent un modificateur de +1 à leur test d&apos;action lors de la réalisation d&apos;une action d&apos;Assaut, et un modificateur de +1 à leur test de ralliement.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La Bravoure des Chevaliers:&lt;/B&gt; Formations Chevalier reçoivent un modificateur de +1 à leur test d&apos;action lors de la réalisation d&apos;une action d&apos;Assaut, et un modificateur de +1 à leur test de ralliement.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Knight formations receive a +1 modifier to their action test when carrying out an Engage action, and a +1 modifier to their rally test.</description>
     </rule>
     <rule id="df7a-9ed3-58f2-f8a5" name="Scions of Uhlan" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Formation loses &quot;Reinforced Armour&quot; and gains &quot;Scout&quot;.
-&lt;I&gt;&lt;B&gt;Les Scions de Uhlan:&lt;/B&gt; La formation perd &quot;Blindage Renforcé&quot; et des gains &quot;Éclaireurs&quot;.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Scions de Uhlan:&lt;/B&gt; La formation perd &quot;Blindage Renforcé&quot; et des gains &quot;Éclaireurs&quot;.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Formation loses &quot;Reinforced Armour&quot; and gains &quot;Scout&quot;.</description>
     </rule>
     <rule id="be6d-871a-c53d-1e72" name="Strategy Rating &amp; Initiative (KH)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Knight Household armies have a Strategy Rating of 3. All formations have an Initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Maisonnées de Chevaliers possède une valeur stratégique de 3. Toutes les formations ont une initiative de 2+.&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Maisonnées de Chevaliers possède une valeur stratégique de 3. Toutes les formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Knight Household armies have a Strategy Rating of 3. All formations have an Initiative rating of 2+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

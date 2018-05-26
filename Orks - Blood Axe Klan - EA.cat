@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="907a-2d47-7095-fcda" name="Orks: Blood Axe Klan" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="907a-2d47-7095-fcda" name="Orks: Blood Axe Klan" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9430,6 +9430,13 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Bommers:&lt;/B&gt; Tout Fighta Sqwadron qui inclut des Bommers limite la formation entière (Fighta Bommers incluse) au rayon de virage des Bommers. De plus, la formation n&apos;est pas admissible à des missions PAC ou d&apos;interception. Si tous les Bommers sont détruits, les Fighta Bommers restants retournent à leur propre rayon de braquage et peuvent recevoir n&apos;importe quelle mission d&apos;avion.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Any Fighta Sqwadron that includes Bommers limits the entire formation (including Fighta Bommers) to the turn radius of the Bommers. As well, the formation is not eligible to be given CAP or Interception missions. If all the Bommers are destroyed then any remaining Fighta Bommers revert to their own turning radius and can be given any aircraft mission.</description>
     </rule>
@@ -9437,11 +9444,18 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Mort d&apos;en Haut:&lt;/B&gt; Cette règle a été extraite de http://taccmd.tacticalwargames.net &lt;BR&gt;Les vaisseaux spatiaux sont les mêmes que la liste normale. (Ce que nous avons pris pour signifier &quot;Ork Horde Guerre de Ghazghkull Mag Uruk Thraka&quot; de Netea.) Les Kroozers peuvent transporter jusqu&apos;à 40 unités et le Drop Kanz nécessaire pour les transporter à la surface. Les Battlekroozers peuvent transporter jusqu&apos;à 120 unités et le Drop Kanz pour effectuer un assaut planétaire. Note importante: Drop Kanz sont inclus dans le coût du vaisseau spatial et toutes les formations transportées à bord du vaisseau spatial peuvent être déployées dans le Drop Kanz. Seules les unités d&apos;Infanterie, Dreadnought et Killa Kanz peuvent être déployées à Drop Kanz.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>This rule was retrieved from http://taccmd.tacticalwargames.net
 Spacecraft are the same as the normal list. (Which we have taken to mean NetEA&apos;s &quot;Ghazghkull Mag Uruk Thraka’s Ork War Horde&quot;.)
-Kroozers can transport up to 40 units and the Drop Kanz necessary to transport them to the surface. Battlekroozers can transport up to 120 units and the Drop Kanz to Planetfall. Important Note: Drop Kanz are included in the price of the spacecraft and any formations transported aboard the spacecraft may be deployed in the Drop Kanz. Only Infantry units, Dreadnoughts and Killa Kanz may be deployed in Drop Kanz.
-</description>
+Kroozers can transport up to 40 units and the Drop Kanz necessary to transport them to the surface. Battlekroozers can transport up to 120 units and the Drop Kanz to Planetfall. Important Note: Drop Kanz are included in the price of the spacecraft and any formations transported aboard the spacecraft may be deployed in the Drop Kanz. Only Infantry units, Dreadnoughts and Killa Kanz may be deployed in Drop Kanz.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -9455,10 +9469,7 @@ Kroozers can transport up to 40 units and the Drop Kanz necessary to transport t
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This file uses the rules, stats &amp; values from GW (see below) by default. These are modified automatically by selecting a Source from -Group-.
-&lt;I&gt;Ce fichier utilise les règles, les statistiques et les valeurs de GW (voir ci-dessous) par défaut. Ceux-ci sont modifiés automatiquement par la sélection d&apos;une source de -Groupe-.
-Les règles présentées en français ne sont pas une traduction directe; ceux-ci ont été réaménagés par la F-ERC pour répondre aux besoins du groupe.&lt;/I&gt;
-none
+      <description>none
 Fanatic #02
 Fanatic #13</description>
     </rule>
@@ -9474,16 +9485,55 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="One Blood Axe Unit in the army must be upgraded to include a Blood Axe Kommandant. It does not cost any additional points. The Kommandant is in all ways identical to a standard Ork Warlord. &lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du Klan Blood Axes doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite.&lt;/I&gt;">
+        <modifier type="set" field="description" value="One Blood Axe Unit in the army must be upgraded to include a Blood Axe Kommandant. It does not cost any additional points. The Kommandant is in all ways identical to a standard Ork Warlord.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du Klan Blood Axes doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du Klan Blood Axes doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit obligatoirement rejoindre la plus grosse bande mécanisée.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Every Ork army must include a supreme commander character called a Warlord. The Warlord character is free and must join the largest mechanised mob.
-&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du Klan Blood Axes doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit obligatoirement rejoindre la plus grosse bande mécanisée.&lt;/I&gt;</description>
+      <description>Every Ork army must include a supreme commander character called a Warlord. The Warlord character is free and must join the largest mechanised mob.</description>
     </rule>
     <rule id="b7ab-6659-4911-254b" name="Strategy Rating &amp; Initiative (Ork)" hidden="false">
       <profiles/>
@@ -9504,11 +9554,16 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Orks a une valeur stratégique de 3.  Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Ork armies have Strategy Rating 3. 
-Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Orks a une valeur stratégique de 3. 
-Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoivent des modificateurs en fonction des actions choisies lors qu&apos;elles effectuent un test d&apos;action (Pouvoir de la Waaagh) ou de leur taille lorsqu&apos;elles tentent de se rallier (R&apos;mise en bande).&lt;/I&gt;</description>
+Ork formations have Initiative Rating 3+, but receive modifiers depending on the action chosen when taking an action test, or the size of the warband when rallying.</description>
     </rule>
     <rule id="efd9-7168-cf9b-0ed1" name="Transport (BAK)" hidden="false">
       <profiles/>
@@ -9519,6 +9574,13 @@ Toutes les formations Orks ont une valeur d&apos;initiative de 3+ mais reçoiven
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f131-8f0a-f05a-ad13" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Noter que les unités Meganobz prennent 2 emplacements. &lt;BR&gt; Battle Kroozer: 12 Landas plus le troupes qu&apos;ils transportent. &lt;BR&gt; Battlefortress: 8 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres. &lt;BR&gt; Battlewagon: 2 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres. &lt;BR&gt; Big Kopta: 6 unités parmi: Boyz, Kommandos, Nobz, Grots, peut transporter 4 grots supplémentaires. &lt;BR&gt; Gunfortress: 4 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres. &lt;BR&gt; Gunwagon: 1 Boyz, Kommandos, Nobz, Big Gunz. &lt;BR&gt; Flakwagon: 1 Boyz, Kommandos, Nobz, Big Gunz. &lt;BR&gt; Landa: 10 unités des Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Les véhicules légers et les Dreadnoughts (mais pas les Killa Kans) occupent 2 emplacements. Peut embarquer 4 Grotz en plus des autres. Looted Chimera: 2 unités des Boyz, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres. &lt;BR&gt; Truk: 1 unité des Boyz, Nobz, Grotz, Big Gunz. Toutes les unités à l’exception des Grokalibr peuvent tirer en étant transportées.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -9537,30 +9599,22 @@ Gunfortress: up to 4 units of Boyz, Kommandos or Nobz. 1 unit transported may be
 Gunwagon: 1 unit of Boyz, Kommandos, Nobz or Big Gunz.
 Kill Kroozer: up to 40 units and the Drop Kanz necessary to transport them.
 Mega Warkopta: 6 of the following units: Boyz, Kommandos, Grotz, Nobz. 1 unit transported may be a Big Gunz. May carry 4 Grots in addition to any other units.
-Warkopta: up to 2 units of Boyz, Kommandos or Nobz. May carry 1 Grotz in addition to any other units. May not carry Meganobz.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Noter que les unités Meganobz prennent 2 emplacements.
-Battle Kroozer: 12 Landas plus le troupes qu&apos;ils transportent.
-Battlefortress: 8 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres.
-Battlewagon: 2 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres.
-Big Kopta: 6 unités parmi: Boyz, Kommandos, Nobz, Grots, peut transporter 4 grots supplémentaires.
-Gunfortress: 4 unités des Boyz, Kommandos, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 4 Grotz en plus des autres.
-Gunwagon: 1 Boyz, Kommandos, Nobz, Big Gunz.
-Flakwagon: 1 Boyz, Kommandos, Nobz, Big Gunz.
-Landa: 10 unités des Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Les véhicules légers et les Dreadnoughts (mais pas les Killa Kans) occupent 2 emplacements. Peut embarquer 4 Grotz en plus des autres.
-Looted Chimera: 2 unités des Boyz, Nobz. Il peut embarquer 1 Big Gunz à la place de l&apos;une des unités. Peut embarquer 1 Grotz en plus des autres.
-Truk: 1 unité des Boyz, Nobz, Grotz, Big Gunz. Toutes les unités à l’exception des Grokalibr peuvent tirer en étant transportées.&lt;/I&gt;
-
-
-</description>
+Warkopta: up to 2 units of Boyz, Kommandos or Nobz. May carry 1 Grotz in addition to any other units. May not carry Meganobz.</description>
     </rule>
     <rule id="110c-dec5-9cdc-bc84" name="USMK" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
-      <description>Enables the «Kommandant Ug Skragga Morkrumps&apos;s Korps» army list instead of «Kolonel Sandork&apos;s Blood Axe Clan».
-&lt;I&gt;&lt;B&gt;USMK:&lt;/B&gt; Permet la liste de «Kommandant Ug Skragga Morkrumps&apos;s Korps» au lieu de «Kolonel Sandork&apos;s Blood Axe Clan».&lt;/I&gt;</description>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;USMK:&lt;/B&gt; Permet la liste de «Kommandant Ug Skragga Morkrumps&apos;s Korps» au lieu de «Kolonel Sandork&apos;s Blood Axe Clan».&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Enables the «Kommandant Ug Skragga Morkrumps&apos;s Korps» army list instead of «Kolonel Sandork&apos;s Blood Axe Clan».</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

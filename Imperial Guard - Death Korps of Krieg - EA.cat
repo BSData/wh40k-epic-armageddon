@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -8441,20 +8441,27 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="24ed-2541-dcdd-0744" name="&lt;I&gt;Commissaires&lt;/I&gt;" hidden="true">
+    <rule id="24ed-2541-dcdd-0744" name="Commissars" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Pour chaque grande compagnie de la Garde qu&apos;inclut votre armée (QG Régimentaire, compagnie mécanisée, compagnie d&apos;infanterie, compagnie d&apos;artillerie, compagnie blindée, compagnie de blindés supers lourds) un commissaire est automatiquement intégré dans leur effectif. De plus vous pouvez ajouter un commissaire dans les pelotons de Troupes de Choc et les pelotons de cavaliers impériaux / motos impériales pour 50pts chaque.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>&lt;I&gt;Pour chaque grande compagnie de la Garde qu&apos;inclut votre armée (QG Régimentaire, compagnie mécanisée, compagnie d&apos;infanterie, compagnie d&apos;artillerie, compagnie blindée, compagnie de blindés supers lourds) un commissaire est automatiquement intégré dans leur effectif. De plus vous pouvez ajouter un commissaire dans les pelotons de Troupes de Choc et les pelotons de cavaliers impériaux / motos impériales pour 50pts chaque.&lt;/I&gt;</description>
+      <description>For every major Guard company included in your army (Regimental HQ, Mechanised Company, Infantry Company, Artillery Company, Armoured Company, Super Heavy Armored Company) a Commissar is automatically integrated into their manpower. In addition, you can add a Commissar to Storm Trooper platoons and Imperial Cavalry / Imperial Motorbike platoons for 50pts each.</description>
     </rule>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
       <profiles/>
@@ -8483,9 +8490,15 @@ FERC beta_Garde Imperiale_Regiment phyressien_01 Avril 2011 #0.3 (pour la Vanqui
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Une armée de la Garde Impériale peut inclure jusqu&apos;à 2D6 commissaires. Les commissaires sont une mise à jour gratuite. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaires peuvent être attachés à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un commissaire par formation. Si vous avez plus que commissaires formations tout excès sont perdus.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>An Imperial Guard army may include up 2D6 Commissar Characters. The Commissar characters are a free upgrade. If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost.
-&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; Une armée de la Garde Impériale peut inclure jusqu&apos;à 2D6 commissaires. Les commissaires sont une mise à jour gratuite. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaires peuvent être attachés à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un commissaire par formation. Si vous avez plus que commissaires formations tout excès sont perdus.&lt;/I&gt;</description>
+      <description>An Imperial Guard army may include up 2D6 Commissar Characters. The Commissar characters are a free upgrade. If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost.</description>
     </rule>
     <rule id="e2d9-1df2-fc92-dd4c" name="Commissars" hidden="false">
       <profiles/>
@@ -8499,10 +8512,16 @@ FERC beta_Garde Imperiale_Regiment phyressien_01 Avril 2011 #0.3 (pour la Vanqui
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>An Imperial Guard army may include up to one Commissar Character for each full five hundred points. The Commissar characters are a free upgrade; however they must be appropriately modelled to be included in the army.
-If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost. Commissars may not be attached to Titan or Imperial Navy units.
-&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.&lt;/I&gt;</description>
+If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost. Commissars may not be attached to Titan or Imperial Navy units.</description>
     </rule>
     <rule id="2e86-c893-2425-3cd9" name="Commissars" hidden="false">
       <profiles/>
@@ -8523,9 +8542,15 @@ If the army includes a Supreme Commander then the first Commissar must be attach
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points. Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.
-&lt;I&gt;&lt;B&gt;Commissaires:&lt;/B&gt; La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.&lt;/I&gt;</description>
+      <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points. Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.</description>
     </rule>
     <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
       <profiles/>
@@ -8539,8 +8564,7 @@ If the army includes a Supreme Commander then the first Commissar must be attach
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -8560,9 +8584,15 @@ If the army includes a Supreme Commander then the first Commissar must be attach
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.
-&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;</description>
+      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
     <rule id="8f40-5c50-5ddf-3305" name="Critical Hit: May Not Move" hidden="false">
       <profiles/>
@@ -8583,15 +8613,41 @@ If the army includes a Supreme Commander then the first Commissar must be attach
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
-              <conditionGroups/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <description>Immobilised and D6 units being transported are hit. Subsequent critical hits destroy the unit.
-&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;</description>
+      <description>Immobilised and D6 units being transported are hit. Subsequent critical hits destroy the unit.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -8621,14 +8677,30 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Hades:&lt;/B&gt; Notez que l&apos;Hadès n&apos;est pas une unité et ne peut donc pas être tirée dessus et aucune touche ne lui est appliquée. Il est à tous égards simplement un marqueur. Aucun pion d&apos;impact n&apos;est généré pour sa formation si l&apos;Hadès est laissé pour compte pendant la partie.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Note that the Hades Breaching Drill is not a unit and so may not be shot at nor have hits applied to it. It is in all respects simply a marker. No Blast Marker is generated for its parent Hades Breach Drill leaving the formation behind during the game.</description>
     </rule>
     <rule id="f1f4-f8e9-72b0-ee46" name="Mossino Campaign" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Campagne Mossino:&lt;/B&gt; Ajustement des profils et des valeurs de points pour la liste d&apos;armée présentée dans Siege.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Adjusted profile and point values for the army list featured in Siege.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
@@ -8658,27 +8730,36 @@ siege #mossino campaign version 3</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Death Korps of Krieg a une valeur stratégique de 2.  Toutes les formations de la Death Korps of Krieg, les formations des appareils de la flotte et les vaisseaux spatiaux ont une initiative de 2+.  Les formations de soutien titanique ont une initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Death Korps of Krieg Imperial Guard armies have a strategy rating of 2. 
 Titan Legion battlegroup formations have an initiative rating of 1+. 
-All other formations have an initiative rating of 2+.
-&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Death Korps of Krieg a une valeur stratégique de 2. 
-Toutes les formations de la Death Korps of Krieg, les formations des appareils de la flotte et les vaisseaux spatiaux ont une initiative de 2+. 
-Les formations de soutien titanique ont une initiative de 1+.&lt;/I&gt;</description>
+All other formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="eed6-65a3-079c-59f8" name="Transport (DK)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Centaur: 1 unité parmi: Commandant Suprême de la DKoK, Commandant de la DKoK, Quatermaster, Fantassins de la DKoK, Grenadiers de la DKoK, Quad Launcher*, Mortier Lourd* (*vitesse réduite à 20cm). &lt;BR&gt; Gorgon: 10 unités parmi: Commandant Suprême de la DKoK, Commandant de la DKoK, Quatermaster, Fantassins de la DKoK, Grenadiers de la DKoK.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>As follows-
 Centaur: 1 infantry unit with Jump Packs or Mounted. If transporting a Heavy Mortar or Quad Launcher the unit’s speed is reduced to 20cm.
 Gorgon: 10 Death Korps Supreme Commander, Death Korps Commander, Death Korps Infantry, Fire Support, Grenadiers.
 Hades Breaching Drill: 8 Death Korps Engineer units.
-Trojan Tractor: 1 Grenadier, Heavy AA Gun, Earthshaker Platform, Howitzer, Light Artillery, Hydra Platform, Medusa Platform, Rapier.
-&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit-
-Centaur: 1 unité parmi: Commandant Suprême de la DKoK, Commandant de la DKoK, Quatermaster, Fantassins de la DKoK, Grenadiers de la DKoK, Quad Launcher*, Mortier Lourd* (*vitesse réduite à 20cm).
-Gorgon: 10 unités parmi: Commandant Suprême de la DKoK, Commandant de la DKoK, Quatermaster, Fantassins de la DKoK, Grenadiers de la DKoK.&lt;/I&gt;</description>
+Trojan Tractor: 1 Grenadier, Heavy AA Gun, Earthshaker Platform, Howitzer, Light Artillery, Hydra Platform, Medusa Platform, Rapier.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
