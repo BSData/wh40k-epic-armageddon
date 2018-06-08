@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b051-f90a-50b1-7dfd" name="Chaos: Black Legion" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b051-f90a-50b1-7dfd" name="Chaos: Black Legion" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -46,6 +46,12 @@
       <modifiers/>
     </infoLink>
     <infoLink id="8581-f553-0a3d-4ddf" hidden="false" targetId="2f00-6e1a-a835-6f12" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="e9f4-3f14-6c3f-e30c" name="Chaos Lords" hidden="false" targetId="a511-8156-efe0-82da" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2722,7 +2728,38 @@
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
       </constraints>
       <categoryLinks/>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="b44d-9c42-a157-3edd" name="Chaos Space Marines Chosen Squad" hidden="false" collective="false" type="unit">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="598d-f46c-97a7-011e" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="61bf-2515-3fc4-bfec" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bd36-ad06-6650-2170" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="dc70-7ab6-ad37-4e41" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="4dc7-bfe8-a4e1-11b4" name="Upgrades" hidden="false" collective="false">
           <profiles/>
@@ -2815,15 +2852,7 @@
           <constraints/>
           <categoryLinks/>
         </entryLink>
-        <entryLink id="0491-1ec1-fddb-833e" hidden="false" targetId="3bb7-ea68-2e35-63bf" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
-        <entryLink id="5d56-305f-5a00-689d" hidden="false" targetId="b73c-be3f-4a87-d4ac" type="selectionEntry">
+        <entryLink id="0491-1ec1-fddb-833e" name="Elite Formation" hidden="false" targetId="3bb7-ea68-2e35-63bf" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3654,10 +3683,10 @@
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -3665,7 +3694,6 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <categoryLinks>
@@ -3714,6 +3742,13 @@
                   </conditions>
                   <conditionGroups/>
                 </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
@@ -3737,7 +3772,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="b213-93ee-31ad-f39f" hidden="false" targetId="7f82-f895-b3d6-8480" type="selectionEntry">
+            <entryLink id="b213-93ee-31ad-f39f" name="Dreadclaws" hidden="false" targetId="7f82-f895-b3d6-8480" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -3759,7 +3794,7 @@
                 <modifier type="set" field="points" value="20.0">
                   <repeats/>
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </modifier>
@@ -3769,17 +3804,86 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="7d51-9126-fc68-7e20" hidden="false" targetId="c8fb-4919-08c2-956e" type="selectionEntryGroup">
+        <selectionEntryGroup id="b444-af35-309f-6da9" name="Squads" hidden="false" collective="false" defaultSelectionEntryId="5cdf-4ec2-39be-ceed">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a55d-52ef-9a1e-9a62" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bc90-6e5e-3068-c530" type="max"/>
+          </constraints>
           <categoryLinks/>
-        </entryLink>
-        <entryLink id="f70a-374a-eb57-afec" hidden="false" targetId="b73c-be3f-4a87-d4ac" type="selectionEntry">
+          <selectionEntries>
+            <selectionEntry id="5cdf-4ec2-39be-ceed" name="4x Chaos Space Marines Chosen Squad" hidden="false" collective="false" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="fa85-4d1f-ff6d-2402" name="Chosen" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="267c-0aaa-81ed-e38d" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="125.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6d2e-d438-9569-468e" name="6x Chaos Space Marines Chosen Squad" hidden="false" collective="false" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="ffee-00bc-3519-e464" name="Chosen" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="589c-1744-bc1f-7e4b" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="200.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="7d51-9126-fc68-7e20" name="Faction" hidden="false" targetId="c8fb-4919-08c2-956e" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3788,9 +3892,7 @@
           <categoryLinks/>
         </entryLink>
       </entryLinks>
-      <costs>
-        <cost name="pts" costTypeId="points" value="125.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="d590-9c41-3a82-55ee" name="Greater Daemon" hidden="false" collective="false" type="model">
       <profiles/>
@@ -4437,17 +4539,10 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <constraints>
@@ -5007,11 +5102,19 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="d8ba-cd44-36b9-55dc" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+        <infoLink id="d8ba-cd44-36b9-55dc" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="80b5-da74-5ca8-5731" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
           <profiles/>
@@ -5058,6 +5161,20 @@
               <repeats/>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="25cd-ec71-2351-9980" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -5281,11 +5398,19 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="4c0a-15a2-73e1-8520" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+        <infoLink id="4c0a-15a2-73e1-8520" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="ca07-ca71-1a0b-47e5" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
           <profiles/>
@@ -5332,6 +5457,20 @@
               <repeats/>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="f6ac-645c-c92e-51d0" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -5570,11 +5709,19 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="32f3-e2b9-b430-a3bc" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+        <infoLink id="32f3-e2b9-b430-a3bc" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="0b3a-7186-e9ac-7e1e" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
           <profiles/>
@@ -5621,6 +5768,20 @@
               <repeats/>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="5ced-be8f-9890-31f1" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -5894,36 +6055,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-      </constraints>
-      <categoryLinks/>
-      <selectionEntries/>
-      <selectionEntryGroups/>
-      <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b73c-be3f-4a87-d4ac" name="Chaos Space Marines Chosen Squad" hidden="false" collective="false" type="unit">
-      <profiles/>
-      <rules/>
-      <infoLinks>
-        <infoLink id="17b1-dfb1-a281-082c" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="4c7d-353b-4545-b359" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-      </infoLinks>
-      <modifiers/>
-      <constraints>
-        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -7918,12 +8049,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries>
@@ -8302,12 +8427,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -8347,12 +8466,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -8392,12 +8505,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -8467,12 +8574,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries>
@@ -8533,7 +8634,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;blacklegionferc #Mars 2015&lt;/I&gt;</description>
+      <description>&lt;I&gt;Black Legion 2015-12 (1) #Décembre 2015&lt;/I&gt;</description>
     </rule>
     <rule id="0ca6-a1ff-ffb0-70d9" name="Summoning of Daemons" hidden="false">
       <profiles/>
@@ -8743,7 +8844,7 @@ May only contest objectives, not control them.</description>
       <infoLinks/>
       <modifiers/>
       <description>BlackLegionQuickRef #21042014
-CodexChaosSpaceMarines #21042014</description>
+CodexChaosSpaceMarines #160118</description>
     </rule>
     <rule id="2f00-6e1a-a835-6f12" name="Favour of the Gods - Fickle Masters" hidden="false">
       <profiles/>
@@ -8788,7 +8889,7 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>netea-tournament-pack-2017-01-03</description>
+      <description>netea-tournament-pack-2018-03-27</description>
     </rule>
     <rule id="ae87-e98f-f6cd-039d" name="Strategy Rating &amp; Initiative (BL)" hidden="false">
       <profiles/>
@@ -8892,21 +8993,8 @@ Summoned units remain on the battlefield until the end phase of the turn in whic
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Despoiler Class Battleship: Peut transporter jusqu’à 40 unités qui peuvent être déployées en Dreadclaws. &lt;BR&gt; Devastation Class Cruiser: Peut transporter jusqu’à 20 unités qui peuvent être déployées en Dreadclaws. &lt;BR&gt; Dreadclaw: Ne peut transporter que des unités d’Infanterie (sauf motos) et des Dreadnoughts. &lt;BR&gt; Chaos Rhinos: 2 des unités suivantes: Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs, Forlorn Hope. &lt;BR&gt; Chaos Land Raider: 1 unité du Chaos Terminators, d’Obliterators, un Daemon Prince ou 2 des unités suivantes: Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs, Forlorn Hope.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>As follows-
-Despoiler Class Battleship: 40 units that can be deployed with Dreadclaws.
-Devastation Class Cruiser: 20 units that can be deployed with Dreadclaws.
-Dreadclaw: 1 formation that includes only Chaos Space Marine, Chaos Terminators, Bezerker, Noise Marine, Plague Marine, Thousand Son, Obliterator, Havoc, Daemon Prince or Chaos Dreadnought units.
-Chaos Rhinos: 2 units of Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs
-Chaos Land Raider: 1 Chaos Terminator unit or 2 of the following units: Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs</description>
+      <modifiers/>
+      <description>see codex</description>
     </rule>
     <rule id="7b33-ad18-771d-4233" name="Daemonic Pact" hidden="false">
       <profiles/>
@@ -9001,6 +9089,28 @@ Chaos Land Raider: 1 Chaos Terminator unit or 2 of the following units: Chaos Sp
         </modifier>
       </modifiers>
       <description>The Dreadclaw scatters 2D6cm from its coordinates. Once landed the deathwind attacks all enemy units within a radius of 15cm. Then disembark any transported units 5cm from the module or from each other while remaining within 15cm of the module.</description>
+    </rule>
+    <rule id="a511-8156-efe0-82da" name="Chaos Lords" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs du Chaos:&lt;/B&gt; Les personnages de seigneur du Chaos ne peuvent être ajoutés qu&apos;aux unités de base d&apos;une formation. Ils ne peuvent pas être ajoutés aux unités achetées comme amélioration pour une formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Chaos Space Marine Lord Characters may only be added to core units within a formation. They may not be added to any upgrade units purchased for a formation.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -9681,13 +9791,6 @@ Chaos Land Raider: 1 Chaos Terminator unit or 2 of the following units: Chaos Sp
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="3+">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
           <repeats/>
           <conditions>
@@ -9774,6 +9877,13 @@ Chaos Land Raider: 1 Chaos Terminator unit or 2 of the following units: Chaos Sp
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>

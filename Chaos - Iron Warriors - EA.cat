@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="11a4-9cb6-cb15-a30c" name="Chaos: Iron Warriors" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="11a4-9cb6-cb15-a30c" name="Chaos: Iron Warriors" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
     <infoLink id="f668-2718-536a-3e9f" hidden="false" targetId="405c-fb8c-6cd1-a21d" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="e9f4-3f14-6c3f-e30c" name="Chaos Lords" hidden="false" targetId="a511-8156-efe0-82da" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -245,6 +251,14 @@
           <constraints/>
           <categoryLinks/>
         </entryLink>
+        <entryLink id="5aef-7511-c86a-2471" name="Hunters" hidden="false" targetId="cab1-86b0-58cd-82b1" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
@@ -262,10 +276,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="points" value="275">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="a20a-ee16-a9dc-f07d-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true">
           <profiles/>
@@ -992,7 +1011,7 @@
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
-        <entryLink id="5b9a-08fc-aacf-aa84" hidden="false" targetId="aaee-b645-5fb1-d089" type="selectionEntry">
+        <entryLink id="5b9a-08fc-aacf-aa84" name="Siege Dreadnought" hidden="false" targetId="aaee-b645-5fb1-d089" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3213,7 +3232,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="f76b-4f0e-d030-1326" hidden="false" targetId="bcdf-fd35-b616-148a" type="selectionEntryGroup">
+        <entryLink id="f76b-4f0e-d030-1326" name="Chaos Lord" hidden="false" targetId="bcdf-fd35-b616-148a" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6396,7 +6415,16 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="7868-de0b-cd16-6b5f" name="Hunters" hidden="false" targetId="cab1-86b0-58cd-82b1" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="40.0"/>
       </costs>
@@ -8261,12 +8289,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -8330,12 +8352,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries>
@@ -8439,6 +8455,71 @@
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup id="cab1-86b0-58cd-82b1" name="Hunters" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1f44-d914-ae84-4f57" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e1d5-e6aa-d554-d70e" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="7684-7fed-531f-2766" name="2x Chaos Hunter" page="0" hidden="false" collective="false" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="c7a4-830e-e6d9-ec6f" name="Chaos Hunter" hidden="false" targetId="5748-790f-81b9-6c64" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="75.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a09d-4df9-b38f-9434" name="1x Chaos Hunter" page="0" hidden="false" collective="false" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="e51d-2710-6735-826b" name="Chaos Hunter" hidden="false" targetId="5748-790f-81b9-6c64" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
@@ -8504,8 +8585,8 @@ Garde imperial FERC #21 Novembre 2010&lt;/I&gt;</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>IronWarriorsQuickRef #21042014
-CodexChaosSpaceMarines #21042014</description>
+      <description>IronWarriorsQuickRef #16012018
+CodexChaosSpaceMarines #160118</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
@@ -8544,22 +8625,8 @@ Chaos Navy formations have an initiative rating of 2+. All other formations have
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Despoiler Class Battleship: Peut transporter jusqu’à 40 unités qui peuvent être déployées en Dreadclaws. &lt;BR&gt; Devastation Class Cruiser: Peut transporter jusqu’à 20 unités qui peuvent être déployées en Dreadclaws. &lt;BR&gt; Dreadclaw: Ne peut transporter que des unités d’Infanterie (sauf motos) et des Dreadnoughts. &lt;BR&gt; Chaos Rhinos: 2 des unités suivantes: Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs, Forlorn Hope. &lt;BR&gt; Chaos Land Raider: 1 unité du Chaos Terminators, d’Obliterators, un Daemon Prince ou 2 des unités suivantes: Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs, Forlorn Hope. &lt;BR&gt; Ironfist Assault Pod: 10 des unités suivantes: Iron Warriors Assault Marines, Chaos Marines, Chosen, Havoc, ou 5 unités du Chaos Siege Dreadnoughts, Terminators.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>As follows-
-Despoiler Class Battleship: 40 units that can be deployed with Dreadclaws.
-Devastation Class Cruiser: 20 units that can be deployed with Dreadclaws.
-Dreadclaw: 1 formation that contains no mounted infantry, light vehicles or armoured vehicles other than Dreadnaughts.
-Chaos Rhinos: 2 units of Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs, , Iron Warrior Assault Marines, Chosen Chaos Marines.
-Chaos Land Raider: 1 Chaos Terminator unit or 2 of the following units: Chaos Space Marines, Berzerkers, Noise Marines, Plague Marines, Thousand Sons, Havocs, Chosen Chaos Marines.
-Ironfist Assault Pod: 10 units of Iron Warriors Assault Marines, Chaos Marines, Chosen, Havoc, or 5 units of Chaos Siege Dreadnoughts, Terminators.</description>
+      <modifiers/>
+      <description>see codex</description>
     </rule>
     <rule id="bbf4-e6ee-ded1-3597" name="Dreadclaws" hidden="false">
       <profiles/>
@@ -8634,6 +8701,28 @@ Ironfist Assault Pod: 10 units of Iron Warriors Assault Marines, Chaos Marines, 
         </modifier>
       </modifiers>
       <description>After the Dreadclaw lands, its Deathwind attacks all enemy units within 15cms. Each enemy formation attacked receives a Blast marker for coming under fire, and an extra Blast marker for each casualty as normal. Then any troops carried in the Dreadclaw must disembark within 5cms of the drop pod or within 5cms of another unit from the same formation that has already landed, so long as all units are placed within 15cms of the drop pod. The Dreadclaw model is only used as a marker and does not count as a unit in any respect. It may not be used to claim crossfire and the armour value is for comparative purposes only.</description>
+    </rule>
+    <rule id="a511-8156-efe0-82da" name="Chaos Lords" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs du Chaos:&lt;/B&gt; Les personnages de seigneur du Chaos ne peuvent être ajoutés qu&apos;aux unités de base d&apos;une formation. Ils ne peuvent pas être ajoutés aux unités achetées comme amélioration pour une formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Chaos Space Marine Lord Characters may only be added to core units within a formation. They may not be added to any upgrade units purchased for a formation.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -10107,6 +10196,24 @@ Ironfist Assault Pod: 10 units of Iron Warriors Assault Marines, Chaos Marines, 
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons&lt;BR&gt;&lt;BR&gt;Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon, +2A&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Supreme Commander, Fearless, Reinforced Armour, Teleport, Jump Packs"/>
+      </characteristics>
+    </profile>
+    <profile id="5748-790f-81b9-6c64" name="Chaos Hunter" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Armoured Vehicle"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="6+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Hunter-killer"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AT4+/AA4+"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
   </sharedProfiles>

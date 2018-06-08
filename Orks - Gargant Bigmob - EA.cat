@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -21,11 +21,19 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="b979-5173-8495-ed86" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule">
+    <infoLink id="b979-5173-8495-ed86" name="Power of the Waaagh!" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
     <infoLink id="a8ce-7be2-2fe2-bf4b" name="Battlefortresses &amp; Gunfortresses" hidden="false" targetId="3a58-160c-8b1b-f962" type="rule">
       <profiles/>
@@ -34,6 +42,12 @@
       <modifiers/>
     </infoLink>
     <infoLink id="27e7-9287-3eea-3bd8" hidden="false" targetId="63e9-7b1c-0361-3187" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh!" hidden="false" targetId="a717-b0ae-1bf8-2c82" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -737,7 +751,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="-50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f46a-f204-9a1c-5cd1" name="Gargant" hidden="false" collective="false" type="model">
@@ -5415,55 +5429,13 @@
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="879b-d62d-4629-39b0" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7e9b-10a9-c7ab-e1d0" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7e9b-10a9-c7ab-e1d0" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="f945-6ad5-f62a-ed5d" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="points" value="0.0">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-            <entryLink id="c8da-7813-f559-4ce5" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="points" value="0.0">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5519-f2a2-a480-93cc" name="Fortress" hidden="false" collective="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f402-481d-5263-5940" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="981f-02fc-3699-0d05" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
+            <entryLink id="f945-6ad5-f62a-ed5d" name="Battlefortress" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5471,7 +5443,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="72a1-8c27-cfdd-81b4" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
+            <entryLink id="c8da-7813-f559-4ce5" name="Gunfortress" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5517,7 +5489,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="275.0"/>
+        <cost name="pts" costTypeId="points" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bf1e-0ccd-d6b9-fed0" name="Fortress Mob, Big" hidden="false" collective="false" type="unit">
@@ -5554,55 +5526,13 @@
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a9a5-a29f-1e3f-301b" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c052-b000-a514-591f" type="max"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c052-b000-a514-591f" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="7ece-3233-2286-d3d2" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="points" value="0.0">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-            <entryLink id="d70c-4bb7-8279-c3b5" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="points" value="0.0">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b990-71da-9074-55b8" name="Fortress" hidden="false" collective="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="060d-29a2-3599-d5d7" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="a32b-bc83-0fff-8115" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
+            <entryLink id="7ece-3233-2286-d3d2" name="Battlefortress" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5610,7 +5540,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="b97f-17cb-92f2-9087" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
+            <entryLink id="d70c-4bb7-8279-c3b5" name="Gunfortress" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5656,7 +5586,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="475.0"/>
+        <cost name="pts" costTypeId="points" value="-25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9cc0-2473-dab5-396c" name="Fortress Mob, Uge" hidden="false" collective="false" type="unit">
@@ -5693,55 +5623,13 @@
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="dff0-5705-d279-0e4e" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a520-861e-1335-6e13" type="max"/>
+            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a520-861e-1335-6e13" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="9146-c930-fa32-74a0" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="points" value="0.0">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-            <entryLink id="2b9b-d6dd-a50d-ffb9" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="points" value="0.0">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="acab-dec6-432d-d8b9" name="Fortress" hidden="false" collective="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="aea8-a054-bbe5-3c43" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="4ec0-1fde-5ae2-2967" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
+            <entryLink id="9146-c930-fa32-74a0" name="Battlefortress" hidden="false" targetId="e53b-912e-f73d-ef9c" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5749,7 +5637,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="cc08-94c8-3e4b-bd60" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
+            <entryLink id="2b9b-d6dd-a50d-ffb9" name="Gunfortress" hidden="false" targetId="17af-4276-5238-2ace" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5795,7 +5683,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="675.0"/>
+        <cost name="pts" costTypeId="points" value="-75.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -5866,7 +5754,13 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="f133-7cc7-e06f-d3b4" hidden="false" targetId="364f-4acb-9f26-4a97" type="rule">
+        <infoLink id="f133-7cc7-e06f-d3b4" name="Transport (GBM)" hidden="false" targetId="364f-4acb-9f26-4a97" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="9ca3-9d14-f883-fc3a" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6377,6 +6271,12 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
+        <infoLink id="443a-dbe3-8bdd-0ef2" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
       </infoLinks>
       <modifiers/>
       <constraints/>
@@ -6385,7 +6285,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="135.0"/>
+        <cost name="pts" costTypeId="points" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f85-26c7-2ca6-31cd" name="Gunwagon" hidden="false" collective="false" type="model">
@@ -8717,7 +8617,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;FERC_Orkimedes Big Mob_2015 04 22 (1) #V. 10/05/2016&lt;/I&gt;</description>
+      <description>&lt;I&gt;FERC_Orkimedes Big Mob_2015 04 22 (1) #V. 13/03/2018&lt;/I&gt;</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -8976,6 +8876,46 @@ Flakwagon: 1 unit of Boyz, Kommandos, Grotz, Nobz or Big Gunz.
 Gunfortress: up to 4 units of Boyz, Kommandos or Nobz. 1 unit transported may be a Big Gunz. May carry 4 Grotz in addition to any other units.
 Transporta: Supa-Stompa: 8 infantry units, plus 4 Grotz. Gargant: 16 infantry units, plus 8 Grotz. Great Gargant: 24 infantry units, plus 12 Grotz. Mega Gargant: 32 infantry units, plus 16 Grotz. Dreadnoughts and Light Vehicles may be carried by all but take up 2 infantry spaces each (Killa Kans only take up 1 infantry space).</description>
     </rule>
+    <rule id="a717-b0ae-1bf8-2c82" name="Power of the Waaagh!" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;El Poder del ¡Waaaagh!: &lt;/B&gt;Las formaciones Orkas que declaren acciones Dobles o de Atacar, recibirán un +2 a su chequeo de acción. A los pilotoz Orkoz, de igual manera, les encanta acribillar cosas, y reciben un +1 para intentar acciones de Ataque a Tierra o Intercepción.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Il Potere della Waaagh!: &lt;/B&gt;Le formazioni di Orki che stanno provando ad ingaggiare o a far doppie mosse ricevono un modificatore +2 al loro tiro della prova di azione. Gli Orki aviatori similmente gradiscono l’occasione di sparare alle cose in alto, e ricevono un modificatore di +1 nel loro tiro della prova di azione quando cercano di portare a termine un’azione di intercettamento o di attacco a terra.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pouvoir de la Waaagh:&lt;/B&gt; Les Orks ne sont pas de fins stratèges mais la perspective d&apos;une bonne bagarre les galvanisent toujours. Afin de représenter ceci, uneformation tentant une action d&apos;avance rapide ou d&apos;assaut reçoit toujours +2 à l&apos;iniative pour son test d&apos;action. &lt;BR&gt; Les formations aériennes, ont toujours +1 de bonus pour les tests d&apos;actions lorsqu&apos;elles tentent une Interception ou une Attaque au sol.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Ork formations that are attempting to take an engage or double action receive a +2 modifier to their action test roll. Ork flyboyz similarly relish the chance to shoot things up, and receive a +1 modifier to their action test roll when attempting to carry out interception or ground attack actions.
+
+
+
+</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -9000,7 +8940,22 @@ Transporta: Supa-Stompa: 8 infantry units, plus 4 Grotz. Gargant: 16 infantry un
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
@@ -9022,6 +8977,13 @@ Transporta: Supa-Stompa: 8 infantry units, plus 4 Grotz. Gargant: 16 infantry un
       <infoLinks/>
       <modifiers>
         <modifier type="set" field="1160-63e7-57ca-722d" value="Twin Big Shootas">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
@@ -9461,7 +9423,22 @@ Transporta: Supa-Stompa: 8 infantry units, plus 4 Grotz. Gargant: 16 infantry un
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>

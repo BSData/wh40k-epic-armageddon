@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8861-bee9-f1ea-e105" name="Orks: Ghazghkull Mag Uruk Thraka&apos;s Ork War Horde" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8861-bee9-f1ea-e105" name="Orks: Ghazghkull Mag Uruk Thraka&apos;s Ork War Horde" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -21,11 +21,19 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="b979-5173-8495-ed86" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule">
+    <infoLink id="b979-5173-8495-ed86" name="Power of the Waaagh!" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
     <infoLink id="a8ce-7be2-2fe2-bf4b" name="Battlefortresses &amp; Gunfortresses" hidden="false" targetId="3a58-160c-8b1b-f962" type="rule">
       <profiles/>
@@ -46,6 +54,12 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+    </infoLink>
+    <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh!" hidden="false" targetId="a717-b0ae-1bf8-2c82" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
     </infoLink>
   </infoLinks>
   <costTypes/>
@@ -165,6 +179,20 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
+            <infoLink id="efce-53d3-aee5-c019" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="decrement" field="maxSelections" value="1">
@@ -174,7 +202,7 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxSelections" value="1.0">
+            <modifier type="decrement" field="maxSelections" value="1">
               <repeats/>
               <conditions>
                 <condition field="selections" scope="35d2-fefe-3a29-a6d5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ffad-a7b2-52b0-e36a" type="equalTo"/>
@@ -188,18 +216,12 @@
               </conditions>
               <conditionGroups/>
             </modifier>
-            <modifier type="set" field="points" value="125.0">
+            <modifier type="set" field="points" value="135">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
@@ -210,7 +232,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="135.0"/>
+            <cost name="pts" costTypeId="points" value="125.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -552,9 +574,7 @@
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="baa1-1114-25df-eafa-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -569,29 +589,14 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="d414-986a-ac26-eb4d" hidden="false" targetId="5c35-a8bc-ec7a-b45d" type="profile">
+            <infoLink id="d414-986a-ac26-eb4d" name="Fighta-Bommers" hidden="false" targetId="5c35-a8bc-ec7a-b45d" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
           </infoLinks>
-          <modifiers>
-            <modifier type="set" field="minSelections" value="4.0">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="set" field="maxSelections" value="10.0">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
@@ -2857,6 +2862,20 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
+            <infoLink id="ed07-d9d8-0b1f-c465" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" field="points" value="115.0">
@@ -3048,20 +3067,28 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" field="points" value="125.0">
-              <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
+            <infoLink id="9f5b-705a-4b33-c18d" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
                   <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" field="points" value="135">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -3070,7 +3097,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="135.0"/>
+            <cost name="pts" costTypeId="points" value="125.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4433,56 +4460,64 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="d646-32ca-3bc4-67ef" hidden="false" targetId="4365-a465-a37a-89a4" type="profile">
+            <infoLink id="d646-32ca-3bc4-67ef" name="Gunfortress (Supa-Zzap Gun)" hidden="false" targetId="4365-a465-a37a-89a4" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="28fb-f6db-5081-f63c" hidden="false" targetId="b263-37ed-5479-6fcc" type="rule">
+            <infoLink id="28fb-f6db-5081-f63c" name="Critical Hit: Flipped Over" hidden="false" targetId="b263-37ed-5479-6fcc" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="9b01-0bce-9c86-cfbc" hidden="false" targetId="46cd-7181-5118-8c84" type="rule">
+            <infoLink id="9b01-0bce-9c86-cfbc" name="Transport (Ork)" hidden="false" targetId="46cd-7181-5118-8c84" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="1f2b-da2c-8ab9-75fe" hidden="false" targetId="37ff-ffd7-85f0-3e8f" type="profile">
+            <infoLink id="1f2b-da2c-8ab9-75fe" name="Oddboyz" hidden="false" targetId="37ff-ffd7-85f0-3e8f" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="330d-352f-efac-1ae2" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
+            <infoLink id="330d-352f-efac-1ae2" name="Titan Kiler" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="1ac5-b3c0-9dc4-f5e6" hidden="false" targetId="7855-f881-1a89-669f" type="rule">
+            <infoLink id="1ac5-b3c0-9dc4-f5e6" name="Oddboyz" hidden="false" targetId="7855-f881-1a89-669f" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
+            </infoLink>
+            <infoLink id="76b4-acd5-01f2-c953" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </infoLink>
           </infoLinks>
           <modifiers>
-            <modifier type="set" field="points" value="175.0">
+            <modifier type="set" field="points" value="185">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -4491,63 +4526,71 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="185.0"/>
+            <cost name="pts" costTypeId="points" value="175.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9616-eb9a-d34d-521c" name="Gunfortress w/ Soopagun" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="dcd3-1e26-d4f5-7849" hidden="false" targetId="0294-5dc3-7b3d-01b8" type="profile">
+            <infoLink id="dcd3-1e26-d4f5-7849" name="Gunfortress (Soopagun)" hidden="false" targetId="0294-5dc3-7b3d-01b8" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="2176-7013-e5ad-f63d" hidden="false" targetId="b263-37ed-5479-6fcc" type="rule">
+            <infoLink id="2176-7013-e5ad-f63d" name="Critical Hit: Flipped Over" hidden="false" targetId="b263-37ed-5479-6fcc" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="fcb7-1eff-4059-c402" hidden="false" targetId="46cd-7181-5118-8c84" type="rule">
+            <infoLink id="fcb7-1eff-4059-c402" name="Transport (Ork)" hidden="false" targetId="46cd-7181-5118-8c84" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="a851-2a98-e5f2-3222" hidden="false" targetId="37ff-ffd7-85f0-3e8f" type="profile">
+            <infoLink id="a851-2a98-e5f2-3222" name="Oddboyz" hidden="false" targetId="37ff-ffd7-85f0-3e8f" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="01b5-9bfc-460f-7f1a" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+            <infoLink id="01b5-9bfc-460f-7f1a" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="e417-7df5-ae83-1eb8" hidden="false" targetId="7855-f881-1a89-669f" type="rule">
+            <infoLink id="e417-7df5-ae83-1eb8" name="Oddboyz" hidden="false" targetId="7855-f881-1a89-669f" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
+            </infoLink>
+            <infoLink id="5dd3-55bf-5284-f21d" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </infoLink>
           </infoLinks>
           <modifiers>
-            <modifier type="set" field="points" value="175.0">
+            <modifier type="set" field="points" value="185">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -4556,7 +4599,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="185.0"/>
+            <cost name="pts" costTypeId="points" value="175.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7bba-e620-5b2a-a942" name="Gunfortress w/ Power Fields" hidden="false" collective="false" type="model">
@@ -4772,7 +4815,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;FERC_ORK_08 06 2013&lt;/I&gt;</description>
+      <description>&lt;I&gt;FERC_ORK #V. 31/01/2018&lt;/I&gt;</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -4883,6 +4926,46 @@ Gunwagon: 1 unit of Boyz, Kommandos, Nobz or Big Gunz.
 Flakwagon: 1 unit of Boyz, Kommandos, Nobz or Big Gunz.
 Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Light vehicles and Dreadnoughts count as two units. May carry 4 Grotz in addition to any other units.</description>
     </rule>
+    <rule id="a717-b0ae-1bf8-2c82" name="Power of the Waaagh!" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;El Poder del ¡Waaaagh!: &lt;/B&gt;Las formaciones Orkas que declaren acciones Dobles o de Atacar, recibirán un +2 a su chequeo de acción. A los pilotoz Orkoz, de igual manera, les encanta acribillar cosas, y reciben un +1 para intentar acciones de Ataque a Tierra o Intercepción.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Il Potere della Waaagh!: &lt;/B&gt;Le formazioni di Orki che stanno provando ad ingaggiare o a far doppie mosse ricevono un modificatore +2 al loro tiro della prova di azione. Gli Orki aviatori similmente gradiscono l’occasione di sparare alle cose in alto, e ricevono un modificatore di +1 nel loro tiro della prova di azione quando cercano di portare a termine un’azione di intercettamento o di attacco a terra.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Pouvoir de la Waaagh:&lt;/B&gt; Les Orks ne sont pas de fins stratèges mais la perspective d&apos;une bonne bagarre les galvanisent toujours. Afin de représenter ceci, uneformation tentant une action d&apos;avance rapide ou d&apos;assaut reçoit toujours +2 à l&apos;iniative pour son test d&apos;action. &lt;BR&gt; Les formations aériennes, ont toujours +1 de bonus pour les tests d&apos;actions lorsqu&apos;elles tentent une Interception ou une Attaque au sol.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Ork formations that are attempting to take an engage or double action receive a +2 modifier to their action test roll. Ork flyboyz similarly relish the chance to shoot things up, and receive a +1 modifier to their action test roll when attempting to carry out interception or ground attack actions.
+
+
+
+</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -4907,7 +4990,22 @@ Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/War
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
@@ -4949,6 +5047,20 @@ Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/War
       <infoLinks/>
       <modifiers>
         <modifier type="set" field="1160-63e7-57ca-722d" value="Twin Big Shootas">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="5+">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
@@ -5253,7 +5365,22 @@ Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/War
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
@@ -5293,7 +5420,22 @@ Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/War
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
@@ -5313,7 +5455,22 @@ Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/War
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
@@ -5580,7 +5737,36 @@ Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/War
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;and Ignore Cover">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;and">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;and Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;and (15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Light Vehicle"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm"/>

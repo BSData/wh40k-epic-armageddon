@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="13" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="14" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
@@ -4745,7 +4745,7 @@ In addition Eldar formations that wins an assault are allowed to move any distan
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Portails Fantôme:&lt;/B&gt; Chaque portail fantôme inclus dans une armée permet au joueur Eldar de prendre trois autres formations, et de les conserver en réserve sur son vaisseau monde. Les formations en réserve sur le vaisseau monde peuvent entrer en jeux par le portail, en réalisant une action qui comporte un mouvement. Ce mouvement est alors mesuré à partir de la position du portail sur la table de jeu. Notez que les formations peuvent apparaître à travers n’importe quel portail, mais une seule formation peut voyager à travers un même portail par tour. Notez qu&apos;une formation qui rate son activation en tentant de franchir un portail prendra automatiquement l&apos;ordre tenir (donc peut entrer en jeu en réalisant un simple mouvement en prenant 1 PI pour l&apos;activation ratée ou alors rester hors de table et se regrouper). Si elle choisit de se regrouper en restant hors de table, cela permettra à une autre formation de pouvoir utiliser ce portail car il ne sera pas considéré comme utilisé par la formation précédente ayant raté son activation. &lt;BR&gt; Seules les unités d&apos;infanterie, les véhicules légers et les véhicules blindés avec la capacité marcheur peuvent utiliser les portails fantôme.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Les Portails Fantôme:&lt;/B&gt; Chaque portail fantôme inclus dans une armée permet au joueur Eldar de prendre trois autres formations et de les conserver en réserve sur son vaisseau monde. Les formations en réserve sur le vaisseau monde peuvent entrer en jeux par le portail, en réalisant une action qui comporte un mouvement. Ce mouvement est alors mesuré à partir de la position du portail sur la table de jeu. Notez que les formations peuvent apparaître à travers n’importe quel portail, pas seulement celui qui a été « utilisé » pour permettre de conserver la formation en réserve. Une seule formation peut voyager à travers chaque portail chaque tour. Notez qu&apos;une formation qui rate son activation en tentant de franchir un portail prendra automatiquement l&apos;ordre tenir (donc peut entrer en jeu en réalisant un simple mouvement en prenant 1 PI pour l&apos;activation ratée ou alors rester hors de table et se regrouper). Si elle choisit de se regrouper en restant hors de table, cela permettra à une autre formation de pouvoir utiliser ce portail car il ne sera pas considéré comme utilisé par la formation précédente ayant raté son activation. &lt;BR&gt; Seules les unités d&apos;infanterie, les véhicules légers et les véhicules blindés avec la capacité marcheur peuvent utiliser les portails fantôme.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -5627,7 +5627,7 @@ A Knight may not use its shield in two circumstances:
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>A unit with a Champion of Chaos character may be sacrificed to generate 6 summoning points to summon a Greater Daemon. The Greater Daemon must be placed within 10cm of the unit with the Champion of Chaos, which is then removed from play.</description>
+      <description>A unit with a Champion of Chaos character may be sacrificed before rolling for summoning points to generate 6 summoning points to summon a Greater Daemon. The Greater Daemon must be placed within 10cm of the unit with the Champion of Chaos, which is then removed from play.</description>
     </rule>
     <rule id="bf30-c0f7-cae7-d46b" name="Critical Hit: Backlash of the Warp" hidden="false">
       <profiles/>
@@ -6289,6 +6289,13 @@ netea-tournament-pack-2017-03-21</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fortifications. Chaque bunker peut contenir trois unités.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Infantry" characteristicTypeId="36c8-6d92-af3f-a836" value="3+ Cover Save"/>
@@ -6309,6 +6316,13 @@ netea-tournament-pack-2017-03-21</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Peut contenir 1 unité d&apos;infanterie par 40mm de longueur.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Infantry" characteristicTypeId="36c8-6d92-af3f-a836" value="4+ Cover Save"/>
@@ -6326,6 +6340,13 @@ netea-tournament-pack-2017-03-21</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Les emplacements d’artillerie procurent une sauvegarde de couvert aux véhicules de la même manière que les sauvegardes de couvert pour l’infanterie. Chaque emplacement d’artillerie ne peut contenir qu’une seule unité.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -6494,6 +6515,13 @@ netea-tournament-pack-2017-03-21</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Peut contenir 1 unité d&apos;infanterie par 40mm de longueur.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>

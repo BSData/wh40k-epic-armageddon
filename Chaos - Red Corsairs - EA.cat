@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4eca-4ab4-dc7f-ac89" name="Chaos: Red Corsairs" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4eca-4ab4-dc7f-ac89" name="Chaos: Red Corsairs" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
     <infoLink id="a2c6-a634-b834-32f5" hidden="false" targetId="b451-0436-a3b5-ff56" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="9913-5212-94a5-5594" name="Summoned Units" hidden="false" targetId="ddd5-f71e-f48f-ca31" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="8581-f553-0a3d-4ddf" name="Favour of the Gods - Fickle Masters" hidden="false" targetId="2f00-6e1a-a835-6f12" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="e9f4-3f14-6c3f-e30c" name="Chaos Lords" hidden="false" targetId="a511-8156-efe0-82da" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -22,6 +40,7 @@
       <modifiers/>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="eb06-1023-70fb-2d80" type="min"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -39,7 +58,7 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="6372-f9f5-0cae-d8d8" hidden="false" targetId="5535-5d7a-519a-e9b4" type="selectionEntry">
+            <entryLink id="6372-f9f5-0cae-d8d8" name="GW" hidden="false" targetId="5535-5d7a-519a-e9b4" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -47,7 +66,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="d1eb-4f24-2225-bcec" hidden="false" targetId="edea-8b4e-a6c5-af5b" type="selectionEntry">
+            <entryLink id="d1eb-4f24-2225-bcec" name="NetEA" hidden="false" targetId="edea-8b4e-a6c5-af5b" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -55,7 +74,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="919e-e87a-1a5b-7e90" hidden="false" targetId="4a86-7376-5d23-e95d" type="selectionEntry">
+            <entryLink id="919e-e87a-1a5b-7e90" name="EpicUK" hidden="false" targetId="4a86-7376-5d23-e95d" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -223,23 +242,17 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7800-f329-c8b5-4e65" name="Blight Drone Swarm" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="7800-f329-c8b5-4e65" name="Blight Drones" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="maxInForce" value="0.0">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d775-9b3a-c07a-6ab8" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73e1-9558-3043-7024" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <constraints>
@@ -310,23 +323,17 @@
         <cost name="pts" costTypeId="points" value="300.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="caf0-6b71-eb3f-43f9" name="Blood Slaughterer Pack" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="caf0-6b71-eb3f-43f9" name="Blood Slaughterers" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="maxInForce" value="0.0">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff74-345a-c6a2-a1ba" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51a8-71d0-6cc4-62a7" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <constraints>
@@ -403,7 +410,7 @@
         <cost name="pts" costTypeId="points" value="225.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="eb28-3827-01c6-e1c0" name="Brass Scorpion Onslaught" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="eb28-3827-01c6-e1c0" name="Brass Scorpions" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -414,8 +421,9 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff74-345a-c6a2-a1ba" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51a8-71d0-6cc4-62a7" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="51a8-71d0-6cc4-62a7" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ff74-345a-c6a2-a1ba" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -514,7 +522,7 @@
         <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8588-2d29-2ec1-ded8" name="Chaos Thunderhawk Gunship" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="8588-2d29-2ec1-ded8" name="Chaos Thunderhawk" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -536,7 +544,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="3397-f803-5986-cbee" hidden="false" targetId="1c71-94a8-df92-2490" type="profile">
+        <infoLink id="3397-f803-5986-cbee" name="Chaos Thunderhawk Gunship" hidden="false" targetId="1c71-94a8-df92-2490" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -558,9 +566,7 @@
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="8588-2d29-2ec1-ded8-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true">
           <profiles/>
@@ -593,36 +599,6 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ce8a-a8d2-b768-26c0" name="Chosen Chaos Space Marines" hidden="false" collective="false" type="unit">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="545a-4ef5-a90d-c033" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="2385-3297-e693-7537" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="8bb5-94c1-522b-ecbe" name="Chaos Champion" page="0" hidden="false" collective="false" type="upgrade">
           <profiles/>
           <rules/>
@@ -700,7 +676,144 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4d41-667a-e9fd-9778" name="Retinue" hidden="false" collective="false" defaultSelectionEntryId="b82c-43df-bb97-ed58">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f496-b92e-9fa6-f6b0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="01d2-fd8d-b918-ee37" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="f482-43c2-9601-d63e" name="6x Chaos Space Marine Chosen, 3x Rhino" hidden="false" collective="false" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="4dbb-8ed1-cc8c-005c" name="Chaos Space Marine Chosen" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="2b85-344b-ec9c-fc32" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="6dd7-9f91-2e9e-57ed" name="Chaos Rhino" hidden="false" targetId="2815-61f6-bad0-120e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="7244-513e-7f12-76f1" name="Transport (RC)" hidden="false" targetId="60d6-6cd8-afd3-0e2c" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ea4c-fee5-b570-75ac" name="4x Chaos Space Marine Chosen, 2x Rhino" hidden="false" collective="false" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="400e-9c70-46b9-9483" name="Chaos Space Marine Chosen" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="5ebc-7ad7-b7e7-c89b" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="4c06-1232-1cf8-c6f4" name="Chaos Rhino" hidden="false" targetId="2815-61f6-bad0-120e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="4f3e-1544-7d4c-ba0b" name="Transport (RC)" hidden="false" targetId="60d6-6cd8-afd3-0e2c" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b82c-43df-bb97-ed58" name="6x Chaos Space Marine Chosen" hidden="false" collective="false" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="37d2-a225-264c-7cc2" name="Chaos Space Marine Chosen" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="669a-3ff9-ee89-83b0" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="0491-1ec1-fddb-833e" hidden="false" targetId="b86f-11c6-8344-8a49" type="selectionEntry">
           <profiles/>
@@ -710,15 +823,7 @@
           <constraints/>
           <categoryLinks/>
         </entryLink>
-        <entryLink id="1184-71dd-71f6-3c22" hidden="false" targetId="750a-a60a-48f5-445b" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
-        <entryLink id="c796-822b-4500-133a" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+        <entryLink id="c796-822b-4500-133a" name="Chaos Drop Pods" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -730,10 +835,16 @@
             </modifier>
             <modifier type="set" field="maxSelections" value="0.0">
               <repeats/>
-              <conditions>
-                <condition field="selections" scope="562b-e247-1507-1391" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="750a-a60a-48f5-445b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="562b-e247-1507-1391" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f482-43c2-9601-d63e" type="equalTo"/>
+                    <condition field="selections" scope="562b-e247-1507-1391" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea4c-fee5-b570-75ac" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints/>
@@ -767,38 +878,7 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="f311-69d8-383b-eed0" name="Chosen Chaos Space Marines" hidden="false" collective="false" type="unit">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="0dd6-46f8-39af-d9c6" hidden="false" targetId="6cf3-ca61-9131-419a" type="profile">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="9601-5dce-f65c-ef07" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntries/>
       <selectionEntryGroups>
         <selectionEntryGroup id="ebb8-bbac-21d7-a90e" name="Upgrades" hidden="false" collective="false">
           <profiles/>
@@ -951,6 +1031,43 @@
                 <cost name="pts" costTypeId="points" value="40.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="a44d-0cf8-988f-424c" name="3x Chaos Rhino" hidden="false" collective="false" type="unit">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="cf0f-60e1-f984-7d67" name="Chaos Rhino" hidden="false" targetId="2815-61f6-bad0-120e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="bcf9-e6a0-39c1-9b88" name="Transport (RC)" hidden="false" targetId="60d6-6cd8-afd3-0e2c" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="23ef-37e6-fb74-5c3a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff74-345a-c6a2-a1ba" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d87f-3386-fe64-e6c5" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="30.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks>
@@ -962,23 +1079,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="45ef-3eb3-dfed-1cf6" hidden="false" targetId="750a-a60a-48f5-445b" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="23ef-37e6-fb74-5c3a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff74-345a-c6a2-a1ba" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-            <entryLink id="3bfa-02fe-0b64-6666" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+            <entryLink id="3bfa-02fe-0b64-6666" name="Chaos Drop Pods" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -990,7 +1091,8 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="23ef-37e6-fb74-5c3a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c119-4904-0411-5af7" type="atLeast"/>
-                        <condition field="selections" scope="23ef-37e6-fb74-5c3a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="750a-a60a-48f5-445b" type="equalTo"/>
+                        <condition field="selections" scope="23ef-37e6-fb74-5c3a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a44d-0cf8-988f-424c" type="equalTo"/>
+                        <condition field="selections" scope="23ef-37e6-fb74-5c3a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fa8-f07c-34a5-93ef" type="equalTo"/>
                       </conditions>
                       <conditionGroups/>
                     </conditionGroup>
@@ -1019,7 +1121,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="75fc-0108-51e2-9647" hidden="false" targetId="5859-56ab-77c7-e882" type="selectionEntry">
+            <entryLink id="75fc-0108-51e2-9647" name="Chaos Dreadnought" hidden="false" targetId="5859-56ab-77c7-e882" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1027,7 +1129,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="c17f-7a15-fe7b-536e" hidden="false" targetId="c119-4904-0411-5af7" type="selectionEntry">
+            <entryLink id="c17f-7a15-fe7b-536e" name="Defiler" hidden="false" targetId="c119-4904-0411-5af7" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1050,7 +1152,7 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="f748-15ef-99cd-9c06" hidden="false" targetId="ff74-345a-c6a2-a1ba" type="selectionEntry">
+            <entryLink id="f748-15ef-99cd-9c06" name="8x Berserkers" hidden="false" targetId="ff74-345a-c6a2-a1ba" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1058,7 +1160,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="53c7-3f0b-6f88-e170" hidden="false" targetId="b159-d09a-7e45-5283" type="selectionEntry">
+            <entryLink id="53c7-3f0b-6f88-e170" name="6x Noise Marines" hidden="false" targetId="b159-d09a-7e45-5283" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1066,7 +1168,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="921c-2ad0-7b92-b857" hidden="false" targetId="d775-9b3a-c07a-6ab8" type="selectionEntry">
+            <entryLink id="921c-2ad0-7b92-b857" name="6x Plague Marines" hidden="false" targetId="d775-9b3a-c07a-6ab8" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1074,7 +1176,7 @@
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="0124-bd15-9d62-ba8e" hidden="false" targetId="b45f-c820-7568-e778" type="selectionEntry">
+            <entryLink id="0124-bd15-9d62-ba8e" name="6x Thousand Sons" hidden="false" targetId="b45f-c820-7568-e778" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1099,19 +1201,27 @@
         <cost name="pts" costTypeId="points" value="275.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4b57-f659-abb4-8da5" name="Daemon Knight Pavane" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="4b57-f659-abb4-8da5" name="Daemon Knights" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
+        <modifier type="set" field="points" value="300">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
         <modifier type="set" field="maxInForce" value="0.0">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b159-d09a-7e45-5283" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7ca-d5ff-136c-f000" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d7ca-d5ff-136c-f000" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b159-d09a-7e45-5283" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -1211,7 +1321,15 @@
               <modifiers/>
             </infoLink>
           </infoLinks>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="points" value="15">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints/>
           <categoryLinks/>
           <selectionEntries/>
@@ -1280,7 +1398,15 @@
               <modifiers/>
             </infoLink>
           </infoLinks>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints/>
           <categoryLinks/>
           <selectionEntries/>
@@ -1297,7 +1423,7 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="056c-a189-cced-8cdb" name="Defiler Assault Force" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="056c-a189-cced-8cdb" name="Defilers" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1384,7 +1510,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="8994-d323-da28-b9e3" hidden="false" targetId="1b8f-2eef-2d99-1d9a" type="profile">
+        <infoLink id="8994-d323-da28-b9e3" name="Harbinger" hidden="false" targetId="1b8f-2eef-2d99-1d9a" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1418,15 +1544,19 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="232d-f3c8-bd4a-66cb-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -1456,9 +1586,7 @@
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="30c5-cef5-5ff1-cf92-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -1519,9 +1647,7 @@
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="c18c-f03c-e672-4ec9-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -1612,7 +1738,7 @@
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
-        <entryLink id="05bb6617-5bc2-494f-39b8-f6e38cfb2582" hidden="false" targetId="480c-ec47-f48c-2922" type="selectionEntryGroup">
+        <entryLink id="05bb6617-5bc2-494f-39b8-f6e38cfb2582" name="Chaos Space Marine Lord" hidden="false" targetId="480c-ec47-f48c-2922" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1621,14 +1747,6 @@
           <categoryLinks/>
         </entryLink>
         <entryLink id="b1c5-e081-bb9d-d91b" hidden="false" targetId="0e75-5ef8-5cee-2b60" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
-        <entryLink id="157a-4b37-54eb-ea0a" hidden="false" targetId="c8fb-4919-08c2-956e" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1654,9 +1772,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="f7f4-a160-d16b-181d-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true">
           <profiles/>
@@ -1813,7 +1929,7 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxSelections" value="1.0">
+            <modifier type="decrement" field="maxSelections" value="1">
               <repeats/>
               <conditions>
                 <condition field="selections" scope="d99e-307c-4b19-83a4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d394-dfc9-f161-e985" type="equalTo"/>
@@ -1838,6 +1954,13 @@
               <repeats/>
               <conditions>
                 <condition field="selections" scope="d99e-307c-4b19-83a4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0113-4cc7-6c90-e7cd" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="d99e-307c-4b19-83a4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b007-a86e-14d6-2543" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -2123,7 +2246,7 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks>
-                <entryLink id="ec4d-6a4a-feed-3d0d" hidden="false" targetId="51a8-71d0-6cc4-62a7" type="selectionEntry">
+                <entryLink id="ec4d-6a4a-feed-3d0d" name="4x Berserkers" hidden="false" targetId="51a8-71d0-6cc4-62a7" type="selectionEntry">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -2139,7 +2262,7 @@
                   <constraints/>
                   <categoryLinks/>
                 </entryLink>
-                <entryLink id="9ac3-4fd2-3170-eb87" hidden="false" targetId="d7ca-d5ff-136c-f000" type="selectionEntry">
+                <entryLink id="9ac3-4fd2-3170-eb87" name="4x Noise Marines" hidden="false" targetId="d7ca-d5ff-136c-f000" type="selectionEntry">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -2155,7 +2278,7 @@
                   <constraints/>
                   <categoryLinks/>
                 </entryLink>
-                <entryLink id="2ba6-c5ce-e43b-596d" hidden="false" targetId="73e1-9558-3043-7024" type="selectionEntry">
+                <entryLink id="2ba6-c5ce-e43b-596d" name="4x Plague Marines" hidden="false" targetId="73e1-9558-3043-7024" type="selectionEntry">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -2171,7 +2294,7 @@
                   <constraints/>
                   <categoryLinks/>
                 </entryLink>
-                <entryLink id="b2c9-cc98-90b0-50db" hidden="false" targetId="ab16-7bbc-4f0c-61ea" type="selectionEntry">
+                <entryLink id="b2c9-cc98-90b0-50db" name="4x Thousand Sons" hidden="false" targetId="ab16-7bbc-4f0c-61ea" type="selectionEntry">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -2215,19 +2338,27 @@
         <cost name="pts" costTypeId="points" value="275.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="83b4-3ec4-fc5a-d328" name="Silver Tower Circle" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="83b4-3ec4-fc5a-d328" name="Silver Towers" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
+        <modifier type="set" field="points" value="300">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
         <modifier type="set" field="maxInForce" value="0.0">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b45f-c820-7568-e778" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab16-7bbc-4f0c-61ea" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b45f-c820-7568-e778" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ab16-7bbc-4f0c-61ea" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -2269,13 +2400,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="277a-e475-f5e1-5a57" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="a34a-13a4-1dd8-94c3" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+            <infoLink id="277a-e475-f5e1-5a57" name="Skimmer" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -2329,8 +2454,7 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f082-3909-446b-6399" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f082-3909-446b-6399" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="c21a10fe-a11a-af95-9c8c-3b18ad266cb8-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true">
@@ -2584,6 +2708,13 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
+            <modifier type="decrement" field="maxSelections" value="1">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b007-a86e-14d6-2543" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
@@ -2669,11 +2800,19 @@
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="c655-091b-8c5b-2302" hidden="false" targetId="eadade8a-545f-ce5e-94ad-9bda51717b37" type="selectionEntry">
+            <entryLink id="c655-091b-8c5b-2302" name="Chaos Hunter" hidden="false" targetId="eadade8a-545f-ce5e-94ad-9bda51717b37" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints/>
               <categoryLinks/>
             </entryLink>
@@ -2682,45 +2821,6 @@
               <rules/>
               <infoLinks/>
               <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-            <entryLink id="83dc-b7b6-e710-44b9" hidden="false" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eadade8a-545f-ce5e-94ad-9bda51717b37" type="equalTo"/>
-                        <condition field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="14db-3fc4-9cfa-d303" type="atLeast"/>
-                        <condition field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c119-4904-0411-5af7" type="atLeast"/>
-                        <condition field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="304b-03e8-6dd9-c4af" type="atLeast"/>
-                        <condition field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9723-6c9f-074a-cfdb" type="atLeast"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="increment" field="points" value="10.0">
-                  <repeats>
-                    <repeat field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5859-56ab-77c7-e882" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-                <modifier type="increment" field="points" value="10.0">
-                  <repeats>
-                    <repeat field="selections" scope="b4e0-0be3-9e88-10de" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dcdc-d9f2-5b18-f23f" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
               <constraints/>
               <categoryLinks/>
             </entryLink>
@@ -2797,39 +2897,104 @@
         <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
-  </selectionEntries>
-  <entryLinks/>
-  <sharedSelectionEntries>
-    <selectionEntry id="750a-a60a-48f5-445b" name="3x Chaos Rhino" hidden="false" collective="false" type="unit">
+    <selectionEntry id="d348-1952-c5ba-4771" name="Blight Drones" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
-      <infoLinks>
-        <infoLink id="db11-d6a7-d909-247e" hidden="false" targetId="2815-61f6-bad0-120e" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="a6ce-558b-7a77-4012" hidden="false" targetId="60d6-6cd8-afd3-0e2c" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-      </infoLinks>
-      <modifiers/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="446a-52d4-fe7c-cb8d" value="0.0">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d775-9b3a-c07a-6ab8" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73e1-9558-3043-7024" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="446a-52d4-fe7c-cb8d" type="max"/>
       </constraints>
-      <categoryLinks/>
-      <selectionEntries/>
+      <categoryLinks>
+        <categoryLink id="261d-657a-ec8e-a99b" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="acd6-4401-c51f-1965" name="Blight Drone" hidden="false" collective="false" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="dc26-3e1d-f519-c123" hidden="false" targetId="fe86-7713-5a3e-5789" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="9bd5-4003-cf6d-3ca7" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="5a4d-acf2-9590-5f86" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="6066-c04f-8967-5d8b" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="5f7e-00b5-f54d-a097" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="820a-4472-4f52-27ed" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2275-4504-fc9a-317a" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="30.0"/>
+        <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="51a8-71d0-6cc4-62a7" name="4x Khorne Berserkers" hidden="false" collective="false" type="unit">
+  </selectionEntries>
+  <entryLinks/>
+  <sharedSelectionEntries>
+    <selectionEntry id="51a8-71d0-6cc4-62a7" name="4x Berserkers" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -2957,7 +3122,7 @@
         <cost name="pts" costTypeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ff74-345a-c6a2-a1ba" name="8x Khorne Berserkers" hidden="false" collective="false" type="unit">
+    <selectionEntry id="ff74-345a-c6a2-a1ba" name="8x Berserkers" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -3369,7 +3534,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="50.0"/>
+        <cost name="pts" costTypeId="points" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e165-ef1b-2d1a-a728" name="Chaos Warlord" page="0" hidden="false" collective="false" type="upgrade">
@@ -3562,7 +3727,7 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4a86-7376-5d23-e95d" name="EpicUK" hidden="true" collective="false" type="upgrade">
+    <selectionEntry id="4a86-7376-5d23-e95d" name="EpicUK" hidden="false" collective="false" type="upgrade">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -3853,7 +4018,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <categoryLinks/>
@@ -3874,12 +4038,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries>
@@ -4232,25 +4390,11 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks>
-        <entryLink id="e91f-5679-6222-f33e" hidden="false" targetId="e165-ef1b-2d1a-a728" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
         <entryLink id="65a3-5ff3-f890-f591" hidden="false" targetId="2894-52b9-b1c7-74c6" type="selectionEntry">
           <profiles/>
           <rules/>
@@ -4259,7 +4403,7 @@
           <constraints/>
           <categoryLinks/>
         </entryLink>
-        <entryLink id="a33a-330d-2bc6-b774" hidden="false" targetId="b3ef-f103-2ce1-5e90" type="selectionEntry">
+        <entryLink id="a33a-330d-2bc6-b774" name="Sorcerer Lord" hidden="false" targetId="b3ef-f103-2ce1-5e90" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4269,305 +4413,6 @@
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="9cfc-952f-421a-a113" name="Daemon Prince" hidden="false" collective="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
-      </constraints>
-      <categoryLinks/>
-      <selectionEntries>
-        <selectionEntry id="dcfa-4953-f29d-d5c4" name="Daemon Prince" page="0" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="1573-130b-c17d-e130" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="9eb0-e2da-4cb5-4ea7" hidden="false" targetId="41f1-f905-05ae-7828" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="0f20-188e-4e00-344d" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="3a36-b689-4724-1548" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="bc58-31b7-5795-594e" hidden="false" targetId="7161-cb08-d522-51a6" type="profile">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="b67d-7352-e1ff-7ed0" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="74d1-2774-36b3-01e5" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="66f3-c92a-6db9-79b6" name="Winged Daemon Prince" page="0" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="af62-fdfd-caa0-7788" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="c789-40db-94c2-efe9" hidden="false" targetId="41f1-f905-05ae-7828" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="7632-19e5-f9e0-7cf2" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="5c94-ac8f-8a26-04cb" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="357c-0a9f-11fe-46dc" hidden="false" targetId="b761-3f74-4596-69f6" type="profile">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="3e88-340b-ef1f-24bc" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="6ec0-3734-1cbe-19e3" hidden="false" targetId="e6dc-cd5e-1867-a27e" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="740b-6647-8b43-a6e6" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c0df-8367-5ba2-35ab" name="Winged Daemon Prince Warlord" page="0" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="e961-1f37-d17e-e028" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="dfbf-d2c2-af68-a862" hidden="false" targetId="41f1-f905-05ae-7828" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="0571-f55b-bcfb-27d0" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="e475-2c8e-7b52-64fc" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="0ca4-fa16-6f90-98d9" hidden="false" targetId="dded-9d77-b1f9-33c4" type="profile">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="2b66-353b-3f1b-f131" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="5911-f4d7-1b25-0dd2" hidden="false" targetId="1512-ccaf-4038-276f" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="5fac-9fa0-5978-119e" hidden="false" targetId="e6dc-cd5e-1867-a27e" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="f289-9cb7-dd4a-3603" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="920d-83fe-d826-7eb7" hidden="false" targetId="b007-a86e-14d6-2543" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" costTypeId="points" value="100.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="944b-b50b-8395-08ac" name="Daemon Prince Warlord" page="0" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="a3a1-7b65-ac23-7dbc" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="8f0d-d606-9e6d-19a5" hidden="false" targetId="41f1-f905-05ae-7828" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="be0b-e6de-7c31-689e" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="da96-1c25-016c-ca98" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="50a7-c747-7b98-ff58" hidden="false" targetId="1fcc-2211-ddc6-e0c5" type="profile">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="926a-6515-c88f-5e24" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="5257-c5a7-97d2-9e0d" hidden="false" targetId="1512-ccaf-4038-276f" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="54ff-d951-0bac-92d0" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="0c1b-e979-31d4-ecdd" hidden="false" targetId="b007-a86e-14d6-2543" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" costTypeId="points" value="100.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups/>
-      <entryLinks/>
-    </selectionEntryGroup>
     <selectionEntryGroup id="c8fb-4919-08c2-956e" name="Faction" hidden="false" collective="false" defaultSelectionEntryId="c695-f3a3-7a9c-c1ba">
       <profiles/>
       <rules/>
@@ -4576,12 +4421,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -4650,7 +4489,8 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>none</description>
+      <description>RedCorsairsQuickRef #11072017
+CodexChaosSpaceMarines #160118</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
@@ -4666,7 +4506,7 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Red Corsairs v3.4.3</description>
+      <description>netea-tournament-pack-2018-03-27</description>
     </rule>
     <rule id="b451-0436-a3b5-ff56" name="Strategy Rating &amp; Initiative (RC)" hidden="false">
       <profiles/>
@@ -4675,10 +4515,50 @@ Fanatic #13</description>
       <modifiers>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées des Corsaires Rouges chapitre renégat Marines du Chaos ont une valeur stratégique de 4. Toutes les formations de Corsaires Rouges ont une valeur d&apos;initiative de 1+. Blood Slaughterers, Brass Scorpions, Tours d’Argent, Blight Drones, Chevaliers Démons et la Flotte de Guerre du Chaos ont une valeur d&apos;initiative de 2+.&lt;/I&gt;">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Red Corsairs Renegade Chapter Chaos Space Marine armies have a strategy rating of 4. All Red Corsairs formations have an initiative rating of 1+. Brass Scorpions, Blight Drones, Silver Towers, Daemonic Knights and Chaos Navy aircraft formations have an initiative rating of 2+.">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les armées des Corsaires Rouges chapitre renégat Marines du Chaos ont une valeur stratégique de 4. Toutes les formations de Corsaires Rouges ont une valeur d&apos;initiative de 1+. Brass Scorpions, Blight Drones, Tours d’Argent, Chevaliers Démons et la Flotte de Guerre du Chaos ont une valeur d&apos;initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>Red Corsairs Renegade Chapter Chaos Space Marine armies have a strategy rating of 4. All Red Corsairs formations have an initiative rating of 1+. Blood Slaughterers, Brass Scorpions, Silver Towers, Blight Drones, Daemon Knights and Chaos Navy aircraft formations have an initiative rating of 2+.</description>
@@ -4687,8 +4567,73 @@ Fanatic #13</description>
       <profiles/>
       <rules/>
       <infoLinks/>
+      <modifiers/>
+      <description>see codex</description>
+    </rule>
+    <rule id="ddd5-f71e-f48f-ca31" name="Summoned Units" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt; Barge de Bataille: 60 des unités suivant: Marines du Chaos, Marines du Culte, Havocs, Motos du Chaos, Terminators du Chaos, Dreadnoughts du Chaos, plus 9 Thunderhawks du Chaos et assez de Modules d&apos;Atterrissage. &lt;BR&gt; Modules d&apos;Atterrissage: ne peut transporter que des unités de Marines du Chaos, Marines du Culte, Havocs, Terminators du Chaos et Dreadnoughts du Chaos. &lt;BR&gt; Land Raider: 1 Terminator du Chaos ou 2 des unités suivant: Marines du Chaos, Marines du Culte, Havocs. &lt;BR&gt; Rhino: 2 des unités suivant: Marines du Chaos, Marines du Culte, Havocs. &lt;BR&gt; Croiseur d&apos;Attaque: 20 des unités suivant: Marines du Chaos, Marines du Culte, Havocs, Motos du Chaos, Terminators du Chaos, Dreadnoughts du Chaos, plus 6 Thunderhawks du Chaos et assez de Modules d&apos;Atterrissage. &lt;BR&gt; Thunderhawk: 8 des unités suivant: Marines du Chaos, Marines du Culte, Havocs, Motos du Chaos, Terminators du Chaos, Dreadnoughts du Chaos. Les Terminators et Dreadnoughts prennent 2 emplacements.&lt;/I&gt;">
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Formations that purchase the Daemonic Pact upgrade, or units with this ability, allow the Chaos player to summon daemons to the battlefield. To summon Daemons the player must also have a Daemonic pool from which to summon. This pool contains two sections, one for lesser daemons and one for greater daemons and is not faction specific. The size of such pools must be visible to all players at all times and it is suggested that either tokens or dice are used to indicate the size of each pool available. As daemons are summoned the pool must be changed to reflect its current size.
+To summon daemons the Chaos player chooses a formation with a daemonic pact and declares its intention to summon before any action roll is made. The player then rolls 2D3 to generate the number of summoning points available for this formation. The number of points required to summon each type of daemonic unit will be noted on its data sheet. The formation may then summon daemons up to the number of summoning points generated, up to the number of points left in the daemonic pool. Any points not used are lost.
+The faction (must be noted at list creation) of the summoning formation determines what type of daemons may be summoned.
+Note Undivided may summon Daemonic Beasts / any Greater Daemon as normal, or any other Lesser Daemon for twice the usual summoning points.
+Players may only have one greater daemon for a given faction on the table at a time. Summoned units must be set up within 5cm of a non-summoned unit in the summoning formation. They cannot be placed in enemy zones of control or impassable terrain.
+Summoned units become part of the summoning formation for all rules purposes as long as they remain on the battlefield. Summoned units do not cause blast markers when they are destroyed however daemonic units killed in an assault count towards the number of units killed when calculating the modifiers for assault resolution. Summoned units that are destroyed are removed from play and the summoning cost of each unit is lost from the player’s daemonic pool.
+Summoned units remain in play until the end phase of the turn in which they were summoned. After all formations have attempted to rally any summoned units are removed from play and returned to the daemonic pool. This may cause the formation to break as it may now have equal or more blast markers than its number of units. Greater Daemons returned to the Greater daemon pool keep any damage points taken and do not heal these points while off board. When summoned subsequently they maintain this damage.
+When a formation breaks all of its summoned units are destroyed. When calculating victory points, the Lesser Daemon pool scores half points if the pool has less than or equal to half (round up) its original number of daemons remaining. The Lesser Daemon pool scores full points if the pool has less than or equal to a quarter (round up) its daemons remaining. Treat Greater Daemons as war engines for the purpose of calculating victory points.</description>
+    </rule>
+    <rule id="2f00-6e1a-a835-6f12" name="Favour of the Gods - Fickle Masters" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Maestros Caprichosos: &lt;/B&gt;En la Fase de Estrategia, si el jugador del Caos saca un 6 en su tirada de estrategia, será premiado por los Dioses del Caos, y recibirá 1D3 Demonios para añadir a su reserva demoníaca. Por el contrario, si saca un 1, los Dioses le retirarán su apoyo, y deberá eliminar 1D3 Demonios de su reserva. Si no quedan Demonios en la reserva demoníaca, no pasará nada.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Faveur des Dieux:&lt;/B&gt; Dans la phase de stratégie si le joueur Chaos obtient un 6, ils sont récompensés par 1D3 points d&apos;invocation supplémentaire à ajouter à tout groupe de démon mineur, cependant, s&apos;ils roulent un 1 alors ils perdent 1D3 points d&apos;invocation de tout groupe de démon mineur.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>In the strategy phase if the Chaos player rolls a 6 they are rewarded with an additional 1D3 summoning points to add to any lesser daemon pool, however, if they roll a 1 then they lose 1D3 summoning points from any lesser daemon pool.</description>
+    </rule>
+    <rule id="a511-8156-efe0-82da" name="Chaos Lords" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs du Chaos:&lt;/B&gt; Les personnages de seigneur du Chaos ne peuvent être ajoutés qu&apos;aux unités de base d&apos;une formation. Ils ne peuvent pas être ajoutés aux unités achetées comme amélioration pour une formation.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -4696,13 +4641,7 @@ Fanatic #13</description>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>As follows-
-Battle Barge: 60 of the following units: Chaos Space Marines, Havoks, Chosen, Noise Marines, Khorne Berzerkers, Plague Marines, Thousand Sons, Raptors, Chaos Bikes. Obliterators, Chaos Terminators, Chaos Dreadnoughts and Daemon Princes, plus 9 Chaos Thunderhawks and enough Drop Pods.
-Drop Pod: 1 formation that includes only Chaos Space Marines, Havoks, Chosen, Noise Marines, Khorne Berzerkers, Plague Marines, Thousand Sons, Daemon Princes and Chaos Dreadnoughts.
-Land Raider: 1 Chaos Terminator or Obliterators, or 2 of the following units: Chaos Space Marines,Havoks, Chosen, Noise Marines, Khorne Berzerkers, Plague Marines, Thousand Sons.
-Rhino: 2 of the following units: Chaos Space Marines,Havoks, Chosen, Noise Marines, Khorne Berzerkers, Plague Marines, Thousand Sons.
-Strike Cruiser: 20 of the following units: Chaos Space Marines, Havoks, Chosen, Noise Marines, Khorne Berzerkers, Plague Marines, Thousand Sons, Raptors, Chaos Bikes. Obliterators, Chaos Terminators, Chaos Dreadnoughts and Daemon Princes, plus 6 Chaos Thunderhawks and Enough Chaos Drop Pods.
-Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havoks, Chosen, Noise Marines, Khorne Berzerkers, Plague Marines, Thousand Sons, Raptors and Chaos Bikes. Obliterators. Chaos Terminators and Chaos Dreadnoughts may be transported but take up two slots each.</description>
+      <description>Chaos Space Marine Lord Characters may only be added to core units within a formation. They may not be added to any upgrade units purchased for a formation.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -4710,7 +4649,22 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="25cm">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP3+/AT6+&lt;BR&gt;&lt;BR&gt;AP4+/AT6+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Armoured Vehicle"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm"/>
@@ -4749,7 +4703,7 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <modifiers/>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+"/>
@@ -4820,16 +4774,38 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Combi-bolters&lt;BR&gt;&lt;BR&gt;Chainswords">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(contact)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Assault Weapons">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolters&lt;BR&gt;&lt;BR&gt;Chainswords"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Twin Bolters"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Mounted"/>
       </characteristics>
@@ -4838,7 +4814,15 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Armoured Vehicle"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
@@ -4858,9 +4842,9 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <infoLinks/>
       <modifiers/>
       <characteristics>
-        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Armoured Vehicle"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Immobile"/>
-        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
+        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Special"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="n/a"/>
+        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="n/a"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Deathwind"/>
@@ -4928,7 +4912,15 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Armoured Vehicle"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
@@ -4964,16 +4956,38 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolters&lt;BR&gt;&lt;BR&gt;Autocannon"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;45cm"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Autocannon"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT6+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
       </characteristics>
@@ -5000,21 +5014,43 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Combi-bolters">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Combi-bolters&lt;BR&gt;&lt;BR&gt;Power Weapons&lt;BR&gt;&lt;BR&gt;2x Reaper Autocannon"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)&lt;BR&gt;&lt;BR&gt;30cm"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons&lt;BR&gt;&lt;BR&gt;AP4+/AT6+"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Power Weapons&lt;BR&gt;&lt;BR&gt;2x Reaper Autocannon"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;&lt;BR&gt;30cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons&lt;BR&gt;&lt;BR&gt;AP4+/AT6+"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Teleport, Thick Rear Armour"/>
       </characteristics>
     </profile>
-    <profile id="1c71-94a8-df92-2490" name="Chaos Thunderhawk Gunship" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
+    <profile id="1c71-94a8-df92-2490" name="Chaos Thunderhawk" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -5070,20 +5106,42 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Supreme Commander"/>
       </characteristics>
     </profile>
-    <profile id="6cf3-ca61-9131-419a" name="Chosen Chaos Space Marine" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+    <profile id="6cf3-ca61-9131-419a" name="Chaos Space Marine Chosen" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolters&lt;BR&gt;&lt;BR&gt;Autocannon"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;45cm"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Autocannon"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT6+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Scout"/>
       </characteristics>
@@ -5146,17 +5204,46 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;and Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;and (15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;and">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value="&lt;BR&gt;and Ignore Cover">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Armoured Vehicle"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Battle Cannon&lt;BR&gt;&lt;BR&gt;Reaper Autocannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Flamer&lt;BR&gt;&lt;BR&gt;Battle Claws"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="75cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;&lt;BR&gt;(contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+&lt;BR&gt;&lt;BR&gt;Assault Weapon"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;&lt;BR&gt;Macro Weapon, +1A"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Battle Cannon&lt;BR&gt;&lt;BR&gt;Reaper Autocannon&lt;BR&gt;&lt;BR&gt;Battle Claws&lt;BR&gt;&lt;BR&gt;Twin Heavy Flamer"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="75cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;(contact)&lt;BR&gt;&lt;BR&gt;15cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AT6+&lt;BR&gt;&lt;BR&gt;Assault Weapon&lt;BR&gt;&lt;BR&gt;AP3+"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Macro Weapon, +1A&lt;BR&gt;&lt;BR&gt;Ignore Cover"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Infiltrator, Invulnerable Save, Walker"/>
       </characteristics>
     </profile>
@@ -5184,7 +5271,29 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
@@ -5202,7 +5311,29 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT6+/AA6+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Aircraft"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Fighter"/>
@@ -5227,7 +5358,7 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Twin Lascannon&lt;BR&gt;&lt;BR&gt;Havoc Launcher&lt;BR&gt;&lt;BR&gt;Incendiary Bombs"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Twin Lascannon&lt;BR&gt;&lt;BR&gt;Havoc Launcher&lt;BR&gt;&lt;BR&gt;Bombs"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AT4+/AA4+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;2BP"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, Ignore Cover"/>
@@ -5252,20 +5383,42 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Daemonic Focus, Invulnerable Save, Leader"/>
       </characteristics>
     </profile>
-    <profile id="ba5c-d8b2-42a3-4011" name="Khorne Berserkers" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+    <profile id="ba5c-d8b2-42a3-4011" name="Berserkers" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(contact)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Assault Weapons">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Chainaxes">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="2+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolt Pistols&lt;BR&gt;&lt;BR&gt;Chainaxes"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolt Pistols"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless"/>
       </characteristics>
@@ -5274,16 +5427,38 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt; Sonic Blasters">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Sonic Blasters&lt;BR&gt;&lt;BR&gt;Blast Master"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;30cm"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Blast Master"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT6+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Disrupt"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless"/>
       </characteristics>
@@ -5297,11 +5472,11 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
-        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="2+"/>
+        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="2+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Body Weapons"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="3x Body Weapons"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="3x AP5+/AT5+/AA6+"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT5+/AA6+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value=""/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Teleport, Thick Rear Armour"/>
       </characteristics>
@@ -5310,16 +5485,38 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(contact)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Assault Weapons">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Plague Knives">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="3+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolters&lt;BR&gt;&lt;BR&gt;Plague Knives"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolters"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value=""/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless"/>
       </characteristics>
@@ -5328,16 +5525,38 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value=" Melta Weapons&lt;BR&gt;&lt;BR&gt;Chainswords">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Assault Weapons">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(contact)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Melta Guns&lt;BR&gt;&lt;BR&gt;Chainswords"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bolt Pistols"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)"/>
+        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Jump Packs"/>
       </characteristics>
@@ -5356,7 +5575,7 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Arcane Cannons&lt;BR&gt;&lt;BR&gt;Beam of Power"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;60cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="3x AP4+/AT4+&lt;BR&gt;&lt;BR&gt;MW5+"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Macro-weapon"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value=""/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Invulnerable Save, Skimmer"/>
       </characteristics>
     </profile>
@@ -5378,7 +5597,7 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Commander, Invulnerable Save, Leader"/>
       </characteristics>
     </profile>
-    <profile id="efc6-49cc-2fa8-8ea4" name="Summoned Greater Daemon" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
+    <profile id="efc6-49cc-2fa8-8ea4" name="Greater Daemon" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -5389,16 +5608,16 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="-"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Claws and Fangs"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="2x Claws"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon, +2A"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon, +1A"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Daemonic Focus, Fearless, Inspiring, Invulnerable Save, Reinforced Armour, Walker, 6SP"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
         <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Banished"/>
       </characteristics>
     </profile>
-    <profile id="1a98-ad7c-1a1e-3544" name="Summoned Minor Daemon" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+    <profile id="1a98-ad7c-1a1e-3544" name="Minor Daemons" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -5409,11 +5628,11 @@ Thunderhawk: 8 of the following units: haos Space Marines, Daemon Princes, Havok
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="-"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Claws and Fangs"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Fangs"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, 1SP"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Expendable, Invulnerable Save, 1SP"/>
       </characteristics>
     </profile>
     <profile id="205b-fe25-0628-3420" name="Thousand Sons" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
