@@ -38,7 +38,7 @@ You may notice the different languages have rules variations. Each active commun
 
 __Army Lists__
 
-Our Repo includes over 135 factions, forces, chapters & regiments, as described by 270 of the _300plus_ army lists currently available, as well as incorporating supplementary features like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
+Our Repo includes over 135 factions, forces, chapters & regiments, as described by more than 275 of the _300plus_ army lists currently available, as well as incorporating supplementary features like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
 
 __Release Numbers__
 
