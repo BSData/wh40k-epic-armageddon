@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="15" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="16" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
@@ -5537,7 +5537,7 @@ EPIC_Rulebook_Esp #1.4 Traducido por Lord_Bruno&lt;/I&gt;</description>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes : &lt;BR&gt; 1) De manière classique lors du déploiement en début de partie &lt;BR&gt; 2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve &lt;BR&gt; 3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation &lt;BR&gt; Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; Dans les grands tournois, l&apos;Avatar doit commencer à partir de la table. Au début de chaque tour (y compris le premier) ils peuvent être mis sur la table à moins de 15 cm d&apos;un Farseer. Dans la phase de fin de ce tour supprimer l&apos;Avatar avant de rallier les formations. Une fois que l&apos;Avatar a été supprimé, il ne peut pas revenir.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -6393,6 +6393,50 @@ netea-tournament-pack-2017-03-21</description>
         </modifier>
       </modifiers>
       <description>Treat placement just like Teleport, but after placing one unit roll 3D6 to see how many total stands of Plague Zombies there are, then roll for Blast Markers as usual for Teleporting.</description>
+    </rule>
+    <rule id="ef2c-cc8b-ad9c-eb08" name="Scattershield" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Bouclier Miroitant:&lt;/B&gt; Une unité ayant cette capacité reçoit une deuxième sauvegarde de 5+ si elle rate sa première sauvegarde. Elles peuvent effectuer cette deuxième tentative contre n&apos;importe quelle attaque, même celles qui annulent normalement les sauvegardes d&apos;armures. Aucun modificateur ne s&apos;applique jamais à cette deuxième sauvegarde.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Schermo di Dispersione: &lt;/B&gt;Queste unita&apos; possiedono una vitalità sovrannaturale o dei dispositivi protettivi, che gli permettono di sopravvivere ad attacchi che ucciderebbero altre creature. Per rappresentare ciò, le unità con schermo di dispersione ricevono un secondo tiro salvezza di 5+ se dovessero fallire il loro primo tiro salvezza per qualsiasi motivo. Possono usare questo secondo tiro salvezza contro ogni forma di attacco, anche attacchi che non permettono tiro salvezza. Non si applica nessun modificatore a questo secondo tiro salvezza.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Escudo de Dispersión: &lt;/B&gt;Puede que tengan algún sistema de protección o simplemente una vitalidad sobrenatural, pero el caso es que pueden sobrevivir a ataques que harían perecer a otras criaturas. &lt;BR&gt; Para representar esto, pueden realizar una segunda tirada de salvación de 5+ si fallan su primera tirada de salvación debido a cualquier circunstancia. Esta tirada de escudo de dispersión puede realizarse ante cualquier ataque, incluso ante aquellos que normalmente anularían otras salvaciones. Nunca se aplican modificadores a la tirada de salvación invulnerable.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Units with a Scattershield invulnerable save receive a second save of 5+ if they fail their first save for any reason. They may take this second save against any form of attack, even attacks that would normally not allow a save to be taken. No modifiers ever apply to the second save.</description>
+    </rule>
+    <rule id="f45b-d707-bb87-6eb4" name="Storm Serpent Wraithgate" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portail du Storm Serpent:&lt;/B&gt; Les formations utilisant le portail du Storm Serpent alors que ce dernier est démoralisé, se voient automatiquement recevoir un pion d&apos;impact lors de leur apparition au travers ce celui-ci.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>When the Storm Serpent is broken, formations arriving via its Wraithgate automatically receive a blast marker.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

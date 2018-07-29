@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9642-9bc0-49b9-817c" name="Eldar: Biel-Tan Craftworld" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9642-9bc0-49b9-817c" name="Eldar: Biel-Tan Craftworld" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -1042,12 +1042,6 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="02e5-5572-860e-ae27" hidden="false" targetId="49ea-2d6a-c60e-c366" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
         <infoLink id="032a-c1bf-8d72-5d02" hidden="false" targetId="2459-d334-8975-60d9" type="profile">
           <profiles/>
           <rules/>
@@ -1072,7 +1066,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="a7c7-700a-e8ed-979b" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
+        <infoLink id="a7c7-700a-e8ed-979b" name="Commander" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1103,6 +1097,12 @@
           <modifiers/>
         </infoLink>
         <infoLink id="d2fe-4c7c-ee47-5af5" hidden="false" targetId="4495-3e3b-c06c-878f" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="41d0-05c3-62a0-fc6d" name="Avatar" hidden="false" targetId="f683-58a7-f502-1938" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1139,7 +1139,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="eec2-8ea0-bac3-8872" hidden="false" targetId="49ea-2d6a-c60e-c366" type="rule">
+        <infoLink id="eec2-8ea0-bac3-8872" name="Avatar" hidden="false" targetId="0150-b0fc-571d-7c4d" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1452,10 +1452,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints/>
@@ -1621,13 +1627,64 @@
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="9f00-ac7c-6cc2-f5cb" name="Heavy Weapons Platform" hidden="false" collective="false" type="model">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="b08e-1e8c-545c-1c95" hidden="false" targetId="c5e9-7986-5f35-67c1" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8796-ea46-cc53-aa5d" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="6ef5-069d-b85a-2c8a" name="Platforms" hidden="false" collective="false">
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -1666,7 +1723,7 @@
                       <infoLinks/>
                       <modifiers/>
                     </infoLink>
-                    <infoLink id="8855-262c-c3c0-86a6" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule">
+                    <infoLink id="8855-262c-c3c0-86a6" name="Lance" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule">
                       <profiles/>
                       <rules/>
                       <infoLinks/>
@@ -1679,15 +1736,7 @@
                       <modifiers/>
                     </infoLink>
                   </infoLinks>
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <repeats/>
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
+                  <modifiers/>
                   <constraints>
                     <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
                   </constraints>
@@ -1945,6 +1994,43 @@
                 <cost name="pts" costTypeId="points" value="175.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="4b87-5378-552a-1bbe" name="3x Support Weapon Platforms" hidden="false" collective="false" type="model">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="9749-5c08-6c50-1f76" hidden="false" targetId="28b8-e25f-d53b-8aa2" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e7fa-9958-be98-9a96" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="50.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="7382-b3e4-afbe-3526" name="Wraithguard" hidden="false" collective="false">
@@ -2078,7 +2164,21 @@
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -2117,7 +2217,7 @@
                       <infoLinks/>
                       <modifiers/>
                     </infoLink>
-                    <infoLink id="15fb-7a89-6b82-53ca" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
+                    <infoLink id="15fb-7a89-6b82-53ca" name="Disrupt" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
                       <profiles/>
                       <rules/>
                       <infoLinks/>
@@ -2130,15 +2230,7 @@
                       <modifiers/>
                     </infoLink>
                   </infoLinks>
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <repeats/>
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
+                  <modifiers/>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
                   </constraints>
@@ -2167,7 +2259,15 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
@@ -4058,6 +4158,19 @@
                   </conditions>
                   <conditionGroups/>
                 </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="91ba-844d-de6e-44d2" type="max"/>
@@ -4079,10 +4192,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -4193,10 +4312,16 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints/>
@@ -5201,6 +5326,23 @@
         <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4114-3555-4866-fc01" name="-Collector&apos;s Items-" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="923c-a848-d84d-bded" type="min"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="426a-ea2b-d0ab-1b33" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks/>
   <sharedSelectionEntries>
@@ -5728,7 +5870,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="a981-6759-a611-7b50" hidden="false" targetId="ca1b-6f85-9aa6-f529" type="rule">
+        <infoLink id="a981-6759-a611-7b50" name="Critical Hit: Explosion" hidden="false" targetId="ca1b-6f85-9aa6-f529" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5746,11 +5888,19 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="8a87-cb55-332f-99c9" name="Storm Serpent Wraithgate" hidden="false" targetId="d79e-0e37-8987-c73c" type="rule">
+        <infoLink id="8a87-cb55-332f-99c9" name="Storm Serpent Wraithgate" hidden="false" targetId="f45b-d707-bb87-6eb4" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
       </infoLinks>
       <modifiers/>
@@ -5991,13 +6141,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="c60a-c23e-8e13-87b4" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="07a2-a86a-8afb-7d17" hidden="false" targetId="16ab-7109-c803-b89c" type="rule">
+        <infoLink id="c60a-c23e-8e13-87b4" name="Titan Kiler" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6009,10 +6153,11 @@
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -6077,13 +6222,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="f653-6364-6eed-6b9c" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="3974-49af-6287-82d1" hidden="false" targetId="16ab-7109-c803-b89c" type="rule">
+        <infoLink id="f653-6364-6eed-6b9c" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6095,10 +6234,11 @@
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -6151,13 +6291,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="148d-735b-3bde-e9d0" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="6142-a9d0-cd48-486b" hidden="false" targetId="16ab-7109-c803-b89c" type="rule">
+        <infoLink id="148d-735b-3bde-e9d0" name="Disrupt" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6169,10 +6303,11 @@
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4114-3555-4866-fc01" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -6384,90 +6519,6 @@
       <modifiers/>
       <description>&lt;I&gt;Biel-tan_master_ferc_01 #Eldars F-ERC version 07 février 2018&lt;/I&gt;</description>
     </rule>
-    <rule id="49ea-2d6a-c60e-c366" name="Avatar" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="The avatar may appear on the battlefield in three different ways:&lt;BR&gt; 1) The usual manner of deploying at the start of the game;&lt;BR&gt; 2) Through a portal like any formation held in reserve;&lt;BR&gt; 3) Summoning within 15 cm of a Farseer during the teleportation phase.&lt;BR&gt; It is in any case, from its inception, an independent, permanent formation, until the end of the game or its destruction. However it can only contest objectives.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar: &lt;/B&gt;Al comienzo de cualquier turno coloca al Avatar a 15cm o menos de una formación que incluya una unidad con videncia, antes de realizar la tirada de estrategia. El Avatar contará como parte de la formación, y sólo puede entrar en juego de esta manera. En la Fase de Finalización de ese turno, retira al Avatar antes de reorganizar formaciones. Una vez haya abandonado el campo de batalla, el Avatar no podrá regresar.&lt;/I&gt; ">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; L&apos;Avatar peut apparaître sur le champ de bataille de trois manières différentes:&lt;BR&gt; 1) De manière classique lors du déploiement en début de partie&lt;BR&gt; 2) Par le biais d&apos;un portail comme n&apos;importe quelle formation se trouvant en réserve&lt;BR&gt; 3) Par invocation dans les 15 cm d&apos;un grand prophète lors de la phase de téléportation&lt;BR&gt; Dans tous les cas, dès son apparition, c&apos;est une formation indépendante et permanente jusqu&apos;à la fin de la partie ou sa destruction. Cependant il ne peut que contester les objectifs.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; Dans la phase de la stratégie d&apos;un tour position l&apos;Avatar au sein de 15cm d&apos;un Farseer avant de faire un jet de stratégie. L&apos;Avatar compte comme sa propre formation et ne peut entrer en jeu de cette manière. Dans la phase de fin de ce tour supprimer l&apos;Avatar avant de rallier les formations. Une fois que l&apos;Avatar a été supprimé, il ne peut pas revenir.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>In the Strategy Phase of any turn place the Avatar within 15cm of a Farseer before making a strategy roll. The Avatar counts as its own formation and may only enter play in this manner. In the End Phase of that turn remove the Avatar before rallying formations. Once the Avatar has been removed it may not return.</description>
-    </rule>
     <rule id="16ab-7109-c803-b89c" name="Classic Units" hidden="false">
       <profiles/>
       <rules/>
@@ -6569,12 +6620,12 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
       <modifiers/>
       <description>see codex</description>
     </rule>
-    <rule id="d79e-0e37-8987-c73c" name="Storm Serpent Wraithgate" hidden="false">
+    <rule id="0150-b0fc-571d-7c4d" name="Avatar" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Portail du Storm Serpent:&lt;/B&gt; Les formations utilisant le portail du Storm Serpent alors que ce dernier est démoralisé, se voient automatiquement recevoir un pion d&apos;impact lors de leur apparition au travers ce celui-ci.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avatar:&lt;/B&gt; Dans la phase de la stratégie d&apos;un tour position l&apos;Avatar au sein de 15cm d&apos;un Farseer avant de faire un jet de stratégie. L&apos;Avatar compte comme sa propre formation et ne peut entrer en jeu de cette manière. Dans la phase de fin de ce tour supprimer l&apos;Avatar avant de rallier les formations. Une fois que l&apos;Avatar a été supprimé, il ne peut pas revenir.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -6589,7 +6640,11 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>When the Storm Serpent is broken, formations arriving via its Wraithgate automatically receive a blast marker.</description>
+      <description>The Avatar can appear on the battlefield in three different ways:
+1) Classically when deploying at the beginning of a game
+2) Via a portal like any formation in reserve
+3) By invocation within 15 cm of a Farseer during the teleportation phase
+In any case, from its appearance, it is an independent and permanent formation until the end of the game or its destruction. However it can only contest objectives.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -6943,7 +6998,7 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Transport. Choose weapon system at the start of the battle."/>
       </characteristics>
     </profile>
-    <profile id="1f8a-f854-5ddf-3a01" name="Exarch" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+    <profile id="1f8a-f854-5ddf-3a01" name="Exarch (Ranged)" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -6961,7 +7016,7 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Inspiring"/>
       </characteristics>
     </profile>
-    <profile id="cd50-355d-2c62-f0ed" name="Exarch CCW" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
+    <profile id="cd50-355d-2c62-f0ed" name="Exarch (Close Combat)" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
       <infoLinks/>
