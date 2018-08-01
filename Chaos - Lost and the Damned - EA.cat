@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="eaee-1423-2991-3408" name="Chaos: Lost and the Damned, Stigmatus Covenant Cult" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="eaee-1423-2991-3408" name="Chaos: Lost and the Damned, Stigmatus Covenant Cult" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -336,7 +336,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="796a-d4cd-753d-28c1" hidden="false" targetId="9bb6-8fc4-598d-f629" type="profile">
+            <infoLink id="796a-d4cd-753d-28c1" name="Flamers of Tzeentch" hidden="false" targetId="9bb6-8fc4-598d-f629" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -355,6 +355,12 @@
               <modifiers/>
             </infoLink>
             <infoLink id="243f-5eaa-597a-7b76" hidden="false" targetId="b00e-20a4-88b4-b7e3" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="c49c-aa12-ae2b-3bbe" name="Flamers of Tzeentch" hidden="false" targetId="631e-b820-4303-fc23" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -532,7 +538,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="38ea-a658-aea3-4dd6" hidden="false" targetId="631e-b820-4303-fc23" type="profile">
+            <infoLink id="38ea-a658-aea3-4dd6" name="Flamers of Tzeentch" hidden="false" targetId="631e-b820-4303-fc23" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6126,7 +6132,7 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>netea-tournament-pack-2017-01-03</description>
+      <description>netea-tournament-pack-2018-07-16</description>
     </rule>
     <rule id="bfa7-c059-4f65-61cb" name="Plague Zombies" hidden="false">
       <profiles/>
@@ -6430,7 +6436,7 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="+1A"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Costs 1pt to summon"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Summoning Cost (1)"/>
       </characteristics>
     </profile>
     <profile id="0153-3c41-4c8c-3b36" name="Bloodthirster: Greater Daemon of Khorne" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
@@ -6570,7 +6576,29 @@ If you choose to transports for a Coven then you must take exactly enough Land T
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Autocannon&lt;BR&gt;&lt;BR&gt;Daemon Weapon">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;(contact)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT6+&lt;BR&gt;&lt;BR&gt;Assault Weapons">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="15cm"/>
@@ -6743,10 +6771,16 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         </modifier>
         <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <characteristics>
@@ -6759,7 +6793,7 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value=""/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="First Strike, Invulnerable Save, Costs 1pt to summon"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="First Strike, Invulnerable Save, Summoning Cost (1)"/>
       </characteristics>
     </profile>
     <profile id="b00e-20a4-88b4-b7e3" name="Daemonic Beasts" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -6792,7 +6826,7 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Infiltrator, Costs 1pt to summon"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Infiltrator, Summoning Cost (1)"/>
       </characteristics>
     </profile>
     <profile id="6ee2-c858-93de-9936" name="Demagogue" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -6866,19 +6900,18 @@ If you choose to transports for a Coven then you must take exactly enough Land T
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Expendable">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <characteristics>
@@ -6891,7 +6924,7 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;and (15cm)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons&lt;BR&gt;and Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;and +1A"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Costs 1pt to summon"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Summoning Cost (1)"/>
       </characteristics>
     </profile>
     <profile id="631e-b820-4303-fc23" name="Flamers of Tzeentch" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -6899,10 +6932,37 @@ If you choose to transports for a Coven then you must take exactly enough Land T
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Expendable, Invulnerable Save, Summoning Cost (1 or 2)">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -6917,7 +6977,7 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Ignore Cover"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Costs 1pt to summon."/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Summoning Cost (1)"/>
       </characteristics>
     </profile>
     <profile id="0a80-f986-1baf-939b" name="Giant Mutants" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -7217,10 +7277,16 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         </modifier>
         <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Macro Weapon, +1A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro Weapon, +1A">
           <repeats/>
@@ -7721,7 +7787,7 @@ If you choose to transports for a Coven then you must take exactly enough Land T
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;&lt;BR&gt;(15cm)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons&lt;BR&gt;&lt;BR&gt;Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value=""/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Costs 1pt to summon"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Summoning Cost (1)"/>
       </characteristics>
     </profile>
     <profile id="74b3-c732-24af-4b45" name="Renegade Ogryn" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
