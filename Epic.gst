@@ -4625,7 +4625,7 @@ Teleporting is an inherently dangerous business, and doesn’t always go as plan
       </modifiers>
       <description>These vehicles have equally thick armour all round, and so ignore the -1 save modifier when they are caught in a crossfire.</description>
     </rule>
-    <rule id="ff58-2b38-000d-c57b" name="Titan Kiler" hidden="false">
+    <rule id="ff58-2b38-000d-c57b" name="Titan Killer" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
