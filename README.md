@@ -30,19 +30,19 @@ Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][
 
 __Groups__
 
-The datafiles are cross-compatible with army lists currently published and maintained by NetEA, F-ERC, or EpicUK, where applicable. When you create a new roster, you should begin by selecting the community to which you belong, before adding your units. The Horus Heresy files use army lists from EpicAU.
+The datafiles are cross-compatible with army lists currently published and maintained by NetEA, F-ERC, EpicUK or EpicAU, where applicable. When you create a new roster, you should begin by selecting the community, before adding your units.
 
 __Translations__
 
-You may notice the different languages have rules variations. Each active community has made developments to suit the needs of their group; the French translations come from F-ERC and reflect their particular developments. The Spanish and Italian language support is only experimental at this stage.
+You may notice the different languages have rules variations. Each active community has made developments to suit the needs of their group; most of the French translations come from F-ERC and reflect their particular developments. The Spanish and Italian language support is only experimental at this stage.
 
 __Army Lists__
 
-Our Repo includes over 135 factions, forces, chapters & regiments, as described by more than 275 of the _300plus_ army lists currently available, as well as incorporating supplementary features like Riot! or Minigeddon. If there's a particular list you wish to see included, get in touch and we'll consider it. (NB: we'd prefer to stick to lists from the groups noted above to avoid any confusion.)
+Our Repo includes 150 files, describing 315 factions, forces, chapters & regiments (from the _400plus_ army lists currently available) as well as incorporating supplementary features like Riot or Minigeddon.
 
 __Release Numbers__
 
-Release Numbers are shown in 4 parts {aa}{bb}{ccc}{ddd}. {aa} is the _.gst_ version. {bb} is a simple counter, starting from 00 and incrementing by 1 with each release since the _.gst_ was last updated. {ccc} is the number of standard _.cat_ files, while {ddd} is the number of forces covered by those _.cat_ files. {ccc} & {ddd} are not displayed if they are unchanged since the previous release, and they never include Riot & Insurgency, nor the forces contained within those 2 files.
+Release Numbers are shown in 4 parts {aa}{bb}{ccc}{ddd}. {aa} is the _gst_ version. {bb} is a simple counter, starting from 00 and incrementing by 1 with each release since the _gst_ was last updated. {ccc} is the number of standard _cat_ files, while {ddd} is the number of forces covered by those _cat_ files. {ccc} & {ddd} are not displayed if they are unchanged since the previous release, and they never include Riot & Insurgency, nor the forces contained within those 2 files.
 
 
 ## Links ##

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="16" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="17" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
-    <rule id="ccd6-7082-7a99-1836" name="· &lt;small&gt;General Disclaimer &lt;/small&gt;" hidden="false">
+    <rule id="ccd6-7082-7a99-1836" name="· General Disclaimer" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;small&gt;This BattleScribe datafile is an unofficial player aid for the Warhammer 40,000 universe; it is not endorsed by Games Workshop Limited.
-GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhammer 40,000, the ‘Aquila’ Double-headed Eagle logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likenesses thereof, are either ® or ™, and/or © Games Workshop Limited, variably registered around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners.&lt;/small&gt;</description>
+      <description>This BattleScribe datafile is an unofficial player aid for the Warhammer 40,000 universe; it is not endorsed by Games Workshop Limited.
+GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhammer 40,000, the ‘Aquila’ Double-headed Eagle logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likenesses thereof, are either ® or ™, and/or © Games Workshop Limited, variably registered around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners.</description>
     </rule>
   </rules>
   <infoLinks/>
@@ -225,6 +225,13 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <constraints/>
     </categoryEntry>
     <categoryEntry id="1ba6-2328-676b-dfb0" name="1 per Formation - Group A" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="9860-a9e5-8b49-020c" name="Two Thirds - 67%" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -512,6 +519,15 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ac63-7dc1-b827-23a3" name="Two Thirds - 67%" hidden="false" targetId="9860-a9e5-8b49-020c" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="67.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="5f43-3340-efbb-7e73" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="f12d-4f60-fe2d-1813-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
@@ -862,7 +878,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b56b-3825-52c1-28cc-69e2-980b-6869-e4b8" name="One Half" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
+        <categoryLink id="ac63-7dc1-b827-23a3" name="Two Thirds - 67%" hidden="false" targetId="9860-a9e5-8b49-020c" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="points" scope="parent" value="675.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="b56b-3825-52c1-28cc-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -871,7 +896,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="points" scope="parent" value="500.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b56b-3825-52c1-28cc-4f35-97c0-fae0-922d" name="One Third" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
+        <categoryLink id="b56b-3825-52c1-28cc-4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false" targetId="4f35-97c0-fae0-922d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -880,7 +905,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b56b-3825-52c1-28cc-9b1c-7eb7-417a-4e13" name="One Third - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
+        <categoryLink id="b56b-3825-52c1-28cc-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -889,7 +914,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b56b-3825-52c1-28cc-870e-22d9-c2a9-31e6" name="One Third - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
+        <categoryLink id="b56b-3825-52c1-28cc-870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false" targetId="870e-22d9-c2a9-31e6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -898,7 +923,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b56b-3825-52c1-28cc-8c78-0a75-b6c3-343a" name="One Quarter" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
+        <categoryLink id="b56b-3825-52c1-28cc-8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false" targetId="8c78-0a75-b6c3-343a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -907,16 +932,16 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="points" scope="parent" value="250.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b56b-3825-52c1-28cc-9535-122d-c109-24d4" name="One Sixth" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
+        <categoryLink id="b56b-3825-52c1-28cc-9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false" targetId="9535-122d-c109-24d4" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="parent" value="167.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
+            <constraint field="points" scope="parent" value="170.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b56b-3825-52c1-28cc-36c2-fa8b-6cfc-be84" name="One Tenth" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
+        <categoryLink id="b56b-3825-52c1-28cc-36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false" targetId="36c2-fa8b-6cfc-be84" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1208,6 +1233,15 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ac63-7dc1-b827-23a3" name="Two Thirds - 67%" hidden="false" targetId="9860-a9e5-8b49-020c" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="67.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="5f43-3340-efbb-7e73" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="336d-8892-b061-d24f-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
@@ -1558,6 +1592,15 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="ac63-7dc1-b827-23a3" name="Two Thirds - 67%" hidden="false" targetId="9860-a9e5-8b49-020c" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="67.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="5f43-3340-efbb-7e73" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="c451-df17-24ae-254d-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
           <profiles/>
           <rules/>
@@ -1902,6 +1945,15 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ac63-7dc1-b827-23a3" name="Two Thirds - 67%" hidden="false" targetId="9860-a9e5-8b49-020c" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="67.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="5f43-3340-efbb-7e73" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="f79a-b263-908a-1db8-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
@@ -2255,6 +2307,15 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ac63-7dc1-b827-23a3" name="Two Thirds - 67%" hidden="false" targetId="9860-a9e5-8b49-020c" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="67.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="5f43-3340-efbb-7e73" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="8028-1888-3867-395a-69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false" targetId="69e2-980b-6869-e4b8" primary="false">
