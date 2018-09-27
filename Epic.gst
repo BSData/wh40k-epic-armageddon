@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="17" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="18" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· General Disclaimer" hidden="false">
@@ -3586,7 +3586,7 @@ If the test is passed then all three formations may take an engage action. Treat
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Barge de Débarquement:&lt;/B&gt; L&apos;unité et tous à bord sont détruits, toutes les unités dans un rayon de 5cm subissent une touche.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Barge de Débarquement:&lt;/B&gt; La Barge de débarquement s&apos;écrase au sol et est détruite, ainsi que toutes les unités à bord. Toute unité dans un rayon de 5cm de l&apos;appareil subit une touche si la Barge de débarquement se trouvait au sol.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -3980,8 +3980,10 @@ Fearless units still count as part of a formation, and so will sometimes be “d
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Fortified positions must be set up after Objectives, but before Spacecraft and Garrisons are deployed. They may be set up anywhere a vehicle may deploy in the controlling players&apos; half of the table. You may split up a set of fortified positions as desired, as long as the rules for formation coherence are adhered to. For example, you could split up trenches into several lines, as long as there are 5cm ‘links’ between the different parts of the position. Fortified positions count as having a move of zero, and may ‘garrison’ (eg, they can be set up in positions that garrison units can be set up in). It goes without saying that they may not be transported, and any players that were considering transporting them onto the table should be deeply ashamed of themselves!
-Once set up fortified positions may be used by any unit, not just the units they were purchased for. They may be captured and used by enemy units too.</description>
+      <description>Fortified positions must be set up after objectives have been placed but before spacecraft and garrisons are set up. The only exception to this are fortified positions that are listed as part of a formation’s “units”. While they are not actually units, they are set up with the formation they are part of.
+Fortified positions may be set up anywhere a vehicle may deploy on the player’s half of the table. They may not be transported. Each group of fortified positions (whether part of a formation or not) must be set up so every piece is within 5cm of another piece from the same group, and so all pieces from the same group form a “chain” without any gaps of more than 5cm. Additionally, if a group of fortified positions is part of a formation then at least one piece must be within 5cm of a unit from the formation when they are set up.
+Once set up, fortified positions may be used by any unit (including enemy units).
+Units in a Bunker, Gun Emplacement, or Trench may not be barged by a war engine.</description>
     </rule>
     <rule id="5ece-1e53-bc04-0056" name="Ignore Cover" hidden="false">
       <profiles/>
@@ -4829,7 +4831,7 @@ Void shields that have been knocked down can be repaired. Each War Engine can re
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Marcheurs (Titan):&lt;/B&gt; Ils peuvent facilement traverser des terrains que d&apos;autres véhicules auraient du mal à négocier. Les Marcheurs peuvent relancer leurs tests de terrains dangereux ratés. &lt;BR&gt; Peut passer au dessus d&apos;unités et des obstacles moins hauts que les genoux du titan et au maximum de 2cm de large.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Marcheurs (Titan):&lt;/B&gt; Ils peuvent facilement traverser des terrains que d&apos;autres véhicules auraient du mal à négocier. Les Marcheurs peuvent relancer leurs tests de terrains dangereux ratés. &lt;BR&gt; Peut passer au-dessus d&apos;unités et des obstacles moins hauts que les genoux du titan et au maximum de 2cm de large.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -5046,7 +5048,7 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Module d&apos;atterrissage:&lt;/B&gt; Placez le module sur la coordonnée, lancez le dé de dispersion +2D6cm. Une fois atterrit le deathwing attaque toutes unités ennemies dans un rayon de 15cm. Ensuite disposez les unités à 5cm du module ou les unes des autres tout en restant dans un rayon de 15cm du module.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Module d&apos;atterrissage:&lt;/B&gt; Pour déployer la formation utilisant des Modules d’atterrissage, Placez un marqueur de Module d’atterrissage en utilisant les règles d’Assaut Planétaire. Le Module d’atterrissage est un marqueur comptant comme une unité pour déterminer l&apos;emplacement d’arrivée de l’Assaut Planétaire. Une fois le marqueur de Module d’atterrissage placé, Résolvez son attaque de tir de Deathwind sur toutes les unités ennemies à moins de 15 cm du centre du Module d’atterrissage. Chaque formation ennemie attaquée reçoit un Pion Impact selon les règles normales de tir. &lt;BR&gt; Ensuite, débarquez les troupes transportées dans le Module d’atterrissage (cela peut déclencher un tir d’État d’Alerte normalement) complètement à moins de 15 cm du centre de celui-ci, en cohérence et en dehors de toute zone de contrôle ennemie. &lt;BR&gt; Le Module d’atterrissage n&apos;étant pas une unité mais un marqueur, il ne possède pas de zone de contrôle et il ne compte pas pour la cohérence de la formation. De plus, il ne peut pas être utilisé pour revendiquer un feu croisé ainsi que pour tenir ou contester des objectifs. &lt;BR&gt; Si plusieurs formations utilisent des Modules d’atterrissage, placez tous les marqueurs Module d’atterrissage aux coordonnées prédéterminées en utilisant les règles d’Assaut Planétaire (y compris la résolution de dispersion). Une fois que tous les marqueurs placés, résolvez toutes les attaques de Deathwind simultanément contre les formations ennemies à portée des marqueurs Module d’atterrissage, puis débarquez toutes les formations transportées, en suivant les règles ci dessus.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -6014,7 +6016,7 @@ A Knight may not use its shield in two circumstances:
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter.  &lt;BR&gt; Les formations qui ont des Rhinos porte la mention &quot; plus transports &quot; dans leur composition.  &lt;BR&gt; Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  &lt;BR&gt; Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas.  &lt;BR&gt; Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demi-chargement en cas de nombre impair de Razorbacks).  &lt;BR&gt; En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des modules d’atterrissage. &lt;BR&gt; Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur Space Marine ou d’une barge de bataille pour déployer les modules d’atterrissage.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Transports:&lt;/B&gt; Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhinos pour la transporter les formations comprennent la mention &quot; plus transports &quot; dans leur composition.  &lt;BR&gt; Le nombre de Rhinos sera toujours égal au minimum nécessaire pour transporter la formation vous ne pouvez pas en prendre davantage.  &lt;BR&gt; Toutefois, prendre de Rhinos pour la formation n’est pas obligatoire si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhinos pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à la moitié de sa capacité de transport en cas de nombre impair de Razorbacks).  &lt;BR&gt; En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des Modules d’atterrissage. &lt;BR&gt; Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’Assaut Planétaire. Un Croiseur d’Attaque ou d’une Barge de Bataille sera nécessaire pour déployer les Modules d’atterrissage.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>

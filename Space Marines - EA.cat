@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f97b-5995-9c84-d211" name="Space Marines: Codex Astartes" revision="30" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f97b-5995-9c84-d211" name="Space Marines: Codex Astartes" revision="31" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="a2c6-a634-b834-32f5" hidden="false" targetId="d02b-81af-eb18-623a" type="rule">
+    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -15,13 +15,19 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="f668-2718-536a-3e9f" hidden="false" targetId="0949-313f-a827-1592" type="rule">
+    <infoLink id="f668-2718-536a-3e9f" name="Strategy Rating &amp; Initiative (SM)" hidden="false" targetId="0949-313f-a827-1592" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
     </infoLink>
     <infoLink id="4d86-79d8-27c0-fbd3" hidden="false" targetId="6e08-893d-2ba5-793c" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="f9c8-575a-14e1-e6c0" name="Strategy Rating &amp; Initiative (SM)" hidden="false" targetId="fc39-7aef-3f2a-65c9" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -103,38 +109,6 @@
           <categoryLinks/>
         </entryLink>
       </entryLinks>
-      <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ecae-26bb-8c01-a1c3" name="-Space Marine Aviation-" hidden="false" collective="false" type="upgrade">
-      <profiles/>
-      <rules/>
-      <infoLinks>
-        <infoLink id="914f-60f3-03d5-e2e8" hidden="false" targetId="5d30-1951-376f-49a4" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-      </infoLinks>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-      </constraints>
-      <categoryLinks/>
-      <selectionEntries/>
-      <selectionEntryGroups/>
-      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -334,7 +308,7 @@
         <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="763b-1396-3210-6309" name="Caestus Assault Ram" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="763b-1396-3210-6309" name="Caestus Assault Rams" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -346,16 +320,14 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecae-26bb-8c01-a1c3" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="763b-1396-3210-6309-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -885,7 +857,7 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
                       </conditions>
                       <conditionGroups/>
                     </conditionGroup>
@@ -1110,18 +1082,12 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="points" value="250.0">
+        <modifier type="set" field="points" value="300">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
@@ -1130,7 +1096,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecae-26bb-8c01-a1c3" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -1152,31 +1118,11 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="89dc-bdea-9d1a-a158" hidden="false" targetId="bf0c-edd7-606c-3429" type="profile">
+            <infoLink id="89dc-bdea-9d1a-a158" name="Marauder Bomber" hidden="false" targetId="bf0c-edd7-606c-3429" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
-            </infoLink>
-            <infoLink id="65b9-5d4a-6a77-463c" hidden="false" targetId="8e74-10b2-70c0-218b" type="profile">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-            <infoLink id="5393-cf91-6598-bc4c" hidden="false" targetId="04a7-803d-31d7-c42c" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
             </infoLink>
           </infoLinks>
           <modifiers/>
@@ -1196,7 +1142,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="300.0"/>
+        <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b23af3d0-8df7-d559-1fec-69a8891576c5" name="Predators" page="0" hidden="false" collective="false" type="unit">
@@ -1594,7 +1540,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="ef72-c0af-a01f-455d" hidden="false" targetId="8dd8-05a1-34ea-9ef7" type="profile">
+        <infoLink id="ef72-c0af-a01f-455d" name="Reaver Titan" hidden="false" targetId="8dd8-05a1-34ea-9ef7" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1624,6 +1570,12 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
+        <infoLink id="e4be-e4af-89df-37e3" name="Void Shields" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
       </infoLinks>
       <modifiers/>
       <constraints/>
@@ -1636,32 +1588,7 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="3da8-5cdc-8848-4db4" name="Void Shields" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="2ee7-9d9c-704b-9b8a" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
@@ -2086,7 +2013,7 @@
         <cost name="pts" costTypeId="points" value="150.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5829-f138-04a8-ddd3" name="Storm Eagle" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="5829-f138-04a8-ddd3" name="Storm Eagles" page="0" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2098,16 +2025,14 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecae-26bb-8c01-a1c3" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="5829-f138-04a8-ddd3-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -2179,16 +2104,14 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecae-26bb-8c01-a1c3" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="7c24-85ce-aa3f-3bb3-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -2291,10 +2214,16 @@
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="maxInForce" value="0.0">
           <repeats/>
@@ -2311,7 +2240,6 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <categoryLinks>
@@ -2324,40 +2252,17 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries/>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f568-4b31-eba0-14e4" name="Spacecraft" hidden="false" collective="false" defaultSelectionEntryId="7e4d-a481-3a8c-91b2">
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="74f0-d85a-13c8-8ebf" name="Spacecraft" hidden="false" targetId="3d61-1181-8f04-0c47" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
+          <constraints/>
           <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="7e4d-a481-3a8c-91b2" hidden="false" targetId="6825-81ef-8417-05d9" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-            <entryLink id="d687-35a4-9395-a00a" hidden="false" targetId="116b-cc79-dd96-6cf6" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
@@ -2886,16 +2791,14 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecae-26bb-8c01-a1c3" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="ebf6-b856-9a0e-d2dc-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -2905,76 +2808,33 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7d03-6c13-4c23-056c" name="Aircraft" hidden="false" collective="false" defaultSelectionEntryId="1e10-cade-2a0b-c366">
+      <selectionEntries>
+        <selectionEntry id="6238-18c7-60b9-22b7" name="Thunderbolt Fighter" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="1df8-0dbb-1746-4830" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8bfc-55ac-22bc-0366" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e2b1-0776-af03-72be" type="min"/>
           </constraints>
           <categoryLinks/>
-          <selectionEntries>
-            <selectionEntry id="1e10-cade-2a0b-c366" name="2x Thunderbolt Fighter" hidden="false" collective="false" type="model">
-              <profiles/>
-              <rules/>
-              <infoLinks>
-                <infoLink id="e8b0-9447-ef70-0d0a" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-              </infoLinks>
-              <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b7ef-c385-7b8d-2807" name="4x Thunderbolt Fighter" hidden="true" collective="false" type="model">
-              <profiles/>
-              <rules/>
-              <infoLinks>
-                <infoLink id="25ce-f5b6-3a8a-7937" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-              </infoLinks>
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-              </constraints>
-              <categoryLinks/>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="150.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="150.0"/>
@@ -3133,16 +2993,14 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecae-26bb-8c01-a1c3" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
+      <constraints/>
       <categoryLinks>
         <categoryLink id="cf22-345f-ada8-3341-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
           <profiles/>
@@ -3389,37 +3247,43 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="fdc0-496f-41b9-880c" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
+            <infoLink id="fdc0-496f-41b9-880c" name="Warhound Titan" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="7d44-c0da-7946-aa10" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
+            <infoLink id="7d44-c0da-7946-aa10" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="5647-ef4a-9409-88bf" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+            <infoLink id="5647-ef4a-9409-88bf" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="8ce0-8a41-cd56-a5f7" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule">
+            <infoLink id="8ce0-8a41-cd56-a5f7" name="Walker (Titan)" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="66bd-56f2-2d46-a428" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
+            <infoLink id="66bd-56f2-2d46-a428" name="Slow Firing" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="a52a-f92d-617c-ca03" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+            <infoLink id="a52a-f92d-617c-ca03" name="Critical Hit: Caught Off-balance" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="8e0b-1f68-4db9-e387" name="Void Shields" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -3427,7 +3291,7 @@
             </infoLink>
           </infoLinks>
           <modifiers>
-            <modifier type="set" field="points" value="275.0">
+            <modifier type="set" field="points" value="275">
               <repeats/>
               <conditions/>
               <conditionGroups>
@@ -3454,32 +3318,7 @@
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <categoryLinks/>
-          <selectionEntries>
-            <selectionEntry id="767d-fe71-aaeb-8196" name="Void Shields" hidden="false" collective="true" type="upgrade">
-              <profiles/>
-              <rules/>
-              <infoLinks>
-                <infoLink id="f5fc-7ce2-08f2-9bf8" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-              </infoLinks>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <categoryLinks/>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
@@ -3497,7 +3336,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="f9c7-ddc9-82a6-d61d" hidden="false" targetId="dc1f-622e-cffb-0339" type="profile">
+        <infoLink id="f9c7-ddc9-82a6-d61d" name="Warlord Titan" hidden="false" targetId="dc1f-622e-cffb-0339" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3539,6 +3378,12 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
+        <infoLink id="1a49-cdd4-fb7a-c4a3" name="Void Shields" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" field="points" value="825.0">
@@ -3559,32 +3404,7 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="f6f4-d199-396a-0355" name="Void Shields" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks>
-            <infoLink id="0c87-1b1a-bcd0-5616" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
-          </infoLinks>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
@@ -3667,6 +3487,66 @@
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="300.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8a46-a552-75a0-e2d4" name="Strike Cruiser" page="0" hidden="false" collective="false" type="model">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="c87e-555b-0cb1-5f09" value="0.0">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0062-423c-bf57-1b0e" type="atLeast"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b367-f0f3-9ce9-2595" type="atLeast"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c87e-555b-0cb1-5f09" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="0681-158e-f273-14f4" name="One Third - 33%" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="6c72-4a77-4756-7b41" name="Spacecraft" hidden="false" targetId="3d61-1181-8f04-0c47" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -4828,6 +4708,37 @@
       <selectionEntryGroups/>
       <entryLinks/>
     </selectionEntryGroup>
+    <selectionEntryGroup id="3d61-1181-8f04-0c47" name="Spacecraft" hidden="false" collective="false" defaultSelectionEntryId="8797-adab-e565-9011">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="76a4-e362-a287-400f" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="181e-1c48-a4ae-ed85" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="8797-adab-e565-9011" hidden="false" targetId="6825-81ef-8417-05d9" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="8100-dc25-0ac0-3278" hidden="false" targetId="116b-cc79-dd96-6cf6" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="&lt;I&gt;F-ERC&lt;/I&gt;" hidden="false">
@@ -4835,8 +4746,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;space_marines_masterferc_051212[1] #Version F-ERC du 07 Février 2018
-AVIATION CODEX ASTARTES SM 20-01-14&lt;/I&gt;</description>
+      <description>&lt;I&gt;ASTARTES 40K - FERC MASTER- 2018 V1 #Liste Adeptus Astartes – Master FERC – 17/09/2018&lt;/I&gt;</description>
     </rule>
     <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
       <profiles/>
@@ -4908,21 +4818,6 @@ Fanatic #13</description>
       <modifiers/>
       <description>netea-tournament-pack-2018-07-16</description>
     </rule>
-    <rule id="5d30-1951-376f-49a4" name="Space Marine Aviation" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Aviation SM:&lt;/B&gt; Affiche les forces aériennes de Space Marine au lieu de la marine impériale.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Displays Space Marine air forces instead of Imperial Navy.</description>
-    </rule>
     <rule id="0949-313f-a827-1592" name="Strategy Rating &amp; Initiative (SM)" hidden="false">
       <profiles/>
       <rules/>
@@ -4946,6 +4841,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5009,7 +4911,7 @@ Imperial Navy aircraft formations have Initiative Rating 2+.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Et Ils Ne Connaitront Pas La Peur:&lt;/B&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Space Marines ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). &lt;BR&gt; Les formations Space Marines ne sont démoralisées qu’à partir du moment où elles ont deux pions d&apos;impact ou plus par unité. &lt;BR&gt; Réduisez de moitié le nombre de touches supplémentaires subies par une formation de Space Marines perdant un assaut, en arrondissant à l’entier inférieur en faveur des Space Marines. &lt;BR&gt; Lorsqu’une formation Space Marines démoralisée se rallie, elle reçoit un nombre de pions impact égal au nombre d’unités plutôt qu’à la moitié du nombre d’unités. &lt;BR&gt; Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habituellement un seul.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Et Ils Ne Connaitront Pas La Peur:&lt;/B&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Space Marines ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). &lt;BR&gt; Les formations Space Marines ne sont démoralisées qu’à partir du moment où elles ont deux pions d&apos;impact ou plus par unité. &lt;BR&gt; Les formations Space Marines comptent comme ayant la moitié de leur nombre de pions impact lors de la résolution de l’assaut (arrondi à l’inférieur, à un minimum de 1 pion impact). &lt;BR&gt; Réduisez de moitié le nombre de touches supplémentaires subies par une formation de Space Marines perdant un assaut, en arrondissant à l’entier inférieur en faveur des Space Marines. &lt;BR&gt; Lorsqu’une formation Space Marines démoralisée se rallie, elle reçoit un nombre de pions impact égal au nombre d’unités plutôt qu’à la moitié du nombre d’unités. &lt;BR&gt; Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habituellement un seul.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -5029,6 +4931,28 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <infoLinks/>
       <modifiers/>
       <description>see codex</description>
+    </rule>
+    <rule id="fc39-7aef-3f2a-65c9" name="Strategy Rating &amp; Initiative (SM)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Space Marines ont une Valeur Stratégique de 5. Les Détachements Space Marines, l’Aviation Space Marines, Les Vaisseaux Space Marines et les soutiens titaniques ont une initiative de 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Space Marines have Strategy Rating 5. All formations have Initiative Rating 1+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -5081,19 +5005,12 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm">
+        <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
           <repeats/>
@@ -5116,10 +5033,31 @@ Space Marine Leaders remove 2BMs when rallying.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Light Vehicle"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="5+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
@@ -5177,10 +5115,10 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="5+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Ram&lt;BR&gt;&lt;BR&gt;Magna Melta&lt;BR&gt;&lt;BR&gt;Firefury Missile Battery"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;&lt;BR&gt;(contact)&lt;BR&gt;&lt;BR&gt;30cm"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Ram&lt;BR&gt;&lt;BR&gt;Magna Melta&lt;BR&gt;&lt;BR&gt;Vengeance Missiles"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;&lt;BR&gt;(contact)&lt;BR&gt;&lt;BR&gt;45cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons&lt;BR&gt;&lt;BR&gt;Assault Weapons&lt;BR&gt;&lt;BR&gt;2BP"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc, Macro-weapon&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, One Shot"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, One Shot"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Planetfall, Reinforced Armour, Transport"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="1"/>
         <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value=""/>
@@ -5384,19 +5322,12 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
         <modifier type="set" field="1160-63e7-57ca-722d" value="2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter">
           <repeats/>
@@ -5417,7 +5348,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="25cm"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
-        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
+        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Heavy Bolter"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;30cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AT4+&lt;BR&gt;&lt;BR&gt;AP4+"/>
@@ -5613,13 +5544,6 @@ Space Marine Leaders remove 2BMs when rallying.</description>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Aircraft"/>
@@ -5632,34 +5556,6 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AA5+&lt;BR&gt;&lt;BR&gt;AT4+/AA4+&lt;BR&gt;&lt;BR&gt;2BP"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
-      </characteristics>
-    </profile>
-    <profile id="8e74-10b2-70c0-218b" name="Marauder Bomber" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Bomber"/>
-        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="6+"/>
-        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
-        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Lascannon&lt;BR&gt;&lt;BR&gt;Bomb Racks"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AA5+&lt;BR&gt;&lt;BR&gt;AA5+&lt;BR&gt;&lt;BR&gt;AT4+/AA5+&lt;BR&gt;&lt;BR&gt;3BP"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="360°&lt;BR&gt;&lt;BR&gt;Fixed Rear Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7"/>
-        <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="2"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Crash"/>
       </characteristics>
     </profile>
     <profile id="e87d-5407-5840-3913" name="Predator Annihilator" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -5702,23 +5598,23 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <modifiers>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+">
-          <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
           <repeats/>
@@ -5887,11 +5783,11 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <modifiers/>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine, Aircraft"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Fighter-bomber"/>
+        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="Bomber"/>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Vengeance Launcher&lt;BR&gt;&lt;BR&gt;2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Firefury Missiles&lt;BR&gt;&lt;BR&gt;2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2BP&lt;BR&gt;&lt;BR&gt;AT4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc"/>
@@ -5914,7 +5810,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Assault Cannon"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;30cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AT4+/AA5+"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;360°"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
       </characteristics>
     </profile>
@@ -5932,7 +5828,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Twin Assault Cannon&lt;BR&gt;&lt;BR&gt;Twin Lascannon"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;45cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT4+/AA5+&lt;BR&gt;&lt;BR&gt;AT4+/AA5+"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="360°&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc"/>
+        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
       </characteristics>
     </profile>
@@ -6039,7 +5935,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="75cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm">
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
@@ -6053,7 +5949,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+"/>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Battle Cannon&lt;BR&gt;&lt;BR&gt;2x Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt; Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter"/>
+        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Battle Cannon&lt;BR&gt;&lt;BR&gt;2x Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter"/>
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="75cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;&lt;BR&gt;15cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Left Arc&lt;BR&gt;&lt;BR&gt;Right Arc"/>
@@ -6074,7 +5970,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
         <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+"/>
         <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="2x Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;2x Twin Heavy Bolter"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="15cm&lt;BR&gt;&lt;BR&gt;15cm"/>
+        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;30cm"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Left Arc&lt;BR&gt;&lt;BR&gt;Right Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Planetfall, Reinforced Armour, Transport"/>
@@ -6164,15 +6060,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value=", Mid-power Shot">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="War Engine"/>
         <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm"/>

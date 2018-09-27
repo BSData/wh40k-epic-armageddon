@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -1277,7 +1277,7 @@
         <cost name="pts" costTypeId="points" value="325.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3f7c-997b-0320-2be5" name="Fortification" hidden="false" collective="false" type="unit">
+    <selectionEntry id="3f7c-997b-0320-2be5" name="Fortified Positions" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1305,7 +1305,7 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="fdfc-0d69-2d10-5d54" hidden="false" targetId="e767-341a-c5e5-b497" type="profile">
+            <infoLink id="fdfc-0d69-2d10-5d54" name="Bunker" hidden="false" targetId="07e7-a20d-df1e-c0cf" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -7151,7 +7151,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>netea-tournament-pack-2018-07-16</description>
+      <description>netea-tournament-pack-2018-09-17</description>
     </rule>
     <rule id="f064-83f2-b1e4-5f5c" name="Strategy Rating &amp; Initiative (IF)" hidden="false">
       <profiles/>
@@ -8704,6 +8704,40 @@ Space Marine Leaders remove 2BMs when rallying.</description>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP4+/AT6+&lt;BR&gt;&lt;BR&gt;2x MW4+&lt;BR&gt;and Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Ignore Cover&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Reinforced Armour, Thick Rear Armour, Transport"/>
+      </characteristics>
+    </profile>
+    <profile id="07e7-a20d-df1e-c0cf" name="Bunker" hidden="false" profileTypeId="6883-a6ac-0b20-eb62">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Cuenta como una fortificación. Puede contener hasta tres unidades. ">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fortifications. Chaque bunker peut contenir trois unités.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="8902-a4d6-b39b-ca60" value="Dangerous">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <characteristics>
+        <characteristic name="Infantry" characteristicTypeId="36c8-6d92-af3f-a836" value="3+ Cover Save"/>
+        <characteristic name="Vehicle" characteristicTypeId="1297-f4e7-4126-0a6a" value="Dangerous"/>
+        <characteristic name="War Engine" characteristicTypeId="8902-a4d6-b39b-ca60" value="Impassable"/>
+        <characteristic name="Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Bunkers are Fortifications. Can hold 3 units."/>
       </characteristics>
     </profile>
   </sharedProfiles>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="29" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="30" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -1444,7 +1444,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="300.0"/>
+        <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ca4e-b40d-bb5b-3870" name="Flak Battery" page="0" hidden="false" collective="false" type="unit">
@@ -1519,7 +1519,7 @@
         <cost name="pts" costTypeId="points" value="150.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3c7e-4be3-6e73-625e" name="Fortifications" hidden="false" collective="false" type="unit">
+    <selectionEntry id="3c7e-4be3-6e73-625e" name="Fortified Positions" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -1569,7 +1569,7 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="ff5c-6a83-f455-5402" hidden="false" targetId="e767-341a-c5e5-b497" type="profile">
+            <infoLink id="ff5c-6a83-f455-5402" name="Bunker" hidden="false" targetId="07e7-a20d-df1e-c0cf" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -8822,7 +8822,7 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>netea-tournament-pack-2017-01-03
+      <description>netea-tournament-pack-2018-09-17
 siege #mossino campaign version 3</description>
     </rule>
     <rule id="4364-985f-fc65-7ace" name="Strategy Rating &amp; Initiative (DK)" hidden="false">
@@ -10871,6 +10871,40 @@ All other formations have an initiative rating of 2+.
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value=""/>
+      </characteristics>
+    </profile>
+    <profile id="07e7-a20d-df1e-c0cf" name="Bunker" hidden="false" profileTypeId="6883-a6ac-0b20-eb62">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Cuenta como una fortificación. Puede contener hasta tres unidades. ">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fortifications. Chaque bunker peut contenir trois unités.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="8902-a4d6-b39b-ca60" value="Dangerous">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <characteristics>
+        <characteristic name="Infantry" characteristicTypeId="36c8-6d92-af3f-a836" value="3+ Cover Save"/>
+        <characteristic name="Vehicle" characteristicTypeId="1297-f4e7-4126-0a6a" value="Dangerous"/>
+        <characteristic name="War Engine" characteristicTypeId="8902-a4d6-b39b-ca60" value="Impassable"/>
+        <characteristic name="Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Bunkers are Fortifications. Can hold 3 units."/>
       </characteristics>
     </profile>
   </sharedProfiles>
