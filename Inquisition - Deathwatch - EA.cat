@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a667-f82b-34a6-dbff" name="Inquisition: Ordo Xenos Deathwatch" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a667-f82b-34a6-dbff" name="Inquisition: Ordo Xenos Deathwatch" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -314,7 +314,9 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <constraints/>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7194-3b77-fab3-c4cd" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="fb6b-091b-1672-5d65" name="New CategoryLink" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true">
           <profiles/>
@@ -415,7 +417,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="300.0"/>
+        <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="735d-5376-dcb2-1583" name="Inquisitorial Warband" page="0" hidden="false" collective="false" type="unit">
@@ -858,7 +860,7 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2cff-4fa3-7de7-4d90" type="max"/>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2cff-4fa3-7de7-4d90" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="8786-f33c-d0bc-04e0" name="New CategoryLink" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true">
@@ -1092,13 +1094,15 @@
                       <conditions>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf6a-7591-16ef-42c2" type="atLeast"/>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5db2-673f-6a58-028a" type="atLeast"/>
-                        <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4505-f357-e7ff-383d" type="atLeast"/>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18f6-de1f-2501-2cc3" type="atLeast"/>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77cd-0351-3a69-9008" type="atLeast"/>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c36c-72ed-a3cb-ea5e" type="atLeast"/>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0f2c-b759-cc73-3ef9" type="atLeast"/>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c039-905a-661d-6dd2" type="atLeast"/>
                         <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0c73-26b9-ad63-453f" type="atLeast"/>
+                        <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0ba5-8990-6be7-75b6" type="equalTo"/>
+                        <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2ef2-eb89-b0bc-2f54" type="equalTo"/>
+                        <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="605a-0d1f-5263-0d34" type="equalTo"/>
                       </conditions>
                       <conditionGroups/>
                     </conditionGroup>
@@ -1145,20 +1149,6 @@
             </modifier>
             <modifier type="decrement" field="c5a9-3211-4acd-8298" value="1">
               <repeats/>
-              <conditions>
-                <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4505-f357-e7ff-383d" type="atLeast"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="c5a9-3211-4acd-8298" value="1">
-              <repeats>
-                <repeat field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4505-f357-e7ff-383d" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="c5a9-3211-4acd-8298" value="1">
-              <repeats/>
               <conditions/>
               <conditionGroups>
                 <conditionGroup type="or">
@@ -1190,35 +1180,35 @@
           </constraints>
           <categoryLinks/>
           <selectionEntries>
-            <selectionEntry id="4505-f357-e7ff-383d" name="Corvus Black Star" page="0" hidden="false" collective="false" type="unit">
+            <selectionEntry id="0ba5-8990-6be7-75b6" name="4x Corvus Black Star" page="0" hidden="false" collective="false" type="model">
               <profiles/>
               <rules/>
               <infoLinks>
-                <infoLink id="3cbf-945f-38b7-5dae" name="Corvus Black Star" hidden="false" targetId="3fba-385a-b74f-b274" type="profile">
+                <infoLink id="39dd-9394-a2f7-22d7" name="Corvus Black Star" hidden="false" targetId="3fba-385a-b74f-b274" type="profile">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
-                <infoLink id="3ee9-2b53-d300-e352" name="Skimmer" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                <infoLink id="10b2-0c7a-dbcb-af9d" name="Skimmer" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
-                <infoLink id="c2b9-c1af-22a5-244b" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule">
+                <infoLink id="26d4-3cde-c895-15e4" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
-                <infoLink id="cf53-81bc-d116-d58d" hidden="false" targetId="ecac-2c27-c503-9bab" type="rule">
+                <infoLink id="62e8-0151-312b-0631" hidden="false" targetId="ecac-2c27-c503-9bab" type="rule">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
-                <infoLink id="4e89-cd5f-f366-6e66" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+                <infoLink id="7255-f94b-13fd-e522" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -1228,66 +1218,150 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-                <modifier type="decrement" field="ef19-47cf-ec0c-bf49" value="2">
-                  <repeats/>
                   <conditions/>
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="8c45-3635-376f-630f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0f2c-b759-cc73-3ef9" type="equalTo"/>
-                        <condition field="selections" scope="8c45-3635-376f-630f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c039-905a-661d-6dd2" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bcb2-3644-6416-fb5c" type="lessThan"/>
                       </conditions>
                       <conditionGroups/>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="decrement" field="ef19-47cf-ec0c-bf49" value="1">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions/>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0f2c-b759-cc73-3ef9" type="equalTo"/>
-                            <condition field="selections" scope="8c45-3635-376f-630f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c039-905a-661d-6dd2" type="equalTo"/>
-                          </conditions>
-                          <conditionGroups/>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0f2c-b759-cc73-3ef9" type="equalTo"/>
-                            <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c039-905a-661d-6dd2" type="equalTo"/>
-                          </conditions>
-                          <conditionGroups/>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="8c45-3635-376f-630f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0f2c-b759-cc73-3ef9" type="equalTo"/>
-                            <condition field="selections" scope="8c45-3635-376f-630f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c039-905a-661d-6dd2" type="equalTo"/>
-                          </conditions>
-                          <conditionGroups/>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ef19-47cf-ec0c-bf49" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c4f2-0f15-a184-6494" type="max"/>
               </constraints>
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="25.0"/>
+                <cost name="pts" costTypeId="points" value="125.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2ef2-eb89-b0bc-2f54" name="3x Corvus Black Star" page="0" hidden="false" collective="false" type="model">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="4d4c-66ab-deea-266f" name="Corvus Black Star" hidden="false" targetId="3fba-385a-b74f-b274" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="eb46-bd0b-cac1-4e24" name="Skimmer" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="4858-7af2-a389-b9fe" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="b5f8-36c3-3c02-fa24" hidden="false" targetId="ecac-2c27-c503-9bab" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="73fd-7cbe-9f11-e386" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bcb2-3644-6416-fb5c" type="greaterThan"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bcb2-3644-6416-fb5c" type="lessThan"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="79b8-ad5d-b5a6-1fdf" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="100.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="605a-0d1f-5263-0d34" name="2x Corvus Black Star" page="0" hidden="false" collective="false" type="model">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="72f8-3edc-2437-d56b" name="Corvus Black Star" hidden="false" targetId="3fba-385a-b74f-b274" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="ef4e-c98d-de0a-c17d" name="Skimmer" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="5328-e4e0-ca78-0755" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="a2d6-6ec6-0857-497a" hidden="false" targetId="ecac-2c27-c503-9bab" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+                <infoLink id="7fa3-cc0a-92ea-c2f3" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bcb2-3644-6416-fb5c" type="atLeast"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a885-508b-c82e-6bdf" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="75.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1966,7 +2040,7 @@
           </selectionEntryGroups>
           <entryLinks/>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f1ba-1669-faad-5d10" name="Core" hidden="false" collective="false">
+        <selectionEntryGroup id="f1ba-1669-faad-5d10" name="Core" hidden="false" collective="false" defaultSelectionEntryId="77a3-46de-05b8-0e8e">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2036,7 +2110,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="121a-dc66-9498-4fbc" name="Take 2 Corvus Berths" hidden="false" targetId="bcb2-3644-6416-fb5c" type="selectionEntry">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
@@ -2083,7 +2166,16 @@
               <categoryLinks/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks/>
+              <entryLinks>
+                <entryLink id="1d5e-37f1-3b72-ff4f" name="Take 2 Corvus Berths" hidden="false" targetId="bcb2-3644-6416-fb5c" type="selectionEntry">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
@@ -2566,6 +2658,21 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="bcb2-3644-6416-fb5c" name="Use 2 Corvus Berths Each" hidden="false" collective="true" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5698-cd84-71d9-7475" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f3e-6acd-d82e-4595" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs/>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups/>
   <sharedRules>
@@ -2597,7 +2704,7 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Ordo Xenos - Death Watch V1.3b-2018</description>
+      <description>Ordo Xenos - Death Watch V14</description>
     </rule>
     <rule id="ddcf-6bef-a35d-056c" name="Strategy Rating &amp; Initiative (DW)" hidden="false">
       <profiles/>
@@ -2652,7 +2759,7 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt;  Arvus Lighter: 2 Inquisitorial Warrior Acolytes ou Death Cult Assassin. &lt;BR&gt;  Chimera: 2 Inquisitorial Warrior Acolytes ou Death Cult Assassin. &lt;BR&gt;  Corvus Black Star: 2 unités d&apos;infanterie. Les terminators et Assault Bikes prennent 2 emplacements. &lt;BR&gt;  Drop Pods: ne peut transporter que des Deathwatch Kill Team, Deathwatch Black Shield ou Venerable Dreadnought. &lt;BR&gt;  Inquisitorial Black Ship: 20 unités d&apos;infanterie, Attack Bikes, ou Dreadnoughts; plus 20 véhicules légers ou les véhicules blindés; plus 6 Thunderhawks et assez de Modules d&apos;Atterrissage, Arvus Lighters, Corvus Blackstars ou Barge de Débarquement. &lt;BR&gt;  Landing Craft: 12 unités d&apos;infanterie, Attack Bikes ou dreadnoughts; plus toutes les 6 unités de véhicule blindé. Land Raiders comptent comme 1½ unités chacune, arrondi vers le haut. &lt;BR&gt;  Land Raider: 1 unité terminator ou 2 unités d&apos;infanterie sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Land Raider Crusader: 2 unité terminator ou 3 unités d&apos;infanterie sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Land Raider Redeemer: 1 unité terminator ou 2 unités d&apos;infanterie sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Razorback: 1 unité d&apos;infanterie (sauf terminator) sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Rhinos: 2 unités d&apos;infanterie (sauf terminator) sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Thunderhawk Gunship: 8 unités d&apos;infanterie, Attack Bikes ou dreadnoughts. Les terminators et dreadnoughts prennent 2 emplacements.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La capacité de transport:&lt;/B&gt; Comme suit- &lt;BR&gt;  Arvus Lighter: 2 Inquisitorial Warrior Acolytes ou Death Cult Assassin. &lt;BR&gt;  Chimera: 2 Inquisitorial Warrior Acolytes ou Death Cult Assassin. &lt;BR&gt;  Corvus Black Star: 2 unités d&apos;infanterie. Les terminators et Assault Bikes prennent 2 emplacements. &lt;BR&gt;  Drop Pods: ne peut transporter que des Deathwatch Kill Team, Deathwatch Black Shield ou Venerable Dreadnought. &lt;BR&gt;  Inquisitorial Black Ship: 20 unités d&apos;infanterie, Attack Bikes, ou Dreadnoughts; plus 20 véhicules légers ou les véhicules blindés; plus 6 Thunderhawks et assez de Modules d&apos;Atterrissage, Arvus Lighters, Corvus Blackstars ou Barge de Débarquement. &lt;BR&gt;  Landing Craft: 12 unités d&apos;infanterie, Attack Bikes ou dreadnoughts; plus toutes les 6 unités de véhicule blindé (sauf les dreadnoughts ou Corvus Blackstars). Land Raiders comptent comme 1½ unités chacune, arrondi vers le haut. &lt;BR&gt;  Land Raider: 1 unité terminator ou 2 unités d&apos;infanterie sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Land Raider Crusader: 2 unité terminator ou 3 unités d&apos;infanterie sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Land Raider Redeemer: 1 unité terminator ou 2 unités d&apos;infanterie sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Razorback: 1 unité d&apos;infanterie (sauf terminator) sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Rhinos: 2 unités d&apos;infanterie (sauf terminator) sans Réacteurs Dorsaux ou Montés. &lt;BR&gt;  Thunderhawk Gunship: 8 unités d&apos;infanterie, Attack Bikes ou dreadnoughts. Les terminators et dreadnoughts prennent 2 emplacements.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -2666,7 +2773,7 @@ Chimera: 2 Inquisitorial Warrior Acolytes or Death Cult Assassin.
 Corvus Black Star: 2 infantry units. Watch Terminator and Assault Bikes count as 2 units each.
 Drop Pods: 1 formation of only Deathwatch Kill Team, Deathwatch Black Shield or Venerable Dreadnought.
 Inquisitorial Black Ship: 20 infantry units, Attack Bikes, or Dreadnoughts; plus 20 light vehicles or armoured vehicle units (except Attack Bikes and Dreadnoughts); plus 6 Thunderhawks and enough Drop Pods, Arvus Lighters, Corvus Blackstars or Landing Craft to transport any other units being carried.
-Landing Craft: 12 infantry units, Attack Bikes or Dreadnoughts; plus any 6 armoured vehicle units (except Dreadnoughts). Land Raiders count as 1½ units each, rounding up.
+Landing Craft: 12 infantry units, Attack Bikes or Dreadnoughts; plus any 6 armoured vehicle units (except Dreadnoughts or Corvus Blackstars). Land Raiders count as 1½ units each, rounding up.
 Land Raider: 1 Watch Terminator unit or 2 infantry units without Jump Packs or Mounted.
 Land Raider Crusader: 2 Watch Terminators unit or 3 infantry units without Jump Packs or Mounted.
 Land Raider Redeemer: 1 Watch Terminator unit or 2 infantry units without Jump Packs or Mounted.
