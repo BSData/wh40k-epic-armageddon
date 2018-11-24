@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="18" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="19" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· General Disclaimer" hidden="false">
@@ -6352,7 +6352,7 @@ netea-tournament-pack-2017-03-21</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La Radiation:&lt;/B&gt; Les armes radiologiques qui ont frappé soustraire 1 du jet de sauvegarde de la cible.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;La Radiation:&lt;/B&gt; Les armes radiologiques qui ont frappé soustraire 1 du jet de sauvegarde de la cible. Ce modificateur ne s&apos;applique qu&apos;aux touches générées avec des attaques AP et allouées contre des unités d&apos;INF.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -6360,7 +6360,7 @@ netea-tournament-pack-2017-03-21</description>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Radiological weapons that hit reduce the target unit&apos;s saving throw by 1.</description>
+      <description>Radiological weapons that hit reduce the target unit&apos;s saving throw by 1. This modifier only applies to hits generated with AP attacks and allocated against INF units. </description>
     </rule>
     <rule id="c815-3665-399f-488c" name="Critical Hit: C&apos;Tan" hidden="false">
       <profiles/>
