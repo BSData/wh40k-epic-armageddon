@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="19" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="20" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· General Disclaimer" hidden="false">
@@ -238,6 +238,13 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
       <modifiers/>
       <constraints/>
     </categoryEntry>
+    <categoryEntry id="a09c-fd85-bc16-e6cc" name="One Third - 33% - 1 per Formation" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="f12d-4f60-fe2d-1813" name="Epic Armageddon" hidden="false">
@@ -420,7 +427,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="maxSelections" value="1.0">
+            <modifier type="increment" field="maxSelections" value="1">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
@@ -546,6 +553,24 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e692-f9d6-f9b1-4c2d" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="ebd2-4aa6-df5a-027b" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="d35d-de96-c97c-3fdd" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="ebd2-4aa6-df5a-027b" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="f12d-4f60-fe2d-1813-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
@@ -905,6 +930,24 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="e692-f9d6-f9b1-4c2d" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="5cf4-977e-0362-a8d4" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="350.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPoints" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="5cf4-977e-0362-a8d4" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="b56b-3825-52c1-28cc-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
@@ -1260,6 +1303,24 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e692-f9d6-f9b1-4c2d" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="3bf0-0c16-7ab6-e785" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="d35d-de96-c97c-3fdd" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="3bf0-0c16-7ab6-e785" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="336d-8892-b061-d24f-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
@@ -1619,6 +1680,24 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="e692-f9d6-f9b1-4c2d" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="688f-914a-5326-c28a" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="d35d-de96-c97c-3fdd" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="688f-914a-5326-c28a" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="c451-df17-24ae-254d-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
           <profiles/>
           <rules/>
@@ -1972,6 +2051,24 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e692-f9d6-f9b1-4c2d" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="12ea-9634-ee7d-a1aa" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="d35d-de96-c97c-3fdd" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="12ea-9634-ee7d-a1aa" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="f79a-b263-908a-1db8-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
@@ -2334,6 +2431,24 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
           <modifiers/>
           <constraints>
             <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e692-f9d6-f9b1-4c2d" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="e294-82c5-a313-482d" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="33.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="d35d-de96-c97c-3fdd" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="e294-82c5-a313-482d" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="8028-1888-3867-395a-9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false" targetId="9b1c-7eb7-417a-4e13" primary="false">
@@ -6500,6 +6615,45 @@ netea-tournament-pack-2017-03-21</description>
         </modifier>
       </modifiers>
       <description>When the Storm Serpent is broken, formations arriving via its Wraithgate automatically receive a blast marker.</description>
+    </rule>
+    <rule id="37bb-efe7-7c20-c482" name="Tunnellers" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tunneliers:&lt;/B&gt; L&apos;armée utilise des Tunneliers pour mener sans danger par voie souterraine les troupes à des lieux clés du champ de bataille :  - Les tunneliers sont déployés sur leur bord de table avant la bataille, au même moment que les vaisseaux spatiaux, ils n’interviennent pas directement dans le jeu tant qu’ils n’émergent pas.  - Noter secrètement au début de quel tour ils feront surface ainsi que les coordonnées (à partir de la pointe de la ou d’une des foreuses) où vous voulez qu’ils émergent, de la même façon que vous notez celles de vos zones de largage.  - Si les tunneliers apparaissent dans votre moitié de table, ils ne peuvent le faire qu’à partir du second tour et s’ils comptent émerger dans la moitié de table ennemie, ils ne peuvent le faire qu’à partir du troisième tour.  - Les tunneliers émergeant sont placés en début de tour, avant le jet de stratégie. Une fois les tunneliers placés vous pouvez faire débarquer vos troupes de suite.  - Il n’y a pas de déviation mais si toutefois, ils émergent sous les pieds de n&apos;importe quel type d&apos;unité (amie ou ennemie) ou dans une zone de contrôle ennemie, l&apos;unité est placée par l&apos;adversaire dans la zone dégagée la plus proche pouvant la recevoir.  - S’il y a plus d’une unité de Tunnelier qui émerge, après le placement de la première, les autres sont toutes placées à 15cm maximum de celle-ci tout en restant en formation.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The army uses Tunnellers to safely carry troops underground to key battlefield locations:
+ - Tunnellers are deployed on their table edge before the battle, at the same time as spacecraft. They do not interact directly in the game until they surface.
+ - Note secretly at the beginning which turn they will surface, as well as the coordinates (from the tip of one of the drills) where you want them to surface, in the same way that you note drop zones.
+ - If the TBMs appear in your half of the table, they can do it only from the second turn, and if they plan to emerge in the half of the enemy table, they can do it only from the third turn.
+ - The emerging tunnel boring machines are placed at the beginning of the turn, before the strategy roll. Once the TBMs are placed you can disembark your troops.
+ - There is no scatter but if they emerge under the feet of any type of unit (friend or enemy) or in an enemy control zone, the unit is placed by the opponent in the nearest open area that can receive it.
+ - If there is more than one Tunneller unit that emerges, then after the placement of the first, the others are all placed within 15cm max of it, remaining in formation.</description>
+    </rule>
+    <rule id="2be8-1e54-668e-4f6d" name="Critical Hit: Reactor Crack" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Fissure au Réacteur:&lt;/B&gt; Lancez 1D6 à la fin de chaque tour pour chaque fissure. &lt;BR&gt; 1: le réacteur explose, détruisant l’engin de guerre &lt;BR&gt; 2-3: le unité perd 1 DC &lt;BR&gt; 4-6: la fissure est réparée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Roll a D6 in the end phase of each turn: 
+1: the unit is destroyed 
+2-3: the unit suffers one more point of damage 
+4–6: the breach has been repaired.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
