@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="20" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="21" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· General Disclaimer" hidden="false">
@@ -5604,7 +5604,7 @@ Guided Missiles may only be fired at a target formation that is marked, but Guid
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Endommagé du Système:&lt;/B&gt; Bouclier Tau désactivé, tous les critiques suivant font perdre 1 point de structure supplémentaire.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Endommagé du Système:&lt;/B&gt; Déflecteurs désactivé, toutes les touches critiques suivantes font perdre 1 point de structure supplémentaire.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -5737,7 +5737,7 @@ EPIC_Rulebook_Esp #1.4 Traducido por Lord_Bruno&lt;/I&gt;</description>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Factions:&lt;/B&gt; Chaque formation dans une armée des Egarés &amp; Damnés appartient à une faction qui porte allégeance à l’un des Dieux du Chaos: Khorne, Nurgle, Slaanesh ou Tzeentch. Vous devez décider à quelle faction appartient votre armée au début de la bataille et le noter sur votre liste d’armée. Ceci est représenté par la règle suivante : Les factions du chaos se haïssent entre elles il est impossible de lier des alliances entre les différents dieux ; vous devez obligatoirement choisir un des 4 dieux du Chaos pour constituer votre armée.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Factions:&lt;/B&gt; Chaque formation dans une armée du Chaos appartient à une faction qui porte allégeance à l’un des Dieux du Chaos: Chaos Universel, Khorne, Nurgle, Slaanesh ou Tzeentch. Vous devez décider à quelle faction appartient votre armée au début de la bataille et le noter sur votre liste d’armée. Ceci est représenté par la règle suivante : Les factions du chaos se haïssent entre elles il est impossible de lier des alliances entre les différents dieux ; vous devez obligatoirement choisir un des 4 Dieux du Chaos. Vous n’aurez accès qu’aux formations qui lui sont dédiées et à celles du Chaos universel pour constituer votre armée.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -6654,6 +6654,21 @@ netea-tournament-pack-2017-03-21</description>
 1: the unit is destroyed 
 2-3: the unit suffers one more point of damage 
 4–6: the breach has been repaired.</description>
+    </rule>
+    <rule id="359e-50a3-0ab6-cbee" name="Critical Hit: Immobile" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobile:&lt;/B&gt; Ne peut plus bouger, les prochaines touche critique causeront la perte d’un point de dommage supplémentaire.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Immobilised, subsequent critical hits cause an additional 1DC of damage.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
