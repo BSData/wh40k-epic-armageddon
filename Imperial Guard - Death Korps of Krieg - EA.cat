@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="30" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="31" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -569,13 +569,13 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="ed91-b93d-797b-4145" hidden="false" targetId="92a1-89e4-71d0-6132" type="profile">
+            <infoLink id="ed91-b93d-797b-4145" name="Gorgon HF" hidden="false" targetId="92a1-89e4-71d0-6132" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="5b8e-1a7d-0720-e4c1" hidden="false" targetId="8f40-5c50-5ddf-3305" type="rule">
+            <infoLink id="5b8e-1a7d-0720-e4c1" name="Critical Hit: Immobile" hidden="false" targetId="359e-50a3-0ab6-cbee" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5362,7 +5362,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="9790-4391-6eb0-ebe9" hidden="false" targetId="8f40-5c50-5ddf-3305" type="rule">
+            <infoLink id="9790-4391-6eb0-ebe9" name="Critical Hit: Immobile" hidden="false" targetId="359e-50a3-0ab6-cbee" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -8715,24 +8715,17 @@ Commissars in a Death Korps of Krieg Imperial Guard army must be attached to a u
       <modifiers>
         <modifier type="set" field="description" value="May not move, D3 units hit, further critical hits destroy the unit.">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Puede no Moverse: &lt;/B&gt;La unidad queda inmovilizada. Otro daño crítico la destruirá.&lt;/I&gt;">
-          <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -8740,23 +8733,55 @@ Commissars in a Death Korps of Krieg Imperial Guard army must be attached to a u
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Puede no Moverse: &lt;/B&gt;La unidad queda inmovilizada, y 1D3 unidades transportadas sufren un impacto. Otro daño crítico la destruirá.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé et D6 des unités transportées sont touchées. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Puede no Moverse: &lt;/B&gt;La unidad queda inmovilizada, y 1D6 unidades transportadas sufren un impacto. Otro daño crítico la destruirá.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé et D3 des unités transportées sont touchées. La prochaine touche critique détruit la Gorgone.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -9541,7 +9566,7 @@ All other formations have an initiative rating of 2+.
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;and Ignore Cover, +1A"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport, Walker"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="May Not Move"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobile"/>
       </characteristics>
     </profile>
     <profile id="66fe-0215-7b1f-d718" name="Gorgon M" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

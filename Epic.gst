@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="21" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="22" battleScribeVersion="2.01" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="ccd6-7082-7a99-1836" name="· General Disclaimer" hidden="false">
@@ -4080,7 +4080,7 @@ Fearless units still count as part of a formation, and so will sometimes be “d
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Posiciones Fortificadas: &lt;/B&gt;Las posiciones fortificadas deben ser desplegados después de los objetivos, pero antes de las naves espaciales y las patrullas. Pueden colocarse en cualquier parte donde pudiera desplegarse un vehículo, dentro de la mitad del terreno del jugador. &lt;BR&gt; Puedes dividir cada conjunto de posiciones fortificadas como desees, mientras se respeten las reglas de coherencia de formación. Se considera que las posiciones fortificadas tienen Velocidad 0cm, y pueden patrullar (es decir, pueden ser colocadas donde normalmente podrías colocar una patrulla). No hace falta decir que no es posible transportar a las posiciones fortificadas. &lt;BR&gt; Una vez colocadas, pueden ser usadas por cualquier unidad, no sólo las unidades para las que fueron adquiridas. También pueden ser capturadas y utilizadas por el enemigo.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Posiciones Fortificadas: &lt;/B&gt;Las posiciones fortificadas se colocarán después de los objetivos, pero antes de las naves espaciales y patrullas. La única excepción son las posiciones fortificadas que vengan listadas como “unidades” que forman parte de una formación. Aunque no son realmente unidades, estas posiciones fortificadas deberán desplegarse junto con la formación para la que fueron adquiridas. &lt;BR&gt; Pueden colocarse en cualquier parte donde pudiera desplegarse un vehículo, dentro de la propia mitad de la mesa de juego. No pueden ser transportadas. Cada conjunto de posiciones fortificadas (sean parte de una formación o no) debe colocarse a 5cm o menos de otra pieza del mismo conjunto, de manera que formen una “cadena” sin huecos mayores de 5cm. Adicionalmente, si un grupo de posiciones fortificadas fue adquirido como parte de una formación, al menos una pieza del conjunto debe desplegarse a 5cm o menos de alguna unidad de dicha formación. &lt;BR&gt; Una vez colocadas, las posiciones fortificadas pueden ser usadas por cualquier unidad, incluyendo unidades enemigas. &lt;BR&gt; Una unidad en un búnker, emplazamiento para armas o una trinchera no puede ser arrollada por una máquina de guerra.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -4192,7 +4192,7 @@ Units in a Bunker, Gun Emplacement, or Trench may not be barged by a war engine.
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Inspirador: &lt;/B&gt;Cada unidad con esta habilidad que esté implicada en un asalto proporciona un +1 al resultado de resolución del combate (¡siempre que sobreviva a él, por supuesto!).&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Inspirador: &lt;/B&gt;Cada unidad con esta habilidad que esté implicada en un asalto proporciona un +1 al resultado de resolución del combate (¡siempre que sobreviva, por supuesto!).&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -4955,7 +4955,7 @@ Void shields that have been knocked down can be repaired. Each War Engine can re
         </modifier>
       </modifiers>
       <description>Walkers are able to negotiate dangerous terrain more easily than other vehicles. To represent this they may re-roll any failed dangerous terrain tests. 
-May step over units and pieces of terrain that that are lower than the unit’s knees and less than 2cm wide.</description>
+May step over units and pieces of terrain that are lower than the unit’s knees and less than 2cm wide.</description>
     </rule>
     <rule id="6393-ce66-a3b6-8dcc" name="Critical Hit: Holofield Destroyed" hidden="false">
       <profiles/>
@@ -5700,7 +5700,7 @@ Guided Missiles may only be fired at a target formation that is marked, but Guid
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>&lt;I&gt;&lt;B&gt;Reglas Básicas en Español:&lt;/B&gt; EpicManualTorneo #05-11-2015 Traducido al castellano por Dragus
+      <description>&lt;I&gt;&lt;B&gt;Reglas Básicas en Español:&lt;/B&gt; Manual_de_Torneo_NetEA_(17-09-18) #Traducción por Dragus
 EPIC_Rulebook_Esp #1.4 Traducido por Lord_Bruno&lt;/I&gt;</description>
     </rule>
     <rule id="f683-58a7-f502-1938" name="Avatar" hidden="false">
@@ -5857,7 +5857,7 @@ A formation that has no friendly units from a hated formation within 30cm of any
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Escudo Iónico de Caballero: &lt;/B&gt;Las unidades con escudo iónico de Caballero podrán realizar una tirada de salvación de 4+ cuando sufran un impacto, en lugar de su salvación normal por Blindaje. No se aplicarán modificadores a esta tirada de salvación, y no se verá afectada por las habilidades macro-arma, matatitanes y lanza. No obstante, cada punto de daño causado por un arma matatitanes deberá ser salvado independientemente. Si la unidad también posee blindaje reforzado, tendrá permitido repetir la salvación, si la falla, empleando para ello su valor de Blindaje, siempre que no haya sido impactada por un arma con la habilidad de macro-arma, matatitanes o lanza. Por último, la salvación otorgada por el escudo iónico de Caballero no puede emplearse si la unidad está sujeta a Fuego Cruzado, ni para evitar impactos procedentes de fuego de apoyo.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Escudo Iónico de Caballero: &lt;/B&gt;Las unidades con escudo iónico de Caballero podrán realizar una tirada de salvación de 4+ cuando sufran un impacto, en lugar de su salvación normal por Blindaje. No se aplicarán modificadores a esta tirada de salvación por ningún motivo, y no se verá afectada por las habilidades macro-arma, matatitanes y lanza. No obstante, cada punto de daño causado por un arma matatitanes deberá ser salvado independientemente. Si la unidad también posee blindaje reforzado, tendrá permitido repetir la salvación, si la falla, empleando para ello su valor de Blindaje, siempre que no haya sido impactada por un arma con la habilidad de macro-arma, matatitanes o lanza. Por último, la salvación otorgada por el escudo iónico de Caballero no puede emplearse si la unidad está sujeta a Fuego Cruzado, ni para evitar impactos procedentes de fuego de apoyo.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -5941,7 +5941,7 @@ A Knight may not use its shield in two circumstances:
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Sacrificio: &lt;/B&gt;Una unidad con un personaje Paladín del Caos puede ser sacrificada para generar 6 puntos de invocación para invocar un Gran Demonio. El Gran Demonio debe colocarse a 10cm o menos de la unidad sacrificada, y entonces la unidad se retirará del juego (sin generar ningún marcador de explosión para su formación).&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Sacrificio: &lt;/B&gt;Una unidad con un personaje Paladín del Caos puede ser sacrificada para generar 6 puntos de invocación (antes de tirar para determinar el número de puntos de invocación disponibles) para invocar un Gran Demonio. El Gran Demonio debe colocarse a 10cm o menos de la unidad sacrificada, y entonces la unidad se retirará del juego (sin generar ningún marcador de explosión para su formación).&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -6248,6 +6248,13 @@ Note that units with this ability confer the Coordinated Fire ability to any for
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Sin Sangrar: &lt;/B&gt;Los Garras Sangrientas están deseando probarse en batalla. Todas las formaciones de Garras Sangrientas, Garras Celestes y Garras de Asalto que declaren una acción de Atacar, recibirán un +1 a su chequeo de acción. Además, deberán realizar su movimiento de carga completo (a no ser que lleguen al contacto antes de completarlo), siempre que se mantengan en coherencia de formación.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>All Blood Claw, Skyclaw and Swiftclaw formations that are attempting to take engage actions receive a +1 modifier to their action test roll. Additionally, they must always make their complete counter charge move (unless they reach base contact with an enemy unit before then) so long as they remain a legal formation.</description>
     </rule>
@@ -6300,7 +6307,7 @@ Note that units with this ability confer the Coordinated Fire ability to any for
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Metal Viviente: &lt;/B&gt;Las unidades hechas de metal viviente reciben automáticamente la habilidad de blindaje reforzado, y pueden emplearla contra armas normales, lanzas e, incluso, contra macro-armas. Además, su salvación no se reduce por la habilidad de francotirador. Contra armas matatitanes, el metal viviente puede realizar una única salvación por Blindaje y, además, el arma matatitanes queda reducida a matatitanes (1).&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Metal Viviente: &lt;/B&gt;Las unidades hechas de metal viviente reciben automáticamente la habilidad de blindaje reforzado, y pueden emplearla contra armas normales, lanzas e, incluso, contra macro-armas. Además, su salvación no se reduce por la habilidad de francotirador. Contra armas matatitanes, el metal viviente puede realizar una única salvación por Blindaje y, además, esta salvación debe tomarse contra cada punto de daño de TK.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -6533,7 +6540,7 @@ netea-tournament-pack-2017-03-21</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Kaudillo Orko: &lt;/B&gt;Cada ejército Orko debe incluir un comandante en jefe llamado Kaudillo. El Kaudillo es gratuito, no hay que pagar puntos por él. Si el ejército incluye algún Gran Gargante, el Kaudillo deberá asignarse a uno de ellos. Si no hay Grandes Gargantes, el Kaudillo se unirá a un Gargante o a una unidad de Noblez.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Kaudillos Orkos: &lt;/B&gt;Cada ejército Orko debe incluir un comandante en jefe llamado Kaudillo. El Kaudillo es gratuito, no hay que pagar puntos por él. Si el ejército incluye algún Gran Gargante, el Kaudillo deberá asignarse a uno de ellos. Si no hay Grandes Gargantes, el Kaudillo se unirá a un Gargante o a una unidad de Noblez.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -6667,8 +6674,48 @@ netea-tournament-pack-2017-03-21</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Puede no Moverse: &lt;/B&gt;La unidad queda inmovilizada. Otro daño crítico la destruirá.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Immobilised, subsequent critical hits cause an additional 1DC of damage.</description>
+    </rule>
+    <rule id="e3e4-1223-8850-d1ca" name="They Shall Know No Fear" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ed Essi Non Conosceranno La Paura: &lt;/B&gt;Ci vogliono due segnalini Esplosione per sopprimere un&apos;unita&apos; di Space Marine o per ucciderne una in rotta (ignora ogni segnalino Esplosione in eccesso).&lt;BR&gt; Le formazioni di Space Marine vanno in rotta solo con due segnalini Esplosione per unita&apos; nella formazione.&lt;BR&gt; Dimezza il numero di colpi aggiuntivi subiti da una formazione di Space Marine che abbia perso un assalto, arrotondando per difetto in favore degli Space Marine.&lt;BR&gt; Quando una formazione di Space Marine in rotta si riunisce riceve un numero di segnalini Esplosione pari al numero di unita&apos;, invece della meta&apos; di questo numero.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Et Ils Ne Connaitront Pas La Peur:&lt;/B&gt; La bravoure et la ténacité des Space Marines sont légendaires. Ces traits de caractère sont représentés par les règles suivantes: &lt;BR&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Space Marines ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). &lt;BR&gt; Les formations Space Marines ne sont démoralisées qu’à partir du moment où elles ont deux pions d&apos;impact ou plus par unité. &lt;BR&gt; Lorsqu’une formation de Space Marines démoralisée subit un tir, comptez le nombre de pions impacts pour retirer les pertes subies à la fin de la phase de tir ennemi. &lt;BR&gt; Lors d&apos;une résolution d&apos;assaut, le fait d&apos;être plus nombreux que les Space Marines ne compte pas. Par contre le fait d&apos;être plus de deux fois plus nombreux que les Space Marines s&apos;applique toujours. &lt;BR&gt; Réduisez de moitié le nombre de touches supplémentaires subies par une formation de Space Marines perdant un assaut, en arrondissant à l’entier inférieur en faveur des Space Marines. &lt;BR&gt; Lorsqu’une formation Space Marines démoralisée se rallie, elle reçoit un nombre de pions impact égal au nombre d’unités plutôt qu’à la moitié du nombre d’unités. &lt;BR&gt; Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habituellement un seul.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Y No Conocerán el Miedo…: &lt;/B&gt;Se requieren dos marcadores de explosión para acobardar una unidad de Marines Espaciales o para eliminar una unidad de Marines Espaciales de una formación desmoralizada (ignora los marcadores de explosión sobrantes). &lt;BR&gt; Las formaciones de Marines Espaciales sólo son desmoralizadas al acumular dos marcadores de explosión por cada unidad en la formación. &lt;BR&gt; En la resolución del combate, los Marines Espaciales sólo cuentan la mitad de los marcadores de explosión que tengan, redondeando hacia abajo (nótese que no recibirán el +1 por no tener marcadores de explosión si al menos tienen uno antes de dividirlo por dos). Divide por dos el número de impactos adicionales sufridos por una formación de Marines Espaciales cuando es desmoralizada, redondeando hacia abajo a favor de los Marines. &lt;BR&gt; Cuando una formación de Marines Espaciales se reorganiza, recibe un número de marcadores de explosión igual al número de unidades que tenga, en vez de la mitad. Las unidades de Marines Espaciales con la habilidad de líder permiten retirar dos marcadores de explosión adicionales, en lugar de uno.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any left over BMs).
+Space Marine formations are only broken if they have 2BMs per unit.
+Space Marine formations count as having half the number of BMs (rounding down- notethat assault resolution will not receive +1 for having no BM if the formation has 1BM before rounding down) for assault resolution purposes.
+Broken formations receive 1BM per unit when rallying.
+Space Marine Leaders remove 2BMs when rallying.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

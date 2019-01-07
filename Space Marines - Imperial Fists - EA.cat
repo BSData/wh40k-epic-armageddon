@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="29" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9,7 +9,7 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="4bc3-f4ff-f0b5-2624" hidden="false" targetId="67ee-f518-772b-1152" type="rule">
+    <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -7065,6 +7065,13 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Daño Estructural: &lt;/B&gt;La unidad sufre un punto adicional de daños. Esta unidad se convertirá en unos “escombros” una vez sea destruida.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The unit takes an extra point of damage. The unit counts as rubble once it is destroyed.</description>
     </rule>
@@ -7093,6 +7100,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Transportes de los Puños Imperiales: &lt;/B&gt;Los Marines Espaciales son un ejército muy móvil. Por ello, el valor en puntos de un destacamento normalmente incluye suficientes Rhinos para transportar a todas las unidades, incluyendo las de cualquier mejora adquirida. Determina el número de Rhinos necesario después de adquirir las mejoras. El número de Rhinos obtenido siempre será el mínimo necesario para transportar a todas las unidades, ¡no puedes incluir Rhinos de sobra para cubrir las bajas! &lt;BR&gt; Nótese que algunos destacamentos no recibirán Rhinos, normalmente porque no caben en ellos. Los destacamentos que vienen con Rhinos tendrán la anotación &quot;más transporte&quot; en la lista de ejército.&lt;BR&gt; Además, puedes elegir reemplazar los Rhinos de los destacamentos Tácticos o Devastadores por dos Búnkeres y 50 cm de Trincheras o Campos de Minas. La elección debe realizarse antes de cada partida, después de haber visto al ejército enemigo, pero antes de la colocación de las fichas de objetivo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7140,6 +7154,19 @@ You may choose to replace a detachment’s Rhinos with two Bunkers and 50cm of T
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Maestros del Asedio: &lt;/B&gt;Un ejército de Puños Imperiales puede comenzar con tres patrullas en Fuego de Supresión (en lugar de las dos habituales). &lt;BR&gt; Todas las unidades ganarán la habilidad bípode para realizar chequeos de terreno peligroso debidos a Campos de Minas que hayan sido adquiridos como parte del ejército. &lt;BR&gt; Todas las unidades de infantería ganarán la habilidad dañar Primero cuando se encuentren en Trincheras que hayan sido adquiridas como parte del ejército. &lt;BR&gt; Todas las unidades de infantería ganarán una salvación por cobertura de 4+ cuando se encuentren en un Búnker que haya sido adquirido como parte del ejército. Podrán emplear esta salvación incluso contra impactos de macro-arma. Además, podrán repetir la tirada contra impactos que no sean de macro-arma. La habilidad de ignorar cobertura permitirá ignorar esta salvación, como normalmente ocurre.&lt;/I&gt;">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <description>An Imperial Fists army may start three garrisoned formations on overwatch instead of two.
 All units count as having walker when making a dangerous terrain test for entering or starting to move on minefields that have been purchased as part of the army.
@@ -7158,7 +7185,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 5. &lt;BR&gt; Formaciones de Marines Espaciales y Legiones de Titanes: 1+ &lt;BR&gt; Formaciones de la Armada Imperial: 2+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 5. &lt;BR&gt; Formaciones de Defensa Estática: 2+; Resto de formaciones: 1+.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
@@ -7204,39 +7231,6 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </modifiers>
       <description>Although Thunderhawks &amp; Landing Craft are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Support. To select any of these the &quot;War Engine Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further units are taken.</description>
     </rule>
-    <rule id="67ee-f518-772b-1152" name="They Shall Know No Fear" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ed Essi Non Conosceranno La Paura: &lt;/B&gt;Ci vogliono due segnalini Esplosione per sopprimere un&apos;unita&apos; di Space Marine o per ucciderne una in rotta (ignora ogni segnalino Esplosione in eccesso).&lt;BR&gt; Le formazioni di Space Marine vanno in rotta solo con due segnalini Esplosione per unita&apos; nella formazione.&lt;BR&gt; Dimezza il numero di colpi aggiuntivi subiti da una formazione di Space Marine che abbia perso un assalto, arrotondando per difetto in favore degli Space Marine.&lt;BR&gt; Quando una formazione di Space Marine in rotta si riunisce riceve un numero di segnalini Esplosione pari al numero di unita&apos;, invece della meta&apos; di questo numero.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Y No Conocerán el Miedo…: &lt;/B&gt;Se requieren dos marcadores de explosión para acobardar una unidad de Marines Espaciales o para eliminar una unidad de Marines Espaciales de una formación desmoralizada (ignora los marcadores de explosión sobrantes). &lt;BR&gt; Las formaciones de Marines Espaciales sólo son desmoralizadas al acumular dos marcadores de explosión por cada unidad en la formación. &lt;BR&gt; En la resolución del combate, los Marines Espaciales sólo cuentan la mitad de los marcadores de rxplosión que tengan, redondeando hacia abajo (nótese que no recibirán el +1 por no tener marcadores de explosión si al menos tienen uno antes de dividirlo por dos). Divide por dos el número de impactos adicionales sufridos por una formación de Marines Espaciales cuando es desmoralizada, redondeando hacia abajo a favor de los Marines. &lt;BR&gt; Cuando una formación de Marines Espaciales se reorganiza, recibe un número de marcadores de explosión igual al número de unidades que tenga, en vez de la mitad. Las unidades de Marines Espaciales con la habilidad de líder permiten retirar dos marcadores de explosión adicionales, en lugar de uno.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Et Ils Ne Connaitront Pas La Peur:&lt;/B&gt; La bravoure et la ténacité des Space Marines sont légendaires. Ces traits de caractère sont représentés par les règles suivantes: &lt;BR&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Space Marines ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). &lt;BR&gt; Les formations Space Marines ne sont démoralisées qu’à partir du moment où elles ont deux pions d&apos;impact ou plus par unité. &lt;BR&gt; Lorsqu’une formation de Space Marines démoralisée subit un tir, comptez le nombre de pions impacts pour retirer les pertes subies à la fin de la phase de tir ennemi. &lt;BR&gt; Lors d&apos;une résolution d&apos;assaut, le fait d&apos;être plus nombreux que les Space Marines ne compte pas. Par contre le fait d&apos;être plus de deux fois plus nombreux que les Space Marines s&apos;applique toujours. &lt;BR&gt; Réduisez de moitié le nombre de touches supplémentaires subies par une formation de Space Marines perdant un assaut, en arrondissant à l’entier inférieur en faveur des Space Marines. &lt;BR&gt; Lorsqu’une formation Space Marines démoralisée se rallie, elle reçoit un nombre de pions impact égal au nombre d’unités plutôt qu’à la moitié du nombre d’unités. &lt;BR&gt; Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habituellement un seul.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any left over BMs).
-Space Marine formations are only broken if they have 2BMs per unit.
-Space Marine formations count as having half the number of BMs (rounding down- notethat assault resolution will not receive +1 for having no BM if the formation has 1BM before rounding down) for assault resolution purposes.
-Broken formations receive 1BM per unit when rallying.
-Space Marine Leaders remove 2BMs when rallying.</description>
-    </rule>
     <rule id="e6c7-472e-ae6a-aeff" name="Minefield" hidden="false">
       <profiles/>
       <rules/>
@@ -7249,8 +7243,18 @@ Space Marine Leaders remove 2BMs when rallying.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Campo de Minas: &lt;/B&gt;Las unidades enemigas con retrorreactores o gravitatorias tendrán que realizar el chequeo por terreno peligroso. Las unidades enemigas no podrán repetir los chequeos por terreno peligroso fallados por ningún motivo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Enemy units with Jumps Packs or Skimmer must take dangerous tests for Minefields. Enemy units may not re-roll failed dangerous terrain tests for minefields.</description>
+      <description>Enemy units with Jumps Packs or Skimmer must take dangerous tests for Minefields. Enemy units may not re-roll failed dangerous terrain tests for minefields.
+
+
+&lt;I&gt;&lt;B&gt;Campo de Minas: &lt;/B&gt;Las unidades enemigas con retrorreactores o gravitatorias tendrán que realizar el chequeo por terreno peligroso. Las unidades enemigas no podrán repetir los chequeos por terreno peligroso fallados por ningún motivo.&lt;/I&gt;</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

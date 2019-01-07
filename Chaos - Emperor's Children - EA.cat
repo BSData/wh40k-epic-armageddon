@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dd98-b537-47f4-dc63" name="Chaos: Emperor&apos;s Children" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dd98-b537-47f4-dc63" name="Chaos: Emperor&apos;s Children" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="f668-2718-536a-3e9f" hidden="false" targetId="e546-45e8-430f-f372" type="rule">
+    <infoLink id="f668-2718-536a-3e9f" name="Strategy Rating &amp; Initiative (EC)" hidden="false" targetId="ec91-97f1-b1f3-7c0b" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -46,6 +46,18 @@
       <modifiers/>
     </infoLink>
     <infoLink id="e9f4-3f14-6c3f-e30c" name="Chaos Lords" hidden="false" targetId="a511-8156-efe0-82da" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="c5dc-95d1-54cd-2197" name="Strategy Rating &amp; Initiative (EC)" hidden="false" targetId="e546-45e8-430f-f372" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="8801-4d2e-12ac-d290" name="Strategy Rating &amp; Initiative (EC)" hidden="false" targetId="2bed-3d25-f716-c3eb" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -10640,20 +10652,20 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Emperor&apos;s Children armies have a strategy rating of 4. Chaos Navy, Questor, Subjugator and Knight Pack formations have an initiative rating of 2+. All other formations have an initiative rating of 1+.">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 3. &lt;BR&gt; Formaciones de la Armada del Caos: 2+; Resto de formaciones: 1+.&lt;/I&gt;">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Emperor’s Children ont une valeur stratégique de 4.  Les formations de l&apos;armée et Les formations de démons mineurs comprenant également un démon majeur ont une initiative de 1+.  Les formations de démons mineurs, les chevaliers démons et la flotte de guerre du chaos ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
               <conditionGroups/>
@@ -10661,7 +10673,10 @@ Fanatic #13</description>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <description>All Emperor’s Children, Daemon and Slaanesh Titan Legion formations have an initiative rating of 1+. Chaos Navy formations have an initiative rating of 2+. Emperor’s Children armies have a strategy rating of 3.</description>
+      <description>All Emperor’s Children, Daemon and Slaanesh Titan Legion formations have an initiative rating of 1+. Chaos Navy formations have an initiative rating of 2+. Emperor’s Children armies have a strategy rating of 3.
+
+
+&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 3. &lt;BR&gt; Formaciones de la Armada del Caos: 2+; Resto de formaciones: 1+.&lt;/I&gt;</description>
     </rule>
     <rule id="ee66-fbfa-baf7-5e6c" name="Summoned Units" hidden="false">
       <profiles/>
@@ -10900,6 +10915,50 @@ Summoned units remain on the battlefield until the end phase of the turn in whic
         </modifier>
       </modifiers>
       <description>Chaos Space Marine Lord Characters may only be added to core units within a formation. They may not be added to any upgrade units purchased for a formation.</description>
+    </rule>
+    <rule id="2bed-3d25-f716-c3eb" name="Strategy Rating &amp; Initiative (EC)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Estrategia e Iniciativa: &lt;/B&gt;Factor de Estrategia: 4. &lt;BR&gt; Formaciones de la Armada del Caos, Questor, Subjugator y Grupos de Caballeros: 2+; Resto de formaciones: 1+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Emperor&apos;s Children armies have a strategy rating of 4. Chaos Navy, Questor, Subjugator and Knight Pack formations have an initiative rating of 2+. All other formations have an initiative rating of 1+.</description>
+    </rule>
+    <rule id="ec91-97f1-b1f3-7c0b" name="Strategy Rating &amp; Initiative (EC)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Emperor’s Children ont une valeur stratégique de 4.  Les formations de l&apos;armée et Les formations de démons mineurs comprenant également un démon majeur ont une initiative de 1+.  Les formations de démons mineurs, les chevaliers démons et la flotte de guerre du chaos ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Emperor&apos;s Children armies have a strategy rating of 4. Chaos Navy, Lesser Daemons and Daemon Knight formations have an initiative rating of 2+. Lesser Daemon formations which include a Greater Daemon, and all other formations, have an initiative rating of 1+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
