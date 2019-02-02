@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a1f7-a7cd-8f96-ed57" name="Inquisition: Sisters of Battle, Orders Militant Adepta Sororitas" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a1f7-a7cd-8f96-ed57" name="Inquisition: Sisters of Battle, Orders Militant Adepta Sororitas" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="2389-41d6-1f04-c7d0" hidden="false" targetId="e3b9-3c23-fd8b-8662" type="rule">
+    <infoLink id="2389-41d6-1f04-c7d0" name="Strategy Rating &amp; Initiative (SoB)" hidden="false" targetId="e3b9-3c23-fd8b-8662" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="1c01-90a5-3f87-e3a0" hidden="false" targetId="c755-23b1-94c8-f20e" type="rule">
+    <infoLink id="1c01-90a5-3f87-e3a0" name="Acts of Faith" hidden="false" targetId="c755-23b1-94c8-f20e" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
+    </infoLink>
+    <infoLink id="c5d5-72d5-f4f0-87e1" name="Strategy Rating &amp; Initiative (SoB)" hidden="false" targetId="fc41-4ac8-0511-9d0e" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="1c6e-6142-4125-9963" name="Strategy Rating &amp; Initiative (SoB)" hidden="false" targetId="065e-076c-a853-8602" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="3dc6-b895-075d-39f7" name="Acts of Faith" hidden="false" targetId="a9de-5d28-4176-6791" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
   </infoLinks>
   <costTypes/>
@@ -111,7 +137,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="e4c8-2ce8-138a-8d0f" hidden="false" targetId="02cd-253a-0477-ba88" type="rule">
+        <infoLink id="e4c8-2ce8-138a-8d0f" name="Critical Hit: Immobile" hidden="false" targetId="359e-50a3-0ab6-cbee" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -938,7 +964,7 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="6db3-39e4-2eca-2fef" hidden="false" targetId="c0b3-2bd6-e971-a248" type="profile">
+            <infoLink id="6db3-39e4-2eca-2fef" name="Cathedral" hidden="false" targetId="c0b3-2bd6-e971-a248" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -950,7 +976,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="ffeb-07b9-ae99-b6d9" hidden="false" targetId="02cd-253a-0477-ba88" type="rule">
+            <infoLink id="ffeb-07b9-ae99-b6d9" name="Critical Hit: Immobile" hidden="false" targetId="359e-50a3-0ab6-cbee" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -5035,11 +5061,19 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="311d-a089-f1c6-811e" name="Stubborn (SoB)" hidden="false" targetId="ef42-3efb-0c94-4e35" type="rule">
+        <infoLink id="311d-a089-f1c6-811e" name="Stubborn" hidden="false" targetId="6c4c-d0ce-1d05-719d" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="5752-8978-4b7f-c27b" hidden="false" targetId="12e3-40c1-4293-892e" type="profile">
           <profiles/>
@@ -5557,86 +5591,19 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Acte de Foi:&lt;/B&gt; Toute formation compagnie avec la capacité Fidèle peut accomplir les Actes de Foi, la formation s&apos;active à -1 initiative, mais les Actes de Foi ne s&apos;appliquent pas si la formation échoue son rôle d&apos;initiative. La formation reçoit des capacités de Sans Peur et Sauvegarde Invulnérable qui dure jusqu&apos;à la phase finale.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Acte de Foi:&lt;/B&gt; Au moment d’être jouée, une formation de sœurs de bataille de type &apos;Conventus&apos; peut tenter un ordre d’Acte de Foi à la place des ordres classiques. Les autres types de formations ne peuvent pas tenter cet ordre. Annoncez l’acte de foi que votre formation va pratiquer puis faites un jet d’initiative avec les malus habituels pour activer votre formation. &lt;BR&gt; Si le jet est réussi, les unités de type infanterie bénéficient immédiatement du bonus liée au type d’acte de foi annoncé précédemment puis la formation peut choisir d’effectuer soit un mouvement, soit un tir. Si le jet est raté, la formation prendra un pion impact supplémentaire comme normalement et agira avec l’ordre Tenir. Aucune relance de Commandant suprême n’est possible dans ce cas, les sœurs étant trop déstabilisées par le fait que leurs prières n’aient pas été entendues. &lt;BR&gt; Le Divin Guide: Toutes les unités d’Infanterie de la Formation disposent des Capacités Sauvegarde Invulnérable et Sans Peur jusqu’à la fin du tour. &lt;BR&gt; La Lumière de L’Empereur: Toutes les unités d’Infanterie de la Formation disposent de la Capacité Sauvegarde Invulnérable et Relancent les jets de tirs ratés (à l’exception des 1) jusqu’à la fin du tour. &lt;BR&gt; Esprit des Martyrs: Toutes les unités d’Infanterie de la Formation disposent de la Capacité Sauvegarde Invulnérable et la Formation complète dispose d’un bonus de +1 à la résolution des Assauts jusqu’à la fin du tour.&lt;/I&gt;">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="Any company formation with the Faithful special rule may perform the Acts of Faith, the formation activates at -1 initiative, however the Acts of Faith does not apply if the formation fails its initiative roll. The formation receives Fearless and Invulnerable Save special rules which lasts until the end phase.">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="Any Adeptus Sororitas company containing units with the Faithful special rule may choose to perform an Act of Faith when it takes an action test roll. &lt;BR&gt;The formation receives a -1 penalty to this roll (which is cumulative with any other modifiers). If the action test is passed, the formation carries out the chosen action as usual. In addition all units in the formation gain the Fearless and Invulnerable Save special rules until the end phase.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Acte de Foi:&lt;/B&gt; Toute compagnie d&apos;Adeptus Sororitas contenant des unités avec la règle spéciale Fidèle peut choisir d&apos;effectuer un acte de foi quand elle prend un jet d&apos;action. &lt;BR&gt; La formation reçoit une pénalité de -1 à ce jet (qui est cumulatif avec tous les autres modificateurs). Si le test d&apos;action est passé, la formation exécute l&apos;action choisie comme d&apos;habitude. De plus, toutes les unités de la formation gagnent les règles spéciales Sans Peur et Sauvegarde Invulnérable jusqu&apos;à la fin de la phase.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <description>When activated, a formation of Battle Sisters of the &apos;Conventus&apos; type may attempt an Order of Faith instead of classical orders. Other types of formation can not attempt this order. Announce the act of faith that your formation will practice and then make an initiative roll with the usual penalties to activate your formation.
@@ -5644,21 +5611,6 @@ If the roll is successful, the infantry-type units immediately benefit from the 
 The Divine Guide: All Infantry units in the formation have the Invulnerable Save and Fearless special rules until the end of the turn.
 The Emperor&apos;s Light: All Infantry units in the formation have the Invulnerable Save special rule and re-roll missed shots (except results of 1) until the end of the turn.
 Spirit of the Martyrs: All Infantry units in formation have the Invulnerable Save special rule and the entire formation gains a +1 bonus to their assault resolution until the end of the turn.</description>
-    </rule>
-    <rule id="02cd-253a-0477-ba88" name="Critical Hit: Immobilised" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt; Immobilisé, les critiques suivant lui font perdre 1CD.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit is immobilised. Further Critical Hits cause 1 additional point of damage.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -5688,96 +5640,7 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Adepta Sororitas Army has a Strategy Rating of 3. All Sister of Battle formations have an initiative of 1+, Inquisitorial Warband, Crusaders, Inquisitorial Armoured Fist, Conclave, Penitence, Imperial Navy and War Engine formations have an initiative of 2+.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade et la Marine Impériale.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade, Bande Inquisitoire,  Bande Inquisitoire Mécanisé, Conclave, Pénitence, Marine Impériale et l&apos;Engine de Guerre.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="Adeptus Sororitas armies have a strategy rating of 3. All Adeptus Sororitas companies have an initiative of 1+. Inquisitor, Crusaders, Conclave, Penitence and Imperial Navy formations have an initiative of 2+.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade, Inquisitoire, Conclave, Pénitence, et Marine Impériale.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>Adepta Sororitas Armies have a Strategy rating of 3. Sororitas Detachments have an initiative rating of 1+. Crusaders and Imperial Navy have an initiative rating of 2+.</description>
-    </rule>
-    <rule id="ef42-3efb-0c94-4e35" name="Stubborn (SoB)" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
@@ -5791,8 +5654,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Sororitas Abteilungen haben den Initiativwert 1+. Kreuzritter und Flugzeuge der Imperial Navy haben den Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.</description>
+      <description>Adepta Sororitas Armies have a Strategy rating of 3. Sororitas Detachments have an initiative rating of 1+. Crusaders and Imperial Navy have an initiative rating of 2+.</description>
     </rule>
     <rule id="16a2-5164-43f1-d64a" name="Throne of Fury" hidden="false">
       <profiles/>
@@ -5806,6 +5676,13 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Thron der Wut: Die Formation, die den Thron enthält, hat die Furchtlose Regel. Wenn der Thron zerstört wird, wird die Formation automatisch gebrochen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The formation containing the Throne gains Fearless. If the Throne is destroyed, the formation is automatically broken.</description>
     </rule>
@@ -5815,6 +5692,64 @@ Fanatic #13</description>
       <infoLinks/>
       <modifiers/>
       <description>see codex</description>
+    </rule>
+    <rule id="fc41-4ac8-0511-9d0e" name="Strategy Rating &amp; Initiative (SoB)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade, Inquisitoire, Conclave, Pénitence, et Marine Impériale.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Alle Adeptus Sororitas Kompanies haben den Initiativwert 1+. Inquisitoren, Kreuzritter, Konklave, Buße und Flugzeuge der Imperial Navy haben den Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Adeptus Sororitas armies have a strategy rating of 3. All Adeptus Sororitas companies have an initiative of 1+. Inquisitor, Crusaders, Conclave, Penitence and Imperial Navy formations have an initiative of 2+.</description>
+    </rule>
+    <rule id="065e-076c-a853-8602" name="Strategy Rating &amp; Initiative (SoB)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Stratégie: 3. Initiative: 1+ pour les Sororitas, 2+ pour la Croisade, Bande Inquisitoire,  Bande Inquisitoire Mécanisé, Conclave, Pénitence, Marine Impériale et l&apos;Engine de Guerre.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Alle Schwestern der Schlacht Formationen haben den Initiativwert 1+. Inquisitorische Kriegsband, Kreuzritter, Inquisitorische Gepanzerte Faust, Konklave, Buße, Flugzeuge der Imperial Navy und Kriegsmaschine-Formationen haben den Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Adepta Sororitas Army has a Strategy Rating of 3. All Sister of Battle formations have an initiative of 1+. Inquisitorial Warband, Crusaders, Inquisitorial Armoured Fist, Conclave, Penitence, Imperial Navy and War Engine formations have an initiative of 2+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -6057,7 +5992,7 @@ Fanatic #13</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Reinforced Armour"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="6"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobilised"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobile"/>
       </characteristics>
     </profile>
     <profile id="a13e-ba9d-bbaf-6926" name="Cathedral of Purification" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
@@ -6077,7 +6012,7 @@ Fanatic #13</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;and Ignore Cover"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Inspiring, Reinforced Armour, Transport, Walker, 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="6"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobilised"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobile"/>
       </characteristics>
     </profile>
     <profile id="6947-f5db-1737-bfeb" name="Celestian Sister" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">

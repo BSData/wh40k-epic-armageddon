@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="701c-68de-1081-f0f4" name="Inquisition: Ordo Hereticus" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="701c-68de-1081-f0f4" name="Inquisition: Ordo Hereticus" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2496,7 +2496,7 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="aa9a-db9c-18ed-81d3" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
+            <infoLink id="aa9a-db9c-18ed-81d3" name="Warhound Titan" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -2526,7 +2526,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="62e7-3ead-4865-bb27" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+            <infoLink id="62e7-3ead-4865-bb27" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -3308,36 +3308,6 @@
       </modifiers>
       <description>The unit takes an additional point of damage and D6 transported units suffer a hit.</description>
     </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.
-&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;</description>
-    </rule>
     <rule id="cc54-effc-83d4-a6c1" name="Critical Hit: Obsidian Fortress" hidden="false">
       <profiles/>
       <rules/>
@@ -3364,11 +3334,24 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Fidèles:&lt;/B&gt; Avant de rouler pour activer, formations contenant au moins une unité avec la règle spéciale Fidèles peuvent déclarer qu&apos;ils accomplissent un acte de foi. Formations qui ont choisi de le faire ont une pénalité de -1 à leur initiative pour leur rôle d&apos;activation. Si le test est passé toutes les unités fidèles à la formation reçoivent les capacités spéciales Sans Peur et Sauvegarde Invulnérable jusqu&apos;à ce que les formations activation prochaines. &lt;BR&gt; Si le test échoue, la formation doit prendre une action de Tenir comme normale et aucun bonus sont reçus.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Gläubigen: Jede Adeptus Sororitas-Formation, die Einheiten mit der Gläubigen-Regel enthält, kann sich dazu entscheiden, eine Glaubensakt durchzuführen, wenn sie einen Aktionstest ablegt. Die Formation erhält eine Strafe von -1 für diesen Wurf. Wenn der Aktionstest bestanden ist, führt die Formation die gewählte Aktion wie üblich aus. Zusätzlich erhalten alle Einheiten in der Formation bis zum Beginn ihrer nächsten Aktivierung die Regeln Furchtlos und Unverwundbar Rettung. Wenn der Test nicht bestanden wird, muss die Formation wie üblich eine Hold-Aktion ausführen und es werden keine Boni erhalten.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <description>Before rolling to activate, formations containing at least one unit with the Faithful special rule may declare they are performing an Act of Faith. Formations doing so have a -1 penalty to their initiative for their activation roll. If the test is passed all Faithful units in the formation receive the Fearless and Invulnerable Save special abilities until the formation’s next activation. 
-If the test is failed, the formation must take a Hold action as normal and no bonuses are received.
-&lt;I&gt;&lt;B&gt;Fidèles:&lt;/B&gt; Avant de rouler pour activer, formations contenant au moins une unité avec la règle spéciale Fidèles peuvent déclarer qu&apos;ils accomplissent un acte de foi. Formations qui ont choisi de le faire ont une pénalité de -1 à leur initiative pour leur rôle d&apos;activation. Si le test est passé toutes les unités fidèles à la formation reçoivent les capacités spéciales Sans Peur et Sauvegarde Invulnérable jusqu&apos;à ce que les formations activation prochaines. &lt;BR&gt;
-Si le test échoue, la formation doit prendre une action de Tenir comme normale et aucun bonus sont reçus.&lt;/I&gt;</description>
+If the test is failed, the formation must take a Hold action as normal and no bonuses are received.</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <profiles/>
@@ -3398,9 +3381,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Eine Taskforce der Inquisition hat einen Strategiewert von 3, es sei denn, die truppe besteht ausschließlich aus Adeptus Sororitas und Imperialen Verbündeten. In diesem Fall handelt es sich um 4. Wenn in der truppe Imperiale Armee-Formationen enthalten sind, hat sie einen Strategiewert von 2.  • Inquisitorische Streitkräfte, Adeptus Sororitas und Titanenlegion haben den Initiativwert 1+. Imperiale Armee-Formationen und Flugzeuge der Imperial Navy haben den Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Inquisition Task Forces have a Strategy rating of 3, unless the force is composed entirely of Adepta Sororitas and Imperial Allies, whereby it is 4+. 
-If any Inducted Imperial Guard formations are included in the army it has a Strategy rating of 2+. 
+      <description>Inquisition Task Forces have a Strategy rating of 3, unless the force is composed entirely of Adepta Sororitas and Imperial Allies, whereby it is 4+. If any Inducted Imperial Guard formations are included in the army it has a Strategy rating of 2+. 
 Inquisitorial Forces, Adepta Sororitas and Inducted Titan Legions have an initiative rating of 1+.
 Inducted Imperial Guard and Imperial Navy formations have an initiative rating of 2+.</description>
     </rule>
@@ -4100,7 +4089,7 @@ Valkyrie: 2 of the following units: Death Cult Assassins, Imperial Guard Infantr
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Slow Firing, Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="dc1f-622e-cffb-0339" name="Warlord Titan" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar: Kabal" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar: Kabal" revision="29" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -15,7 +15,7 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="1688-2191-7238-53a7" hidden="false" targetId="b786-c22d-2443-b225" type="rule">
+    <infoLink id="1688-2191-7238-53a7" name="May Not Garrison" hidden="false" targetId="b786-c22d-2443-b225" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -40,6 +40,18 @@
       <modifiers/>
     </infoLink>
     <infoLink id="15f1-e1b0-6e95-62c9" name="Strategy Rating &amp; Initiative (DE)" hidden="false" targetId="1fe9-510d-1db4-e467" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="e102-6d11-fef5-1a81" name="May Not Garrison" hidden="false" targetId="8ce9-b8c1-c932-5e05" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="be22-84fc-e0f7-b126" name="May Not Garrison" hidden="false" targetId="cd09-84ab-24c3-c2f7" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1398,11 +1410,25 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="85e3-c012-9d64-de9f" hidden="false" targetId="9b65-5720-4824-2ef8" type="rule">
+        <infoLink id="85e3-c012-9d64-de9f" name="Critical Hit: Weapons Damaged" hidden="false" targetId="540a-d1d6-cc8c-f79b" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="ca4c-28d8-aff8-a948" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
           <profiles/>
@@ -4418,7 +4444,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="5597-0e57-4e0f-1103" hidden="false" targetId="4499-a5cb-23c7-3f35" type="rule">
+        <infoLink id="5597-0e57-4e0f-1103" name="Kashnarak" hidden="false" targetId="4499-a5cb-23c7-3f35" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4428,17 +4454,10 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <constraints>
@@ -4513,7 +4532,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="89dc-77df-740a-6b21" hidden="false" targetId="4499-a5cb-23c7-3f35" type="rule">
+        <infoLink id="89dc-77df-740a-6b21" name="Kashnarak" hidden="false" targetId="3b11-29d9-46ea-9972" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -7831,11 +7850,25 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="bcf1-c4ca-3098-1449" name="Critical Hit: Weapons Damaged" hidden="false" targetId="9b65-5720-4824-2ef8" type="rule">
+        <infoLink id="bcf1-c4ca-3098-1449" name="Critical Hit: Weapons Damaged" hidden="false" targetId="540a-d1d6-cc8c-f79b" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="cc7e-a19f-086a-5a94" name="Shadowfields" hidden="false" targetId="70fd-9974-2fb9-2e6d" type="rule">
           <profiles/>
@@ -9615,6 +9648,13 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Korsar-Klasse Begleitschiffe: Korsaren bilden ein Geschwader und verhalten sich wie ein einzelnes Raumfahrzeug. Sie können ihre Orbitalbombardements zu einem einzigen Schlag zusammenfassen oder separat feuern (Vorlagen dürfen sich nicht überlappen).">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Form a single squadron and act in the same manner as a single spacecraft. They may combine their Orbital Bombardments into a single strike, or fire separately (templates may not overlap).</description>
     </rule>
@@ -9634,6 +9674,13 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Barke: FF auf 6+ reduziert. Nachfolgende kritische Treffer verursachen einen zusätzlichen Schaden von 1 DC.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -9659,6 +9706,13 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Scharfrichter: Phantomlanzen zerstört. Nachfolgende kritische Treffer verursachen einen zusätzlichen Schaden von 1 DC.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Phantom Lances destroyed. Additional Critical hits will cause an extra point of damage.</description>
     </rule>
@@ -9671,6 +9725,13 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Schmerzschiffe: Zerstört. Einheiten im Umkreis von 5 cm erleiden einen AP5+ Treffer.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -9703,43 +9764,15 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Quälgeist Titan: Die Bewegung wird auf 25 cm reduziert und die Sprungmodulefähigkeit wird für den Rest des Spiels verloren. Nachfolgende kritische Treffer verursachen einen zusätzlichen Schaden von 1 DC.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Movement is reduced to 25cm and it loses the Jump Pack ability for the rest of the game. Further critical hits cause an extra point of damage.</description>
-    </rule>
-    <rule id="9b65-5720-4824-2ef8" name="Critical Hit: Weapons Damaged" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Armas Dañadas: &lt;/B&gt;La unidad pierde todas sus armas y ya no puede disparar, ni tiene valores de CC ni TT. Daños críticos subsiguientes la destruirán.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Armes Endommagé:&lt;/B&gt; L&apos;unité ne peut plus tirer d&apos;armes, se battre corps à corps ou tirer dans une fusillade (les unités transportées peuvent encore se battre en utilisant la capacité du deck d&apos;assaut). Toutes les touches critiques suivantes provoqueront un point de dommage supplémentaire.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Unit may no longer fire any weapons, close combat, or firefight (transported units may still fight using the Assault Deck ability). Additional Critical hits will cause an extra point of damage.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -9781,6 +9814,13 @@ DarkEldarQuickRef #05062015</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Flink: Dark Eldar-Formationen erleiden nicht die typischen Strafen, die andere Rassen nach einer März-Aktion hätten. Dark Eldar-Formationen, die marschiert sind, können Angriffe unterstützen, einen Kreuzfeuer-Bonus beanspruchen und sogar Flak-Schüsse abfeuern.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Dark Eldar formations do not incur the typical penalties that other races would after taking a March action. Dark Eldar formations that have marched may lend support in assaults, help claim a crossfire bonus, and even fire flak shots.</description>
     </rule>
@@ -9813,6 +9853,13 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Schlag und Laufe Taktik: Dark Eldar-Formationen, die Advance- oder Double-Aktionen ausführen, können entweder vor oder nach jeder Bewegung schießen. Sie dürfen jedoch während der Aktion nur einmal schießen. Zum Beispiel könnte eine Dark Eldar-Formation, die eine Advance-Aktion ausführt, schießen und sich dann bewegen oder bewegen und dann schießen. Eine Formation, die eine Double-Aktion ausführt, könnte zweimal schießen und sich bewegen, zweimal bewegen und dann schießen oder sich bewegen, dann schießen und dann wieder bewegen.  • Zusätzlich Dark Eldar Formationen, die bei einem Angriff gewinnt dürfen jede Distanz bewegen, bis zu deren Geschwindigkeitswert, wenn sie konsolidieren, anstatt zu einer Bewegung von 5cms beschränkt zu sein, wie es normalerweise der Fall wäre.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Dark Eldar formations that take advance or double actions may choose to shoot either before or after each move. However, they may still only shoot once during the action. For example, a Dark Eldar formation taking an advance action could shoot and then move or move and then shoot, while a formation taking a double action could shoot and move twice, move twice and then shoot, or move then shoot and then move again.
 In addition, a Dark Eldar formation that wins an assault is allowed to move any distance up to its speed value when they consolidate, rather than being limited to a move of 5cms as would normally be the case.</description>
@@ -9822,31 +9869,12 @@ In addition, a Dark Eldar formation that wins an assault is allowed to move any 
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="The Kashnarak is a massive, enraged animal that squeezes through a Webway portal and is set loose on the battlefield at the beginning of any turn the Dark Eldar desire (before strategy roll) and acts as a “third” player. It will always attempt a barging, close combat assault on the closest formation(s), even Dark Eldar formations! If unable to reach base-to-base contact, the beast will march toward the closest formation, to its maximum movement. If it reaches an enemy zone of control, the beast stops its move. Consolidation moves are also toward the closest formation. From then on, it is the first activation of subsequent turns, before the strategy roll or teleport, following the model above. A broken Kashnarak will remain in place on the board and will not attempt a move until it rallies.&lt;BR&gt;The exceptions are when in the presence of a Wych unit. If within 15cm of a Wych unit at the beginning of the Kashnarak activation (see above), its assault or move may be directed by the Dark Eldar player. This includes a Wych unit within 15cm of the Kashnarak’s Webway portal. In addition, the Kashnarak will never move toward or assault a Wych formation; instead it will choose the next closest formation. These directed actions still take place prior to the strategy roll for the turn.&lt;BR&gt;Regardless of its actions, the Kashnarak is not considered part of the Dark Eldar force for the purposes of placing formations, holding objectives, calculating crossfire, or determining victory conditions and tie-breaker calculations. It neither counts toward Dark Eldar activations nor does it count toward Webway Portal use. It does not benefit from Hit &amp; Run tactics. The Kashnarak can contest objectives for both the Dark Eldar (except when within 15cm of a Wych unit) and their opponents.">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Kashnarak: &lt;/B&gt;El Kashnarak es un enorme y rabioso animal que emerge a través de un portal a la telaraña para sembrar la devastación en el campo de batalla al comienzo del turno que desee el jugador Eldar Oscuro (antes de la tirada de estrategia), y actúa como un “tercer jugador”. Siempre intentará lanzarse al combate cuerpo a cuerpo contra la formación (o formaciones) más cercana, ¡incluso formaciones de los Eldar Oscuros! Si le resulta imposible alcanzar el contacto peana con peana, la bestia Marchará hacia la formación más cercana. En cada turno subsiguiente, tendrá la primera activación del turno, antes de la tirada de estrategia y de los teletransportes. Un Kashnarak desmoralizado permanecerá inmóvil en el campo de batalla hasta que se reorganice. &lt;BR&gt; La excepción es cuando esté presente una unidad de Brujas. Si el Kashnarak está a 15cm o menos de una unidad de Brujas al comienzo de su activación, su asalto o movimiento podrá ser dirigido por el jugador Eldar Oscuro. Esto también se cumplirá si hay una unidad de Brujas a 15cm o menos del portal a la telaraña a través del que el Kashnarak va a entrar en juego. Además, el Kashnarak nunca asaltará ni moverá hacia una formación de Brujas; en lugar de eso, deberá elegirse la siguiente formación más cercana. Estas acciones dirigidas tendrán también tendrán lugar antes de la tirada de estrategia del turno. &lt;BR&gt; Sin importar qué acciones realice, el Kashnarak no se considera parte del ejército Eldar Oscuro a efectos de desplegar formaciones, controlar objetivos, calcular el fuego cruzado, o determinar condiciones de victoria o desempate. Tampoco cuenta como una activación de formación de los Eldar Oscuros, ni para el uso del portal a la telaraña. No se beneficia de la regla tácticas de ataque y retirada. El Kashnarak puede disputar objetivos, tanto los del jugador Eldar Oscuro (salvo que esté a 15cm o menos de una unidad de Brujas) como los de su oponente.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <description>It will always attack the closest formation on the next available activation, even Dark Eldar formations. If unable to attack, the beast will march or move toward the closest formation to its maximum movement. If it reaches impassable terrain, the beast stops its move. From then on, it activates on the first move of subsequent turns, following the model above.
@@ -9858,80 +9886,19 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Dark Eldar are forbidden from garrisoning any formations in the Epic tournament game scenario.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="Only Mandrake formations may set up using the tournament game garrison rule.">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Los Eldar Oscuros tienen prohibido hacer patrullas en las batallas de torneo.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Nur Formationen, die ausschließlich aus Hellions bestehen, dürfen eine Garnison bilden.">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Aucune formation Eldar noir ne peut se déployer en garnison.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="No Dark Eldar formation can deploy in garrison.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <description>Only formations made solely of Hellions may garrison objectives in the Grand Tournament game scenario.</description>
@@ -9955,6 +9922,13 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Tragbare Phantomtor: Dieses tragbare Portal des Netzes von tausend Toren kann einmal im Spiel verwendet werden. Nachdem die Formation des Charakters eine Aktion abgeschlossen hat, können Sie eine Sperrfeuervorlage vollständig innerhalb von 15 cm vom Charakter und außerhalb der gegnerischen Kontrollzonen platzieren. Dieser Marker gilt als Portal, das in keiner Weise angegriffen oder beschädigt werden darf. Entferne diesen Phantomtor-Marker in der Endphase des Spielzugs, bevor er sammelt.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>This portable webway portal may be used once in the game. After the character&apos;s formation completes an action you may place a barrage template marker completely within 15cm of the character and outside any enemy zones of control. This marker counts as a webway portal which may not be attacked or damaged in any way. Remove this webway portal marker in the end phase of the turn before any rallying.</description>
     </rule>
@@ -9974,6 +9948,13 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Schattenfelder: Jedes Schattenfeld absorbiert einen erfolgreichen Treffer, bevor es niedergeht. Für diesen Treffer werden keine Blast-Marker verursacht. Eine Kriegsmaschine mit mindestens einem verbleibenden Schattenfeld regeneriert am Ende der Rally-Phase jeder Runde ein zusätzliches Feld. Die Kriegsmaschine kann niemals mehr Schattenfelder als ursprünglich zugewiesen haben. Darüber hinaus gilt ein aktives Schattenfeld immer als in Abdeckung (Anwenden des Modifikatoren -1). Dies hat jedoch keine Auswirkungen auf Eingriffe (Nahkampf oder Feuergefecht).">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -10006,6 +9987,13 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Kabalen, Schattenjäger-Armadas, Schmerzschiffe, Quälgeist Titanen und Scharfrichter Landemodul haben den Initiativwert 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Dark Eldar armies have a Strategy rating of 3+.
 Most Dark Eldar formations have an Initiative of  2+.
@@ -10034,6 +10022,13 @@ Kabals, Ravager Armadas, Vessels of Pain, Tormentors, and Executor Landing Modul
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Phantomtor des Netz der Tausend Tore: Jedes Portal des Netzes von tausend Toren in der Armee erlaubt es dem Dark Eldar-Spieler, bis zu drei Formationen in Commorragh zu behalten. Jede dieser Reservierungsformationen kann über ein Phantomtor ins Spiel gelangen, indem sie eine Aktion ausführt, die es ihnen ermöglicht, sich zu bewegen, und dann ihren ersten Zug vom Portal auf der Tischplatte aus misst. In jeder Runde darf nicht mehr als eine Formation durch ein einzelnes Portal reisen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -10103,8 +10098,110 @@ Kabals, Ravager Armadas, Vessels of Pain, Tormentors, and Executor Landing Modul
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Schattenfelder Verloren: Kann keine Schattenfelderrettungen mehr aufnehmen. Nachfolgende kritische Treffer verursachen einen zusätzlichen Schaden von 1 DC.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Loses the Shadowfield. Further critical hits cause an extra point of damage.</description>
+    </rule>
+    <rule id="3b11-29d9-46ea-9972" name="Kashnarak" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Kashnarak: &lt;/B&gt;El Kashnarak es un enorme y rabioso animal que emerge a través de un portal a la telaraña para sembrar la devastación en el campo de batalla al comienzo del turno que desee el jugador Eldar Oscuro (antes de la tirada de estrategia), y actúa como un “tercer jugador”. Siempre intentará lanzarse al combate cuerpo a cuerpo contra la formación (o formaciones) más cercana, ¡incluso formaciones de los Eldar Oscuros! Si le resulta imposible alcanzar el contacto peana con peana, la bestia Marchará hacia la formación más cercana. En cada turno subsiguiente, tendrá la primera activación del turno, antes de la tirada de estrategia y de los teletransportes. Un Kashnarak desmoralizado permanecerá inmóvil en el campo de batalla hasta que se reorganice. &lt;BR&gt; La excepción es cuando esté presente una unidad de Brujas. Si el Kashnarak está a 15cm o menos de una unidad de Brujas al comienzo de su activación, su asalto o movimiento podrá ser dirigido por el jugador Eldar Oscuro. Esto también se cumplirá si hay una unidad de Brujas a 15cm o menos del portal a la telaraña a través del que el Kashnarak va a entrar en juego. Además, el Kashnarak nunca asaltará ni moverá hacia una formación de Brujas; en lugar de eso, deberá elegirse la siguiente formación más cercana. Estas acciones dirigidas tendrán también tendrán lugar antes de la tirada de estrategia del turno. &lt;BR&gt; Sin importar qué acciones realice, el Kashnarak no se considera parte del ejército Eldar Oscuro a efectos de desplegar formaciones, controlar objetivos, calcular el fuego cruzado, o determinar condiciones de victoria o desempate. Tampoco cuenta como una activación de formación de los Eldar Oscuros, ni para el uso del portal a la telaraña. No se beneficia de la regla tácticas de ataque y retirada. El Kashnarak puede disputar objetivos, tanto los del jugador Eldar Oscuro (salvo que esté a 15cm o menos de una unidad de Brujas) como los de su oponente.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kashnarak: Der Kashnarak ist ein riesiges Tier, das sich durch einen Phantomtor quetscht und zu Beginn jeder Runde, die der Dark Eldar wählen, losgelassen wird (vor dem Strategieroll). Es fungiert als &quot;dritter&quot; Spieler. Es wird immer versucht, einen Nahkampfangriff auf die nächstgelegene Formation (en) durchzuführen, selbst auf Dark Eldar-Formationen! Wenn der Kontakt von Base zu Base nicht erreicht werden kann, marschiert das Tier in Richtung der nächstgelegenen Formation bis zu seiner maximalen Bewegung. Wenn es eine gegnerische Kontrollzone erreicht, hält das Tier an. Konsolidierungsschritte werden auch in Richtung der nächstgelegenen Formation unternommen. Von da an ist es die erste Aktivierung der nächsten Runde vor dem Strategieroll oder Teleport, auf dieselbe Weise wie oben. Ein zerbrochener Kashnarak bleibt auf dem Brett und wird sich nicht bewegen, bis es sich gesammelt hat.  • Ausnahmen gelten, wenn sich eine Hagashîn-Einheit befindet. Wenn sich die Hagashîn-Einheit zu Beginn der Aktivierung von Kashnarak innerhalb von 15 cm befindet, kann ihr Angriff oder ihre Bewegung vom Dark Eldar-Spieler geleitet werden. Dazu gehört eine Hagashîn-Einheit im Umkreis von 15 cm vom Phantomtor des Kashnarak. Außerdem wird sich der Kashnarak niemals einer Hagashîn-Formation nähern oder diese angreifen; Stattdessen wählt es die nächstgelegene Formation. Diese gerichteten Aktionen finden immer noch vor dem Wurf der Strategie statt.  • Unabhängig von seinen Aktionen wird der Kashnarak nicht als Teil der Dunklen Eldar-Streitmacht betrachtet, um Formationen zu platzieren, Ziele zu halten, ein Kreuzfeuer zu berechnen oder die Siegbedingungen zu bestimmen und die Berechnungen der Krawatten zu bestimmen. Es zählt weder für die Aktivierung der Dark Eldar noch für die Verwendung von Phantomtor. Es profitiert nicht von Schlag und Laufe Taktiken. Der Kashnarak können Ziele anfechten sowohl für die Dunklen Eldar (außer wenn sie sich innerhalb von 15 cm von einer Hagashîn-Einheit befinden) als auch gegen ihre Gegner bestreiten.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The Kashnarak is a massive, enraged animal that squeezes through a Webway portal and is set loose on the battlefield at the beginning of any turn the Dark Eldar desire (before strategy roll) and acts as a “third” player. It will always attempt a barging, close combat assault on the closest formation(s), even Dark Eldar formations! If unable to reach base-to-base contact, the beast will march toward the closest formation, to its maximum movement. If it reaches an enemy zone of control, the beast stops its move. Consolidation moves are also toward the closest formation. From then on, it is the first activation of subsequent turns, before the strategy roll or teleport, following the model above. A broken Kashnarak will remain in place on the board and will not attempt a move until it rallies.
+The exceptions are when in the presence of a Wych unit. If within 15cm of a Wych unit at the beginning of the Kashnarak activation (see above), its assault or move may be directed by the Dark Eldar player. This includes a Wych unit within 15cm of the Kashnarak’s Webway portal. In addition, the Kashnarak will never move toward or assault a Wych formation; instead it will choose the next closest formation. These directed actions still take place prior to the strategy roll for the turn.
+Regardless of its actions, the Kashnarak is not considered part of the Dark Eldar force for the purposes of placing formations, holding objectives, calculating crossfire, or determining victory conditions and tie-breaker calculations. It neither counts toward Dark Eldar activations nor does it count toward Webway Portal use. It does not benefit from Hit &amp; Run tactics. The Kashnarak can contest objectives for both the Dark Eldar (except when within 15cm of a Wych unit) and their opponents.</description>
+    </rule>
+    <rule id="8ce9-b8c1-c932-5e05" name="May Not Garrison" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Darf Keine Garnison Sein: Nur die Mandraks dürfen Garnison bilden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Only Mandrake formations may set up using the tournament game garrison rule.</description>
+    </rule>
+    <rule id="cd09-84ab-24c3-c2f7" name="May Not Garrison" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Los Eldar Oscuros tienen prohibido hacer patrullas en las batallas de torneo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Aucune formation Eldar noir ne peut se déployer en garnison.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Darf Keine Garnison Sein: Keine Einheiten dürfen in Turnierkämpfen eine Garnison bilden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Dark Eldar are forbidden from garrisoning any formations in the Epic tournament game scenario.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

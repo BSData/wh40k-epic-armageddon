@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="074c-8d7b-3245-0043" name="Chaos: Night Lords" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="074c-8d7b-3245-0043" name="Chaos: Night Lords" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -21,11 +21,19 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="e9f4-3f14-6c3f-e30c" name="Chaos Lords" hidden="false" targetId="a511-8156-efe0-82da" type="rule">
+    <infoLink id="e9f4-3f14-6c3f-e30c" name="Chaos Lords" hidden="false" targetId="1d57-cd2f-3782-d60f" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
   </infoLinks>
   <costTypes/>
@@ -1059,7 +1067,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="6233-3641-dcff-5781" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+        <infoLink id="6233-3641-dcff-5781" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1102,7 +1110,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="bdad-ffe7-9976-7505" hidden="false" targetId="b711-7151-b276-52ab" type="profile">
+        <infoLink id="bdad-ffe7-9976-7505" name="Warhound Titan Talon Pattern" hidden="false" targetId="b711-7151-b276-52ab" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1132,7 +1140,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="7e90-fc28-2924-d07d" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+        <infoLink id="7e90-fc28-2924-d07d" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1580,7 +1588,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="c3f7-03b6-9d54-b1ee" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+        <infoLink id="c3f7-03b6-9d54-b1ee" name="Critical Hit: Staggering Blow" hidden="false" targetId="5e52-43b9-62fd-745e" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5245,35 +5253,6 @@
       <description>&lt;I&gt;NightLords_2016 #Alpha Legion F-ERC version 11 Octobre 2016
 Black Legion 2015-12 (1) #Décembre 2015&lt;/I&gt;</description>
     </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. If this move takes the titan into impassable terrain or another unit it can’t move over then it stops immediately and is destroyed. All units it moves into or over suffer a hit on a roll of 6+.</description>
-    </rule>
     <rule id="6228-16fd-fa02-d141" name="Dreadclaws" hidden="false">
       <profiles/>
       <rules/>
@@ -5290,6 +5269,13 @@ Black Legion 2015-12 (1) #Décembre 2015&lt;/I&gt;</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Taranteln: Die Tarantula, alias Schreckensklaue, landet innerhalb von 15 cm von den Drop-Zone-Koordinaten, die zu Beginn des Spiels aufgezeichnet wurden. Beachten Sie, dass es sich nach dem Platzieren nicht um 2W6cm in zufälliger Richtung bewegt. Alle Truppen, die in der Tarantel befördert werden, müssen innerhalb von 5 cm vor der Tarantel oder innerhalb von 5 cm von einer anderen Einheit aus derselben Formation, die bereits gelandet ist, aussteigen, sofern sich alle Einheiten innerhalb von 15 cm der Tarantel befinden. Tarantel-Modelle sollten vom Board entfernt werden, sobald die von ihnen transportierte Formation von Bord gegangen ist.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5336,6 +5322,13 @@ Night Lords 0.3c Reference</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 4.  • Chaos Navy und Raumfahrzeug haben den Initiativwert 2+. Andere Formationen haben die Initiativwert 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5447,27 +5440,41 @@ If the number of blast markers remaining causes the formation to remain broken, 
       </modifiers>
       <description>The Dreadclaw scatters 2D6cm from its coordinates. Once landed the deathwind attacks all enemy units within a radius of 15cm. Then disembark any transported units 5cm from the module or from each other while remaining within 15cm of the module.</description>
     </rule>
-    <rule id="a511-8156-efe0-82da" name="Chaos Lords" hidden="false">
+    <rule id="5e52-43b9-62fd-745e" name="Critical Hit: Staggering Blow" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpe Asombroso: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá de inmediato y sufre un punto de daño adicional. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Personnages du Chaos:&lt;/B&gt; Ce sont des améliorations et non des unités et se doivent d&apos;être inclus sur un socle d&apos;unité de la suite ou formation de base ayant droit à cette amélioration. En aucun cas un personnage du chaos ne peut se trouver sur le socle d&apos;une amélioration.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Colpo Sconcertante: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Coup Stupéfiant:&lt;/B&gt; Déplacez le Titan dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Staffelung Schlag: Die Einheit wird um W6cm in eine zufällige Richtung bewegt. Wenn diese Bewegung den Titan in unpassierbares Gelände oder in eine andere Einheit bringt, die er nicht zur Seite schieben kann, stoppt er sofort und erleidet einen weiteren Schadenspunkt. Alle Einheiten, in die sie hinein- oder darüber bewegt werden, werden bei einem Wurf von 6+ getroffen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>Chaos Space Marine Lord Characters may only be added to core units within a formation. They may not be added to any upgrade units purchased for a formation.</description>
+      <description>The unit scatters D6cm in a random direction. If this move takes the titan into impassable terrain, or another unit it can’t move over or barge aside, then it stops immediately and takes another point of damage. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -6020,7 +6027,7 @@ If the number of blast markers remaining causes the formation to remain broken, 
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Slow Firing, Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="3d59-72ce-ad32-8d55" name="Battle Barge" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -6116,7 +6123,7 @@ If the number of blast markers remaining causes the formation to remain broken, 
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Ignore Cover, Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="c0cd-7415-861f-7b06" name="Terror Squad" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -6172,7 +6179,7 @@ If the number of blast markers remaining causes the formation to remain broken, 
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="*"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="e8d8-29cf-d711-9797" name="Death Storm" hidden="false" profileTypeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d1e9-60eb-b49e-7da8" name="Adeptus Arbites" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d1e9-60eb-b49e-7da8" name="Adeptus Arbites" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -10,6 +10,12 @@
       <modifiers/>
     </infoLink>
     <infoLink id="cd6e-bf53-fd07-2a45" hidden="false" targetId="f54a-7103-76d4-f14d" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="b1eb-624f-44d1-b3ba" name="Strategy Rating &amp; Initiative (AA)" hidden="false" targetId="9a01-b64a-d58c-db5d" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1258,7 +1264,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="59a6-0dc1-9c31-cdbf" hidden="false" targetId="ef42-3efb-0c94-4e35" type="rule">
+            <infoLink id="59a6-0dc1-9c31-cdbf" name="Stubborn" hidden="false" targetId="6c4c-d0ce-1d05-719d" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -3394,6 +3400,13 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Verbündeten: Arbites Adeptus-Truppen können in jede Armeeliste des Imperiums integriert werden, indem sie den dritten der normalerweise für Raumfahrzeuge / Flugzeuge / Titanen reservierten Punkte einnehmen. Alliierte Streitkräfte müssen sich an ihre eigenen Armeelisten halten.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Arbites Adeptus forces can be integrated with any army list of the imperium by taking the third of points normally reserved for Spacecraft / Aircraft / Titans.
 You still need to observe the restrictions on the Adeptus Arbites army list.</description>
@@ -3407,6 +3420,13 @@ You still need to observe the restrictions on the Adeptus Arbites army list.</de
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Einsturz: Bei einer Rolle von 6 zerstören innere Explosionen die Struktur. Die Einheit zählt nach der Zerstörung als Schutt.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -3429,6 +3449,13 @@ You still need to observe the restrictions on the Adeptus Arbites army list.</de
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Scharfrichter Munition: Einmal pro Spiel erhalten Formationen, die mit Gerechtigkeitsgewehren ausgestattet sind, die Ignorieren Abdeckung Regel für einen Schießangriff.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -3456,6 +3483,13 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Linie zu Halten: Arbite-Formationen, die einen Charakter mit der Linie zu Halten-Regel enthalten, die versuchen, eine Marshall-Aktion auszuführen, erhalten einen + 1-Modifikator für ihren Aktionstestwurf. Außerdem erhalten Arbite-Formationen, die eine Marshall-Aktion ausführen, nicht den -1-zu-treffen-Modifikator, wenn sie sich dafür entscheiden, zu schießen, statt sich zu bewegen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Arbite formations that include a character with the Hold the Line rule that are attempting to take a Marshall action receive a +1 modifier to their action test roll. Additionally, Arbite formations that Marshall do not receive the -1 to hit modifier when electing to shoot rather than move.</description>
     </rule>
@@ -3471,72 +3505,29 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;Adeptus Arbites a une Valeur Stratégique de 3. Les troupes de l’Adeptus Arbites ont une initiative de 2+.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="Adeptus Arbites have a Strategy rating of 3. Adeptus Arbites formations have an initiative rating of 2+.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;Adeptus Arbites a une Valeur Stratégique de 3. Les troupes de l’Adeptus Arbites accompagnées d’un personnage disposent d&apos;une valeur d&apos;initiative de 1+, toutes les autres troupes de l’Adeptus Arbites ont une initiative de 2+.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>Adeptus Arbites have a Strategy rating of 3. Adeptus Arbites formations accompanied by a character have an initiative rating of 1+; other formations have an initiative rating of 2+.</description>
-    </rule>
-    <rule id="ef42-3efb-0c94-4e35" name="Stubborn" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Les Redemptionists sont un Peuple Obstiné et difficile à vaincre en assaut. Leur nature bornée les pousse également à se rallier plus vite que les autres unités pour retourner au combat! &lt;BR&gt; Une formation Redemptionists est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). &lt;BR&gt; Lorsqu&apos;une formation Redemptionists perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 3.  • Adeptus Arbites-Formationen, die von einem Charakter begleitet werden, haben eine Initiativwertung von 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The Redemptionists are stubborn and hard to defeat by assault. Their nature also makes them rally more quickly than the other units to return to the battle!
-A Redemptionists formation is broken when it has accumulated a number of BMs equal to (1 + number of units).
-When a Redemptionists formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.</description>
+      <description>Adeptus Arbites have a Strategy rating of 3. Adeptus Arbites formations accompanied by a character have an initiative rating of 1+; other formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="e95d-3da9-0519-d02a" name="Transport (AA)" hidden="false">
       <profiles/>
@@ -3557,6 +3548,35 @@ Courthouse: 8 infantry units or tarantulas.
 Repressor: 2 infantry units or tarantulas.
 Rhinos: 2 infantry units or tarantulas.
 Valkyrie: 2 infantry units or tarantulas.</description>
+    </rule>
+    <rule id="9a01-b64a-d58c-db5d" name="Strategy Rating &amp; Initiative (AA)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; L&apos;Adeptus Arbites a une Valeur Stratégique de 3. Les troupes de l’Adeptus Arbites ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 3.  • Alle Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Adeptus Arbites have a Strategy rating of 3. Adeptus Arbites formations have an initiative rating of 2+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

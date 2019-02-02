@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="598c-79ef-c81b-8940" name="Imperial Guard: Phyressien Armoured Regiment" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="598c-79ef-c81b-8940" name="Imperial Guard: Phyressien Armoured Regiment" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -216,13 +216,13 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="0817-aae9-6ca7-ee27" hidden="false" targetId="932a-d680-61e5-d38d" type="profile">
+            <infoLink id="0817-aae9-6ca7-ee27" name="Leviathan" hidden="false" targetId="932a-d680-61e5-d38d" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="44d6-2643-9111-4ff0" hidden="false" targetId="02cd-253a-0477-ba88" type="rule">
+            <infoLink id="44d6-2643-9111-4ff0" name="Critical Hit: Immobile" hidden="false" targetId="359e-50a3-0ab6-cbee" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -2272,21 +2272,6 @@
       <modifiers/>
       <description>&lt;I&gt;FERC beta_Garde Imperiale_Regiment phyressien_01 Avril 2011 #0.3&lt;/I&gt;</description>
     </rule>
-    <rule id="02cd-253a-0477-ba88" name="Critical Hit: Cannot Move" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Ne Peut Plus Bouger:&lt;/B&gt; L&apos;unité ne peut plus bouger. Les prochaines touches critiques causeront la perte d’un point de dommage supplémentaire.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit is immobilised. Further Critical Hits cause 1 additional point of damage.</description>
-    </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
       <rules/>
@@ -2319,6 +2304,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 2.  • Titanenlegion-Formationen haben den Initiativwert 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -2653,7 +2645,7 @@ Leviathan: 17 Infantry units.</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc, Macro-weapon&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Left Arc&lt;BR&gt;&lt;BR&gt;Right Arc&lt;BR&gt;&lt;BR&gt;+1A"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="2 Sh, Supreme Commander, Reinforced Armour, Thick Rear Armour, Transport"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="4"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Cannot Move"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobile"/>
       </characteristics>
     </profile>
     <profile id="8e74-10b2-70c0-218b" name="Marauder Bomber" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

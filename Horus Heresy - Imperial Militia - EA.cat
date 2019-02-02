@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="16c4-9996-33da-97ce" name="Horus Heresy: Imperial Militia" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="16c4-9996-33da-97ce" name="Horus Heresy: Imperial Militia" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -3807,7 +3807,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="1955-a255-5b81-f6e9" hidden="false" targetId="8f40-5c50-5ddf-3305" type="rule">
+        <infoLink id="1955-a255-5b81-f6e9" name="Critical Hit: Gorgon" hidden="false" targetId="70df-119b-a27f-5043" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3819,7 +3819,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="23ee-bc80-82a0-78f8" hidden="false" targetId="21b5-d6dd-44eb-b55c" type="profile">
+        <infoLink id="23ee-bc80-82a0-78f8" name="Gorgon B" hidden="false" targetId="21b5-d6dd-44eb-b55c" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3852,7 +3852,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="19a9-286d-32f9-9f9e" hidden="false" targetId="8f40-5c50-5ddf-3305" type="rule">
+        <infoLink id="19a9-286d-32f9-9f9e" name="Critical Hit: Gorgon" hidden="false" targetId="70df-119b-a27f-5043" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4316,21 +4316,6 @@ When selected as allies for another army, some armies will state the restriction
       <description>Cohesive: Legio Titanicus, Legion Astartes, Knight Household.
 Disruptive: Solar Auxilia, Mechanicum Taghmata, Daemonic Hordes (Traitor Militia).</description>
     </rule>
-    <rule id="8f40-5c50-5ddf-3305" name="Critical Hit: Immobilised" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt;Immobilisé et D6 unités transportées sont touchés. La prochaine touche critique détruit l&apos;Engin de Guerre.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Immobilised and D6 units being transported are hit. Subsequent critical hits destroy the unit.</description>
-    </rule>
     <rule id="b88b-e318-67ad-1dce" name="Dedicated War Engine Transports" hidden="false">
       <profiles/>
       <rules/>
@@ -4400,6 +4385,13 @@ Units should be modeled appropriately so suit the chosen provenance. </descripti
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 2.  • Alle Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4608,7 +4600,7 @@ Rhino: 2 Infantry units. Ogryn Brute Squads units take up 2 spaces each.</descri
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value=""/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport, Walker"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobilised"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Gorgon"/>
       </characteristics>
     </profile>
     <profile id="66fe-0215-7b1f-d718" name="Gorgon M" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
@@ -4628,7 +4620,7 @@ Rhino: 2 Infantry units. Ogryn Brute Squads units take up 2 spaces each.</descri
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;Forward Arc, Indirect Fire, One Shot"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Transport, Walker"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobilised"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Gorgon"/>
       </characteristics>
     </profile>
     <profile id="efb3-2959-c6a3-ab01" name="Land Raider Proteus" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">

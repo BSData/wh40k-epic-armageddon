@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c147-90f0-d4ac-32ac" name="Eldar: Saim-Hann Craftworld" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c147-90f0-d4ac-32ac" name="Eldar: Saim-Hann Craftworld" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9,11 +9,19 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="e1bb-35fc-6a41-effd" name="May Not Garrison" hidden="false" targetId="b786-c22d-2443-b225" type="rule">
+    <infoLink id="e1bb-35fc-6a41-effd" name="May Not Garrison" hidden="false" targetId="e420-1e2a-d2a5-b01c" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
     <infoLink id="97de-f787-d238-a4a5" hidden="false" targetId="205d-457b-86e9-f840" type="rule">
       <profiles/>
@@ -4871,7 +4879,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="3f14-1850-b77d-e9e6" name="Knight Squadron Support" hidden="false" targetId="613f-6038-fd8a-cb87" type="rule">
+        <infoLink id="3f14-1850-b77d-e9e6" name="Knight Squadron Support" hidden="false" targetId="424c-8588-1d5a-5a5d" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6661,35 +6669,6 @@ Fanatic #55
 Fanatic #02
 Fanatic #13</description>
     </rule>
-    <rule id="b786-c22d-2443-b225" name="May Not Garrison" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Sólo las formaciones de Exploradores y de Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Only Eldar Rangers and War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.</description>
-    </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
       <rules/>
@@ -6720,6 +6699,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 4.  • Avatare, Aspektkrieger, Kuanor Jagd-Titanen, Phantom-Titanen und Runentitanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.  • Harlekins haben einen Strategiewert von 5 und einen Initiativwert von 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -6755,6 +6741,13 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5 in Runde 1, 4 in Runde 2, 3 in Runde 3 und 4.  • Avatare, Aspektkrieger, Nachtschatten und Titanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.  • Harlekins haben einen Strategiewert von 5 und einen Initiativwert von 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Saim-Hann armies have Strategy Rating 5 in turn 1, 4 in turn 2, 3 in turn 3 and 4.
 Aspect Warriors, Avatars, Nightshades and Titans have an Initiative rating of 1+. 
@@ -6780,27 +6773,19 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Avatar: Der Avatar kann auf drei verschiedene Arten auf dem Schlachtfeld erscheinen:  • 1: Bei der Bereitstellung zu Beginn eines Spiels  • 2: Über ein Portal wie jede Formation in Reserve  • 3: Infolge der Beschwörung innerhalb von 15 cm eines Runenprophet während der Teleportationsphase  • In jedem Fall ist es von nun an eine unabhängige und dauerhafte Formation bis zum Ende des Spiels oder seiner Zerstörung. Es kann jedoch nur Ziele anfechten.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The Avatar can appear on the battlefield in three different ways:
 1) Classically when deploying at the beginning of a game
 2) Via a portal like any formation in reserve
 3) By invocation within 15 cm of a Farseer during the teleportation phase
 In any case, from its appearance, it is an independent and permanent formation until the end of the game or its destruction. However it can only contest objectives.</description>
-    </rule>
-    <rule id="613f-6038-fd8a-cb87" name="Knight Squadron Support" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Appui Escadron de Chevaliers:&lt;/B&gt; Bien que les Escadron de Chevaliers sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Avions et Soutien. Pour sélectionner l&apos;une de ces &quot;Knight Squadron Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres unités sont prises.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Although Knight Squadrons are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Support. To select any of these the &quot;Knight Squadron Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further units are taken.</description>
     </rule>
     <rule id="6a24-a09e-e482-c08a" name="May Not Garrison" hidden="false">
       <profiles/>
@@ -6825,6 +6810,13 @@ In any case, from its appearance, it is an independent and permanent formation u
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Darf Keine Garnison Sein: Alle Infanterieeinheiten in Aspektkrieger-Formationen (außer Kriegsfalken und Warpspinnen) müssen in Serpents und / oder Falcons transportiert werden oder über einen Phantomtor ins Spiel kommen. Nur die Scoutfahrer-Formationen dürfen Garnison bilden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -8270,60 +8262,6 @@ In any case, from its appearance, it is an independent and permanent formation u
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Choose weapon system at the start of the battle."/>
       </characteristics>
     </profile>
-    <profile id="fac9-09e1-465a-537c" name="*Exodite Dragon Rider*" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
-        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
-        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+"/>
-        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Exodite Weapons&lt;BR&gt;and"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;and (contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;and Assault Weapons"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="First Strike&lt;BR&gt;and First Strike"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Infiltrators, Mounted, Scout"/>
-      </characteristics>
-    </profile>
-    <profile id="5621-3060-89c0-2388" name="*Pterosaur Rider*" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
-        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
-        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="5+"/>
-        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="6+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Exodite Weapons&lt;BR&gt;and"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;and (contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;and Assault Weapons"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="First Strike&lt;BR&gt;and First Strike"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Infiltrators, Mounted, Skimmer"/>
-      </characteristics>
-    </profile>
-    <profile id="d095-40f5-2040-c953" name="*Triceratops*" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Light Vehicle"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm"/>
-        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+"/>
-        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+"/>
-        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Bright Lance&lt;BR&gt;and"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;and (contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT5+&lt;BR&gt;and Assault Weapon"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Lance&lt;BR&gt;and Macro-weapon, +1A"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Thick Rear Armour"/>
-      </characteristics>
-    </profile>
     <profile id="50a8-d89d-49b0-9b1e" name="Wild Rider Saim-Hann Cavalier" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
       <profiles/>
       <rules/>
@@ -8394,24 +8332,6 @@ In any case, from its appearance, it is an independent and permanent formation u
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AT4+&lt;BR&gt;&lt;BR&gt;AT4+/AA4+"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Lance"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7"/>
-      </characteristics>
-    </profile>
-    <profile id="8a08-1131-4c79-0a73" name="*Exodite Clan Chieftain*" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="be964774-1659-c1e9-573f-be7c258d4b74" value="Character"/>
-        <characteristic name="Speed" characteristicTypeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="n/a"/>
-        <characteristic name="Armour" characteristicTypeId="3755f816-2110-e470-2e5f-20ba636cb7f1" value="n/a"/>
-        <characteristic name="CC" characteristicTypeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="n/a"/>
-        <characteristic name="FF" characteristicTypeId="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="n/a"/>
-        <characteristic name="Weapons" characteristicTypeId="1160-63e7-57ca-722d" value="Power Weapon &amp; T-Rex"/>
-        <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
-        <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapon"/>
-        <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon, +1A"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Commander, Leader, Reinforced Armour"/>
       </characteristics>
     </profile>
     <profile id="2459-d334-8975-60d9" name="Avatar" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

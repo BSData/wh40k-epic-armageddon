@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4485-ac05-71d7-af77" name="Space Marines: Iron Hands" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4485-ac05-71d7-af77" name="Space Marines: Iron Hands" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -5113,37 +5113,51 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="b748-899a-3a8e-740a" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
+        <infoLink id="b748-899a-3a8e-740a" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="3ddf-a7b8-6252-b597" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
+        <infoLink id="3ddf-a7b8-6252-b597" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="0980-cf01-b66d-17af" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule">
+        <infoLink id="0980-cf01-b66d-17af" name="Walker (Titan)" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="aaed-b777-2d05-3bf6" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
+        <infoLink id="aaed-b777-2d05-3bf6" name="Slow Firing" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="5f06-3338-b023-9f99" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+        <infoLink id="5f06-3338-b023-9f99" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="514e-0d7a-0df2-7250" name="Void Shields" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="514e-0d7a-0df2-7250" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
+        <infoLink id="f481-2af4-330f-83c5" name="Critical Hit: Staggering Blow" hidden="false" targetId="5e52-43b9-62fd-745e" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5166,7 +5180,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="757b-990a-59c0-d8ab" hidden="false" targetId="6570-11bd-fb70-93bf" type="profile">
+        <infoLink id="757b-990a-59c0-d8ab" name="Warhound Titan (Support)" hidden="false" targetId="6570-11bd-fb70-93bf" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5196,7 +5210,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="ecde-8ef2-afb5-9d80" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+        <infoLink id="ecde-8ef2-afb5-9d80" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6064,35 +6078,6 @@
       </modifiers>
       <description>All Inf stands become Armour 3+.</description>
     </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. If this move takes the titan into impassable terrain or another unit it can’t move over then it stops immediately and is destroyed. All units it moves into or over suffer a hit on a roll of 6+.</description>
-    </rule>
     <rule id="a101-52fd-30a7-9ccf" name="Cult of the Machine" hidden="false">
       <profiles/>
       <rules/>
@@ -6242,6 +6227,13 @@ Ironclad Dreadnought profile retrieved from taccmd.tacticalwargames.net</descrip
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5.  • Space Marine-Formationen haben den Initiativwert 1+. Titanenlegion-Formationen haben den Initiativwert 1+. Flugzeuge der Imperial Navy haben den Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Iron Hands Space Marine armies have a Strategy rating of 5. All Iron Hands and Titan Legion formations have an initiative rating of 1+. Imperial Navy aircraft formations have an initiative rating of 2+.</description>
     </rule>
@@ -6300,8 +6292,58 @@ Ironclad Dreadnought profile retrieved from taccmd.tacticalwargames.net</descrip
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5.  • Alle Formationen haben die Initiativwert 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Iron Hands Space Marine armies have a Strategy rating of 5. All Iron Hands and Titan Legion formations have an initiative rating of 1+.</description>
+    </rule>
+    <rule id="5e52-43b9-62fd-745e" name="Critical Hit: Staggering Blow" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpe Asombroso: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá de inmediato y sufre un punto de daño adicional. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Colpo Sconcertante: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Coup Stupéfiant:&lt;/B&gt; Déplacez le Titan dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Staffelung Schlag: Die Einheit wird um W6cm in eine zufällige Richtung bewegt. Wenn diese Bewegung den Titan in unpassierbares Gelände oder in eine andere Einheit bringt, die er nicht zur Seite schieben kann, stoppt er sofort und erleidet einen weiteren Schadenspunkt. Alle Einheiten, in die sie hinein- oder darüber bewegt werden, werden bei einem Wurf von 6+ getroffen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The unit scatters D6cm in a random direction. If this move takes the titan into impassable terrain, or another unit it can’t move over or barge aside, then it stops immediately and takes another point of damage. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -7274,7 +7316,7 @@ Ironclad Dreadnought profile retrieved from taccmd.tacticalwargames.net</descrip
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Slow Firing, Forward Arc, Mid-power Shot"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="6570-11bd-fb70-93bf" name="Warhound Titan (Support)" hidden="false" profileTypeId="87ab-2658-3f0c-128d">
@@ -7294,7 +7336,7 @@ Ironclad Dreadnought profile retrieved from taccmd.tacticalwargames.net</descrip
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Ignore Cover, Forward Arc&lt;BR&gt;&lt;BR&gt;Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="dc1f-622e-cffb-0339" name="Warlord Titan" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

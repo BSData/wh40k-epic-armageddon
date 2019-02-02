@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="907a-2d47-7095-fcda" name="Orks: Blood Axe Klan" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="907a-2d47-7095-fcda" name="Orks: Blood Axe Klan" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="0e77-c345-9158-bd69" hidden="false" targetId="3d0a-916d-d530-ec48" type="rule">
+    <infoLink id="0e77-c345-9158-bd69" name="Ork Warlords (BAK)" hidden="false" targetId="3d0a-916d-d530-ec48" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -22,6 +22,12 @@
       <modifiers/>
     </infoLink>
     <infoLink id="b979-5173-8495-ed86" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="5853-8bab-b439-c372" name="Ork Warlords (BAK)" hidden="false" targetId="02aa-eac9-792d-066b" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -9485,52 +9491,19 @@ Fanatic #13</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="One Blood Axe Unit in the army must be upgraded to include a Blood Axe Kommandant. It does not cost any additional points. The Kommandant is in all ways identical to a standard Ork Warlord.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du Klan Blood Axes doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du Klan Blood Axes doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite et doit obligatoirement rejoindre la plus grosse bande mécanisée.&lt;/I&gt;">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
       <description>Every Ork army must include a supreme commander character called a Warlord. The Warlord character is free and must join the largest mechanised mob.</description>
@@ -9558,6 +9531,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 3.  • Alle Formationen haben die Initiativwert 3+. Sie erhalten jedoch Modifikatoren, die von der gewählten Aktion beim Durchführen eines Aktionstests oder von der Größe des Kriegsbands beim Sammeln abhängen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -9615,6 +9595,28 @@ Warkopta: up to 2 units of Boyz, Kommandos or Nobz. May carry 1 Grotz in additio
         </modifier>
       </modifiers>
       <description>Enables the «Kommandant Ug Skragga Morkrumps&apos;s Korps» army list instead of «Kolonel Sandork&apos;s Blood Axe Clan».</description>
+    </rule>
+    <rule id="02aa-eac9-792d-066b" name="Ork Warlords (BAK)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneurs de Guerre:&lt;/B&gt; Chaque armée du Klan Blood Axes doit inclure une unité de commandant suprême appelée Seigneur de Guerre. Cette unité est gratuite.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>One Blood Axe Unit in the army must be upgraded to include a Blood Axe Kommandant. It does not cost any additional points. The Kommandant is in all ways identical to a standard Ork Warlord.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

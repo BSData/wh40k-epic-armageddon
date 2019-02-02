@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7940-4910-4232-77cc" name="Horus Heresy: Legio Titanicus" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7940-4910-4232-77cc" name="Horus Heresy: Legio Titanicus" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -507,7 +507,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="ac8a-2a23-072e-25e7" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
+        <infoLink id="ac8a-2a23-072e-25e7" name="Warhound Scout Titan" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -560,7 +560,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="5144-64f6-94bd-6b1b" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+        <infoLink id="5144-64f6-94bd-6b1b" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2152,7 +2152,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="0e5a-3ca4-e7ad-1c6c" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
+        <infoLink id="0e5a-3ca4-e7ad-1c6c" name="Warhound Scout Titan" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2205,7 +2205,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="8187-f69d-00b0-f86e" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+        <infoLink id="8187-f69d-00b0-f86e" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2894,21 +2894,6 @@
       <description>Cohesive: Legiones Astartes, Knight Household, Mechanicus Taghmata.
 Disruptive: Imperial Militia, Solar Auxilia, Daemonic Hordes.</description>
     </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Move it D6 cm in a random direction. If this takes the Warhound into impassable terrain or another unit it can’t step over, then it stops when it contacts the obstruction and suffers another point of damage. If it staggers into or over any units, they take a hit on a D6 roll of 6+ (make saving throws for the units normally).</description>
-    </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
       <rules/>
@@ -2943,6 +2928,13 @@ http://epicau.com/mw/index.php/Mechanicum_Taghmata
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 3.  • Alle Formationen haben die Initiativwert 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -3492,7 +3484,7 @@ Leg Bastions: 10 infantry units. Terminators, Breachers, Thallax, Ursarax, Myrmi
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Cortex Controller, Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="dc1f-622e-cffb-0339" name="Warlord Battle Titan" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

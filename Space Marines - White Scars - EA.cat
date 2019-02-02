@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7b3b-7bb3-b6ea-8deb" name="Space Marines: White Scars" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7b3b-7bb3-b6ea-8deb" name="Space Marines: White Scars" revision="29" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9,7 +9,7 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="4bc3-f4ff-f0b5-2624" hidden="false" targetId="67ee-f518-772b-1152" type="rule">
+    <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -21,11 +21,19 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="4d86-79d8-27c0-fbd3" hidden="false" targetId="6e08-893d-2ba5-793c" type="rule">
+    <infoLink id="4d86-79d8-27c0-fbd3" name="Superior Tactics" hidden="false" targetId="902f-bafe-576b-3e21" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
   </infoLinks>
   <costTypes/>
@@ -3840,7 +3848,7 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="fdc0-496f-41b9-880c" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
+            <infoLink id="fdc0-496f-41b9-880c" name="Warhound Titan" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -3870,11 +3878,31 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="a52a-f92d-617c-ca03" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+            <infoLink id="a52a-f92d-617c-ca03" name="Critical Hit: Staggering Blow" hidden="false" targetId="5e52-43b9-62fd-745e" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
+            </infoLink>
+            <infoLink id="9b44-d4aa-5463-e671" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </infoLink>
           </infoLinks>
           <modifiers>
@@ -5965,48 +5993,6 @@
       <modifiers/>
       <description>&lt;I&gt;White Scars Test (1) #Version F-ERC du 27.06.2017&lt;/I&gt;</description>
     </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="The unit takes a point of damage and is moved D6cm in a random direction. If this move takes the titan into impassable terrain or another unit it can’t move over then it stops immediately and is destroyed. All units it moves into or over suffer a hit on a roll of 6+.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.</description>
-    </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
       <rules/>
@@ -6075,76 +6061,15 @@ siege #mossino campaign version 3</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5.  • Space Marine-Formationen haben den Initiativwert 1+. Titanenlegion-Formationen haben den Initiativwert 1+. Flugzeuge der Imperial Navy haben den Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Codex Astartes Space Marine armies have Strategy Rating 5. Space Marine formations have Initiative Rating 1+. Titan Legion formations have Initiative Rating 1+. Imperial Navy aircraft formations have Initiative Rating 2+.</description>
-    </rule>
-    <rule id="6e08-893d-2ba5-793c" name="Superior Tactics" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tactiques Supérieures:&lt;/B&gt; L&apos;armée du Space Marines est une armée très flexible et tactique. Avant chaque match du tournoi le joueur Space Marine peut choisir des formations avec l&apos;aspect «plus transport» sont déployés dans Rhinos, Modules d’Atterrissage ou à pied. Si la formation a des unités qui ne peuvent se déployer en Modules d’Atterrissage alors cette option ne peut pas être sélectionné.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The Space Marine army is a highly flexible and tactical army. Before each tournament game the Space Marine player may choose which formations with the ‘plus transport’ aspect are deployed in Rhinos, Drop Pods or on foot. If the formation has any units unable to deploy in Drop Pods then that option cannot be selected.</description>
-    </rule>
-    <rule id="67ee-f518-772b-1152" name="They Shall Know No Fear" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="It takes 2 Blast Markers to suppress a Space Marine unit. &lt;BR&gt; Space Marine formations are only broken if they have 2BMs per unit. &lt;BR&gt; Space Marine formations count as having half the number of BMs (rounding down to a minimum of one) for assault resolution purposes. &lt;BR&gt; Broken formations receive 1BM per unit when rallying. &lt;BR&gt; Space Marine Leaders remove 2BMs when rallying.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ed Essi Non Conosceranno La Paura: &lt;/B&gt;Ci vogliono due segnalini Esplosione per sopprimere un&apos;unita&apos; di Space Marine o per ucciderne una in rotta (ignora ogni segnalino Esplosione in eccesso).&lt;BR&gt; Le formazioni di Space Marine vanno in rotta solo con due segnalini Esplosione per unita&apos; nella formazione.&lt;BR&gt; Dimezza il numero di colpi aggiuntivi subiti da una formazione di Space Marine che abbia perso un assalto, arrotondando per difetto in favore degli Space Marine.&lt;BR&gt; Quando una formazione di Space Marine in rotta si riunisce riceve un numero di segnalini Esplosione pari al numero di unita&apos;, invece della meta&apos; di questo numero.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Et Ils Ne Connaitront Pas La Peur:&lt;/B&gt; La bravoure et la ténacité des Space Marines sont légendaires. Ces traits de caractère sont représentés par les règles suivantes: &lt;BR&gt; Il faut deux pions d&apos;impact pour neutraliser une unité Space Marines ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). &lt;BR&gt; Les formations Space Marines ne sont démoralisées qu’à partir du moment où elles ont deux pions d&apos;impact ou plus par unité. &lt;BR&gt; Lorsqu’une formation de Space Marines démoralisée subit un tir, comptez le nombre de pions impacts pour retirer les pertes subies à la fin de la phase de tir ennemi. &lt;BR&gt; Lors d&apos;une résolution d&apos;assaut, le fait d&apos;être plus nombreux que les Space Marines ne compte pas. Par contre le fait d&apos;être plus de deux fois plus nombreux que les Space Marines s&apos;applique toujours. &lt;BR&gt; Réduisez de moitié le nombre de touches supplémentaires subies par une formation de Space Marines perdant un assaut, en arrondissant à l’entier inférieur en faveur des Space Marines. &lt;BR&gt; Lorsqu’une formation Space Marines démoralisée se rallie, elle reçoit un nombre de pions impact égal au nombre d’unités plutôt qu’à la moitié du nombre d’unités. &lt;BR&gt; Les Meneurs Space Marines retirent deux pions d&apos;impact au lieu d&apos;habituellement un seul.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Y No Conocerán el Miedo…: &lt;/B&gt;Se requieren dos marcadores de explosión para acobardar una unidad de Marines Espaciales o para eliminar una unidad de Marines Espaciales de una formación desmoralizada (ignora los marcadores de explosión sobrantes). &lt;BR&gt; Las formaciones de Marines Espaciales sólo son desmoralizadas al acumular dos marcadores de explosión por cada unidad en la formación. &lt;BR&gt; En la resolución del combate, los Marines Espaciales sólo cuentan la mitad de los marcadores de explosión que tengan, redondeando hacia abajo (nótese que no recibirán el +1 por no tener marcadores de explosión si al menos tienen uno antes de dividirlo por dos). Divide por dos el número de impactos adicionales sufridos por una formación de Marines Espaciales cuando es desmoralizada, redondeando hacia abajo a favor de los Marines. &lt;BR&gt; Cuando una formación de Marines Espaciales se reorganiza, recibe un número de marcadores de explosión igual al número de unidades que tenga, en vez de la mitad. Las unidades de Marines Espaciales con la habilidad de líder permiten retirar dos marcadores de explosión adicionales, en lugar de uno.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any left over BMs).
-Space Marine formations are only broken if they have 2BMs per unit.
-Space Marine formations count as having half the number of BMs (rounding down- notethat assault resolution will not receive +1 for having no BM if the formation has 1BM before rounding down) for assault resolution purposes.
-Broken formations receive 1BM per unit when rallying.
-Space Marine Leaders remove 2BMs when rallying.</description>
     </rule>
     <rule id="6e86-32e2-fc20-cc51" name="Transport (SM)" hidden="false">
       <profiles/>
@@ -6176,6 +6101,55 @@ Space Marine Leaders remove 2BMs when rallying.</description>
       <description>The Space Marines are a highly mobile army. The points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. The number of vehicles will always be the minimum needed to carry the formation, you can’t take extras along. The transport vehicles will be Land Raiders if the detachment is Terminators, Rhinos for any other form of detachment.
 Note that many formations don’t receive transports, usually because they can’t fit into them. Detachments that come with vehicles will be noted as having ‘plus transport’ in the units section of the army list. White Scars detachments must take the transport vehicles for a detachment – you cannot leave them behind in order to use the unit as a garrison. You can only choose to ignore this if the detachment is instead to be deployed from a Thunderhawk gunship or Landing Craft.
 In addition you may choose to replace a detachment’s vehicles with drop pods. If you choose to do this, all transported detachments in the army must deploy from drop pods – you can’t have some in transport vehicles and some deploying from drop pods. If you do choose to use drop pods, then the affected detachments will enter play in drop pods using the rules for Planetfall. Note that if you choose to do this you will also require at least one Space Marine Strike Cruiser or Battle Barge to deploy the drop pods from.</description>
+    </rule>
+    <rule id="5e52-43b9-62fd-745e" name="Critical Hit: Staggering Blow" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpe Asombroso: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá de inmediato y sufre un punto de daño adicional. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Colpo Sconcertante: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Coup Stupéfiant:&lt;/B&gt; Déplacez le Titan dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Staffelung Schlag: Die Einheit wird um W6cm in eine zufällige Richtung bewegt. Wenn diese Bewegung den Titan in unpassierbares Gelände oder in eine andere Einheit bringt, die er nicht zur Seite schieben kann, stoppt er sofort und erleidet einen weiteren Schadenspunkt. Alle Einheiten, in die sie hinein- oder darüber bewegt werden, werden bei einem Wurf von 6+ getroffen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>The unit scatters D6cm in a random direction. If this move takes the titan into impassable terrain, or another unit it can’t move over or barge aside, then it stops immediately and takes another point of damage. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -7258,7 +7232,7 @@ In addition you may choose to replace a detachment’s vehicles with drop pods. 
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Slow Firing, Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="dc1f-622e-cffb-0339" name="Warlord Titan" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

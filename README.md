@@ -34,11 +34,11 @@ The datafiles are cross-compatible with army lists currently published and maint
 
 __Translations__
 
-You may notice the different languages have rules variations. Each active community has made developments to suit the needs of their group; most of the French translations come from F-ERC and reflect their particular developments. The Spanish and Italian language support is only experimental at this stage.
+You may notice the different languages have rules variations. Each active community has made developments to suit the needs of their group; most of the French translations come from F-ERC and reflect their particular developments. The Spanish, Italian and most especially the German language support is only experimental at this stage.
 
 __Army Lists__
 
-Our Repo includes 150 files, describing 315 factions, forces, chapters & regiments (from the _400plus_ army lists currently available) as well as incorporating supplementary features like Riot or Minigeddon.
+Our Repo describes 325 factions, forces, chapters & regiments (from the _400plus_ army lists currently available) as well as incorporating supplementary features like Riot or Minigeddon.
 
 __Release Numbers__
 

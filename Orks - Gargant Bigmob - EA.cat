@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="29" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="0e77-c345-9158-bd69" hidden="false" targetId="fad2-33ee-137b-ec10" type="rule">
+    <infoLink id="0e77-c345-9158-bd69" name="Mekboy Big Boss" hidden="false" targetId="fad2-33ee-137b-ec10" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -48,6 +48,12 @@
       <modifiers/>
     </infoLink>
     <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh!" hidden="false" targetId="a717-b0ae-1bf8-2c82" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="d701-852c-5735-791c" name="Mekboy Big Boss" hidden="false" targetId="5f66-30af-dcad-bfef" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -8715,56 +8721,22 @@ One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneur Mekboy:&lt;/B&gt; Un Gargant doit être commandé par un Seigneur Mekboy. C’est un personnage gratuit. Et doit être placé dans un Grand Gargant ou un Gargant si l’armée en dispose.  Le personnage entre dans la formation Gargant plus cher dans l&apos;armée.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneur Mekboy:&lt;/B&gt; Un Gargant peut être commandé par un Seigneur Mekboy. C’est un personnage gratuit. Et doit être placé dans un Grand Gargant ou un Gargant si l’armée en dispose. Sans quoi le Seigneur Mekboy n’est pas disponible.&lt;/I&gt;">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="Every Gargant Big Mob army must include a Mekboy Big Boss for no cost. The character goes in the most expensive Gargant formation in the army.">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>The army receives one free Mekboy Big Boss that may be added to any Gargant or Great Gargant in the army.
-&lt;I&gt;&lt;B&gt;Seigneur Mekboy:&lt;/B&gt; Un Gargant peut être commandé par un Seigneur Mekboy. C’est un personnage gratuit. Et doit être placé dans un Grand Gargant ou un Gargant si l’armée en dispose. Sans quoi le Seigneur Mekboy n’est pas disponible.&lt;/I&gt;</description>
+      <description>The army receives one free Mekboy Big Boss that may be added to any Gargant or Great Gargant in the army.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
@@ -8784,6 +8756,27 @@ Gargant Big Mob reference sheet 3.5</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Eztrambótiko: &lt;/B&gt;Sustituye un Kañón por un Zúper Kañón Zzap o un Megakañón.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Oddboyz: Rüstet Big Gun zu Soopagun oder Supa-Zzap Gun auf.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Tipi Ztrani: &lt;/B&gt;Uno Zkiavizta può essere aggregato ad un petzo grozzo e potenzia le armi dell’unità in Soopagun o un Super Kannone Zzap con le caratteristiche sopraccitate.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -8821,6 +8814,13 @@ Gargant Big Mob reference sheet 3.5</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 3.  • Alle Formationen haben die Initiativwert 3+. Für die Zwecke von Pöbelherrschaft gelten Gargant-Formationen immer als mehr als 10 Modelle und Supa-Stompas zählen immer als mehr als 5 Modelle.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -8909,12 +8909,41 @@ Transporta: Supa-Stompa: 8 infantry units, plus 4 Grotz. Gargant: 16 infantry un
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Macht der Waaagh!: Ork-Formationen, die versuchen, eine Engage- oder Double-Aktion auszuführen, erhalten einen +2-Modifikator für ihre Aktionstestwurf. Ork-Flyboyz erhalten einen +1-Modifikator für ihren Aktionstestwurf, wenn sie Abfang- oder Bodenangriffsaktionen ausführen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Ork formations that are attempting to take an engage or double action receive a +2 modifier to their action test roll. Ork flyboyz similarly relish the chance to shoot things up, and receive a +1 modifier to their action test roll when attempting to carry out interception or ground attack actions.
 
 
 
 </description>
+    </rule>
+    <rule id="5f66-30af-dcad-bfef" name="Mekboy Big Boss" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Seigneur Mekboy:&lt;/B&gt; Un Gargant doit être commandé par un Seigneur Mekboy. C’est un personnage gratuit. Et doit être placé dans un Grand Gargant ou un Gargant si l’armée en dispose.  Le personnage entre dans la formation Gargant plus cher dans l&apos;armée.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Every Gargant Big Mob army must include a Mekboy Big Boss for no cost. The character goes in the most expensive Gargant formation in the army.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

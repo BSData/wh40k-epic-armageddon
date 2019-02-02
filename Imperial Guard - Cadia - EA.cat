@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b199-31ca-76f2-ca3c" name="Imperial Guard: Cadian Shock Troops" revision="23" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b199-31ca-76f2-ca3c" name="Imperial Guard: Cadian Shock Troops" revision="24" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -10,6 +10,12 @@
       <modifiers/>
     </infoLink>
     <infoLink id="3a99-8bd8-f6a2-2d64" name="Strategy Rating &amp; Initiative (C)*****************" hidden="false" targetId="5f93-871e-b8d0-c756" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="9c12-c56b-28de-4894" name="Strategy Rating &amp; Initiative (C)" hidden="false" targetId="f5d9-d46b-9fce-4ad0" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -775,13 +781,13 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="6ce3-db19-64a6-22a9" hidden="false" targetId="932a-d680-61e5-d38d" type="profile">
+            <infoLink id="6ce3-db19-64a6-22a9" name="Leviathan Mobile Command Centre" hidden="false" targetId="932a-d680-61e5-d38d" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="c093-bee1-f7ed-ca42" hidden="false" targetId="3463-a07d-4574-389e" type="rule">
+            <infoLink id="c093-bee1-f7ed-ca42" name="Critical Hit: Immobile" hidden="false" targetId="359e-50a3-0ab6-cbee" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -3524,7 +3530,7 @@
           <profiles/>
           <rules/>
           <infoLinks>
-            <infoLink id="4fa4-e88c-47f5-dfa9" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
+            <infoLink id="4fa4-e88c-47f5-dfa9" name="Warhound Titan" hidden="false" targetId="b309-f865-8c98-7194" type="profile">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -3554,17 +3560,31 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="6ba9-fe30-26e4-2789" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-            </infoLink>
             <infoLink id="4310-43a8-82f8-1650" hidden="false" targetId="3d96-4de0-7961-e199" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
+            </infoLink>
+            <infoLink id="c83d-b9a0-cbd2-62df" name="Critical Hit: Staggering Blow" hidden="false" targetId="5e52-43b9-62fd-745e" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="5166-7919-99e3-52d0" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </infoLink>
           </infoLinks>
           <modifiers/>
@@ -5478,52 +5498,24 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-      </modifiers>
-      <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points.
-Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations.
-You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.</description>
-    </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="The unit takes a point of damage and is moved D6cm in a random direction. If this move takes the titan into impassable terrain or another unit it can’t move over then it stops immediately and is destroyed. All units it moves into or over suffer a hit on a roll of 6+.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Comisarios: &lt;/B&gt;Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto. &lt;BR&gt; Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones. &lt;BR&gt; No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Kommissare: Die Imperiale Armee darf einen Kommissarcharakter pro 500 Punkte oder einen Teil davon in der Armee enthalten. Die Kommissare kosten keine Punkte. Kommissar-Einheiten können der Armee zu Beginn der Schlacht hinzugefügt werden, bevor eine der beiden Seiten aufgestellt wird. Wenn die Armee einen Oberbefehlshaber enthält, dann muss das erste Kommissar zu dieser Formation angebracht werden. Sie dürfen nicht mehr als einen Kommissar pro Formation angeben. Sie können keinen Kommissar zu einer imperialen Verbündetenformation hinzufügen. Wenn Sie mehr Kommissare als Formationen haben, gehen alle Überschüsse verloren.">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.</description>
+      <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points.
+Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations.
+You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.</description>
     </rule>
     <rule id="8e3a-4580-a800-c04b" name="Critical Hit: Imperial Bastion" hidden="false">
       <profiles/>
@@ -5539,21 +5531,6 @@ You may not include more than one Commissar per formation. You may not add a Com
         </modifier>
       </modifiers>
       <description>Loses all Void Shields and cannot regain them for the rest of the game. Subsequent critical hits cause an additional 1DC of damage.</description>
-    </rule>
-    <rule id="3463-a07d-4574-389e" name="Critical Hit: Leviathan" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Leviathan:&lt;/B&gt; Immobilisé, tout dégât critique supplémentaire occasionnera la perte d’un point de CD.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Immobilised, subsequent critical hits cause an additional 1DC of damage.</description>
     </rule>
     <rule id="0293-2b1e-25eb-7a3d" name="Critical Hit: Ordinatus Cadia" hidden="false">
       <profiles/>
@@ -5638,57 +5615,30 @@ netea_army_list_compendium_2014-01-14</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="Cadian Shock Troops Imperial Guard armies have a Strategy rating of 2. Whiteshield Companies have an initiative rating of 3+. Reaver and Warlord Titan formations have an initiative rating of 1+. All other formations have an initiative rating of 2+.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Troupes de Choc Cadiennes ont une valeur stratégique de 2. Les Compagnies Bouclier Blanc ont une initiative de 3+. Les formations des Titans ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; La Force de Défense Cadienne ont une valeur stratégique de 1. Toutes les formations de la Garde Impériale Cadienne et escadrons de la Marine Impériale ont une initiative de 2+. Formations Kasrkin ont une initiative de 1+. Formations Bouclier Blanc ont une initiative de 3+.&lt;/I&gt;">
           <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dc9e-58ea-3945-7677" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 1.  • Imperiale Armee-Formationen und Flugzeuge der Imperial Navy haben den Initiativwert 2+. Kasrkin Grenadiere-Formationen haben den Initiativwert 1+. Whiteshield Rekruten-Formationen haben den Initiativwert 3+.">
+          <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dc9e-58ea-3945-7677" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5749,8 +5699,87 @@ Valkyrie: 2 Stormtrooper, Kasrkin or Special Weapon Team units.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Imperiale Armee-Formationen und Flugzeuge der Imperial Navy haben den Initiativwert 2+. Titanenlegion- und Kasrkin Grenadiere-Formationen haben den Initiativwert 1+. Whiteshield Rekruten-Formationen haben den Initiativwert 3+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>A Cadian Strike Force army has a Strategy Rating of 3. All Cadian Imperial Guard formations and Imperial Navy squadrons have an initiative rating of 2+. All Titan Legion and Kasrkin formations have an initiative rating of 1+. Whiteshield formations have an initiative rating of 3+.</description>
+    </rule>
+    <rule id="5e52-43b9-62fd-745e" name="Critical Hit: Staggering Blow" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpe Asombroso: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá de inmediato y sufre un punto de daño adicional. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Colpo Sconcertante: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Coup Stupéfiant:&lt;/B&gt; Déplacez le Titan dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Staffelung Schlag: Die Einheit wird um W6cm in eine zufällige Richtung bewegt. Wenn diese Bewegung den Titan in unpassierbares Gelände oder in eine andere Einheit bringt, die er nicht zur Seite schieben kann, stoppt er sofort und erleidet einen weiteren Schadenspunkt. Alle Einheiten, in die sie hinein- oder darüber bewegt werden, werden bei einem Wurf von 6+ getroffen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The unit scatters D6cm in a random direction. If this move takes the titan into impassable terrain, or another unit it can’t move over or barge aside, then it stops immediately and takes another point of damage. All units it moves into or over suffer a hit on a roll of 6+.</description>
+    </rule>
+    <rule id="f5d9-d46b-9fce-4ad0" name="Strategy Rating &amp; Initiative (C)" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Troupes de Choc Cadiennes ont une valeur stratégique de 2. Les Compagnies Bouclier Blanc ont une initiative de 3+. Les formations des Titans ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 2.  • Whiteshield Rekruten-Formationen haben den Initiativwert 3+. Reaver und Warlord Kampftitanen-Formationen haben den Initiativwert 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Cadian Shock Troops Imperial Guard armies have a Strategy rating of 2. Whiteshield Companies have an initiative rating of 3+. Reaver and Warlord Titan formations have an initiative rating of 1+. All other formations have an initiative rating of 2+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -6224,7 +6253,7 @@ Valkyrie: 2 Stormtrooper, Kasrkin or Special Weapon Team units.</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc, Macro-weapon&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Left Arc&lt;BR&gt;&lt;BR&gt;Right Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Thick Rear Armour, Transport, 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="4"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Leviathan"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobile"/>
       </characteristics>
     </profile>
     <profile id="d431-0d2f-e3cc-37f7" name="Lunar Cruiser" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -6699,7 +6728,7 @@ Valkyrie: 2 Stormtrooper, Kasrkin or Special Weapon Team units.</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Slow Firing, Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="dc1f-622e-cffb-0339" name="Warlord Titan" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

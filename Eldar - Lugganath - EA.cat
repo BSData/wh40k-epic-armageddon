@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="48bc-4f40-55f7-fae5" name="Eldar: Lugganath Craftworld" revision="21" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="48bc-4f40-55f7-fae5" name="Eldar: Lugganath Craftworld" revision="22" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
-    <infoLink id="e1bb-35fc-6a41-effd" name="May Not Garrison" hidden="false" targetId="b786-c22d-2443-b225" type="rule">
+    <infoLink id="e1bb-35fc-6a41-effd" name="May Not Garrison" hidden="false" targetId="e420-1e2a-d2a5-b01c" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
     <infoLink id="97de-f787-d238-a4a5" name="Hit &amp; Run Tactics" hidden="false" targetId="205d-457b-86e9-f840" type="rule">
       <profiles/>
@@ -3529,7 +3537,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="4a1c-4707-9a06-2a4f" name="Knight Squadron Support" hidden="false" targetId="613f-6038-fd8a-cb87" type="rule">
+        <infoLink id="4a1c-4707-9a06-2a4f" name="Knight Squadron Support" hidden="false" targetId="424c-8588-1d5a-5a5d" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4241,7 +4249,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9f91-dee0-2336-c6d4" name="Farseer" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -4436,7 +4446,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="c385-2c2a-5a3d-5f93" name="4x Falcon" hidden="false" collective="false" type="model">
               <profiles/>
@@ -4907,7 +4919,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -5023,7 +5037,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -5527,7 +5543,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2a0a-b8c0-839e-53d3" name="Solitaire" hidden="false" collective="false" type="unit">
           <profiles/>
@@ -6787,7 +6805,9 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="d73a-0571-b5c6-147e" name="Harlequin Venom" hidden="false" collective="false" type="model">
       <profiles/>
@@ -6827,7 +6847,9 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="b828-f882-2727-5361" name="Shadowseer" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -6885,7 +6907,9 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="86e7-d1f7-d0cb-b611" name="Death Jesters" hidden="false" collective="false" type="unit">
       <profiles/>
@@ -7019,35 +7043,6 @@ Fanatic #55
 Fanatic #02
 Fanatic #13</description>
     </rule>
-    <rule id="b786-c22d-2443-b225" name="May Not Garrison" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Sólo las formaciones de Exploradores y de Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Only Eldar Rangers and War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.</description>
-    </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
       <rules/>
@@ -7080,6 +7075,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Avatar: Der Avatar kann auf drei verschiedene Arten auf dem Schlachtfeld erscheinen:  • 1: Bei der Bereitstellung zu Beginn eines Spiels  • 2: Über ein Portal wie jede Formation in Reserve  • 3: Infolge der Beschwörung innerhalb von 15 cm eines Runenprophet während der Teleportationsphase  • In jedem Fall ist es von nun an eine unabhängige und dauerhafte Formation bis zum Ende des Spiels oder seiner Zerstörung. Es kann jedoch nur Ziele anfechten.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7116,6 +7118,13 @@ In any case, from its appearance, it is an independent and permanent formation u
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 4.  • Avatare, Harlekins, Aspektkrieger und Titanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Eldar Lugganath Craftworld armies have a strategy rating of 4.
 Avatar, Harlequin, Aspect Warrior and Titan formations have an initiative rating of 1+.
@@ -7126,37 +7135,29 @@ All other formations have an initiative rating of 2+.</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Holopantalla: &lt;/B&gt;La Holopantalla proporciona a la unidad que la posee una salvación especial de (X+) que puede realizarse contra cualquier impacto sufrido en lugar de la salvación normal por Blindaje o cobertura. Esta salvación siempre puede realizarse, incluso contra ataques realizados durante un asalto, o que tengan las habilidades de macro-arma o matatitanes. Realiza una única tirada contra las armas matatitanes, y todo el daño será ignorado si la tirada se supera. Si la unidad con holopantalla tiene también blindaje reforzado, podrá repetir la salvación si normalmente le estaría permitido (es decir, si no ha sido impactada por una macro-arma, una lanza o un arma matatitanes), pero deberá emplear su valor normal de Blindaje en vez de la holopantalla. No se colocan marcadores de explosión por los ataques anulados por la holopantalla.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Holopantalla (X+): &lt;/B&gt;La Holopantalla proporciona a la unidad que la posee una salvación especial de (X+) que puede realizarse contra cualquier impacto sufrido en lugar de la salvación normal por Blindaje o cobertura. Esta salvación siempre puede realizarse, incluso contra ataques realizados durante un asalto, o que tengan las habilidades de macro-arma o matatitanes. Realiza una única tirada contra las armas matatitanes, y todo el daño será ignorado si la tirada se supera. Si la unidad con holopantalla tiene también blindaje reforzado, podrá repetir la salvación si normalmente le estaría permitido (es decir, si no ha sido impactada por una macro-arma, una lanza o un arma matatitanes), pero deberá emplear su valor normal de Blindaje en vez de la holopantalla. No se colocan marcadores de explosión por los ataques anulados por la holopantalla.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Holo-champ:&lt;/B&gt; Les Holo-champs procurent aux unités une sauvegarde spéciale de (X+) qui peut-être utilisée à la place de la sauvegarde normale du titan. Cette sauvegarde peut toujours être utilisée, même en corps à corps, en fusillade et contre les armes tueuses de titan ou les macro armes. Faites une seule sauvegarde contre les armes avec la capacité tueuse de titan, au lieu de séparer les sauvegardes pour chaque point de dommage. Si un véhicule avec un Holo-champ a aussi un blindage renforcé, alors il est autorisé à relancer ses sauvegardes, sauf pour les attaques faites avec des armes ayant la capacité lance, macroarmes ou tueuses de titans. La relance doit être faite en utilisant la sauvegarde d’armure de l’unité et non pas celle de l&apos;Holo-champ. Aucun pion d&apos;impact n&apos;est placé pour une touche sauvée par le Holo-champ.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Holo-champ (X+):&lt;/B&gt; Les Holo-champs procurent aux unités une sauvegarde spéciale de (X+) qui peut-être utilisée à la place de la sauvegarde normale du titan. Cette sauvegarde peut toujours être utilisée, même en corps à corps, en fusillade et contre les armes tueuses de titan ou les macro armes. Faites une seule sauvegarde contre les armes avec la capacité tueuse de titan, au lieu de séparer les sauvegardes pour chaque point de dommage. Si un véhicule avec un Holo-champ a aussi un blindage renforcé, alors il est autorisé à relancer ses sauvegardes, sauf pour les attaques faites avec des armes ayant la capacité lance, macroarmes ou tueuses de titans. La relance doit être faite en utilisant la sauvegarde d’armure de l’unité et non pas celle de l&apos;Holo-champ. Aucun pion d&apos;impact n&apos;est placé pour une touche sauvée par le Holo-champ.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Holofelder (X+): Holofelder bieten Titans einen speziellen (X+) Rettungswurf, der anstelle des normalen Rettungswurfs des Titan ausgeführt werden kann. Diese Sicherung kann immer durchgeführt werden, auch gegen Treffer in einem Angriff oder gegen Titan Killer- oder Makro-Waffen-Angriffe. Sparen Sie mit der Titan-Killer-Fähigkeit nur einmal gegen Waffen, anstatt für jeden Schadenspunkt einen separaten. Wenn ein Fahrzeug mit einem Holofield auch eine verstärkte Rüstung hat, darf es seinen Rettungswurf erneut ausführen, sofern es nicht von Lance-, Makro-Waffe- oder Titan-Killer-Angriffen getroffen wird. Der Wiederholvorgang muss jedoch mit der Rüstung der Einheiten anstelle von durchgeführt werden das Holofeld. Für Treffer, die von einem Holofeld gespeichert werden, werden keine Blast-Marker gesetzt.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
       <description>Holofields provide units with a special (X+) saving throw that can be taken instead of the Titan’s normal saving throw. This save may always be taken, even against hits in an assault or against Titan Killer or Macro-weapons attacks. Make a single saving against weapons with the Titan Killer ability, rather than a separate save for each point of damage. If a vehicle with a holofield also has reinforced armour, then it is allowed to re-roll its saving throw unless hit by Lance, Macro-weapon or Titan Killer attacks, but the re-roll must be made using the units armour save rather than the holofield save. No Blast markers are placed for hits that are saved by a holofield.</description>
-    </rule>
-    <rule id="613f-6038-fd8a-cb87" name="Knight Squadron Support" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Appui Escadron de Chevaliers:&lt;/B&gt; Bien que les Escadron de Chevaliers sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Avions et Soutien. Pour sélectionner l&apos;une de ces &quot;Knight Squadron Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres unités sont prises.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Although Knight Squadrons are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Support. To select any of these the &quot;Knight Squadron Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further units are taken.</description>
     </rule>
     <rule id="64f3-7f2a-6a42-77b5" name="May Not Garrison" hidden="false">
       <profiles/>
@@ -7184,11 +7185,15 @@ All other formations have an initiative rating of 2+.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Darf Keine Garnison Sein: Keine Einheiten dürfen in Turnierkämpfen eine Garnison bilden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
-      <description>The Eldar of Craftworld Lugganath are forbidden from garrisoning any formations in the Epic tournament game scenario.
-
-
-&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;No se permiten formaciones para formar patrullas en las batallas de torneo.&lt;/I&gt;</description>
+      <description>The Eldar of Craftworld Lugganath are forbidden from garrisoning any formations in the Epic tournament game scenario.</description>
     </rule>
     <rule id="82df-4ac1-f767-0bc3" name="Strategy Rating &amp; Initiative (Eldar)" hidden="false">
       <profiles/>
@@ -7213,6 +7218,13 @@ All other formations have an initiative rating of 2+.</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 4.  • Aspektkrieger, Phantomritter und Titanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7265,10 +7277,7 @@ In addition Mimes may re-roll 1s when testing for teleport mishap.</description>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Harlequins recieve an additional +1 initiative modifier when attempting to do an Engage action.
-
-
-&lt;I&gt;&lt;B&gt;Danse de la Mort:&lt;/B&gt;  Les harlequins reçoivent un modificateur d&apos;initiative supplémentaire de +1 lorsqu&apos;ils tentent de réaliser une action d&apos;assaut.&lt;/I&gt;</description>
+      <description>Harlequins recieve an additional +1 initiative modifier when attempting to do an Engage action.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

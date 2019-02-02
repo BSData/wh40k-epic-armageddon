@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="27e4-8333-52a9-b618" name="Adeptus Mechanicus: Questoris Mechanicus" revision="20" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="27e4-8333-52a9-b618" name="Adeptus Mechanicus: Questoris Mechanicus" revision="21" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -710,7 +710,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="154e-0ff0-30e0-2516" name="Critical Hit: Caught Off-balance" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+            <infoLink id="154e-0ff0-30e0-2516" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -976,7 +976,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="6b15-ab36-d2d9-68fd" name="Critical Hit: Enormous Explosion" hidden="false" targetId="f6e9-e6b4-bae4-3cc0" type="rule">
+            <infoLink id="6b15-ab36-d2d9-68fd" name="Critical Hit: Enormous Explosion" hidden="false" targetId="c959-8bf0-59ae-30b8" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -2193,7 +2193,9 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="bd84-7666-3c4d-2cd1" name="Acastus Knight Mechanicum" hidden="false" collective="false" type="model">
       <profiles/>
@@ -2244,7 +2246,9 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="76a2-499c-2978-dd28" name="Acastus Porpyhrion" hidden="false" collective="false" type="model">
       <profiles/>
@@ -2295,7 +2299,9 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="65f4-19c9-e1ca-1b81" name="Cerastus Knight Atrapos" hidden="false" collective="false" type="model">
       <profiles/>
@@ -2396,21 +2402,6 @@ Fanatic #13</description>
       <modifiers/>
       <description>Questoris Mechanicus v1,57</description>
     </rule>
-    <rule id="fc3f-b554-fc11-4d44" name="*Ion Shield &amp; Ion Bulwark" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Bouclier à Ion:&lt;/B&gt; Les Chevaliers sont protégés par un Bouclier à Ions. Un Chevalier peut décider d&apos;utiliser la sauvegarde de son Bouclier à Ions à la place de sa sauvegarde de blindage, y compris contre les armes n&apos;autorisant habituellement pas les sauvegardes (MA et TT). Dans ce cas, chaque touche en TT doit être sauvegardée séparément. Si cette sauvegarde échoue, le Chevalier peut utiliser son blindage renforcé si l&apos;arme l&apos;y autorise (les attaques TT, MA et lance annulent donc cette possibilité). Il utilisera alors sa valeur de blindage et non la valeur de son Bouclier à Ions. Par contre, cette règle ne s&apos;applique pas contre les attaques de corps à corps et les tirs en cas de feu croisé. Le Pavois à Ions fonctionne de la même manière qu&apos;un Bouclier mais il offre une bien meilleure protection à courte distance. Il peut donc également être utilisé contre des touches de CC.)&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Knights are protected by an Ion Shield. A Knight may choose to use the Ion Shield save instead of their armour save, including against weapons that do not normally allow saves (MW and TK). In this case, each TK hit must be saved separately. If this save fails, the Knight can use his reinforced armour, if the weapon allows it (TK, MW and lance attacks annul this). He will then use his armour value and not the value of his Ion Shield. However, this rule does not apply to melee attacks and shooting in case of crossfire. The Ion Bulwark works in the same way as a Shield, but it offers much better short-range protection. It can also be used against CC hits.)</description>
-    </rule>
     <rule id="c89e-374f-daf4-fca6" name="Strategy Rating &amp; Initiative (QM)" hidden="false">
       <profiles/>
       <rules/>
@@ -2420,6 +2411,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Titanenlegion-Formationen haben den Initiativwert 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -2511,64 +2509,6 @@ Halve the number of extra hits to a Knight Lance that loses an assault, rounding
  - No modifiers ever apply to this saving throw and it is unaffected by Macro-Weapon, Lance and Titan Killer hits (However, each point of damage from a Titan Killer hit must be saved separately) If the unit has reinforced armour as well then it is allowed to re-roll a failed save using its armour value unless the hit was a Macro-Weapon, Lance or Titan killer.
  - None of these benefits apply to units in a crossfire, hits from supporting fire, or CC attacks (the Ion Shield save can still be used against FF attacks. If relevant, roll CC and FF dice separately when attacking units equipped with Ion Shields).
  - Ion Gauntlet Shields, Ionic Flare Shields and Ion Aegises increase the Ion Shield Save to 3+.</description>
-    </rule>
-    <rule id="f6e9-e6b4-bae4-3cc0" name="Critical Hit: Enormous Explosion" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Explosión Enorme: &lt;/B&gt;La unidad es destruida. Todas las unidades a 15cm o menos sufren un impacto con un 5+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Esplosione Enorme: &lt;/B&gt;L&apos;unità è distrutto ed ogni unità entro i 15 cm dal modello viene colpita con un 5+ su D6.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Explosion Énorme:&lt;/B&gt; Détruit, toutes les unités dans un rayon de 15cm subissent une touche sur un 5+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Destroyed, units within 15cm hit on D6 roll of 5+.</description>
-    </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. If this move takes the titan into impassable terrain or another unit it can’t move over then it stops immediately and is destroyed. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
     <rule id="4249-f9ca-92aa-be7b" name="Transport (QM)" hidden="false">
       <profiles/>
@@ -3011,7 +2951,7 @@ Ordinatus Minorus Corvus: 10 Hypaspists, Secutors</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Slow Firing, Forward Arc"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Reinforced Armour, Walker (Titan), 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Caught Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Staggering Blow"/>
       </characteristics>
     </profile>
     <profile id="c8f1-5f80-876c-f22f" name="Reaver Titan (Hunter Configuration)" hidden="false" profileTypeId="87ab-2658-3f0c-128d">

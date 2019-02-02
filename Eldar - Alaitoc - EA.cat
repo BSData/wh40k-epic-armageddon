@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4bbb-8d08-72fe-860c" name="Eldar: Alaitoc Craftworld" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4bbb-8d08-72fe-860c" name="Eldar: Alaitoc Craftworld" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9,13 +9,21 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="e1bb-35fc-6a41-effd" hidden="false" targetId="b786-c22d-2443-b225" type="rule">
+    <infoLink id="e1bb-35fc-6a41-effd" name="May Not Garrison" hidden="false" targetId="e420-1e2a-d2a5-b01c" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
-    <infoLink id="97de-f787-d238-a4a5" hidden="false" targetId="205d-457b-86e9-f840" type="rule">
+    <infoLink id="97de-f787-d238-a4a5" name="Hit &amp; Run Tactics" hidden="false" targetId="205d-457b-86e9-f840" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -28,6 +36,18 @@
       <modifiers/>
     </infoLink>
     <infoLink id="a4ec-41e1-dc4c-b62e" name="Strategy Rating &amp; Initiative (Eldar)" hidden="false" targetId="4d3a-82e6-ff0e-2369" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="eb44-aabd-9ab8-25f6" name="May Not Garrison" hidden="false" targetId="2ce9-be58-355d-4f44" type="rule">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+    </infoLink>
+    <infoLink id="a4a9-74c1-f967-56b8" name="May Not Garrison" hidden="false" targetId="f474-6981-51a1-485a" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -7261,108 +7281,6 @@ Fanatic #55
 Fanatic #02
 Fanatic #13</description>
     </rule>
-    <rule id="b786-c22d-2443-b225" name="May Not Garrison" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="Only Alaitoc Eldar Pathfinders, Rangers and War Walkers are allowed to garrison objectives in the Epic tournament game scenario.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avanzadilla: &lt;/B&gt;Sólo los Pioneros, Exploradores y los Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Pathfinders sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="Only Eldar Ranger hosts and Eldar Pathfinder troupes may set up using the tournament game garrison rule.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Sólo las formaciones de Exploradores y de Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>Only Eldar Rangers and War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.</description>
-    </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
       <rules/>
@@ -7396,6 +7314,13 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 4.  • Avatare, Aspektkrieger, Kuanor Jagd-Titanen, Phantom-Titanen und Runentitanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.  • Harlekins haben einen Strategiewert von 5 und einen Initiativwert von 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Eldar Alaitoc Craftworld armies have a strategy rating of 4.
 Avatar, Aspect Warrior, Phantom, Revenants and Warlock formations have an initiative rating of 1+.
@@ -7425,6 +7350,13 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Avatar: Der Avatar kann auf drei verschiedene Arten auf dem Schlachtfeld erscheinen:  • 1: Bei der Bereitstellung zu Beginn eines Spiels  • 2: Über ein Portal wie jede Formation in Reserve  • 3: Infolge der Beschwörung innerhalb von 15 cm eines Runenprophet während der Teleportationsphase  • In jedem Fall ist es von nun an eine unabhängige und dauerhafte Formation bis zum Ende des Spiels oder seiner Zerstörung. Es kann jedoch nur Ziele anfechten.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -7498,6 +7430,78 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
 Avatar, Aspect Warrior, Mirage Warrior and Titan formations have an initiative rating of 1+.
 All other formations have an initiative rating of 2+.
 Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
+    </rule>
+    <rule id="2ce9-be58-355d-4f44" name="May Not Garrison" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Pathfinders sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Darf Keine Garnison Sein: Nur Weltenwanderern und Rangers dürfen in Turnierkämpfen Garnison bilden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avanzadilla: &lt;/B&gt;Sólo los Exploradores y los Pioneros tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Only Eldar Ranger hosts and Eldar Pathfinder troupes may set up using the tournament game garrison rule.</description>
+    </rule>
+    <rule id="f474-6981-51a1-485a" name="May Not Garrison" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Avanzadilla: &lt;/B&gt;Sólo los Pioneros, Exploradores y los Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Darf Keine Garnison Sein: Nur Weltenwanderern, Rangers und Kampfläufers dürfen in Turnierkämpfen Garnison bilden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Pathfinders, Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>Only Alaitoc Eldar Pathfinders, Rangers and War Walkers are allowed to garrison objectives in the Epic tournament game scenario.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

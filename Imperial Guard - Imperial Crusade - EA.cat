@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6dbc-eb24-37bf-a54a" name="Imperial Guard: Saranes Expanse Imperial Crusade" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6dbc-eb24-37bf-a54a" name="Imperial Guard: Saranes Expanse Imperial Crusade" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -2681,7 +2681,7 @@
               <infoLinks/>
               <modifiers/>
             </infoLink>
-            <infoLink id="6ba9-fe30-26e4-2789" hidden="false" targetId="bb81-1d84-a1f5-a287" type="rule">
+            <infoLink id="6ba9-fe30-26e4-2789" name="Critical Hit: Staggering Blow" hidden="false" targetId="5e52-43b9-62fd-745e" type="rule">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -2692,6 +2692,20 @@
               <rules/>
               <infoLinks/>
               <modifiers/>
+            </infoLink>
+            <infoLink id="d292-64d3-5313-b398" name="Critical Hit: Staggering Blow" hidden="false" targetId="c884-322c-6962-c5a2" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </infoLink>
           </infoLinks>
           <modifiers>
@@ -4030,7 +4044,7 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissari: &lt;/B&gt;n esercito di Guardia Imperiale della Legione d&apos;Acciaio puo&apos; includere 2D6 Commissari. I Commissari non hanno costo in punti. Se il lancio di dado supera il numero di unita&apos; disponibili ogni scarto sara&apos; perso.&lt;BR&gt; Tira per vedere quante unita&apos; di Commissari un giocatore puo&apos; aggiungere all&apos;inizio della battaglia prima che entrambe le fazioni abbiano schierato. Se l&apos;esercito include un Comandante Supremo, allora il primo Commissario deve essere unito alla formazione del Comandante Supremo. Ogni altro Commissario puo&apos; essere unito a qualsiasi altra formazione. Non puoi includere piu&apos; di un Commissario per formazione. Se hai più Commissari che formazioni, ogni eccesso è perso.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Commissari: &lt;/B&gt;Un esercito di Guardia Imperiale della Legione d&apos;Acciaio puo&apos; includere 2D6 Commissari. I Commissari non hanno costo in punti. Se il lancio di dado supera il numero di unita&apos; disponibili ogni scarto sara&apos; perso.&lt;BR&gt; Tira per vedere quante unita&apos; di Commissari un giocatore puo&apos; aggiungere all&apos;inizio della battaglia prima che entrambe le fazioni abbiano schierato. Se l&apos;esercito include un Comandante Supremo, allora il primo Commissario deve essere unito alla formazione del Comandante Supremo. Ogni altro Commissario puo&apos; essere unito a qualsiasi altra formazione. Non puoi includere piu&apos; di un Commissario per formazione. Se hai più Commissari che formazioni, ogni eccesso è perso.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
@@ -4041,6 +4055,13 @@
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kommissare: Die Imperiale Kreuzzug kann bis zu 2W6-Kommissarcharaktere enthalten. Die Kommissare kosten keine Punkte. Kommissar-Einheiten können der Armee zu Beginn der Schlacht hinzugefügt werden, bevor eine der beiden Seiten aufgestellt wird. Wenn die Armee einen Oberbefehlshaber enthält, dann muss das erste Kommissar zu dieser Formation angebracht werden. Sie dürfen nicht mehr als einen Kommissar pro Formation angeben. Wenn Sie mehr Kommissare als Formationen haben, gehen alle Überschüsse verloren.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4075,48 +4096,6 @@
         </modifier>
       </modifiers>
       <description>Imperial Crusade armies include one Commissar for every 1000 points. If there is a Supreme Commander present, then the first Commissar must join that formation. Subsequent Commissars can be allocated to any unit in any order, though no formation may have more than one Commissar. Any excess Commissars are lost.</description>
-    </rule>
-    <rule id="bb81-1d84-a1f5-a287" name="Critical Hit: Caught Off-balance" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="The unit takes a point of damage and is moved D6cm in a random direction. If this move takes the titan into impassable terrain or another unit it can’t move over then it stops immediately and is destroyed. All units it moves into or over suffer a hit on a roll of 6+.">
-          <repeats/>
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Sbilanciato: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpeado Fuera de Balance: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y será destruido. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Déséquilibré:&lt;/B&gt; Déplacez le dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>The unit takes a point of damage and is moved D6cm in a random direction. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <profiles/>
@@ -4165,6 +4144,13 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Space Marine- und Titanenlegion-Formationen haben den Initiativwert 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Imperial Crusade armies have Strategy Rating 3. All Space Marine and Titan Legion formation have an Initiative of 1+. All other Imperial Crusade formations have an initiative of 2+.</description>
     </rule>
@@ -4191,6 +4177,49 @@ Rhino: 2 of the following units: Tactical, Devastator, Scout.
 Strike Cruiser: 20 Tactical, Assault, Devastator, Scout, Bikes, Terminator or Dreadnought units. Plus 20 units of Land Raiders, Rhinos. Plus 6 Thunderhawks and enough Drop Pods or Landing Craft to carry any other units on board.
 Thunderhawk: 8 Tactical, Assault, Devastator, Scout, Bikes, Terminator or Dreadnought units. Terminators or Dreadnoughts use 2 spaces each.
 Valkyrie: 2 Storm Trooper units.</description>
+    </rule>
+    <rule id="5e52-43b9-62fd-745e" name="Critical Hit: Staggering Blow" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Daño Crítico: Golpe Asombroso: &lt;/B&gt;Mueve al Titán 1D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá de inmediato y sufre un punto de daño adicional. Las unidades atravesadas sufrirán un impacto con un 6+ en 1D6.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Colpo Crítici: Colpo Sconcertante: &lt;/B&gt;Spostalo D6cm in una direzione a caso. Se questo movimento porta l&apos;unità su un terreno invalicabile o su un&apos;altra unità esso non continua a muovere ma si ferma in contatto con l&apos;ostruzione e subisce un punto supplementare di danni. Se vacilla sopra qualunque unità allora queste prenderanno un colpo con un 6+ su D6 (si effettuano normalmente i tiri salvezza delle unità).&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Coup Stupéfiant:&lt;/B&gt; Déplacez le Titan dans une direction aléatoire de 1D6cm. Si le Warhound percute un terrain infranchissable ou une unité qu&apos;il ne peut pousser, il s&apos;arrête et perd un point de dommage supplémentaire, les unités qu&apos;il percute subissent une touche sur un résultat de 6+.&lt;/I&gt;">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Staffelung Schlag: Die Einheit wird um W6cm in eine zufällige Richtung bewegt. Wenn diese Bewegung den Titan in unpassierbares Gelände oder in eine andere Einheit bringt, die er nicht zur Seite schieben kann, stoppt er sofort und erleidet einen weiteren Schadenspunkt. Alle Einheiten, in die sie hinein- oder darüber bewegt werden, werden bei einem Wurf von 6+ getroffen.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>The unit scatters D6cm in a random direction. If this move takes the titan into impassable terrain, or another unit it can’t move over or barge aside, then it stops immediately and takes another point of damage. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

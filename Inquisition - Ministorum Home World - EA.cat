@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9852-2df7-3b4c-8ce1" name="Inquisition: Ministorum Home World Defence Conclave" revision="20" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9852-2df7-3b4c-8ce1" name="Inquisition: Ministorum Home World Defence Conclave" revision="21" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -110,7 +110,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="e4c8-2ce8-138a-8d0f" hidden="false" targetId="02cd-253a-0477-ba88" type="rule">
+        <infoLink id="e4c8-2ce8-138a-8d0f" name="Critical Hit: Immobile" hidden="false" targetId="359e-50a3-0ab6-cbee" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5143,23 +5143,15 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-      </modifiers>
-      <description>Any company formation with the Faithful special rule may perform the Acts of Faith, the formation activates at -1 initiative, however the Acts of Faith does not apply if the formation fails its initiative roll. The formation receives Fearless and Invulnerable Save special rules which lasts until the start of their next activation. You cannot maintain Faithful without retesting each turn.</description>
-    </rule>
-    <rule id="02cd-253a-0477-ba88" name="Critical Hit: Immobilised" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Immobilisé:&lt;/B&gt; Immobilisé, les critiques suivant lui font perdre 1CD.&lt;/I&gt;">
+        <modifier type="set" field="description" value="Glaubensakte: Jede Adeptus Sororitas-Formation, die Einheiten mit der Gläubigen-Regel enthält, kann sich dazu entscheiden, eine Glaubensakt durchzuführen, wenn sie einen Aktionstest ablegt. Die Formation erhält eine Strafe von -1 für diesen Wurf (was mit anderen Modifikatoren kumulativ ist). Wenn der Aktionstest bestanden ist, führt die Formation die gewählte Aktion wie üblich aus. Zusätzlich erhalten alle Einheiten in der Formation bis zum Beginn ihrer nächsten Aktivierung die Regeln Furchtlos und Unverwundbar Rettung.">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>The unit is immobilised. Further Critical Hits cause 1 additional point of damage.</description>
+      <description>Any company formation with the Faithful special rule may perform the Acts of Faith, the formation activates at -1 initiative, however the Acts of Faith does not apply if the formation fails its initiative roll. The formation receives Fearless and Invulnerable Save special rules which lasts until the start of their next activation. You cannot maintain Faithful without retesting each turn.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <profiles/>
@@ -5197,18 +5189,32 @@ Ministorum Home world Defence Conclave Unit Stats ver 1.3</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Sprung: Kann über dazwischen liegendes Gelände (einschließlich unpassierbarem Gelände) und über freundliche Einheiten springen. Darf nicht über feindliche Kontrollzonen springen, es sei denn, eine Engage-Aktion wird ausgeführt.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>May jump over intervening terrain including impassable terrain and friendly units. May not jump over enemy ZOC unless making an engage action.</description>
     </rule>
-    <rule id="bf70-3ce0-296b-fa70" name="Critical Hit: Thrown Off-balance" hidden="false">
+    <rule id="bf70-3ce0-296b-fa70" name="Critical Hit: Shocking Blow" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Désaxé:&lt;/B&gt; L&apos;unité perd la capacité de saut, le mouvement est réduit à 20 cm et il déplace 2D6 cm dans une direction aléatoire. S&apos;il pénètre dans un terrain impraticable, il est détruit. Toutes les unités traversées subissent une touche macro-arme.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Touche Critique: Coup Choquant:&lt;/B&gt; L&apos;unité perd la capacité de saut, le mouvement est réduit à 20 cm et il déplace 2D6 cm dans une direction aléatoire. S&apos;il pénètre dans un terrain impraticable, il est détruit. Toutes les unités traversées subissent une touche macro-arme.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Schockierender Schlag: Die Einheit verliert die Sprungfähigkeit, die Bewegung wird auf 20 cm reduziert und wird um 2W6cm in eine zufällige Richtung bewegt. Wenn es unwegsames Gelände betritt, wird es zerstört. Jede Einheit, durch die oder durch die sie sich bewegt, erleiden einen Makrowaffenschlag.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5224,6 +5230,13 @@ Ministorum Home world Defence Conclave Unit Stats ver 1.3</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Arbitor Sektor Haus: Dieses Gebäude ersetzt ein Ziel in Ihrer Tischhälfte. Betrachten Sie es als eine Festung, die bis zu 6 Infanterieeinheiten hält. Jede Seite kann ihre Kräfte hineinbewegen. Alle Einheiten, die sich darin befinden, erhalten eine Verstärkte Rüstung. Kann nicht zerstört werden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5541,7 +5554,7 @@ Valkyrie: 2 infantry units.</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Disrupt, Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Left Arc, Ignore Cover&lt;BR&gt;and Ignore Cover&lt;BR&gt;&lt;BR&gt;Right Arc, Ignore Cover&lt;BR&gt;and Ignore Cover"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Inspiring, Reinforced Armour, Transport, Walker, 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="6"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobilised"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Immobile"/>
       </characteristics>
     </profile>
     <profile id="6947-f5db-1737-bfeb" name="Celestians" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -6139,7 +6152,7 @@ Valkyrie: 2 infantry units.</description>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="*"/>
         <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Fearless, Jump, Reinforced Armour, Walker, 2 Sh"/>
         <characteristic name="DC" characteristicTypeId="fb51-1ee4-ea0e-41eb" value="3"/>
-        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Thrown Off-balance"/>
+        <characteristic name="Crit" characteristicTypeId="3c70-22c1-1ecf-35c4" value="Shocking Blow"/>
       </characteristics>
     </profile>
     <profile id="5030-4cee-e968-be5c" name="Blessed Power Sword" hidden="false" profileTypeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1">

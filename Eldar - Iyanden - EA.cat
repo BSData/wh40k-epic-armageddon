@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="41e4-ca8a-fcf8-bc99" name="Eldar: Iyanden Craftworld" revision="28" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="41e4-ca8a-fcf8-bc99" name="Eldar: Iyanden Craftworld" revision="29" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -9,11 +9,19 @@
       <infoLinks/>
       <modifiers/>
     </infoLink>
-    <infoLink id="e1bb-35fc-6a41-effd" hidden="false" targetId="b786-c22d-2443-b225" type="rule">
+    <infoLink id="e1bb-35fc-6a41-effd" name="May Not Garrison" hidden="false" targetId="e420-1e2a-d2a5-b01c" type="rule">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </infoLink>
     <infoLink id="97de-f787-d238-a4a5" hidden="false" targetId="205d-457b-86e9-f840" type="rule">
       <profiles/>
@@ -4991,7 +4999,7 @@
       <profiles/>
       <rules/>
       <infoLinks>
-        <infoLink id="b48b-6d5c-a3af-0e2f" name="Knight Squadron Support" hidden="false" targetId="613f-6038-fd8a-cb87" type="rule">
+        <infoLink id="b48b-6d5c-a3af-0e2f" name="Knight Squadron Support" hidden="false" targetId="424c-8588-1d5a-5a5d" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -8018,35 +8026,6 @@ Fanatic #55
 Fanatic #02
 Fanatic #13</description>
     </rule>
-    <rule id="b786-c22d-2443-b225" name="May Not Garrison" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;No Pueden Patrullar: &lt;/B&gt;Sólo las formaciones de Exploradores y de Bípodes de Combate tienen permitido formar patrullas en las batallas de torneo.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Ne Peuvent Pas se Déployer en Garnison:&lt;/B&gt; Seuls les Rangers et les Marcheurs de Combat Eldar sont autorisés à se déployer en garnison sur des objectifs dans les scénarios de grand tournoi.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Only Eldar Rangers and War Walkers are allowed to garrison objectives in the Grand Tournament game scenario.</description>
-    </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
       <profiles/>
       <rules/>
@@ -8077,6 +8056,13 @@ Fanatic #13</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 4.  • Avatare, Aspektkrieger, Kuanor Jagd-Titanen, Phantom-Titanen und Runentitanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.  • Harlekins haben einen Strategiewert von 5 und einen Initiativwert von 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -8126,6 +8112,13 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • Avatare, Aspektkrieger, Kuanor Jagd-Titanen, Phantom-Titanen und Runentitanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.  • Harlekins haben einen Strategiewert von 5 und einen Initiativwert von 1+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Iyanden armies have Strategy Rating 3. 
 Iyanden Avatars, Aspect Warriors and Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.
@@ -8168,21 +8161,6 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
       </modifiers>
       <description>Formations with a Spiritseer get a +1 activation bonus as long as the Spiritseer is alive. Spiritseers count as Farseers for the invocation of the Eldar Avatar.</description>
     </rule>
-    <rule id="613f-6038-fd8a-cb87" name="Knight Squadron Support" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Appui Escadron de Chevaliers:&lt;/B&gt; Bien que les Escadron de Chevaliers sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Avions et Soutien. Pour sélectionner l&apos;une de ces &quot;Knight Squadron Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres unités sont prises.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>Although Knight Squadrons are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Support. To select any of these the &quot;Knight Squadron Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further units are taken.</description>
-    </rule>
     <rule id="0150-b0fc-571d-7c4d" name="Avatar" hidden="false">
       <profiles/>
       <rules/>
@@ -8199,6 +8177,13 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Avatar: Der Avatar kann auf drei verschiedene Arten auf dem Schlachtfeld erscheinen:  • 1: Bei der Bereitstellung zu Beginn eines Spiels  • 2: Über ein Portal wie jede Formation in Reserve  • 3: Infolge der Beschwörung innerhalb von 15 cm eines Runenprophet während der Teleportationsphase  • In jedem Fall ist es von nun an eine unabhängige und dauerhafte Formation bis zum Ende des Spiels oder seiner Zerstörung. Es kann jedoch nur Ziele anfechten.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>

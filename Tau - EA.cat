@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1738-2794-14e7-e532" name="Tau" revision="25" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1738-2794-14e7-e532" name="Tau" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -821,7 +821,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3fb1-32a8-3420-d91e" name="Fire Support Group" hidden="false" collective="false" type="unit">
       <profiles/>
@@ -2083,7 +2085,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="0493-9458-2e85-7985" name="Kroot Herd" hidden="false" collective="false" type="unit">
       <profiles/>
@@ -3118,11 +3122,19 @@
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
-                <infoLink id="418a-539c-80f1-b3f8" hidden="false" targetId="ef42-3efb-0c94-4e35" type="rule">
+                <infoLink id="418a-539c-80f1-b3f8" name="Stubborn" hidden="false" targetId="6c4c-d0ce-1d05-719d" type="rule">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
-                  <modifiers/>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <repeats/>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8251-3ffd-a26f-80ce" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
                 </infoLink>
                 <infoLink id="f5ba-40ff-af26-4fe0" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
                   <profiles/>
@@ -3177,11 +3189,19 @@
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
-                <infoLink id="cb8f-b272-eeaa-e2d5" hidden="false" targetId="ef42-3efb-0c94-4e35" type="rule">
+                <infoLink id="cb8f-b272-eeaa-e2d5" name="Stubborn" hidden="false" targetId="6c4c-d0ce-1d05-719d" type="rule">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
-                  <modifiers/>
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <repeats/>
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8251-3ffd-a26f-80ce" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
                 </infoLink>
                 <infoLink id="544d-609a-4c6f-668c" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
                   <profiles/>
@@ -3229,7 +3249,9 @@
           <categoryLinks/>
         </entryLink>
       </entryLinks>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="9aa8-ddcf-595a-78c6" name="Stealth Exo Armour" hidden="false" collective="false" type="unit">
       <profiles/>
@@ -5070,30 +5092,15 @@ Fanatic #13</description>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • XV8 Krisisanzug Kadern, XV104 Sturmflut Kampfanzugformationen und Manta haben den Initiativwert 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>The Tau Empire has Strategy Rating 3. All T&apos;au Empire, Auxiliary and Air Caste formations have a 2+ initiative. Crisis Exo-Armour Cadres, Riptides Exo-Armour Formations and Mantas have an initiative of 1+.</description>
-    </rule>
-    <rule id="ef42-3efb-0c94-4e35" name="Stubborn (Tau)" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Obstiné:&lt;/B&gt; Une formation Obstiné est démoralisée dès qu&apos;elle a accumulée un nombre de pions impact égal à (1 + nombre d&apos;unités). Lorsqu&apos;une formation Obstiné perd un assaut, elle subit une perte de moins lors de la résolution des touches supplémentaires. Ceci peut réduire à zéro les pertes encourues en résolution.&lt;/I&gt;">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8251-3ffd-a26f-80ce" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <description>A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units). When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.</description>
     </rule>
     <rule id="7287-8e3b-fe88-eee4" name="Deflectors" hidden="false">
       <profiles/>
@@ -5176,6 +5183,13 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="description" value="Kriegsmaschine Unterstützung: KX139 Ta&apos;unar Kampfanzüge sind zwar Unterstützungsformationen, ihre zusätzlichen Kosten (in Klammern angegeben) sind jedoch Teil der 33%, die für Flugzeuge und Support ausgegeben werden können. Um eine dieser Optionen auszuwählen, muss das Element &quot;War Engine Support Points Total&quot; (Kriegsmaschine Unterstützung Gesamtpunkte) zum Dienstplan hinzugefügt werden. Es muss nur einmal ausgewählt werden und wird automatisch aktualisiert, wenn weitere Einheiten verwendet werden.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <description>Although KX139 Ta&apos;unar Supremacy Battlesuits are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Air Caste Formations. To select any of these the &quot;War Engine Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further pods are taken.</description>
     </rule>
@@ -5195,6 +5209,13 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 3.  • XV104 Sturmflut- und KX139 Ta&apos;unar- Kampfanzugformationen haben den Initiativwert 1+. Andere Formationen haben die Initiativwert 2+.">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
