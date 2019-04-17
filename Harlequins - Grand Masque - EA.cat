@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e534-7369-ab95-1ec6" name="Harlequins: Grand Masque" revision="26" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e534-7369-ab95-1ec6" name="Harlequins: Grand Masque" revision="27" battleScribeVersion="2.01" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -1035,6 +1035,12 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
+        <infoLink id="7472-7f48-1718-b19a" name="Farsight" hidden="false" targetId="2e2e-4c1b-5edb-1fcb" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" field="maxSelections" value="0.0">
@@ -1207,13 +1213,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="944e-1840-8824-e3f5" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="cd04-ad2f-0080-6491" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+        <infoLink id="cd04-ad2f-0080-6491" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1492,7 +1492,7 @@ At the end of each turn, at least one unbroken Harlequin unit must be within 30c
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>NetEA Eldar harlequin 4.2.3
+      <description>NetEA Eldar harlequin 4.2.3.a
 netea-tournament-pack-2018-06-07</description>
     </rule>
     <rule id="97b4-56b2-cdca-b5fd" name="Strategy Rating &amp; Initiative (HQN)" hidden="false">
@@ -1500,14 +1500,14 @@ netea-tournament-pack-2018-06-07</description>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Arlequins qui prennent le Grand Arlequin ont une Valeur Stratégique de 5, sinon ils  ont une Valeur Stratégique de 4, ou la Valeur Stratégique des alliés Eldar. Les Arlequins, les Guerriers Aspect et les Titans ont une initiative de 1+. Toutes les autres formations ont une initiative de 2+.&lt;/I&gt;">
+        <modifier type="set" field="description" value="&lt;I&gt;&lt;B&gt;Stratégie &amp; Initiative:&lt;/B&gt; Les Arlequins qui prennent le Grand Arlequin ont une Valeur Stratégique de 5, sinon ils  ont une Valeur Stratégique de 4, ou la Valeur Stratégique des alliés Eldar. Les Arlequins ont une initiative de 1+. Toutes les autres formations ont une initiative de leur propre liste.&lt;/I&gt;">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="set" field="description" value="Strategie und Initiative: Harlekin-Armeen, die den Großen Harlekin enthalten, haben einen Strategiewert von 5, ansonsten haben sie entweder einen Strategiewert von 4, oder den Strategiewert ihrer Eldar-Verbündeten.  • Harlekins, Aspektkrieger und Titanen haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert 2+.">
+        <modifier type="set" field="description" value="Strategie und Initiative: Harlekin-Armeen, die den Großen Harlekin enthalten, haben einen Strategiewert von 5, ansonsten haben sie entweder einen Strategiewert von 4, oder den Strategiewert ihrer Eldar-Verbündeten.  • Harlekins haben einen Initiativwert von 1+. Andere Formationen haben die Initiativwert aus ihrer eigenen Liste.">
           <repeats/>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
@@ -1515,7 +1515,8 @@ netea-tournament-pack-2018-06-07</description>
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>Harlequin armies including the Great Harlequin have a strategy rating of 5, otherwise they have a strategy rating of 4, or the strategy rating of the Eldar allies. Harlequins, Aspect formations and Titans have an initiative rating of 1+. All other Eldar formations have an initiative rating of 2+.</description>
+      <description>A Harlequin Grand Masque including the Great Harlequin has a strategy rating of 5, otherwise the Harlequins have a strategy rating of 4, or that of the Eldar Craftworld if the Harlequins are treated as their allies.
+Harlequins have an initiative rating of 1+. All other Eldar formations have the initiative rating from their own list.</description>
     </rule>
     <rule id="dbec-77cc-be5a-ab74" name="The Laughing God" hidden="false">
       <profiles/>
@@ -1769,7 +1770,7 @@ The Harlequins have achieved their strategic goal and the player wins the game!<
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapon"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="First Strike, Macro-weapon, +1A"/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Inspiring, Invulnerable Save, Supreme Commander, The Great Harlequin"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Farsight, Inspiring, Invulnerable Save, Supreme Commander, The Great Harlequin"/>
       </characteristics>
     </profile>
     <profile id="2412-4910-e78b-ed43" name="Harlequin Jetbike" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
@@ -1913,7 +1914,7 @@ The Harlequins have achieved their strategic goal and the player wins the game!<
         <characteristic name="Range" characteristicTypeId="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(15cm)&lt;BR&gt;&lt;BR&gt;(15cm)&lt;BR&gt;and (contact)"/>
         <characteristic name="Firepower" characteristicTypeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;Small Arms&lt;BR&gt;and Assault Weapon"/>
         <characteristic name="Notes" characteristicTypeId="b8cc-b32c-b8bd-ac4a" value="Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;- "/>
-        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Farsight, Infiltrators, Invulnerable Save, Leader, Veil of Tears"/>
+        <characteristic name="Unit Notes" characteristicTypeId="9be9-cd8c-f54b-69d7" value="Farsight, Invulnerable Save, Leader, Veil of Tears"/>
       </characteristics>
     </profile>
     <profile id="004c-814f-dab3-ad2d" name="Solitaire" hidden="false" profileTypeId="f68a073b-c562-ca93-961e-5cf373ae14cb">
