@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="471d-3c02-faaa-9ec0" name="Chaos: Word Bearers" revision="22" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="471d-3c02-faaa-9ec0" name="Chaos: Word Bearers" revision="23" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -3051,6 +3051,11 @@ Chaos Navy formations have an initiative rating of 2+. All other formations have
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Regeln für Dämonen aller Art: Opferbereitschaft: Einige Einheiten werden von ihren Verbündeten als &quot;opferbereit&quot; empfunden. Entweder weil sie speziell geschaffen wurden, um sich selbst zu opfern, oder weil diese Einheiten in den Augen ihrer Verbündeten einfach keinen Wert haben. Opfereinheiten erzeugen keinen Blast-Marker, wenn sie zerstört werden. Dies schließt Spezialeffekte ein, die Blast-Marker erzeugen, wenn eine Opfereinheit als Ziel ausgewählt wird, d. H. Wenn der Einheit Treffer zugewiesen werden. Opfereinheiten zählen jedoch bei der Berechnung von Verlusten bei der Lösung eines Angriffs.  • Instabil: Wenn die Dämonen zerbrochen sind, werden sie zerstört.  • Darf Ziele nur herausfordern, nicht kontrollieren.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Sacrificial: some units are perceived by their allies as &quot;sacrificable&quot;. Either because they were specially created to sacrifice themselves, or because these units simply do not have value in the eyes of their allies. Sacrificial units do not generate a blast marker when destroyed. This includes special effects that create blast markers when a Sacrificial unit is targeted, i.e. when hits are allocated to the unit. However, Sacrificial units count in calculating losses when resolving an assault.
 Unstable: If the daemons are broken, they are destroyed.
@@ -3068,8 +3073,13 @@ May only contest objectives, not control them.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Beschwörung von Dämonen: Das Ikonenträger-Upgrade ermöglicht es, während der Teleport-Phase eine Formation von Dämonen zu beschwören, die zuvor bei der Zusammensetzung der Armee ausgewählt wurden. Die Formation, in der sich der Ikonenträger befindet, und die aufgerufene Formation müssen derselben Fraktion angehören. Die aufgerufene Formation erscheint innerhalb von 15 cm des Ikonenträger. Wenn der Ikonenträger eliminiert wird, können die Dämonen durch diese Formation nicht mehr beschworen werden. Es kann nur eine Dämonenformation pro Ikonenträger pro Spiel aufgerufen werden. Eine Formation, die gerade teleportiert wurde, kann keine Dämonen beschwören. Die aufgerufene Formation erhält nach ihrer &quot;Teleportation&quot; keinen Blast-Marker. Es wird sofort zu einer eigenen Formation und folgt den Regeln der Aktivierung, des Zusammenhalts usw. Es bleibt dann bis zum Ende des Spiels oder bis zu seiner Zerstörung im Spiel.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>The Icon-Bearer enhancement allows, during the Teleport phase, to summon a formation of daemons previously selected during the composition of the army. The formation hosting the icon bearer and the formation invoked must belong to the same faction. The invoked formation appears within 15cm of the icon bearer. If the icon bearer is eliminated, the daemons can no longer be summoned by this formation. Only one formation of daemons per icon-bearer and per party can be invoked. A formation that has just teleported can not summon daemons. The formation invoked does not take a blast marker following its &quot;teleportation&quot;. It immediately becomes a formation in its own right and follows the rules of activation, cohesion, etc. It then remains in play until the end of the game or until its destruction.</description>
+      <description>The Icon-Bearer enhancement allows, during the Teleport phase, to summon a formation of daemons previously selected during the composition of the army. The formation hosting the icon bearer and the formation invoked must belong to the same faction. The invoked formation appears within 15cm of the icon bearer. If the icon bearer is eliminated, the daemons can no longer be summoned by this formation. Only one formation of daemons per icon-bearer per game can be invoked. A formation that has just teleported can not summon daemons. The formation invoked does not take a blast marker following its &quot;teleportation&quot;. It immediately becomes a formation in its own right and follows the rules of activation, cohesion, etc. It then remains in play until the end of the game or until its destruction.</description>
     </rule>
     <rule id="c992-6138-d3b3-6c84" name="Summoned Units" hidden="false">
       <modifiers>

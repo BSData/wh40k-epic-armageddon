@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="24" battleScribeVersion="2.02" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="25" battleScribeVersion="2.02" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
   </costTypes>
@@ -2330,7 +2330,7 @@ If the test is passed then all three formations may take an engage action. Treat
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Kritischer Treffer: Reaktorbruch: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört und alle Einheiten innerhalb von 5 cm werden bei einem Wurf von 4+ getroffen  • 2-3: Das Gerät erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben.">
+        <modifier type="set" field="description" value="Kritischer Treffer: Reaktorbruch: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört und alle Einheiten innerhalb von 5 cm werden bei einem Wurf von 4+ getroffen  • 2-3: Die Einheit erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
@@ -2348,7 +2348,7 @@ If the test is passed then all three formations may take an engage action. Treat
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Kritischer Treffer: Reaktorschaden: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört  • 2-3: Das Gerät erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben  • Wenn das Gerät zerstört wird, leiden alle Einheiten innerhalb 5cm einen Treffer auf einem 5+ (Reaver, Ravager) oder 4+ (Warlord, Banelord).">
+        <modifier type="set" field="description" value="Kritischer Treffer: Reaktorschaden: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört  • 2-3: Die Einheit erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben  • Wenn die Einheit zerstört wird, leiden alle Einheiten innerhalb 5cm einen Treffer auf einem 5+ (Reaver, Ravager) oder 4+ (Warlord, Banelord).">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
@@ -2377,7 +2377,7 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+ (Rea
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Kritischer Treffer: Reaktorschaden: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört  • 2-3: Das Gerät erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben  • Wenn das Gerät zerstört wird, leiden alle Einheiten innerhalb 5cm einen Treffer auf einem 5+ (Reaver, Ravager) oder 4+ (Warlord, Banelord).">
+        <modifier type="set" field="description" value="Kritischer Treffer: Reaktorschaden: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört  • 2-3: Die Einheit erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben  • Wenn die Einheit zerstört wird, leiden alle Einheiten innerhalb 5cm einen Treffer auf einem 5+ (Reaver, Ravager) oder 4+ (Warlord, Banelord).">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
@@ -2637,7 +2637,7 @@ Units in a Bunker, Gun Emplacement, or Trench may not be barged by a war engine.
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Diese Waffen ignorieren Modifikatoren aus der Abdeckung und negieren die Abdeckungen-Rettungswurf der Infanterie.">
+        <modifier type="set" field="description" value="Ignorieren Abdeckung: Diese Waffen ignorieren Modifikatoren aus der Abdeckung und negieren die Abdeckungen-Rettungswurf der Infanterie.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
@@ -4865,7 +4865,7 @@ netea-tournament-pack-2017-03-21</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Kritischer Treffer: Reaktor Riss: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört  • 2-3: Das Gerät erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben.">
+        <modifier type="set" field="description" value="Kritischer Treffer: Reaktor Riss: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört  • 2-3: Die Einheit erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
@@ -4921,7 +4921,7 @@ netea-tournament-pack-2017-03-21</description>
       </modifiers>
       <description>It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any left over BMs).
 Space Marine formations are only broken if they have 2BMs per unit.
-Space Marine formations count as having half the number of BMs (rounding down- notethat assault resolution will not receive +1 for having no BM if the formation has 1BM before rounding down) for assault resolution purposes.
+Space Marine formations count as having half the number of BMs (rounding down - note that assault resolution will not receive +1 for having no BM if the formation has 1BM before rounding down) for assault resolution purposes.
 Broken formations receive 1BM per unit when rallying.
 Space Marine Leaders remove 2BMs when rallying.</description>
     </rule>
