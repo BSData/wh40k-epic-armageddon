@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="052b-54f4-e30f-68f7" name="Imperial Guard: Ulani Tank Regiment" revision="27" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="052b-54f4-e30f-68f7" name="Imperial Guard: Ulani Tank Regiment" revision="28" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -1414,13 +1414,18 @@
     </rule>
     <rule id="1e03-e522-0336-cda5" name="Blitzkrieg" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Guerre Éclair: Formations Régiment Blindé contenant une unité avec la capacité Guerre Éclair reçoivent un modificateur de +1 à son jet de test d&apos;action lors de la tentative d&apos;une action de l&apos;avance rapide.">
+        <modifier type="set" field="description" value="Guerre Éclair: Formations contenant une unité avec la capacité Guerre Éclair reçoivent un modificateur de +1 à son jet de test d&apos;action lors de la tentative d&apos;une action de l&apos;avance rapide.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Blitzkrieg: Formationen, die eine Einheit mit der Fähigkeit Blitzkrieg enthalten, erhalten beim Versuch einer Doppelaktion einen Modifikator +1 für ihren Aktionstestwurf.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Tank Regiment Imperial Guard formations containing a unit with the Blitzkrieg ability receive a +1 modifier to their action test roll when attempting a double action.</description>
+      <description>Formations containing a unit with the Blitzkrieg ability receive a +1 modifier to their action test roll when attempting a double action.</description>
     </rule>
     <rule id="e2d9-1df2-fc92-dd4c" name="Commissars" hidden="false">
       <modifiers>
@@ -1443,7 +1448,7 @@ If the army includes a Supreme Commander then the first Commissar must be attach
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <modifiers>
-        <modifier type="append" field="description" value="&lt;BR&gt;Konig Armoured Reg 1.1 #v1.1 (NB: not an approved list)">
+        <modifier type="set" field="description" value="CodexImperialGuard #160118  • UlaniTankRegQuickRef #18072015  • Konig Armoured Reg 1.1 #v1.1 (NB: not an approved list)">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b469-73c3-b0cf-e77b" type="equalTo"/>
           </conditions>
@@ -1464,6 +1469,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Königspanzerregiment: Aktiviert die Armeeliste «Königspanzerregiment» anstelle des «Ulanipanzerregiment».">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Enables the «Konig Tank Regiment» army list instead of the «Ulani Tank Regiment».</description>
     </rule>
@@ -1472,7 +1482,7 @@ Fanatic #13</description>
     </rule>
     <rule id="469d-63ab-8d7a-acb6" name="Strategy Rating &amp; Initiative (ULA)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2. &lt;BR&gt; Todas las formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Todas las formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1497,9 +1507,14 @@ Fanatic #13</description>
     </rule>
     <rule id="a890-4cb7-72d6-2526" name="Tank Riders" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Tank Riders: Les unités avec la capacité Tank Riders peuvent être transportés dans la bataille sur le dos de toute Leman Russ dans leur formation. Cela donne effectivement des chars Leman Russ dans une formation contenant Tank Riders la capacité suivante: Transport (peut transporter une unité avec la capacité Tank Riders). &lt;BR&gt; Les unités avec la capacité Tank Riders sont autorisés à fournir un soutien fusillade dans des combats même lorsque lancé dans un Leman Russ. Une formation contenant des chars Leman Russ ne reçoit pas les pions d&apos;impact pour toutes les unités détruites avec la capacité Tank Riders. Cependant l&apos;unité avec la capacité Tank Riders est détruit automatiquement, sans sauvegarde autorisés si le Leman Russ qui transporte qu&apos;il faut une touche quelconque.">
+        <modifier type="set" field="description" value="Tank Riders: Les unités avec la capacité Tank Riders peuvent être transportés dans la bataille sur le dos de toute Leman Russ dans leur formation. Cela donne effectivement des chars Leman Russ dans une formation contenant Tank Riders la capacité suivante: Transport (peut transporter une unité avec la capacité Tank Riders).  • Les unités avec la capacité Tank Riders sont autorisés à fournir un soutien fusillade dans des combats même lorsque lancé dans un Leman Russ. Une formation contenant des chars Leman Russ ne reçoit pas les pions d&apos;impact pour toutes les unités détruites avec la capacité Tank Riders. Cependant l&apos;unité avec la capacité Tank Riders est détruit automatiquement, sans sauvegarde autorisés si le Leman Russ qui transporte qu&apos;il faut une touche quelconque.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Panzerreiter: Einheiten mit der Fähigkeit Panzerreiter können auf dem Rücken eines Leman Russ Panzers in ihrer Formation in den Kampf ziehen. Dies gibt jedem Leman Russ Panzer in einer Formation, die Panzerreiter enthält, effektiv folgende Fähigkeit: Transport (kann eine Einheit mit der Fähigkeit Panzerreiter tragen).  • Einheiten mit der Fähigkeit des Tankreiter sind berechtigt, Feuergefecht bei Einsätzen zu leisten, auch wenn sie auf einen Leman Russ Panzer eingesetzt werden. Eine Formation, die irgendwelche Leman Russ Panzer enthält, erhält keine Blast-Marker für zerstörte Einheiten mit der Fähigkeit Panzerreiter. Die Einheit mit der Fähigkeit Panzerfahrer wird jedoch automatisch zerstört, ohne dass eine Rettung erlaubt ist, wenn der Leman Russ Panzer, der ihn transportiert, einen Treffer jeglicher Art erleidet.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1508,7 +1523,7 @@ Units with the Tank Riders ability are allowed to provide firefight support in e
     </rule>
     <rule id="ea4e-126d-9a40-8185" name="Transport (ULA)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="La capacité de transport: Comme suit- &lt;BR&gt; Chimera: 2 unités d&apos;Infanterie. &lt;BR&gt; Leman Russ (n&apos;importe quel type): 1 unité des Tank Riders.">
+        <modifier type="set" field="description" value="La capacité de transport: Comme suit-  • Chimera: 2 unités d&apos;Infanterie.  • Leman Russ (n&apos;importe quel type): 1 unité des Tank Riders.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -1520,7 +1535,7 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="0f8e-065a-dd5a-691d" name="Baneblade" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0f8e-065a-dd5a-691d" name="Baneblade" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1531,12 +1546,12 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
       </characteristics>
     </profile>
-    <profile id="ed13-c5b2-9fd2-e583" name="Basilisk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ed13-c5b2-9fd2-e583" name="Basilisk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1547,10 +1562,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;120cm&lt;BR&gt;or 120cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+&lt;BR&gt;&lt;BR&gt;AP4+/AT4+&lt;BR&gt;or 1BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;or Indirect Fire</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Normal shot or barrage. May only use the indirect fire when firing a barrage.</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Normal shot or barrage. May only use the indirect fire when firing a barrage.</characteristic>
       </characteristics>
     </profile>
-    <profile id="fbe7-1b18-6aef-df6f" name="Bombard" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="fbe7-1b18-6aef-df6f" name="Bombard" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1561,10 +1576,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover, Indirect Fire, Slow Firing&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="8848-56f5-be05-288e" name="Chimera" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="8848-56f5-be05-288e" name="Chimera" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1575,10 +1590,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="6083-6b56-24ba-0e66" name="Commissar" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6083-6b56-24ba-0e66" name="Commissar" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="1160-63e7-57ca-722d" value="Upgraded Guns">
           <conditions>
@@ -1611,10 +1626,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Inspiring, Leader</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Inspiring, Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="9218-1b21-02ed-ea52" name="Emperor Battleship" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="9218-1b21-02ed-ea52" name="Emperor Battleship" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1625,10 +1640,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">n/a</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">8BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Slow and Steady</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Slow and Steady</characteristic>
       </characteristics>
     </profile>
-    <profile id="e1ed-5b38-9ed4-af4b" name="Griffon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e1ed-5b38-9ed4-af4b" name="Griffon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1639,10 +1654,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">1BP&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Indirect Fire&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="b24a-d2f2-9e88-9ff7" name="Hellhound" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="b24a-d2f2-9e88-9ff7" name="Hellhound" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1653,10 +1668,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+&lt;BR&gt;&lt;BR&gt;AP3+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Ignore Cover</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="a346-37af-57d1-c8f6" name="Hydra" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="a346-37af-57d1-c8f6" name="Hydra" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1667,10 +1682,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT5+/AA5+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="953e-6c6b-3fdf-51f0" name="Imperial Guard Command Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="953e-6c6b-3fdf-51f0" name="Imperial Guard Command Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1688,10 +1703,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT2+&lt;BR&gt;&lt;BR&gt;AT5+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="ecad-5231-faed-29fe" name="Infantry" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ecad-5231-faed-29fe" name="Infantry" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1702,10 +1717,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">One unit in every two has an autocannon.</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">One unit in every two has an autocannon.</characteristic>
       </characteristics>
     </profile>
-    <profile id="e641-7717-3bc7-0b71" name="Konig Supreme Commander" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e641-7717-3bc7-0b71" name="Konig Supreme Commander" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1716,10 +1731,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour, Supreme Commander</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour, Supreme Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="9f15-3db2-30b9-81e9" name="Leman Russ Battle Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="9f15-3db2-30b9-81e9" name="Leman Russ Battle Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1730,10 +1745,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT4+&lt;BR&gt;&lt;BR&gt;AT5+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="1f19-8cd9-1d65-77ed" name="Leman Russ Conqueror" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="1f19-8cd9-1d65-77ed" name="Leman Russ Conqueror" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
@@ -1744,10 +1759,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="0705-6d62-d609-2806" name="Leman Russ Demolisher" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="0705-6d62-d609-2806" name="Leman Russ Demolisher" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1758,10 +1773,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AT5+&lt;BR&gt;&lt;BR&gt;AP4+/AT4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Slow Firing</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="7404-d3f5-a269-f0a5" name="Leman Russ Destroyer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="7404-d3f5-a269-f0a5" name="Leman Russ Destroyer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1772,10 +1787,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT2+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Sniper</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="01ab-5cae-9e53-8850" name="Leman Russ Executioner" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="01ab-5cae-9e53-8850" name="Leman Russ Executioner" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1786,10 +1801,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW4+&lt;BR&gt;&lt;BR&gt;AT5+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Slow Firing&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="e2d4-59ae-3664-67ba" name="Leman Russ Thunderer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e2d4-59ae-3664-67ba" name="Leman Russ Thunderer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1800,10 +1815,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP3+/AT4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="d431-0d2f-e3cc-37f7" name="Lunar Cruiser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d431-0d2f-e3cc-37f7" name="Lunar Cruiser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1814,10 +1829,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">n/a&lt;BR&gt;&lt;BR&gt;n/a</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">3BP&lt;BR&gt;&lt;BR&gt;MW2+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon&lt;BR&gt;&lt;BR&gt;Titan Killer (D3)</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="38f3-bf50-a3b6-9772" name="Manticore" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="38f3-bf50-a3b6-9772" name="Manticore" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1828,10 +1843,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">150cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Disrupt, Indirect Fire, Slow Firing&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="bf0c-edd7-606c-3429" name="Marauder Bomber" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="bf0c-edd7-606c-3429" name="Marauder Bomber" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -1842,10 +1857,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AA5+&lt;BR&gt;&lt;BR&gt;AT4+/AA4+&lt;BR&gt;&lt;BR&gt;3BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="3cae-16a4-cd6b-87dc" name="Medusa" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="3cae-16a4-cd6b-87dc" name="Medusa" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1856,10 +1871,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW4+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="c78d-3edc-e495-1dde" name="Salamander Scout" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="c78d-3edc-e495-1dde" name="Salamander Scout" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1870,10 +1885,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Scout</characteristic>
       </characteristics>
     </profile>
-    <profile id="c18c-dc2e-f3e2-0084" name="Shadowsword" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="c18c-dc2e-f3e2-0084" name="Shadowsword" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1884,12 +1899,12 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">90cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW2+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3), Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
       </characteristics>
     </profile>
-    <profile id="c001-e218-120b-b244" name="Stormblade" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="c001-e218-120b-b244" name="Stormblade" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1900,12 +1915,12 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x MW2+&lt;BR&gt;&lt;BR&gt;AP5+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Slow Firing, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
       </characteristics>
     </profile>
-    <profile id="bd26-e6a5-2de4-871a" name="Stormsword" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="bd26-e6a5-2de4-871a" name="Stormsword" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1916,12 +1931,12 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;and (15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">3BP&lt;BR&gt;&lt;BR&gt;AP5+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;and Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Disrupt, Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;and Ignore Cover</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
       </characteristics>
     </profile>
-    <profile id="6a3d-f815-8b29-4b06" name="Tank Rider Infantry" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6a3d-f815-8b29-4b06" name="Tank Rider Infantry" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1932,10 +1947,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Tank Riders</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Tank Riders</characteristic>
       </characteristics>
     </profile>
-    <profile id="f861-1e77-0615-9d40" name="Tarantula AP" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f861-1e77-0615-9d40" name="Tarantula AP" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -1946,10 +1961,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="ec89-de1c-3393-9ca8" name="Tarantula AT" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ec89-de1c-3393-9ca8" name="Tarantula AT" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -1960,10 +1975,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="166b-0eb8-5cf4-483b" name="Thunderbolt Fighter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="166b-0eb8-5cf4-483b" name="Thunderbolt Fighter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter-bomber</characteristic>
@@ -1974,10 +1989,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+/AA5+&lt;BR&gt;&lt;BR&gt;AT4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="affa-beb4-1fbd-504c" name="Ulani Command Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="affa-beb4-1fbd-504c" name="Ulani Command Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1995,10 +2010,10 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT2+&lt;BR&gt;&lt;BR&gt;AT5+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour, Commander</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour, Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="3aee-ddfa-5646-587d" name="Ulani HQ Command Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="3aee-ddfa-5646-587d" name="Ulani HQ Command Tank" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -2009,7 +2024,7 @@ Leman Russ (any type): 1 Tank Riders unit.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT2+&lt;BR&gt;&lt;BR&gt;AT5+&lt;BR&gt;&lt;BR&gt;AP5+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour, Supreme Commander</characteristic>
+        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Blitzkrieg, Reinforced Armour, Supreme Commander</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
