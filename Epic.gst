@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="26" battleScribeVersion="2.02" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="27" battleScribeVersion="2.02" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
   </costTypes>
@@ -46,7 +46,7 @@
         <characteristicType id="36c8-6d92-af3f-a836" name="Infantry"/>
         <characteristicType id="1297-f4e7-4126-0a6a" name="Vehicle"/>
         <characteristicType id="8902-a4d6-b39b-ca60" name="War Engine"/>
-        <characteristicType id="9be9-cd8c-f54b-69d7" name="Notes"/>
+        <characteristicType id="9be9-cd8c-f54b-69d7" name="Unit Notes"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -5451,7 +5451,7 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="e8b5-9aad-77fd-8ee7" name="Command Bunker" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="e8b5-9aad-77fd-8ee7" name="Command Bunker" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -5467,15 +5467,15 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Bunkers, Partial Collapse</characteristic>
       </characteristics>
     </profile>
-    <profile id="be97-0f88-c8c0-642d" name="Barricade" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="be97-0f88-c8c0-642d" name="Barricade" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">5+ Cover Save</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Dangerous</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">No Effect</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="e767-341a-c5e5-b497" name="Bunker" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="e767-341a-c5e5-b497" name="Bunker" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Cuenta como una fortificación. Puede contener hasta tres unidades. ">
           <conditions>
@@ -5487,15 +5487,20 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Befestigungsanlagen. Kann 3 Einheiten halten.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">3+ Cover Save</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Dangerous</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">Impassable</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Bunkers are Fortifications. Can hold 3 units.</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Bunkers are Fortifications. Can hold 3 units.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2434-dd28-10ed-99c5" name="Earthworks" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="2434-dd28-10ed-99c5" name="Earthworks" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Puede contener hasta una unidad de infantería por cada 4cm de longitud.">
           <conditions>
@@ -5507,15 +5512,20 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Kann 1 Infanterieeinheit pro 40mm Länge aufnehmen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">4+ Cover Save</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Dangerous</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">No Effect</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Can hold 1 infantry unit per 40mm of length.</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Can hold 1 infantry unit per 40mm of length.</characteristic>
       </characteristics>
     </profile>
-    <profile id="564b-2c97-d8c6-9d15" name="Gun Emplacement " hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="564b-2c97-d8c6-9d15" name="Gun Emplacement " hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Proporciona a los vehículos una salvación por cobertura, igual que la salvación por cobertura para infantería. Puede contener hasta una unidad.">
           <conditions>
@@ -5527,15 +5537,20 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Waffenstellungen versorgen Fahrzeuge mit einer Deckungsrettung, die genauso funktioniert wie eine Infanterie-Deckungsrettung. Kann 1 Einheit halten.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">4+ Cover Save</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">5+ Cover Save</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">No Effect</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Gun emplacements provide vehicles with a Cover Save that works in the same manner as an infantry Cover Save. Can hold 1 unit.</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Gun emplacements provide vehicles with a Cover Save that works in the same manner as an infantry Cover Save. Can hold 1 unit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="aa6c-ef06-f6f7-5b9e" name="Large Command Bunker" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="aa6c-ef06-f6f7-5b9e" name="Large Command Bunker" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -5551,15 +5566,15 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
     </profile>
-    <profile id="c624-0b61-a795-58f6" name="Minefield" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="c624-0b61-a795-58f6" name="Minefield" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">Dangerous</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Dangerous</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">Dangerous</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="1b0c-c8a2-8652-36c2" name="Orbital Defence Battery" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="1b0c-c8a2-8652-36c2" name="Orbital Defence Battery" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -5575,7 +5590,7 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
     </profile>
-    <profile id="8c92-c6a6-244f-0d25" name="Pillbox B" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="8c92-c6a6-244f-0d25" name="Pillbox B" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Pillbox</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -5589,7 +5604,7 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Pillboxes, Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="4d01-e6f8-8a82-0d22" name="Pillbox HB" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4d01-e6f8-8a82-0d22" name="Pillbox HB" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Pillbox</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -5603,7 +5618,7 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Pillboxes, Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="2c8a-3936-0ca6-07ff" name="Pillbox L" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2c8a-3936-0ca6-07ff" name="Pillbox L" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Pillbox</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -5617,15 +5632,15 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Pillboxes, Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="3eb7-65c3-3198-c8d6" name="Razor Wire" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="3eb7-65c3-3198-c8d6" name="Razor Wire" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">Dangerous</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">No Effect</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">No Effect</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="92a9-758b-2b8f-af26" name="Small Command Bunker" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="92a9-758b-2b8f-af26" name="Small Command Bunker" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -5639,15 +5654,15 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, No units may enter</characteristic>
       </characteristics>
     </profile>
-    <profile id="feda-389a-6d31-ad9e" name="Tank Traps" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="feda-389a-6d31-ad9e" name="Tank Traps" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">6+ Cover Save</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Impassable</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">Impassable</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="93ea-c3bf-a46c-ae79" name="Trench" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="93ea-c3bf-a46c-ae79" name="Trench" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Puede contener hasta una unidad de infantería por cada 4cm de longitud.">
           <conditions>
@@ -5659,12 +5674,17 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Kann 1 Infanterieeinheit pro 40mm Länge aufnehmen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">4+ Cover Save</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Dangerous</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">No Effect</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Can hold 1 infantry unit per 40mm of length.</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Can hold 1 infantry unit per 40mm of length.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
