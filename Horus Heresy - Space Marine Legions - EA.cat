@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d52f-e10d-835e-04ff" name="Horus Heresy: Space Marine Legions" revision="26" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d52f-e10d-835e-04ff" name="Horus Heresy: Space Marine Legions" revision="27" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="61b5-49c9-4e50-6222" name="-Legion-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -4663,9 +4663,14 @@
     <selectionEntry id="4b5a-08d0-b1c6-2903" name="Castellum Bastion" page="0" hidden="false" collective="false" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e5900495-f5a1-ae34-2e1a-c6012c597c42" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e5900495-f5a1-ae34-2e1a-c6012c597c42" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d49-a220-7e97-1e7c" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

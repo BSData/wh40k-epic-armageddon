@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="88c5-3dd6-8041-2bf1" name="Orks: The Waa-Dakazog, Dakazog Duffzog&apos;s Warhorde" revision="26" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="88c5-3dd6-8041-2bf1" name="Orks: The Waa-Dakazog, Dakazog Duffzog&apos;s Warhorde" revision="27" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -1905,9 +1905,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2023-49ac-2e77-060b" name="Ork Warlord" hidden="false" collective="false" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="minInForce" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <infoLinks>
@@ -2706,7 +2713,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -2720,7 +2727,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Slow and Steady</characteristic>
       </characteristics>
     </profile>
-    <profile id="92d6-1ab0-ad41-bb0a" name="Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="92d6-1ab0-ad41-bb0a" name="Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2736,7 +2743,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Flipped Over</characteristic>
       </characteristics>
     </profile>
-    <profile id="fa6d-75b9-9d66-fbc4" name="Battlewagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="fa6d-75b9-9d66-fbc4" name="Battlewagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2750,14 +2757,14 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="f246-81f3-b3bc-9933" name="Big Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="f246-81f3-b3bc-9933" name="Big Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
       </characteristics>
     </profile>
-    <profile id="b891-65f2-7e74-1d0d" name="Big Gunz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="b891-65f2-7e74-1d0d" name="Big Gunz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -2771,7 +2778,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="ab79-f187-76fa-3653" name="Big Gunz (Soopagun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ab79-f187-76fa-3653" name="Big Gunz (Soopagun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -2785,7 +2792,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="2572-e7af-76da-04fb" name="Big Gunz (Supa-Zzap Gun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2572-e7af-76da-04fb" name="Big Gunz (Supa-Zzap Gun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -2799,7 +2806,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="7c85-7952-cb5a-50c1" name="Buggies / Wartraks" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="7c85-7952-cb5a-50c1" name="Buggies / Wartraks" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -2813,7 +2820,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="a8ba-13c6-ecfc-5f28" name="Dreadnought" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="a8ba-13c6-ecfc-5f28" name="Dreadnought" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2827,7 +2834,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="5033-d287-32f3-b07c" name="Flakwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5033-d287-32f3-b07c" name="Flakwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2841,7 +2848,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="6c97-ceb6-268f-371c" name="Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="6c97-ceb6-268f-371c" name="Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2857,14 +2864,14 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="7a65-e962-6025-f65b" name="Gaze of Mork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="7a65-e962-6025-f65b" name="Gaze of Mork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer</characteristic>
       </characteristics>
     </profile>
-    <profile id="53ed-291f-e521-2525" name="Great Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="53ed-291f-e521-2525" name="Great Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2880,7 +2887,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="81d0-4f58-228e-2aab" name="Grotz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="81d0-4f58-228e-2aab" name="Grotz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2894,7 +2901,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Grotz</characteristic>
       </characteristics>
     </profile>
-    <profile id="0210-466e-571f-d40f" name="Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0210-466e-571f-d40f" name="Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2910,7 +2917,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Flipped Over</characteristic>
       </characteristics>
     </profile>
-    <profile id="bc9b-3640-c4c2-1500" name="Gunwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="bc9b-3640-c4c2-1500" name="Gunwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2924,7 +2931,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="b4f7-cd08-3a4c-c535" name="Gunwagonz (Supa-Zzap Gun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="b4f7-cd08-3a4c-c535" name="Gunwagonz (Supa-Zzap Gun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2938,7 +2945,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="2287-1d89-794a-11fe" name="Kill Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2287-1d89-794a-11fe" name="Kill Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -2952,7 +2959,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="df10-3aac-c209-519a" name="Killa Kan - Boit&apos;kitu" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="df10-3aac-c209-519a" name="Killa Kan - Boit&apos;kitu" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2966,21 +2973,21 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="c68f-b485-55cd-67c0" name="Lifta-Droppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="c68f-b485-55cd-67c0" name="Lifta-Droppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm&lt;BR&gt;or (contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW3+&lt;BR&gt;or Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3), Fixed Forward Arc&lt;BR&gt;or Titan Killer (D3), +1A</characteristic>
       </characteristics>
     </profile>
-    <profile id="8e33-7714-0d2a-4b08" name="Mega-choppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="8e33-7714-0d2a-4b08" name="Mega-choppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;and (contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;and Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Fixed Forward Arc&lt;BR&gt;and Macro-weapon, Titan Killer (D3), +1A</characteristic>
       </characteristics>
     </profile>
-    <profile id="6dd6-b8fe-02b1-449e" name="Ork Warlord" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6dd6-b8fe-02b1-449e" name="Ork Warlord" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -2994,7 +3001,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Supreme Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="680b-0c2e-5ab3-343e" name="Skorcha" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="680b-0c2e-5ab3-343e" name="Skorcha" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -3008,14 +3015,14 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="a1a3-e368-c0bc-6281" name="Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="a1a3-e368-c0bc-6281" name="Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, Fixed Forward Arc</characteristic>
       </characteristics>
     </profile>
-    <profile id="5cbc-cb82-4f19-df6f" name="Stormboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5cbc-cb82-4f19-df6f" name="Stormboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3029,21 +3036,21 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jump Packs, Scout</characteristic>
       </characteristics>
     </profile>
-    <profile id="da5a-0454-09d9-22c8" name="Supa-Zzap Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="da5a-0454-09d9-22c8" name="Supa-Zzap Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW3+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3), Fixed Forward Arc</characteristic>
       </characteristics>
     </profile>
-    <profile id="124f-f3d0-0086-ca20" name="Twin Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="124f-f3d0-0086-ca20" name="Twin Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">3BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, Fixed Forward Arc</characteristic>
       </characteristics>
     </profile>
-    <profile id="51a6-6ada-e243-8b42" name="Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="51a6-6ada-e243-8b42" name="Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -3057,7 +3064,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="6509-e182-4f91-858d" name="Mekano Oddboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6509-e182-4f91-858d" name="Mekano Oddboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3071,7 +3078,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mekano Oddboyz</characteristic>
       </characteristics>
     </profile>
-    <profile id="a366-89a8-6499-a74d" name="Gunwagonz (Magna-kannon)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="a366-89a8-6499-a74d" name="Gunwagonz (Magna-kannon)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3085,7 +3092,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="5b42-830c-5f4b-4464" name="Snakebite Squiggoth" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5b42-830c-5f4b-4464" name="Snakebite Squiggoth" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -3099,7 +3106,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Thick Rear Armour,Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="8dcb-8a31-4037-0a3a" name="Big Mek" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="8dcb-8a31-4037-0a3a" name="Big Mek" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3113,7 +3120,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Big Mek</characteristic>
       </characteristics>
     </profile>
-    <profile id="681b-5152-75e4-32e2" name="Wyrdboy" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="681b-5152-75e4-32e2" name="Wyrdboy" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3127,7 +3134,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Wyrdboy</characteristic>
       </characteristics>
     </profile>
-    <profile id="42ce-cc2b-7f79-7d85" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="42ce-cc2b-7f79-7d85" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3141,7 +3148,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="6c77-bfa4-1db3-2bb7" name="Boyz (Goff, Evil Sunz, Snakebite)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6c77-bfa4-1db3-2bb7" name="Boyz (Goff, Evil Sunz, Snakebite)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3155,7 +3162,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="388a-cc11-30c4-3ee4" name="Boyz (Bad Moon, Blood Axe, Deathskulls)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="388a-cc11-30c4-3ee4" name="Boyz (Bad Moon, Blood Axe, Deathskulls)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3169,7 +3176,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="fd66-af98-66d8-a7c5" name="Blood Axe Kommandos" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="fd66-af98-66d8-a7c5" name="Blood Axe Kommandos" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3183,7 +3190,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
       </characteristics>
     </profile>
-    <profile id="0c29-12a3-e89c-7d89" name="Snakebite Boarboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="0c29-12a3-e89c-7d89" name="Snakebite Boarboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
@@ -3197,7 +3204,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="690c-d272-56d6-da66" name="Nobz Boarboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="690c-d272-56d6-da66" name="Nobz Boarboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -3211,7 +3218,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Leader, Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="5615-5e68-11cd-142f" name="Wildboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5615-5e68-11cd-142f" name="Wildboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3225,7 +3232,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="b9e8-4f37-08fc-de65" name="Madboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="b9e8-4f37-08fc-de65" name="Madboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3239,7 +3246,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="d6b3-5f1e-8a86-b906" name="Squig Katapult" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d6b3-5f1e-8a86-b906" name="Squig Katapult" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -3253,7 +3260,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="6644-5c19-6cbb-78ac" name="Pulsor Rokkit" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6644-5c19-6cbb-78ac" name="Pulsor Rokkit" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -3267,7 +3274,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="419b-f41a-4f35-02e0" name="Nobz Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="419b-f41a-4f35-02e0" name="Nobz Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -3281,7 +3288,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader, Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="e7c1-fe73-1b09-79b8" name="Goff Lungbusta - Explosor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e7c1-fe73-1b09-79b8" name="Goff Lungbusta - Explosor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -3295,7 +3302,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="010a-fefe-50de-be5d" name="Braincrusha - Frakkasor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="010a-fefe-50de-be5d" name="Braincrusha - Frakkasor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -3309,7 +3316,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="826f-2183-7bcc-6057" name="Evil Sunz Spleenrippa - Déchirator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="826f-2183-7bcc-6057" name="Evil Sunz Spleenrippa - Déchirator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3323,7 +3330,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="eaf5-505c-b7bb-d44b" name="Mekboy Dragsta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="eaf5-505c-b7bb-d44b" name="Mekboy Dragsta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3369,7 +3376,7 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
     </profile>
-    <profile id="bd86-ddc0-a084-2426" name="Mekboy Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="bd86-ddc0-a084-2426" name="Mekboy Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3385,63 +3392,63 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Dekapitation</characteristic>
       </characteristics>
     </profile>
-    <profile id="5e58-1ebb-2f00-53ef" name="Wyrdboy Tower" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="5e58-1ebb-2f00-53ef" name="Wyrdboy Tower" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW5+/AA5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
       </characteristics>
     </profile>
-    <profile id="3327-8297-536f-532f" name="Extra Armour Bitz" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="3327-8297-536f-532f" name="Extra Armour Bitz" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">+1DC</characteristic>
       </characteristics>
     </profile>
-    <profile id="2871-6e6e-e148-f6f7" name="Extra Power Fields" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="2871-6e6e-e148-f6f7" name="Extra Power Fields" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">+D3 Power Fields</characteristic>
       </characteristics>
     </profile>
-    <profile id="ddfe-bf77-f933-7964" name="Reinforced Boiler" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="ddfe-bf77-f933-7964" name="Reinforced Boiler" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">+5cm speed</characteristic>
       </characteristics>
     </profile>
-    <profile id="2425-dc69-b8f0-aad9" name="Head of Gork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="2425-dc69-b8f0-aad9" name="Head of Gork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Inspiring</characteristic>
       </characteristics>
     </profile>
-    <profile id="54f4-8f8b-61c1-44bd" name="Small Kalibr’" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="54f4-8f8b-61c1-44bd" name="Small Kalibr’" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Small Kalibr’</characteristic>
       </characteristics>
     </profile>
-    <profile id="a5ef-2268-c79e-aa78" name="Grot Krew" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="a5ef-2268-c79e-aa78" name="Grot Krew" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Grot Krew</characteristic>
       </characteristics>
     </profile>
-    <profile id="24bf-aec2-0581-0cda" name="Supa-Zzap Gun (Big Mek)" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="24bf-aec2-0581-0cda" name="Supa-Zzap Gun (Big Mek)" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW3+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3)</characteristic>
       </characteristics>
     </profile>
-    <profile id="0fb9-a8d6-4f63-7346" name="Soopagun (Big Mek)" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="0fb9-a8d6-4f63-7346" name="Soopagun (Big Mek)" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP</characteristic>
@@ -3464,14 +3471,14 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
     </profile>
-    <profile id="d145-ffb5-434d-7bfc" name="Kombat ‘Ammer" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="d145-ffb5-434d-7bfc" name="Kombat ‘Ammer" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;and (contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+&lt;BR&gt;and Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
       </characteristics>
     </profile>
-    <profile id="8506-8c85-9f04-000c" name="Big Mek Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="8506-8c85-9f04-000c" name="Big Mek Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3487,14 +3494,14 @@ There can be only one dragsta in an ork horde. The dragsta must be attached to a
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Flipped Over</characteristic>
       </characteristics>
     </profile>
-    <profile id="99a2-3279-7b35-b8ba" name="Twin Big Shootas" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="99a2-3279-7b35-b8ba" name="Twin Big Shootas" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
       </characteristics>
     </profile>
-    <profile id="17b7-8529-1c8a-71e0" name="Big Mek Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="17b7-8529-1c8a-71e0" name="Big Mek Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>

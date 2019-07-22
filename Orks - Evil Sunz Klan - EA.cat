@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b48d-42b4-cf7f-41d1" name="Orks: Evil Sunz Klan" revision="26" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="b48d-42b4-cf7f-41d1" name="Orks: Evil Sunz Klan" revision="27" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -1299,9 +1299,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2023-49ac-2e77-060b" name="Ork Warlord" hidden="false" collective="false" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="minInForce" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <infoLinks>
@@ -1454,7 +1461,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1468,7 +1475,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Slow and Steady, Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="92d6-1ab0-ad41-bb0a" name="Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="92d6-1ab0-ad41-bb0a" name="Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1484,7 +1491,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Flipped Over</characteristic>
       </characteristics>
     </profile>
-    <profile id="fa6d-75b9-9d66-fbc4" name="Battlewagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="fa6d-75b9-9d66-fbc4" name="Battlewagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1498,14 +1505,14 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="f246-81f3-b3bc-9933" name="Big Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="f246-81f3-b3bc-9933" name="Big Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
       </characteristics>
     </profile>
-    <profile id="e298-f346-eee2-9ce7" name="Boyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e298-f346-eee2-9ce7" name="Boyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1519,7 +1526,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="7c85-7952-cb5a-50c1" name="Buggies / Wartraks" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="7c85-7952-cb5a-50c1" name="Buggies / Wartraks" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -1533,7 +1540,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="f73f-dd6d-aaf3-ac15" name="Deth Kopta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f73f-dd6d-aaf3-ac15" name="Deth Kopta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -1547,7 +1554,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Skimmer</characteristic>
       </characteristics>
     </profile>
-    <profile id="a8ba-13c6-ecfc-5f28" name="Dreadnought" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="a8ba-13c6-ecfc-5f28" name="Dreadnought" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1561,7 +1568,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="5c35-a8bc-ec7a-b45d" name="Fighta-Bommers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5c35-a8bc-ec7a-b45d" name="Fighta-Bommers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter-Bomber</characteristic>
@@ -1575,7 +1582,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="5033-d287-32f3-b07c" name="Flakwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5033-d287-32f3-b07c" name="Flakwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1589,7 +1596,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="6c97-ceb6-268f-371c" name="Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="6c97-ceb6-268f-371c" name="Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1605,14 +1612,14 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="7a65-e962-6025-f65b" name="Gaze of Mork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="7a65-e962-6025-f65b" name="Gaze of Mork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer</characteristic>
       </characteristics>
     </profile>
-    <profile id="53ed-291f-e521-2525" name="Great Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="53ed-291f-e521-2525" name="Great Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1628,7 +1635,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="81d0-4f58-228e-2aab" name="Grots" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="81d0-4f58-228e-2aab" name="Grots" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1642,7 +1649,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Grots</characteristic>
       </characteristics>
     </profile>
-    <profile id="0210-466e-571f-d40f" name="Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0210-466e-571f-d40f" name="Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1658,7 +1665,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Flipped Over</characteristic>
       </characteristics>
     </profile>
-    <profile id="bc9b-3640-c4c2-1500" name="Gunwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="bc9b-3640-c4c2-1500" name="Gunwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1672,7 +1679,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="2287-1d89-794a-11fe" name="Kill Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2287-1d89-794a-11fe" name="Kill Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1686,7 +1693,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="df10-3aac-c209-519a" name="Killa Kan" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="df10-3aac-c209-519a" name="Killa Kan" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1700,7 +1707,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="a5f3-2fb0-3c48-37d1" name="Kommandos" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="a5f3-2fb0-3c48-37d1" name="Kommandos" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1714,7 +1721,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
       </characteristics>
     </profile>
-    <profile id="0c43-05aa-3d93-e63a" name="Landa" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0c43-05aa-3d93-e63a" name="Landa" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -1730,21 +1737,21 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
       </characteristics>
     </profile>
-    <profile id="c68f-b485-55cd-67c0" name="Lifta-Droppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="c68f-b485-55cd-67c0" name="Lifta-Droppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm&lt;BR&gt;and (contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW3+&lt;BR&gt;and Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3), Fixed Forward Arc&lt;BR&gt;and Titan Killer (D3), +1A</characteristic>
       </characteristics>
     </profile>
-    <profile id="8e33-7714-0d2a-4b08" name="Mega-choppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="8e33-7714-0d2a-4b08" name="Mega-choppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;and (contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;and Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Fixed Forward Arc&lt;BR&gt;and Titan Killer (D3), +1A</characteristic>
       </characteristics>
     </profile>
-    <profile id="d734-7af9-3595-3aeb" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d734-7af9-3595-3aeb" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1758,7 +1765,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="bc54-feee-7a6b-c702" name="Nobz Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="bc54-feee-7a6b-c702" name="Nobz Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -1772,7 +1779,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader, Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="6dd6-b8fe-02b1-449e" name="Ork Warlord" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6dd6-b8fe-02b1-449e" name="Ork Warlord" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1786,7 +1793,7 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Supreme Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="680b-0c2e-5ab3-343e" name="Skorcha" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="680b-0c2e-5ab3-343e" name="Skorcha" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -1800,14 +1807,14 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="a1a3-e368-c0bc-6281" name="Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="a1a3-e368-c0bc-6281" name="Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, Fixed Forward Arc</characteristic>
       </characteristics>
     </profile>
-    <profile id="5cbc-cb82-4f19-df6f" name="Stormboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5cbc-cb82-4f19-df6f" name="Stormboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1821,14 +1828,14 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jump Packs, Scout</characteristic>
       </characteristics>
     </profile>
-    <profile id="da5a-0454-09d9-22c8" name="Supa-Zzap Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="da5a-0454-09d9-22c8" name="Supa-Zzap Gun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW3+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3), Fixed Forward Arc</characteristic>
       </characteristics>
     </profile>
-    <profile id="5ef6-8f0e-3efb-bb4e" name="Truk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5ef6-8f0e-3efb-bb4e" name="Truk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -1842,14 +1849,14 @@ Truk: 1 unit of Boyz, Nobz, Grotz or Big Gunz. Units other than Big Gunz may sho
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="124f-f3d0-0086-ca20" name="Twin Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="124f-f3d0-0086-ca20" name="Twin Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">3BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, Fixed Forward Arc</characteristic>
       </characteristics>
     </profile>
-    <profile id="51a6-6ada-e243-8b42" name="Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="51a6-6ada-e243-8b42" name="Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>

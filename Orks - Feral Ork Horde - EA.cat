@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c55-2560-a9a0-f22e" name="Orks: Warlord Snagga-snagga&apos;s Feral Ork Horde" revision="30" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="2c55-2560-a9a0-f22e" name="Orks: Warlord Snagga-snagga&apos;s Feral Ork Horde" revision="31" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -1512,9 +1512,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2023-49ac-2e77-060b" name="Ork Warlord" hidden="false" collective="false" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="minInForce" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <infoLinks>
@@ -1766,7 +1773,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="8565-4daa-d050-5c4b" name="Boarboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="8565-4daa-d050-5c4b" name="Boarboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="20cm">
           <conditionGroups>
@@ -1804,7 +1811,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted, Infiltrators</characteristic>
       </characteristics>
     </profile>
-    <profile id="e298-f346-eee2-9ce7" name="Boyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e298-f346-eee2-9ce7" name="Boyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1818,14 +1825,14 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="6f0d-3a01-ebf1-40e3" name="Fist of Gork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="6f0d-3a01-ebf1-40e3" name="Fist of Gork" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW5+/AA5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon</characteristic>
       </characteristics>
     </profile>
-    <profile id="81d0-4f58-228e-2aab" name="Grotz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="81d0-4f58-228e-2aab" name="Grotz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1839,7 +1846,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Grotz</characteristic>
       </characteristics>
     </profile>
-    <profile id="91af-b92b-c193-783e" name="Junkatrukk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="91af-b92b-c193-783e" name="Junkatrukk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="1160-63e7-57ca-722d" value="-">
           <conditions>
@@ -1870,7 +1877,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="06cf-c26d-540c-6cd1" name="Madboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="06cf-c26d-540c-6cd1" name="Madboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1884,14 +1891,14 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless</characteristic>
       </characteristics>
     </profile>
-    <profile id="8e33-7714-0d2a-4b08" name="Mega-choppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="8e33-7714-0d2a-4b08" name="Mega-choppa" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3), +1A</characteristic>
       </characteristics>
     </profile>
-    <profile id="d734-7af9-3595-3aeb" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d734-7af9-3595-3aeb" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1905,7 +1912,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="6dd6-b8fe-02b1-449e" name="Ork Warlord" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6dd6-b8fe-02b1-449e" name="Ork Warlord" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1919,7 +1926,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Supreme Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="d98d-eaed-4bcd-4dcd" name="Orkeosaurus" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="d98d-eaed-4bcd-4dcd" name="Orkeosaurus" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
         <modifier type="set" field="1160-63e7-57ca-722d" value="2x Big Gun&lt;BR&gt;&lt;BR&gt;4x Twin Big Shoota&lt;BR&gt;&lt;BR&gt;Goring Tusks&lt;BR&gt;or">
           <conditionGroups>
@@ -1948,7 +1955,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Enraged</characteristic>
       </characteristics>
     </profile>
-    <profile id="a1a3-e368-c0bc-6281" name="Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="">
+    <profile id="a1a3-e368-c0bc-6281" name="Soopagun" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <modifiers>
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc, Macro-weapon">
           <conditions>
@@ -1962,7 +1969,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon</characteristic>
       </characteristics>
     </profile>
-    <profile id="d6b3-5f1e-8a86-b906" name="Squig Katapult" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d6b3-5f1e-8a86-b906" name="Squig Katapult" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -1976,7 +1983,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="5b42-830c-5f4b-4464" name="Squiggoths" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5b42-830c-5f4b-4464" name="Squiggoths" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1990,7 +1997,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Thick Rear Armour,Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="36a2-f9fa-837d-7338" name="Steam Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="36a2-f9fa-837d-7338" name="Steam Gargant" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2006,7 +2013,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Boiler Rupture</characteristic>
       </characteristics>
     </profile>
-    <profile id="5615-5e68-11cd-142f" name="Wildboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5615-5e68-11cd-142f" name="Wildboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2020,7 +2027,7 @@ Orkeosaurus: 12 of the following units: Boyz, Nobz, Wildboyz. May carry 6 Grotz 
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="681b-5152-75e4-32e2" name="Wyrdboy" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="681b-5152-75e4-32e2" name="Wyrdboy" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>

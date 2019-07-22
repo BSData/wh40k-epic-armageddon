@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="63df-f00f-d030-d48b" name="Orks: Da Kult of Speed" revision="28" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="63df-f00f-d030-d48b" name="Orks: Da Kult of Speed" revision="29" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -1552,7 +1552,7 @@
     <infoLink id="b539-dbd6-b468-129f" hidden="false" targetId="41c6-7e91-3062-1ee6" type="rule"/>
     <infoLink id="b979-5173-8495-ed86" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule"/>
     <infoLink id="a8ce-7be2-2fe2-bf4b" name="Battlefortresses &amp; Gunfortresses" hidden="false" targetId="3a58-160c-8b1b-f962" type="rule"/>
-    <infoLink id="f856-8c12-7fbb-a25d" hidden="false" targetId="e812-d124-a202-529e" type="rule"/>
+    <infoLink id="f856-8c12-7fbb-a25d" name="Mekboy Bikeboy" hidden="false" targetId="e812-d124-a202-529e" type="rule"/>
     <infoLink id="ac21-54d4-72fe-e461" hidden="false" targetId="3c8c-9037-d786-7413" type="rule"/>
   </infoLinks>
   <sharedSelectionEntries>
@@ -1677,10 +1677,15 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="minInForce" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <infoLinks>
@@ -1944,7 +1949,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="20af-66d0-d709-9081" name="Battle Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1958,7 +1963,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Slow and Steady, Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="92d6-1ab0-ad41-bb0a" name="Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="92d6-1ab0-ad41-bb0a" name="Battlefortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -1974,7 +1979,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Flipped Over</characteristic>
       </characteristics>
     </profile>
-    <profile id="fa6d-75b9-9d66-fbc4" name="Battlewagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="fa6d-75b9-9d66-fbc4" name="Battlewagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="1160-63e7-57ca-722d" value="Twin Big Shootas">
           <conditions>
@@ -1995,7 +2000,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="b891-65f2-7e74-1d0d" name="Big Gunz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="b891-65f2-7e74-1d0d" name="Big Gunz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -2009,7 +2014,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="e298-f346-eee2-9ce7" name="Boyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e298-f346-eee2-9ce7" name="Boyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2023,7 +2028,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="7c85-7952-cb5a-50c1" name="Buggies / Wartraks" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="7c85-7952-cb5a-50c1" name="Buggies / Wartraks" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT5+">
           <conditions>
@@ -2044,7 +2049,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="f73f-dd6d-aaf3-ac15" name="Deth Kopta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f73f-dd6d-aaf3-ac15" name="Deth Kopta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -2058,7 +2063,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Skimmer</characteristic>
       </characteristics>
     </profile>
-    <profile id="5c35-a8bc-ec7a-b45d" name="Fighta-Bommers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5c35-a8bc-ec7a-b45d" name="Fighta-Bommers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc">
           <conditions>
@@ -2079,7 +2084,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="5033-d287-32f3-b07c" name="Flakwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5033-d287-32f3-b07c" name="Flakwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT6+/AA5+">
           <conditions>
@@ -2110,7 +2115,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="0210-466e-571f-d40f" name="Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0210-466e-571f-d40f" name="Gunfortress" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2126,7 +2131,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Flipped Over</characteristic>
       </characteristics>
     </profile>
-    <profile id="bc9b-3640-c4c2-1500" name="Gunwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="bc9b-3640-c4c2-1500" name="Gunwagonz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+">
           <conditions>
@@ -2147,7 +2152,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="2287-1d89-794a-11fe" name="Kill Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2287-1d89-794a-11fe" name="Kill Kroozer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -2161,7 +2166,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="0c43-05aa-3d93-e63a" name="Landa" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0c43-05aa-3d93-e63a" name="Landa" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -2177,7 +2182,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
       </characteristics>
     </profile>
-    <profile id="c52c-a4d3-b94b-ee41" name="Mekboy Bad Ork Bikeboy" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="c52c-a4d3-b94b-ee41" name="Mekboy Bad Ork Bikeboy" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">40cm</characteristic>
@@ -2191,7 +2196,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted, Invulnerable Save, Supreme Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="35e4-99e9-31b7-6022" name="Mekboy Speedsta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="35e4-99e9-31b7-6022" name="Mekboy Speedsta" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -2205,7 +2210,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">D3 Power Fields</characteristic>
       </characteristics>
     </profile>
-    <profile id="d734-7af9-3595-3aeb" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d734-7af9-3595-3aeb" name="Nobz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -2219,7 +2224,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="bc54-feee-7a6b-c702" name="Nobz Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="bc54-feee-7a6b-c702" name="Nobz Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -2233,7 +2238,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader, Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="5ef6-8f0e-3efb-bb4e" name="Ork Trukk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5ef6-8f0e-3efb-bb4e" name="Ork Trukk" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -2247,7 +2252,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport, Units other than Big Gunz may shoot while being transported</characteristic>
       </characteristics>
     </profile>
-    <profile id="680b-0c2e-5ab3-343e" name="Skorcha" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="680b-0c2e-5ab3-343e" name="Skorcha" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -2261,7 +2266,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="5cbc-cb82-4f19-df6f" name="Stormboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5cbc-cb82-4f19-df6f" name="Stormboyz" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -2275,7 +2280,7 @@ Ork Trukk: 1 unit of Boyz, Nobz, Grotz or Big Gunz.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jump Packs, Scout</characteristic>
       </characteristics>
     </profile>
-    <profile id="51a6-6ada-e243-8b42" name="Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="51a6-6ada-e243-8b42" name="Warbikes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
