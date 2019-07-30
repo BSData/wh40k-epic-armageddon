@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="32" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="33" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -693,7 +693,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="85e4-4e2f-f2ac-db52" name="Commander" hidden="false" collective="false" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="d683-d6a6-934a-9970" hidden="false" collective="false" targetId="79ff-14b0-debe-bbb3" type="selectionEntryGroup"/>
+        <entryLink id="d683-d6a6-934a-9970" name="Skimmers" hidden="false" collective="false" targetId="79ff-14b0-debe-bbb3" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
@@ -1553,7 +1553,7 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="d91c-4f20-f5a9-ed54" hidden="false" targetId="5a52-f854-d54a-83d0" type="profile"/>
+            <infoLink id="d91c-4f20-f5a9-ed54" name="Terminators" hidden="false" targetId="5a52-f854-d54a-83d0" type="profile"/>
             <infoLink id="0597-673a-81bf-8232" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
             <infoLink id="37e9-21ad-631d-8bd5" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
             <infoLink id="e915-6fcc-786a-894d" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
@@ -1571,7 +1571,7 @@
         <entryLink id="2601-8918-ee49-b675" name="Land Raiders" hidden="false" collective="false" targetId="dcc3-03a0-a2fb-d935" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="225.0"/>
+        <cost name="pts" typeId="points" value="325.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1582-3fa0-1336-5a93" name="Thunderfire" page="0" hidden="false" collective="false" type="unit">
@@ -2827,8 +2827,15 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="0e78-8c71-662a-b323" name="Land Speeder Typhoon" page="0" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="points" value="10.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <infoLinks>
-            <infoLink id="a489-6b99-02e1-dfc9" hidden="false" targetId="e329-e81d-097d-6d2f" type="profile"/>
+            <infoLink id="a489-6b99-02e1-dfc9" name="Land Speeder Typhoon" hidden="false" targetId="e329-e81d-097d-6d2f" type="profile"/>
             <infoLink id="3640-bebe-98e1-b3e4" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
             <infoLink id="03ee-fdcd-ed82-5158" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
           </infoLinks>
@@ -3047,7 +3054,7 @@ All infantry units gain first strike when within trenches purchased as part of t
 All infantry units gain a 4+ cover save when within bunkers purchased as part of the army. They may take this cover save against a macro-weapon hit. In addition, they may re-roll a failed cover save against any non-macro-weapon hit. Weapons with ignore cover negate this cover save as normal.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2018-09-17</description>
+      <description>netea-tournament-pack-2019-01-23</description>
     </rule>
     <rule id="f064-83f2-b1e4-5f5c" name="Strategy Rating &amp; Initiative (IF)" hidden="false">
       <modifiers>
@@ -3159,7 +3166,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="5558-8155-00f3-4619" name="Archiviste" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5558-8155-00f3-4619" name="Archiviste" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3180,7 +3187,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="ec78-410b-49f4-635f" name="Assault" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ec78-410b-49f4-635f" name="Assault" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3194,7 +3201,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jump Packs</characteristic>
       </characteristics>
     </profile>
-    <profile id="990c-b30f-8522-ba0c" name="Assault Centurion" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="990c-b30f-8522-ba0c" name="Assault Centurion" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3208,7 +3215,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="6bc3-d679-12f4-5c2e" name="Assault Terminator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6bc3-d679-12f4-5c2e" name="Assault Terminator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3222,7 +3229,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Reinforced Armour, Thick Rear Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="ab3f-5390-e599-540a" name="Attack Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ab3f-5390-e599-540a" name="Attack Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
           <conditions>
@@ -3253,7 +3260,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="e39d-0c20-f9de-a4c0" name="Bastion" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="e39d-0c20-f9de-a4c0" name="Bastion" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
@@ -3269,7 +3276,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Structural Damage</characteristic>
       </characteristics>
     </profile>
-    <profile id="3d59-72ce-ad32-8d55" name="Battle Barge" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="3d59-72ce-ad32-8d55" name="Battle Barge" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3283,7 +3290,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Slow and Steady, Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="47eb-5f71-832d-a13e" name="Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="47eb-5f71-832d-a13e" name="Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -3297,7 +3304,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="3038-b6aa-880c-4514" name="Caestus Assault Ram" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="3038-b6aa-880c-4514" name="Caestus Assault Ram" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -3313,7 +3320,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4"/>
       </characteristics>
     </profile>
-    <profile id="7c75-037b-b71f-a9da" name="Captain" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="7c75-037b-b71f-a9da" name="Captain" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3327,7 +3334,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Commander, Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="00bd-edb8-a4e5-bfa2" name="Chaplain" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="00bd-edb8-a4e5-bfa2" name="Chaplain" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3341,7 +3348,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Inspiring, Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="416f-bedf-27ed-4bde" name="Devastator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="416f-bedf-27ed-4bde" name="Devastator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Weapons&lt;BR&gt;&lt;BR&gt;Bolters">
           <conditions>
@@ -3377,7 +3384,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="227f-99db-2ac0-38ae" name="Devastator Centurion" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="227f-99db-2ac0-38ae" name="Devastator Centurion" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3391,7 +3398,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="010e-164f-1824-70eb" name="Dreadnought (Hellfire)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="010e-164f-1824-70eb" name="Dreadnought (Hellfire)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+">
           <conditions>
@@ -3417,7 +3424,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="dfbe-20d5-c2e4-45e8" name="Dreadnought (Siege)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="dfbe-20d5-c2e4-45e8" name="Dreadnought (Siege)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3431,7 +3438,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="4d37-22a0-7daa-e381" name="Dreadnought (Tactical)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4d37-22a0-7daa-e381" name="Dreadnought (Tactical)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Fearless">
           <conditions>
@@ -3457,7 +3464,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="7450-367d-a1bc-b850" name="Drop Pod" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="7450-367d-a1bc-b850" name="Drop Pod" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Special</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3471,7 +3478,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Transport, Drop Pod</characteristic>
       </characteristics>
     </profile>
-    <profile id="8f13-461f-ded6-4977" name="Fellblade" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="8f13-461f-ded6-4977" name="Fellblade" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3487,7 +3494,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
       </characteristics>
     </profile>
-    <profile id="5748-790f-81b9-6c64" name="Hunter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5748-790f-81b9-6c64" name="Hunter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3501,7 +3508,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="5851-3a39-64da-def3" name="Hyperios Platform" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5851-3a39-64da-def3" name="Hyperios Platform" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">0cm</characteristic>
@@ -3515,7 +3522,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Automata</characteristic>
       </characteristics>
     </profile>
-    <profile id="4dd1-e47f-2832-2ba6" name="Land Raider" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4dd1-e47f-2832-2ba6" name="Land Raider" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
@@ -3529,7 +3536,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Thick Rear Armour, Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="f19b-0306-fbd0-995b" name="Land Raider Achilles" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f19b-0306-fbd0-995b" name="Land Raider Achilles" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3550,7 +3557,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Thick Rear Armour, Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="41d4-0167-5a82-6954" name="Land Raider Crusader" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="41d4-0167-5a82-6954" name="Land Raider Crusader" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
@@ -3564,7 +3571,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Thick Rear Armour, Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="d872-4941-9a12-e879" name="Land Speeder" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d872-4941-9a12-e879" name="Land Speeder" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -3578,7 +3585,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Skimmer</characteristic>
       </characteristics>
     </profile>
-    <profile id="f808-85c7-d484-b781" name="Land Speeder Tornado" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f808-85c7-d484-b781" name="Land Speeder Tornado" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
           <conditions>
@@ -3599,7 +3606,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Skimmer</characteristic>
       </characteristics>
     </profile>
-    <profile id="e329-e81d-097d-6d2f" name="Land Speeder Typhoon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e329-e81d-097d-6d2f" name="Land Speeder Typhoon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
           <conditions>
@@ -3620,7 +3627,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Skimmer</characteristic>
       </characteristics>
     </profile>
-    <profile id="e1d5-7447-841f-991b" name="Landing Craft" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="e1d5-7447-841f-991b" name="Landing Craft" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -3636,7 +3643,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Landing Craft</characteristic>
       </characteristics>
     </profile>
-    <profile id="0fc4-3d74-08fd-9f38" name="Librarian" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="0fc4-3d74-08fd-9f38" name="Librarian" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3657,7 +3664,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="8e74-10b2-70c0-218b" name="Marauder Bomber" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="8e74-10b2-70c0-218b" name="Marauder Bomber" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3680,7 +3687,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
       </characteristics>
     </profile>
-    <profile id="0e66-34cc-af77-82eb" name="Marauder Heavy Bomber" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0e66-34cc-af77-82eb" name="Marauder Heavy Bomber" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3703,7 +3710,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
       </characteristics>
     </profile>
-    <profile id="e87d-5407-5840-3913" name="Predator Annihilator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e87d-5407-5840-3913" name="Predator Annihilator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour">
           <conditions>
@@ -3729,7 +3736,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="6da5-9d8e-4ab6-2314" name="Predator Destructor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="6da5-9d8e-4ab6-2314" name="Predator Destructor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
           <conditions>
@@ -3755,7 +3762,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="ec21-aef3-6206-48d6" name="Rapier" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ec21-aef3-6206-48d6" name="Rapier" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -3769,7 +3776,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="737a-0f06-5bba-9de7" name="Razorback HB" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="737a-0f06-5bba-9de7" name="Razorback HB" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
           <conditionGroups>
@@ -3795,7 +3802,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="68d7-4975-c45b-2622" name="Razorback L" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="68d7-4975-c45b-2622" name="Razorback L" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3809,7 +3816,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="8dd8-05a1-34ea-9ef7" name="Reaver Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="8dd8-05a1-34ea-9ef7" name="Reaver Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -3825,7 +3832,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Damage</characteristic>
       </characteristics>
     </profile>
-    <profile id="2815-61f6-bad0-120e" name="Rhino" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2815-61f6-bad0-120e" name="Rhino" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3839,7 +3846,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="512c-7993-9558-3dfc" name="Scout" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="512c-7993-9558-3dfc" name="Scout" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+">
           <conditions>
@@ -3870,7 +3877,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
       </characteristics>
     </profile>
-    <profile id="d1e0-a146-5371-f743" name="Scout Snipers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d1e0-a146-5371-f743" name="Scout Snipers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3884,7 +3891,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Infiltrators, Sniper</characteristic>
       </characteristics>
     </profile>
-    <profile id="4a3b-cd21-3c59-e605" name="Storm Eagle" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="4a3b-cd21-3c59-e605" name="Storm Eagle" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter-bomber</characteristic>
@@ -3900,7 +3907,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4"/>
       </characteristics>
     </profile>
-    <profile id="4522-e2ec-e192-9eb1" name="Stormtalon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4522-e2ec-e192-9eb1" name="Stormtalon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;30cm">
           <conditions>
@@ -3926,7 +3933,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="2e26-d80b-708d-070d" name="Stormtalon Annihilator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2e26-d80b-708d-070d" name="Stormtalon Annihilator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter</characteristic>
@@ -3940,7 +3947,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="2825-2f58-2eb2-46bf" name="Strike Cruiser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2825-2f58-2eb2-46bf" name="Strike Cruiser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3954,7 +3961,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="f22a-34df-b3dd-b2b4" name="Supreme Commander" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f22a-34df-b3dd-b2b4" name="Supreme Commander" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3968,7 +3975,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Supreme Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="4bda-67e5-86bb-b58d" name="Tactical" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4bda-67e5-86bb-b58d" name="Tactical" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3982,7 +3989,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="f861-1e77-0615-9d40" name="Tarantula AP" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f861-1e77-0615-9d40" name="Tarantula AP" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">0cm</characteristic>
@@ -3996,7 +4003,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Automata</characteristic>
       </characteristics>
     </profile>
-    <profile id="ec89-de1c-3393-9ca8" name="Tarantula AT" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="ec89-de1c-3393-9ca8" name="Tarantula AT" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">0cm</characteristic>
@@ -4010,7 +4017,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Automata</characteristic>
       </characteristics>
     </profile>
-    <profile id="2a1c-a30e-1f46-2220" name="Techmarine" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="2a1c-a30e-1f46-2220" name="Techmarine" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -4024,7 +4031,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader, If added to a Bastion it gains 1Sh</characteristic>
       </characteristics>
     </profile>
-    <profile id="5a52-f854-d54a-83d0" name="Terminators" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="5a52-f854-d54a-83d0" name="Terminators" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Thick Rear Armour">
           <conditions>
@@ -4045,7 +4052,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Teleport, Thick Rear Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="42c4-93fd-fc24-f2f8" name="Thudd Gun" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="42c4-93fd-fc24-f2f8" name="Thudd Gun" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -4059,7 +4066,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="166b-0eb8-5cf4-483b" name="Thunderbolt Fighter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="166b-0eb8-5cf4-483b" name="Thunderbolt Fighter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter-bomber</characteristic>
@@ -4073,7 +4080,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="b2ca-e62d-66e1-ace2" name="Thunderfire Cannon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="b2ca-e62d-66e1-ace2" name="Thunderfire Cannon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4094,7 +4101,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="e9b9-84ae-ecda-7f2a" name="Thunderfire Cannon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e9b9-84ae-ecda-7f2a" name="Thunderfire Cannon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4115,7 +4122,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted, Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="1c71-94a8-df92-2490" name="Thunderhawk Gunship" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="1c71-94a8-df92-2490" name="Thunderhawk Gunship" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
         <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="75cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm">
           <conditions>
@@ -4138,7 +4145,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
       </characteristics>
     </profile>
-    <profile id="ef7e-6f9f-e745-c7db" name="Thunderhawk SB" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="ef7e-6f9f-e745-c7db" name="Thunderhawk SB" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -4154,7 +4161,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
       </characteristics>
     </profile>
-    <profile id="7763-64e7-a16f-7128" name="Thunderhawk Transporter" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="7763-64e7-a16f-7128" name="Thunderhawk Transporter" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -4170,7 +4177,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
       </characteristics>
     </profile>
-    <profile id="b27e-e2d1-c3c3-9426" name="Vindicator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="b27e-e2d1-c3c3-9426" name="Vindicator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4191,7 +4198,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="4d97-a983-9655-9bb8" name="Vindicator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4d97-a983-9655-9bb8" name="Vindicator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4212,7 +4219,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="b309-f865-8c98-7194" name="Warhound Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="b309-f865-8c98-7194" name="Warhound Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
         <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value=", Mid-power Shot">
           <conditions>
@@ -4235,7 +4242,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Staggering Blow</characteristic>
       </characteristics>
     </profile>
-    <profile id="005e-b917-9267-fc35" name="Warlord Class Titan Deathstrike" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="005e-b917-9267-fc35" name="Warlord Class Titan Deathstrike" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -4251,7 +4258,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Damage</characteristic>
       </characteristics>
     </profile>
-    <profile id="dc1f-622e-cffb-0339" name="Warlord Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="dc1f-622e-cffb-0339" name="Warlord Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -4267,7 +4274,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Damage</characteristic>
       </characteristics>
     </profile>
-    <profile id="21f5-6289-0579-3a87" name="Whirlwind" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="21f5-6289-0579-3a87" name="Whirlwind" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
           <conditions>
@@ -4288,7 +4295,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="0c0b-80a1-3bdd-4e49" name="Land Raider Achilles" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="0c0b-80a1-3bdd-4e49" name="Land Raider Achilles" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4309,7 +4316,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Reinforced Armour, Thick Rear Armour, Transport</characteristic>
       </characteristics>
     </profile>
-    <profile id="07e7-a20d-df1e-c0cf" name="Bunker" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="">
+    <profile id="07e7-a20d-df1e-c0cf" name="Bunker" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Cuenta como una fortificación. Puede contener hasta tres unidades. ">
           <conditions>
@@ -4331,7 +4338,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">3+ Cover Save</characteristic>
         <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Dangerous</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">Impassable</characteristic>
-        <characteristic name="Notes" typeId="9be9-cd8c-f54b-69d7">Bunkers are Fortifications. Can hold 3 units.</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Bunkers are Fortifications. Can hold 3 units.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
