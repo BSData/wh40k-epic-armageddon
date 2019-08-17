@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="126d-d5a1-6d4f-f7d9" name="Adeptus Mechanicus: Skitarius" revision="23" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="126d-d5a1-6d4f-f7d9" name="Adeptus Mechanicus: Skitarius" revision="24" battleScribeVersion="2.02" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -170,13 +170,40 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="150.0"/>
+        <cost name="pts" typeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f42d-99cb-5706-21b0" name="Skitarii Vanguard" page="0" hidden="false" collective="false" type="unit">
       <categoryLinks>
         <categoryLink id="2d77-88ef-198a-dac8" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="be97-7e43-39e0-8750" name="6x Skorpius Dunerider" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="f42d-99cb-5706-21b0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7ad-643b-ec8a-d0e0" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b344-0e07-d281-e8df" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="489f-5934-3de6-7d47" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b344-0e07-d281-e8df" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="56f5-3337-b9e3-8e68" name="Skorpius Dunerider" hidden="false" targetId="3417-c388-9293-d573" type="profile"/>
+            <infoLink id="8236-a408-2b34-1c3d" name="Transport (AMSk)" hidden="false" targetId="1336-2123-85a0-402f" type="rule"/>
+            <infoLink id="a300-622f-4f27-0649" name="Walker" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="150.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9dd3-29ec-c67e-b95d" name="Cohort" hidden="false" collective="false" defaultSelectionEntryId="b7ad-643b-ec8a-d0e0">
           <constraints>
@@ -206,6 +233,16 @@
       <entryLinks>
         <entryLink id="1b7e-53a6-ea42-73d7" name="Tunnellers" hidden="false" collective="false" targetId="489f-5934-3de6-7d47" type="selectionEntryGroup"/>
         <entryLink id="007d-3196-73f8-c519" name="Magos" hidden="false" collective="false" targetId="f2f6-d8c1-cba1-0595" type="selectionEntryGroup"/>
+        <entryLink id="5b1c-9f38-2058-6845" name="Skorpius Disintegrator" hidden="false" collective="false" targetId="2aea-2896-8ae3-2d0d" type="selectionEntry"/>
+        <entryLink id="e318-d2b4-ef69-f792" name="4x Skorpius Dunerider" hidden="false" collective="false" targetId="6c68-0910-b17a-d110" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="f42d-99cb-5706-21b0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f39-d231-07e7-2e22" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="175.0"/>
@@ -213,7 +250,7 @@
     </selectionEntry>
     <selectionEntry id="55bb-95c9-9315-c3f4" name="Skitarii Rangers" page="0" hidden="false" collective="false" type="unit">
       <categoryLinks>
-        <categoryLink id="dfa2-4af8-250d-742d" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
+        <categoryLink id="b6f7-b219-e134-3e9d" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7a15-5eea-983b-4717" name="Skitarii Rangers" hidden="false" collective="false" type="unit">
@@ -222,8 +259,24 @@
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ff69-b9ea-fc30-b704" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="680a-2b7b-5dd9-ceab" name="Skitarii Ranger" hidden="false" targetId="52ff-1a6b-d534-eaa8" type="profile"/>
-            <infoLink id="41cb-26f0-8555-98f3" name="Scout" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
+            <infoLink id="680a-2b7b-5dd9-ceab" name="Skitarii Ranger" hidden="false" targetId="52ff-1a6b-d534-eaa8" type="profile">
+              <modifiers>
+                <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Sniper">
+                  <conditions>
+                    <condition field="selections" scope="55bb-95c9-9315-c3f4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecf5-f4c2-6b77-2f64" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="41cb-26f0-8555-98f3" name="Scout" hidden="false" targetId="8b6a-4000-4679-235a" type="rule">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="55bb-95c9-9315-c3f4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecf5-f4c2-6b77-2f64" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="8310-93f2-0764-b729" name="Sniper" hidden="false" targetId="61e7-0cbb-6cc9-189d" type="rule"/>
           </infoLinks>
           <costs>
@@ -234,6 +287,8 @@
       <entryLinks>
         <entryLink id="57e3-b580-3e34-5a33" name="Tunnellers" hidden="false" collective="false" targetId="489f-5934-3de6-7d47" type="selectionEntryGroup"/>
         <entryLink id="8744-47c0-4a15-314a" name="Magos" hidden="false" collective="false" targetId="f2f6-d8c1-cba1-0595" type="selectionEntryGroup"/>
+        <entryLink id="89c9-681f-6a67-c891" name="3x Skorpius Dunerider" hidden="false" collective="false" targetId="ecf5-f4c2-6b77-2f64" type="selectionEntry"/>
+        <entryLink id="add5-bc37-d830-0766" name="Skorpius Disintegrator" hidden="false" collective="false" targetId="2aea-2896-8ae3-2d0d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="175.0"/>
@@ -259,6 +314,8 @@
       </selectionEntries>
       <entryLinks>
         <entryLink id="ed18-4ec2-9f1d-9f8d" name="Tunnellers" hidden="false" collective="false" targetId="489f-5934-3de6-7d47" type="selectionEntryGroup"/>
+        <entryLink id="e1dc-5341-bb05-8736" name="Skorpius Disintegrator" hidden="false" collective="false" targetId="2aea-2896-8ae3-2d0d" type="selectionEntry"/>
+        <entryLink id="dbb5-2ecc-ec06-6120" name="3x Skorpius Dunerider" hidden="false" collective="false" targetId="ecf5-f4c2-6b77-2f64" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="175.0"/>
@@ -290,9 +347,6 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="25.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="0da9-1c35-d3a8-438a" name="Skitarii Ruststalkers" page="0" hidden="false" collective="false" type="unit">
       <categoryLinks>
@@ -315,12 +369,14 @@
       </selectionEntries>
       <entryLinks>
         <entryLink id="fb3a-cd7d-5c36-b2dc" name="Tunnellers" hidden="false" collective="false" targetId="489f-5934-3de6-7d47" type="selectionEntryGroup"/>
+        <entryLink id="197b-c1c6-e975-ee6d" name="Skorpius Disintegrator" hidden="false" collective="false" targetId="2aea-2896-8ae3-2d0d" type="selectionEntry"/>
+        <entryLink id="f9d7-b933-c5a4-612e" name="3x Skorpius Dunerider" hidden="false" collective="false" targetId="ecf5-f4c2-6b77-2f64" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="adfb-82ae-61f5-76da" name="Sydonian Dragoons" page="0" hidden="false" collective="false" type="unit">
+    <selectionEntry id="adfb-82ae-61f5-76da" name="Dragoon" page="0" hidden="false" collective="false" type="unit">
       <categoryLinks>
         <categoryLink id="5059-d1fd-9739-2ac2" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
       </categoryLinks>
@@ -422,6 +478,8 @@
       <entryLinks>
         <entryLink id="a5b0-7fac-0473-f68e" name="Magos" hidden="false" collective="false" targetId="f2f6-d8c1-cba1-0595" type="selectionEntryGroup"/>
         <entryLink id="ae53-25ac-24c3-b0d6" name="Tunnellers" hidden="false" collective="false" targetId="489f-5934-3de6-7d47" type="selectionEntryGroup"/>
+        <entryLink id="c06a-8671-cacd-4198" name="Skorpius Disintegrator" hidden="false" collective="false" targetId="2aea-2896-8ae3-2d0d" type="selectionEntry"/>
+        <entryLink id="7b1d-085d-8774-bcca" name="4x Skorpius Dunerider" hidden="false" collective="false" targetId="6c68-0910-b17a-d110" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
@@ -429,7 +487,7 @@
     </selectionEntry>
     <selectionEntry id="9cf4-6e42-530b-b0a1" name="Onagers Phosphorus" page="0" hidden="false" collective="false" type="unit">
       <categoryLinks>
-        <categoryLink id="0c9f-756e-eec9-c7fc" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
+        <categoryLink id="de14-8cd4-0e90-aa3f" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="112b-75ae-af98-e487" name="Cohort" hidden="false" collective="false" defaultSelectionEntryId="83dc-6b1f-02e4-ec41">
@@ -470,7 +528,7 @@
     </selectionEntry>
     <selectionEntry id="9da6-ffd5-94ae-1ef2" name="Onagers Laser" page="0" hidden="false" collective="false" type="unit">
       <categoryLinks>
-        <categoryLink id="309e-c56b-1ebc-4f98" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
+        <categoryLink id="e47d-be8f-016e-4e87" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5151-7887-2e18-58b7" name="Cohort" hidden="false" collective="false" defaultSelectionEntryId="4faf-6c68-0a13-b9da">
@@ -597,6 +655,27 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="168c-ebf1-d113-8dad" name="Skorpius Disintegrators" page="0" hidden="false" collective="false" type="unit">
+      <categoryLinks>
+        <categoryLink id="6e98-96a9-25a6-1e1e" name="2 per Formation" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="113b-0c2c-8668-a03f" name="Skorpius Disintegrator" hidden="false" collective="false" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bcb3-b665-570d-0008" type="max"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2e81-0d26-3d07-34c3" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b78c-426c-e621-2c04" name="Skorpius Disintegrator" hidden="false" targetId="f8eb-0f3a-a67d-211c" type="profile"/>
+            <infoLink id="67ba-e6ca-83f7-662a" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="7c83-f042-6530-8ff1" name="Walker" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="300.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <infoLinks>
     <infoLink id="f668-2718-536a-3e9f" name="Strategy Rating &amp; Initiative (AMSk)" hidden="false" targetId="c7dd-3cc1-18a8-93b8" type="rule"/>
@@ -661,6 +740,59 @@
         <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2aea-2896-8ae3-2d0d" name="Skorpius Disintegrator" hidden="false" collective="false" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6389-3680-edbd-a2d2" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="e877-8291-56e0-1e5c" name="Skorpius Disintegrator" hidden="false" targetId="f8eb-0f3a-a67d-211c" type="profile"/>
+        <infoLink id="8edc-93f2-58c7-9737" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="ed6e-77f9-2097-6c25" name="Walker" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ecf5-f4c2-6b77-2f64" name="3x Skorpius Dunerider" hidden="false" collective="false" type="model">
+      <modifiers>
+        <modifier type="set" field="ff13-3177-5a2d-ef64" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="489f-5934-3de6-7d47" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff13-3177-5a2d-ef64" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="6e69-289a-9409-63ce" name="Skorpius Dunerider" hidden="false" targetId="3417-c388-9293-d573" type="profile"/>
+        <infoLink id="2be5-edef-4431-f996" name="Transport (AMSk)" hidden="false" targetId="1336-2123-85a0-402f" type="rule"/>
+        <infoLink id="9a55-3ac0-3e20-afd1" name="Walker" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6c68-0910-b17a-d110" name="4x Skorpius Dunerider" hidden="false" collective="false" type="model">
+      <modifiers>
+        <modifier type="set" field="43ab-53f9-bcad-f88a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="489f-5934-3de6-7d47" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43ab-53f9-bcad-f88a" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="6137-cb84-1e1c-77e8" name="Skorpius Dunerider" hidden="false" targetId="3417-c388-9293-d573" type="profile"/>
+        <infoLink id="c1d7-8879-bf25-4bec" name="Transport (AMSk)" hidden="false" targetId="1336-2123-85a0-402f" type="rule"/>
+        <infoLink id="8945-b567-8806-bb55" name="Walker" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="489f-5934-3de6-7d47" name="Tunnellers" hidden="false" collective="false">
@@ -685,7 +817,7 @@
             <infoLink id="60e8-53a0-8458-8d35" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3d43-20df-055b-f7f6" name="Hellbore" hidden="false" collective="false" type="model">
@@ -698,7 +830,7 @@
             <infoLink id="9853-4945-716e-995e" hidden="false" targetId="6241-7a63-2e4d-7c47" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
+            <cost name="pts" typeId="points" value="75.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f337-64bb-eae4-c1a8" name="Mole" hidden="false" collective="false" type="model">
@@ -711,7 +843,7 @@
             <infoLink id="38b1-85f5-cbcf-0e48" name="Critical Hit: Destroyed" hidden="false" targetId="6241-7a63-2e4d-7c47" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
+            <cost name="pts" typeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -744,7 +876,7 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>AMTL - FERC BETA 25-07-18 #pg22 - Skitarius</description>
+      <description>AMTL - FERC 02-07-19 #pg22 - Skitarius</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <description>none</description>
@@ -762,31 +894,32 @@ Fanatic #13</description>
     </rule>
     <rule id="c7dd-3cc1-18a8-93b8" name="Strategy Rating &amp; Initiative (AMSk)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Valeur stratégique de 3. Initiative de 2+.">
+        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Valeur stratégique de 3. Toutes les formations ont une initiative de 2+. Les Magos donnent +1 aux jets d&apos;initiative des formations d&apos;infanterie dans lesquels ils se trouvent.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 3.  • Alle Formationen haben die Initiativwert 2+.">
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 3.  • Alle Formationen haben die Initiativwert 2+. Die Magos geben +1 für die Initiativwürfe der Infanterieformationen, in denen sie sich befinden.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <description>Skitarius armies have a strategy rating of 3. All formations have an initiative rating of 2+.</description>
+      <description>Skitarius armies have a strategy rating of 3. All formations have an initiative rating of 2+. The Magos give +1 to the initiative rolls of the infantry formations in which they are located.</description>
     </rule>
     <rule id="1336-2123-85a0-402f" name="Transport (AMSk)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="La capacité de transport: Comme suit- &lt;BR&gt; Fouisseuse: 16 Skitarii, Electro-prêtres. &lt;BR&gt; Taupe: 8 Skitarii, Electro-prêtres. &lt;BR&gt; Termite: 2 Skitarii, Electro-prêtres.">
+        <modifier type="set" field="description" value="La capacité de transport: Comme suit-  • Fouisseuse: 16 Skitarii, Electro-prêtres.  • Skorpius Dunerider: 2 Skitarii (Les Rangers perdent la compétence éclaireur), Electro-prêtres.  • Taupe: 8 Skitarii, Electro-prêtres.  • Termite: 2 Skitarii, Electro-prêtres.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
       <description>As follows-
-Hellbore: 16 Skitarii, Electro-priests
-Mole: 8 Skitarii, Electro-priests
-Termite: 2 Skitarii, Electro-priests</description>
+Hellbore: 16 Skitarii, Electro-priests.
+Mole: 8 Skitarii, Electro-priests.
+Skorpius Dunerider: 2 Skitarii (Rangers lose the Scout ability), Electro-priests.
+Termite: 2 Skitarii, Electro-priests.</description>
     </rule>
     <rule id="1046-4f13-c3b6-6db8" name="Alliance: Mechanicum" hidden="false">
       <modifiers>
@@ -800,7 +933,7 @@ Termite: 2 Skitarii, Electro-priests</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="a8db-18bc-09e9-dda7" name="Ark Mechanicus" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="a8db-18bc-09e9-dda7" name="Ark Mechanicus" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -814,7 +947,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Slow and Steady</characteristic>
       </characteristics>
     </profile>
-    <profile id="18ab-8ced-98cb-d5b3" name="Avenger" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="18ab-8ced-98cb-d5b3" name="Avenger" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter-bomber</characteristic>
@@ -823,12 +956,12 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Avenger Bolt Cannon&lt;BR&gt;&lt;BR&gt;2x Lascannon&lt;BR&gt;&lt;BR&gt;Heavy Stubber</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP4+/AT5+&lt;BR&gt;&lt;BR&gt;AT5+/AA6+&lt;BR&gt;&lt;BR&gt;AA6+</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP3+/AT5+&lt;BR&gt;&lt;BR&gt;AT5+/AA6+&lt;BR&gt;&lt;BR&gt;AA6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Rear Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jink</characteristic>
       </characteristics>
     </profile>
-    <profile id="d431-0d2f-e3cc-37f7" name="Cruiser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d431-0d2f-e3cc-37f7" name="Cruiser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Spacecraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -842,7 +975,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="1710-b430-8cf0-635c" name="Ordinatus Armageddon" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="1710-b430-8cf0-635c" name="Ordinatus Armageddon" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -858,7 +991,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Crack</characteristic>
       </characteristics>
     </profile>
-    <profile id="0122-1478-90ee-efe4" name="Ordinatus Golgotha" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="0122-1478-90ee-efe4" name="Ordinatus Golgotha" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -874,7 +1007,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Crack</characteristic>
       </characteristics>
     </profile>
-    <profile id="681c-5468-ee68-687a" name="Ordinatus Mars" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="681c-5468-ee68-687a" name="Ordinatus Mars" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">10cm</characteristic>
@@ -890,7 +1023,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Crack</characteristic>
       </characteristics>
     </profile>
-    <profile id="bb19-3b7b-8bb2-5487" name="Hellbore" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="bb19-3b7b-8bb2-5487" name="Hellbore" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -906,7 +1039,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
     </profile>
-    <profile id="ec32-9467-e266-e421" name="Mole" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="ec32-9467-e266-e421" name="Mole" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -922,7 +1055,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
     </profile>
-    <profile id="bb3d-2c5d-5e98-bdf8" name="Termite" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="bb3d-2c5d-5e98-bdf8" name="Termite" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -936,7 +1069,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Thick Rear Armour, Transport, Tunnellers</characteristic>
       </characteristics>
     </profile>
-    <profile id="101f-77b2-fd35-1f92" name="Magos Prime" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="101f-77b2-fd35-1f92" name="Magos Prime" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -950,7 +1083,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Reinforced Armour, Supreme Commander</characteristic>
       </characteristics>
     </profile>
-    <profile id="4ce4-1045-3cd7-fc7a" name="Magos Dominus" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4ce4-1045-3cd7-fc7a" name="Magos Dominus" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -964,7 +1097,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Commander, Invulnerable Save</characteristic>
       </characteristics>
     </profile>
-    <profile id="cef6-e589-bb0b-f258" name="Electro-Priest" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="cef6-e589-bb0b-f258" name="Electro-Priest" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -978,7 +1111,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Invulnerable Save</characteristic>
       </characteristics>
     </profile>
-    <profile id="68d0-d515-eea5-3728" name="Skitarii Vanguard" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="68d0-d515-eea5-3728" name="Skitarii Vanguard" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -992,7 +1125,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="52ff-1a6b-d534-eaa8" name="Skitarii Ranger" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="52ff-1a6b-d534-eaa8" name="Skitarii Ranger" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1006,7 +1139,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Sniper</characteristic>
       </characteristics>
     </profile>
-    <profile id="9c51-3cdb-d005-399f" name="Skitarii Ruststalker" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="9c51-3cdb-d005-399f" name="Skitarii Ruststalker" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1020,7 +1153,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators</characteristic>
       </characteristics>
     </profile>
-    <profile id="3178-972f-1263-5725" name="Skitarii Sicarian" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="3178-972f-1263-5725" name="Skitarii Sicarian" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1034,7 +1167,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
-    <profile id="eca8-ed8b-05eb-335d" name="Kataphron Breacher" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="eca8-ed8b-05eb-335d" name="Kataphron Breacher" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1048,7 +1181,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="d087-8a1d-b30e-4ed6" name="Kataphron Destroyer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d087-8a1d-b30e-4ed6" name="Kataphron Destroyer" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -1062,7 +1195,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
-    <profile id="34c9-4306-a6d3-92b5" name="Ironstrider Ballistarii" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="34c9-4306-a6d3-92b5" name="Ironstrider Ballistarii" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
@@ -1076,7 +1209,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="66e0-b8e6-b77a-f9a4" name="Sydonian Dragoons" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="66e0-b8e6-b77a-f9a4" name="Sydonian Dragoons" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
@@ -1090,9 +1223,9 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="d4a5-1bd6-2933-5ff9" name="Kastelan Automata" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="d4a5-1bd6-2933-5ff9" name="Kastelan Automata" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">3+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
@@ -1104,9 +1237,9 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Invulnerable Save, Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="cf08-5b39-9262-ee36" name="Onager Laser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="cf08-5b39-9262-ee36" name="Onager Laser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
@@ -1118,9 +1251,9 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="f168-8bbf-9704-22b6" name="Onager Phosphorus" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="f168-8bbf-9704-22b6" name="Onager Phosphorus" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
@@ -1132,9 +1265,9 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="e2ec-8f7e-78dd-9cd5" name="Onager Icarius" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="e2ec-8f7e-78dd-9cd5" name="Onager Icarius" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
@@ -1146,7 +1279,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="4b2e-128f-60a1-0869" name="Primaris Lightning" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="">
+    <profile id="4b2e-128f-60a1-0869" name="Primaris Lightning" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter</characteristic>
@@ -1160,7 +1293,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jink</characteristic>
       </characteristics>
     </profile>
-    <profile id="9bf7-9631-a227-0e47" name="Ordinatus Minoris Sagittar" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="9bf7-9631-a227-0e47" name="Ordinatus Minoris Sagittar" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1176,7 +1309,7 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
     </profile>
-    <profile id="387b-996a-1286-ebf5" name="Ordinatus Minoris Ulator" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="">
+    <profile id="387b-996a-1286-ebf5" name="Ordinatus Minoris Ulator" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -1190,6 +1323,34 @@ Termite: 2 Skitarii, Electro-priests</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">2 Sh</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">2</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="3417-c388-9293-d573" name="Skorpius Dunerider" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Twin Cognis Heavy Stubber&lt;BR&gt;&lt;BR&gt;2x Cognis Heavy Stubber</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"></characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport, Walker</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f8eb-0f3a-a67d-211c" name="Skorpius Disintegrator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Disruptor Missile Launcher&lt;BR&gt;&lt;BR&gt;Ferrumite Cannon&lt;BR&gt;&lt;BR&gt;2x Cognis Heavy Stubber</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT6+&lt;BR&gt;&lt;BR&gt;AP4+/AT3+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"></characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Walker</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
