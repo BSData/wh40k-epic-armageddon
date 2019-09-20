@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="27" battleScribeVersion="2.02" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="28" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
   </costTypes>
@@ -1572,7 +1572,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="b367-f0f3-9ce9-2595" name="Orbital Defence Battery" hidden="false" collective="false" type="model">
+    <selectionEntry id="b367-f0f3-9ce9-2595" name="Orbital Defence Battery" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="force" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c45c-24d3-ccde-3b22" type="max"/>
       </constraints>
@@ -1590,7 +1590,7 @@
         <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0062-423c-bf57-1b0e" name="Fortified Positions" hidden="false" collective="false" type="unit">
+    <selectionEntry id="0062-423c-bf57-1b0e" name="Fortified Positions" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="611b-3495-4892-4795" hidden="false" targetId="3532-8f74-eeaf-be73" type="rule"/>
       </infoLinks>
@@ -1598,7 +1598,7 @@
         <categoryLink id="0062-423c-bf57-1b0e-767a-6731-1c8e-886f" hidden="false" targetId="767a-6731-1c8e-886f" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="4a61-3642-36a6-0ab7" name="Trenches, Earthworks, Barricades" page="0" hidden="false" collective="false" type="model">
+        <selectionEntry id="4a61-3642-36a6-0ab7" name="Trenches, Earthworks, Barricades" page="0" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3725-be5d-e1df-29f6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9df1-12e1-2561-e8c1" type="max"/>
@@ -1614,12 +1614,12 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9f6a-2fe5-a8dd-015b" name="Structures" hidden="false" collective="false">
+        <selectionEntryGroup id="9f6a-2fe5-a8dd-015b" name="Structures" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1200-903d-b147-839b" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="6f01-8798-5d72-5d15" name="Gun Emplacement" page="0" hidden="false" collective="false" type="model">
+            <selectionEntry id="6f01-8798-5d72-5d15" name="Gun Emplacement" page="0" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="82c0-a2ce-3356-ed4d" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
               </infoLinks>
@@ -1627,7 +1627,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2fac-22e4-83d1-b6a4" name="Bunker" page="0" hidden="false" collective="false" type="model">
+            <selectionEntry id="2fac-22e4-83d1-b6a4" name="Bunker" page="0" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="6b8f-0652-e169-6f28" hidden="false" targetId="e767-341a-c5e5-b497" type="profile"/>
               </infoLinks>
@@ -1637,12 +1637,12 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="4499-ca9c-54dc-c5b2" name="Defences" hidden="false" collective="false">
+        <selectionEntryGroup id="4499-ca9c-54dc-c5b2" name="Defences" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4cf7-a1da-a802-e400" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="922a-61dd-010f-8d57" name="Minefield" hidden="false" collective="false" type="model">
+            <selectionEntry id="922a-61dd-010f-8d57" name="Minefield" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="660e-fe84-b44a-972b" type="max"/>
               </constraints>
@@ -1653,7 +1653,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7fa0-353b-fc2e-8c3b" name="Tank Traps, Razor Wire" hidden="false" collective="false" type="model">
+            <selectionEntry id="7fa0-353b-fc2e-8c3b" name="Tank Traps, Razor Wire" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5b56-9c52-e0ef-b270" type="max"/>
               </constraints>
@@ -1667,12 +1667,12 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="0d97-05a0-2154-d115" name="Command" hidden="false" collective="false">
+        <selectionEntryGroup id="0d97-05a0-2154-d115" name="Command" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dcde-47c8-9e09-0756" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="d387-46e4-cd9c-eb26" name="Large Command Bunker" hidden="false" collective="false" type="model">
+            <selectionEntry id="d387-46e4-cd9c-eb26" name="Large Command Bunker" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="8873-e271-f1dd-1200" hidden="false" targetId="aa6c-ef06-f6f7-5b9e" type="profile"/>
                 <infoLink id="2a68-a343-c47b-912a" hidden="false" targetId="6241-7a63-2e4d-7c47" type="rule"/>
@@ -1682,7 +1682,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3b96-0769-074e-4239" name="Small Command Bunker" hidden="false" collective="false" type="model">
+            <selectionEntry id="3b96-0769-074e-4239" name="Small Command Bunker" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="7499-c54f-1260-7b26" hidden="false" targetId="92a9-758b-2b8f-af26" type="profile"/>
                 <infoLink id="4a4e-5456-4ee2-4aec" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
@@ -1699,12 +1699,12 @@
         <cost name="pts" typeId="points" value="125.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1f5c-9bb7-3181-4e9c" name="Fortifications" hidden="false" collective="false" type="unit">
+    <selectionEntry id="1f5c-9bb7-3181-4e9c" name="Fortifications" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink id="1f5c-9bb7-3181-4e9c-1280-1024-f2ef-261b" hidden="false" targetId="1280-1024-f2ef-261b" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="572b-7a10-76e6-295b" name="Command Bunker" hidden="false" collective="false" type="model">
+        <selectionEntry id="572b-7a10-76e6-295b" name="Command Bunker" hidden="false" collective="false" import="true" type="model">
           <infoLinks>
             <infoLink id="625b-8ab6-9d67-b25f" hidden="false" targetId="e8b5-9aad-77fd-8ee7" type="profile"/>
             <infoLink id="4214-57a7-dfe2-401a" hidden="false" targetId="3d6d-c225-f7f0-0f4e" type="rule"/>
@@ -1714,12 +1714,12 @@
             <cost name="pts" typeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2ba5-4847-8d5c-68ec" name="Minefields" hidden="false" collective="false" type="unit">
+        <selectionEntry id="2ba5-4847-8d5c-68ec" name="Minefields" hidden="false" collective="false" import="true" type="unit">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b8-7dff-a7bb-754e" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="ea2d-26fe-a08d-27c9" name="Minefield" hidden="false" collective="false" type="model">
+            <selectionEntry id="ea2d-26fe-a08d-27c9" name="Minefield" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd67-8fd5-5220-55c9" type="min"/>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dd1a-a6ee-904d-b2f2" type="max"/>
@@ -1736,12 +1736,12 @@
             <cost name="pts" typeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ecba-094a-0168-55db" name="Razor Wire" hidden="false" collective="false" type="unit">
+        <selectionEntry id="ecba-094a-0168-55db" name="Razor Wire" hidden="false" collective="false" import="true" type="unit">
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df87-58ce-d72b-b6fb" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="dc61-2fcc-f269-3389" name="Razor Wire" hidden="false" collective="false" type="model">
+            <selectionEntry id="dc61-2fcc-f269-3389" name="Razor Wire" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9503-2333-9431-ad5d" type="min"/>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1fc1-9107-6ea2-dbba" type="max"/>
@@ -1758,12 +1758,12 @@
             <cost name="pts" typeId="points" value="25.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6bad-bb70-2539-13aa" name="Tank Traps" hidden="false" collective="false" type="unit">
+        <selectionEntry id="6bad-bb70-2539-13aa" name="Tank Traps" hidden="false" collective="false" import="true" type="unit">
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="81df-f7ee-a0c7-7079" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="1249-b6ea-cfaa-73c3" name="Tank Trap" hidden="false" collective="false" type="model">
+            <selectionEntry id="1249-b6ea-cfaa-73c3" name="Tank Trap" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bafd-2a49-e3d5-bef9" type="min"/>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f916-842a-619b-8f2d" type="max"/>
@@ -1782,12 +1782,12 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a306-f6a3-ab35-7bcb" name="Pillboxes" hidden="false" collective="false">
+        <selectionEntryGroup id="a306-f6a3-ab35-7bcb" name="Pillboxes" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6838-1734-658b-7836" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="7bfd-f047-6abf-1739" name="Pillbox w/ Battlecannon" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="7bfd-f047-6abf-1739" name="Pillbox w/ Battlecannon" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c52f-96c8-e451-53ec" type="max"/>
               </constraints>
@@ -1799,7 +1799,7 @@
                 <cost name="pts" typeId="points" value="20.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6490-aafd-ac2f-65f8" name="Pillbox w/ Twin Lascannon" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="6490-aafd-ac2f-65f8" name="Pillbox w/ Twin Lascannon" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b4bf-8748-6a91-243a" type="max"/>
               </constraints>
@@ -1811,7 +1811,7 @@
                 <cost name="pts" typeId="points" value="15.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0ef3-d0f0-9d18-4d99" name="Pillbox w/ Twin Heavy Bolter" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0ef3-d0f0-9d18-4d99" name="Pillbox w/ Twin Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="70f4-542f-2a59-f88a" type="max"/>
               </constraints>
@@ -1825,9 +1825,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="68c1-0ff4-05af-5190" name="Entrenchment" hidden="false" collective="false">
+        <selectionEntryGroup id="68c1-0ff4-05af-5190" name="Entrenchment" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="944d-496b-5aa1-0394" name="Per Infantry Stand" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="944d-496b-5aa1-0394" name="Per Infantry Stand" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="ec98-f1c6-b5bb-0e8e" hidden="false" targetId="fc5b-8784-26ef-527b" type="rule"/>
               </infoLinks>
@@ -1835,7 +1835,7 @@
                 <cost name="pts" typeId="points" value="2.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="98b8-de89-b66a-fb5c" name="Per War Engine" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="98b8-de89-b66a-fb5c" name="Per War Engine" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="31e4-47a9-be70-2adb" hidden="false" targetId="fc5b-8784-26ef-527b" type="rule"/>
               </infoLinks>
@@ -1843,7 +1843,7 @@
                 <cost name="pts" typeId="points" value="5.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d551-ae6a-d915-96e3" name="Per Vehicle" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="d551-ae6a-d915-96e3" name="Per Vehicle" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="3093-bdc0-1d54-6d8e" hidden="false" targetId="fc5b-8784-26ef-527b" type="rule"/>
               </infoLinks>
@@ -1866,7 +1866,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     </rule>
   </rules>
   <sharedSelectionEntries>
-    <selectionEntry id="3715-341b-881c-9c4c" name="Español" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="3715-341b-881c-9c4c" name="Español" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="17e4-f07f-f000-355d" name="Basic Rules in Spanish" hidden="false" targetId="77cb-df24-ab9e-896e" type="rule"/>
       </infoLinks>
@@ -1874,7 +1874,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5c97-ef8b-a229-1083" name="Italiano" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5c97-ef8b-a229-1083" name="Italiano" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="1745-cb19-b766-c953" name="Basic Rules in Italian" hidden="false" targetId="8767-fd83-8ec5-7f33" type="rule"/>
       </infoLinks>
@@ -1882,7 +1882,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="798a-d9b8-47b6-c74c" name="Français" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="798a-d9b8-47b6-c74c" name="Français" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="e3c8-c8eb-a311-830f" name="Rules in French" hidden="false" targetId="b1e4-0907-a7ad-41d7" type="rule"/>
       </infoLinks>
@@ -1890,7 +1890,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4e8a-a5fe-38c0-c936" name="English" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4e8a-a5fe-38c0-c936" name="English" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="114d-a6f0-bd11-d172" name="Rules in English" hidden="false" targetId="d82d-1c62-9456-cb42" type="rule"/>
       </infoLinks>
@@ -1898,7 +1898,7 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8220-3d37-43f7-71e8" name="Deutsch" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="8220-3d37-43f7-71e8" name="Deutsch" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="a56f-db07-1811-c1bf" name="Basic Rules in German" hidden="false" targetId="0e26-4f36-9fd3-9d96" type="rule"/>
       </infoLinks>
@@ -1908,18 +1908,18 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="277e-7539-0690-7a61" name="Lang (beta)" hidden="false" collective="false" defaultSelectionEntryId="82c2-411d-bdc6-f080">
+    <selectionEntryGroup id="277e-7539-0690-7a61" name="Lang (beta)" hidden="false" collective="false" import="true" defaultSelectionEntryId="82c2-411d-bdc6-f080">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bec0-df92-973c-5a3f" type="max"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a317-f42d-a2bb-3757" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f670-d038-17ac-b12f" type="min"/>
       </constraints>
       <entryLinks>
-        <entryLink id="2272-b56b-183c-e7df" name="Italiano" hidden="false" collective="false" targetId="5c97-ef8b-a229-1083" type="selectionEntry"/>
-        <entryLink id="3dbe-d1c2-ce33-ff0d" name="Español" hidden="false" collective="false" targetId="3715-341b-881c-9c4c" type="selectionEntry"/>
-        <entryLink id="2c5d-14ef-e36e-b3e4" name="Français" hidden="false" collective="false" targetId="798a-d9b8-47b6-c74c" type="selectionEntry"/>
-        <entryLink id="82c2-411d-bdc6-f080" name="English" hidden="false" collective="false" targetId="4e8a-a5fe-38c0-c936" type="selectionEntry"/>
-        <entryLink id="c940-5e54-eb3c-c718" name="Deutsch" hidden="false" collective="false" targetId="8220-3d37-43f7-71e8" type="selectionEntry"/>
+        <entryLink id="2272-b56b-183c-e7df" name="Italiano" hidden="false" collective="false" import="true" targetId="5c97-ef8b-a229-1083" type="selectionEntry"/>
+        <entryLink id="3dbe-d1c2-ce33-ff0d" name="Español" hidden="false" collective="false" import="true" targetId="3715-341b-881c-9c4c" type="selectionEntry"/>
+        <entryLink id="2c5d-14ef-e36e-b3e4" name="Français" hidden="false" collective="false" import="true" targetId="798a-d9b8-47b6-c74c" type="selectionEntry"/>
+        <entryLink id="82c2-411d-bdc6-f080" name="English" hidden="false" collective="false" import="true" targetId="4e8a-a5fe-38c0-c936" type="selectionEntry"/>
+        <entryLink id="c940-5e54-eb3c-c718" name="Deutsch" hidden="false" collective="false" import="true" targetId="8220-3d37-43f7-71e8" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -3306,7 +3306,7 @@ Tunnellers, and any units being transported in them, may take an action on the t
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Boucliers Energétique: Le nombre de boucliers de chaque engin de guerre est noté sur sa fiche d&apos;unité.  •  Chaque bouclier stoppe automatiquement un point de dommages avant de se désactiver. Ne faites pas de sauvegarde contre les attaques stoppées par des boucliers, n&apos;ajoutez pas non plus de pion d&apos;impact pour chaque bouclier désactivé.  •  Une fois que tous les boucliers sont dés activés, l&apos;engin de guerre peut être endommagé normalement. Faites les jets de sauvegarde habituels contre les touches subies. Les touches de corps à corps lors d&apos;un assaut ignorent les boucliers, mais pas les unités utilisant leur valeur de fusillade.  •  Les boucliers désactivés peuvent être réparés. Un engin de guerre peu réparer un bouclier désactivé à la ﬁn de chaque tour. De plus, si un engin de guerre se regroupe il peut utiliser le résultat de son dé pour retirer des pions d&apos;impact ou pour réparer des boucliers (par exemple, si le résultat est 2, vous pouvez retirer 2 pions d&apos;impact ou réparer 2 boucliers, ou retirer 1 pion d&apos;impact et réparer 1 bouclier).">
+        <modifier type="set" field="description" value="Boucliers Energétique: Le nombre de boucliers de chaque engin de guerre est noté sur sa fiche d&apos;unité.  •  Chaque bouclier stoppe automatiquement un point de dommage avant de se désactiver. Ne faites pas de sauvegarde contre les attaques stoppées par des boucliers, n&apos;ajoutez pas non plus de pion d&apos;impact pour chaque bouclier désactivé.  •  Une fois que tous les boucliers sont dés activés, l&apos;engin de guerre peut être endommagé normalement. Faites les jets de sauvegarde habituels contre les touches subies. Les touches de corps à corps lors d&apos;un assaut ignorent les boucliers, mais pas les touches des unités utilisant leur valeur de fusillade.  •  Les boucliers désactivés peuvent être réparés. Un engin de guerre peut réparer un bouclier désactivé à la ﬁn de chaque tour. De plus, si un engin de guerre se regroupe il peut utiliser le résultat de son dé pour retirer des pions d&apos;impact et/ou pour réparer des boucliers (par exemple, si le résultat est 2, vous pouvez retirer 2 pions d&apos;impact ou réparer 2 boucliers, ou retirer 1 pion d&apos;impact et réparer 1 bouclier).">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -3556,7 +3556,7 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Module d&apos;atterrissage: Pour déployer la formation utilisant des Modules d’atterrissage, Placez un marqueur de Module d’atterrissage en utilisant les règles d’Assaut Planétaire. Le Module d’atterrissage est un marqueur comptant comme une unité pour déterminer l&apos;emplacement d’arrivée de l’Assaut Planétaire. Une fois le marqueur de Module d’atterrissage placé, Résolvez son attaque de tir de Deathwind sur toutes les unités ennemies à moins de 15 cm du centre du Module d’atterrissage. Chaque formation ennemie attaquée reçoit un Pion Impact selon les règles normales de tir.  •  Ensuite, débarquez les troupes transportées dans le Module d’atterrissage (cela peut déclencher un tir d’État d’Alerte normalement) complètement à moins de 15 cm du centre de celui-ci, en cohérence et en dehors de toute zone de contrôle ennemie.  •  Le Module d’atterrissage n&apos;étant pas une unité mais un marqueur, il ne possède pas de zone de contrôle et il ne compte pas pour la cohérence de la formation. De plus, il ne peut pas être utilisé pour revendiquer un feu croisé ainsi que pour tenir ou contester des objectifs.  •  Si plusieurs formations utilisent des Modules d’atterrissage, placez tous les marqueurs Module d’atterrissage aux coordonnées prédéterminées en utilisant les règles d’Assaut Planétaire (y compris la résolution de dispersion). Une fois que tous les marqueurs placés, résolvez toutes les attaques de Deathwind simultanément contre les formations ennemies à portée des marqueurs Module d’atterrissage, puis débarquez toutes les formations transportées, en suivant les règles ci dessus.">
+        <modifier type="set" field="description" value="Module d&apos;atterrissage: Pour déployer la formation utilisant des Modules d’atterrissage, Placez un marqueur de Module d’atterrissage en utilisant les règles d’Assaut Planétaire. Un Croiseur d’Attaque ou d’une Barge de Bataille sera nécessaire pour déployer les Modules d’atterrissage.  •  Le Module d’atterrissage est un marqueur comptant comme la première unité de la formation au moment de déterminer son emplacement d’arrivée en Assaut Planétaire. Une fois le marqueur de Module d’atterrissage placé, résolvez son attaque de tir de Deathwind sur toutes les unités ennemies à moins de 15 cm du centre du Module d’atterrissage. Chaque formation ennemie attaquée reçoit un Pion Impact selon les règles normales de tir.  •  Ensuite, débarquez les troupes transportées dans le Module d’atterrissage (cela peut déclencher un tir d’État d’Alerte normalement) complètement à moins de 15 cm du centre de celui-ci, en cohérence et en dehors de toute zone de contrôle ennemie.  •  Le Module d’atterrissage n&apos;étant pas une unité mais un marqueur, il ne possède pas de zone de contrôle et il ne compte pas pour la cohérence de la formation. De plus, il ne peut pas être utilisé pour revendiquer un feu croisé ainsi que pour tenir ou contester des objectifs.  •  Si plusieurs formations utilisent des Modules d’atterrissage, placez tous les marqueurs Module d’atterrissage aux coordonnées prédéterminées en utilisant les règles d’Assaut Planétaire (y compris la résolution de dispersion). Une fois que tous les marqueurs placés, résolvez toutes les attaques de Deathwind simultanément contre les formations ennemies à portée des marqueurs Module d’atterrissage, puis débarquez toutes les formations transportées, en suivant les règles ci dessus.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -4441,7 +4441,7 @@ A Knight may not use its shield in two circumstances:
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Transports: Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhinos pour la transporter les formations comprennent la mention &quot; plus transports &quot; dans leur composition.   •  Le nombre de Rhinos sera toujours égal au minimum nécessaire pour transporter la formation vous ne pouvez pas en prendre davantage.   •  Toutefois, prendre de Rhinos pour la formation n’est pas obligatoire si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhinos pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à la moitié de sa capacité de transport en cas de nombre impair de Razorbacks).   •  En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des Modules d’atterrissage.  •  Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’Assaut Planétaire. Un Croiseur d’Attaque ou d’une Barge de Bataille sera nécessaire pour déployer les Modules d’atterrissage.">
+        <modifier type="set" field="description" value="Transports: Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhinos pour la transporter les formations comprennent la mention &quot; plus transports &quot; dans leur composition.   •  Le nombre de Rhinos sera toujours égal au minimum nécessaire pour transporter la formation vous ne pouvez pas en prendre davantage.   •  Toutefois, prendre de Rhinos pour la formation n’est pas obligatoire si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhinos pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à la moitié de sa capacité de transport en cas de nombre impair de Razorbacks).   •  En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des Modules d’atterrissage.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -4839,7 +4839,7 @@ netea-tournament-pack-2017-03-21</description>
     </rule>
     <rule id="37bb-efe7-7c20-c482" name="Tunnellers" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Tunneliers: L&apos;armée utilise des Tunneliers pour mener sans danger par voie souterraine les troupes à des lieux clés du champ de bataille :  - Les tunneliers sont déployés sur leur bord de table avant la bataille, au même moment que les vaisseaux spatiaux, ils n’interviennent pas directement dans le jeu tant qu’ils n’émergent pas.  - Noter secrètement au début de quel tour ils feront surface ainsi que les coordonnées (à partir de la pointe de la ou d’une des foreuses) où vous voulez qu’ils émergent, de la même façon que vous notez celles de vos zones de largage.  - Si les tunneliers apparaissent dans votre moitié de table, ils ne peuvent le faire qu’à partir du second tour et s’ils comptent émerger dans la moitié de table ennemie, ils ne peuvent le faire qu’à partir du troisième tour.  - Les tunneliers émergeant sont placés en début de tour, avant le jet de stratégie. Une fois les tunneliers placés vous pouvez faire débarquer vos troupes de suite.  - Il n’y a pas de déviation mais si toutefois, ils émergent sous les pieds de n&apos;importe quel type d&apos;unité (amie ou ennemie) ou dans une zone de contrôle ennemie, l&apos;unité est placée par l&apos;adversaire dans la zone dégagée la plus proche pouvant la recevoir.  - S’il y a plus d’une unité de Tunnelier qui émerge, après le placement de la première, les autres sont toutes placées à 15cm maximum de celle-ci tout en restant en formation.">
+        <modifier type="set" field="description" value="Tunneliers: L&apos;armée utilise des Tunneliers pour mener sans danger par voie souterraine les troupes à des lieux clés du champ de bataille :  • Les Tunneliers sont déployés sur leur bord de table avant la bataille, au même moment que les vaisseaux spatiaux; ils n’interviennent pas directement dans le jeu tant qu’ils n’émergent pas.  • Notez secrètement au début de quel tour ils feront surface ainsi que les coordonnées (à partir de la pointe d’une des foreuses) où vous voulez qu’ils émergent, de la même façon que vous notez celles de vos zones de largage.  • Si les Tunneliers apparaissent dans votre moitié de table, ils ne peuvent le faire qu’à partir du second tour et s’ils comptent émerger dans la moitié de table ennemie, ils ne peuvent le faire qu’à partir du troisième tour.  • Les Tunneliers émergeants sont placés en début de tour, avant le jet de stratégie. Une fois les tunneliers placés vous pouvez faire débarquer vos troupes de suite.  • Il n’y a pas de déviation mais si toutefois, ils émergent sous les pieds de n&apos;importe quel type d&apos;unité (amie ou ennemie) ou dans une zone de contrôle ennemie, l&apos;unité est placée par l&apos;adversaire dans la zone dégagée la plus proche pouvant la recevoir.  • S’il y a plus d’une unité de Tunneliers qui émerge, après le placement de la première, les autres sont toutes placées à 15cm maximum de celle-ci tout en restant en formation.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
