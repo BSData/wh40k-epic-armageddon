@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -85,12 +85,17 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="points" value="300.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="7a5cde4c-addd-9a47-958c-b5cd13f6fce7-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="bae5-27dd-f14f-d808" name="Téléportation" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bae5-27dd-f14f-d808" name="Teleportation" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -147,7 +152,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="a438-ca59-800b-6da0" hidden="false" targetId="3a17-a63d-44c8-c43c" type="rule"/>
+            <infoLink id="a438-ca59-800b-6da0" name="Teleport Homer (ferc)" hidden="false" targetId="24ad-59ee-9d0f-2cf4" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="25.0"/>
@@ -250,15 +255,7 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="f843-c0f1-3e24-136d" hidden="false" targetId="416f-bedf-27ed-4bde" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="f843-c0f1-3e24-136d" hidden="false" targetId="416f-bedf-27ed-4bde" type="profile"/>
             <infoLink id="7269-95e6-c4d4-128b" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
@@ -268,15 +265,7 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="1c78-dc0b-6f01-ad69" hidden="false" targetId="1a3f-aca9-e1b6-cb99" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="1c78-dc0b-6f01-ad69" hidden="false" targetId="1a3f-aca9-e1b6-cb99" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -511,8 +500,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -553,10 +541,8 @@
         <infoLink id="1708-fb56-ff8b-5f0b" hidden="false" targetId="e1d5-7447-841f-991b" type="profile"/>
         <infoLink id="27b5-fd19-e06d-42ab" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule"/>
         <infoLink id="17c2-79ea-8a66-1b96" hidden="false" targetId="4c1d-6518-b50f-6b49" type="rule"/>
-        <infoLink id="47fe-bbf6-a008-603c" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
         <infoLink id="5674-866f-18e6-050f" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="7946-fce1-547e-bda1" hidden="false" targetId="6c01-bdba-51ff-9f6a" type="rule"/>
-        <infoLink id="0b1d-a9a7-a807-9b65" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b796-fb10-ae0b-82a4-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
@@ -601,7 +587,7 @@
             <infoLink id="fbe8-606a-e339-53ab" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
             <infoLink id="bf76-6f9f-cf08-6546" hidden="false" targetId="7c75-037b-b71f-a9da" type="profile"/>
             <infoLink id="00a8-176d-5691-e58d" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-            <infoLink id="2100-806f-7f5b-9b6f" name="Teleport Homer" hidden="false" targetId="3a17-a63d-44c8-c43c" type="rule"/>
+            <infoLink id="2100-806f-7f5b-9b6f" name="Teleport Homer (netea)" hidden="false" targetId="1867-1712-6eec-ed3e" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -1073,7 +1059,7 @@
                 <infoLink id="50f6-5a8f-b445-1507" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
                 <infoLink id="8212-8f05-8aa1-a753" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
                 <infoLink id="edfa-d924-d9d1-0424" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
-                <infoLink id="c101-e774-72ba-5bc0" name="Teleport Homer" hidden="false" targetId="3a17-a63d-44c8-c43c" type="rule"/>
+                <infoLink id="c101-e774-72ba-5bc0" name="Teleport Homer (netea)" hidden="false" targetId="1867-1712-6eec-ed3e" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="50.0"/>
@@ -1117,24 +1103,11 @@
         <infoLink id="0e99-4d6b-7b25-ed44" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="ce1a-7093-5963-61df" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
         <infoLink id="1557-9e1d-a83f-20d1" hidden="false" targetId="0138-c5c3-16f5-e07c" type="rule"/>
+        <infoLink id="3e03-a64f-42a9-cc8d" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8d0e275c-b822-7118-599b-eb1438150ffa-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="3da8-5cdc-8848-4db4" name="Void Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2ee7-9d9c-704b-9b8a" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="650.0"/>
       </costs>
@@ -1168,36 +1141,11 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="082d-fca5-89cb-c3de" name="4x Sniper Squads" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d907-f7bf-a610-339f" type="max"/>
-              </constraints>
               <infoLinks>
-                <infoLink id="5dbc-81ee-64f3-91a2" hidden="false" targetId="512c-7993-9558-3dfc" type="profile">
-                  <modifiers>
-                    <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Sniper">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
                 <infoLink id="b467-0663-e401-2b91" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
                 <infoLink id="17c5-b23a-8ae0-572f" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
                 <infoLink id="faf6-315a-9a6d-6b24" hidden="false" targetId="61e7-0cbb-6cc9-189d" type="rule"/>
-                <infoLink id="928c-5af2-c317-3451" hidden="false" targetId="d1e0-a146-5371-f743" type="profile">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
+                <infoLink id="928c-5af2-c317-3451" hidden="false" targetId="d1e0-a146-5371-f743" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="50.0"/>
@@ -1258,7 +1206,7 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="fff4-6496-1f28-59d7" hidden="false" targetId="b5f9-e862-9c2d-f776" type="profile"/>
+            <infoLink id="fff4-6496-1f28-59d7" name="Scout Snipers" hidden="false" targetId="d1e0-a146-5371-f743" type="profile"/>
             <infoLink id="baf1-3357-fe93-8721" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
             <infoLink id="c3e8-71fb-1adb-fc6f" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
             <infoLink id="7152-f703-6bf2-338b" name="Sniper" hidden="false" targetId="61e7-0cbb-6cc9-189d" type="rule"/>
@@ -1303,19 +1251,9 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="maxInForce" value="1">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="1af0-e4a0-5feb-0c17-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
@@ -1591,13 +1529,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8776-6388-8dff-e040" name="Warhound Scout Titan" page="0" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="275.0">
-              <conditions>
-                <condition field="selections" scope="55f3fed3-f19f-ba21-0106-5410d480be57" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8776-6388-8dff-e040" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1609,28 +1540,15 @@
             <infoLink id="8ce0-8a41-cd56-a5f7" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
             <infoLink id="66bd-56f2-2d46-a428" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule"/>
             <infoLink id="a52a-f92d-617c-ca03" name="Critical Hit: Staggering Blow" hidden="false" targetId="5e52-43b9-62fd-745e" type="rule"/>
+            <infoLink id="2399-bcb1-6172-92d5" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="767d-fe71-aaeb-8196" name="Void Shields" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f5fc-7ce2-08f2-9bf8" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="250.0"/>
+            <cost name="pts" typeId="points" value="225.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ece065c8-b1c1-7fe2-5acb-be515ad4d127" name="Warlord Battle Titan" page="0" hidden="false" collective="false" import="true" type="model">
@@ -1652,24 +1570,11 @@
         <infoLink id="803c-ad01-720b-7566" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
         <infoLink id="cd1b-fa64-0eab-1217" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
         <infoLink id="f28b-5bef-697d-32f0" hidden="false" targetId="0138-c5c3-16f5-e07c" type="rule"/>
+        <infoLink id="ec37-b967-1e56-d1fa" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ece065c8-b1c1-7fe2-5acb-be515ad4d127-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="f6f4-d199-396a-0355" name="Void Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="0c87-1b1a-bcd0-5616" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="850.0"/>
       </costs>
@@ -1764,7 +1669,7 @@
         <entryLink id="ed4d-f688-608d-8525" name="" hidden="false" collective="false" import="true" targetId="8b61-354e-2448-0ea4" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250.0"/>
+        <cost name="pts" typeId="points" value="225.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1e9f-99c8-2649-76a2" name="Ravenwing Land Speeders" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -1799,7 +1704,7 @@
         <entryLink id="ab7f-81d8-a661-9f04" name="" hidden="false" collective="false" import="true" targetId="8b61-354e-2448-0ea4" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250.0"/>
+        <cost name="pts" typeId="points" value="225.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f784-17d0-5d35-92f7" name="Relic Deimos" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -2176,6 +2081,7 @@
     </infoLink>
     <infoLink id="74a6-924b-4297-7f10" hidden="false" targetId="a4a8-531b-887c-dfbe" type="rule"/>
     <infoLink id="3134-bc15-4d34-b175" name="Hunt for the Fallen (optional special victory condition)" hidden="false" targetId="d244-2edc-2042-f286" type="rule"/>
+    <infoLink id="b90d-da65-4187-c883" name="Strategy Rating &amp; Initiative (DA)" hidden="false" targetId="ba70-202a-5010-9717" type="rule"/>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="116b-cc79-dd96-6cf6" name="Battle Barge" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2359,7 +2265,7 @@
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="25.0"/>
+        <cost name="pts" typeId="points" value="15.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="edea-8b4e-a6c5-af5b" name="NetEA" hidden="false" collective="false" import="true" type="upgrade">
@@ -2383,15 +2289,7 @@
           </modifiers>
         </infoLink>
         <infoLink id="21dc-d899-972e-822f" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
-        <infoLink id="924a-fea2-009d-e429" hidden="false" targetId="3a17-a63d-44c8-c43c" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="924a-fea2-009d-e429" name="Teleport Homer (netea)" hidden="false" targetId="1867-1712-6eec-ed3e" type="rule"/>
         <infoLink id="5e5d-d278-39b7-657d" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -2559,7 +2457,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="648e-d8e1-78c3-466c" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="5358-bc06-10ee-1883" hidden="false" targetId="3a17-a63d-44c8-c43c" type="rule"/>
+        <infoLink id="5358-bc06-10ee-1883" name="Teleport Homer (ferc)" hidden="false" targetId="24ad-59ee-9d0f-2cf4" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="25.0"/>
@@ -2633,15 +2531,7 @@
         <infoLink id="d63f-d037-7142-c434" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
         <infoLink id="a424-872a-2360-a821" hidden="false" targetId="7c75-037b-b71f-a9da" type="profile"/>
         <infoLink id="96ce-1f2f-2cff-c9b3" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="0fa7-2b4d-c3ca-541b" name="Teleport Homer" hidden="false" targetId="3a17-a63d-44c8-c43c" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="0fa7-2b4d-c3ca-541b" name="Teleport Homer (netea)" hidden="false" targetId="1867-1712-6eec-ed3e" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -2670,13 +2560,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="85b0-90de-df38-4aae" name="Interrogator Chaplain" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="points" value="75">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3671-d7ef-3af7-6f2c" type="max"/>
       </constraints>
@@ -2976,7 +2859,9 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>Dark angels Test (1) #Version test du 26.06.2017</description>
+      <description>Compendium Astartes 1.00  - FERC - 2019 #Compendium Index Astartes - Septembre 2019 - V 1.0
+errata:
+Terminator squads have the Deathwing rule</description>
     </rule>
     <rule id="5e97-1849-1ef8-517f" name="Deathwing" hidden="false">
       <modifiers>
@@ -3009,7 +2894,7 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="La Recherche des Déchus (condition optionnelle de victoire spéciale): Ne peut être utilisé que si l&apos;armée des Dark Angels contient au moins un personnage d&apos;Interrogateur-Chapelain et / ou de Grand Maître dans une formation d&apos;attaque de Ravenwing. - Avant le déploiement: Le joueur Dark Angels décide d&apos;utiliser la condition de victoire de La Recherche des Déchus. Si elle est utilisée, l&apos;adversaire choisit un de ses formations qui a soit au moins une unité d&apos;infanterie ou une amélioration de personnage et désigne que la formation que celui contenant le Fallen. Le joueur Dark Angels doit détruire cette formation complètement pour gagner la condition de victoire de La Recherche des Déchus. Si la formation est hors de la table pendant le tour 3 et après, elle compte comme détruite. Cela remplace la condition de victoire Brisez Leur Moral.">
+        <modifier type="set" field="description" value="La Traque des Déchus (condition optionnelle de victoire spéciale): Ne peut être utilisé que si l&apos;armée des Dark Angels contient au moins un personnage d&apos;Interrogateur-Chapelain et / ou de Grand Maître dans une formation d&apos;attaque de Ravenwing.  • Avant le déploiement: Le joueur Dark Angels décide d&apos;utiliser la condition de victoire de La Traque des Déchus. Si elle est utilisée, l&apos;adversaire choisit un de ses formations qui a soit au moins une unité d&apos;infanterie ou une amélioration de personnage et désigne que la formation que celui contenant le Fallen. Le joueur Dark Angels doit détruire cette formation complètement pour gagner la condition de victoire de La Traque des Déchus. Si la formation est hors de la table pendant le tour 3 et après, elle compte comme détruite. Cela remplace la condition de victoire Brisez Leur Moral.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -3033,51 +2918,13 @@ Before deployment: The Dark Angels player decides whether to use the Hunt for th
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Dark Angel Space Marine armies have a strategy rating of 5. All Dark Angel formations have an initiative rating of 1+. Titan formations have an initiative rating of 2+.</description>
-    </rule>
-    <rule id="3a17-a63d-44c8-c43c" name="Teleport Homer" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="Balise de Téléportation: Une unité se téléportant dans les 15 cm d&apos;une unité de cette formation peut relancer son jet de téléportation. Seules les unités de la Deathwing possèdent cette compétence.">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="Teleporting models may re-roll Teleport Mishap 1s if their base is within 15cm of an unbroken unit with the Teleport Homer special rule.">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e8a-a5fe-38c0-c936" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="description" value="Balise de Téléportation: Les modèles qui tentent de se téléporter peuvent relancer le résultat d&apos;erreur de téléportation de 1 si leur base est à moins de 15 cm d&apos;une unité non démoralisée avec la règle spéciale Balise de Téléportation.">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>A unit teleporting within 15cm of a unit of this formation may re-roll its teleportation throw. Only units of Deathwing have this ability.</description>
     </rule>
     <rule id="4c1d-6518-b50f-6b49" name="Transport (DA)" hidden="false">
       <description>see codex</description>
@@ -3109,7 +2956,7 @@ Before deployment: The Dark Angels player decides whether to use the Hunt for th
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Téléportation Coordonnée: Les formations composées exclusivement de modèles avec téléportation peuvent être installées dans un vaisseau spatial si elles ont été achetées. À partir de là, ils peuvent soit se téléporter normalement, soit ils peuvent choisir d&apos;effectuer une téléportation coordonnée lors de l&apos;activation du vaisseau spatial.  - Une téléportation coordonnée fonctionne comme une téléportation ordinaire, sauf que tous les modèles de la formation doivent être placés de manière à bénéficier de la règle spéciale de la balise de téléportation. S&apos;ils ne peuvent pas bénéficier de la balise de téléportation, ils ne peuvent pas effectuer de téléportation coordonnée, mais doivent attendre et se téléporter normalement dans les derniers tours. Les téléportations coordonnées ont lieu après la résolution du barrage, de l&apos;assaut planétaire et du Deathwind. Toutes les téléportations coordonnées ont lieu simultanément et non de manière séquentielle.">
+        <modifier type="set" field="description" value="Téléportation Coordonnée: Les formations composées exclusivement de modèles avec téléportation peuvent être installées dans un vaisseau spatial si elles ont été achetées. À partir de là, ils peuvent soit se téléporter normalement, soit ils peuvent choisir d&apos;effectuer une téléportation coordonnée lors de l&apos;activation du vaisseau spatial.  • Une téléportation coordonnée fonctionne comme une téléportation ordinaire, sauf que tous les modèles de la formation doivent être placés de manière à bénéficier de la règle spéciale de la balise de téléportation. S&apos;ils ne peuvent pas bénéficier de la balise de téléportation, ils ne peuvent pas effectuer de téléportation coordonnée, mais doivent attendre et se téléporter normalement dans les derniers tours. Les téléportations coordonnées ont lieu après la résolution du barrage, de l&apos;assaut planétaire et du Deathwind. Toutes les téléportations coordonnées ont lieu simultanément et non de manière séquentielle.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -3145,7 +2992,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </rule>
     <rule id="b7e9-4415-c68b-908a" name="Deathwing" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Deathwing: Il faut deux pions d&apos;impact pour neutraliser une unité Deathwing ou détruire une unité démoralisée (ignorez les pions d&apos;impacts en plus). Divisez par trois le nombre de touches supplémentaires subies par une formation de la Deathwing perdant un assaut, en arrondissant à l’entier inférieur en faveur de la Deathwing. &lt;BR&gt; La règle spéciale Deathwing est appliquée en cas de litige avec la règle &quot;Et Ils Ne Connaitront Pas La Peur&quot;.">
+        <modifier type="set" field="description" value="Deathwing: La Deathwing perd une unité supplémentaire pour 3 touches lors de la résolution d&apos;un assaut, au lieu d&apos;une unité pour 2 touches comme les autres spaces marines.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -3156,7 +3003,67 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
           </conditions>
         </modifier>
       </modifiers>
-      <description>It takes 2 Blast Markers to suppress a Deathwing unit or destroy a broken unit (ignore additional Blast Markers). Divide the number of extra hits suffered by a Deathwing formation losing an assault by three, rounding down in favor of the Deathwing. The &quot;Deathwing&quot; rule takes precedence in case of any dispute with the rule &quot;They Shall Know No Fear&quot;.</description>
+      <description>The Deathwing lose an additional unit for 3 hits when resolving an assault, instead of a unit for 2 hits as with other Space Marines.</description>
+    </rule>
+    <rule id="1867-1712-6eec-ed3e" name="Teleport Homer" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Balise de Téléportation: Les modèles qui tentent de se téléporter peuvent relancer le résultat d&apos;erreur de téléportation de 1 si leur base est à moins de 15 cm d&apos;une unité non démoralisée avec la règle spéciale Balise de Téléportation.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Teleporting models may re-roll Teleport Mishap 1s if their base is within 15cm of an unbroken unit with the Teleport Homer special rule.</description>
+    </rule>
+    <rule id="24ad-59ee-9d0f-2cf4" name="Teleport Homer" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Balise de Téléportation: Les formations de la Ravenwing peuvent se voir ajouter l’amélioration de balise de téléportation. Une formation de la Deathwing se téléportant dans les 15 cm d&apos;une unité de cette formation peut relancer son jet de téléportation.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Ravenwing formations can be upgraded with a Teleport Homer. A formation of Deathwing teleporting within 15cm of a unit from such a formation may re-roll its teleportation throw.</description>
+    </rule>
+    <rule id="ba70-202a-5010-9717" name="Strategy Rating &amp; Initiative (DA)" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les Dark Angels ont une Valeur Stratégique de 5. Les formations Space Marines et Titaniques ont une initiative de 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5.  • Alle  Formationen haben die Initiativwert 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Todas las formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Strategia e Iniziativa: Le armate di Space Marine hanno un valore strategia pari a 5. Tutte le formazioni di Space Marine e legioni di Titani hanno valore di iniziativa di 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Dark Angels have a strategy rating of 5. All formations have an initiative rating of 1+.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -3174,7 +3081,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">n/a</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Power Weapon&lt;BR&gt;&lt;BR&gt;Smite&lt;BR&gt;and</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Force Weapon&lt;BR&gt;&lt;BR&gt;Smite&lt;BR&gt;and</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(30cm)&lt;BR&gt;and (15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;MW4+&lt;BR&gt;and Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
@@ -3182,6 +3089,23 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
       </characteristics>
     </profile>
     <profile id="ec78-410b-49f4-635f" name="Assault" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3246,7 +3170,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="00bd-edb8-a4e5-bfa2" name="Interrogator Chaplain" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Inspiring, Invulnerable Save, Leader">
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Fearless">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -3275,6 +3199,11 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3323,29 +3252,39 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="5a52-f854-d54a-83d0" name="Deathwing Terminator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Deathwing, Reinforced Armour, Thick Rear Armour">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;(contact)">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Teleport">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="1160-63e7-57ca-722d" value="2x Plasma Cannon&lt;BR&gt;&lt;BR&gt;Power Fists">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Storm Bolters">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value="&lt;BR&gt;&lt;BR&gt;-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3355,23 +3294,30 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Storm Bolters&lt;BR&gt;&lt;BR&gt;2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Deathwing, Reinforced Armour, Teleport, Thick Rear Armour</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Deathwing, Reinforced Armour, Thick Rear Armour</characteristic>
       </characteristics>
     </profile>
     <profile id="416f-bedf-27ed-4bde" name="Devastator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Weapons&lt;BR&gt;&lt;BR&gt;Bolters</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Weapons</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP5+/AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
@@ -3449,7 +3395,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     <profile id="7450-367d-a1bc-b850" name="Drop Pod" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">n/a</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
@@ -3461,6 +3407,13 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
       </characteristics>
     </profile>
     <profile id="5748-790f-81b9-6c64" name="Hunter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3476,15 +3429,10 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="4dd1-e47f-2832-2ba6" name="Land Raider" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Heavy Bolter">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <characteristics>
@@ -3493,7 +3441,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+&lt;BR&gt;&lt;BR&gt;AP4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
@@ -3516,19 +3464,24 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="e1d5-7447-841f-991b" name="Landing Craft" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
-        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="6+">
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Fearless">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Thick Rear Armour">
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Storm Bolter">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;(15cm)">
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3538,11 +3491,11 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;3x Twin Heavy Bolte&lt;BR&gt;&lt;BR&gt;Storm Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;3x Twin Heavy Bolter</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Reinforced Armour, Fearless, Transport</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Reinforced Armour, Transport</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">4</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Landing Craft</characteristic>
       </characteristics>
@@ -3601,11 +3554,6 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
@@ -3622,9 +3570,9 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="6da5-9d8e-4ab6-2314" name="Predator Destructor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
@@ -3643,7 +3591,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Autocannon&lt;BR&gt;&lt;BR&gt;2x Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
@@ -3667,7 +3615,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="ab3f-5390-e599-540a" name="Ravenwing Attack Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Mounted, Walker">
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Mounted, Walker">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -3677,7 +3625,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Teleport Homer">
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Teleport Homer">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
@@ -3698,7 +3646,22 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="47eb-5f71-832d-a13e" name="Ravenwing Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Invulnerable Save, Mounted, Walker">
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Walker">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -3821,6 +3784,11 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Typhoon Missile&lt;BR&gt;&lt;BR&gt;Heavy Bolter">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
@@ -3926,6 +3894,13 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
       </characteristics>
     </profile>
     <profile id="8dd8-05a1-34ea-9ef7" name="Reaver Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
+      <modifiers>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="4x AP5+/AT3+&lt;BR&gt;&lt;BR&gt;4BP">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -3942,6 +3917,23 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
       </characteristics>
     </profile>
     <profile id="2815-61f6-bad0-120e" name="Rhino" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3956,45 +3948,80 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
       </characteristics>
     </profile>
     <profile id="d1e0-a146-5371-f743" name="Scout Snipers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Shotguns">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Infiltrators, Scout">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Sniper">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Sniper Rifles">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Shotguns&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrator, Scout, Sniper</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout, Sniper</characteristic>
       </characteristics>
     </profile>
     <profile id="512c-7993-9558-3dfc" name="Scouts" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Shotguns">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Shotguns&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b5f9-e862-9c2d-f776" name="Sniper Scout" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Sniper Rifle</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Sniper</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrator, Scout</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
       </characteristics>
     </profile>
     <profile id="2825-2f58-2eb2-46bf" name="Strike Cruiser" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -4027,19 +4054,19 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
     </profile>
     <profile id="4bda-67e5-86bb-b58d" name="Tactical" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="Missile Launcher">
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+/AT6+">
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm">
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4049,9 +4076,9 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Bolters&lt;BR&gt;&lt;BR&gt;Missile Launcher</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Missile Launcher</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
@@ -4122,13 +4149,6 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
       </characteristics>
     </profile>
     <profile id="b309-f865-8c98-7194" name="Warhound Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
-      <modifiers>
-        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value=", Mid-power Shot">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -4182,6 +4202,13 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
       </characteristics>
     </profile>
     <profile id="7763-64e7-a16f-7128" name="Thunderhawk Transporter" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
+      <modifiers>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm&lt;BR&gt;&lt;BR&gt;30cm">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>

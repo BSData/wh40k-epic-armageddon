@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -88,7 +88,19 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bae5-27dd-f14f-d808" name="Téléportation" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bae5-27dd-f14f-d808" name="Teleportation" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="1c40-c5a3-0ca1-e4ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2351-0e48-1b2a-b67f" type="atLeast"/>
+                    <condition field="selections" scope="1c40-c5a3-0ca1-e4ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
@@ -102,8 +114,8 @@
       </selectionEntries>
       <entryLinks>
         <entryLink id="8e53473c-008e-7799-7ea4-f317f71c2bdd" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="1359-608e-b99d-15dc" hidden="false" collective="false" import="true" targetId="2351-0e48-1b2a-b67f" type="selectionEntryGroup"/>
-        <entryLink id="3d0d-af7d-42c5-813a" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry"/>
+        <entryLink id="1359-608e-b99d-15dc" name="Dreadnoughts" hidden="false" collective="false" import="true" targetId="2351-0e48-1b2a-b67f" type="selectionEntryGroup"/>
+        <entryLink id="3d0d-af7d-42c5-813a" name="Land Raider" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="275.0"/>
@@ -336,15 +348,6 @@
             <entryLink id="ab3d-1f16-018e-587c" hidden="false" collective="false" import="true" targetId="4e1f-46d7-c8f1-e11b" type="selectionEntry"/>
             <entryLink id="4189-5103-e304-92d5" hidden="false" collective="false" import="true" targetId="9137-5e3b-d46c-79a2" type="selectionEntry"/>
             <entryLink id="d151-02cd-98f4-dc27" name="Land Raider" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry"/>
-            <entryLink id="5011-97ed-0c9c-1d54" name="Land Raider Achilles" hidden="false" collective="false" import="true" targetId="6502-2a72-4bc6-fdf3" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="c62a-b865-693c-a4d4" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="2530-05f4-1ca0-39d6" name="APCs" hidden="false" collective="false" import="true">
@@ -738,10 +741,8 @@
         <infoLink id="1708-fb56-ff8b-5f0b" name="Landing Craft" hidden="false" targetId="e1d5-7447-841f-991b" type="profile"/>
         <infoLink id="27b5-fd19-e06d-42ab" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule"/>
         <infoLink id="17c2-79ea-8a66-1b96" hidden="false" targetId="20ec-1709-472c-9b11" type="rule"/>
-        <infoLink id="47fe-bbf6-a008-603c" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
         <infoLink id="5674-866f-18e6-050f" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="7946-fce1-547e-bda1" hidden="false" targetId="6c01-bdba-51ff-9f6a" type="rule"/>
-        <infoLink id="78d3-309a-244d-8ed0" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
         <infoLink id="dd9f-28bc-3d92-505f" hidden="false" targetId="c4df-7c14-20e7-c343" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -854,7 +855,7 @@
                 <infoLink id="1593-1d07-a85b-e248" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="250.0"/>
+                <cost name="pts" typeId="points" value="225.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -875,24 +876,11 @@
         <infoLink id="0e99-4d6b-7b25-ed44" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="ce1a-7093-5963-61df" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
         <infoLink id="1557-9e1d-a83f-20d1" hidden="false" targetId="0138-c5c3-16f5-e07c" type="rule"/>
+        <infoLink id="a89c-cb7e-ae6f-2360" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8d0e275c-b822-7118-599b-eb1438150ffa-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="3da8-5cdc-8848-4db4" name="Void Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2ee7-9d9c-704b-9b8a" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="650.0"/>
       </costs>
@@ -926,9 +914,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="e09f-f471-a281-92b6" name="1x Sniper Squad, 3x Scout Squads" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
               <infoLinks>
                 <infoLink id="15cf-4690-fbca-d592" hidden="false" targetId="512c-7993-9558-3dfc" type="profile"/>
                 <infoLink id="8990-8b3e-05ad-eed1" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
@@ -941,9 +926,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="93da-4050-a8cf-2dc9" name="4x Sniper Squads" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
               <infoLinks>
                 <infoLink id="9cc0-3cfb-cca6-a7c2" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
                 <infoLink id="3689-d569-14d2-1e37" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
@@ -955,9 +937,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="a96d-ef6c-5928-9ab8" name="2x Sniper Squads, 2x Scout Squads" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
               <infoLinks>
                 <infoLink id="cb0a-bed9-7ed5-ed6c" hidden="false" targetId="512c-7993-9558-3dfc" type="profile"/>
                 <infoLink id="e6df-8aac-f2dd-1f06" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
@@ -970,9 +949,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="94e4-1c8b-bafe-baed" name="3x Sniper Squads, 1x Scout Squad" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
               <infoLinks>
                 <infoLink id="7d81-e854-4a8f-f121" hidden="false" targetId="512c-7993-9558-3dfc" type="profile"/>
                 <infoLink id="9137-4bf3-9794-2f24" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
@@ -1049,19 +1025,8 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="3bb1-ff45-382b-2f0f" name="4x Sniper Squads" hidden="false" collective="false" import="true" type="unit">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
               <infoLinks>
-                <infoLink id="7dac-6234-7025-a5c0" hidden="false" targetId="512c-7993-9558-3dfc" type="profile">
-                  <modifiers>
-                    <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Sniper">
-                      <conditions>
-                        <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e368-c74c-34c9-180c" type="atLeast"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
+                <infoLink id="7dac-6234-7025-a5c0" name="Scout Snipers" hidden="false" targetId="d1e0-a146-5371-f743" type="profile"/>
                 <infoLink id="19ef-9f6f-0215-0e82" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
                 <infoLink id="7025-d071-1a96-8eb9" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
                 <infoLink id="0611-6501-91fe-eb04" hidden="false" targetId="61e7-0cbb-6cc9-189d" type="rule"/>
@@ -1084,7 +1049,7 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="b64f-a69f-c7fa-d52e" hidden="false" collective="false" import="true" targetId="bd4a-d64e-f47f-c866" type="selectionEntry"/>
+            <entryLink id="b64f-a69f-c7fa-d52e" name="Rhino" hidden="false" collective="false" import="true" targetId="bd4a-d64e-f47f-c866" type="selectionEntry"/>
             <entryLink id="3626-c253-ee5a-9081" hidden="false" collective="false" import="true" targetId="4e1f-46d7-c8f1-e11b" type="selectionEntry"/>
             <entryLink id="9a6e-ceda-3623-440f" hidden="false" collective="false" import="true" targetId="9137-5e3b-d46c-79a2" type="selectionEntry"/>
           </entryLinks>
@@ -1092,12 +1057,26 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ed2d-9074-716a-aca2" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="3deb-e778-56e7-4ee9" hidden="false" collective="false" import="true" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+        <entryLink id="3deb-e778-56e7-4ee9" name="Drop Pods" hidden="false" collective="false" import="true" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="maxSelections" value="0.0">
               <conditions>
                 <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="908a-c8c2-7461-43f1" type="atLeast"/>
               </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="d5ae-60d6-60a9-5428" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d5c-e6bc-54ab-1352" type="equalTo"/>
+                    <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -1247,7 +1226,7 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ae0-11af-57b0-9ad3" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ae0-11af-57b0-9ad3" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="c21a10fe-a11a-af95-9c8c-3b18ad266cb8-7bf8-d208-dd76-9088" hidden="false" targetId="7bf8-d208-dd76-9088" primary="true"/>
@@ -1418,15 +1397,6 @@
             <entryLink id="da87-958e-66f9-d384" name="Land Raider" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="maxSelections" value="2.0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="a549-3af3-fbf4-9e23" name="Land Raider Achilles" hidden="false" collective="false" import="true" targetId="6502-2a72-4bc6-fdf3" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="f379-60f6-a4b8-76b3" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="equalTo"/>
-                  </conditions>
-                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -1869,13 +1839,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8776-6388-8dff-e040" name="Warhound Scout Titan" page="0" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="275.0">
-              <conditions>
-                <condition field="selections" scope="55f3fed3-f19f-ba21-0106-5410d480be57" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8776-6388-8dff-e040" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1887,28 +1850,15 @@
             <infoLink id="8ce0-8a41-cd56-a5f7" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
             <infoLink id="66bd-56f2-2d46-a428" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule"/>
             <infoLink id="a52a-f92d-617c-ca03" name="Critical Hit: Staggering Blow" hidden="false" targetId="5e52-43b9-62fd-745e" type="rule"/>
+            <infoLink id="c9a7-b67c-4f51-0675" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="767d-fe71-aaeb-8196" name="Void Shields" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f5fc-7ce2-08f2-9bf8" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="250.0"/>
+            <cost name="pts" typeId="points" value="225.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ece065c8-b1c1-7fe2-5acb-be515ad4d127" name="Warlord Battle Titan" page="0" hidden="false" collective="false" import="true" type="model">
@@ -1927,24 +1877,11 @@
         <infoLink id="803c-ad01-720b-7566" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
         <infoLink id="cd1b-fa64-0eab-1217" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
         <infoLink id="f28b-5bef-697d-32f0" hidden="false" targetId="0138-c5c3-16f5-e07c" type="rule"/>
+        <infoLink id="0a12-c6ff-6f33-494c" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ece065c8-b1c1-7fe2-5acb-be515ad4d127-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="f6f4-d199-396a-0355" name="Void Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="0c87-1b1a-bcd0-5616" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="850.0"/>
       </costs>
@@ -1966,24 +1903,11 @@
         <infoLink id="88c6-ca0d-ce01-1ad5" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
         <infoLink id="8158-4841-3bc5-db4f" hidden="false" targetId="0138-c5c3-16f5-e07c" type="rule"/>
         <infoLink id="7025-c511-9d43-8815" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
+        <infoLink id="d6e1-df80-b409-5707" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="cf7c-4751-ecfc-9b7a-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="018c-0ece-f839-a35b" name="Void Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="f048-44ca-928c-a73a" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="825.0"/>
       </costs>
@@ -2082,6 +2006,7 @@
     <infoLink id="f668-2718-536a-3e9f" hidden="false" targetId="f064-83f2-b1e4-5f5c" type="rule"/>
     <infoLink id="8fd6-5cbc-2783-8188" name="Masters of Siege (NetEA)" hidden="false" targetId="e3fc-0079-3b42-d97b" type="rule"/>
     <infoLink id="0e77-0960-2baf-016f" name="Masters of Siege" hidden="false" targetId="b41c-1140-d9f6-81a4" type="rule"/>
+    <infoLink id="c2e9-9885-237d-1843" name="Strategy Rating &amp; Initiative (IF)" hidden="false" targetId="a2e9-cf57-facb-8228" type="rule"/>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="ab1a-9437-92b2-bc3d" name="Land Raider Crusader and Land Raider Achilles" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2327,13 +2252,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6502-2a72-4bc6-fdf3" name="Land Raider Achilles" page="0" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="points" value="125">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
@@ -2343,26 +2261,8 @@
         <infoLink id="fa97-833d-b715-8665" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
         <infoLink id="f7b2-cb81-bfd1-55fd" name="Land Raider Achilles" hidden="false" targetId="f19b-0306-fbd0-995b" type="profile"/>
         <infoLink id="d98f-b268-3807-c642" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
-        <infoLink id="a5c5-6d20-e949-7bc0" name="Disrupt" hidden="false" targetId="0978-014a-9c52-c578" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="a5c5-6d20-e949-7bc0" name="Disrupt" hidden="false" targetId="0978-014a-9c52-c578" type="rule"/>
         <infoLink id="4dc1-d44c-7c03-5937" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="9ad6-02a5-5ac1-8050" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink id="bca2-f62d-56e7-ab35" name="Land Raider Achilles" hidden="false" targetId="0c0b-80a1-3bdd-4e49" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
@@ -2731,7 +2631,7 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2744,15 +2644,7 @@
           <infoLinks>
             <infoLink id="3ea5-43f2-eeb6-3e55" hidden="false" targetId="010e-164f-1824-70eb" type="profile"/>
             <infoLink id="064c-d2aa-097c-4ba3" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
-            <infoLink id="4a34-6bc6-4de9-0a85" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="4a34-6bc6-4de9-0a85" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2763,15 +2655,7 @@
             <infoLink id="99fb-a465-8e53-4c0a" hidden="false" targetId="4d37-22a0-7daa-e381" type="profile"/>
             <infoLink id="5d9d-2595-8b67-a42b" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
             <infoLink id="74e0-ef0c-38fa-d507" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
-            <infoLink id="7ee6-992a-4829-08c4" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="7ee6-992a-4829-08c4" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2840,7 +2724,7 @@
             <infoLink id="03ee-fdcd-ed82-5158" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
+            <cost name="pts" typeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6b5f-742b-7bd7-8809" name="Land Speeder Tornado" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2988,7 +2872,9 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>Imperial Fists Test (1) #Version Test du 27/06/2017</description>
+      <description>Compendium Astartes 1.00  - FERC - 2019 #Compendium Index Astartes - Septembre 2019 - V 1.0
+errata:
+Do they still have the Masters of Siege rule?</description>
     </rule>
     <rule id="909e-bbd5-c4e8-3eb7" name="Critical Hit: Structural Damage" hidden="false">
       <modifiers>
@@ -3020,12 +2906,12 @@ Fanatic #13</description>
     </rule>
     <rule id="4bc0-33ac-52e2-7655" name="Imperial Fists Transports" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Transports: Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhino pour la transporter. Les formations qui ont des Rhinos porte la mention &quot;plus transports&quot; dans leur composition. Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage. Notez toutefois que vous n&apos;avez pas à prendre de Rhinos si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhino pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à demichargement en cas de nombre impair de Razorbacks). En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des modules d’atterrissage. Si vous choisissez les modules d’atterrissage, la formation entrera en jeu en en utilisant les règles d’assaut planétaire. Vous aurez par contre besoin d’un croiseur Space Marine ou d’une barge de bataille pour déployer les modules d’atterrissage.">
+        <modifier type="set" field="description" value="Transports: Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhinos pour la transporter les formations comprennent la mention &quot;plus transports&quot; dans leur composition.  • Le nombre de Rhinos sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  • Toutefois, prendre de Rhinos pour la formation n’est pas obligatoire si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhinos pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à la moitié de sa capacité de transport en cas de nombre impair de Razorbacks).  • En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des Modules d’atterrissage.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Transportes de los Puños Imperiales: Los Marines Espaciales son un ejército muy móvil. Por ello, el valor en puntos de un destacamento normalmente incluye suficientes Rhinos para transportar a todas las unidades, incluyendo las de cualquier mejora adquirida. Determina el número de Rhinos necesario después de adquirir las mejoras. El número de Rhinos obtenido siempre será el mínimo necesario para transportar a todas las unidades, ¡no puedes incluir Rhinos de sobra para cubrir las bajas! &lt;BR&gt; Nótese que algunos destacamentos no recibirán Rhinos, normalmente porque no caben en ellos. Los destacamentos que vienen con Rhinos tendrán la anotación &quot;más transporte&quot; en la lista de ejército.&lt;BR&gt; Además, puedes elegir reemplazar los Rhinos de los destacamentos Tácticos o Devastadores por dos Búnkeres y 50 cm de Trincheras o Campos de Minas. La elección debe realizarse antes de cada partida, después de haber visto al ejército enemigo, pero antes de la colocación de las fichas de objetivo.">
+        <modifier type="set" field="description" value="Transportes de los Puños Imperiales: Los Marines Espaciales son un ejército muy móvil. Por ello, el valor en puntos de un destacamento normalmente incluye suficientes Rhinos para transportar a todas las unidades, incluyendo las de cualquier mejora adquirida. Determina el número de Rhinos necesario después de adquirir las mejoras. El número de Rhinos obtenido siempre será el mínimo necesario para transportar a todas las unidades, ¡no puedes incluir Rhinos de sobra para cubrir las bajas!  • Nótese que algunos destacamentos no recibirán Rhinos, normalmente porque no caben en ellos. Los destacamentos que vienen con Rhinos tendrán la anotación &quot;más transporte&quot; en la lista de ejército.  • Además, puedes elegir reemplazar los Rhinos de los destacamentos Tácticos o Devastadores por dos Búnkeres y 50 cm de Trincheras o Campos de Minas. La elección debe realizarse antes de cada partida, después de haber visto al ejército enemigo, pero antes de la colocación de las fichas de objetivo.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3037,7 +2923,7 @@ You may choose to replace a detachment’s Rhinos with two Bunkers and 50cm of T
     </rule>
     <rule id="e3fc-0079-3b42-d97b" name="Masters of Siege" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Maestros del Asedio: Un ejército de Puños Imperiales puede comenzar con tres patrullas en Fuego de Supresión (en lugar de las dos habituales). &lt;BR&gt; Todas las unidades ganarán la habilidad bípode para realizar chequeos de terreno peligroso debidos a Campos de Minas que hayan sido adquiridos como parte del ejército. &lt;BR&gt; Todas las unidades de infantería ganarán la habilidad dañar Primero cuando se encuentren en Trincheras que hayan sido adquiridas como parte del ejército. &lt;BR&gt; Todas las unidades de infantería ganarán una salvación por cobertura de 4+ cuando se encuentren en un Búnker que haya sido adquirido como parte del ejército. Podrán emplear esta salvación incluso contra impactos de macro-arma. Además, podrán repetir la tirada contra impactos que no sean de macro-arma. La habilidad de ignorar cobertura permitirá ignorar esta salvación, como normalmente ocurre.">
+        <modifier type="set" field="description" value="Maestros del Asedio: Un ejército de Puños Imperiales puede comenzar con tres patrullas en Fuego de Supresión (en lugar de las dos habituales).  • Todas las unidades ganarán la habilidad bípode para realizar chequeos de terreno peligroso debidos a Campos de Minas que hayan sido adquiridos como parte del ejército.  • Todas las unidades de infantería ganarán la habilidad dañar Primero cuando se encuentren en Trincheras que hayan sido adquiridas como parte del ejército.  • Todas las unidades de infantería ganarán una salvación por cobertura de 4+ cuando se encuentren en un Búnker que haya sido adquirido como parte del ejército. Podrán emplear esta salvación incluso contra impactos de macro-arma. Además, podrán repetir la tirada contra impactos que no sean de macro-arma. La habilidad de ignorar cobertura permitirá ignorar esta salvación, como normalmente ocurre.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3058,7 +2944,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
     </rule>
     <rule id="f064-83f2-b1e4-5f5c" name="Strategy Rating &amp; Initiative (IF)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5. &lt;BR&gt; Formaciones de Defensa Estática: 2+; Resto de formaciones: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Defensa Estática: 2+; Resto de formaciones: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3068,7 +2954,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les Space Marines ont une Valeur Stratégique de 5. Les formations Space Marines ont une initiative de 1+, les formations des soutiens titaniques ont une initiative de 1+.">
+        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les Imperial Fists ont une Valeur Stratégique de 5. Les formations de défense statique ont une initiative de 2+. Toutes les autres formations ont une initiative de 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -3076,6 +2962,11 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5.  • Statische-Verteidigung-Formationen haben den Initiativwert 2+. Andere Formationen haben die Initiativwert 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3164,6 +3055,36 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </modifiers>
       <description>Tactical and devastator formations can leave rhinos or dreadnought to take 5cm of trenches and barbed wire per unit. These formations will have to deploy classically (including in garrison). In addition, for 50pts, you can replace the trenches with as many bunkers as there are units in the formation.</description>
     </rule>
+    <rule id="a2e9-cf57-facb-8228" name="Strategy Rating &amp; Initiative (IF)" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les Imperial Fists ont une Valeur Stratégique de 5. Les formations Space Marines et Titaniques ont une initiative de 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5.  • Alle  Formationen haben die Initiativwert 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Todas las formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Strategia e Iniziativa: Le armate di Space Marine hanno un valore strategia pari a 5. Tutte le formazioni di Space Marine e legioni di Titani hanno valore di iniziativa di 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Imperial Fist Space Marine armies have a strategy rating of 5. All formations have an initiative rating of 1+.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="5558-8155-00f3-4619" name="Archiviste" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -3180,7 +3101,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">n/a</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Power Weapon&lt;BR&gt;&lt;BR&gt;Smite&lt;BR&gt;and</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Force Weapon&lt;BR&gt;&lt;BR&gt;Smite&lt;BR&gt;and</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(30cm)&lt;BR&gt;and (15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;MW4+&lt;BR&gt;and Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
@@ -3194,9 +3115,9 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Bolt Pistols&lt;BR&gt;&lt;BR&gt;Chainswords</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">-</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"></characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"></characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jump Packs</characteristic>
       </characteristics>
@@ -3297,9 +3218,9 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Bolt Pistol&lt;BR&gt;&lt;BR&gt;Chainsword</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">-</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"></characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"></characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted</characteristic>
       </characteristics>
@@ -3350,7 +3271,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
     </profile>
     <profile id="416f-bedf-27ed-4bde" name="Devastator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Weapons&lt;BR&gt;&lt;BR&gt;Bolters">
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Weapons">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -3360,12 +3281,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Small Arms">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;(15cm)">
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x AP5+/AT5+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -3495,6 +3411,13 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </characteristics>
     </profile>
     <profile id="5748-790f-81b9-6c64" name="Hunter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3537,13 +3460,6 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </characteristics>
     </profile>
     <profile id="f19b-0306-fbd0-995b" name="Land Raider Achilles" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
@@ -3587,9 +3503,9 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
     </profile>
     <profile id="f808-85c7-d484-b781" name="Land Speeder Tornado" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3598,7 +3514,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Assault Cannon&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
@@ -3608,9 +3524,14 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
     </profile>
     <profile id="e329-e81d-097d-6d2f" name="Land Speeder Typhoon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Typhoon Missile&lt;BR&gt;&lt;BR&gt;Heavy Bolter">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3619,7 +3540,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Twin Typhoon Missile&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP3+/AT5+&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
@@ -3638,7 +3559,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Planetfall, Reinforced Armour, Thick Rear Armour, Transport</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Reinforced Armour, Transport</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">4</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Landing Craft</characteristic>
       </characteristics>
@@ -3664,37 +3585,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="8e74-10b2-70c0-218b" name="Marauder Bomber" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">6+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Lascannon&lt;BR&gt;&lt;BR&gt;Bombs</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AA5+&lt;BR&gt;&lt;BR&gt;AA5+&lt;BR&gt;&lt;BR&gt;AT4+/AA5+&lt;BR&gt;&lt;BR&gt;3BP</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">360° Dorsal Turret&lt;BR&gt;&lt;BR&gt;Fixed Rear Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
-        <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">2</characteristic>
-        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
-      </characteristics>
-    </profile>
     <profile id="0e66-34cc-af77-82eb" name="Marauder Heavy Bomber" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
@@ -3748,6 +3639,11 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
@@ -3777,24 +3673,12 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </characteristics>
     </profile>
     <profile id="737a-0f06-5bba-9de7" name="Razorback HB" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Twin Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+</characteristic>
@@ -3817,6 +3701,13 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </characteristics>
     </profile>
     <profile id="8dd8-05a1-34ea-9ef7" name="Reaver Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
+      <modifiers>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="4x AP5+/AT3+&lt;BR&gt;&lt;BR&gt;4BP">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -3833,6 +3724,23 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </characteristics>
     </profile>
     <profile id="2815-61f6-bad0-120e" name="Rhino" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3844,51 +3752,6 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Transport</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="512c-7993-9558-3dfc" name="Scout" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP5+">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="30cm">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Bolter">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Shotguns&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="d1e0-a146-5371-f743" name="Scout Snipers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Shotguns&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Infiltrators, Sniper</characteristic>
       </characteristics>
     </profile>
     <profile id="4a3b-cd21-3c59-e605" name="Storm Eagle" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
@@ -3982,9 +3845,9 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Bolters&lt;BR&gt;&lt;BR&gt;Missile Launcher</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Missile Launcher</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
@@ -4045,10 +3908,10 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Storm Bolters&lt;BR&gt;&lt;BR&gt;2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Teleport, Thick Rear Armour</characteristic>
       </characteristics>
     </profile>
@@ -4169,7 +4032,7 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;2x Twin Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Left Arc&lt;BR&gt;&lt;BR&gt;Right Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Reinforced Armour, Transport</characteristic>
@@ -4220,13 +4083,6 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
       </characteristics>
     </profile>
     <profile id="b309-f865-8c98-7194" name="Warhound Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
-      <modifiers>
-        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value=", Mid-power Shot">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -4276,9 +4132,9 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
     </profile>
     <profile id="21f5-6289-0579-3a87" name="Whirlwind" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="6+">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4287,33 +4143,12 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">6+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Whirlwind</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">1BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Indirect Fire</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
-      </characteristics>
-    </profile>
-    <profile id="0c0b-80a1-3bdd-4e49" name="Land Raider Achilles" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Thunderfire Cannon&lt;BR&gt;&lt;BR&gt;Twin Multi-melta&lt;BR&gt;and</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;and (15cm)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT6+&lt;BR&gt;&lt;BR&gt;2x MW4+&lt;BR&gt;and Small Arms</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Reinforced Armour, Thick Rear Armour, Transport</characteristic>
       </characteristics>
     </profile>
     <profile id="07e7-a20d-df1e-c0cf" name="Bunker" hidden="false" typeId="6883-a6ac-0b20-eb62" typeName="Structure">
@@ -4333,12 +4168,57 @@ All infantry units gain a 4+ cover save when within bunkers purchased as part of
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="1297-f4e7-4126-0a6a" value="Dangerous">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Infantry" typeId="36c8-6d92-af3f-a836">3+ Cover Save</characteristic>
-        <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Dangerous</characteristic>
+        <characteristic name="Vehicle" typeId="1297-f4e7-4126-0a6a">Impassable</characteristic>
         <characteristic name="War Engine" typeId="8902-a4d6-b39b-ca60">Impassable</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Bunkers are Fortifications. Can hold 3 units.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="512c-7993-9558-3dfc" name="Scouts" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d1e0-a146-5371-f743" name="Scout Snipers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Infiltrators, Scout">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Sniper">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout, Sniper</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

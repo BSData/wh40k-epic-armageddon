@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6bc-68c1-7518-5853" name="Space Marines: Black Templars" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c6bc-68c1-7518-5853" name="Space Marines: Black Templars" revision="32" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -117,9 +117,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="e878-9e4e-65fb-f4ef-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
       </categoryLinks>
@@ -192,9 +189,6 @@
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="8b0b99e9-b90e-02d1-9c8b-1b9eed5c0886-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
@@ -214,9 +208,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="979e-d1a5-5833-4af3-7bf8-d208-dd76-9088" hidden="false" targetId="7bf8-d208-dd76-9088" primary="true"/>
       </categoryLinks>
@@ -369,7 +360,15 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="0846-6e4d-bf49-ff97" hidden="false" collective="false" import="true" targetId="af5b-575e-f53b-9b8c" type="selectionEntry"/>
+            <entryLink id="0846-6e4d-bf49-ff97" hidden="false" collective="false" import="true" targetId="af5b-575e-f53b-9b8c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
             <entryLink id="f2ae-696c-9429-0f28" hidden="false" collective="false" import="true" targetId="2d99-95f5-83af-7bd9" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -447,11 +446,6 @@
             <modifier type="decrement" field="maxSelections" value="1.0">
               <repeats>
                 <repeat field="selections" scope="7671fecc-f6c1-1353-8042-0fceed28ec79" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="decrement" field="maxSelections" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="7671fecc-f6c1-1353-8042-0fceed28ec79" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="af5b-575e-f53b-9b8c" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -791,27 +785,24 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="850750df-abe4-5fa6-e609-18d85696bac4-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7e6c-94ff-1ba7-d9dd" name="Skimmers" hidden="false" collective="false" import="true" defaultSelectionEntryId="6cd8-f030-50f0-e8d9">
+        <selectionEntryGroup id="20c1-9c85-f31f-6008" name="Skimmers" hidden="false" collective="false" import="true" defaultSelectionEntryId="b27c-1f36-1a2f-a14e">
           <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a9e5-9b24-0a70-1d02" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="91a5-7777-8588-6839" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="9510-67c6-7028-e1f6" name="Land Speeder Typhoon" page="0" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="634b-174f-f818-dcce" name="Land Speeder Typhoon" page="0" hidden="false" collective="false" import="true" type="model">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4e1b-118b-6d5e-b57c" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="d9e7-3db2-26b1-f392" hidden="false" targetId="e329-e81d-097d-6d2f" type="profile"/>
-                <infoLink id="72b8-3f87-a18d-8423" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
-                <infoLink id="a1ca-ff66-b00c-8565" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
+                <infoLink id="8895-c7dc-ae3b-a30d" hidden="false" targetId="e329-e81d-097d-6d2f" type="profile"/>
+                <infoLink id="6145-cbab-4ea3-8f36" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
+                <infoLink id="bc88-9cee-4063-fc7b" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="15.0"/>
@@ -819,8 +810,8 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="c79a-7166-48ee-de4b" hidden="false" collective="false" import="true" targetId="b2e3-0c6a-53d8-1130" type="selectionEntry"/>
-            <entryLink id="6cd8-f030-50f0-e8d9" hidden="false" collective="false" import="true" targetId="0dc1-7532-a63e-695a" type="selectionEntry"/>
+            <entryLink id="b27c-1f36-1a2f-a14e" name="Land Speeder" hidden="false" collective="false" import="true" targetId="a99e-0a09-fcae-e00b" type="selectionEntry"/>
+            <entryLink id="19c1-cceb-e3ea-ce70" name="Land Speeder Tornado" hidden="false" collective="false" import="true" targetId="5396-9454-a802-ef10" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -844,9 +835,6 @@
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="229a-a9f4-415d-8e91-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
@@ -866,9 +854,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="eb9c-3015-c154-ea14-7bf8-d208-dd76-9088" hidden="false" targetId="7bf8-d208-dd76-9088" primary="true"/>
       </categoryLinks>
@@ -938,18 +923,17 @@
         <infoLink id="eba5-43f8-aebc-398b" name="Landing Craft" hidden="false" targetId="e1d5-7447-841f-991b" type="profile"/>
         <infoLink id="0f2f-5ddd-7e8c-5689" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule"/>
         <infoLink id="2d42-a413-e1cf-a427" hidden="false" targetId="e484-b88c-4969-6b3b" type="rule"/>
-        <infoLink id="f6f2-a42b-cd39-c54b" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-        <infoLink id="b3f2-9979-f8ba-b93d" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
-        <infoLink id="6389-bc1c-d1e7-502a" hidden="false" targetId="6c01-bdba-51ff-9f6a" type="rule"/>
-        <infoLink id="118b-5e38-662a-4d1c" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule">
+        <infoLink id="f6f2-a42b-cd39-c54b" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink id="b3f2-9979-f8ba-b93d" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="6389-bc1c-d1e7-502a" hidden="false" targetId="6c01-bdba-51ff-9f6a" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="926f-45c8-09fa-bdd9-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
@@ -1072,9 +1056,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="39d1-fc3b-f978-b19e-7bf8-d208-dd76-9088" hidden="false" targetId="7bf8-d208-dd76-9088" primary="true"/>
       </categoryLinks>
@@ -1100,7 +1081,7 @@
                 <infoLink id="b810-77cd-3970-9c7d" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="250.0"/>
+                <cost name="pts" typeId="points" value="225.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1532,14 +1513,23 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="e57a-cbf2-02b3-fa23-7bf8-d208-dd76-9088" hidden="false" targetId="7bf8-d208-dd76-9088" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="5940-ed0f-69f2-c927" name="Téléportation" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5940-ed0f-69f2-c927" name="Teleportation" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="e57a-cbf2-02b3-fa23" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ebd0-6055-edbc-c8f5" type="atLeast"/>
+                    <condition field="selections" scope="e57a-cbf2-02b3-fa23" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2351-0e48-1b2a-b67f" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
@@ -1592,8 +1582,8 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="4b57-71ea-b0ba-6782" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="bee9-26b8-a054-a585" hidden="false" collective="false" import="true" targetId="2351-0e48-1b2a-b67f" type="selectionEntryGroup"/>
-        <entryLink id="b7c9-9794-55cd-8a14" hidden="false" collective="false" import="true" targetId="ebd0-6055-edbc-c8f5" type="selectionEntryGroup"/>
+        <entryLink id="bee9-26b8-a054-a585" name="Dreadnoughts" hidden="false" collective="false" import="true" targetId="2351-0e48-1b2a-b67f" type="selectionEntryGroup"/>
+        <entryLink id="b7c9-9794-55cd-8a14" name="Land Raider" hidden="false" collective="false" import="true" targetId="ebd0-6055-edbc-c8f5" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1953,21 +1943,11 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="55f3fed3-f19f-ba21-0106-5410d480be57-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8776-6388-8dff-e040" name="Warhound Scout Titan" page="0" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="275">
-              <conditions>
-                <condition field="selections" scope="55f3fed3-f19f-ba21-0106-5410d480be57" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8776-6388-8dff-e040" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1982,12 +1962,12 @@
             <infoLink id="6845-9f32-7c43-831b" name="Void Shields" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="250.0"/>
+            <cost name="pts" typeId="points" value="225.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ece065c8-b1c1-7fe2-5acb-be515ad4d127" name="Warlord Battle Titan" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2133,7 +2113,7 @@
         <cost name="pts" typeId="points" value="150.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="537c-42c1-2645-f0b2" name="Castellan - Seneschal" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="537c-42c1-2645-f0b2" name="Castellan - Captain" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
@@ -2389,40 +2369,7 @@
         <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0dc1-7532-a63e-695a" name="Land Speeder" hidden="false" collective="false" import="true" type="model">
-      <infoLinks>
-        <infoLink id="b35d-1d49-6808-4dd8" hidden="false" targetId="d872-4941-9a12-e879" type="profile"/>
-        <infoLink id="677c-4aae-c037-8497" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="72d2-1340-e210-d094" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
-        <infoLink id="10b3-3565-30db-c6f9" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b2e3-0c6a-53d8-1130" name="Land Speeder Tornado" page="0" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="points" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <infoLinks>
-        <infoLink id="d29b-f851-195b-8f7f" hidden="false" targetId="f808-85c7-d484-b781" type="profile"/>
-        <infoLink id="82af-0c9d-209a-9e7b" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
-        <infoLink id="f3f7-3b66-c8e3-e0bb" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="10.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="05d89171-b83d-3303-dd0a-51f9a38a582a" name="Marshal - Grand Seneschal" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="05d89171-b83d-3303-dd0a-51f9a38a582a" name="Marshal - Chapter Master" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="points" value="50.0">
           <conditions>
@@ -2601,18 +2548,66 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2f53-b61a-9d09-e5a3" name="Librarian" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cb8f-b829-8114-0888" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="c417-34d4-9040-3ff8" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
+        <infoLink id="1811-37f5-1943-c2cc" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
+        <infoLink id="2943-9ab9-4803-cc57" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="283b-fec1-9b03-3b74" hidden="false" targetId="5558-8155-00f3-4619" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a99e-0a09-fcae-e00b" name="Land Speeder" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="b1b1-14b2-109a-48ae" hidden="false" targetId="d872-4941-9a12-e879" type="profile"/>
+        <infoLink id="97f7-1855-91c4-1eff" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="6167-2fe2-af62-7e98" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
+        <infoLink id="2e2e-4ee4-6ae3-165a" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5396-9454-a802-ef10" name="Land Speeder Tornado" page="0" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="points" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="dcd4-db5f-00d6-c259" hidden="false" targetId="f808-85c7-d484-b781" type="profile"/>
+        <infoLink id="4e19-3253-791f-59c7" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
+        <infoLink id="6f8c-23d1-3feb-f6d2" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="10.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="11ad-e53d-192f-8165" name="Bikes" hidden="false" collective="false" import="true" defaultSelectionEntryId="1cc2-6a17-bec8-03eb">
       <constraints>
         <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="6602-c836-a5a8-6fba" name="Attack Bike" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2647,35 +2642,25 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <entryLinks>
         <entryLink id="4bc032ca-864f-6bdb-219b-5dfbf9a61fc2" hidden="false" collective="false" import="true" targetId="05d89171-b83d-3303-dd0a-51f9a38a582a" type="selectionEntry"/>
         <entryLink id="4df0-50d4-e5f0-4b5e" hidden="false" collective="false" import="true" targetId="6bd0-11bb-e3a2-224e" type="selectionEntry"/>
         <entryLink id="37ac-4ebd-82dc-5371" hidden="false" collective="false" import="true" targetId="537c-42c1-2645-f0b2" type="selectionEntry"/>
+        <entryLink id="1df1-00e3-aab7-1dab" name="Librarian" hidden="false" collective="false" import="true" targetId="2f53-b61a-9d09-e5a3" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="4e71-4e82-594c-8f2b" name="Commander" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <entryLinks>
         <entryLink id="1a85-6a7e-7772-9233" hidden="false" collective="false" import="true" targetId="05d89171-b83d-3303-dd0a-51f9a38a582a" type="selectionEntry"/>
         <entryLink id="d866-f3ca-65c6-0a99" hidden="false" collective="false" import="true" targetId="4b14-92a8-140d-2e9c" type="selectionEntry"/>
         <entryLink id="4474-a9ce-2a59-8240" hidden="false" collective="false" import="true" targetId="6bd0-11bb-e3a2-224e" type="selectionEntry"/>
         <entryLink id="9235-68ec-74f3-3418" hidden="false" collective="false" import="true" targetId="537c-42c1-2645-f0b2" type="selectionEntry"/>
+        <entryLink id="6196-6002-b5ab-7d06" name="Librarian" hidden="false" collective="false" import="true" targetId="2f53-b61a-9d09-e5a3" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2351-0e48-1b2a-b67f" name="Dreadnoughts" hidden="false" collective="false" import="true">
@@ -2689,12 +2674,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="7def-ff19-d7ce-601d" name="Hellfire Dreadnought" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2757,27 +2736,13 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="18ba-8739-3e66-8b37" name="Hellfire Dreadnought" page="0" hidden="false" collective="false" import="true" type="model">
           <infoLinks>
             <infoLink id="bec8-bd3e-9eca-298b" hidden="false" targetId="010e-164f-1824-70eb" type="profile"/>
             <infoLink id="e4de-5731-168c-bc71" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
-            <infoLink id="f49e-e76f-888a-38a9" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="f49e-e76f-888a-38a9" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2791,15 +2756,7 @@
             <infoLink id="451f-2971-d327-01b9" hidden="false" targetId="4d37-22a0-7daa-e381" type="profile"/>
             <infoLink id="019d-7c66-d094-03c7" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
             <infoLink id="e166-5428-741a-a53b" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
-            <infoLink id="8529-c9e6-3e49-dcba" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="8529-c9e6-3e49-dcba" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2818,12 +2775,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="fec6-dd16-6065-63b3" name="Predator Annihilator" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2860,12 +2811,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="e497-65c5-e052-e199" name="1x Hunter" hidden="false" collective="false" import="true" type="model">
@@ -2903,12 +2848,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <entryLinks>
         <entryLink id="ce38-d330-cf01-3dab" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry"/>
@@ -2919,12 +2858,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="9f95-dabc-d425-5521" name="Predator Annihilator" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2963,16 +2896,10 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="6535-3922-c8f6-efaf" name="Skimmers" hidden="false" collective="false" import="true" defaultSelectionEntryId="1d54-fb21-cbc9-9903">
+    <selectionEntryGroup id="6535-3922-c8f6-efaf" name="Skimmers" hidden="false" collective="false" import="true" defaultSelectionEntryId="c0ad-02b1-9095-6ab9">
       <constraints>
         <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="9525-8bf0-5dc1-a1e6" name="Land Speeder Typhoon" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2982,6 +2909,11 @@
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="points" value="25.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <infoLinks>
             <infoLink id="3eca-f561-3cf0-1915" hidden="false" targetId="e329-e81d-097d-6d2f" type="profile"/>
@@ -2989,13 +2921,13 @@
             <infoLink id="47b1-42cf-fe1a-9bc9" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
+            <cost name="pts" typeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="85a7-e012-9464-4f3a" hidden="false" collective="false" import="true" targetId="b2e3-0c6a-53d8-1130" type="selectionEntry"/>
-        <entryLink id="1d54-fb21-cbc9-9903" hidden="false" collective="false" import="true" targetId="0dc1-7532-a63e-695a" type="selectionEntry"/>
+        <entryLink id="c0ad-02b1-9095-6ab9" name="Land Speeder" hidden="false" collective="false" import="true" targetId="a99e-0a09-fcae-e00b" type="selectionEntry"/>
+        <entryLink id="0427-fc70-b267-49fe" name="Land Speeder Tornado" hidden="false" collective="false" import="true" targetId="5396-9454-a802-ef10" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3f0f-69b7-eff7-69de" name="Spacecraft" hidden="false" collective="false" import="true" defaultSelectionEntryId="0ecd-82a2-1dd7-407f">
@@ -3016,10 +2948,6 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <entryLinks>
         <entryLink id="0ecd-82a2-1dd7-407f" hidden="false" collective="false" import="true" targetId="6825-81ef-8417-05d9" type="selectionEntry"/>
@@ -3030,12 +2958,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="fa22-3ed7-da49-9d54" name="Land Raider" page="0" hidden="false" collective="false" import="true" type="model">
@@ -3087,8 +3009,9 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>Black Templars Test (1) #Version Test du 26.06.2017
-space_marines_masterferc_051212[1] #Version F-ERC du 07 Février 2018 (pour le Whirlwind)</description>
+      <description>Compendium Astartes 1.00  - FERC - 2019 #Compendium Index Astartes - Septembre 2019 - V 1.0
+errata:
+Is it still 3 support detachments per primary formation?</description>
     </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <description>none</description>
@@ -3129,7 +3052,7 @@ netea_army_list_compendium_2014-01-14</description>
     </rule>
     <rule id="f826-c487-2781-a78f" name="Strategy Rating &amp; Initiative (BT)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5. &lt;BR&gt; Formaciones de Marines Espaciales y Legiones de Titanes: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Marines Espaciales y Legiones de Titanes: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3139,7 +3062,7 @@ netea_army_list_compendium_2014-01-14</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les Space Marines ont une Valeur Stratégique de 5. Les formations Space Marines ont une initiative de 1+, les formations des soutiens titaniques ont une initiative de 1+ et les formations des appareils de la flotte, ont une initiative de 1+.">
+        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les Black Templars ont une Valeur Stratégique de 5. Les formations Space Marines et Titaniques ont une initiative de 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -3183,6 +3106,23 @@ netea_army_list_compendium_2014-01-14</description>
   </sharedRules>
   <sharedProfiles>
     <profile id="ec78-410b-49f4-635f" name="Assault" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3240,17 +3180,6 @@ netea_army_list_compendium_2014-01-14</description>
     </profile>
     <profile id="ab3f-5390-e599-540a" name="Attack Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="35cm">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
@@ -3266,10 +3195,15 @@ netea_army_list_compendium_2014-01-14</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
@@ -3295,6 +3229,23 @@ netea_army_list_compendium_2014-01-14</description>
       </characteristics>
     </profile>
     <profile id="47eb-5f71-832d-a13e" name="Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">35cm</characteristic>
@@ -3324,7 +3275,7 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4"/>
       </characteristics>
     </profile>
-    <profile id="7c75-037b-b71f-a9da" name="Castellan - Seneschal" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+    <profile id="7c75-037b-b71f-a9da" name="Castellan - Captain" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3335,7 +3286,7 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader, Commander</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Commander, Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
     <profile id="00bd-edb8-a4e5-bfa2" name="Chaplain" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -3437,12 +3388,12 @@ netea_army_list_compendium_2014-01-14</description>
     </profile>
     <profile id="7450-367d-a1bc-b850" name="Drop Pod" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="n/a">
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3450,10 +3401,10 @@ netea_army_list_compendium_2014-01-14</description>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Immobile</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">none</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">none</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">n/a</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Deathwind</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+</characteristic>
@@ -3508,6 +3459,13 @@ netea_army_list_compendium_2014-01-14</description>
       </characteristics>
     </profile>
     <profile id="5748-790f-81b9-6c64" name="Hunter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -3562,7 +3520,7 @@ netea_army_list_compendium_2014-01-14</description>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3635,10 +3593,10 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Multi-melta&lt;BR&gt;and&lt;BR&gt;&lt;BR&gt;Hurricane Bolters&lt;BR&gt;&lt;BR&gt;Twin Assault Cannon</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;and (15cm)&lt;BR&gt;&lt;BR&gt;(15cm)&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW5+&lt;BR&gt;and Small Arms&lt;BR&gt;&lt;BR&gt;Small Arms&lt;BR&gt;&lt;BR&gt;AP4+/AT4+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;and Macro-weapon&lt;BR&gt;&lt;BR&gt;+1A&lt;BR&gt;&lt;BR&gt;-</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Twin Assault Cannon&lt;BR&gt;&lt;BR&gt;Multi-melta&lt;BR&gt;and&lt;BR&gt;&lt;BR&gt;Hurricane Bolters</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;and (15cm)&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT4+&lt;BR&gt;&lt;BR&gt;MW5+&lt;BR&gt;and Small Arms&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon&lt;BR&gt;&lt;BR&gt;+1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Thick Rear Armour, Transport</characteristic>
       </characteristics>
     </profile>
@@ -3684,6 +3642,11 @@ netea_army_list_compendium_2014-01-14</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Typhoon Missile&lt;BR&gt;&lt;BR&gt;Heavy Bolter">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Light Vehicle</characteristic>
@@ -3698,66 +3661,7 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Scout, Skimmer</characteristic>
       </characteristics>
     </profile>
-    <profile id="e1d5-7447-841f-991b" name="Landing Craft" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
-      <modifiers>
-        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Thick Rear Armour">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;30cm">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;3x Twin Heavy Bolter">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;3x Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Storm Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Reinforced Armour, Fearless, Transport</characteristic>
-        <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">4</characteristic>
-        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Landing Craft</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0fc4-3d74-08fd-9f38" name="Librarian" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">n/a</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Power Weapon&lt;BR&gt;&lt;BR&gt;Smite</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f22a-34df-b3dd-b2b4" name="Marshal - Grand Seneschal" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+    <profile id="f22a-34df-b3dd-b2b4" name="Marshal - Chapter Master" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -3785,24 +3689,24 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Mounted</characteristic>
       </characteristics>
     </profile>
-    <profile id="dec4-9a82-bb94-a6ec" name="Neophytes" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+    <profile id="dec4-9a82-bb94-a6ec" name="Neophytes - Novices" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Infiltrate">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;&lt;BR&gt;(15cm)">
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapons&lt;BR&gt;&lt;BR&gt;Small Arms">
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="Chainswords&lt;BR&gt;&lt;BR&gt;Bolt Pistols">
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -3855,19 +3759,19 @@ netea_army_list_compendium_2014-01-14</description>
     <profile id="6da5-9d8e-4ab6-2314" name="Predator Destructor" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="3+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
         </modifier>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
           <conditions>
@@ -3935,6 +3839,11 @@ netea_army_list_compendium_2014-01-14</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="4x AP5+/AT3+&lt;BR&gt;&lt;BR&gt;4BP">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
@@ -3952,6 +3861,23 @@ netea_army_list_compendium_2014-01-14</description>
       </characteristics>
     </profile>
     <profile id="2815-61f6-bad0-120e" name="Rhino" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -4050,15 +3976,50 @@ netea_army_list_compendium_2014-01-14</description>
       </characteristics>
     </profile>
     <profile id="4bda-67e5-86bb-b58d" name="Tactical - Crusader" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Bolters&lt;BR&gt;&lt;BR&gt;Missile Launcher</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT6+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Missile Launcher</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
@@ -4070,6 +4031,50 @@ netea_army_list_compendium_2014-01-14</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value="&lt;BR&gt;&lt;BR&gt;-">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Storm Bolters">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
@@ -4077,10 +4082,10 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Storm Bolters&lt;BR&gt;&lt;BR&gt;2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Teleport, Thick Rear Armour</characteristic>
       </characteristics>
     </profile>
@@ -4201,6 +4206,11 @@ netea_army_list_compendium_2014-01-14</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="15cm&lt;BR&gt;&lt;BR&gt;15cm">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
@@ -4209,7 +4219,7 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;2x Twin Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Left Arc&lt;BR&gt;&lt;BR&gt;Right Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Reinforced Armour, Transport</characteristic>
@@ -4280,13 +4290,6 @@ netea_army_list_compendium_2014-01-14</description>
       </characteristics>
     </profile>
     <profile id="b309-f865-8c98-7194" name="Warhound Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
-      <modifiers>
-        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value=", Mid-power Shot">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
@@ -4337,6 +4340,88 @@ netea_army_list_compendium_2014-01-14</description>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">1BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Indirect Fire</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
+      </characteristics>
+    </profile>
+    <profile id="5558-8155-00f3-4619" name="Archiviste" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">n/a</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Force Weapon&lt;BR&gt;&lt;BR&gt;Smite&lt;BR&gt;and</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(30cm)&lt;BR&gt;and (15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;MW4+&lt;BR&gt;and Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e1d5-7447-841f-991b" name="Landing Craft" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Planetfall, Reinforced Armour, Transport">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="45cm&lt;BR&gt;&lt;BR&gt;30cm">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Storm Bolter">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;3x Twin Heavy Bolter</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Planetfall, Reinforced Armour, Fearless, Transport</characteristic>
+        <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">4</characteristic>
+        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Landing Craft</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

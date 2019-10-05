@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="41e4-ca8a-fcf8-bc99" name="Eldar: Iyanden Craftworld" revision="32" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="41e4-ca8a-fcf8-bc99" name="Eldar: Iyanden Craftworld" revision="33" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1726,7 +1726,15 @@
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="8fab-55e6-c187-bcdc" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8fab-55e6-c187-bcdc" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="d225-ec33-66de-638d" name="Formations" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
@@ -2008,7 +2016,6 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="204f-d912-85b7-18a4" name="Spiritseer" hidden="false" collective="false" import="true" targetId="adc9-0d40-196e-85a6" type="selectionEntry"/>
-        <entryLink id="61f5-6d84-0537-da61" name="*Iyanden Host - rename" hidden="false" collective="false" import="true" targetId="44af-e64f-cd0e-f5c1" type="selectionEntry"/>
         <entryLink id="80a7-b1ba-ec7e-c0da" name="Spirit Stones" hidden="false" collective="false" import="true" targetId="9e92-dac0-a429-1959" type="selectionEntry"/>
         <entryLink id="8fbf-61a8-ec04-4f69" name="Extra Wraithlords" hidden="false" collective="false" import="true" targetId="e3eb-258b-d8b0-cb3a" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2097,7 +2104,6 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="1700-b933-06b0-b7cb" name="Spiritseer" hidden="false" collective="false" import="true" targetId="adc9-0d40-196e-85a6" type="selectionEntry"/>
-        <entryLink id="d7ab-b75c-07d0-0bad" name="Wraith Host" hidden="false" collective="false" import="true" targetId="44af-e64f-cd0e-f5c1" type="selectionEntry"/>
         <entryLink id="1bf6-81c5-e51b-0570" name="Spirit Stones" hidden="false" collective="false" import="true" targetId="9e92-dac0-a429-1959" type="selectionEntry"/>
         <entryLink id="71bc-7272-99f3-f81d" name="Firestorm" hidden="false" collective="false" import="true" targetId="dd4d-ce0a-cdc5-f58d" type="selectionEntry"/>
         <entryLink id="0303-dd5d-2665-8e2c" name="Extra Wraiths" hidden="false" collective="false" import="true" targetId="17d7-66c0-88c2-7a9b" type="selectionEntryGroup"/>
@@ -3097,26 +3103,6 @@
         <cost name="pts" typeId="points" value="175.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="44af-e64f-cd0e-f5c1" name="Wraith Host" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="increment" field="e22e-c2ea-b68c-aa76" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="54b2-3dab-9226-3d10" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="95d3-b025-59cb-22e9" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9f28-84c7-8bd4-9586" type="max"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e22e-c2ea-b68c-aa76" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="8d6c-4268-04a0-522a" name="Wraith Host" hidden="false" targetId="627d-93de-c671-9470" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="adc9-0d40-196e-85a6" name="Spiritseer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae38-1c2e-d398-7e5a" type="max"/>
@@ -3312,7 +3298,7 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="FERC" hidden="false">
-      <description>ELDARS VAISSEAUX MONDES - FERC TEST 2018 #version janvier 2018</description>
+      <description>Compendium interm Eldars Vaisseaux-Mondes 1.00  - FERC - septembre 2019 #v 1.0 septembre 2019</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>IyandenQuickRef #14052016
@@ -3329,7 +3315,7 @@ Fanatic #13</description>
     </rule>
     <rule id="99bf-6b33-bb51-d0e5" name="Strategy Rating &amp; Initiative (Eldar)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4. &lt;BR&gt; Avatar, Especialistas, Phantom, Revenants, Warlock, y la formación que incluya al Vidente Espectral: 1+. &lt;BR&gt; Resto de formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4.  • Avatar, Especialistas, Phantom, Revenants, Warlock, y la formación que incluya al Vidente Espectral: 1+.  • Resto de formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3388,16 +3374,6 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
       <description>Iyanden armies have Strategy Rating 3. 
 Iyanden Avatars, Aspect Warriors and Titans have an Initiative rating of 1+. All other formations have an Initiative rating of 2+.
 Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
-    </rule>
-    <rule id="627d-93de-c671-9470" name="Wraith Host" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="Host Fantôme: Les Osts de Gardes Fantômes et de Seigneurs Fantômes ne bénéficient pas de la règle spéciale « Tactique du tirer et courir ».">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Wraithguard Hosts and Wraithlord Hosts may not use Hit an Run Tactics.</description>
     </rule>
     <rule id="ac9e-d79f-528c-2348" name="Spiritseer" hidden="false">
       <modifiers>
@@ -4468,7 +4444,7 @@ In any case, from its appearance, it is an independent and permanent formation u
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Après placement des objectifs, le joueur eldar remplace l&apos;un des objectifs de sa moitié de table par un portail fantôme. Celui-ci est indestructible et fonctionne à la fois comme un objectif et un portail fantôme d&apos;un point de vue des règles du jeu.">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Le joueur Eldar peut remplacer un marqueur d’objectif dans sa moitié de table par un Portail. Il compte à la fois comme un objectif et un Portail. Il ne peut être ni attaqué, ni détruit.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
