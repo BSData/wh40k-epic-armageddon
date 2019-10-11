@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a850-4741-5719-fd3f" name="Eldar: Yme-Loc Craftworld" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a850-4741-5719-fd3f" name="Eldar: Yme-Loc Craftworld" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="130a-44a8-cc5c-b410" name="Aspect Warrior Troupe" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3004,6 +3004,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="4b2b-01a6-eab0-0d50" name="Guardian Troupe" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3335,6 +3338,7 @@
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink id="f207-d672-4f1b-628f" name="D-Cannon" hidden="false" targetId="52b4-512b-75e9-e89c" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
@@ -4554,6 +4558,26 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
       </modifiers>
       <description>Enables the recent «Gravhead» Gravtank list.</description>
     </rule>
+    <rule id="52b4-512b-75e9-e89c" name="D-Cannon" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="D-Cannon: Le Canon à Distorsion du Cobra ignore les Boucliers Energétique et les Champs Energétique.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="58b3-7328-7a6c-662d" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>The Cobra D-Cannon ignores void shields and power fields.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="4609-5ee5-ce9a-b677" name="Autarch" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -4711,7 +4735,7 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Shuriken Cannon&lt;BR&gt;&lt;BR&gt;Eldar Missile Launcher&lt;BR&gt;&lt;BR&gt;Cobra D-Cannon&lt;BR&gt;or</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;or 30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+/AA6+&lt;BR&gt;&lt;BR&gt;2BP&lt;BR&gt;or MW4+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover, Macro-weapon, Fixed Forward Arc&lt;BR&gt;or Titan Killer (D3+1), Ignore Cover, Fixed Forward Arc</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;D-Cannon, Ignore Cover, Macro-weapon, Fixed Forward Arc&lt;BR&gt;or D-Cannon, Titan Killer (D3+1), Ignore Cover, Fixed Forward Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Skimmer</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
@@ -6102,7 +6126,7 @@ Harlequins have Strategy Rating 5 and an Initiative rating of 1+.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;and (15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW5+&lt;BR&gt;and Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;and Macro-weapon</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"></characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
     <profile id="feac-b049-1e3d-06ac" name="Lynx P" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
