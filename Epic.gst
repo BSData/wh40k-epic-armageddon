@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="29" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="30" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
   </costTypes>
@@ -5448,6 +5448,101 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         </modifier>
       </modifiers>
       <description>May step over any unit or impassable terrain that is lower than 3cm and up to 2cm wide.</description>
+    </rule>
+    <rule id="024f-3fd5-bc5d-0734" name="Brood" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Progenies: Las unidades con Progenie (X) se colocan aparte fuera de la mesa cuando son destruidas, en la “reserva de enjambre”. Podrán regresar al campo de batalla cuando sean engendradas por una formación que pueda generar un número de puntos de engendramiento igual al valor de progenie de la unidad (el número entre paréntesis).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Brut: Einheiten mit Brut (Bruteinheiten) werden im Off-Table &quot;Schwarmreservat&quot; platziert, wenn sie zerstört werden. Diese Einheiten können durch Schwärmen für eine Anzahl von Schwärm-punkten, die ihrem Brutwert entspricht, wieder zum Spielen gebracht werden. Dies ist die Zahl in Klammern nach &quot;Brut&quot;.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Couvain: Les unités avec Couvain (unités de couvain) sont placées dans le &quot;réserve d&apos;essaimage&quot; hors table lorsqu&apos;elles sont détruites. Ces unités peuvent être remises en jeu par essaimage pour un nombre de points d&apos;essaimage égal à leur valeur de couvain. C&apos;est le nombre entre parenthèses après &quot;Couvain&quot;.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Units with Brood (brood units) are placed in the army’s off-board &quot;swarm pool&quot; when they are destroyed. These units may be returned to play via swarming for a number of swarm points equal to their brood value. This is the number in parenthesis after &quot;Brood&quot;.</description>
+    </rule>
+    <rule id="9b6c-8ae0-6732-8bab" name="Mobility" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Movilidad: Los vehículos blindados y máquinas de guerra de los Tiránidos no deben realizar chequeos de terreno peligroso.  • Además, los vehículos ligeros de los Tiránidos cuentan como infantería a efectos del terreno. Las Posiciones Fortificadas y los elementos especiales, tales como el alambre de espino o los campos de minas, afectarán a los Tiránidos normalmente.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="La Mobilité: Véhicules blindés Tyranides et engins de guerre ont jamais à passer des tests de terrain dangereux pour déplacer à travers un terrain normal, tandis que Tyranides unités de véhicules légers peuvent se déplacer à travers un terrain comme si elles étaient l&apos;infanterie.  • Caractéristiques du terrain de fortification, tels que les champs de mines ou de fil de rasoir, et les caractéristiques du terrain spéciaux, tels que les coulées de lave, affectent Tyranides normalement.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Beweglichkeit: Panzerfahrzeuge und Kriegsmaschinen der Marke Tyranid werden nicht in gefährlichem Gelände getestet. Darüber hinaus gelten Tyranid-Leichtfahrzeugeinheiten als Infanterie im Sinne des Geländes. Festungs-Geländeeigenschaften wie Minenfelder oder Rasendraht und spezielle Geländeeigenschaften wie Lavaströme beeinflussen Tyraniden normalerweise.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Tyranid armoured vehicle and war engine units do not take dangerous terrain tests. In addition, Tyranid light vehicle units count as infantry for the purposes of terrain. Fortification terrain features such as minefields or razorwire, and special terrain features such as lava flows affect Tyranids normally.</description>
+    </rule>
+    <rule id="23ca-6e69-113a-d332" name="Regeneration" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Regeneración: Las máquinas de guerra Tiránidas con regeneración pueden recuperar puntos de daño que hayan sufrido. Cada máquina de guerra con regeneración recuperará un punto de factor de daños que haya perdido anteriormente al comienzo de la Fase de Finalización de cada turno. La regeneración no puede utilizarse para resucitar unidades destruidas, ni para aumentar el factor de daños de la unidad por encima de su capacidad inicial.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Regeneration: Kriegsmaschineneinheiten mit Regeneration können verlorene Schadenspunkte zurückgewinnen. Jede Einheit mit Regeneration erhält zu Beginn der Endphase jeder Runde einen Schadenspunkt zurück. Die Regeneration kann nicht von einer zerstörten Einheit verwendet werden und darf auch nicht dazu führen, dass die Schadenskapazität einer Einheit über den Ausgangswert hinaus steigt.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Régénération: Les unités d&apos;Engins de Guerre avec régénération peuvent regagner les points de capacité de dommages perdus. Chaque unité avec régénération regagne un point de capacité de dommages au début de la phase de fin de chaque tour. La régénération ne peut pas être utilisée par une unité détruite ni augmenter la capacité de dommages d&apos;une unité au-delà du montant de départ.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>War engine units with regeneration can regain lost damage capacity points. Each unit with regeneration regains one damage capacity point at the beginning of each turn’s end phase. Regeneration cannot be used by a destroyed unit nor may it increase a unit’s damage capacity beyond the starting amount.</description>
+    </rule>
+    <rule id="9c02-0b1d-daf6-0023" name="Vanguard Organisms" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Organismos de Vanguardia: Los Enjambres de Genestealers y de Líctores son las únicas formaciones que pueden colocarse en el terreno de juego como patrullas al comienzo de un escenario de batalla de torneo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Organismes d&apos;Avant-Garde: Seules les formations de Genestealers et d&apos;essaims de Lictor sont autorisées à se déployer en garnison au début du scénario du grand tournoi.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Vorhut-Organismen: Nur Symbionten- und Liktor-Schwarmformationen dürfen zu Beginn des epischen Turnierspiels als &quot;Garnisonen&quot; auf dem Tisch aufgestellt werden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Only Genestealer and Lictor Swarm formations may be set up on the table as &quot;garrisons&quot; at the start of the Epic tournament game scenario.</description>
+    </rule>
+    <rule id="c7e9-ecf5-b29a-3280" name="Multiple Rocket Launcher" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Lance-roquettes Multiple: La portée du Lance-roquettes multiple n’est pas doublée lors d’un tir indirect et permet de tirer à moins de 30cm.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Mehrfachraketenwerfer: Die Reichweite wird nicht verdoppelt, wenn der Mehrfachraketenwerfer indirekt abfeuern wird, noch gibt es eine Mindestreichweite.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>The range is not doubled when the Multi-Rocket System is fired indirectly, nor is there a minimum range.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

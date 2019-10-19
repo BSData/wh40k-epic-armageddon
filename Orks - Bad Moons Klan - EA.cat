@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ca9c-d64a-a588-2ebb" name="Orks: Bad Moons Klan" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ca9c-d64a-a588-2ebb" name="Orks: Bad Moons Klan" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -441,15 +441,20 @@
           <selectionEntryGroups>
             <selectionEntryGroup id="8393-4c80-4782-ba22" name="Slaver Big Gunz" hidden="false" collective="false" import="true">
               <modifiers>
-                <modifier type="set" field="maxSelections" value="3.0">
+                <modifier type="increment" field="maxSelections" value="2.0">
                   <conditions>
                     <condition field="selections" scope="621e-1afa-8d09-1731" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a0a2-2464-92f4-a6ec" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="maxSelections" value="2.0">
+                <modifier type="increment" field="maxSelections" value="1.0">
                   <conditions>
                     <condition field="selections" scope="621e-1afa-8d09-1731" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da00-4760-4181-c521" type="equalTo"/>
                   </conditions>
+                </modifier>
+                <modifier type="decrement" field="maxSelections" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="621e-1afa-8d09-1731" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5151-179f-bbc2-5669" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
               </modifiers>
               <constraints>
@@ -488,6 +493,30 @@
         </entryLink>
         <entryLink id="c73b-535e-8046-ddc2" name="&apos;Ardwagon" hidden="false" collective="false" import="true" targetId="bc3d-d00d-5b4e-913a" type="selectionEntry">
           <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="f86d-79b0-24ef-9790" name="Big Mek &apos;Ardwagonz" hidden="false" collective="false" import="true" targetId="5151-179f-bbc2-5669" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="1c5f-8695-047a-bd3d" value="1.0">
+              <conditions>
+                <condition field="selections" scope="621e-1afa-8d09-1731" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9067-0c00-06bb-d6a9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1c5f-8695-047a-bd3d" value="2.0">
+              <conditions>
+                <condition field="selections" scope="621e-1afa-8d09-1731" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da00-4760-4181-c521" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1c5f-8695-047a-bd3d" value="3.0">
+              <conditions>
+                <condition field="selections" scope="621e-1afa-8d09-1731" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a0a2-2464-92f4-a6ec" type="equalTo"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
@@ -1640,14 +1669,14 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="dd1b-76a4-798f-e7c2" name="Mob" hidden="false" collective="false" import="true" defaultSelectionEntryId="2501-197c-72c9-e596">
           <modifiers>
-            <modifier type="set" field="9184-c9ff-447b-eecb" value="6">
+            <modifier type="set" field="9184-c9ff-447b-eecb" value="8.0">
               <conditions>
                 <condition field="selections" scope="4c98-b3fb-caf0-015f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0496-4049-430e-bf0d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9184-c9ff-447b-eecb" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9184-c9ff-447b-eecb" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="eae4-4cf2-fe9b-c089" hidden="false" collective="false" import="true" targetId="588f-71cc-ef36-f2ca" type="selectionEntry"/>
@@ -1679,7 +1708,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0cc8-1fa8-8635-29b9" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="-50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0496-4049-430e-bf0d" name="Big" hidden="false" collective="false" import="true" type="upgrade">
@@ -1687,7 +1716,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c188-b3b7-08f2-54be" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="25.0"/>
+                <cost name="pts" typeId="points" value="-100.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1756,10 +1785,15 @@
                 <condition field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d96b-5dc9-37cb-d137" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="2ff1-5ade-7f24-049f" value="8">
+            <modifier type="increment" field="2ff1-5ade-7f24-049f" value="8.0">
               <conditions>
                 <condition field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea28-bf36-7780-6559" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="decrement" field="2ff1-5ade-7f24-049f" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="98e0-8415-df51-f7ef" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
@@ -1768,25 +1802,27 @@
           <entryLinks>
             <entryLink id="2c66-d59e-62ca-5076" name="Gunwagon" hidden="false" collective="false" import="true" targetId="4f85-26c7-2ca6-31cd" type="selectionEntry"/>
             <entryLink id="e23e-0edb-5767-c3b8" hidden="false" collective="false" import="true" targetId="759e-788a-8c17-654c" type="selectionEntry"/>
-            <entryLink id="b61e-6877-b7db-0d69" name="Big Mek Gunwagonz" hidden="false" collective="false" import="true" targetId="98e0-8415-df51-f7ef" type="selectionEntryGroup">
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="3">
-                  <conditions>
-                    <condition field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea28-bf36-7780-6559" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="maxSelections" value="2">
-                  <conditions>
-                    <condition field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d96b-5dc9-37cb-d137" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="maxSelections" value="1">
-                  <conditions>
-                    <condition field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="347d-aa67-b348-c407" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d3c9-ccae-df9b-1e0f" name="Oddboyz" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="c1f9-e31d-0004-3237" value="2.0">
+              <conditions>
+                <condition field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d96b-5dc9-37cb-d137" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c1f9-e31d-0004-3237" value="3.0">
+              <conditions>
+                <condition field="selections" scope="2468-1b3e-9e56-0c71" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea28-bf36-7780-6559" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c1f9-e31d-0004-3237" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="a81a-e9ae-a445-91e7" name="Big Mek Gunwagonz" hidden="false" collective="false" import="true" targetId="98e0-8415-df51-f7ef" type="selectionEntryGroup"/>
+            <entryLink id="7882-d4a7-90a0-f07c" name="Big Mek &apos;Ardwagonz" hidden="false" collective="false" import="true" targetId="5151-179f-bbc2-5669" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1898,10 +1934,20 @@
             <infoLink id="b309-7021-1205-819d" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
             <infoLink id="e51d-b6d8-eab9-d47d" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
             <infoLink id="6602-3d42-695b-7eb5" name="Meganobz" hidden="false" targetId="dd87-9b99-448c-832d" type="profile"/>
+            <infoLink id="0c44-120b-b50c-dd06" name="Meganobz" hidden="false" targetId="ccce-9e51-4853-6614" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="50.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="6cf7-d12b-e002-b165" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3158-0bb6-26c3-d9c6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="16de-24ea-0e7a-c28b" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="4ba9-f8a4-869b-6fb4" name="Leader" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -2205,6 +2251,7 @@
             <entryLink id="e846-eb40-8291-f909" name="Big Mek Gunwagonz" hidden="false" collective="false" import="true" targetId="98e0-8415-df51-f7ef" type="selectionEntryGroup"/>
             <entryLink id="7bc4-c908-f425-935a" name="Big Mek Stompas" hidden="false" collective="false" import="true" targetId="8f80-d3e8-8c56-4d21" type="selectionEntryGroup"/>
             <entryLink id="abef-4350-a64a-23ce" name="Slaver Big Gunz" hidden="false" collective="false" import="true" targetId="0cf7-33c4-cbde-5b50" type="selectionEntryGroup"/>
+            <entryLink id="1f42-6728-a1dd-86da" name="Big Mek &apos;Ardwagonz" hidden="false" collective="false" import="true" targetId="5151-179f-bbc2-5669" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2387,7 +2434,7 @@
     </selectionEntry>
     <selectionEntry id="9ffe-4a0a-ef70-2969" name="Meganobz" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="points" value="50">
+        <modifier type="set" field="points" value="50.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
@@ -2399,6 +2446,7 @@
         <infoLink id="de59-bfd1-5fe7-54ab" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
         <infoLink id="046d-ed93-384b-1b26" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="5b08-4b44-be0a-4638" name="Meganobz" hidden="false" targetId="dd87-9b99-448c-832d" type="profile"/>
+        <infoLink id="390f-c89a-55d5-43f4" name="Meganobz" hidden="false" targetId="ccce-9e51-4853-6614" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="55.0"/>
@@ -2625,6 +2673,32 @@
         <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="3ec0-840e-fee4-c889" name="&apos;Ardwagon w/ Soopagun" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="d60e-1050-b412-14c6" name="&apos;Ardwagon (Soopagun)" hidden="false" targetId="1735-52bd-c966-4598" type="profile"/>
+        <infoLink id="9f3e-8913-ebda-8d9d" hidden="false" targetId="46cd-7181-5118-8c84" type="rule"/>
+        <infoLink id="14d7-2f93-8ba7-3e83" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="a50a-c18d-645e-e923" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="a9e7-1561-6cce-929d" name="Oddboyz" hidden="false" targetId="37ff-ffd7-85f0-3e8f" type="profile"/>
+        <infoLink id="b6ca-3eab-b8da-08c1" name="Oddboyz" hidden="false" targetId="c124-91a6-e3db-14f7" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="175a-a437-9887-d02b" name="&apos;Ardwagon w/ Supa-Zzap Gun" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="b48a-eb62-dda6-d574" name="&apos;Ardwagon (Supa-Zzap Gun)" hidden="false" targetId="e798-3762-4135-a006" type="profile"/>
+        <infoLink id="a14e-23ce-864d-01f4" hidden="false" targetId="46cd-7181-5118-8c84" type="rule"/>
+        <infoLink id="af3b-d7e3-ffd8-1017" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="94d9-7840-f44f-a273" name="Titan Killer" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
+        <infoLink id="9832-4ff6-a570-2bd7" name="Oddboyz" hidden="false" targetId="37ff-ffd7-85f0-3e8f" type="profile"/>
+        <infoLink id="d7af-2a0d-2735-3c0c" name="Oddboyz" hidden="false" targetId="c124-91a6-e3db-14f7" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="24bc-5e83-311a-ae04" name="Big Mek Gunfortress" hidden="false" collective="false" import="true">
@@ -2715,6 +2789,16 @@
         <entryLink id="ee85-0a20-ad1a-14f1" hidden="false" collective="false" import="true" targetId="2ad8-0e5c-c330-79f8" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup id="5151-179f-bbc2-5669" name="Big Mek &apos;Ardwagonz" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6a7e-5500-2789-9416" type="min"/>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1c5f-8695-047a-bd3d" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="b9ae-9046-9cc2-cc21" name="&apos;Ardwagon w/ Soopagun" hidden="false" collective="false" import="true" targetId="3ec0-840e-fee4-c889" type="selectionEntry"/>
+        <entryLink id="da55-4712-9c4d-6b30" name="&apos;Ardwagon w/ Supa-Zzap Gun" hidden="false" collective="false" import="true" targetId="175a-a437-9887-d02b" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
@@ -2729,7 +2813,7 @@ Fanatic #02
 Fanatic #13</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>Bad Moons v1.01</description>
+      <description>Bad Moons v1.02</description>
     </rule>
     <rule id="3d0a-916d-d530-ec48" name="Ork Warlords (BMK)" hidden="false">
       <modifiers>
@@ -2844,6 +2928,26 @@ Replaces the Ork player’s blitz objective.</description>
         </modifier>
       </modifiers>
       <description>Upgrades Big Gun to Soopagun or Supa-Zzap Gun.</description>
+    </rule>
+    <rule id="ccce-9e51-4853-6614" name="Meganobz" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Méganobz: Lorsqu&apos;elles sont ajoutées à une Bande de Guerre de Bad Moonz, les unités Méganobz ont la capacité de Meneur. Si elle est considérée comme faisant partie d&apos;une formation Méganobz, la formation gagne la capacité de Meneur à la place ; cette capacité n&apos;est liée à aucune socle particulière dans la formation.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Gargbosses: Wenn sie zu einem Bad Moons Kriegsband hinzugefügt werden, haben Meganobz die Leaderkapazität. Wenn sie als Teil einer Meganobz-Formation genommen wird, erhält die Formation stattdessen die Leaderkapazität; diese Kapazität ist nicht an eine einzige Basis in der Formation gebunden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>When they are added to a Bad Moons Warband, Meganobz have the Leader ability. If part of a Meganobz formation, the formation gains the Leader ability; this ability is not tied to any one stand in the formation.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -3593,11 +3697,6 @@ Replaces the Ork player’s blitz objective.</description>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa7c-c165-a6d6-8913" type="instanceOf"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
@@ -3609,7 +3708,7 @@ Replaces the Ork player’s blitz objective.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP5+/AT6+&lt;BR&gt;&lt;BR&gt;Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Leader, Reinforced Armour</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Meganobz, Reinforced Armour</characteristic>
       </characteristics>
     </profile>
     <profile id="bb0b-330a-b544-fb1a" name="Mega Dread" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -3629,11 +3728,11 @@ Replaces the Ork player’s blitz objective.</description>
     <profile id="d281-ccc7-b26e-5d66" name="&apos;Ardwagon" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">25cm</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Kannon&lt;BR&gt;&lt;BR&gt;3x Big Shootas</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Big Gun&lt;BR&gt;&lt;BR&gt;3x Big Shootas</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;AP6+/AT6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
@@ -3768,6 +3867,34 @@ Replaces the Ork player’s blitz objective.</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">2</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e798-3762-4135-a006" name="&apos;Ardwagon (Supa-Zzap Gun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Supa-Zzap Gun&lt;BR&gt;&lt;BR&gt;3x Big Shootas</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW3+&lt;BR&gt;&lt;BR&gt;AP6+/AT6+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3)&lt;BR&gt;&lt;BR&gt;-</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Transport</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="1735-52bd-c966-4598" name="&apos;Ardwagon (Soopagun)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Soopagun&lt;BR&gt;&lt;BR&gt;3x Big Shootas</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">60cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP&lt;BR&gt;&lt;BR&gt;AP6+/AT6+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon&lt;BR&gt;&lt;BR&gt;-</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Transport</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
