@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="30" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="31" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
   </costTypes>
@@ -3539,6 +3539,11 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
         <modifier type="set" field="description" value="Luftpatrouille: Anstatt eine Garnison auf die Überwachung zu setzen, kann eine Armee eine Kämpferformation auf die Luftpatrouille stellen. Der Spieler darf immer noch so viele Garnisonen aufstellen, wie es seine Armee erlaubt, aber nur eine davon darf das Spiel mit der Überwachung beginnen. Die Flugzeuge befolgen alle Regeln für die Luftpatrouille, werden jedoch während der Garnisonsphase vor dem Spiel eingerichtet.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Patrullas del PAC: Se puede colocar una sola formación des cazas en el PAC.  El jugador todavía puede poner tantas patrullas de guarnición como su ejército lo permita, pero sólo uno de ellos puede empezar el juego bajo vigilancia. Los aviones siguen todas las reglas del CAP, pero se instalan durante la fase de guarnición previa al juego.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
