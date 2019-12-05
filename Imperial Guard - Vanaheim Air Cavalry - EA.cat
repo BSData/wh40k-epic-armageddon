@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ccac-1fd6-20ef-d4bb" name="Imperial Guard: Vanaheim Air Cavalry" revision="28" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ccac-1fd6-20ef-d4bb" name="Imperial Guard: Vanaheim Air Cavalry" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -259,20 +259,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="6c8f-7f61-8b4f-197b" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
-              <infoLinks>
-                <infoLink id="079f-f20f-1eba-6d4c" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
-                <infoLink id="2183-3030-df55-ee75" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-                <infoLink id="546f-cd4c-c228-e0f7" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="200.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="6de4-f516-3ce7-9355" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
+            <entryLink id="713a-6423-b542-36fd" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -745,8 +734,9 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e422-5a0a-27f3-8277" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3df-4b45-ca0e-0a80" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1496-1cbc-171c-d955" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4592-5f3c-58ae-53eb" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -806,6 +796,16 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4592-5f3c-58ae-53eb" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="2319-e01c-42ef-24e6" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
+        <infoLink id="6194-9e24-aee0-0af7" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="920c-a6a4-f3d0-ab38" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="fbfb-8912-ef8c-99bd" name="Company Upgrades" hidden="false" collective="false" import="true">
@@ -863,7 +863,7 @@
 If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost. Commissars may not be attached to Titan or Imperial Navy units.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
-      <description>CodexImperialGuard #160118
+      <description>CodexImperialGuard #031119
 VanaheimAirCavQuickRef #18072015</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
@@ -876,7 +876,7 @@ Fanatic #13</description>
     </rule>
     <rule id="1a67-21c3-e7c7-0c68" name="Strategy Rating &amp; Initiative (VAC)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2. &lt;BR&gt; Todas las formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Todas las formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -901,7 +901,7 @@ Fanatic #13</description>
     </rule>
     <rule id="3b9f-59b6-8723-2331" name="Transport (VAC)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="La capacité de transport: Comme suit- &lt;BR&gt; Valkyrie: 2 unités de Storm Trooper, Vanaheim Supreme Commander, Vanaheim Commander, Vanaheim Infantry, Vanaheim Fire Support, Mortar Support units ou 1 Light Sentinel our Support Sentinel. &lt;BR&gt; Vendetta: 2 unités de Storm Trooper, Vanaheim Supreme Commander, Vanaheim Commander, Vanaheim Infantry, Vanaheim Fire Support, Mortar Support.">
+        <modifier type="set" field="description" value="La capacité de transport: Comme suit-  • Valkyrie: 2 unités de Storm Trooper, Vanaheim Supreme Commander, Vanaheim Commander, Vanaheim Infantry, Vanaheim Fire Support, Mortar Support units ou 1 Light Sentinel our Support Sentinel.  • Vendetta: 2 unités de Storm Trooper, Vanaheim Supreme Commander, Vanaheim Commander, Vanaheim Infantry, Vanaheim Fire Support, Mortar Support.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>

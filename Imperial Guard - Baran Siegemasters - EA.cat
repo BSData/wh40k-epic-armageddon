@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4a53-8627-6904-ae50" name="Imperial Guard: Baran Siegemasters" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4a53-8627-6904-ae50" name="Imperial Guard: Baran Siegemasters" revision="32" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -44,7 +44,15 @@
             <infoLink id="ca92-9e14-b944-8581" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
             <infoLink id="2f52-0c07-1d46-12ec" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
             <infoLink id="2333-ca08-02d0-214e" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
-            <infoLink id="341b-a011-6b73-1301" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule"/>
+            <infoLink id="341b-a011-6b73-1301" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -96,7 +104,16 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="892b-adac-dded-f4a5" hidden="false" targetId="3532-8f74-eeaf-be73" type="rule"/>
+        <infoLink id="892b-adac-dded-f4a5" hidden="false" targetId="3532-8f74-eeaf-be73" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="3486-9557-9464-ad76" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e839-891a-fe4e-1abd-a01c-3159-3cef-e12d" hidden="false" targetId="a01c-3159-3cef-e12d" primary="true"/>
@@ -134,6 +151,21 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="7ac0-2fce-4b85-8410" name="Gun Emplacement" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="3706-6542-b1ee-9133" value="0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                        <condition field="selections" scope="e839-891a-fe4e-1abd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34ff-d6ca-db85-8ef5" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3706-6542-b1ee-9133" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="ea30-b589-32f5-20fe" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
               </infoLinks>
@@ -142,6 +174,16 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="34ff-d6ca-db85-8ef5" name="Bunker" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="3770-5db3-e03d-d248" value="3.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3770-5db3-e03d-d248" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="6611-c26a-1b6d-e7ae" name="Bunker" hidden="false" targetId="07e7-a20d-df1e-c0cf" type="profile"/>
               </infoLinks>
@@ -538,6 +580,7 @@
             <selectionEntry id="5624-66f5-2fb5-7b2d" name="9x Gun Emplacement" page="0" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="5585-739b-b495-5efe" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
+                <infoLink id="c112-f494-7966-67ef" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -606,6 +649,7 @@
             <selectionEntry id="9114-5fe5-094e-0756" name="8x Gun Emplacement" page="0" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="7648-cf2e-5c87-6f73" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
+                <infoLink id="20fe-b083-95e1-3283" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -845,6 +889,7 @@
     <selectionEntry id="d541-064c-9f5f-7675" name="3x Gun Emplacement" page="0" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
         <infoLink id="7054-1e4f-a90a-5419" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
+        <infoLink id="a918-3c99-745e-040a" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -853,7 +898,15 @@
     <selectionEntry id="a20d-1754-99dc-5cdc" name="Baneblade" page="0" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
         <infoLink id="4a79-efbb-e6b9-50c3" hidden="false" targetId="ccd7-4efa-a2fc-cf4f" type="profile"/>
-        <infoLink id="09b7-daa2-1d18-e5b0" hidden="false" targetId="ca1b-6f85-9aa6-f529" type="rule"/>
+        <infoLink id="09b7-daa2-1d18-e5b0" hidden="false" targetId="ca1b-6f85-9aa6-f529" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="6078-2657-2fc6-5db3" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -872,6 +925,15 @@
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="6aee-4bd0-b593-5fe9" name="Critical Hit: Damaged" hidden="false" targetId="3241-59ee-c214-3897" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1236,7 +1298,7 @@
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Commissari: Un esercito di Guardia Imperiale della Legione d&apos;Acciaio puo&apos; includere 2D6 Commissari. I Commissari non hanno costo in punti. Se il lancio di dado supera il numero di unita&apos; disponibili ogni scarto sara&apos; perso.&lt;BR&gt; Tira per vedere quante unita&apos; di Commissari un giocatore puo&apos; aggiungere all&apos;inizio della battaglia prima che entrambe le fazioni abbiano schierato. Se l&apos;esercito include un Comandante Supremo, allora il primo Commissario deve essere unito alla formazione del Comandante Supremo. Ogni altro Commissario puo&apos; essere unito a qualsiasi altra formazione. Non puoi includere piu&apos; di un Commissario per formazione. Se hai più Commissari che formazioni, ogni eccesso è perso.">
+        <modifier type="set" field="description" value="Commissari: Un esercito di Guardia Imperiale della Legione d&apos;Acciaio puo&apos; includere 2D6 Commissari. I Commissari non hanno costo in punti. Se il lancio di dado supera il numero di unita&apos; disponibili ogni scarto sara&apos; perso.  • Tira per vedere quante unita&apos; di Commissari un giocatore puo&apos; aggiungere all&apos;inizio della battaglia prima che entrambe le fazioni abbiano schierato. Se l&apos;esercito include un Comandante Supremo, allora il primo Commissario deve essere unito alla formazione del Comandante Supremo. Ogni altro Commissario puo&apos; essere unito a qualsiasi altra formazione. Non puoi includere piu&apos; di un Commissario per formazione. Se hai più Commissari che formazioni, ogni eccesso è perso.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
@@ -1282,7 +1344,7 @@ If the army includes a Supreme Commander then the first Commissar must be attach
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Comisarios: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto. &lt;BR&gt; Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones. &lt;BR&gt; No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
+        <modifier type="set" field="description" value="Comisarios: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto.  • Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones.  • No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1301,8 +1363,8 @@ If the army includes a Supreme Commander then the first Commissar must be attach
       <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points. Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
-      <description>CodexImperialGuard #160118
-BaranSiegemastersQuickRef</description>
+      <description>CodexImperialGuard #031119
+BaranSiegemastersQuickRef #V03112019</description>
     </rule>
     <rule id="47ee-8fd4-4915-ae0b" name="GW" hidden="false">
       <description>Swordwind
@@ -1335,7 +1397,7 @@ Fanatic #13</description>
     </rule>
     <rule id="b34c-4bca-b78f-19ee" name="Strategy Rating &amp; Initiative (Baran)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 1. &lt;BR&gt; Todas las formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 1.  • Todas las formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1357,7 +1419,7 @@ Imperial Navy aircraft formations have Initiative Rating 2+.</description>
     </rule>
     <rule id="3c1f-7e8e-ce95-17c4" name="Transport (Baran)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="La capacité de transport: Comme suit- &lt;BR&gt; Bruennhilde: 1 Blitzen AA Gun ou Götterdämmerung Howitzer.">
+        <modifier type="set" field="description" value="La capacité de transport: Comme suit-  • Bruennhilde: 1 Blitzen AA Gun ou Götterdämmerung Howitzer.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -1365,6 +1427,20 @@ Imperial Navy aircraft formations have Initiative Rating 2+.</description>
       </modifiers>
       <description>As follows-
 Bruennhilde: 1 Blitzen AA Gun, Götterdämmerung Howitzer, Rapier Laser Destroyer or Thudd Gun.</description>
+    </rule>
+    <rule id="ce30-b6d1-856a-669b" name="Fortified Positions" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Fortified positions must be set up after objectives, but before spacecraft and garrisons are deployed. The fortified positions may be set up anywhere a vehicle may deploy in the Imperial Guards half of the table. You may split up a set of fortified positions as desired (although no section of trenches or minefield may be smaller than 5cm x 2.5cm), as long as the rules for formation coherency are adhered to. For example, you could split up trenches into several lines, as long as there are 5cm ‘links’ between the different parts of the position. These fortified positions count as having a move of zero. Fortified positions may not be transported.
+Some formations in the army may come with a set of fortified positions; these fortifications are set up at the same time as all other fortifications in the army and follow the same rules. Once deployed these fortifications are terrain and are no longer a part of the formation.
+Once fortified positions are set up they may be used by any unit, not just the units they were purchased for. They may also be captured and used by enemy units.
+No fortified positions block line of sight.
+Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up to 50cm x 2.5cm.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1413,11 +1489,11 @@ Bruennhilde: 1 Blitzen AA Gun, Götterdämmerung Howitzer, Rapier Laser Destroye
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Baneblade Battle Cannon&lt;BR&gt;&lt;BR&gt;Autocannon&lt;BR&gt;&lt;BR&gt;Demolisher Cannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolters&lt;BR&gt;&lt;BR&gt;2x Twin Heavy Bolters&lt;BR&gt;&lt;BR&gt;2x Lascannons</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
-        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
+        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Damaged</characteristic>
       </characteristics>
     </profile>
     <profile id="e5e6-f8cb-0229-5e10" name="Baneblade" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
@@ -1489,9 +1565,14 @@ Bruennhilde: 1 Blitzen AA Gun, Götterdämmerung Howitzer, Rapier Laser Destroye
     </profile>
     <profile id="fbe7-1b18-6aef-df6f" name="Bombard" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm &lt;BR&gt;30cm">
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="60cm&lt;BR&gt;&lt;BR&gt;30cm">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Ignore Cover, Indirect Fire&lt;BR&gt;&lt;BR&gt;-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
