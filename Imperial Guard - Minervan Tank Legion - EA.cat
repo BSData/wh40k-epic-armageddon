@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3625-0eb0-4157-8192" name="Imperial Guard: Minervan Tank Legion Armoured Regiment" revision="33" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3625-0eb0-4157-8192" name="Imperial Guard: Minervan Tank Legion Armoured Regiment" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -360,20 +360,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="4daa-330d-aac3-f6de" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
-              <infoLinks>
-                <infoLink id="37d4-a08e-da19-df49" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
-                <infoLink id="c67b-b6cf-b28c-4698" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-                <infoLink id="7cd0-4aea-41d0-0335" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="200.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="fe66-f1a5-242f-f306" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
+            <entryLink id="6c5a-5ea5-6289-dd7a" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1198,8 +1187,9 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4aaa-9f4a-3b5c-059e" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1496-1cbc-171c-d955" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3df-4b45-ca0e-0a80" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4592-5f3c-58ae-53eb" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1306,6 +1296,16 @@
         <cost name="pts" typeId="points" value="45.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4592-5f3c-58ae-53eb" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="4e4f-7315-0713-e9ba" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
+        <infoLink id="3613-c7a8-f230-c2fc" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="3c82-3120-46fe-a721" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3e72-f1db-964b-13f4" name="Company Upgrades" hidden="false" collective="false" import="true">
@@ -1335,7 +1335,7 @@
     </rule>
     <rule id="1f5b-d7e2-31f6-6881" name="Amphibious" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Anfibios: Por cada 1000 puntos de ejército, el jugador de Minerva podrá designar una cualquiera de sus Compañías de Tanques como anfibia. Las compañías anfibias ignoran los efectos del terreno de pantanos, y los ríos cuentan sólo como terreno peligroso (en vez de intransitable). &lt;BR&gt; La designación de las compañías anfibias debe realizarse antes del despliegue.">
+        <modifier type="set" field="description" value="Anfibios: Por cada 1000 puntos de ejército, el jugador de Minerva podrá designar una cualquiera de sus Compañías de Tanques como anfibia. Las compañías anfibias ignoran los efectos del terreno de pantanos, y los ríos cuentan sólo como terreno peligroso (en vez de intransitable).  • La designación de las compañías anfibias debe realizarse antes del despliegue.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1355,7 +1355,7 @@
     </rule>
     <rule id="2e86-c893-2425-3cd9" name="Commissars" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Comisarios: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto. &lt;BR&gt; Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones. &lt;BR&gt; No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
+        <modifier type="set" field="description" value="Comisarios: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto.  • Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones.  • No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1386,7 +1386,7 @@ Fanatic #13</description>
     </rule>
     <rule id="0fd0-0a4c-691c-ee63" name="Strategy Rating &amp; Initiative (MTL)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2. &lt;BR&gt; Formaciones de las Legiones de Titanes: 1+. &lt;BR&gt; Formaciones de la Guardia Imperial y la Armada Imperial: 2+">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Formaciones de las Legiones de Titanes: 1+.  • Formaciones de la Guardia Imperial y la Armada Imperial: 2+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1413,7 +1413,7 @@ All other formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="d61f-912f-7139-326a" name="Transport (MTL)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="La capacité de transport: Comme suit- &lt;BR&gt; Chimera: 2 unités de gardes impériaux. &lt;BR&gt; Gorgon: 2 unités d&apos;ogryns ou 4 de ces unités suivantes: Supreme Commander, Commander, Infantry, Stormtroopers, Fire Support, Snipers. &lt;BR&gt; Hellbore: 14 unités parmi: Supreme Commander, Commander, Infantry, Stormtroopers, Fire Support, Snipers, Ogryns. &lt;BR&gt; Mole: 2 unités d&apos;ogryns ou 4 de ces unités suivantes: Supreme Commander, Commander, Infantry, Stormtroopers, Fire Support, Snipers. &lt;BR&gt; Valkyrie: 2 unités de gardes impériaux.">
+        <modifier type="set" field="description" value="La capacité de transport: Comme suit-  • Chimera: 2 unités de gardes impériaux.  • Gorgon: 2 unités d&apos;ogryns ou 4 de ces unités suivantes: Supreme Commander, Commander, Infantry, Stormtroopers, Fire Support, Snipers.  • Hellbore: 14 unités parmi: Supreme Commander, Commander, Infantry, Stormtroopers, Fire Support, Snipers, Ogryns.  • Mole: 2 unités d&apos;ogryns ou 4 de ces unités suivantes: Supreme Commander, Commander, Infantry, Stormtroopers, Fire Support, Snipers.  • Valkyrie: 2 unités de gardes impériaux.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>

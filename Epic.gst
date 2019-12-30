@@ -1961,18 +1961,18 @@ GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhamme
     </rule>
     <rule id="9242-1e6b-c88b-e029" name="Berserk" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Fou Furieux: Une unité avec la caractéristique Berserk peut doubler son distance de déplacement lors de la conduite d&apos;une ordonnance d&apos;Assaut. En outre, des formations contenant des unités Berserk ne peuvent prétendre à des objectifs dans des conditions de tournoi.">
+        <modifier type="set" field="description" value="Fou Furieux: Une unité avec la caractéristique Berserk peut doubler son distance de déplacement lors de la conduite d&apos;une ordonnance d&apos;Assaut.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Berserker: Eine Einheit mit der Berserker-Charakteristik kann ihre Bewegungsdistanz verdoppeln, wenn eine Engage-Aktion ausgeführt wird. Außerdem können Formationen, die Berserk-Einheiten enthalten, unter Turnierbedingungen keine Ziele beanspruchen.">
+        <modifier type="set" field="description" value="Berserker: Eine Einheit mit der Berserker-Charakteristik kann ihre Bewegungsdistanz verdoppeln, wenn eine Engage-Aktion ausgeführt wird.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <description>A unit with the Berserk characteristic may double it&apos;s movement distance when conducting an Engage order. Additionally, formations containing Berserk units can not claim objectives under Tournament conditions.</description>
+      <description>A unit with the Berserk characteristic may double it&apos;s movement distance when conducting an Engage order.</description>
     </rule>
     <rule id="e5e9-ef8f-6202-2296" name="Bunkers" hidden="false">
       <modifiers>
@@ -2857,7 +2857,7 @@ Units in a Bunker, Gun Emplacement, or Trench may not be barged by a war engine.
     </rule>
     <rule id="3513-6495-6d26-cb93" name="Macro-weapon" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Macro-armas: Sólo las unidades con blindaje reforzado pueden realizar tirada de salvación contra estas armas. Cualquier otro objetivo no podrá realizar tirada de salvación alguna. A continuación explicaremos con detalle cómo se resuelven los disparos de macro-armas.">
+        <modifier type="set" field="description" value="Macro-armas: Sólo las unidades con blindaje reforzado o salvaciones invulnerables pueden realizar tirada de salvación contra estas armas. Cualquier otro objetivo no podrá realizar tirada de salvación alguna.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -4140,33 +4140,38 @@ A formation that has no friendly units from a hated formation within 30cm of any
     </rule>
     <rule id="a488-2e1b-1e4e-4707" name="Singularity" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Singularité: Coups de 6+ (ou mieux) par une arme avec Singularity comptent comme un succès, et lancer un dé supplémentaire pour frapper (cela peut être récursive avec des dés de vie supplémentaires).">
+        <modifier type="set" field="description" value="Singularité: Lors du jet de dé pour toucher, avec une arme Singularity, tout jet non modifié de six (6) génère un dé d&apos;attaque supplémentaire. Les lancés successifs d&apos;un six naturel peuvent générer des dés supplémentaires.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Singularität: Treffer von 6+ (oder besser) durch eine Waffe mit der Singularitätsregel werden als Treffer gewertet und ein zusätzlicher Würfel wird gewürfelt (dies kann mit zusätzlichen Trefferwürfeln rekursiv sein).">
+        <modifier type="set" field="description" value="Singularität: Wenn man mit einer Singularitätswaffe zum Treffer würfelt, erzeugt jeder unveränderte Wurf von sechs (6) einen zusätzlichen Angriffswürfel. Aufeinander folgende Würfe einer natürlichen Sechs können zusätzliche Würfel erzeugen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Singularidad: Cuando se tira para golpear, con un arma de singularidad, cualquier tirada a golpear no modificada de seis (6) genera un dado de ataque adicional. Las sucesivas tiradas de un seis natural pueden generar dados adicionales.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Hits of a 6+ (or better) by a weapon with the Singularity rule count as a hit, and roll one additional die to hit (this can be recursive with additional hit dice).</description>
+      <description>When rolling to hit, with a Singularity weapon, any unmodified roll-to-hit of six (6) generates an additional attack die. Successive rolls of a natural six can generate additional dice.</description>
     </rule>
     <rule id="f3d1-2678-a016-a8d0" name="Exploratory Augury Web" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Réseau d&apos;Augure Exploratoire: Détachements ennemis qui entrent au moyen Assaut Planétaire dans les 15 cm d&apos;une unité avec une réseau d&apos;augure exploratoire doivent lancer 1D6 pour chaque unité dans le détachement, en prenant un pion d&apos;impact pour chaque 1 roulé. Les unités amies entrent dans le jeu au moyen Téléportation au sein de 15cm d&apos;une unité amie avec une réseau d&apos;augure exploratoire ne doivent pas rouler pour pions d&apos;impact.">
+        <modifier type="set" field="description" value="Réseau d&apos;Augure Exploratoire: Les unités amies entrent dans le jeu au moyen Téléportation au sein de 15cm d&apos;une unité amie avec une réseau d&apos;augure exploratoire ne doivent pas rouler pour pions d&apos;impact.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Erkundungs-Augury-Netz: Feindformationen, die über Planetfall innerhalb von 15 cm von einer Einheit mit einem Explorator Augury Web ins Spiel kommen, müssen 1W6 für jede Einheit in der Formation würfeln und einen Blast-Marker für das Ergebnis von 1 erhalten. Freundliche Einheiten, die das Spiel über Teleport innerhalb von 15 cm einer befreundeten Einheit betreten mit einem Explorator Augury Web müssen nicht für Blast-Marker gewürfelt werden.">
+        <modifier type="set" field="description" value="Erkundungs-Augury-Netz: Freundliche Einheiten, die das Spiel über Teleport innerhalb von 15 cm einer befreundeten Einheit betreten mit einem Explorator Augury Web müssen nicht für Blast-Marker gewürfelt werden.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <description>Enemy detachments entering via Planetfall within 15cm of a unit with an Exploratory Augury Web must roll 1D6 for each unit in the detachment, taking a Blast Marker for each 1 rolled. Friendly units entering play via Teleport within 15cm of a friendly unit with an Exploratory Augury Web do not need to roll for Blast Markers. </description>
+      <description>Friendly units entering play via Teleport within 15cm of a friendly unit with an Exploratory Augury Web do not need to roll for Blast Markers.</description>
     </rule>
     <rule id="8767-fd83-8ec5-7f33" name="Basic Rules in Italian" hidden="false">
       <description>Regole di Base in Italiano: Epic_Armageddon_ita_1.1 #Versione 1.1 - Febbraio 2008</description>
@@ -4716,21 +4721,6 @@ Les règles présentées en français ne sont pas une traduction directe; ceux-c
 m1320006_Epic_Errata_2008
 m1320007_Epic_FAQ
 netea-tournament-pack-2017-03-21</description>
-    </rule>
-    <rule id="6b1a-3ab5-1857-63ad" name="Radiation" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="La Radiation: Les armes radiologiques qui ont frappé soustraire 1 du jet de sauvegarde de la cible. Ce modificateur ne s&apos;applique qu&apos;aux touches générées avec des attaques AP et allouées contre des unités d&apos;INF.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Strahlung: Radiologische Waffen, die einen Treffer erzielen, reduzieren den Rettungswurf der Zieleinheit um 1. Dieser Modifikator gilt nur für Treffer, die mit AP-Angriffen erzeugt und gegen Infanterieeinheiten zugewiesen werden.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Radiological weapons that hit reduce the target unit&apos;s saving throw by 1. This modifier only applies to hits generated with AP attacks and allocated against INF units. </description>
     </rule>
     <rule id="3a58-160c-8b1b-f962" name="Battlefortresses &amp; Gunfortresses" hidden="false">
       <modifiers>
@@ -5548,6 +5538,96 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         </modifier>
       </modifiers>
       <description>The range is not doubled when the Multi-Rocket System is fired indirectly, nor is there a minimum range.</description>
+    </rule>
+    <rule id="b6cb-e96f-fb49-764b" name="Fleshbane" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Perdición de la Carne: Un impacto generado por un ataque con arma de &quot;Fleshbane&quot; reduce el tiro de salvamento del objetivo en uno (-1). Este modificador sólo se aplica a un impacto generado por el Antipersonal (AP), Combate Cuerpo a Cuerpo (CC) o Bomberos (FF) al valor de impacto de un arma &quot;Fleshbane&quot; y que se asigna contra unidades de Infantería (INF) o Vehículo Ligero (LV). Este efecto se ignora cuando se golpea o se asigna contra Vehículos Blindados (AV) o Máquinas de Guerra (WE).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Fléau de la Chair: Un hit généré par une attaque à l&apos;arme &quot;Fleshbane&quot; réduit le jet d&apos;épargne de la cible de un (-1). Ce modificateur ne s&apos;applique qu&apos;à un hit généré par l&apos;Anti-Personnel (AP), le Corps à Corps (CC) ou la Lutte Contre le Feu (FF) pour toucher la valeur d&apos;une arme &quot; Fleshbane &quot; et qui est alloué contre des unités d&apos;infanterie (INF) ou de véhicules légers (LV). Cet effet est ignoré lorsqu&apos;il frappe, ou est alloué contre, des véhicules blindés (AV) ou des moteurs de guerre (WE).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Fleischfluch: Ein Treffer, der durch einen Angriff der Fleshbane Waffe erzeugt wurde, reduziert den Rettungswurf des Ziels um eins (-1). Dieser Modifikator gilt nur für einen Treffer, der von den Einheiten Anti Personnel (AP), Close Combat (CC) oder Firefight (FF) erzeugt wird, um den Wert einer Fleshbane Waffe zu treffen, und der gegen Infanterie (INF) oder Leichtfahrzeug (LV) zugeordnet ist. Dieser Effekt wird beim Aufprall auf gepanzerte Fahrzeuge (AV) oder Kriegsmaschinen (WE) ignoriert.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>A hit generated from a &quot;Fleshbane&quot; weapon attack reduces the target&apos;s saving throw by one (-1). This modifier only applies to a hit generated by the Anti-Personnel (AP), Close Combat (CC) or Firefight (FF) to hit value of a &quot;Fleshbane&quot; weapon and which is allocated against Infantry (INF) or Light Vehicle (LV) units. This effect is ignored when hitting, or allocated against, Armored Vehicles (AV) or War Engines (WE).</description>
+    </rule>
+    <rule id="d71c-fa17-bcd2-b42f" name="Macro-weapon (Horus Heresy)" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Macro-armas: Sólo las unidades con blindaje reforzado o salvaciones invulnerables pueden realizar tirada de salvación contra estas armas. Incluso entonces, no podrán volver a hacer el lanzamiento de salvamento, ya que el arma se burla de sus sistemas de protección. El efecto de la Macroarma (MW) sólo se aplica al tipo de unidad del valor &quot;a impactar&quot; correspondiente. Un MW Antipersonal con el valor &quot;a impactar&quot; de AP4+ no puede asignarse contra un Vehículo Acorazado (AV) y no afecta al lanzamiento de ahorro del AV.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Macro-armes: Seules les unités ayant Blindage renforcé ou une Sauvegarde invulnérable peuvent tenter une sauvegarde contre les touches d&apos;une Macro-arme. Même dans ce cas, ils ne peuvent pas relancer le jet de sauvegarde, car l&apos;arme se moque de leurs systèmes de protection. L&apos;effet de Macro-Armes (MW) ne s&apos;applique qu&apos;au type d&apos;unité de la valeur &quot; à toucher &quot; correspondante. Un MW anti-personnel avec la valeur &quot;à toucher&quot; de AP4+ ne peut pas être alloué contre un Véhicule Blindé (AV) et n&apos;affecte pas le jet de sauvegarde de l&apos;AV.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Makro-Waffe: Nur Einheiten mit verstärkter Rüstung oder unverwundbaren Rettungs erhalten einen Rettungswurf gegen Treffer einer Makro-Waffe. Selbst dann dürfen sie den Rettungswurf nicht erneut rollen, da die Waffe ihre Schutzsysteme zum Gespött macht. Der Makro-Waffen (MW) Effekt gilt nur für den Einheitentyp des entsprechenden &quot;zu treffenden&quot; Wertes. Ein Anti-Personen-MW mit dem &quot;zu treffenden&quot; Wert von AP4+ kann nicht gegen ein Panzerfahrzeug (AV) eingesetzt werden und hat keinen Einfluss auf den Rettungswurf des AV.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Macroarmi: Solo unità con armatura rinforzata o tiro salvezza invulnerabile ricevono un tiro salvezza quando vengono colpite da macro armi. Anche in questo caso, non possono ripetere il tiro salvezza, poiché l&apos;arma si fa beffa dei loro sistemi di protezione. L&apos;effetto Macro-arma (MW) si applica solo al tipo di unità del corrispondente valore &quot;per colpire&quot;. Un MW antiuomo con il valore &quot;per colpire&quot; di AP4+ non può essere assegnato contro un veicolo blindato (AV) e non influisce sul tiro salvezza dell&apos;AV.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>A unit hit by a Macro-weapon is not allowed a saving throw unless they possess Reinforced Armour or an Invulnerable Save. Even then, they may not reroll the saving throw, as the weapon makes a mockery of their protective systems. The Macro-weapon (MW) effect only applies to the unit type of the corresponding &quot;to hit&quot; value. An Anti-Personnel MW with the &quot;to hit&quot; value of AP4+ cannot be allocated against an Armoured Vehicle (AV) and does not affect the saving throw of the AV.</description>
+    </rule>
+    <rule id="02ca-3d43-3c80-cfee" name="Lance (Horus Heresy)" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Lanza: Una unidad de Vehículos Blindados que sea impactada por un arma con esta habilidad no puede repetir su salvación si tiene la habilidad de blindaje reforzado. Esta regla especial no afecta a las unidades de Infantería o Vehículos Ligeros.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Lance: Une unité de Véhicules Blindés avec une Armure Renforcée touchée par une arme Lance, n&apos;est pas autorisée à relancer son jet de sauvegarde d&apos;Armure Renforcée si la première échoue. Cette règle spéciale n&apos;affecte pas les unités d&apos;Infanterie ou de Véhicules Légers.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Lanze: Eine Panzerfahrzeug-Einheit mit verstärkter Rüstung, die von einer Lanzenwaffe getroffen wird, darf ihren Rettungswurf nicht erneut würfeln. Diese Sonderregel betrifft nicht die Einheiten Infanterie oder Leichte Fahrzeuge.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>An Armoured Vehicle unit with reinforced armour that is hit by a lance weapon is not allowed to re-roll its saving throw. This special rule does not affect Infantry or Light Vehicles units.</description>
+    </rule>
+    <rule id="70a7-51c2-4dc2-ce7a" name="Sniper (Horus Heresy)" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Francotirador: Realiza por separado las tiradas correspondientes a los disparos de los francotiradores. Si se consigue el impacto, el atacante puede elegir la unidad afectada, siempre que esté dentro del alcance y la línea de visión de la unidad.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Cecchini: Tira separatamente quando attacchi con un&apos;unità di cecchini. Se colpiscono l&apos;attaccante può scegliere quale unità nemica è colpita tra quelli entro la gittata e nella linea di vista dei cecchini.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Snipers: Lancez les dés séparément quand vous attaquez avec une unité de Snipers. Si elle touche, vous pouvez choisir quelle unité ennemie est touchée parmi celles à portées et dans la ligne de vue de l&apos;unité Sniper.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Scharfschütze: Rollen Sie separat, wenn Sie mit einer Scharfschützeneinheit angreifen. Wenn sie einen Treffer erzielen, kann der Angreifer wählen, welche gegnerische Einheit getroffen wird, und aus den Einheiten auswählen, die sich in Reichweite und in Schusslinie der Scharfschützeneinheit befinden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Roll separately when attacking with a sniper weapon. Sniper attacks may be allocated against any target of the attacker&apos;s choosing as long as it is a valid target, either in range and line of fire, or base contact.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

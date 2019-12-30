@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6dbc-eb24-37bf-a54a" name="Imperial Guard: Saranes Expanse Imperial Crusade" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6dbc-eb24-37bf-a54a" name="Imperial Guard: Saranes Expanse Imperial Crusade" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -562,30 +562,10 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="b3e7-483a-464c-f240" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
-              <infoLinks>
-                <infoLink id="ac3a-a064-8f6c-13dc" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
-                <infoLink id="1ac9-0b2a-850f-c3f8" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-                <infoLink id="5670-25eb-474a-2a9b" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="300.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2ea4-255b-9614-5c6a" name="Lunar Class Cruiser" page="0" hidden="false" collective="false" import="true" type="model">
-              <infoLinks>
-                <infoLink id="c765-31d4-812c-8516" hidden="false" targetId="d431-0d2f-e3cc-37f7" type="profile"/>
-                <infoLink id="2d57-d3ea-7487-c6ba" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-                <infoLink id="2f1c-82af-f34a-d264" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="150.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="77c4-7933-dfdf-a858" hidden="false" collective="false" import="true" targetId="6825-81ef-8417-05d9" type="selectionEntry"/>
+            <entryLink id="43e3-482c-d892-b045" name="Lunar Class Cruiser" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
+            <entryLink id="caf7-89de-d9ca-f074" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1324,16 +1304,22 @@
     </selectionEntry>
     <selectionEntry id="6609-0aea-aee8-f919" name="Siegeline Defender" hidden="false" collective="true" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="maxInForce" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4aaa-9f4a-3b5c-059e" type="atLeast"/>
-          </conditions>
+        <modifier type="set" field="maxInForce" value="-1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3df-4b45-ca0e-0a80" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4592-5f3c-58ae-53eb" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6825-81ef-8417-05d9" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1347,6 +1333,26 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4592-5f3c-58ae-53eb" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="fe29-f728-3edc-511a" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
+        <infoLink id="a742-9ebb-f029-a87f" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="a6d2-bde6-e221-d322" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="300.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f3df-4b45-ca0e-0a80" name="Lunar Class Cruiser" page="0" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="330b-391e-7a4b-84d7" hidden="false" targetId="d431-0d2f-e3cc-37f7" type="profile"/>
+        <infoLink id="b460-6d2a-9c16-be6b" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="ed7e-82f6-446d-a657" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="150.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1691,7 +1697,7 @@
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Commissari: Un esercito di Guardia Imperiale della Legione d&apos;Acciaio puo&apos; includere 2D6 Commissari. I Commissari non hanno costo in punti. Se il lancio di dado supera il numero di unita&apos; disponibili ogni scarto sara&apos; perso.&lt;BR&gt; Tira per vedere quante unita&apos; di Commissari un giocatore puo&apos; aggiungere all&apos;inizio della battaglia prima che entrambe le fazioni abbiano schierato. Se l&apos;esercito include un Comandante Supremo, allora il primo Commissario deve essere unito alla formazione del Comandante Supremo. Ogni altro Commissario puo&apos; essere unito a qualsiasi altra formazione. Non puoi includere piu&apos; di un Commissario per formazione. Se hai più Commissari che formazioni, ogni eccesso è perso.">
+        <modifier type="set" field="description" value="Commissari: Un esercito di Guardia Imperiale della Legione d&apos;Acciaio puo&apos; includere 2D6 Commissari. I Commissari non hanno costo in punti. Se il lancio di dado supera il numero di unita&apos; disponibili ogni scarto sara&apos; perso.  • Tira per vedere quante unita&apos; di Commissari un giocatore puo&apos; aggiungere all&apos;inizio della battaglia prima che entrambe le fazioni abbiano schierato. Se l&apos;esercito include un Comandante Supremo, allora il primo Commissario deve essere unito alla formazione del Comandante Supremo. Ogni altro Commissario puo&apos; essere unito a qualsiasi altra formazione. Non puoi includere piu&apos; di un Commissario per formazione. Se hai più Commissari che formazioni, ogni eccesso è perso.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
@@ -1716,7 +1722,7 @@
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Comisarios de la Guardia Imperial: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 1000 puntos completos del ejército. Los Comisarios no cuestan ningún punto. &lt;BR&gt; Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones. &lt;BR&gt; No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
+        <modifier type="set" field="description" value="Comisarios de la Guardia Imperial: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 1000 puntos completos del ejército. Los Comisarios no cuestan ningún punto.  • Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones.  • No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1765,7 +1771,7 @@ Fanatic #13</description>
     </rule>
     <rule id="aec9-9074-c032-939d" name="Transport (IC)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="La capacité de transport: Comme suit- &lt;BR&gt; Chimera: 2 des unités suivant: Gardes Impériaux Commandant, Infanterie, Snipers, Troupes de Choc, Escouades d&apos;Appui Feu. &lt;BR&gt; Drop Pods: ne peut transporter que des unités Tactiques, Dévastators, et Dreadnoughts. &lt;BR&gt; Land Raider: 1 unité de Terminators. &lt;BR&gt; Landing Craft: 12 de ces unités suivantes: Tactiques, Dévastators, Assauts, Scouts, Motos, Terminators et Dreadnoughts. Les Terminators et Dreadnoughts prennent 2 places. En plus il peut transporter 4 Land Raiders ou 6 Rhinos. &lt;BR&gt; Razorback: 1 des unités suivant: Tactiques, Dévastators, Scouts. &lt;BR&gt; Rhino: 2 des unités suivant: Tactiques, Dévastators, Scouts. &lt;BR&gt; Strike Cruiser: 20 des unités suivantes: Tactiques, Dévastators, Assauts, Scouts, Motos, Terminators, Dreadnoughts ainsi que 20 Rhinos, Land Raiders, plus 6 Thunderhawks et assez de Modules d&apos;Atterrissage et de Barge de Débarquement. &lt;BR&gt; Thunderhawk: 8 de ces unités suivantes: Tactiques, Dévastators, Assauts, Scouts, Motos, Terminators et Dreadnoughts. Les Terminators et Dreadnoughts prennent 2 emplacements. &lt;BR&gt; Valkyrie: 2 unités de Troupes de Choc">
+        <modifier type="set" field="description" value="La capacité de transport: Comme suit-  • Chimera: 2 des unités suivant: Gardes Impériaux Commandant, Infanterie, Snipers, Troupes de Choc, Escouades d&apos;Appui Feu.  • Drop Pods: ne peut transporter que des unités Tactiques, Dévastators, et Dreadnoughts.  • Land Raider: 1 unité de Terminators.  • Landing Craft: 12 de ces unités suivantes: Tactiques, Dévastators, Assauts, Scouts, Motos, Terminators et Dreadnoughts. Les Terminators et Dreadnoughts prennent 2 places. En plus il peut transporter 4 Land Raiders ou 6 Rhinos.  • Razorback: 1 des unités suivant: Tactiques, Dévastators, Scouts.  • Rhino: 2 des unités suivant: Tactiques, Dévastators, Scouts.  • Strike Cruiser: 20 des unités suivantes: Tactiques, Dévastators, Assauts, Scouts, Motos, Terminators, Dreadnoughts ainsi que 20 Rhinos, Land Raiders, plus 6 Thunderhawks et assez de Modules d&apos;Atterrissage et de Barge de Débarquement.  • Thunderhawk: 8 de ces unités suivantes: Tactiques, Dévastators, Assauts, Scouts, Motos, Terminators et Dreadnoughts. Les Terminators et Dreadnoughts prennent 2 emplacements.  • Valkyrie: 2 unités de Troupes de Choc.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1f70-c738-82dc-e51d" name="Imperial Guard: Elysian Droop Troop Regiment" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1f70-c738-82dc-e51d" name="Imperial Guard: Elysian Droop Troop Regiment" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5d38-49b0-b74a-d1c0" name="Drop Sentinel Squadron" page="0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -662,7 +662,7 @@
           </constraints>
           <entryLinks>
             <entryLink id="77c4-7933-dfdf-a858" name="Lunar Class Cruiser" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
-            <entryLink id="590f-8fcb-c0b1-7df0" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="2d45-21b5-6bb4-7a83" type="selectionEntry"/>
+            <entryLink id="590f-8fcb-c0b1-7df0" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1221,7 +1221,7 @@
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="2af2-8945-525d-142a" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="2d45-21b5-6bb4-7a83" type="selectionEntry">
+    <entryLink id="2af2-8945-525d-142a" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -1461,10 +1461,15 @@
     </selectionEntry>
     <selectionEntry id="6609-0aea-aee8-f919" name="Siegeline Defender" hidden="false" collective="true" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="maxInForce" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4aaa-9f4a-3b5c-059e" type="atLeast"/>
-          </conditions>
+        <modifier type="set" field="maxInForce" value="-1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3df-4b45-ca0e-0a80" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4592-5f3c-58ae-53eb" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1509,7 +1514,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2d45-21b5-6bb4-7a83" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="4592-5f3c-58ae-53eb" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="0718-0d93-e037-8296" value="0.0">
           <conditionGroups>

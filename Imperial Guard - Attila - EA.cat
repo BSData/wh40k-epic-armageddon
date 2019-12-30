@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0d1c-a969-57d1-75ef" name="Imperial Guard: Attilan Regiment" revision="27" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0d1c-a969-57d1-75ef" name="Imperial Guard: Attilan Regiment" revision="28" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -196,20 +196,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f4a9-75ab-d0ec-483e" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e2f7-8e87-38c7-a8f4" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="14c4-7404-bb01-b7c8" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
-              <infoLinks>
-                <infoLink id="b039-d2e9-e583-a5ca" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
-                <infoLink id="baec-98c2-7d05-34fc" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-                <infoLink id="c54a-fa93-6367-8a0e" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="300.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="0d08-622d-3f76-f5e2" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
+            <entryLink id="b21a-b165-16a4-6a45" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -656,10 +645,15 @@
     </selectionEntry>
     <selectionEntry id="6609-0aea-aee8-f919" name="Siegeline Defender" hidden="false" collective="true" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="maxInForce" value="-1">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4aaa-9f4a-3b5c-059e" type="equalTo"/>
-          </conditions>
+        <modifier type="set" field="maxInForce" value="-1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3df-4b45-ca0e-0a80" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4592-5f3c-58ae-53eb" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -722,6 +716,16 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4592-5f3c-58ae-53eb" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="0434-ded7-94f3-7dba" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
+        <infoLink id="b388-3d98-15ae-4cd6" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="57e9-6532-7726-4599" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="300.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -808,7 +812,7 @@
     </rule>
     <rule id="2e86-c893-2425-3cd9" name="Commissars" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Comisarios de la Guardia Imperial: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto. &lt;BR&gt; Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones. &lt;BR&gt; No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
+        <modifier type="set" field="description" value="Comisarios de la Guardia Imperial: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto.  • Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones.  • No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -839,7 +843,7 @@ Fanatic #13</description>
     </rule>
     <rule id="80fc-d079-4447-d19c" name="Strategy Rating &amp; Initiative (AR)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2. &lt;BR&gt; Formaciones de las Legiones de Titanes: 1+. &lt;BR&gt; Formaciones de la Guardia Imperial y la Armada Imperial: 2+">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Formaciones de las Legiones de Titanes: 1+.  • Formaciones de la Guardia Imperial y la Armada Imperial: 2+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -864,7 +868,7 @@ Fanatic #13</description>
     </rule>
     <rule id="da6b-80e6-278b-3a5a" name="Transport (AR)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="La capacité de transport: Comme suit- &lt;BR&gt; Chimera: 2 unités d&apos;Infanterie (sauf Réacteurs Dorsaux ou Montés). &lt;BR&gt; Valkyrie: 2 unités d&apos;Infanterie (sauf Réacteurs Dorsaux ou Montés).">
+        <modifier type="set" field="description" value="La capacité de transport: Comme suit-  • Chimera: 2 unités d&apos;Infanterie (sauf Réacteurs Dorsaux ou Montés).  • Valkyrie: 2 unités d&apos;Infanterie (sauf Réacteurs Dorsaux ou Montés).">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
