@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e143-8005-f1f8-58f4" name="Adeptus Mechanicus: Forge World Skitarii Planetary Defence Force" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e143-8005-f1f8-58f4" name="Adeptus Mechanicus: Forge World Skitarii Planetary Defence Force" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -607,7 +607,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="4bd3-6780-c8c2-8e07" hidden="false" targetId="739f-d5a8-b6f8-9e24" type="rule"/>
+        <infoLink id="4bd3-6780-c8c2-8e07" name="Critical Hit: Ordinatus Majoris" hidden="false" targetId="a803-ab68-10cd-9e8f" type="rule"/>
         <infoLink id="a75a-48cc-ec3a-ff32" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="0c20-aeb2-8f26-d079" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
         <infoLink id="d508-f6f8-6521-18d9" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
@@ -3109,7 +3109,6 @@
     </selectionEntry>
   </selectionEntries>
   <infoLinks>
-    <infoLink id="f668-2718-536a-3e9f" name="Strategy Rating &amp; Initiative (AMS)" hidden="false" targetId="5389-5ecd-3f87-6d4c" type="rule"/>
     <infoLink id="c901-45eb-0740-e804" hidden="false" targetId="8028-cf7d-ead2-b78c" type="rule"/>
     <infoLink id="e04a-4654-1107-eb0a" name="Strategy Rating &amp; Initiative (AMS)" hidden="false" targetId="f734-c566-fe89-5a57" type="rule"/>
     <infoLink id="89e3-05e1-39ab-c22f" name="Strategy Rating &amp; Initiative (AMS)" hidden="false" targetId="f5df-a4d7-a6c8-f13c" type="rule"/>
@@ -4377,7 +4376,15 @@
         <infoLink id="5e44-6d45-dc7a-4cda" hidden="false" targetId="0977-e6e1-aed6-e00f" type="profile"/>
         <infoLink id="cb4a-7525-7490-c358" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
         <infoLink id="e43d-27dd-848a-7e05" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-        <infoLink id="a176-4247-77ec-fbff" hidden="false" targetId="8b83-3f49-5800-6551" type="rule"/>
+        <infoLink id="a176-4247-77ec-fbff" name="Veteran Princeps" hidden="false" targetId="b302-2524-1b68-c591" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -4682,16 +4689,6 @@
       <description>AMTL fab v1
 amtl_ferc_13.03.2013 #Version F-ERC 4.1 du 13 mars 2013</description>
     </rule>
-    <rule id="739f-d5a8-b6f8-9e24" name="Critical Hit: Terrible Explosion" hidden="true">
-      <modifiers>
-        <modifier type="set" field="description" value="Touche Critique: Explosion Terrible: Détruit. Toutes les unités dans un rayon de 15cm subissent une touche sur un 5+. Formations amies avec la ligne de vue à l&apos;explosion reçoivent 1 PI.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Destroyed. All units within 15cm suffer a hit on a 5+. Friendly formations with line of sight to the explosion receive 1 Blast marker.</description>
-    </rule>
     <rule id="ca86-7388-d668-787d" name="EpicAU" hidden="false">
       <description>none</description>
     </rule>
@@ -4719,46 +4716,21 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-      </modifiers>
-      <description>Principal formations can make up to a maximum of 50% of points of the army.</description>
-    </rule>
-    <rule id="5389-5ecd-3f87-6d4c" name="Strategy Rating &amp; Initiative (AMS)" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les formations du Monde Forge de Viridian ont une Valeur Stratégique de 3. Les formations du Monde Forge et celles des Appareils la Flotte ont une Initiative de 2+.">
+        <modifier type="set" field="description" value="Nota: Las formaciones principales pueden hacer hasta un máximo del 50% de los puntos del ejército.">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Adeptus Mechanicus Skitarii armies have a strategy rating of 3. All Knight Households, Titans and Ordinatus Majoris have an initiative rating of 1+. All other Skitarii and Auxilia formations have an initiative rating of 2+.</description>
-    </rule>
-    <rule id="f2fc-1a96-0f37-6d70" name="Transport (AMS)" hidden="false">
-      <description>see codex</description>
-    </rule>
-    <rule id="8b83-3f49-5800-6551" name="Veteran Princeps" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Princeps Veteran: Si elles sont ajoutées à un titan de combat, permet une arme tactique supplémentaire soit remplacée par une arme d&apos;appui.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Veteranprinceps: Wenn er zu einem Kampf-Titan hinzugefügt wird, erlaubt der Veteranprinceps, eine zusätzliche taktische Waffe durch eine Unterstützungswaffe zu ersetzen.">
+        <modifier type="set" field="description" value="Anmerkung: Principal Formationen können bis zu 50% der Punkte der Armee ausmachen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <description>If added to a Battle Titan allows one additional tactical weapon to be replaced by a support weapon.</description>
+      <description>Principal formations can make up to a maximum of 50% of points of the army.</description>
+    </rule>
+    <rule id="f2fc-1a96-0f37-6d70" name="Transport (AMS)" hidden="false">
+      <description>see codex</description>
     </rule>
     <rule id="5e52-43b9-62fd-745e" name="Critical Hit: Staggering Blow" hidden="false">
       <modifiers>
@@ -4792,19 +4764,24 @@ Fanatic #13</description>
     </rule>
     <rule id="f734-c566-fe89-5a57" name="Strategy Rating &amp; Initiative (AMS)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les armées des Légions Skitarii Gryphonne IV de l&apos;Adeptus Mechanicus ont une Valeur Stratégique de 2. Toutes les formations ont une Initiative de 2+ sauf indication contraire.">
+        <modifier type="set" field="description" value="Stratégie &amp; Initiative: Les armées ont une Valeur Stratégique de 2. Toutes les formations ont une Initiative de 2+ sauf indication contraire.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 2.  • Alle Formationen haben die Initiativwert 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Todas las formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4815,6 +4792,11 @@ Fanatic #13</description>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Casas de Caballeros, Titanes y Ordinatus Majoris: 1+.  • Resto de formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5721,7 +5703,7 @@ Fanatic #13</description>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Fixed Forward, *</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Inspiring, Reinforced Armour, 4 Sh</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">4</characteristic>
-        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Terrible Explosion</characteristic>
+        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Ordinatus Majoris</characteristic>
       </characteristics>
     </profile>
     <profile id="44b5-220e-a862-aac1" name="Ordinatus Majoris (Armageddon)" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">

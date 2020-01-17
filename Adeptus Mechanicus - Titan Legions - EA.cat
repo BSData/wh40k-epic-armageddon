@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c778-0b85-617e-8acb" name="Adeptus Mechanicus: Titan Legions" revision="40" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c778-0b85-617e-8acb" name="Adeptus Mechanicus: Titan Legions" revision="41" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3961,7 +3961,6 @@
       </constraints>
       <infoLinks>
         <infoLink id="c68a-6f25-7046-55cd" hidden="false" targetId="e47e-f998-76a6-c71c" type="profile"/>
-        <infoLink id="bc68-358c-0ffd-a278" hidden="false" targetId="8b83-3f49-5800-6551" type="rule"/>
         <infoLink id="6b1c-5473-d99f-b1be" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
         <infoLink id="43ea-4648-c116-fe2d" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
       </infoLinks>
@@ -4970,7 +4969,15 @@
         <infoLink id="5e44-6d45-dc7a-4cda" hidden="false" targetId="0977-e6e1-aed6-e00f" type="profile"/>
         <infoLink id="cb4a-7525-7490-c358" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
         <infoLink id="e43d-27dd-848a-7e05" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-        <infoLink id="a176-4247-77ec-fbff" hidden="false" targetId="8b83-3f49-5800-6551" type="rule"/>
+        <infoLink id="a176-4247-77ec-fbff" name="Veteran Princeps" hidden="false" targetId="b302-2524-1b68-c591" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -5811,6 +5818,11 @@ AdMech0.94</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Nota: Una lista de ejército de Legiones Titánicas debe tener al menos el 50% de sus puntos gastados en formaciones de Legio.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A Titan Legion army list must have at least 50% of their points spent on Legio Formations.</description>
     </rule>
@@ -5824,6 +5836,11 @@ AdMech0.94</description>
         <modifier type="set" field="description" value="Beachten Sie: Die Armee muss mindestens einen Kampftitan der Warlord-Klasse enthalten. Für jede vollen eintausend Punkte, die über die ersten zweitausend Punkte des Heeres hinausgehen, muss ein zusätzlicher Kampftitan hinzugefügt werden.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Nota: El ejército debe incluir al menos un Titán de Batalla de la clase de los Warlord. Debes incluir un Titán de batalla adicional por cada mil puntos completos por encima de los primeros dos mil puntos del ejército.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5858,26 +5875,6 @@ All other formations have an initiative rating of 2+.</description>
     </rule>
     <rule id="525f-18fb-6df5-3afb" name="Transport (AMTL)" hidden="false">
       <description>see codex</description>
-    </rule>
-    <rule id="8b83-3f49-5800-6551" name="Veteran Princeps" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Princeps Veteran: Si elles sont ajoutées à un titan de combat, permet une arme tactique supplémentaire soit remplacée par une arme d&apos;appui.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Veteranprinceps: Wenn er zu einem Kampf-Titan hinzugefügt wird, erlaubt der Veteranprinceps, eine zusätzliche taktische Waffe durch eine Unterstützungswaffe zu ersetzen.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>If added to a Battle Titan allows one additional tactical weapon to be replaced by a support weapon.</description>
     </rule>
     <rule id="905b-d87b-aa2a-8d14" name="Strategy Rating &amp; Initiative (AMTL)" hidden="false">
       <modifiers>
@@ -5922,6 +5919,11 @@ All formations have an initiative rating of 1+.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Alianza: Mechanicum: Un tercio de los puntos de una lista de Legio Titanicus puede ser seleccionado de una de las tres listas de Chevalier, Taghmata Omnissiah o Skitarius. Esta selección debe respetar la estructura de estas listas.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>One-third of the points in a Legio Titanicus list can be selected from one of the three Chevalier, Taghmata Omnissiah, or Skitarius lists. This selection must respect the structure of these lists.</description>
     </rule>
@@ -5937,6 +5939,11 @@ All formations have an initiative rating of 1+.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Centro de Control de Tiro: Todas las armas de artillería tienen la regla del fuego indirecto.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>All barrage weapons gain Indirect Fire.</description>
     </rule>
@@ -5950,6 +5957,11 @@ All formations have an initiative rating of 1+.</description>
         <modifier type="set" field="description" value="Verhängnis-Rakete: Darf pro Runde nicht mehr als 2 Raketen abfeuern.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Lanzamisiles Doomstrike: No puede lanzar más de 2 misiles por turno.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
