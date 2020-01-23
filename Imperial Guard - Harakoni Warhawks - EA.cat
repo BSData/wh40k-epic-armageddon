@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f4bd-d55d-bf07-aade" name="Imperial Guard: Harakoni Warhawks" revision="28" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f4bd-d55d-bf07-aade" name="Imperial Guard: Harakoni Warhawks" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -906,9 +906,9 @@
     </selectionEntry>
     <selectionEntry id="8a68-e841-d231-fd61" name="Forward Observer" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="increment" field="maxInRoster" value="1">
+        <modifier type="increment" field="maxInRoster" value="1.0">
           <repeats>
-            <repeat field="limit::points" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+            <repeat field="limit::points" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="true"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -1055,6 +1055,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Caballería Aérea: Las unidades en cualquier formación de Compañía de Huelga con transportes asignados de Valquiria pueden usar sus ranuras de transporte de forma normal. A menos que se especifique lo contrario, los vehículos ligeros cuentan como dos modelos para los propósitos de transporte.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Units in any Strike Company formation with assigned Valkyrie transports may use their transport slots as normal. Unless otherwise specified, light vehicles count as two models for the purposes of transport.</description>
     </rule>
@@ -1090,6 +1095,11 @@ You may not include more than one Commissar per formation. You may not add a Com
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Paracaídas Gravitatorio: Cualquier formación que incluya la regla especial del Paracaídas Gravitatorio gana la Caída Orbital para todas las unidades incluidas.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Any formation which includes the Grav-Chutes special rule gains Planetfall for all included units.</description>
     </rule>
@@ -1103,6 +1113,11 @@ Fanatic #13</description>
         <modifier type="set" field="description" value="Aérolargage Marauder: Bombardiers Lourds Marauder gagnent &quot;Transport&quot;. Tandis que les unités sont transportés, le Maraudeur est incapable d&apos;utiliser ses racks de bombes. Bombardiers Lourds  Marauder sont incapables de mener une attaque aérienne, et ne peuvent jamais embarquer des troupes après le début de la partie. Lorsque les troupes transportées débarquent du Marauder pendant une action d&apos;attaque au sol, le bombardier ne compte pas comme atterri, et toutes les unités d&apos;infanterie peut déployer comme si elles étaient équipées de réacteurs dorsaux.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Caída Marauder: Los Bombarderos Pesados Marauder obtienen la habilidad de Transporte. Mientras que transportan unidades, el Marauder no puede usar sus Bastidores de Bombas.  Los Bombarderos Pesados del Marauder son incapaces de llevar a cabo un Asalto Aéreo, y nunca pueden cargar tropas después de que comience el juego. Cuando las tropas transportadas desembarcan del Merodeador durante una acción de Ataque Terrestre, el Bombardero no cuenta como aterrizado, y todas las unidades de Infantería pueden desplegarse como si estuvieran equipadas con Retrorreactores.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1121,6 +1136,11 @@ Fanatic #13</description>
         <modifier type="set" field="description" value="Langsam und Stetig-isch: Kann nicht in den ersten Runde einer Schlacht verwendet werden, es sei denn, das Szenario besagt ausdrücklich etwas anderes.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Lenta y Más o Menos Tediosa: No pueden ser empleadas en el primer turno de la batalla, a no ser que se especifique lo contrario en las reglas especiales del escenario que se esté jugando.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

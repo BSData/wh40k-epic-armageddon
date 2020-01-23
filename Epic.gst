@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="32" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="33" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
   </costTypes>
@@ -2434,6 +2434,11 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+ (Rea
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Tambaleó: Sufre 1 punto adicional de daño y D3 de las unidades transportadas sufre 1 impacto.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Takes 1 additional point of damage and D3 units transported suffer 1 hit.</description>
     </rule>
@@ -2631,6 +2636,11 @@ Fearless units still count as part of a formation, and so will sometimes be “d
         <modifier type="set" field="description" value="Flammenvorlagen: Bestimmte Waffen wie die Light Inferno Gun nutzen die Flammenvorlage, wenn sie den Feind angreifen. Gehen Sie beim Auflösen dieser Angriffe folgendermaßen vor:  • 1- Positionieren Sie die Schablone so, dass sie das Ende des Laufs der Waffe berührt und die gesamte Schablone innerhalb des Schussbogens der Waffe liegt. Wenn Sie mehr als eine Vorlage verwenden, müssen sie gleichzeitig platziert werden und können sich überschneiden.  • 2- Die Schablone muss so platziert werden, dass möglichst viele gegnerische Einheiten von der Zielformation im Bogen der Waffe erfasst werden. Andernfalls kann die Schablone vom Gegner an eine andere Position in Schusslinie gebracht werden. Wenn mehrere Vorlagen verwendet werden, muss jede nachfolgende Vorlage so viele Einheiten wie möglich von denen abdecken, die nicht bereits von einer anderen Vorlage angegriffen werden.  • 3- Bestimmen Sie, wie viele Einheiten sich unter der Vorlage befinden: Eine Einheit befindet sich unter der Vorlage, wenn; (a) Jeder Teil des Modells fällt unter die Vorlage. (b) Mindestens ein gegnerisches Modell auf einem Standplatz fällt unter die Vorlage.  • 4- Wirf einen Würfel für jede Infanterieeinheit (als einen Block) und jede Fahrzeugeinheit (als zweiten Block), wobei Sie Treffer erzielen und Ersparnisse ausführen, wie dies normalerweise beim Schießen der Fall wäre.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Plantillas de Llama: Ciertas armas, como el Cañón Inferno ligero, hacen uso de la plantilla de llama cuando atacan al enemigo. Cuando resolváis estos ataques, utilizad los siguientes pasos:  • 1. Colocad la plantilla de forma que toque el extremo del cañón del arma, y con toda la plantilla dentro del arco de fuego del arma. Si utilizáis más de una plantilla, deben colocarse al mismo tiempo y pueden superponerse.  • 2. La plantilla debe ser colocada para cubrir tantas unidades enemigas de la formación objetivo como sea posible, dentro del arco del arma, o la plantilla puede ser reposicionada por el oponente a cualquier otra posición que esté en Línea de Visión. Si se utilizan varias plantillas, cada una de ellas debe cubrir el mayor número posible de unidades de las que no están siendo atacadas por otra plantilla.  • 3. Determinar cuántas unidades están bajo la plantilla. Una unidad está bajo la plantilla si; (a) Cualquier parte del modelo cae bajo la plantilla; (b) Al menos un modelo enemigo en un peana cae bajo la plantilla.  • 4. Tirar un dado por cada unidad de infantería (como un bloque) y cada unidad de vehículo (como un segundo bloque), anotando los impactos y realizando las salvaciones como se haría normalmente para el disparo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2895,8 +2905,13 @@ Units in a Bunker, Gun Emplacement, or Trench may not be barged by a war engine.
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Espíritu Máquina: Las unidades con esta regla tienen una capacidad muy limitada para llevar a cabo acciones independientes. A menos que formen parte de una formación que incluye otras unidades que no tienen esta regla, la formación sólo puede realizar las siguientes acciones: Aguantar, Atacar, Mando, Fuego Sostenido o Fuego de Supresión.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Units with this rule have a very limited capacity to carry out independent actions. Unless they are part of a formation that includes other units that do not have this rule the formation can only take the following actions – Hold, Engage, Marshall, Sustained Fire or Overwatch.</description>
+      <description>Units with this rule have a very limited capacity to carry out independent actions. Unless they are part of a formation that includes other units that do not have this rule, the formation can only take the following actions: Hold, Engage, Marshall, Sustained Fire or Overwatch.</description>
     </rule>
     <rule id="3513-6495-6d26-cb93" name="Macro-weapon" hidden="false">
       <modifiers>
@@ -3324,7 +3339,7 @@ When allocating Titan killer hits that may cause multiple points of damage, roll
     </rule>
     <rule id="f5cd-b901-e535-2345" name="Tunneller" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Tuneladores: Las formaciones en las que todas las unidades sean tuneladoras, o estén embarcadas en transportes tuneladores pueden dejarse fuera de la mesa y pueden aparecer al comienzo del segundo o posteriores turnos. Coloca la formación en tu borde de la mesa al mismo tiempo que las naves espaciales. Las unidades transportadas también deben mostrarse claramente.  •  Anota en secreto el punto de entrada de los tuneladores, de la misma manera que harías con la posición de una caída orbital. También debes anotar en secreto el turno de llegada. Si el punto de llegada está en tu mitad de la mesa, puedes elegir el segundo turno, o posterior. Si el punto de llegada está en la mitad del oponente, sólo puedes elegir un turno a partir del tercero.  •  Coloca a los tuneladores al comienzo del turno designado, antes de colocar las formaciones con teletransporte, en el lugar que habías anotado. Las unidades a bordo de transportes pueden desembarcar en ese mismo momento. El despliegue como tuneladores no provoca Fuego de Supresión (aunque desembarcar de transportes sí lo hará).  •  Si el punto designado para el despliegue contiene terreno intransitable, unidades amigas o zonas de control enemigas, se asume que los sensores de los tuneladores permiten corregir la posición. El jugador oponente puede elegir el lugar legal más cercano posible para que se produzca el despliegue.  •  Coloca cada unidad en el punto designado, o a 5 cm de otra unidad previamente colocada, como mucho a 15 cm del punto inicial, y en la mitad apropiada de la mesa.  •  La formación desplegada de esta forma puede llevar a cabo su acción en el mismo turno en el que llega a la mesa.">
+        <modifier type="set" field="description" value="Tuneladora: Las formaciones en las que todas las unidades sean tuneladoras, o estén embarcadas en transportes tuneladores pueden dejarse fuera de la mesa y pueden aparecer al comienzo del segundo o posteriores turnos. Coloca la formación en tu borde de la mesa al mismo tiempo que las naves espaciales. Las unidades transportadas también deben mostrarse claramente.  •  Anota en secreto el punto de entrada de los tuneladores, de la misma manera que harías con la posición de una caída orbital. También debes anotar en secreto el turno de llegada. Si el punto de llegada está en tu mitad de la mesa, puedes elegir el segundo turno, o posterior. Si el punto de llegada está en la mitad del oponente, sólo puedes elegir un turno a partir del tercero.  •  Coloca a los tuneladores al comienzo del turno designado, antes de colocar las formaciones con teletransporte, en el lugar que habías anotado. Las unidades a bordo de transportes pueden desembarcar en ese mismo momento. El despliegue como tuneladores no provoca Fuego de Supresión (aunque desembarcar de transportes sí lo hará).  •  Si el punto designado para el despliegue contiene terreno intransitable, unidades amigas o zonas de control enemigas, se asume que los sensores de los tuneladores permiten corregir la posición. El jugador oponente puede elegir el lugar legal más cercano posible para que se produzca el despliegue.  •  Coloca cada unidad en el punto designado, o a 5 cm de otra unidad previamente colocada, como mucho a 15 cm del punto inicial, y en la mitad apropiada de la mesa.  •  La formación desplegada de esta forma puede llevar a cabo su acción en el mismo turno en el que llega a la mesa.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3649,9 +3664,14 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Aviones VTOL: Una unidad con esta habilidad se comporta como un avión, pero cuando aterriza (es decir, después de aterrizar o realizar una acción de asalto aéreo) cuenta como un Gravitatorio con un movimiento de 35 cm.  • Mientras aterriza se comporta como una unidad de tierra en todos los aspectos (por ejemplo, puede realizar maniobras de Retirada), pero puede desengancharse al final del turno, en cuyo caso vuelve a ser una aeronave normalmente. ">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A unit with this ability behaves like an aircraft, but when landed (i.e. after landing or performing an air assault action) counts as a Skimmer with a move of 35cm.
-While landed it behaves as a ground unit in all respects (for example, it may perform Withdrawal manoeuvres), but it may disengage at the end of the turn, in which case it reverts back to being an aircraft as normal. </description>
+While landed it behaves as a ground unit in all respects (for example, it may perform Withdrawal manoeuvres), but it may disengage at the end of the turn, in which case it reverts back to being an aircraft as normal.</description>
     </rule>
     <rule id="493f-82e2-f0f5-28d4" name="Power of the Waaagh!" hidden="false">
       <modifiers>
@@ -3787,6 +3807,11 @@ Automaton units killed in an assault count for the purposes of working out its r
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Garras de Escombros: No puede marchar. El Titán cuenta las ruinas y los bosques como terreno abierto.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>May not undertake the March order. The Titan counts ruins and woods as open terrain.</description>
     </rule>
@@ -3807,6 +3832,11 @@ Automaton units killed in an assault count for the purposes of working out its r
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Carnero de Energía: Las unidades con &quot;Bípode&quot; dañado por esta arma son destruidas instantáneamente.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Units with &quot;walker&quot; damaged by this weapon are instantly destroyed.</description>
     </rule>
@@ -3825,6 +3855,11 @@ Automaton units killed in an assault count for the purposes of working out its r
         <modifier type="set" field="description" value="Harpunenrakete: Eine Kriegsmaschine, die durch diese Waffe Schaden erleidet, schließt sich Ihrer Seite an.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Misil Arpón: Un Máquina de Guerra que sufre daños se une a su lado.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3867,6 +3902,11 @@ Automaton units killed in an assault count for the purposes of working out its r
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Incendio en Cascada: Sufre un punto de daño adicional. Debe tirar de nuevo para ver si ese punto de FD es también Crítico.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Suffers an extra point of DC. Must roll again to see if that point of DC is also Critical.</description>
     </rule>
@@ -3880,6 +3920,11 @@ Automaton units killed in an assault count for the purposes of working out its r
         <modifier type="set" field="description" value="Landungs-Brokk&apos;n: Alle Truppen, die in der Landungs-Brokk&apos;n befördert werden, müssen innerhalb von 5 cm vom Landungs-Brokk&apos;n oder von 5 cm von einer anderen Einheit derselben Formation aussteigen. Alle Einheiten müssen innerhalb von 15 cm vom Landungs-Brokk&apos;n aussteigen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Drop Kan: Las tropas transportadas en el Drop Kan (Lata Caída / Caja Caída?) deben desembarcar a menos de 5cm del Drop Kan o a menos de 5cm de otra unidad de la misma formación, y todas las unidades deben desembarcar a menos de 15cm del Drop Kan.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3936,6 +3981,11 @@ In addition, once per turn the Eldar player may attempt to retain the initiative
         <modifier type="set" field="description" value="Automaten: Formationen, die vollständig aus Einheiten mit der Automatenregel bestehen, dürfen nur Marshall-, Overwatch- und Dauerfeueraktionen ausführen. Sie können auch keine Ziele in den Epic-Turnierspielregeln erfassen.  • Formationen, die mindestens eine Einheit ohne Automatenregel enthalten, erhalten keine Blast-Marker, wenn Automaten zerstört werden. Dies beinhaltet den zusätzlichen Blast-Marker aus dem ersten Opfer eines Kreuzfeuers und für Einheiten, die aufgrund einer Bewegung außer Gefecht gesetzt wurden. Wenn Automaten von einer Waffe mit der Unterbrechungsregel getroffen werden, führt dies nicht zu einer Blast-Marker.  • Bei einem Angriff getötete Automaten zählen nicht für die Ermittlung des Ergebnisses.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Autómatas: Las formaciones que están compuestas completamente de unidades con Autómatas sólo pueden realizar acciones de Mando, fuego de supresión y fuego sostenido. Tampoco pueden controlar objetivos en las reglas de juego del torneo Epic.  • Las formaciones que incluyen al menos una unidad sin Autómatas no reciben un Marcador de Explosión cuando una unidad con Autómatas es destruida; esto incluye el Marcador de Explosión extra de la primera baja de un fuego cruzado y para las unidades destruidas por estar fuera de la formación después de un movimiento. Además, si una unidad de Autómatas es impactada por un arma con Disrupción no inflige un Marcador de Explosión. Finalmente, no se cuentan las unidades con Automatas que se pierden en un asalto cuando se calcula quién ha ganado el combate.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4316,6 +4366,11 @@ A Knight may not use its shield in two circumstances:
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Campana de la Devoción: Cada unidad Demoníaca (incluyendo Máquinas Demoníacas, Príncipes Demonios, y demonios grandes y menores) que haga un movimiento que pase dentro de los 45cm de la Campana de la Devoción será impactada en un 5+. Las formaciones que son &quot;atacadas&quot; de esta manera reciben un marcador de explosión por estar bajo fuego.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Each Daemonic unit (including Daemon Engines, Daemon Princes, and greater &amp; lesser daemons) that makes a move that passes within 45cm of the Devotional Bell will be hit on a 5+. Formations that are &apos;attacked&apos; in this manner receive a blast marker for coming under fire.</description>
     </rule>
@@ -4652,6 +4707,11 @@ Note that units with this ability confer the Coordinated Fire ability to any for
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Personal de Apoyo: Cada unidad de personal de apoyo le da al Inquisidor o a una unidad de secuaces guerreros una repetición por turno, que puede usarse para repetir cualquier tirada de ataque o salvación de blindaje.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Each unit of support staff gives the Inquisitor or one unit of warrior henchmen one re-roll per turn, which can be used to re-roll any attack dice or armour save.</description>
     </rule>
@@ -4809,6 +4869,11 @@ If, at the end of the movement, a unit is out of formation it is destroyed.</des
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Ponderous: Las unidades con esta regla sólo pueden hacer un único movimiento de retirada cuando están desmoralizadas, no los dos habituales.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Units with this rule may only make a single withdrawal move when broken, not the usual two.</description>
     </rule>
@@ -4949,6 +5014,11 @@ netea-tournament-pack-2017-03-21</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Tuneladores: El ejército utiliza los Tuneladores para transportar de forma segura a las tropas bajo tierra a los lugares clave del campo de batalla:  • Los tuneladores se despliegan en el borde de la mesa antes de la batalla, al mismo tiempo que las naves espaciales. No interactúan directamente en el juego hasta que salen a la superficie.  • Anote en secreto al principio el turno en el que saldrán a la superficie, así como las coordenadas (de la punta de uno de los taladros) en las que quiere que salgan a la superficie, de la misma manera que harías con la posición de una caída orbital.  • Si los tuneladores aparecen en su mitad de la mesa, sólo pueden hacerlo a partir del segundo turno, y si planean emerger en la mitad de la mesa enemiga, sólo pueden hacerlo a partir del tercer turno.  • Las tuneladores emergentes se colocan al comienzo del turno, antes de la tirada de estrategia. Una vez colocadas las tuneladores, el jugador puede desembarcar sus tropas.  • No hay dispersión, pero si emergen bajo los pies de cualquier tipo de unidad (amiga o enemiga) o en una zona de control enemiga, la unidad es colocada por el oponente en el área abierta más cercana que pueda recibirla.  • Si hay más de una unidad de tuneladora que emerge, entonces después de la colocación de la primera, las demás se colocan todas a un máximo de 15cm de ella, quedando en formación.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The army uses Tunnellers to safely carry troops underground to key battlefield locations:
  - Tunnellers are deployed on their table edge before the battle, at the same time as spacecraft. They do not interact directly in the game until they surface.
@@ -5071,8 +5141,13 @@ Dank gebührt Lexicanum.de</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Obstinado: Las unidades obstinadas son difíciles de derrotar por asalto. Su naturaleza también hace que se reorganizarse más rápidamente que otras unidades para volver a la batalla!  • Una formación Obstinada se desmoraliza cuando ha acumulado un número de Marcadores de Explosión igual a (1 + número de unidades).  • Cuando una formación Obstinada pierde un asalto, sufre un impacto adicional menos. Esto puede reducir las pérdidas a cero al resolverse. ">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Stubborn units are hard to defeat by assault. Their nature also makes them rally more quickly than the other units to return to the battle!
+      <description>Stubborn units are hard to defeat by assault. Their nature also makes them rally more quickly than other units to return to the battle!
 A Stubborn formation is broken when it has accumulated a number of BMs equal to (1 + number of units).
 When a Stubborn formation loses an assault, they suffer one less additional hit. This can reduce the losses to zero upon resolution.</description>
     </rule>
@@ -5091,6 +5166,11 @@ When a Stubborn formation loses an assault, they suffer one less additional hit.
         <modifier type="set" field="description" value="Feuerkontrollzentrum: Kann einmal pro Zug einen einzelnen fehlgeschlagenen Trefferwurf für eine der Titanwaffen wiederholen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Centro de Control de Tiro: Repita un fallido tirar para impactar para uno de los sistemas de armas del Titán por turno.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5163,7 +5243,7 @@ When a Stubborn formation loses an assault, they suffer one less additional hit.
     </rule>
     <rule id="c782-524b-373d-a6c4" name="Critical Hit: Lord of Battle" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Daño Crítico: DesmandarseMueve al Titán 3D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y sufrirá 1 punto de daño. Las unidades atravesadas sufrirán un impacto con un 4+ en 1D6.">
+        <modifier type="set" field="description" value="Daño Crítico: Señor de la Batalla: Mueve al Titán 3D6cm en una dirección aleatoria. Si mueve hasta otra unidad que no pueda atravesar, o hasta terreno intransitable, se detendrá y sufrirá 1 punto de daño. Las unidades atravesadas sufrirán un impacto con un 4+ en 1D6.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -5213,9 +5293,14 @@ When a Stubborn formation loses an assault, they suffer one less additional hit.
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Banelord: Tira un D6 en la Fase de Finalización de cada turno:  • 1: la unidad es destruida, todas las unidades dentro de los 5cm sufren un impacto en una tirada de 5+.  • 2-3: Mueve 3D6cm en una dirección aleatoria. Si este movimiento lleva a la unidad a un terreno intransitable o a otra unidad que no puede moverse, entonces se detiene cuando entra en contacto con la obstrucción y sufre un punto extra de daño. Si la unidad se topa con alguna unidad o la sobrepasa, entonces tendrá un impacto en una tirada D6 de 4+.  • 4-6: el daño ha sido reparado.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Roll a D6 in the end phase of each turn: 
-1: the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+
+1: the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+.
 2-3: Moves 3D6cm in a random direction. If this move takes the unit into impassable terrain or another unit it can’t move over then it stops when it contacts the obstruction and suffers an extra point of damage. If the unit rampages into or over any units then they will take a hit on a D6 roll of 4+.
 4–6: the breach has been repaired.</description>
     </rule>
@@ -5241,7 +5326,7 @@ When a Stubborn formation loses an assault, they suffer one less additional hit.
     </rule>
     <rule id="424c-8588-1d5a-5a5d" name="Knight Squadron Support" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Appui Escadron de Chevaliers: Bien que les Escadron de Chevaliers sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Avions et Soutien. Pour sélectionner l&apos;une de ces &quot;Knight Squadron Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres unités sont prises.">
+        <modifier type="set" field="description" value="Appui Escadron de Chevaliers: Bien que les Escadron de Chevaliers sont Formations d’Appui, leur coût supplémentaire (indiquée entre parenthèses) fait partie des 33% qui peut être dépensés en Avions et Support Lourd. Pour sélectionner l&apos;une de ces &quot;Knight Squadron Support Points Total&quot; article doit être ajouté à la liste. Il ne doit être sélectionné une fois et augmente automatiquement sa valeur si d&apos;autres unités sont prises.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -5251,8 +5336,13 @@ When a Stubborn formation loses an assault, they suffer one less additional hit.
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Apoyo Escuadrón de Caballeros: Aunque las Escuadras de Caballeros son formaciones de apoyo, su coste adicional (mostrado entre paréntesis) es parte del 33% que puede ser gastado en Aviones y Soporte Pesado. Para seleccionar cualquiera de ellos se debe añadir a la lista el &quot;Total de Puntos de Apoyo Escuadra de Caballeros&quot; (Knight Squadron Support Points Total). Sólo es necesario seleccionarlo una vez y su valor se actualizará automáticamente si se toman más unidades.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Although Knight Squadrons are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Support. To select any of these the &quot;Knight Squadron Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further units are taken.</description>
+      <description>Although Knight Squadrons are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Heavy Support. To select any of these the &quot;Knight Squadron Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further units are taken.</description>
     </rule>
     <rule id="540a-d1d6-cc8c-f79b" name="Critical Hit: Weapons Damaged" hidden="false">
       <modifiers>
@@ -5276,7 +5366,7 @@ When a Stubborn formation loses an assault, they suffer one less additional hit.
     </rule>
     <rule id="70df-119b-a27f-5043" name="Critical Hit: Gorgon" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Touche Critique: Gorgone:Immobilisé et D6 des unités transportées sont touchées. La prochaine touche critique détruit la Gorgone.">
+        <modifier type="set" field="description" value="Touche Critique: Gorgone: Immobilisé et D6 des unités transportées sont touchées. La prochaine touche critique détruit la Gorgone.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -5306,13 +5396,18 @@ When a Stubborn formation loses an assault, they suffer one less additional hit.
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Actos de Fe: Cualquier compañía de Adepta Sororitas que contenga unidades con la regla especial de Fieles (Faithful) puede elegir realizar un Acto de Fe cuando realice una tirada de chequeo de acción.  • La formación recibe una penalización de -1 a esta tirada (que es acumulativa con cualquier otro modificador). Si se pasa el chequeo de acción, la formación realiza la acción elegida como de costumbre. Además, todas las unidades de la formación ganan las reglas especiales de Coraje y Salvación Invulnerable hasta la fase final.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Any Adeptus Sororitas company containing units with the Faithful special rule may choose to perform an Act of Faith when it takes an action test roll.
 The formation receives a -1 penalty to this roll (which is cumulative with any other modifiers). If the action test is passed, the formation carries out the chosen action as usual. In addition all units in the formation gain the Fearless and Invulnerable Save special rules until the end phase.</description>
     </rule>
     <rule id="a3a6-43f5-fb9a-d342" name="Critical Hit: Aeonic Orb" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Daño Crítico: Orbe EónicoCentra la plantilla de 12cm en la unidad. Cada unidad cubierta sufre el equivalente a un ataque de artillería de potencia de fuego “3PA, MA”.">
+        <modifier type="set" field="description" value="Daño Crítico: Orbe Eónico: Centra la plantilla de 12cm en la unidad. Cada unidad cubierta sufre el equivalente a un ataque de artillería de potencia de fuego “3PA, MA”.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -5337,12 +5432,22 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Necrón: La unidad sufre un impacto automático. El resto de las unidades dentro de los 5cm sufren un impacto en un rollo de 5+. Se permiten las salvaciones de forma normal.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Touche Critique: Nécron: L&apos;unité reçoit une touche automatique. Toutes les autres unités dans un rayon de 5 cm subissent une touche sur un jet de 5+. Les sauvegardes sont autorisées comme d&apos;habitude.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The unit suffers an automatic hit. All other units within 5cm suffer a hit on a roll of 5+. Saves are allowed as normal.</description>
     </rule>
     <rule id="0d9c-a974-e817-45ee" name="Critical Hit: C&apos;Tan" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Daño Crítico: C’tanLa unidad es destruida, y todas las unidades a 5cm o menos sufren un impacto de macro-arma con un 4+.">
+        <modifier type="set" field="description" value="Daño Crítico: C’tan: La unidad es destruida, y todas las unidades a 5cm o menos sufren un impacto de macro-arma con un 4+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -5432,6 +5537,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Lanzador de Munición Variable: Puede disparar misiles Buscadores, Submunición o Inteligentes en cada turno.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>May fire either Seeker, Submunition or Tracer Missiles per turn.</description>
     </rule>
@@ -5472,6 +5582,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Drones en Red: Los vehículos con la mejora de los Drones en Red obtienen la habilidad de Líder.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Vehicles with the Networked Drones upgrade gain the Leader ability.</description>
     </rule>
@@ -5487,6 +5602,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Drones de T&apos;au: Las formaciones que contienen Drones más al menos una unidad no Drone reducen a la mitad el número de marcadores de explosión adicionales que reciben debido a las unidades Drone destruidas (redondeando las fracciones a la baja); además, a los Drones en tales formaciones se les puede asignar cualquier tipo de impacto (AP y AT). Los Drones no pueden elegir ignorar recibir impactos, y los impactos deben asignarse a ellos siempre que sea posible, sin embargo los Drones que forman parte de una formación con toda la infantería no pueden ser objetivo del fuego AT. Las formaciones que consisten enteramente en Drones siguen las reglas normales.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Formations containing Drones plus at least one non-Drone unit halve the number of additional blast markers they receive because of destroyed Drone units (rounding fractions down); additionally, Drones in such formations may be allocated any type of hit (AP and AT). Drones may not elect to ignore taking hits, and hits must be allocated to them whenever possible, however Drones which are part of an all-infantry formation may not be targeted by AT fire. Formations consisting entirely of Drones follow the normal rules.</description>
     </rule>
@@ -5500,6 +5620,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <modifier type="set" field="description" value="Kritischer Treffer: Verwundet: Wirf einen W6 und konsultiere die folgende Tabelle:  • 1: Jede andere Einheit im Basiskontakt erleidet einen Angriff von MW6 +.  • 2-5: Die Kreatur verliert 1 DC.  • 6: Die Kreatur wird sofort getötet.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Herida: Tira un D6 y consulta la tabla de abajo:  • 1: Cualquier otra unidad en contacto con la base sufre un ataque MA6+.  • 2-5: La criatura pierde 1FD.  • 6: La criatura muere instantáneamente.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5520,6 +5645,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Comandante en Jefe Dominatrix: Mientras haya al menos una Dominatrix viva en el ejército, el jugador puede repetir un chequeo de iniciativa fallido (de cualquier tipo) una vez por turno.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>As long as there is at least one Dominatrix alive in the army, the player may re-roll one failed initatve test (of any type) once per turn.</description>
     </rule>
@@ -5533,6 +5663,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <modifier type="set" field="description" value="Der Hunger: Alle Tyranidenformationen erhalten einen +1-Modifikator für ihren Aktionstestwurf für eine Engage-Aktion oder zum Sammeln.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="El Hambre: Todas las formaciones Tiránidos reciben un modificador +1 a su tirada de chequeo de acción si están tirando para una tirada de Ataque o Reorganización.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5550,6 +5685,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="El Rápido y el Deslizándose: Las máquinas de guerra, los vehículos blindados y los vehículos ligeros de los Tiránidos pasan automáticamente los chequeos de terrenos difíciles. El terreno intransitable sigue siendo intransitable para ellos.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Tyranid war engines, armoured vehicles and light vehicles automatically pass difficult terrain tests. Impassable terrain is still impassable to them.</description>
     </rule>
@@ -5563,6 +5703,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <modifier type="set" field="description" value="Schreiten: Kann jede Einheit oder unpassierbares Gelände überqueren, die niedriger als 3 cm und bis zu 2 cm breit ist.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Zancadas: Puede pisar cualquier mueble o terreno intransitable de menos de 3 cm y hasta 2 cm de ancho.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5658,6 +5803,11 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         <modifier type="set" field="description" value="Mehrfachraketenwerfer: Die Reichweite wird nicht verdoppelt, wenn der Mehrfachraketenwerfer indirekt abfeuern wird, noch gibt es eine Mindestreichweite.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Lanzacohetes Múltiple: El alcance no se duplica cuando el Sistema de Multi-Rockets usa la regla de Fuego Indirecto, ni hay un alcance mínimo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
