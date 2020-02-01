@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c403-fa36-57fa-7c2f" name="Chaos: Thousand Sons" revision="33" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c403-fa36-57fa-7c2f" name="Chaos: Thousand Sons" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4220,6 +4220,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Invocación de Demonios: La invocación de los demonios puede hacerse de dos maneras. Dos modos no pueden ser combinados en la misma ronda por la misma formación:  •   • 1 °) Invocación a través del Pacto Demoníaco durante la fase de teletransportación:  • El jugador invoca entonces una formación de Demonios Menores o un Gran Demonio. Estos demonios aparecen a menos de 15 cm de la unidad invocadora con la misma afiliación que el tipo de demonios invocados. Esta formación de demonios permanece en juego hasta el final del juego o hasta su destrucción.  • Esta formación se convierte inmediatamente en una formación por derecho propio y sigue las reglas de activación, cohesión, etc.  •   • 2 °) Dejar que los demonios aparezcan a través del Foco Demoníaco (en el momento de la activación de la formación invocadora, antes de que ésta haga su rodaje de activación).  • 1D3 o 2D3 Los demonios menores afiliados a la formación invocadora son entonces convocados en la formación. Todos los demonios así invocados deben colocarse a menos de 5cm de la unidad invocadora con la misma afiliación que el tipo de demonios invocados. Esta invocación es única (la formación ya no podrá invocar a los demonios de esta forma durante el resto del juego), los demonios permanecen unidos a la formación invocadora hasta el final del juego, o hasta que son destruidos.  • Los demonios y la formación se convierten así en una misma formación según todas las reglas de cohesión, activación, etc.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The invocation of the daemons can be done via two modes. Two modes can not be combined in the same round by the same formation:
 1 °) Invocation via the Daemonic Pact during the teleportation phase:
@@ -4246,6 +4251,11 @@ The daemons and the formation thus becoming one and the same formation according
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Reglas para los Demonios de Todos los Tipos: Sacrificable: algunas unidades son percibidas por sus aliados como &quot;sacrificables&quot;. Ya sea porque fueron creadas especialmente para sacrificarse a sí mismas, o porque estas unidades simplemente no tienen valor a los ojos de sus aliados. Las unidades sacrificables no generan un marcador de explosión cuando son destruidas. Esto incluye los efectos especiales que crean marcadores de explosión cuando se apunta a una unidad de sacrificio, es decir, cuando se asignan impactos a la unidad. Sin embargo, las unidades que se sacrifican cuentan en el cálculo de pérdidas cuando se resuelve un asalto.  • Inestable: Si los demonios están desmoralizados, son destruidos.  • Sólo pueden disputar objetivos, no controlarlos.  • La teletransportación puede ser hasta 15 cm de una formación con un Pacto Demoníaco, y no reciben un marcador de explosión debido a la &quot;teletransportación&quot;.  • Sólo se puede invocar una formación de demonios por formación invocadora. Una formación teletransportadora no puede invocar demonios a través de un Pacto Demoníaco (pero puede hacerlo a través de un Portador del Icono). Los Demonios invocados siempre pertenecen a la misma facción que la formación invocadora.  • Los jugadores sólo pueden invocar un Gran Demonio por facción. Por lo tanto, si ya has invocado a un Devorador de Almas, no puedes invocar a otro hasta que este Gran Demonio haya sido eliminado del juego.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Sacrificial: some units are perceived by their allies as &quot;sacrificable&quot;. Either because they were specially created to sacrifice themselves, or because these units simply do not have value in the eyes of their allies. Sacrificial units do not generate a blast marker when destroyed. This includes special effects that create blast markers when a Sacrificial unit is targeted, i.e. when hits are allocated to the unit. However, Sacrificial units count in calculating losses when resolving an assault.
 Unstable: If the daemons are broken, they are destroyed.
@@ -4261,8 +4271,13 @@ Players are only allowed to summon one Major Daemon per Faction. So if you have 
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Cábala de Hechiceros: Las unidades de la Cábala de Hechiceros en un ejército de Mil Hijos vienen con la capacidad del Pacto Daemónico; una formación que contenga una unidad de la Cábala de Hechiceros puede convocar a los demonios al campo de batalla. Si la unidad de la Cábala de Hechiceros es destruida, la formación pierde esta habilidad. Además, añade un demonio menor a la reserva de demonio menor para cada unidad de la Cábala de Hechiceros en el ejército.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Cabal of Sorcerer units in a Thousand Sons army come with the Daemonic Pact ability, a formation containing a Cabal of Sorcerers unit may summon daemons to the battlefield. If the Cabal of Sorcerers unit is destroyed the formation loses this ability. In addition add one lesser daemon to the lesser daemon pool for each Cabal of Sorcerers unit in the army.</description>
+      <description>Cabal of Sorcerers units in a Thousand Sons army come with the Daemonic Pact ability; a formation containing a Cabal of Sorcerers unit may summon daemons to the battlefield. If the Cabal of Sorcerers unit is destroyed the formation loses this ability. In addition add one lesser daemon to the lesser daemon pool for each Cabal of Sorcerers unit in the army.</description>
     </rule>
     <rule id="84d4-b717-99e0-a83b" name="Critical Hit: Warp Blast" hidden="false">
       <modifiers>
@@ -4274,6 +4289,11 @@ Players are only allowed to summon one Major Daemon per Faction. So if you have 
         <modifier type="set" field="description" value="Kritischer Treffer: Warp Blast: Zerstört; alle Einheiten innerhalb von 5 cm erhalten einen MW Treffer auf einem Wurf von 6 getroffen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Explosión de Disformidad: Destruida; cada unidad en un radio de 5 cm recibe un impacto de MA con una tirada de 6.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4316,6 +4336,11 @@ Players are only allowed to summon one Major Daemon per Faction. So if you have 
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Garra de Muerte: Después de que la garra de muerte aterrice, su Deathwind ataca a todas las unidades enemigas en un radio de 15cms. Cada formación enemiga atacada recibe un Marcador de Explosión por estar bajo fuego, y un Marcador de Explosión adicional por cada baja como es normal. Entonces cualquier tropa llevada en la Garra de Muerte debe desembarcar a menos de 5cms de la Garra de Muerte o a menos de 5cms de otra unidad de la misma formación que ya ha desembarcado, siempre que todas las unidades se coloquen a menos de 15cms de la Garra de Muerte. El modelo de garra de muerte sólo se usa como un marcador y no cuenta como una unidad en ningún aspecto. No puede ser usado para reclamar fuego cruzado y el valor del blindaje es sólo para propósitos comparativos.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>After the Dreadclaw lands, its Deathwind attacks all enemy units within 15cms. Each enemy formation attacked receives a Blast marker for coming under fire, and an extra Blast marker for each casualty as normal. Then any troops carried in the Dreadclaw must disembark within 5cms of the drop pod or within 5cms of another unit from the same formation that has already landed, so long as all units are placed within 15cms of the drop pod. The Dreadclaw model is only used as a marker and does not count as a unit in any respect. It may not be used to claim crossfire and the armour value is for comparative purposes only.
 
@@ -4337,6 +4362,13 @@ Fanatic #13</description>
       <description>Thousand_Sons_Army_List_6.1.2</description>
     </rule>
     <rule id="533b-9bbc-5c68-35ff" name="Sorcerer Cabal" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Cábala de Hechiceros: Reemplaza la unidad de la formación que incluye el personaje Hechicero por una unidad del Señor Hechicero.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <description>Replaces the unit in the formation that includes the Sorcerer character with a Sorcerer Lord unit.</description>
     </rule>
     <rule id="cdf2-c064-f3e0-7f32" name="Strategy Rating &amp; Initiative (TS)" hidden="false">
@@ -4356,6 +4388,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Aviones de Mil Hijos (Alas de Condenación y Señores del Fuego): 2+. Resto de formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Thousand Sons armies have a strategy rating of 5. Thousand Sons Aircraft formations (Doomwings and Firelords) have an initiative of 2+. All other formations have an initiative rating of 1+.</description>
     </rule>
@@ -4364,6 +4401,11 @@ Fanatic #13</description>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Unidades Invocadas: Las formaciones que compran la actualización del Pacto Demoníaco pueden invocar a los demonios en el campo de batalla. Para poder invocar demonios, los jugadores deben comprar primero una única Reserva de Demonios de la que todas las formaciones con la actualización del Pacto Demoníaco invocarán. Los demonios de la Reserva de Demonios se compran y se anotan sólo como demonios menores o mayores, no por su facción. La facción de la formación que invoca dicta qué tipos de demonios pueden ser invocados. Los jugadores deben anotar el contenido de su Reserva de Demonios o utilizar fichas para indicar el número de cada demonio mayor o menor que tienen disponible para invocar durante una partida. El oponente del jugador del Caos siempre puede ver el número de demonios menores y mayores que quedan en la Reserva de Demonios. La Reserva de Demonios se mantiene fuera del tablero y los demonios se eliminan de él a medida que las formaciones invocan a los demonios sobre el tablero.  • Al comienzo de la acción de esa formación, antes de que se haga la tirada de chequeo de acción, la formación puede invocar unidades demoníacas de la Reserva de Demonios. Invocar permite llamar a 2D3 puntos de invocación de unidades demoníacas en el campo de batalla (el número de puntos de invocación que cuesta invocar a una unidad estará listado en su hoja de datos, pero como regla general los demonios mayores cuestan 8 puntos de invocación y todas las demás unidades cuestan 1 punto de invocación cada una). Los puntos de invocación deben usarse para invocar unidades demoníacas de la Reserva de Demonios y las unidades invocadas se ponen en juego inmediatamente. Si por alguna razón los puntos de invocación generados no se usan, se pierden y no se pueden trasladar a los turnos siguientes. Sólo puedes invocar a tantos demonios como te queden en la Reserva de Demonios. Las unidades demoníacas sobrantes pueden ser invocadas durante un turno posterior. Las unidades demoníacas que son destruidas se retiran del juego y no se vuelven a poner en la Reserva de Demonios. Las formaciones desmoralizadas o que no hayan comprado un Pacto Demoníaco no pueden convocar a los demonios.  • Los jugadores sólo pueden tener un demonio mayor de una facción dada en el ejército en el tablero a la vez. Por ejemplo, si ya tienes un Devorador de Almas invocado sobre el tablero, no puedes invocar a otro Devorador de Almas hasta que ese primer demonio mayor haya sido retirado del juego. Las unidades invocadas deben colocarse con su peana a menos de 5 cm de cualquier unidad no demoníaca de su formación, (es decir, no se puede colocar una &quot;cadena&quot; de unidades invocadas). No pueden ponerse en la Zona de Control de una unidad enemiga o en terreno intransitable. El tipo de unidad que puede ser invocada depende de la facción de la formación que la invoca.  • Las unidades invocadas cuentan como parte de la formación para todos los propósitos de las reglas mientras permanezcan en el campo de batalla. La única excepción a las reglas normales es que cuando una unidad invocada es destruida, no causa que se coloque un marcador de explosión en la formación. Por lo demás, se cuentan como unidades normales, y se incluyen cuando se calcula si una formación supera en número a un oponente en un asalto o se rompe por los Marcadores de Explosión, etc. Nota que los demonios que mueren en un asalto cuentan para el número de unidades muertas por el enemigo cuando se calculan los modificadores a la tirada de dados del resultado. Si una formación pierde un asalto, se eliminan los impactos adicionales de la formación antes de que se considere rota y se eliminen todas las demás unidades invocadas.  • Las unidades invocadas permanecen en el campo de batalla hasta la fase de finalización del turno en el que son invocadas. Al final de la fase de reagrupación, después de que las formaciones hayan intentado reagruparse, todas las unidades convocadas en la formación se retiran del tablero y se colocan de nuevo en la Reserva de Demonios a menos que la formación tenga una unidad con Foco Demoníaco. Los Demonios mayores que son devueltos a la Reserva de Demonios mantienen el mismo FD que tenían cuando dejaron el campo de batalla. No se curan de nuevo a la totalidad del FD, así que cuando sean convocados de nuevo tendrán ese mismo FD. Las unidades invocadas que son destruidas no se devuelven a la Reserva de Demonios. Nótese que esto puede llevar a que la formación se desmoralice si el número de Marcadores de Explosión en la formación es mayor que el número de unidades que quedan en juego después de que las unidades invocadas hayan sido retiradas. Cuando una formación se desmoraliza, las unidades invocadas en la formación se pierden en la disformidad y se consideran destruidas. No vuelven a la Reserva de Demonios.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4378,6 +4420,11 @@ Summoned units remain on the battlefield until the end phase of the turn in whic
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Unidades Invocadas: Las formaciones que compran la actualización del Pacto Demoníaco, o las unidades con esta habilidad, permiten al jugador del Caos invocar demonios al campo de batalla. Para invocar demonios el jugador también debe tener una reserva demoníaca desde la que invocar. Esta reserva contiene dos secciones, una para demonios menores y otra para grandes demonios y no es específica de una facción. El tamaño de dichas reservas debe ser visible para todos los jugadores en todo momento y se sugiere que se utilicen fichas o dados para indicar el tamaño de cada reserva disponible. A medida que los demonios son convocados, la reserva debe ser cambiada para reflejar su tamaño actual.  • Para invocar a los demonios, el jugador del Caos elige una formación con un pacto demoníaco y declara su intención de invocar antes de que se realice cualquier tirada de acción. El jugador tira entonces 2D3 para generar el número de puntos de invocación disponibles para esta formación. El número de puntos necesarios para invocar cada tipo de unidad demoníaca se anotará en su hoja de datos. La formación puede entonces invocar demonios hasta el número de puntos de invocación generados, hasta el número de puntos que queden en la reserva demoníaca. Los puntos que no se utilicen se perderán. La facción (debe ser anotada en la creación de la lista) de la formación que invoca determina qué tipo de demonios pueden ser invocados.  • Nótese que el Caos Absoluto puede invocar Bestias Demoníacas / cualquier Gran Demonio como es normal, o cualquier otro Demonio Menor por el doble de los puntos de invocación habituales.  • Los jugadores sólo pueden tener un gran demonio para una facción dada en la mesa a la vez. Las unidades invocadas deben colocarse a menos de 5 cm de una unidad no invocada en la formación que invoca. No pueden colocarse en zonas de control o terreno intransitable del enemigo.  • Las unidades invocadas pasan a formar parte de la formación que las invoca para todos los propósitos de las reglas, mientras permanezcan en el campo de batalla. Las unidades invocadas no causan marcadores de explosión cuando son destruidas, sin embargo las unidades demoníacas muertas en un asalto cuentan para el número de unidades muertas cuando se calculan los modificadores para la resolución del asalto. Las unidades invocadas que son destruidas son retiradas del juego y el coste de la invocación de cada unidad se pierde de la reserva demoníaca del jugador.  • Las unidades invocadas permanecen en el juego hasta la fase de finalización del turno en el que fueron invocadas. Después de que todas las formaciones hayan intentado reorganizar las unidades invocadas, se retiran del juego y se devuelven a la reserva demoníaca. Esto puede causar que la formación se desmoralice ya que ahora puede tener igual o más marcadores de explosión que su número de unidades. Los Grandes Demonios devueltos a la reserva de Grandes Demonios mantienen los puntos de daño tomados y no curan estos puntos mientras están fuera del tablero. Cuando son convocados posteriormente, mantienen este daño.  • Cuando una formación se desmoraliza, todas sus unidades invocadas son destruidas. Al calcular los puntos de victoria, la reserva de Demonios Menores obtiene la mitad de los puntos si el fondo tiene menos o igual a la mitad (redondeando hacia arriba) de su número original de demonios restantes. La reserva del Demonio Menor obtiene puntos completos si a la reserva le queda menos o igual a un cuarto (redondea hacia arriba) de sus demonios. Trata a los Grandes Demonios como máquinas de guerra con el propósito de calcular los puntos de victoria.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4417,9 +4464,9 @@ Note that Daemons that are killed in an assault do count towards the number of u
     </rule>
     <rule id="8c21-7337-0144-dba2" name="Thralls" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Thralls are disposable and only one of their abilities or attacks may be used each game. Both abilities are also One Shot.">
+        <modifier type="set" field="description" value="Thralls: Un Thrall puede usarse para Invocación Mejorada (+1d3) o para añadir su arma a la unidad compradora. Cualquiera de los dos usos gasta el hechizo y no sirve para nada más durante la batalla.">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4440,6 +4487,11 @@ Note that Daemons that are killed in an assault do count towards the number of u
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Los Portales a la Telaraña son utilizados por los Mil Hijos para viajar de forma segura a través de la urdimbre. El Portal a la Telaraña incluido en el ejército permite al jugador de los Mil Hijos recoger hasta tres formaciones y mantenerlas en el laberinto entre el Materia y la Disformidad. Cualquier formación que se mantenga en el laberinto entre el Materio y la Disformidad puede entrar en juego a través del Portal de la Telaraña, realizando una acción que le permita hacer un movimiento, y luego midiendo su primer movimiento desde la posición que ocupa el Portal de la Telaraña en la mesa. No más de una formación puede viajar a través de cada Portal a la Telaraña en cada turno. En las Reglas de Juego del Torneo Épico, las formaciones en reserva con múltiples opciones de despliegue deben tener un método de despliegue designado durante la instalación (por ejemplo, Portal a la Telaraña, transporte aéreo o teletransporte).  • Sólo pueden ser usadas por formaciones compuestas exclusivamente de unidades de infantería, vehículos ligeros y vehículos blindados que tienen la capacidad de bípode; las formaciones que incluyen cualquier otro tipo de unidad no pueden usar un Portal a la Telaraña para entrar en el juego.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Webway portals are used by the Thousand Sons to safely travel through the Warp. The Webway Portal included in the army allows the Thousand Sons player to pick up to three formations, and keep them back in the labyrinth between the Materium and the Warp. Any formation’s that are kept in the labyrinth between the Materium and the Warp may enter play via the Webway Portal, by taking an action that allows them to make a move, and then measuring their first move from the position that a Webway Portal occupies on the tabletop. No more than one formation may travel through each Webway Portal each turn. In the Epic Tournament Game Rules formations in reserve with multiple deployment options must have a designated deployment method during setup (e.g. Webway Portal, air transport or teleport).
 May only be used by formations made up exclusively of infantry, light vehicles, and armoured vehicle units that have the Walker ability; formations that include any other type of unit may not use a Wraithgate to enter play.</description>
@@ -4451,6 +4503,11 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="El Destino del Arquitecto: Una sola séquito de Mil Hijos puede recibir el Destino del Arquitecto por 50 puntos: la formación gana la capacidad de Teletransporte.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A single retinue of Thousand Sons can receive the Fate of the Architect for 50 points: the formation gains the Teleport ability.</description>
     </rule>
@@ -4459,6 +4516,11 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Garra de Muerte: Las garras de muerte permiten que una formación de caos entre en juego usando las reglas de caída orbital si se ha comprado una nave espacial para llevarlas. Las unidades en una formación con garras de muerte se despliegan usando las reglas de caída orbital pero no tiran para la dispersión. Ponga la primera unidad dentro de los 15cm de las coordenadas anotadas de la zona de caída y ponga todas las demás unidades de la formación dentro de los 15cm de esta unidad y en coherencia. Las unidades no pueden colocarse en terreno intransitable o en zonas enemigas de control.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4494,6 +4556,11 @@ May only be used by formations made up exclusively of infantry, light vehicles, 
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Garra de Muerte: Para desplegar una formación usando garras de muerte, coloca un &quot;marcador de garra de muerte&quot; usando las reglas de Caída Orbital. La garra de muerte es un marcador que cuenta como la primera unidad de la formación cuando se determina su zona de caída en la Caída Orbital. Una vez que se coloca el marcador de garra de muerte, su Deathwind dispara a todas las unidades enemigas a menos de 15 cm del centro de la garra de muerte. Cada formación enemiga que es atacada recibe un Marcador de Explosión según las reglas normales de disparo.  • Luego, se desembarca a las tropas transportadas en la Garra de la Muerte (esto puede provocar Fuego de Supresión como es habitual) completamente dentro de los 15 cm del centro de la misma, en coherencia y fuera de cualquier zona de control enemiga.  • La Garra de Muerte no es una unidad sino un marcador, no tiene zona de control y no cuenta para la coherencia de la formación. Además, no se puede utilizar para reclamar un tiroteo, ni para capturar o disputar objetivos.  • Si varias formaciones usan garras de muerte, coloca todos los marcadores de garras de muerte en coordenadas predeterminadas usando las reglas de Caída Orbital (incluyendo la resolución de la dispersión). Una vez que se hayan colocado todos los marcadores, resuelve todos los ataques de Viento Mortal simultáneamente contra las formaciones enemigas dentro del rango de los marcadores de Garra de Muerte, y luego desembarca todas las formaciones transportadas, siguiendo las reglas anteriores.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4539,9 +4606,14 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 5.  • Silberzitadellen, Flammenschwingen, Feuerlords und Chaos Navy haben den Initiativwert 2+. Andere Formationen haben die Initiativwert 1+.">
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert: 4.  • Silberzitadellen, Flammenschwingen, Feuerlords und Chaos Navy haben den Initiativwert 2+. Andere Formationen haben die Initiativwert 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4.  • Formaciones de la Armada del Caos, Torres Plateadas, Alas de Condenación y Señores del Fuego: 2+. Formaciones de Demonios Menores que incluyen un Gran Demonio, y todas las demás formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4564,6 +4636,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Aviones de Mil Hijos (Alas de Condenación y Señores del Fuego) y Torres Plateadas: 2+. Resto de formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Thousand Sons armies have a strategy rating of 5. Thousand Sons Aircraft formations (Doomwings and Firelords) and Silver Towers have an initiative of 2+. All other formations have an initiative rating of 1+.</description>
     </rule>
@@ -4577,6 +4654,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4.  • Formaciones de la Armada del Caos, Torres Plateadas y Demonios Menores: 2+. Formaciones de Demonios Menores que incluyen un Gran Demonio, y todas las demás formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4597,6 +4679,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
         <modifier type="set" field="description" value="Touche Critique: Palais du Warp: Une des runes d’argent qui canalisent les pouvoir du warp est endommagée, relâchant un torrent d’énergie du warp. Lancez 1D6 durant la phase finale de chaque tour pour chaque rune endommagée:  • 1: détruit;  • 2-3: il subit 1 point de dommages supplémentaire, et chaque unité dans un rayon de 5cm subit une touche Macro arme sur 6+;  • 4-6: la rune est réparée.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Palacio de Disformidad: Tira 1D6:  • 1: Destruido;  • 2-3: Sufre 1 punto de daño, más 1x impacto MA6+ en todos los modelos dentro de los 5cm;  • 4-6: Daños reparados.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4622,8 +4709,28 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Palacio de Disformidad: El Palacio de Disformidad sufre un punto de daño adicional; cada unidad en un radio de 5 cm recibe un impacto de MA con una tirada de 6.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Warp Palace takes an extra point of damage; each unit within 5cm takes a MW hit on a roll of 6.</description>
+    </rule>
+    <rule id="94e6-a4c0-aa1f-782d" name="Thralls" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Thralls: Los Thralls son desechables y sólo se puede utilizar una de sus habilidades o ataques en cada juego. Ambas habilidades son también de disparo único.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Thralls are disposable and only one of their abilities or attacks may be used each game. Both abilities are also One Shot.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

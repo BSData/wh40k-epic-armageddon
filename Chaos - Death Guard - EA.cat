@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="720b-f602-70cc-819b" name="Chaos: Death Guard" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="720b-f602-70cc-819b" name="Chaos: Death Guard" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -405,6 +405,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f8a2-743c-5e82-0386" name="Chaos Space Marines" page="0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -5287,6 +5290,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Invocación de Demonios: La invocación de los demonios puede hacerse de dos maneras. Dos modos no pueden ser combinados en la misma ronda por la misma formación:  •   • 1 °) Invocación a través del Pacto Demoníaco durante la fase de teletransportación:  • El jugador invoca entonces una formación de Demonios Menores o un Gran Demonio. Estos demonios aparecen a menos de 15 cm de la unidad invocadora con la misma afiliación que el tipo de demonios invocados. Esta formación de demonios permanece en juego hasta el final del juego o hasta su destrucción.  • Esta formación se convierte inmediatamente en una formación por derecho propio y sigue las reglas de activación, cohesión, etc.  •   • 2 °) Dejar que los demonios aparezcan a través del Foco Demoníaco (en el momento de la activación de la formación invocadora, antes de que ésta haga su rodaje de activación).  • 1D3 o 2D3 Los demonios menores afiliados a la formación invocadora son entonces convocados en la formación. Todos los demonios así invocados deben colocarse a menos de 5cm de la unidad invocadora con la misma afiliación que el tipo de demonios invocados. Esta invocación es única (la formación ya no podrá invocar a los demonios de esta forma durante el resto del juego), los demonios permanecen unidos a la formación invocadora hasta el final del juego, o hasta que son destruidos.  • Los demonios y la formación se convierten así en una misma formación según todas las reglas de cohesión, activación, etc.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The invocation of the daemons can be done via two modes. Two modes can not be combined in the same round by the same formation:
 1 °) Invocation via the Daemonic Pact during the teleportation phase:
@@ -5313,6 +5321,11 @@ The daemons and the formation thus becoming one and the same formation according
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Reglas para los Demonios de Todos los Tipos: Sacrificable: algunas unidades son percibidas por sus aliados como &quot;sacrificables&quot;. Ya sea porque fueron creadas especialmente para sacrificarse a sí mismas, o porque estas unidades simplemente no tienen valor a los ojos de sus aliados. Las unidades sacrificables no generan un marcador de explosión cuando son destruidas. Esto incluye los efectos especiales que crean marcadores de explosión cuando se apunta a una unidad de sacrificio, es decir, cuando se asignan impactos a la unidad. Sin embargo, las unidades que se sacrifican cuentan en el cálculo de pérdidas cuando se resuelve un asalto.  • Inestable: Si los demonios están desmoralizados, son destruidos.  • Sólo pueden disputar objetivos, no controlarlos.  • La teletransportación puede ser hasta 15 cm de una formación con un Pacto Demoníaco, y no reciben un marcador de explosión debido a la &quot;teletransportación&quot;.  • Sólo se puede invocar una formación de demonios por formación invocadora. Una formación teletransportadora no puede invocar demonios a través de un Pacto Demoníaco (pero puede hacerlo a través de un Portador del Icono). Los Demonios invocados siempre pertenecen a la misma facción que la formación invocadora.  • Los jugadores sólo pueden invocar un Gran Demonio por facción. Por lo tanto, si ya has invocado a un Devorador de Almas, no puedes invocar a otro hasta que este Gran Demonio haya sido eliminado del juego.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Sacrificial: some units are perceived by their allies as &quot;sacrificable&quot;. Either because they were specially created to sacrifice themselves, or because these units simply do not have value in the eyes of their allies. Sacrificial units do not generate a blast marker when destroyed. This includes special effects that create blast markers when a Sacrificial unit is targeted, i.e. when hits are allocated to the unit. However, Sacrificial units count in calculating losses when resolving an assault.
 Unstable: If the daemons are broken, they are destroyed.
@@ -5331,6 +5344,11 @@ Players are only allowed to summon one Major Daemon per Faction. So if you have 
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Integridad Estructural: El titán pierde D3 puntos adicionales de daño y todas las unidades dentro de 5cm sufren un impacto con un 4+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5366,6 +5384,11 @@ Players are only allowed to summon one Major Daemon per Faction. So if you have 
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Garra de Muerte: Después de que la garra de muerte aterrice, su Deathwind ataca a todas las unidades enemigas en un radio de 15cms. Cada formación enemiga atacada recibe un Marcador de Explosión por estar bajo fuego, y un Marcador de Explosión adicional por cada baja como es normal. Entonces cualquier tropa llevada en la Garra de Muerte debe desembarcar a menos de 5cms de la Garra de Muerte o a menos de 5cms de otra unidad de la misma formación que ya ha desembarcado, siempre que todas las unidades se coloquen a menos de 15cms de la Garra de Muerte. El modelo de garra de muerte sólo se usa como un marcador y no cuenta como una unidad en ningún aspecto. No puede ser usado para reclamar fuego cruzado y el valor del blindaje es sólo para propósitos comparativos.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5404,6 +5427,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Avance Implacable: Todas las formaciones en el ejército reciben un modificador de +1 a su tirada de chequeo de acción cuando intentan una acción de mando. Debido a su naturaleza constante y deliberada, ninguna formación en el ejército puede realizar una acción de marcha.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>All formations in the army receive a +1 modifier to their action test roll when attempting a marshal action. Due to their steady, deliberate nature no formations in the army can take a march action.</description>
     </rule>
@@ -5421,6 +5449,11 @@ Fanatic #13</description>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="description" value="Putrefacción de Nurgle: La Putrefacción de Nurgle es una habilidad de unidad especializada exclusiva de la Guardia de la Muerte. Al final de cualquier asalto el jugador de la Guardia de la Muerte puede hacer un ataque especial adicional por cada unidad superviviente con la Putrefacción de Nurgle en el combate (no las formaciones de apoyo). Este ataque puede ser un tiroteo o con armas de asalto y siempre impacta en un 6+. Las Salvaciones de Blindaje (pero no las Salvaciones de Cobertura) pueden ser tomadas como normales y las bajas causadas cuentan para la resolución del combate.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <description>Nurgle’s Rot is a specialist unit ability unique to the Death Guard. At the end of any assault the Death Guard player may make one special extra attack for every surviving unit with Nurgle’s Rot in the engagement (not supporting formations). This attack can be either firefight or assault weapons and always hits on a 6+. Armour Saves (but not Cover Saves) can be taken as normal and casualties caused do count towards combat resolution.</description>
@@ -5440,6 +5473,11 @@ Fanatic #13</description>
         <modifier type="set" field="description" value="Seuchenschiff: Darüber hinaus wird nach dem Auflösen des Sperrfeuers eine einzelne Formation von W6+6 Seuchenzombies so nahe wie möglich an den Bombardierungskoordinaten platziert, wobei die normalen Regeln der Kontrollzone berücksichtigt werden. Anschließend werden sie so behandelt, als wären sie über Teleport angekommen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Nave de Plaga: Además, después de resolver el bombardeo de artillería, se coloca una única formación de unidades D6+6 de Zombis de la Plaga lo más cerca posible de las coordenadas de bombardeo, teniendo en cuenta las reglas normales de la Zona de Control, y luego se les trata como si hubieran llegado por Teletransporte.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5462,6 +5500,11 @@ Fanatic #13</description>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4.  • Formaciones de la Armada del Caos: 2+. Resto de formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Death Guard armies have a strategy rating of 4. 
 All Death Guard, Daemon and Nurgle Titan Legion formations have an initiative rating of 1+. 
@@ -5470,21 +5513,20 @@ Chaos Navy formations have an initiative rating of 2+.</description>
     <rule id="ee66-fbfa-baf7-5e6c" name="Summoned Units" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Unidades Invocadas: Las formaciones que compran la actualización del Pacto Demoníaco pueden invocar a los demonios en el campo de batalla. Para poder invocar demonios, los jugadores deben comprar primero una única Reserva de Demonios de la que todas las formaciones con la actualización del Pacto Demoníaco invocarán. Los demonios de la Reserva de Demonios se compran y se anotan sólo como demonios menores o mayores, no por su facción. La facción de la formación que invoca dicta qué tipos de demonios pueden ser invocados. Los jugadores deben anotar el contenido de su Reserva de Demonios o utilizar fichas para indicar el número de cada demonio mayor o menor que tienen disponible para invocar durante una partida. El oponente del jugador del Caos siempre puede ver el número de demonios menores y mayores que quedan en la Reserva de Demonios. La Reserva de Demonios se mantiene fuera del tablero y los demonios se eliminan de él a medida que las formaciones invocan a los demonios sobre el tablero.  • Al comienzo de la acción de esa formación, antes de que se haga la tirada de chequeo de acción, la formación puede invocar unidades demoníacas de la Reserva de Demonios. Invocar permite llamar a 2D3 puntos de invocación de unidades demoníacas en el campo de batalla (el número de puntos de invocación que cuesta invocar a una unidad estará listado en su hoja de datos, pero como regla general los demonios mayores cuestan 8 puntos de invocación y todas las demás unidades cuestan 1 punto de invocación cada una). Los puntos de invocación deben usarse para invocar unidades demoníacas de la Reserva de Demonios y las unidades invocadas se ponen en juego inmediatamente. Si por alguna razón los puntos de invocación generados no se usan, se pierden y no se pueden trasladar a los turnos siguientes. Sólo puedes invocar a tantos demonios como te queden en la Reserva de Demonios. Las unidades demoníacas sobrantes pueden ser invocadas durante un turno posterior. Las unidades demoníacas que son destruidas se retiran del juego y no se vuelven a poner en la Reserva de Demonios. Las formaciones desmoralizadas o que no hayan comprado un Pacto Demoníaco no pueden convocar a los demonios.  • Los jugadores sólo pueden tener un demonio mayor de una facción dada en el ejército en el tablero a la vez. Por ejemplo, si ya tienes un Devorador de Almas invocado sobre el tablero, no puedes invocar a otro Devorador de Almas hasta que ese primer demonio mayor haya sido retirado del juego. Las unidades invocadas deben colocarse con su peana a menos de 5 cm de cualquier unidad no demoníaca de su formación, (es decir, no se puede colocar una &quot;cadena&quot; de unidades invocadas). No pueden ponerse en la Zona de Control de una unidad enemiga o en terreno intransitable. El tipo de unidad que puede ser invocada depende de la facción de la formación que la invoca.  • Las unidades invocadas cuentan como parte de la formación para todos los propósitos de las reglas mientras permanezcan en el campo de batalla. La única excepción a las reglas normales es que cuando una unidad invocada es destruida, no causa que se coloque un marcador de explosión en la formación. Por lo demás, se cuentan como unidades normales, y se incluyen cuando se calcula si una formación supera en número a un oponente en un asalto o se rompe por los Marcadores de Explosión, etc. Nota que los demonios que mueren en un asalto cuentan para el número de unidades muertas por el enemigo cuando se calculan los modificadores a la tirada de dados del resultado. Si una formación pierde un asalto, se eliminan los impactos adicionales de la formación antes de que se considere rota y se eliminen todas las demás unidades invocadas.  • Las unidades invocadas permanecen en el campo de batalla hasta la fase de finalización del turno en el que son invocadas. Al final de la fase de reagrupación, después de que las formaciones hayan intentado reagruparse, todas las unidades convocadas en la formación se retiran del tablero y se colocan de nuevo en la Reserva de Demonios a menos que la formación tenga una unidad con Foco Demoníaco. Los Demonios mayores que son devueltos a la Reserva de Demonios mantienen el mismo FD que tenían cuando dejaron el campo de batalla. No se curan de nuevo a la totalidad del FD, así que cuando sean convocados de nuevo tendrán ese mismo FD. Las unidades invocadas que son destruidas no se devuelven a la Reserva de Demonios. Nótese que esto puede llevar a que la formación se desmoralice si el número de Marcadores de Explosión en la formación es mayor que el número de unidades que quedan en juego después de que las unidades invocadas hayan sido retiradas. Cuando una formación se desmoraliza, las unidades invocadas en la formación se pierden en la disformidad y se consideran destruidas. No vuelven a la Reserva de Demonios.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <description>Formations that purchase the Daemonic Pact upgrade are able to summon daemons to the battlefield. In order to summon daemons a players must first purchase a single Daemon Pool from which all formations with the Daemonic Pact upgrade will summon. Daemons in the Daemon Pool are purchased and noted only as being lesser or greater daemons, not by their faction. The summoning formation’s faction dictates what types of daemons may be summoned. Players should either write down the contents of their Daemon Pool or use tokens to indicate the number of each lesser and greater daemon they have available to summon during a game. The Chaos player’s opponent is always able to view the number of lesser and greater daemons remaining in the Daemon Pool. The Daemon Pool is kept off the board and daemons are removed from it as formations summon daemons onto the board.
 At the start of that formation’s action, before the action test dice roll is made, the formation may summon daemonic units from the Daemon Pool. Summoning allows you to call 2D3 summoning points worth of daemonic units to the battlefield (the number of summoning points it costs to summon a unit will be listed on its data sheet, but as a general rule greater daemons cost 8 summoning points and all other units cost 1 summoning point each). Summoning points must be used to summon daemonic units from the Daemon Pool and summoned units are brought into play immediately. If for any reason any summoning points generated are not used, they are lost and may not be carried over into subsequent turns. You may only summon as many daemons as you have left in your Daemon Pool. Left over daemonic units may be summoned during a later turn. Daemonic units that are destroyed are removed from play and are not put back into the Daemon Pool. Broken formations or formations that have not bought a Daemonic Pact may not summon daemons.
 Players may only have one greater daemon of a given faction in the army on the board at one time. For example, if you already have a summoned Bloodthirster on the board you are not allowed to summon another Bloodthirster until that first greater daemon has been removed from play. Summoned units must be set up with their base within 5cm of any non-daemonic unit from their formation, (i.e. you cannot place a ‘chain’ of summoned units). They may not be set up in the Zone of Control of an enemy unit or in impassable terrain. The type of unit that can be summoned depends on the summoning formation’s faction.
-Summoned units count as part of the formation for all rules purposes as long as they remain on the battlefield. The only exception to the normal rules is when a summoned unit is destroyed it does not cause a blast marker to be placed on the formation. They are otherwise counted as normal units, and are included when working out if a formation outnumbers an opponent in an assault or is broken by blast markers, etc. Note that Daemons that are killed in an assault do count towards the number of units killed by the enemy when working out modifiers to the result dice roll. If a formation loses an assault you remove extra hits from the formation before it is considered broken and all the remaining summoned units are removed
+Summoned units count as part of the formation for all rules purposes as long as they remain on the battlefield. The only exception to the normal rules is when a summoned unit is destroyed it does not cause a blast marker to be placed on the formation. They are otherwise counted as normal units, and are included when working out if a formation outnumbers an opponent in an assault or is broken by blast markers, etc. Note that Daemons that are killed in an assault do count towards the number of units killed by the enemy when working out modifiers to the result dice roll. If a formation loses an assault you remove extra hits from the formation before it is considered broken and all the remaining summoned units are removed.
 Summoned units remain on the battlefield until the end phase of the turn in which they are summoned. In the end of the rally phase, after formations have attempted to rally, all summoned units in the formation are removed from the board and placed back into the Daemon Pool unless the formation has a unit with Daemonic Focus. Greater Daemons that are returned to the Daemon Pool keep the same DC they had when they left the battlefield. They do not heal back to full DC, so when summoned again they will have that same DC. Summoned units that are destroyed are not put back into the Daemon Pool. Note that this may lead to the formation breaking if the number of Blast Markers on the formation is greater than the number of units left in play after the summoned units have been removed. When a formation breaks any summoned units in the formation are lost in the warp and considered destroyed. They do not go back into the Daemon Pool.</description>
     </rule>
     <rule id="ddd5-f71e-f48f-ca31" name="Summoned Units" hidden="false">
@@ -5492,6 +5534,11 @@ Summoned units remain on the battlefield until the end phase of the turn in whic
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Unidades Invocadas: Las formaciones que compran la actualización del Pacto Demoníaco, o las unidades con esta habilidad, permiten al jugador del Caos invocar demonios al campo de batalla. Para invocar demonios el jugador también debe tener una reserva demoníaca desde la que invocar. Esta reserva contiene dos secciones, una para demonios menores y otra para grandes demonios y no es específica de una facción. El tamaño de dichas reservas debe ser visible para todos los jugadores en todo momento y se sugiere que se utilicen fichas o dados para indicar el tamaño de cada reserva disponible. A medida que los demonios son convocados, la reserva debe ser cambiada para reflejar su tamaño actual.  • Para invocar a los demonios, el jugador del Caos elige una formación con un pacto demoníaco y declara su intención de invocar antes de que se realice cualquier tirada de acción. El jugador tira entonces 2D3 para generar el número de puntos de invocación disponibles para esta formación. El número de puntos necesarios para invocar cada tipo de unidad demoníaca se anotará en su hoja de datos. La formación puede entonces invocar demonios hasta el número de puntos de invocación generados, hasta el número de puntos que queden en la reserva demoníaca. Los puntos que no se utilicen se perderán. La facción (debe ser anotada en la creación de la lista) de la formación que invoca determina qué tipo de demonios pueden ser invocados.  • Nótese que el Caos Absoluto puede invocar Bestias Demoníacas / cualquier Gran Demonio como es normal, o cualquier otro Demonio Menor por el doble de los puntos de invocación habituales.  • Los jugadores sólo pueden tener un gran demonio para una facción dada en la mesa a la vez. Las unidades invocadas deben colocarse a menos de 5 cm de una unidad no invocada en la formación que invoca. No pueden colocarse en zonas de control o terreno intransitable del enemigo.  • Las unidades invocadas pasan a formar parte de la formación que las invoca para todos los propósitos de las reglas, mientras permanezcan en el campo de batalla. Las unidades invocadas no causan marcadores de explosión cuando son destruidas, sin embargo las unidades demoníacas muertas en un asalto cuentan para el número de unidades muertas cuando se calculan los modificadores para la resolución del asalto. Las unidades invocadas que son destruidas son retiradas del juego y el coste de la invocación de cada unidad se pierde de la reserva demoníaca del jugador.  • Las unidades invocadas permanecen en el juego hasta la fase de finalización del turno en el que fueron invocadas. Después de que todas las formaciones hayan intentado reorganizar las unidades invocadas, se retiran del juego y se devuelven a la reserva demoníaca. Esto puede causar que la formación se desmoralice ya que ahora puede tener igual o más marcadores de explosión que su número de unidades. Los Grandes Demonios devueltos a la reserva de Grandes Demonios mantienen los puntos de daño tomados y no curan estos puntos mientras están fuera del tablero. Cuando son convocados posteriormente, mantienen este daño.  • Cuando una formación se desmoraliza, todas sus unidades invocadas son destruidas. Al calcular los puntos de victoria, la reserva de Demonios Menores obtiene la mitad de los puntos si el fondo tiene menos o igual a la mitad (redondeando hacia arriba) de su número original de demonios restantes. La reserva del Demonio Menor obtiene puntos completos si a la reserva le queda menos o igual a un cuarto (redondea hacia arriba) de sus demonios. Trata a los Grandes Demonios como máquinas de guerra con el propósito de calcular los puntos de victoria.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5549,6 +5596,11 @@ Summoned units remain on the battlefield until the end phase of the turn in whic
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Putrefacción de Nurgle: Si una formación con la Putrefacción de Nurgle asalta o es asaltada, y causa bajas enemigas al resolver los ataques, añade un Demonio Menor a la Reserva de Demonios de la Guardia de la Muerte después de que el ganador se consolide.  • La Putrefacción de Nurgle no tiene efecto si la formación enemiga pertenece a la facción del Caos: Nurgle.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>If a formation with Nurgle’s Rot assaults or is assaulted, and causes any enemy casualties when Resolving Attacks, add one Lesser Daemon to the Death Guard Daemon Pool after the winner consolidates.
 Nurgle&apos;s Rot has no effect if the enemy formation belongs to the Chaos faction: Nurgle.</description>
@@ -5565,6 +5617,11 @@ Nurgle&apos;s Rot has no effect if the enemy formation belongs to the Chaos fact
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Torres de Plaga (Mejora): Al seleccionar Plague Towers como una mejora, se utiliza un espacio para Formaciones de Apoyo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Selecting Plague Towers as an upgrade uses a Support Formation slot.</description>
     </rule>
@@ -5575,6 +5632,11 @@ Nurgle&apos;s Rot has no effect if the enemy formation belongs to the Chaos fact
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Putrefacción de Nurgle: Una única séquito de Marines de Plaga puede recibir la Putrefacción de Nurgle por 50 puntos: la formación inflige automáticamente 1D3 impactos adicionales durante un asalto (CC o FF, la elección se anunciará antes de la tirada). Esto no funciona durante el fuego de apoyo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A single retinue of Plague Marines can receive Nurgle&apos;s Rot for 50 points: the formation automatically inflicts 1D3 additional hits during an assault (CC or FF, the choice to be announced before the roll). This does not work during supporting fire.</description>
     </rule>
@@ -5583,6 +5645,11 @@ Nurgle&apos;s Rot has no effect if the enemy formation belongs to the Chaos fact
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Garra de Muerte: Las garras de muerte permiten que una formación de caos entre en juego usando las reglas de caída orbital si se ha comprado una nave espacial para llevarlas. Las unidades en una formación con garras de muerte se despliegan usando las reglas de caída orbital pero no tiran para la dispersión. Ponga la primera unidad dentro de los 15cm de las coordenadas anotadas de la zona de caída y ponga todas las demás unidades de la formación dentro de los 15cm de esta unidad y en coherencia. Las unidades no pueden colocarse en terreno intransitable o en zonas enemigas de control.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5620,6 +5687,11 @@ Nurgle&apos;s Rot has no effect if the enemy formation belongs to the Chaos fact
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Garra de Muerte: Para desplegar una formación usando garras de muerte, coloca un &quot;marcador de garra de muerte&quot; usando las reglas de Caída Orbital. La garra de muerte es un marcador que cuenta como la primera unidad de la formación cuando se determina su zona de caída en la Caída Orbital. Una vez que se coloca el marcador de garra de muerte, su Deathwind dispara a todas las unidades enemigas a menos de 15 cm del centro de la garra de muerte. Cada formación enemiga que es atacada recibe un Marcador de Explosión según las reglas normales de disparo.  • Luego, se desembarca a las tropas transportadas en la Garra de la Muerte (esto puede provocar Fuego de Supresión como es habitual) completamente dentro de los 15 cm del centro de la misma, en coherencia y fuera de cualquier zona de control enemiga.  • La Garra de Muerte no es una unidad sino un marcador, no tiene zona de control y no cuenta para la coherencia de la formación. Además, no se puede utilizar para reclamar un tiroteo, ni para capturar o disputar objetivos.  • Si varias formaciones usan garras de muerte, coloca todos los marcadores de garras de muerte en coordenadas predeterminadas usando las reglas de Caída Orbital (incluyendo la resolución de la dispersión). Una vez que se hayan colocado todos los marcadores, resuelve todos los ataques de Viento Mortal simultáneamente contra las formaciones enemigas dentro del rango de los marcadores de Garra de Muerte, y luego desembarca todas las formaciones transportadas, siguiendo las reglas anteriores.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>To deploy a formation using Dreadclaws, place a &quot;Dreadclaw marker&quot; using the Planetfall rules. The Dreadclaw is a marker counting as the first unit of the formation when determining its drop zone in Planetfall. Once the Dreadclaw marker is placed, its Deathwind fires on all enemy units within 15cm of the centre of the Dreadclaw. Each enemy formation that is attacked receives a Blast Marker according to the normal shooting rules.
 Then, disembark the troops transported in Dreadclaw (this can trigger an Overwatch as usual) completely within 15 cm of the center of it, in coherency and outside any enemy zone of control.
@@ -5643,6 +5715,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4.  • Formaciones de la Armada del Caos, Torres de Contagio, Torres de Plaga, Drones de Plaga y Infestaciones de Zombis de la Plaga: 2+. Resto de formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A Death Guard Army has a strategy rating of 4. Aircraft, Spacecraft, Contagion Tower, Plague Tower, Blight Drone and Plague Zombie Infestation formations have an initiative rating of 2+. All other formations have an initiative rating of 1+.</description>
     </rule>
@@ -5656,6 +5733,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4.  • Formaciones de la Armada del Caos, Torres de Contagio y Demonios Menores: 2+. Formaciones de Demonios Menores que incluyen un Gran Demonio, y todas las demás formaciones: 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5691,6 +5773,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
         <modifier type="set" field="description" value="Suite de Marines de la Peste: Toute Suite de Marines de la Peste sur un objectif compte comme ayant un Meneur supplémentaire.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Séquito de los Marines de Plaga: Cualquier séquito de Marines de Plaga en un objetivo cuenta como tener un Líder adicional.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5748,6 +5835,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Integridad Estructural: El titán pierde un punto adicional de daño y todas las unidades dentro de los 5cm sufren un impacto con un 4+ (Plaguelord) o 5+ (Repugnant).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The titan loses an extra point of damage and all units within 5cm suffer a hit on a 4+ (Plaguelord) or 5+ (Repugnant).</description>
     </rule>
@@ -5761,6 +5853,11 @@ If multiple formations use Dreadclaws, place all Dreadclaw markers at predetermi
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Integridad Estructural: El titán pierde un punto adicional de daño y todas las unidades dentro de los 5cm sufren un impacto con un 4+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

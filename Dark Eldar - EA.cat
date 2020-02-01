@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar: Kabal" revision="32" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="af3c-3fc0-f4ed-49e7" name="Dark Eldar: Kabal" revision="33" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4378,6 +4378,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="La Fuerza Viene del Sufrimiento: Una formación de los Eldar Oscuros que sale victoriosa en un asalto recibe tantos Marcadores de Explosión como el número de unidades perdidas en el asalto menos el número de unidades destruidas. Si la formación ha sufrido al menos una pérdida, ésta recibirá al menos un Marcador de Explosión aunque el resultado sea igual o menor que 0. En todos los casos, la formación no puede eliminar los Marcadores de Explosión como resultado de este resultado.  • Esta regla se aplica a todas las unidades excepto a las Naves Espaciales, Aviones y Cosechadoras (Harvesters).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A Dark Eldar formation that is victorious in an assault receives as many Blast Markers as the number of units lost in the assault minus the number of units destroyed. If the formation has suffered at least one loss, the latter will receive at least one Blast Marker even if the result is equal to or less than 0. In all cases, the formation may not remove Blast Markers as a result of this result.
 This rule applies to all units except Spacecraft, Aircraft and the Harvester.</description>
@@ -4387,6 +4392,11 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Cubierta de Asalto: Las unidades transportadas por vehículos que tienen esta regla pueden participar en un asalto desde el interior del transporte como si hubieran desembarcado. Si el vehículo está en contacto de peana con unidades enemigas, las unidades transportadas pueden utilizar su perfil de combate cercano. Los transportes gravitatorios que opten por el tiroteo obligarán a las unidades a bordo a utilizar también su perfil de tiroteo. Los impactos se asignan a las unidades transportadas primero cuando están en combate cuerpo a cuerpo y al transporte primero cuando están en un tiroteo. Los impactos regulares se asignan al transporte igual que con los transportes normales (se aplican las salvaciones si procede). Además, las unidades pueden disparar desde las cubiertas de los transportes sin necesidad de desembarcar.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4429,6 +4439,11 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Barcaza: TT (FF) reducido a 6+. Los impactos críticos posteriores causan un punto adicional de daño.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>FF reduced to 6+. Additional Critical hits will cause an extra point of damage.</description>
     </rule>
@@ -4447,6 +4462,11 @@ This rule applies to all units except Spacecraft, Aircraft and the Harvester.</d
         <modifier type="set" field="description" value="Kritischer Treffer: Scharfrichter: Phantomlanzen zerstört. Nachfolgende kritische Treffer verursachen einen zusätzlichen Schaden von 1 DC.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Ejecutor: Lanzas Fantasmas destruidas. Los impactos críticos posteriores causan un punto adicional de daño.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4560,8 +4580,13 @@ In addition, a Dark Eldar formation that wins an assault is allowed to move any 
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Kashnarak: El Kashnarak siempre atacará a la formación más cercana en la próxima activación disponible, incluso a las formaciones de los Eldares Oscuros. Si no puede atacar, la bestia marchará o se moverá hacia la formación más cercana, hasta su máximo movimiento. Si alcanza un terreno intransitable, la bestia detendrá su movimiento. A partir de entonces, se activa en el primer movimiento de los turnos siguientes, siguiendo el modelo anterior.  • La excepción es cuando en presencia de una formación Bruja. Si está a menos de 15cm de una formación Bruja al comienzo de su activación, el ataque o movimiento de Kashnarak puede ser dirigido por el jugador de los Eldares Oscuros. Esto incluye una formación Bruja a menos de 15 cm del portal de Kashnarak. Además, el Kashnarak nunca atacará a una formación Bruja, sino que elegirá la siguiente formación más cercana.  • Independientemente de sus acciones, el Kashnarak no se considera parte de la fuerza de los Eldares Oscuros para controlar o disputar objetivos o para determinar las condiciones de victoria. No cuenta para las activaciones de los Eldares Oscuros ni para el uso del Portal a la Telaraña. No se beneficia de las Tácticas de Ataque y Retirada.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>It will always attack the closest formation on the next available activation, even Dark Eldar formations. If unable to attack, the beast will march or move toward the closest formation to its maximum movement. If it reaches impassable terrain, the beast stops its move. From then on, it activates on the first move of subsequent turns, following the model above.
+      <description>The Kashnarak will always attack the closest formation on the next available activation, even Dark Eldar formations. If unable to attack, the beast will march or move toward the closest formation, up to its maximum movement. If it reaches impassable terrain, the beast stops its move. From then on, it activates on the first move of subsequent turns, following the model above.
 The exception is when in the presence of a Wych formation. If within 15cm of a Wych formation at the beginning of its activation, the Kashnarak&apos;s attack or move may be directed by the Dark Eldar player. This includes a Wych formation within 15cm of the Kashnarak&apos;s Webway portal. In addition, the Kashnarak will never attack a Wych formation; instead it will choose the next closest formation.
 Regardless of its actions, the Kashnarak is not considered part of the Dark Eldar force for the purposes of holding/contesting objectives or for determining victory conditions. It neither counts toward Dark Eldar activations nor does it count toward Webway portal use. It does not benefit from Hit &amp; Run tactics.</description>
     </rule>
@@ -4575,6 +4600,11 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
         <modifier type="set" field="description" value="Nur Formationen, die ausschließlich aus Hellions bestehen, dürfen eine Garnison bilden.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="No Pueden Patrullar: Sólo las formaciones hechas únicamente de Infernales tienen permitido formar patrullas en las batallas de torneo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4593,6 +4623,11 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
         <modifier type="set" field="description" value="Tragbare Phantomtor: Dieses tragbare Portal des Netzes von tausend Toren kann einmal im Spiel verwendet werden. Nachdem die Formation des Charakters eine Aktion abgeschlossen hat, können Sie eine Sperrfeuervorlage vollständig innerhalb von 15 cm vom Charakter und außerhalb der gegnerischen Kontrollzonen platzieren. Dieser Marker gilt als Portal, das in keiner Weise angegriffen oder beschädigt werden darf. Entferne diesen Phantomtor-Marker in der Endphase des Spielzugs, bevor er sammelt.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Portal a la Telaraña Portátil: Este portal portátil puede ser usado una vez en el juego. Después de que la formación del personaje complete una acción, puedes colocar un marcador de plantilla de artillería completamente dentro de los 15 cm del personaje y fuera de las zonas de control del enemigo. Este marcador cuenta como un Portal a la Telaraña que no puede ser atacado o dañado de ninguna manera. Elimina este marcador del Portal a la Telaraña en la fase de finalización del turno antes de cualquier reorganización.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4620,7 +4655,7 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
     </rule>
     <rule id="d006-8f66-bf62-dfd1" name="Strategy Rating &amp; Initiative (DE)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Formaciones de Cábalas de Eldar Oscuros, Atormentador y Ejecutor: 1+.  • Resto de formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Formaciones de Cábalas de Eldar Oscuros, Atormentador y Ejecutor: 1+. Resto de formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -4680,6 +4715,11 @@ Kabals, Ravager Armadas, Vessels of Pain, Tormentors, and Executor Landing Modul
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Drogas de Combate: Las formaciones huestes o partisanas con una iniciativa de 2+ tienen un modificador +1 a su chequeo de acción si intentan una acción de atacar.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Host or Partisan formations with a 2+ initiative have a +1 bonus to their action test if they attempt an Engage action.</description>
     </rule>
@@ -4695,9 +4735,14 @@ Kabals, Ravager Armadas, Vessels of Pain, Tormentors, and Executor Landing Modul
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 4, pero en la Tirada Estratégica al principio del primer turno, el ejército tiene un bono +1.  • Formaciones de Íncubos, Titán Atormentador y Cosechador (Harvester): 1+. Resto de formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>A Dark Eldar army has a Strategy rating of 4. for turn 1, and 4 for subsequent turns. During the strategy roll at the beginning of the first turn, the army has a +1 bonus to its Strategy rating. 
-The Incubus formation, the Tormentor Titan, and Reapers have a 1+ Initiative. All other formations have an Initiative of 2+.</description>
+      <description>A Dark Eldar army has a Strategy rating of 4. On the strategy roll at the beginning of the first turn, the army has a +1 bonus to its Strategy rating. 
+The Incubus formation, Tormentor Titan, and Harvester have a 1+ Initiative. All other formations have an Initiative of 2+.</description>
     </rule>
     <rule id="bcf1-d89e-f812-9771" name="Critical Hit: Shadowfield Lost" hidden="false">
       <modifiers>
@@ -4714,6 +4759,11 @@ The Incubus formation, the Tormentor Titan, and Reapers have a 1+ Initiative. Al
         <modifier type="set" field="description" value="Kritischer Treffer: Schattenfelder Verloren: Kann keine Schattenfelderrettungen mehr aufnehmen. Nachfolgende kritische Treffer verursachen einen zusätzlichen Schaden von 1 DC.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Pantalla de Sombra Perdida: La unidad pierde su Pantalla de Sombra. Los impactos críticos posteriores causan un punto adicional de daño.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4751,6 +4801,11 @@ Regardless of its actions, the Kashnarak is not considered part of the Dark Elda
         <modifier type="set" field="description" value="Darf Keine Garnison Sein: Nur die Mandraks dürfen Garnison bilden.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="No Pueden Patrullar: Sólo las formaciones de Mandrágoras tienen permitido formar patrullas en las batallas de torneo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

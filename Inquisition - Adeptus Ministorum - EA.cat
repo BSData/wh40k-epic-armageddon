@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ec24-8fc1-13a1-f7de" name="Inquisition: Adeptus Ministorum, Sisters of Battle" revision="20" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ec24-8fc1-13a1-f7de" name="Inquisition: Adeptus Ministorum, Sisters of Battle" revision="21" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2030,6 +2030,11 @@
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Actos de Fe: Una sola formación de las Órdenes Militantes del Adeptus Ministorum puede elegir hacer un Acto de Fe por turno al tomar su chequeo de acción.  • La formación recibe entonces una penalización de -1 en su chequeo de acción (que es acumulativa con los otros modificadores). Si se realiza el chequeo de acción, la formación resuelve su acción normalmente. Además, todas las unidades de la formación ganan las reglas de Valor y Salvación Invulnerable hasta el comienzo de la fase de finalización. Si el chequeo de acción falla, la formación debe realizar una acción de Aguantar.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A single formation of the Orders Militant of the Adeptus Ministorum may choose to make one Act of Faith per turn when taking its action test.
 The formation then receives a penalty of -1 on its action test (which is cumulative with the other modifiers). If the action test is successful, the formation resolves its action normally. In addition, all units in the formation gain the Fearless and Invulnerable Save rules until the start of the endphase. If the action test is failed, the formation must perform a Hold action.</description>
@@ -2062,6 +2067,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Las formaciones de las Órdenes Militante, Incineradora y Catedral tienen una iniciativa de 1+. Resto de formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>An Adeptus Ministorum army has a Strategy Rating of 3.
 Formations of Orders Militant, Incinerator and Cathedral have an initiative of 1+.
@@ -2087,6 +2097,11 @@ All other formations have an initiative of 2+.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Los Destacamentos Adepta Sororitas y los Aliados de la Legión de Titanes tienen una iniciativa de 1+. Resto de formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Adeptus Ministorum armies have a Strategy Rating of 3.
 Adepta Sororitas Detachments and Titan Legion Allies have an initiative of 1+.
@@ -2104,6 +2119,11 @@ All other formations have an initiative of 2+.</description>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Fieles: Si una formación o unidad en la formación tiene la regla especial de los Fieles, entonces la formación ignora la penalización de -1 a su chequeo de acción debido a la regla del Acto de Fe. Sin embargo, incurre en todas las demás penalidades en su chequeo de acción como se indica en el libro de reglas.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>If a formation or unit in the formation has the Faithful special rule then the formation ignores the -1 penalty to its action test due to the Act of Faith rule. However, it incurs all other penalties on its action test as indicated in the rule book.</description>
     </rule>
@@ -2117,6 +2137,16 @@ All other formations have an initiative of 2+.</description>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Fieles: Antes de rodar para activarse, las formaciones que contengan al menos una unidad con la regla especial de los Fieles pueden declarar que están realizando un Acto de Fe. Las formaciones que realizan un Acto de Fe tienen una penalización de -1 a su iniciativa por su chequeo de acción, pero si la activación se realiza todas las unidades Fieles de la formación reciben las reglas de Coraje y Salvación Invulnerable hasta la próxima activación de la formación.  • Si la activación es fallida, la formación debe tomar una acción de aguantar como es normal, y no se reciben bonificaciones.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Gläubigen: Jede Adeptus Sororitas-Formation, die Einheiten mit der Gläubigen-Regel enthält, kann sich dazu entscheiden, eine Glaubensakt durchzuführen, wenn sie einen Aktionstest ablegt. Die Formation erhält eine Strafe von -1 für diesen Wurf. Wenn der Aktionstest bestanden ist, führt die Formation die gewählte Aktion wie üblich aus. Zusätzlich erhalten alle Einheiten in der Formation bis zum Beginn ihrer nächsten Aktivierung die Regeln Furchtlos und Unverwundbar Rettung. Wenn der Test nicht bestanden wird, muss die Formation wie üblich eine Hold-Aktion ausführen und es werden keine Boni erhalten.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2133,6 +2163,11 @@ If the activation is failed, the formation must take a hold action as normal, an
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Transportes Adeptus Ministorum: Si una formación tiene vehículos de transporte, debe tomar suficientes vehículos para transportar toda la formación (incluyendo las mejoras). Todos los espacios de transporte deben ser ocupados si es posible.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

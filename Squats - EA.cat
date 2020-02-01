@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="782f-e39b-52fc-5ffc" name="Squats" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="782f-e39b-52fc-5ffc" name="Squats" revision="32" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3285,6 +3285,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Sabiduría Antigua: El jugador de squat puede ignorar la penalización de -1 para retener la iniciativa para una formación cualquiera por turno.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Squat player may ignore the -1 penalty to retain for any one formation per turn.</description>
     </rule>
@@ -3293,6 +3298,11 @@
         <modifier type="set" field="description" value="Automate: Les unités avec cette règle ont une capacité très limitée de mener des actions indépendantes. À moins qu&apos;ils font partie d&apos;une formation qui comprend d&apos;autres unités qui ne possèdent pas cette règle, la formation ne peut prendre les actions suivement: Tenir, Assaut, Regroupement, Tir Soutenu et l&apos;État d&apos;Alerte.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Autómata: Las unidades con esta regla tienen una capacidad muy limitada para llevar a cabo acciones independientes. A menos que formen parte de una formación que incluya otras unidades que no tengan esta regla, la formación sólo puede realizar acciones de Aguantar, Atacar, Mando, Fuego Sostenido y Fuego de Supresión.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3315,6 +3325,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Dirigible Overlord: Dispersa 3D6cm al azar y es destruido. Cualquier unidad dentro de los 5cm del lugar del choque está sujeta a un impacto en la tabla de Plantilla de Artillería igual a 3PA (3BP).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Scatters 3D6cm randomly and is destroyed. Any unit within 5cm of the crash site is subject to a hit on the Blast Template chart equal to 3BP.</description>
     </rule>
@@ -3328,6 +3343,11 @@
         <modifier type="set" field="description" value="Touche Critique: Colossus: Prend 1 point de dégâts supplémentaires et se immobilisé. Touches critiques ultérieures détruire l&apos;unité.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Colossus: Sufre un punto de daño adicional y queda inmovilizado. Los impactos críticos posteriores destruyen la unidad.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3345,6 +3365,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Cíclope: Sufre un punto adicional de daño y ya no puede disparar su Cañón Furia. Los impactos críticos subsiguientes destruyen la unidad.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Takes 1 additional point of damage and may no longer fire its Hellfury Canon. Subsequent critical hits destroy the unit.</description>
     </rule>
@@ -3360,19 +3385,29 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Tren Blindado: El último vagón de batalla en línea es destruido.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The last battle car in line is destroyed.</description>
     </rule>
-    <rule id="73ee-c5a5-1ebd-c31d" name="Critical Hit: Large Blast" hidden="false">
+    <rule id="73ee-c5a5-1ebd-c31d" name="Critical Hit: Blast Wave" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Touche Critique: Grande Détonation: Détruit. Toutes les unités dans un rayon de 15cm prend un PI.">
+        <modifier type="set" field="description" value="Touche Critique: Onde de Choc: Détruit. Toutes les unités dans un rayon de 15cm prend un PI.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Kritischer Treffer: Große Detonation: Zerstört. Jede Einheit innerhalb von 15 cm erhält einen Blast-Marker.">
+        <modifier type="set" field="description" value="Kritischer Treffer: Druckwelle: Zerstört. Jede Einheit innerhalb von 15 cm erhält einen Blast-Marker.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Onda Expansiva: Destruido. Cada unidad en un radio de 15 cm recibe un marcador de explosión.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3390,8 +3425,13 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Reactor esta Golpeado: Tira 1D6 en la fase de finalización de cada ronda por cada impacto crítico recibido:  • 1: El reactor de plasma explota, destruyendo el vehículo e infligiendo un impacto con un 5+ a todas las unidades en un radio de 5 cm.  • 2-3: El Girocóptero que acompaña al Colossus es destruido y las armas del Colossus pierden el &apos;Fuego Indirecto&apos;. La Leviathan está inmovilizada. El Cíclope pierde el &quot;Disruptor&quot;. El Tren Blindado ya no puede reparar los escudos. Si la máquina de guerra ya está inmovilizada, o si estas habilidades ya se han perdido, la máquina de guerra pierde un punto adicional de FD.  • 4-6: La grieta se repara.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Roll 1D6 at the end of each round for each critical strike received:
+      <description>Roll 1D6 at the end of each round for each critical hit received:
 1: The plasma reactor explodes destroying the vehicle and inflicting a hit on a 5+ to all units within 5cm.
 2-3: The Gyrocopter accompanying the Colossus is destroyed and the Colossus weapons lose &apos;Indirect Fire&apos;. The Leviathan is immobilised. The Cyclops loses &apos;Disruptor&apos;. It is no longer possible for the Land Train to repair shields. If the war engine is already immobilised, or if these abilities have already been lost, the war engine loses an additional point of DC.
 4-6: The crack is repaired.</description>
@@ -3406,6 +3446,11 @@
         <modifier type="set" field="description" value="Disrupteur: Les Squats utilisent des canons de vaisseau spatial appelés « Canon Furie », montés sur forteresse mobile. Ce canon projette un rayon continu très puissant faisant rapidement surchauffer les systèmes de protection. Chaque Touche avec ces armes détruit deux Boucliers (ou autre appareil de protection ayant les mêmes effets) au lieu d&apos;un.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Disruptor: Los Squats usan cañones de naves espaciales, llamados Cañones Furia, montados en fortalezas móviles. Este cañón proyecta un rayo sólido y poderoso para sobrecalentar rápidamente los sistemas de protección. Cada impacto con estas armas destruye dos escudos (u otras pantallas, etc.) en lugar de uno.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3434,6 +3479,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Portal de Minas: Los ejércitos Squat pueden tener hasta tres formaciones por Portal de Minas entrar en juego tomando una acción que les permita moverse, luego midiendo su primer movimiento desde el Portal de Minas en la mesa. No más de una formación puede viajar a través de un solo Portal de Minas por turno, pero la formación no tiene que ser asignada a ningún Portal de Minas en particular. Se supone que grandes redes de túneles conectan los Portales Mineros entre sí.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Squat armies may have up to three formations per Mine Portal enter play by taking an action that allows them to move, then measuring its first move from the Mine Portal on the tabletop. No more than one formation may travel through a single Mine Portal per turn, but the formation does not have to be assigned to any particular Mine Portal. It is assumed that large networks of tunnels connect the Mine Portals together.</description>
     </rule>
@@ -3450,6 +3500,11 @@ Fanatic #13</description>
         <modifier type="set" field="description" value="Esprit des Ancêtres: Une formation contenant un Ancêtre Vivant peut ignorer la pénalité de -1 au test d’action lorsqu’elle tente de conserver l’initiative.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Espíritu de los Ancestros: Una formación que contiene un Ancestro Viviente puede ignorar la penalización de -1 a las tiradas de chequeo de acción al intentar retener la iniciativa.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3472,8 +3527,13 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Observador: Cualquier unidad enemiga que esté a menos de 60 cm y tenga línea de fuego con un Girocóptero o un Overlord, que no estén desmoralizados, se considera Observada. Las siguientes máquinas de guerra no necesitan línea de fuego con una unidad enemiga que sea Observada:  •   • Leviathan: Cañón Apocalipsis  • Colossus: Cañón Apocalipsis, Misiles de Plasma  • Cíclope: Misiles Tempestad de Muerte  • Tren Blindado: Cañón Apocalipsis, Mortero de Asedio, Bomba Radiactiva.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Any enemy unit that is within 60cm and has Line of Fire to an unbroken Squat Gyrocopter or Overlord is considered to be Spotted. The following War Machine weapons do not need Line of fire to an enemy unit that is Spotted:
+      <description>Any enemy unit that is within 60cm and has Line of Fire to an unbroken Squat Gyrocopter or Overlord is considered to be Spotted. The following War Engine weapons do not need Line of Fire to an enemy unit that is Spotted:
  • Leviathan: Doomsday Cannon
  • Colossus: Doomsday Cannon, Plasma Missiles
  • Cyclops: Doomstorm Missiles
@@ -3484,6 +3544,11 @@ Fanatic #13</description>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Transporte Squat: Algunos destacamentos de Squat tienen &quot;más transporte&quot; en la sección de unidades de la lista del ejército. Estas formaciones pueden incluir suficientes Rhinos para transportar la formación después de que se hayan tomado las mejoras. El número de Rhinos siempre será el mínimo necesario para transportar todas las unidades elegibles en la formación.  • No tienes que seleccionar Rhinos si no quieres. Si prefieres llevar la formación a pie, para que pueda actuar como una patrulla, por ejemplo.  • Alternativamente, puedes reemplazar todos los Rhinos de un destacamento con el mínimo número de Termitas para transportar todas las unidades en la formación. O puede reemplazar todos los rinocerontes de un destacamento con dos Topos o un solo Hellebore por el costo indicado.  • Si haces esto, entonces el destacamento entrará en juego usando las reglas de los túneles. Sólo puedes elegir esta opción si cada unidad de la formación es elegible para ser transportada en Termitas o en los Topos o el Hellebore. Una vez que una formación se ha desplegado desde sus túneles es una formación completamente separada y puede actuar de forma independiente, no está atada a las Termitas, los Topos o el Hellebore de ninguna manera.  • Las termitas pueden prestar fuego de apoyo a las formaciones de Squat y si son atacadas lucharán normalmente. También cuentan como vehículos blindados para fines de cobertura; sin embargo nunca se activan y no tienen una Zona de Control. Sólo pueden disputar los objetivos.  Las Termitas pueden ser objetivo de un disparo o ser atacadas de manera normal y todas las Termitas descartadas de una formación transportada cuentan como una formación (para asignaciones de impacto, marcadores de explosión, resolución de combate, etc.). Si las termitas descartadas se desmoralizan por cualquier razón, entonces son destruidas.  • Un par de Topos o un solo Hellebore cuentan como formaciones independientes y siguen todas las reglas normales de las máquinas de guerra inmóviles. Pueden activarse normalmente.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3511,6 +3576,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Iniciativa: 2+.  • Todas las formaciones se reorganizan con un 1+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Thurgrimm armies have a strategy rating of 2. All formations have an Initiative of 2+. All formations rally on a 1+.</description>
     </rule>
@@ -3529,6 +3599,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
         <modifier type="set" field="description" value="Termite: Termiten (wie Landungskapseln) sind überhaupt keine Einheiten. Betrachte sie als Ruinen nach dem Auftauchen. Die Fläche des Ruinengeländes sollte ungefähr der Grundfläche der transportierten Einheiten entsprechen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Termita: Las termitas no son unidades en absoluto. Consideradas como ruinas al salir a la superficie. El área del terreno de las ruinas debe ser aproximadamente igual a la huella de las unidades transportadas.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3554,6 +3629,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Cíclope: Con una tirada de 5+, el Cíclope sufre 1 punto de daño cuando el Cañón Furia dispara. Los impactos críticos subsiguientes causan un punto adicional de daño.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>On a roll of 5+, the Cyclops takes 1DC damage when the Hellfury Cannon fires. Subsequent critical hits cause an additional 1DC of damage.</description>
     </rule>
@@ -3562,6 +3642,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
         <modifier type="set" field="description" value="Touche Critique: Train Blindé: Le dernier wagon de bataille en ligne est détruite. Si aucun des wagons de bataille restent le Train Blindé est détruit.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Tren Blindado: El último vagón de batalla en línea es destruido. Si no quedan vagones de batalla, el tren blindado será destruido.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3579,6 +3664,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Leviathan: Sufre 1 punto adicional de daño y D3 unidades transportadas sufren un impacto. Los impactos críticos subsiguientes destruirán el Maquina de Guerra.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Takes 1 additional point of damage and D3 units transported suffer 1 hit. Additional critical hit will destroy the War Engine.</description>
     </rule>
@@ -3592,6 +3682,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
         <modifier type="set" field="description" value="Squat Transport: Jede Squat-Kernformation kann aus der Transportliste auswählen. Sie dürfen nur so viele Transporteinheiten mitnehmen, wie erforderlich sind, um die gesamte Formation einschließlich etwaiger Upgrades zu transportieren. The Hellbore und Leviathan sind unabhängige Kriegsmaschinen, die mindestens eine Formation tragen müssen. Die Spieler können auf Wunsch keinen Transport wählen.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Transporte Squat: Cualquier formación del núcleo de Squat puede elegir de la lista de Transportes. Sólo puede tomar tantas unidades de transporte como sean necesarias para llevar toda la formación, incluyendo cualquier mejora, sin espacios extra si es posible. El Hellbore y el Leviathan son máquinas de guerra independientes que deben llevar al menos una formación. Los jugadores pueden elegir no tener ningún tipo de transporte si lo desean.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3614,6 +3709,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • La Guardia del Hogar, Colossus, Cíclope y Tren Blindado: 1+. Resto de formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Squat armies have a strategy rating of 3. The Hearthguard, Colossus, Cyclops and Land Train have an Initiative of 1+. All other formations have an Initiative of 2+.</description>
     </rule>
@@ -3634,6 +3734,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Todas las formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Squat armies have a strategy rating of 2. All Squat formations have an initiative rating of 2+.</description>
     </rule>
@@ -3647,6 +3752,11 @@ A pair of Moles or a single Hellebore count as independent formations and follow
         <modifier type="set" field="description" value="Esprit des Ancêtres: Temps qu&apos;il se trouve dans la formation, un ancêtre vivant confère à l&apos;ensemble des unités qui la compose la règle Sauvegarde Invulnérable.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Espíritu de los Ancestros: Todas las unidades en una formación ganan la regla de Salvación Invulnerable mientras contenga un Ancestro Viviente.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3971,7 +4081,7 @@ A pair of Moles or a single Hellebore count as independent formations and follow
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="3c70-22c1-1ecf-35c4" value="Large Blast">
+        <modifier type="set" field="3c70-22c1-1ecf-35c4" value="Blast Wave">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>

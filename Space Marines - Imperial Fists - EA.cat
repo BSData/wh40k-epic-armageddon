@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3336,6 +3336,11 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Máquinas de Guerra: Aunque los Thunderhawks y Naves de Descenso son formaciones de apoyo, su coste adicional (mostrado entre paréntesis) es parte del 33% que puede ser gastado en Aviones y Soporte Pesado. Para seleccionar cualquiera de ellos se debe añadir a la lista el &quot;Total de Puntos de Apoyo Máquinas de Guerra&quot; (War Engine Support Points Total). Sólo es necesario seleccionarlo una vez y su valor se actualizará automáticamente si se toman más unidades.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Although Thunderhawks &amp; Landing Craft are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Aircraft and Support. To select any of these the &quot;War Engine Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further units are taken.</description>
     </rule>
@@ -3401,8 +3406,13 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Maestros del Asedio: Las formaciones Tácticas y Devastadoras pueden dejar a los Rhinos o al Dreadnought con 5cm de trincheras y alambre de espino por unidad. Estas formaciones tendrán que desplegarse de forma clásica (incluso en la guarnición). Además, por 50 puntos, puedes reemplazar las trincheras con tantos bunkers como unidades haya en la formación.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Tactical and devastator formations can leave rhinos or dreadnought to take 5cm of trenches and barbed wire per unit. These formations will have to deploy classically (including in garrison). In addition, for 50pts, you can replace the trenches with as many bunkers as there are units in the formation.</description>
+      <description>Tactical and devastator formations can leave rhinos or the dreadnought to take 5cm of trenches and barbed wire per unit. These formations will have to deploy classically (including in garrison). In addition, for 50pts, you can replace the trenches with as many bunkers as there are units in the formation.</description>
     </rule>
     <rule id="a2e9-cf57-facb-8228" name="Strategy Rating &amp; Initiative (IF)" hidden="false">
       <modifiers>
@@ -3441,6 +3451,11 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Maestros del Asedio: La infantería y vehículos de los Puños Imperiales pueden repetir los chequeos fallidos de terreno peligroso cuando atraviesan campos de minas. Las unidades de infantería de los Puños Imperiales dentro de las trincheras obtienen la capacidad de Daño Primero. Las unidades de infantería de los Puños Imperiales dentro de búnkeres reemplazan los búnkeres con una cobertura de cobertura de blindaje reforzada de 4+. Un ejército de los Puños Imperiales puede comenzar el juego con hasta tres formaciones de guarnición con fuego de supresión en el escenario del torneo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Imperial Fists infantry and vehicles may re-roll failed dangerous terrain tests when traversing minefields. Imperial Fists infantry units within trenches gain the first strike ability. Imperial Fists infantry units within bunkers replace the bunkers 3+ cover save with a 4+ reinforced armour cover save. An Imperial Fists army may start the game with up to three garrisoned formations on overwatch in the tournament scenario.</description>
     </rule>
@@ -3449,6 +3464,11 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Posiciones Fortificadas: Las posiciones fortificadas deben establecerse después de los objetivos, pero antes de que se desplieguen las naves espaciales y las guarniciones. Las posiciones fortificadas pueden establecerse en cualquier lugar donde un vehículo pueda desplegarse dentro de la parte de la tabla de los Puños Imperiales. Se puede dividir un conjunto de posiciones fortificadas como se desee (aunque ninguna sección de trincheras o campo de minas puede ser menor de 5cm x 2,5cm), siempre que se respeten las reglas de coherencia de la formación. Por ejemplo, se podrían dividir las zanjas en varias líneas, siempre y cuando haya 5cm de &quot;enlaces&quot; entre las diferentes partes de la posición. Estas posiciones fortificadas cuentan como si tuvieran un movimiento de cero. Las posiciones fortificadas no pueden ser transportadas.  • Algunas formaciones en el ejército pueden venir con un conjunto de posiciones fortificadas; estas fortificaciones se establecen al mismo tiempo que todas las demás fortificaciones del ejército y siguen las mismas reglas. Una vez desplegadas, estas fortificaciones son de terreno y ya no forman parte de la formación.  • Una vez que las posiciones fortificadas se establecen, pueden ser usadas por cualquier unidad, no sólo por las unidades para las que fueron compradas. También pueden ser capturadas y utilizadas por unidades enemigas.  • Las posiciones fortificadas no bloquean la línea de visión.  • Los búnkeres pueden tener un tamaño máximo de 6cm x 5cm. Las trincheras y los campos de minas pueden ser de hasta 50cm x 2,5cm.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3463,6 +3483,11 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Plataforma Estática de Defensa: &quot;Y no Conocerán el Miedo&quot; no se aplica a las plataformas de Hyperios  y Tarántulas.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
