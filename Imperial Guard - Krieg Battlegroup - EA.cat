@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dd76-fc3b-a3ee-2937" name="Imperial Guard: Krieg Armoured Battlegroup" revision="27" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dd76-fc3b-a3ee-2937" name="Imperial Guard: Krieg Armoured Battlegroup" revision="28" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="33" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -216,14 +216,27 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="92d1-722e-c361-84d6" hidden="false" collective="false" import="true" targetId="b342-82ae-b170-40df" type="selectionEntry"/>
-            <entryLink id="7438-5ce5-f0cc-0cd9" hidden="false" collective="false" import="true" targetId="bb07-ec6d-874a-771a" type="selectionEntry"/>
-            <entryLink id="3d1f-c0fb-05bb-48c9" hidden="false" collective="false" import="true" targetId="1483-1853-42db-2afa" type="selectionEntryGroup"/>
+            <entryLink id="92d1-722e-c361-84d6" name="Hydra" hidden="false" collective="false" import="true" targetId="b342-82ae-b170-40df" type="selectionEntry"/>
+            <entryLink id="7438-5ce5-f0cc-0cd9" name="Krieg Russ Supreme Commander" hidden="false" collective="false" import="true" targetId="bb07-ec6d-874a-771a" type="selectionEntry"/>
+            <entryLink id="3d1f-c0fb-05bb-48c9" name="Close Support Squadron" hidden="false" collective="false" import="true" targetId="1483-1853-42db-2afa" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="b15a-d502-444b-c3ce" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
+        <entryLink id="b15a-d502-444b-c3ce" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="2c87-1989-d43f-4568" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="62a9-5862-b820-1670" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb07-ec6d-874a-771a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4032-952e-3f0d-904e" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="500.0"/>
@@ -697,21 +710,22 @@
     </selectionEntry>
     <selectionEntry id="4032-952e-3f0d-904e" name="Commissar" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="maxInForce" value="2">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-          </conditions>
+        <modifier type="increment" field="maxInForce" value="1.0">
+          <repeats>
+            <repeat field="limit::points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="true"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2c87-1989-d43f-4568" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="4aa5-0c9c-06e3-3378" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
         <infoLink id="100d-4f5d-3126-00ae" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
         <infoLink id="569d-860c-f6b5-fccd" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-        <infoLink id="2e03-b33f-fa45-ab8b" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
+        <infoLink id="2e03-b33f-fa45-ab8b" name="Leader" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -914,8 +928,8 @@
       <infoLinks>
         <infoLink id="8a8c-0cd2-e880-6a06" hidden="false" targetId="01d3-ed05-8258-7e21" type="profile"/>
         <infoLink id="78c3-53c7-47cb-254e" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
-        <infoLink id="9ae1-0c5c-91fc-d630" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-        <infoLink id="9f36-ff06-a653-f32d" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
+        <infoLink id="9ae1-0c5c-91fc-d630" name="Leader" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
+        <infoLink id="9f36-ff06-a653-f32d" name="Supreme Commander" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>

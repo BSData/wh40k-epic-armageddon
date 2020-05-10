@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="39" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="33" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1609,8 +1609,16 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="24f9-d2f1-89ef-403d" hidden="false" collective="false" import="true" targetId="45ca-34a4-6425-c5b9" type="selectionEntry"/>
-        <entryLink id="a763-0c8a-eae1-b880" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
-        <entryLink id="d63d-7129-609c-d02b" hidden="false" collective="false" import="true" targetId="2680-687a-227c-eca0" type="selectionEntry"/>
+        <entryLink id="a763-0c8a-eae1-b880" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="e463-e86c-204e-355d" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4032-952e-3f0d-904e" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="d63d-7129-609c-d02b" name="Supreme Command Unit" hidden="false" collective="false" import="true" targetId="2680-687a-227c-eca0" type="selectionEntry"/>
         <entryLink id="208f-14e3-ecf1-f6a7" hidden="false" collective="false" import="true" targetId="64db-95ef-bc57-4199" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -2528,8 +2536,7 @@
   </entryLinks>
   <infoLinks>
     <infoLink id="61ab-00f3-d9df-6ab3" name="Strategy Rating &amp; Initiative (DK)" hidden="false" targetId="4364-985f-fc65-7ace" type="rule"/>
-    <infoLink id="9114-6441-2fcf-3181" hidden="false" targetId="e2d9-1df2-fc92-dd4c" type="rule"/>
-    <infoLink id="f131-dc9f-b2ab-984d" hidden="false" targetId="5f23-2a7a-5162-9412" type="rule"/>
+    <infoLink id="9114-6441-2fcf-3181" name="Commissars" hidden="false" targetId="e2d9-1df2-fc92-dd4c" type="rule"/>
     <infoLink id="b857-ba8a-e09a-687e" hidden="false" targetId="2e86-c893-2425-3cd9" type="rule"/>
     <infoLink id="5d49-5758-24d1-1de0" hidden="false" targetId="24ed-2541-dcdd-0744" type="rule"/>
     <infoLink id="44fe-3158-ef79-2bac" name="Strategy Rating &amp; Initiative (DK)-----------" hidden="false" targetId="f4d5-7305-ab77-697e" type="rule"/>
@@ -2711,20 +2718,10 @@
     </selectionEntry>
     <selectionEntry id="4032-952e-3f0d-904e" name="Commissar" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="increment" field="maxInForce" value="1">
+        <modifier type="increment" field="maxInForce" value="1.0">
           <repeats>
-            <repeat field="limit::points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+            <repeat field="limit::points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="true"/>
           </repeats>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="increment" field="maxInForce" value="1">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
@@ -2739,10 +2736,19 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="increment" field="maxInForce" value="1.0">
+          <repeats>
+            <repeat field="limit::points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e463-e86c-204e-355d" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="4aa5-0c9c-06e3-3378" name="Commissar" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
@@ -3506,7 +3512,7 @@
       <infoLinks>
         <infoLink id="68f0-2b1b-0388-91c0" hidden="false" targetId="e2dd-8b03-03a7-e0e1" type="profile"/>
         <infoLink id="9995-7485-699b-f8e2" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
-        <infoLink id="ac35-d0c0-4f9a-07f4" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+        <infoLink id="ac35-d0c0-4f9a-07f4" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -3668,7 +3674,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="77b7-bacd-e1ab-8269" hidden="false" targetId="e2dd-8b03-03a7-e0e1" type="profile"/>
-        <infoLink id="03b5-354b-03d3-7db7" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
+        <infoLink id="03b5-354b-03d3-7db7" name="Commander" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
         <infoLink id="ccd7-358a-5ee8-8a5a" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -3678,7 +3684,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="1916-bb4d-e175-0d59" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
+        <infoLink id="1916-bb4d-e175-0d59" name="Supreme Commander" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
         <infoLink id="615f-8879-63e0-1737" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
       </infoLinks>
       <costs>
@@ -3801,7 +3807,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9b5-3298-71de-996f" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="0188-640f-1da2-8cb5" hidden="false" collective="false" import="true" targetId="0fa1-b84a-a28b-db56" type="selectionEntry"/>
+        <entryLink id="0188-640f-1da2-8cb5" name="Supreme Command Unit" hidden="false" collective="false" import="true" targetId="0fa1-b84a-a28b-db56" type="selectionEntry"/>
         <entryLink id="f8b0-b22e-99aa-5e44" hidden="false" collective="false" import="true" targetId="8359-49b6-f63a-1720" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
@@ -3841,31 +3847,6 @@
     </rule>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
       <description>Compendium Astra Militarum 1.01 - FERC - 2019 #30/08/2019</description>
-    </rule>
-    <rule id="5f23-2a7a-5162-9412" name="Commissars" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Commissari: n esercito di Guardia Imperiale della Legione d&apos;Acciaio puo&apos; includere 2D6 Commissari. I Commissari non hanno costo in punti. Se il lancio di dado supera il numero di unita&apos; disponibili ogni scarto sara&apos; perso.  • Tira per vedere quante unita&apos; di Commissari un giocatore puo&apos; aggiungere all&apos;inizio della battaglia prima che entrambe le fazioni abbiano schierato. Se l&apos;esercito include un Comandante Supremo, allora il primo Commissario deve essere unito alla formazione del Comandante Supremo. Ogni altro Commissario puo&apos; essere unito a qualsiasi altra formazione. Non puoi includere piu&apos; di un Commissario per formazione. Se hai più Commissari che formazioni, ogni eccesso è perso.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Commissaires: Une armée de la Garde Impériale peut inclure jusqu&apos;à 2D6 commissaires. Les commissaires sont une mise à jour gratuite. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaires peuvent être attachés à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un commissaire par formation. Si vous avez plus que commissaires formations tout excès sont perdus.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Comisarios: Un ejército de la Guardia Imperial puede incluir hasta 2D6 personajes de comisario. Los personajes de comisario son una actualización gratuita. Si el ejército incluye un Comandante en Jefe, entonces el primer Comisario debe ser asignado a la formación del Comandante en Jefe. Cualquier otro comisario puede ser asignado a cualquier otra formación. No se puede incluir más de un comisario por formación. Si tienes más Comisarios que las formaciones, cualquier exceso se pierde.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>An Imperial Guard army may include up 2D6 Commissar Characters. The Commissar characters are a free upgrade. If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost.</description>
     </rule>
     <rule id="e2d9-1df2-fc92-dd4c" name="Commissars" hidden="false">
       <modifiers>
