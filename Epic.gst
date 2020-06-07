@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="33" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="34" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+  <readme>Our Repo describes over 333 factions, forces, chapters &amp; regiments (from the 400-plus currently available) as well as incorporating supplementary features like Riot or Minigeddon.
+
+Groups
+
+The datafiles are cross-compatible with army lists published and maintained by NetEA, F-ERC, EpicUK or EpicAU, where applicable. When creating a new roster, if the -Community- entry is a compulsory selection, then you should begin by choosing your Group from the options available in that entry. This is also where you&apos;ll usually find the Language option. (For Horus Heresy files, the option can be found in the F-ERC or EpicAU entry.)
+
+Translations
+
+Each active community has made rules developments to suit the needs of their group; most of the French translations come from F-ERC and reflect their experience, so these are not always a direct adaptation. All of the German rules were translated by myself, as well as some of the supplementary French and Spanish. I&apos;m not a fluent speaker, so you have my apologies for any misunderstandings. Fortunately, the core of the Spanish rules are from &quot;Dragus&quot; and &quot;Lord Bruno&quot;, whose excellent work is greatly appreciated &amp; I hope they forgive my use of it here.
+
+Transports
+
+Some of the files are designed to calculate the correct number of Transports available to a formation; add Transports after you have selected any other upgrades.</readme>
   <costTypes>
-    <costType id="points" name="pts" defaultCostLimit="0.0"/>
+    <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="f68a073b-c562-ca93-961e-5cf373ae14cb" name="Unit">
@@ -64,19 +77,20 @@
     <categoryEntry id="a01c-3159-3cef-e12d" name="1 per Formation" hidden="false"/>
     <categoryEntry id="ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false"/>
     <categoryEntry id="9629-6b9c-185f-4112" name="1 per Formation - Plus" hidden="false"/>
+    <categoryEntry id="1ba6-2328-676b-dfb0" name="1 per Formation - Group A" hidden="false"/>
+    <categoryEntry id="eaa5-2fb3-92a8-7647" name="1 per Formation - Group B" hidden="false"/>
     <categoryEntry id="2acd-5f8a-20f0-7ab4" name="1 per 2 Formations" hidden="false"/>
     <categoryEntry id="69e2-980b-6869-e4b8" name="One Half - 50%" hidden="false"/>
     <categoryEntry id="4f35-97c0-fae0-922d" name="One Third - 33%" hidden="false"/>
     <categoryEntry id="9b1c-7eb7-417a-4e13" name="One Third - 33% - Group A" hidden="false"/>
     <categoryEntry id="870e-22d9-c2a9-31e6" name="One Third - 33% - Group B" hidden="false"/>
+    <categoryEntry id="a09c-fd85-bc16-e6cc" name="One Third - 33% - 1 per Formation" hidden="false"/>
     <categoryEntry id="8c78-0a75-b6c3-343a" name="One Quarter - 25%" hidden="false"/>
     <categoryEntry id="9535-122d-c109-24d4" name="One Sixth - 17%" hidden="false"/>
     <categoryEntry id="36c2-fa8b-6cfc-be84" name="One Tenth - 10%" hidden="false"/>
+    <categoryEntry id="9860-a9e5-8b49-020c" name="Two Thirds - 67%" hidden="false"/>
     <categoryEntry id="767a-6731-1c8e-886f" name="Siegeline" hidden="false"/>
     <categoryEntry id="1280-1024-f2ef-261b" name="Assault!" hidden="false"/>
-    <categoryEntry id="1ba6-2328-676b-dfb0" name="1 per Formation - Group A" hidden="false"/>
-    <categoryEntry id="9860-a9e5-8b49-020c" name="Two Thirds - 67%" hidden="false"/>
-    <categoryEntry id="a09c-fd85-bc16-e6cc" name="One Third - 33% - 1 per Formation" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="f12d-4f60-fe2d-1813" name="Epic Armageddon" hidden="false">
@@ -209,7 +223,7 @@
         </categoryLink>
         <categoryLink id="98ef-ba88-3a4a-b4c6" name="1 per Formation - Group A" hidden="false" targetId="1ba6-2328-676b-dfb0" primary="false">
           <modifiers>
-            <modifier type="increment" field="20fd-feef-f688-b0bf" value="1">
+            <modifier type="increment" field="20fd-feef-f688-b0bf" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
               </repeats>
@@ -222,6 +236,18 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="20fd-feef-f688-b0bf" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3e31-3061-c968-df16" name="1 per Formation - Group B" hidden="false" targetId="eaa5-2fb3-92a8-7647" primary="false">
+          <modifiers>
+            <modifier type="increment" field="c89c-8b1e-b954-8fc6" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="c89c-8b1e-b954-8fc6" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="f12d-4f60-fe2d-1813-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
@@ -473,6 +499,18 @@
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="9b47-7db9-dc18-a293" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="01ff-16fa-db84-afbc" name="1 per Formation - Group B" hidden="false" targetId="eaa5-2fb3-92a8-7647" primary="false">
+          <modifiers>
+            <modifier type="increment" field="f5d1-8e6a-e68c-651a" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="f5d1-8e6a-e68c-651a" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="b56b-3825-52c1-28cc-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
@@ -720,6 +758,18 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="075e-5edf-1de1-e4e8" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f4aa-0428-c966-9a15" name="1 per Formation - Group B" hidden="false" targetId="eaa5-2fb3-92a8-7647" primary="false">
+          <modifiers>
+            <modifier type="increment" field="42c4-f4f5-b30e-3440" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="42c4-f4f5-b30e-3440" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="336d-8892-b061-d24f-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
@@ -971,6 +1021,18 @@
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="9ad3-7d4b-9767-28d7" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="5588-f4d8-8a6b-b5a1" name="1 per Formation - Group B" hidden="false" targetId="eaa5-2fb3-92a8-7647" primary="false">
+          <modifiers>
+            <modifier type="increment" field="354b-075a-f7e5-208a" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="354b-075a-f7e5-208a" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="c451-df17-24ae-254d-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
           <modifiers>
             <modifier type="increment" field="maxSelections" value="1.0">
@@ -1215,6 +1277,18 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="2945-2cbf-b28b-7522" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0a9a-ac89-3a13-f44a" name="1 per Formation - Group B" hidden="false" targetId="eaa5-2fb3-92a8-7647" primary="false">
+          <modifiers>
+            <modifier type="increment" field="44fa-cbb3-d24f-ee61" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="44fa-cbb3-d24f-ee61" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="f79a-b263-908a-1db8-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
@@ -1462,6 +1536,18 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="d048-d3be-7636-160a" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c916-8bcb-6f7d-4aa4" name="1 per Formation - Group B" hidden="false" targetId="eaa5-2fb3-92a8-7647" primary="false">
+          <modifiers>
+            <modifier type="increment" field="8b32-c9d8-f413-9abc" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="8b32-c9d8-f413-9abc" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="8028-1888-3867-395a-ffd2-861b-02d1-d388" name="1 per Formation - Extra" hidden="false" targetId="ffd2-861b-02d1-d388" primary="false">
