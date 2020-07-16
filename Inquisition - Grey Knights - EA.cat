@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f5d8-959a-a2dd-60f8" name="Inquisition: Grey Knights" revision="33" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f5d8-959a-a2dd-60f8" name="Inquisition: Grey Knights" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -198,9 +198,21 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="603f-8e5d-fb5d-1217" name="*Land Raider" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry"/>
-            <entryLink id="a4e3-69ec-52ab-f841" name="*Land Raider Redeemer" hidden="false" collective="false" import="true" targetId="6283-0160-b449-048d" type="selectionEntry"/>
-            <entryLink id="4362-f4ab-b26e-ce0a" name="*Land Raider Crusader" hidden="false" collective="false" import="true" targetId="1f53-8d6f-c308-ee93" type="selectionEntry"/>
+            <entryLink id="603f-8e5d-fb5d-1217" name="Land Raider" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="maxSelections" value="4.0"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="a4e3-69ec-52ab-f841" name="Land Raider Redeemer" hidden="false" collective="false" import="true" targetId="6283-0160-b449-048d" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="3ac2-fb7e-b40a-2dcc" value="4.0"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="4362-f4ab-b26e-ce0a" name="Land Raider Crusader" hidden="false" collective="false" import="true" targetId="1f53-8d6f-c308-ee93" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="maxSelections" value="4.0"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -208,7 +220,7 @@
         <entryLink id="ccc3-55aa-ffed-635d" name="Hunter" hidden="false" collective="false" import="true" targetId="4772-03bd-f13a-c726" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2f67-4894-a61e-7ebc" name="Purgation Squad" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -260,12 +272,12 @@
             </modifier>
             <modifier type="decrement" field="6a52-550e-c275-d48d" value="1">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" type="atLeast"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="6a52-550e-c275-d48d" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="6a52-550e-c275-d48d" value="1">
@@ -309,7 +321,7 @@
           <entryLinks>
             <entryLink id="5f7d-58b0-e716-40d2" name="Hunter" hidden="false" collective="false" import="true" targetId="4772-03bd-f13a-c726" type="selectionEntry"/>
             <entryLink id="0be5-ad37-1aa9-fa09" name="Eternal Warriors" hidden="false" collective="false" import="true" targetId="884d-7213-ebfc-c0a5" type="selectionEntryGroup"/>
-            <entryLink id="e57d-8c66-8f59-1b34" name="Land Raiders" hidden="false" collective="false" import="true" targetId="18c3-fa4f-c880-1a97" type="selectionEntryGroup"/>
+            <entryLink id="e57d-8c66-8f59-1b34" name="Land Raiders" hidden="false" collective="false" import="true" targetId="e7ce-6f26-4777-c58a" type="selectionEntryGroup"/>
             <entryLink id="9f5f-7480-3844-18cd" name="Stormraven" hidden="false" collective="false" import="true" targetId="ca32-b888-b477-6ec5" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -409,7 +421,7 @@
             </modifier>
             <modifier type="increment" field="0585-aae2-feeb-31db" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -443,7 +455,7 @@
           <entryLinks>
             <entryLink id="e4b5-f347-f528-8050" name="Hunter" hidden="false" collective="false" import="true" targetId="4772-03bd-f13a-c726" type="selectionEntry"/>
             <entryLink id="cc37-5a1a-3c5e-8ee6" name="Eternal Warriors" hidden="false" collective="false" import="true" targetId="884d-7213-ebfc-c0a5" type="selectionEntryGroup"/>
-            <entryLink id="efc2-e793-a823-0f96" name="Land Raiders" hidden="false" collective="false" import="true" targetId="18c3-fa4f-c880-1a97" type="selectionEntryGroup"/>
+            <entryLink id="efc2-e793-a823-0f96" name="Land Raiders" hidden="false" collective="false" import="true" targetId="e7ce-6f26-4777-c58a" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="d4b4-21d0-7c9f-32d9" name="Command" hidden="false" collective="false" import="true" defaultSelectionEntryId="4cfe-5c6a-bcf8-7bde">
@@ -504,12 +516,12 @@
             </modifier>
             <modifier type="decrement" field="47dd-84b4-0f29-4ce7" value="1">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" type="atLeast"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="47dd-84b4-0f29-4ce7" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="47dd-84b4-0f29-4ce7" value="1">
@@ -529,7 +541,7 @@
           <entryLinks>
             <entryLink id="8b32-3bd4-63d2-85a6" name="Hunter" hidden="false" collective="false" import="true" targetId="4772-03bd-f13a-c726" type="selectionEntry"/>
             <entryLink id="a757-5db2-33cd-8246" name="Eternal Warriors" hidden="false" collective="false" import="true" targetId="884d-7213-ebfc-c0a5" type="selectionEntryGroup"/>
-            <entryLink id="db9b-8f33-b98f-f47e" name="Land Raiders" hidden="false" collective="false" import="true" targetId="18c3-fa4f-c880-1a97" type="selectionEntryGroup"/>
+            <entryLink id="db9b-8f33-b98f-f47e" name="Land Raiders" hidden="false" collective="false" import="true" targetId="e7ce-6f26-4777-c58a" type="selectionEntryGroup"/>
             <entryLink id="8f75-cae5-b863-6a01" name="Stormraven" hidden="false" collective="false" import="true" targetId="ca32-b888-b477-6ec5" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -798,12 +810,12 @@
             </modifier>
             <modifier type="decrement" field="0961-b13d-19a2-d4d5" value="1">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" type="atLeast"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="0961-b13d-19a2-d4d5" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="0961-b13d-19a2-d4d5" value="1">
@@ -847,7 +859,7 @@
           <entryLinks>
             <entryLink id="4ba6-a16b-2573-96d4" name="Hunter" hidden="false" collective="false" import="true" targetId="4772-03bd-f13a-c726" type="selectionEntry"/>
             <entryLink id="98ed-63e2-9e46-7688" name="Eternal Warriors" hidden="false" collective="false" import="true" targetId="884d-7213-ebfc-c0a5" type="selectionEntryGroup"/>
-            <entryLink id="5600-a33e-6aee-c8da" name="Land Raiders" hidden="false" collective="false" import="true" targetId="18c3-fa4f-c880-1a97" type="selectionEntryGroup"/>
+            <entryLink id="5600-a33e-6aee-c8da" name="Land Raiders" hidden="false" collective="false" import="true" targetId="e7ce-6f26-4777-c58a" type="selectionEntryGroup"/>
             <entryLink id="24ed-11e3-b179-a4f2" name="Stormraven" hidden="false" collective="false" import="true" targetId="ca32-b888-b477-6ec5" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -943,30 +955,30 @@
     </selectionEntry>
     <selectionEntry id="5ca31800-4b11-0dc0-1c2b-48752deb8d03" name="Land Raider" page="0" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="c8f8-ee77-074d-249b" hidden="false" targetId="4dd1-e47f-2832-2ba6" type="profile"/>
-        <infoLink id="ca55-bc6f-9ece-92e4" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+        <infoLink id="c8f8-ee77-074d-249b" name="Land Raider" hidden="false" targetId="4dd1-e47f-2832-2ba6" type="profile"/>
+        <infoLink id="ca55-bc6f-9ece-92e4" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
         <infoLink id="49cc-202b-46f0-1098" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
-        <infoLink id="16c6-692c-1be2-993c" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+        <infoLink id="16c6-692c-1be2-993c" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1f53-8d6f-c308-ee93" name="Land Raider Crusader" page="0" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="b5ba-631c-d705-7bdf" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
         <infoLink id="2af3-f14d-ab8f-df34" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="d706-f546-4aa5-5e78" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
-        <infoLink id="8392-608c-ff79-2002" hidden="false" targetId="6e03-2f8c-727f-6db8" type="profile"/>
+        <infoLink id="8392-608c-ff79-2002" name="Land Raider Crusader" hidden="false" targetId="6e03-2f8c-727f-6db8" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="22b0-8f6c-aa1a-1837" name="Nemesis Dreadknight" page="0" hidden="false" collective="false" import="true" type="model">
@@ -1100,7 +1112,7 @@
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1d6-9710-e7c4-46a6" type="atLeast"/>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e3c-b9b1-ba17-9bb4" type="atLeast"/>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca32-b888-b477-6ec5" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18c3-fa4f-c880-1a97" type="atLeast"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ce-6f26-4777-c58a" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1122,7 +1134,7 @@
     </selectionEntry>
     <selectionEntry id="6283-0160-b449-048d" name="Land Raider Redeemer" page="0" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3ac2-fb7e-b40a-2dcc" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3ac2-fb7e-b40a-2dcc" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="b172-dc86-e719-4795" hidden="false" targetId="1608-d3e4-fde4-7abf" type="profile"/>
@@ -1132,7 +1144,7 @@
         <infoLink id="614b-afce-ba7b-d9aa" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="780f-8707-3bbe-85e6" name="Captain" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -1156,9 +1168,10 @@
       <infoLinks>
         <infoLink id="8b0c-2ce6-3162-0f83" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
         <infoLink id="f7f0-76b2-fca7-cd33" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-        <infoLink id="eef3-821c-82c7-8c5c" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="eef3-821c-82c7-8c5c" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
         <infoLink id="ca33-0624-38e3-ed2e" name="Grey Knight Librarian" hidden="false" targetId="873d-c33b-2d48-36ef" type="profile"/>
         <infoLink id="587e-05af-44af-2fd1" name="Inspiring" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
+        <infoLink id="202d-0baa-6501-9ce6" name="Titan Killer" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -1179,7 +1192,7 @@
       <infoLinks>
         <infoLink id="6d2c-d63e-aeff-03d7" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="e848-21bd-448a-96e1" name="First Strike" hidden="false" targetId="15c7-e4da-84dc-417d" type="rule"/>
-        <infoLink id="3d63-4319-bd99-c975" name="Brotherhood Champion" hidden="false" targetId="89f3-5098-ea4f-93a8" type="profile"/>
+        <infoLink id="3d63-4319-bd99-c975" name="Paladin Escort" hidden="false" targetId="89f3-5098-ea4f-93a8" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -1225,14 +1238,162 @@
         <entryLink id="e7d6-8ed2-1259-e790" name="Librarian" hidden="false" collective="false" import="true" targetId="3431-710f-6a8e-cf11" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="18c3-fa4f-c880-1a97" name="Land Raiders" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e7ce-6f26-4777-c58a" name="Land Raiders" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="6823-3ce0-c813-8c19" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f37d-14e2-8058-f0e4" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7400-b713-959b-4208" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8402-2a54-7bf6-e977" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9ea1-7659-8b9e-b0fd" type="max"/>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6823-3ce0-c813-8c19" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="4235-da5d-c374-ccb0" name="2x Land Raider" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ff58-de56-e3ce-05bb" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="91bd-a9d8-2c5c-d493" name="Land Raider" hidden="false" targetId="4dd1-e47f-2832-2ba6" type="profile"/>
+            <infoLink id="a33d-6937-684c-b708" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="9931-92d4-0395-3e41" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="6afb-9dbb-644e-4df5" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7400-b713-959b-4208" name="4x Land Raider" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e789-a684-4cba-ce22" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9b02-5a91-369e-defc" name="Land Raider" hidden="false" targetId="4dd1-e47f-2832-2ba6" type="profile"/>
+            <infoLink id="1465-96d4-bd12-c2bd" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="f2ba-99d7-a2f5-7007" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="9491-ccb5-a046-7bd1" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="250.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3f9f-5695-86de-7fbb" name="2x Land Raider Crusader" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5c53-cf0a-ffd1-b6ad" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="ab9b-f740-05cb-07a2" name="Land Raider Crusader" hidden="false" targetId="6e03-2f8c-727f-6db8" type="profile"/>
+            <infoLink id="bb6a-f072-5afc-b733" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="831d-90f3-26bc-6bf3" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="aad0-5e54-0958-0021" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f37d-14e2-8058-f0e4" name="4x Land Raider Crusader" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d850-298c-b4d7-c8a9" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5f86-250f-5cc4-1b0b" name="Land Raider Crusader" hidden="false" targetId="6e03-2f8c-727f-6db8" type="profile"/>
+            <infoLink id="2974-447a-690e-05eb" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="d25d-4618-d26e-687f" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="56a2-6877-0e8a-5f14" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="250.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="342d-3e46-fc4f-14aa" name="2x Land Raider Redeemer" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ce5e-52fa-6a47-ab53" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2741-943d-914b-2500" name="Land Raider Redeemer" hidden="false" targetId="1608-d3e4-fde4-7abf" type="profile"/>
+            <infoLink id="4812-d0db-e2a3-a8cf" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="df72-49f4-97c3-d10e" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="4cd5-9c92-5c6f-7456" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+            <infoLink id="d919-22c8-d77b-748c" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8402-2a54-7bf6-e977" name="4x Land Raider Redeemer" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0ff3-fde4-f95f-9e6d" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="c0aa-1b70-7705-7b2d" name="Land Raider Redeemer" hidden="false" targetId="1608-d3e4-fde4-7abf" type="profile"/>
+            <infoLink id="398d-1047-f9d6-7c1a" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="a422-3851-6e6b-456c" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="923f-141f-afa1-d44e" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+            <infoLink id="2946-7f01-f66b-1012" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="250.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fec4-d548-ae89-013a" name="Land Raider, Land Raider Redeemer" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9331-0a17-0f16-bc22" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9fef-dd23-ba3d-ddf3" name="Land Raider" hidden="false" targetId="4dd1-e47f-2832-2ba6" type="profile"/>
+            <infoLink id="0970-5269-4e8e-1c4e" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="791b-621a-533d-6752" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="a305-93ed-68a6-8a28" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+            <infoLink id="753e-0979-a4a9-e4ba" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+            <infoLink id="c0c1-ec9f-905c-a18a" name="Land Raider Redeemer" hidden="false" targetId="1608-d3e4-fde4-7abf" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e9d7-7c7c-3f49-c971" name="Land Raider, Land Raider Crusader" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5eb5-2263-6927-6c03" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b20d-4bb6-9b3a-238e" name="Land Raider" hidden="false" targetId="4dd1-e47f-2832-2ba6" type="profile"/>
+            <infoLink id="73d5-db26-5f12-ee65" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="1fc1-1e2c-4efd-5996" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="8e06-78c5-461b-7abd" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+            <infoLink id="4b61-b3d8-47df-2c53" name="Land Raider Crusader" hidden="false" targetId="6e03-2f8c-727f-6db8" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="982b-b873-125c-6149" name="Land Raider Crusader, Land Raider Redeemer" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bec0-d558-1500-6e84" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="1eff-abae-53e2-9b43" name="Land Raider Crusader" hidden="false" targetId="6e03-2f8c-727f-6db8" type="profile"/>
+            <infoLink id="124f-e50e-8361-a85e" name="Transport (GK)" hidden="false" targetId="6489-be42-f15d-81bd" type="rule"/>
+            <infoLink id="78b5-9ef2-e24a-d28a" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="d75f-67f6-5ec2-e917" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+            <infoLink id="eabd-08c1-cd7b-b984" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+            <infoLink id="1562-86e2-2843-5ce5" name="Land Raider Redeemer" hidden="false" targetId="1608-d3e4-fde4-7abf" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
-        <entryLink id="0544-01e3-5fd1-7c43" name="Land Raider" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry"/>
-        <entryLink id="f5f7-acd6-d22e-6365" hidden="false" collective="false" import="true" targetId="1f53-8d6f-c308-ee93" type="selectionEntry"/>
-        <entryLink id="5fbf-7d16-3f45-9200" name="Land Raider Redeemer" hidden="false" collective="false" import="true" targetId="6283-0160-b449-048d" type="selectionEntry"/>
+        <entryLink id="b34b-3aff-f901-da20" name="Land Raider" hidden="false" collective="false" import="true" targetId="5ca31800-4b11-0dc0-1c2b-48752deb8d03" type="selectionEntry"/>
+        <entryLink id="8a73-9c86-4996-4854" name="Land Raider Crusader" hidden="false" collective="false" import="true" targetId="1f53-8d6f-c308-ee93" type="selectionEntry"/>
+        <entryLink id="6174-92c0-9431-7c83" name="Land Raider Redeemer" hidden="false" collective="false" import="true" targetId="6283-0160-b449-048d" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -1252,7 +1413,7 @@ Fanatic #02
 Fanatic #13</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>GreyKnights V2.0-2018</description>
+      <description>GreyKnights V2.1-2020</description>
     </rule>
     <rule id="a6b1-d920-637c-867b" name="Strategy Rating &amp; Initiative (GK)" hidden="false">
       <modifiers>
@@ -1334,6 +1495,11 @@ Valkyrie: 2 infantry units without Jump Packs or Mounted.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Teleport-Peilsender: Grey Knights mit der Fähigkeit zu teleportieren, können dies vom Startdeck eines Angriffskreuzers aus tun. Dazu muss eine Armee der Grey Knights einen Angriffskreuzer enthalten. Alle Formationen, die über Teleport-Peilsender einrücken, müssen mit dem Raumschiff aufgestellt und neben dem Brett platziert werden, damit der Gegner sie sehen kann. Diese Formationen nehmen im Angriffskreuzer genauso viel Transportraum ein wie beim Einsatz über Landungskapseln.  • In der Runde, in der das Raumschiff eintrifft, müssen alle Barrage-/Spitzenangriffe ausgearbeitet werden, gefolgt von den Landungskapseln wie üblich. Das Teleportieren über Teleport-Peilsender muss dann während der Runde des Raumschiffs platziert und getestet werden. Jede Formation, die über Teleport-Peilsender eintrifft, darf einen Wiederholungswurf von einer beliebigen 1 machen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Grey Knights with the ability to teleport may do so from a strike cruiser&apos;s launching deck. To do so a Grey Knights army must include a strike cruiser. Any formations entering via Teleport Homers must be set up with the space craft and placed off board for the opponent to see. These formations take up transport space in the strike cruiser just the same as deploying via drop pods.
 On the turn the space craft arrives, work out any barrage/pin points, followed by any drop pods as normal and then teleporting via teleport homers must be placed and rolled for during the spacecraft&apos;s turn. Any formations entering via teleport homer can reroll 1s.</description>
@@ -1354,7 +1520,7 @@ On the turn the space craft arrives, work out any barrage/pin points, followed b
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Commander, Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
-    <profile id="89f3-5098-ea4f-93a8" name="Paladin Escort Brotherhood Champion" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+    <profile id="89f3-5098-ea4f-93a8" name="Paladin Escort" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Character</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">n/a</characteristic>
@@ -1805,8 +1971,8 @@ On the turn the space craft arrives, work out any barrage/pin points, followed b
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Smite&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapon</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer, +1A&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Inspiring, Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>

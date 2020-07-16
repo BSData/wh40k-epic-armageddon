@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="34" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="35" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Our Repo describes over 333 factions, forces, chapters &amp; regiments (from the 400-plus currently available) as well as incorporating supplementary features like Riot or Minigeddon.
 
 Groups
@@ -8,11 +8,15 @@ The datafiles are cross-compatible with army lists published and maintained by N
 
 Translations
 
-Each active community has made rules developments to suit the needs of their group; most of the French translations come from F-ERC and reflect their experience, so these are not always a direct adaptation. All of the German rules were translated by myself, as well as some of the supplementary French and Spanish. I&apos;m not a fluent speaker, so you have my apologies for any misunderstandings. Fortunately, the core of the Spanish rules are from &quot;Dragus&quot; and &quot;Lord Bruno&quot;, whose excellent work is greatly appreciated &amp; I hope they forgive my use of it here.
+Most of the French translations come from F-ERC and reflect their experience, so these are not always a direct adaptation. All of the German rules were translated by myself, as well as some of the supplementary French and Spanish. I&apos;m not a fluent speaker, so you have my apologies for any misunderstandings. Fortunately, the core of the Spanish rules are from &quot;Dragus&quot; and &quot;Lord Bruno&quot;, whose excellent work is greatly appreciated &amp; I hope they forgive my use of it here.
 
 Transports
 
-Some of the files are designed to calculate the correct number of Transports available to a formation; add Transports after you have selected any other upgrades.</readme>
+Some of the files calculate the correct number of Transports available to a formation; add Transports after you have selected any other upgrades.
+
+Settings
+
+In the Roster View settings, change the Output from Minimal to Full.</readme>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
   </costTypes>
@@ -6028,6 +6032,46 @@ The formation receives a -1 penalty to this roll (which is cumulative with any o
         </modifier>
       </modifiers>
       <description>Destroyed, units within 15cm hit on D6 roll of 5+. All friendly formations within line of sight take a Blast Marker.</description>
+    </rule>
+    <rule id="6bc3-9458-6083-7f87" name="Ferocity" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Férocité: Une unité avec férocité peut ajouter un seul +5cm pour son premier mouvement lors d&apos;une action d&apos;Assaut.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Wildheit: Eine Einheit mit der Ferocity-Sonderregel kann nur bei einer Engage-Aktion zu ihrer ersten Bewegung um + 5 cm addieren.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Ferocidad: Una unidad con la regla especial de Ferocidad puede añadir un único incremento de +5cm de alcance a su primer movimiento sólo cuando realiza una acción de Atacar.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>A unit with the Ferocity special rule may add a single +5cm range increase to their first move only when conducting an engage action.</description>
+    </rule>
+    <rule id="f11b-59f0-9066-9294" name="Armourbane" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Fléau de l&apos;Armure: Les touches générées par les armes Armourbane réduisent le jet de sauvegarde de la cible de un (-1). Ce modificateur ne s&apos;applique qu&apos;aux touches générées avec la valeur Antichar (AT), Corps à Corps (CC) ou Tir (FF) de l&apos;arme Armourbane et qui sont allouées contre des Véhicules Légers (LV), des Véhicules Blindés (AV) ou des Engines de Guerre (WE). Cet effet est ignoré lorsqu&apos;il est utilisé contre de l&apos;Infanterie (INF).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Panzerflucht: Treffer, die durch Armourbane Waffen erzeugt werden, reduzieren den Rettungswurf des Ziels um einen (-1). Dieser Modifikator gilt nur für die Treffer, die mit dem Anti-Panzer (AT), Nahkampf (CC) oder Feuergefecht (FF) auf den Trefferwert der Armourbane Waffe erzeugt werden und die gegen leichte Fahrzeuge (LV), gepanzerte Fahrzeuge (AV) oder Kriegsmaschinen (WE) vergeben werden. Dieser Effekt wird ignoriert, wenn er gegen Infanterie (INF) eingesetzt wird.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Azote de la Blindaje: Los impactos generados por las armas de Azote de la Blindaje reducen el tirada de salvación del objetivo en uno (-1). Este modificador sólo se aplica a los impactos generados usando el valor de impacto del arma de Azote de la Blindaje usando el Antitanque (AT), Combate Cuerpo a Cuerpo (CC) o Tiroteos (FF) y que se asigna contra Vehículos Ligeros (LV), Vehículos Blindados (AV) o Máquinas de Guerra (WE). Este efecto se ignora cuando se usa contra Infantería (INF).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Hits generated by Armorbane weapons reduce the target&apos;s saving throw by one (-1). This modifier only applies to the hits generated using the Anti-Tank (AT), Close Combat (CC) or Firefight (FF) to hit value of the Armorbane weapon and that is allocated against Light Vehicles (LV), Armoured Vehicles (AV) or War Engines (WE). This effect is ignored when used against Infantry (INF).</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

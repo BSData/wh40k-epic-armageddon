@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4a53-8627-6904-ae50" name="Imperial Guard: Baran Siegemasters" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="33" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4a53-8627-6904-ae50" name="Imperial Guard: Baran Siegemasters" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -41,15 +41,20 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="ca92-9e14-b944-8581" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
+            <infoLink id="ca92-9e14-b944-8581" name="Bombard" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
             <infoLink id="2f52-0c07-1d46-12ec" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
             <infoLink id="2333-ca08-02d0-214e" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
-            <infoLink id="341b-a011-6b73-1301" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
+            <infoLink id="341b-a011-6b73-1301" name="Slow Firing" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </infoLink>
@@ -1165,18 +1170,18 @@
         <selectionEntry id="aa43-3c5b-db12-1ad6" name="Hellhound Squadron" page="0" hidden="false" collective="false" import="true" type="unit">
           <modifiers>
             <modifier type="set" field="points" value="100.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
             </modifier>
             <modifier type="set" field="points" value="125.0">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1192,7 +1197,7 @@
               <infoLinks>
                 <infoLink id="704d-6382-dff6-8742" hidden="false" targetId="b24a-d2f2-9e88-9ff7" type="profile"/>
                 <infoLink id="7ae2-47eb-232b-4dbd" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
-                <infoLink id="95e4-cbd4-5e30-6190" hidden="false" targetId="cebd-71fa-5465-1db2" type="profile"/>
+                <infoLink id="95e4-cbd4-5e30-6190" name="Hellhound" hidden="false" targetId="cebd-71fa-5465-1db2" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1290,6 +1295,36 @@
             <cost name="pts" typeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="2c01-ed00-df1b-0049" name="Hellhound Squadron" page="0" hidden="false" collective="false" import="true" type="unit">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c4d5-06b4-d7a6-fd43" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3075-310a-a282-ba1b" name="Hellhound" page="0" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f991-a8cd-9cbd-01ea" type="min"/>
+                <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6d00-b29c-c86d-4d34" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d5bf-185f-5483-050f" name="Hellhound" hidden="false" targetId="b24a-d2f2-9e88-9ff7" type="profile"/>
+                <infoLink id="32c3-aa7d-b476-5730" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -1309,6 +1344,11 @@
         <modifier type="set" field="description" value="Comisarios: Se puede tomar un comisario por cada 500 puntos, y ser incorporado a los regimientos de la Compañía de Asedio o a las formaciones de apoyo. Un comisario debe ser incorporado al Cuartel General del Regimiento.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kommissare: Ein Kommissar kann pro 500 Punkte genommen und in die Regimenter oder Unterstützungsformationen der Belagerungskompanie aufgenommen werden. Ein Kommissar muss dem Regimentshauptquartier hinzugefügt werden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1409,7 +1449,7 @@ Fanatic #02
 Fanatic #13</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2018-09-17</description>
+      <description>netea-tournament-pack-2020-06-26</description>
     </rule>
     <rule id="1791-10fa-52a8-1188" name="Regimental HQs" hidden="false">
       <modifiers>
@@ -1433,7 +1473,7 @@ Fanatic #13</description>
     </rule>
     <rule id="b34c-4bca-b78f-19ee" name="Strategy Rating &amp; Initiative (Baran)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 1.  • Todas las formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 1.  • Valores de Iniciativa: Todas las formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -1474,6 +1514,16 @@ Bruennhilde: 1 Blitzen AA Gun, Götterdämmerung Howitzer, Rapier Laser Destroye
         <modifier type="set" field="description" value="Posiciones Fortificadas: Las posiciones fortificadas deben establecerse después de los objetivos, pero antes de que se desplieguen las naves espaciales y las guarniciones. Las posiciones fortificadas pueden establecerse en cualquier lugar donde un vehículo pueda desplegarse dentro de la parte de la tabla de la Guardia Imperial. Se puede dividir un conjunto de posiciones fortificadas como se desee (aunque ninguna sección de trincheras o campo de minas puede ser menor de 5cm x 2,5cm), siempre que se respeten las reglas de coherencia de la formación. Por ejemplo, se podrían dividir las zanjas en varias líneas, siempre y cuando haya 5cm de &quot;enlaces&quot; entre las diferentes partes de la posición. Estas posiciones fortificadas cuentan como si tuvieran un movimiento de cero. Las posiciones fortificadas no pueden ser transportadas.  • Algunas formaciones en el ejército pueden venir con un conjunto de posiciones fortificadas; estas fortificaciones se establecen al mismo tiempo que todas las demás fortificaciones del ejército y siguen las mismas reglas. Una vez desplegadas, estas fortificaciones son de terreno y ya no forman parte de la formación.  • Una vez que las posiciones fortificadas se establecen, pueden ser usadas por cualquier unidad, no sólo por las unidades para las que fueron compradas. También pueden ser capturadas y utilizadas por unidades enemigas.  • Las posiciones fortificadas no bloquean la línea de visión.  • Los búnkeres pueden tener un tamaño máximo de 6cm x 5cm. Las trincheras y los campos de minas pueden ser de hasta 50cm x 2,5cm.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Verstärkte Positionen: Verstärkte Positionen müssen nach den Zielen, aber vor dem Einsatz von Raumfahrzeugen und Garnisonen eingerichtet werden. Die verstärkten Positionen können überall dort eingerichtet werden, wo ein Fahrzeug in der Tischhälfte der Spieler eingesetzt werden kann. Sie können eine Reihe von verstärkten Positionen nach Belieben aufteilen (wobei kein Abschnitt von Gräben und Minenfeldern kleiner als 5 cm x 2,5 cm sein darf), solange die Regeln für die Kohärenz der Formation eingehalten werden. Sie können z.B. Gräben in mehrere Linien aufteilen, solange es zwischen den verschiedenen Teilen der Stellung 5 cm lange &quot;Verbindungen&quot; gibt. Diese verstärkten Positionen zählen als eine Bewegung von Null. Verstärkte Positionen dürfen nicht transportiert werden.  • Einige Formationen in der Armee können mit einer Reihe von verstärkten Positionen ausgestattet sein; diese Befestigungen werden zur gleichen Zeit wie alle anderen Befestigungen in der Armee errichtet und folgen den gleichen Regeln. Nach ihrer Errichtung sind diese Befestigungen Gelände und nicht mehr Teil der Formation.  • Einmal errichtete verstärkte Positionen können von jeder Einheit genutzt werden, nicht nur von den Einheiten, für die sie gekauft wurden. Sie können auch von feindlichen Einheiten eingenommen und genutzt werden.  • Keine verstärkten Positionen blockieren die Sichtlinie.  • Bunker können maximal 6cm x 5cm groß sein. Gräben und Minenfelder können bis zu 50 cm x 2,5 cm groß sein.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Positions Fortifiées: Les positions fortifiées doivent être établies après les objectifs, mais avant le déploiement des vaisseaux spatiaux et des garnisons. Les positions fortifiées peuvent être installées partout où un véhicule peut se déployer dans la moitié de la table du joueur. Vous pouvez diviser un ensemble de positions fortifiées comme vous le souhaitez (bien qu&apos;aucune section de tranchée ou de champ de mines ne puisse être inférieure à 5 cm x 2,5 cm), à condition de respecter les règles de cohérence de la formation. Par exemple, vous pouvez diviser les tranchées en plusieurs lignes, à condition qu&apos;il y ait des &quot;liens&quot; de 5 cm entre les différentes parties de la position. Ces positions fortifiées comptent comme ayant un mouvement de zéro. Les positions fortifiées ne peuvent pas être transportées.  • Certaines formations de l&apos;armée peuvent être dotées d&apos;un ensemble de positions fortifiées ; ces fortifications sont mises en place en même temps que toutes les autres fortifications de l&apos;armée et suivent les mêmes règles. Une fois déployées, ces fortifications sont du terrain et ne font plus partie de la formation.  • Une fois que les positions fortifiées sont installées, elles peuvent être utilisées par n&apos;importe quelle unité, et pas seulement par les unités pour lesquelles elles ont été achetées. Elles peuvent également être capturées et utilisées par des unités ennemies.  • Aucune position fortifiée ne bloque la ligne de vue.  • Les bunkers peuvent avoir une taille maximale de 6 cm x 5 cm. Les tranchées et les champs de mines peuvent mesurer jusqu&apos;à 50 cm x 2,5 cm.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1576,7 +1626,7 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Baneblade Battle Cannon&lt;BR&gt;&lt;BR&gt;Autocannon&lt;BR&gt;&lt;BR&gt;Demolisher Cannon&lt;BR&gt;&lt;BR&gt;3x Twin Heavy Bolters&lt;BR&gt;&lt;BR&gt;2x Lascannons</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
@@ -1612,9 +1662,14 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
           </conditions>
         </modifier>
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Ignore Cover, Indirect Fire&lt;BR&gt;&lt;BR&gt;-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <characteristics>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="06db-da51-9f9c-4399" name="Imperial Guard: Armageddon Steel Legion" revision="39" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="33" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="06db-da51-9f9c-4399" name="Imperial Guard: Armageddon Steel Legion" revision="40" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -32,7 +32,7 @@
         <categoryLink id="b913-d9b8-1ac2-163b-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ecff-ec41-3b16-6a94" name="Artillery Pieces" hidden="false" collective="false" import="true" defaultSelectionEntryId="1810-b2e0-4872-e9fe">
+        <selectionEntryGroup id="ecff-ec41-3b16-6a94" name="Artillery Pieces" hidden="false" collective="false" import="true" defaultSelectionEntryId="2eef-5683-d813-ba51">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
@@ -43,6 +43,11 @@
                 <modifier type="set" field="points" value="225.0">
                   <conditions>
                     <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -67,13 +72,18 @@
             </selectionEntry>
             <selectionEntry id="2eef-5683-d813-ba51" name="3x Bombard" page="0" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="7cda-1780-bb1c-1654" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
+                <infoLink id="7cda-1780-bb1c-1654" name="Bombard" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
                 <infoLink id="3b0e-0fb7-3e3f-09a5" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                 </infoLink>
@@ -96,19 +106,9 @@
     </selectionEntry>
     <selectionEntry id="7965-c17c-ce3a-953b" name="Artillery Company" page="0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="points" value="550.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="points" value="600.0">
+        <modifier type="set" field="points" value="650.0">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -154,7 +154,7 @@
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
               </constraints>
               <infoLinks>
-                <infoLink id="161b-f115-bfae-fdad" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
+                <infoLink id="161b-f115-bfae-fdad" name="Bombard" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
                 <infoLink id="7ca8-1fc8-e3ee-16c5" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule"/>
                 <infoLink id="bd42-6289-c895-246d" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
                 <infoLink id="7aa7-8b23-cccb-4838" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
@@ -167,7 +167,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e743-8673-57c1-8086" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
+        <entryLink id="e743-8673-57c1-8086" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="minSelections" value="1.0">
               <conditions>
@@ -176,10 +176,10 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="3c74-783b-0bde-256d" hidden="false" collective="false" import="true" targetId="d40b-2db3-2d99-a7cd" type="selectionEntryGroup"/>
+        <entryLink id="3c74-783b-0bde-256d" name="Company Upgrades" hidden="false" collective="false" import="true" targetId="d40b-2db3-2d99-a7cd" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="650.0"/>
+        <cost name="pts" typeId="points" value="550.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e06d-b4f4-068a-d53a" name="Artillery Company" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -210,7 +210,7 @@
           <selectionEntries>
             <selectionEntry id="1a58-f770-1963-f078" name="Basilisk" page="0" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="ae78-e543-d0f2-123c" hidden="false" targetId="ed13-c5b2-9fd2-e583" type="profile"/>
+                <infoLink id="ae78-e543-d0f2-123c" name="Basilisk" hidden="false" targetId="ed13-c5b2-9fd2-e583" type="profile"/>
                 <infoLink id="5783-f431-c157-9099" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
               </infoLinks>
               <costs>
@@ -402,14 +402,9 @@
             <selectionEntry id="8cf1-e020-d101-2a06" name="Ogryns" page="0" hidden="false" collective="false" import="true" type="unit">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -500,7 +495,7 @@
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
-                    <entryLink id="f63e-6645-3326-edd4" hidden="false" collective="false" import="true" targetId="828e-24cb-4a24-459d" type="selectionEntry"/>
+                    <entryLink id="f63e-6645-3326-edd4" name="2x Chimera" hidden="false" collective="false" import="true" targetId="828e-24cb-4a24-459d" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -511,14 +506,9 @@
             <selectionEntry id="39f4-cb09-b58e-615f" name="Ogryns" page="0" hidden="false" collective="false" import="true" type="unit">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -532,7 +522,7 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="ccab-a21c-127d-a9e2" hidden="false" targetId="a69b-e11e-9ab4-819b" type="profile"/>
+                    <infoLink id="ccab-a21c-127d-a9e2" name="Ogryns" hidden="false" targetId="a69b-e11e-9ab4-819b" type="profile"/>
                     <infoLink id="51c7-8e35-f0e8-36fd" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
                   </infoLinks>
                   <costs>
@@ -650,10 +640,11 @@
             <entryLink id="cb80-8bf9-405e-4e21" hidden="false" collective="false" import="true" targetId="7156-28ea-d8d9-ccd9" type="selectionEntry"/>
             <entryLink id="4c15-87be-605d-207c" hidden="false" collective="false" import="true" targetId="cfa3-89df-9720-a00c" type="selectionEntry"/>
             <entryLink id="f96f-47db-8145-2d05" hidden="false" collective="false" import="true" targetId="a4e3-8687-0fb2-69d4" type="selectionEntry"/>
-            <entryLink id="6cc3-0a95-6667-613f" hidden="false" collective="false" import="true" targetId="39c4-1642-c596-4ef9" type="selectionEntry"/>
+            <entryLink id="6cc3-0a95-6667-613f" name="Hellhound Squadron" hidden="false" collective="false" import="true" targetId="39c4-1642-c596-4ef9" type="selectionEntry"/>
             <entryLink id="de73-6b6e-4052-e393" hidden="false" collective="false" import="true" targetId="884a-84a3-ce1f-fe31" type="selectionEntry"/>
             <entryLink id="dfc5-704e-fd37-2d5e" hidden="false" collective="false" import="true" targetId="03c7-2531-f6bd-61da" type="selectionEntry"/>
             <entryLink id="5760-993c-6ada-d751" hidden="false" collective="false" import="true" targetId="b8fe-4701-1e6b-34d3" type="selectionEntry"/>
+            <entryLink id="f69d-0c18-d604-3b1d" name="Hellhound Squadron" hidden="false" collective="false" import="true" targetId="98aa-a8a6-046f-7edc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -683,6 +674,7 @@
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -693,17 +685,6 @@
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0062-423c-bf57-1b0e" type="atLeast"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b367-f0f3-9ce9-2595" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="maxInForce" value="1">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0062-423c-bf57-1b0e" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b367-f0f3-9ce9-2595" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -723,7 +704,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="77c4-7933-dfdf-a858" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
+            <entryLink id="77c4-7933-dfdf-a858" name="Lunar Class Cruiser" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
             <entryLink id="4ec3-68c4-934a-35d2" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -742,7 +723,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -772,7 +754,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="6de4-f516-3ce7-9355" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
+            <entryLink id="6de4-f516-3ce7-9355" name="Lunar Class Cruiser" hidden="false" collective="false" import="true" targetId="f3df-4b45-ca0e-0a80" type="selectionEntry"/>
             <entryLink id="6697-7b9b-b49c-247b" name="Emperor Class Battleship" hidden="false" collective="false" import="true" targetId="4592-5f3c-58ae-53eb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -833,6 +815,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="points" value="475.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
@@ -867,14 +854,9 @@
             <selectionEntry id="429f-9c18-1a98-c082" name="Ogryns" page="0" hidden="false" collective="false" import="true" type="unit">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -976,14 +958,9 @@
             <selectionEntry id="e2c5-4376-f077-5fb8" name="Ogryns" page="0" hidden="false" collective="false" import="true" type="unit">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -1115,17 +1092,18 @@
             <entryLink id="a57a-e7ab-6f4d-1ae8" hidden="false" collective="false" import="true" targetId="7156-28ea-d8d9-ccd9" type="selectionEntry"/>
             <entryLink id="647a-f424-6cc9-f594" hidden="false" collective="false" import="true" targetId="cfa3-89df-9720-a00c" type="selectionEntry"/>
             <entryLink id="c8cf-fb2c-2357-caed" hidden="false" collective="false" import="true" targetId="a4e3-8687-0fb2-69d4" type="selectionEntry"/>
-            <entryLink id="451c-6027-2dce-f492" hidden="false" collective="false" import="true" targetId="39c4-1642-c596-4ef9" type="selectionEntry"/>
+            <entryLink id="451c-6027-2dce-f492" name="Hellhound Squadron" hidden="false" collective="false" import="true" targetId="39c4-1642-c596-4ef9" type="selectionEntry"/>
             <entryLink id="0e0e-1ac3-cdbf-748f" hidden="false" collective="false" import="true" targetId="884a-84a3-ce1f-fe31" type="selectionEntry"/>
             <entryLink id="a9fb-2816-46f7-81c3" hidden="false" collective="false" import="true" targetId="03c7-2531-f6bd-61da" type="selectionEntry"/>
             <entryLink id="f78a-ebe8-30d9-69ef" hidden="false" collective="false" import="true" targetId="b8fe-4701-1e6b-34d3" type="selectionEntry"/>
+            <entryLink id="85a2-db52-c6f3-3405" name="Hellhound Squadron" hidden="false" collective="false" import="true" targetId="98aa-a8a6-046f-7edc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="b8fd-f6f2-4910-2297" hidden="false" collective="false" import="true" targetId="afaf-84c9-e8a9-81b8" type="selectionEntry"/>
-        <entryLink id="fba2-e286-f30e-2e0a" hidden="false" collective="false" import="true" targetId="58a1-9e73-601f-2a00" type="selectionEntryGroup"/>
-        <entryLink id="5bd7-6d80-e344-41f4" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
+        <entryLink id="b8fd-f6f2-4910-2297" name="Infantry Squad" hidden="false" collective="false" import="true" targetId="afaf-84c9-e8a9-81b8" type="selectionEntry"/>
+        <entryLink id="fba2-e286-f30e-2e0a" name="Transport" hidden="false" collective="false" import="true" targetId="58a1-9e73-601f-2a00" type="selectionEntryGroup"/>
+        <entryLink id="5bd7-6d80-e344-41f4" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="minSelections" value="1.0">
               <conditionGroups>
@@ -1205,21 +1183,6 @@
         <categoryLink id="c7b1-39b7-09a9-abcd-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="41d0-5d82-b7c7-e46a" name="4x Valkyrie" page="0" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="26e7-678c-f896-e507" hidden="false" targetId="d96c-c7ca-ac15-3bd9" type="profile"/>
-            <infoLink id="36e4-360e-db12-18e9" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
-            <infoLink id="b3f6-5511-6880-ac8d" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
-            <infoLink id="d6ba-8f35-b9bd-eb21" hidden="false" targetId="e382-f48e-d56f-f48e" type="rule"/>
-            <infoLink id="e7b9-e16b-0896-9d02" hidden="false" targetId="0978-014a-9c52-c578" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="150.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="f95f-d3b3-dcd6-9b97" name="Storm Trooper Squad" hidden="false" collective="false" import="true" type="unit">
           <constraints>
             <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
@@ -1234,6 +1197,43 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2b09-cb65-d3df-a38f" name="Transport" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cac3-0452-f008-19b6" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6b0e-e688-12dd-ab42" name="4x Valkyrie" page="0" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="124f-1fff-2a03-eed4" name="Valkyrie" hidden="false" targetId="d96c-c7ca-ac15-3bd9" type="profile"/>
+                <infoLink id="06e7-3189-ce36-9fff" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
+                <infoLink id="e43e-bff9-7878-ea4b" hidden="false" targetId="2a48-fccd-ffa3-79e9" type="rule"/>
+                <infoLink id="0f8f-bab8-c22d-67a1" hidden="false" targetId="e382-f48e-d56f-f48e" type="rule"/>
+                <infoLink id="a44d-3b5a-3af5-5bae" hidden="false" targetId="0978-014a-9c52-c578" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="150.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="542e-8b40-bbe6-ad99" name="4x Chimera" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="caf2-f7ef-9f1f-7a71" name="Chimera" hidden="false" targetId="8848-56f5-be05-288e" type="profile"/>
+                <infoLink id="e668-6518-5ee5-3e7e" hidden="false" targetId="e382-f48e-d56f-f48e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="100.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="7175-9a9a-4e2e-0364" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
       </entryLinks>
@@ -1867,6 +1867,39 @@
         <cost name="pts" typeId="points" value="350.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="7389-d493-9a8e-6a9b" name="Basilisk Battery" page="0" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ba03-78b2-e806-6388" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="efd8-7a34-cc2c-0246" name="Basilisk" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="488f-c13a-2532-a3aa" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="64b7-dac0-9cd4-193f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="4c63-c038-39bc-d215" hidden="false" targetId="ed13-c5b2-9fd2-e583" type="profile"/>
+            <infoLink id="c01e-036e-435e-bae7" name="Indirect Fire" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="a48f-0915-f3a8-0873" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="225.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="fb63-9f63-ac44-65ec" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
@@ -2157,14 +2190,14 @@
     <selectionEntry id="39c4-1642-c596-4ef9" name="Hellhound Squadron" page="0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="points" value="100.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2177,7 +2210,7 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="1619-94a2-b06f-af9d" hidden="false" targetId="b24a-d2f2-9e88-9ff7" type="profile"/>
+            <infoLink id="1619-94a2-b06f-af9d" name="Hellhound" hidden="false" targetId="b24a-d2f2-9e88-9ff7" type="profile"/>
             <infoLink id="4b11-9c64-eaf8-d257" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
           </infoLinks>
           <costs>
@@ -2211,7 +2244,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="6eb5-6d14-9fc7-a777" hidden="false" targetId="8848-56f5-be05-288e" type="profile"/>
+            <infoLink id="6eb5-6d14-9fc7-a777" name="Chimera" hidden="false" targetId="8848-56f5-be05-288e" type="profile"/>
             <infoLink id="69b5-d6ec-2985-dd8d" hidden="false" targetId="e382-f48e-d56f-f48e" type="rule"/>
           </infoLinks>
           <costs>
@@ -2496,24 +2529,54 @@
     </selectionEntry>
     <selectionEntry id="4592-5f3c-58ae-53eb" name="Emperor Class Battleship" page="0" hidden="false" collective="false" import="true" type="model">
       <modifiers>
+        <modifier type="set" field="points" value="150.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
         <modifier type="set" field="points" value="200.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="cfa8-64e4-b61e-dc12" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
-        <infoLink id="1491-ae28-ba7b-5cd8" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="6d1d-4567-6e2d-3ad0" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
+        <infoLink id="cfa8-64e4-b61e-dc12" name="Emperor Battleship" hidden="false" targetId="9218-1b21-02ed-ea52" type="profile"/>
+        <infoLink id="1491-ae28-ba7b-5cd8" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="6d1d-4567-6e2d-3ad0" name="Slow and Steady" hidden="false" targetId="34f4-f927-41ca-77eb" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="300.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="98aa-a8a6-046f-7edc" name="Hellhound Squadron" page="0" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ca26-6740-5846-9ecf" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="c76c-c58a-f64f-c532" name="Hellhound" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7df6-4132-4aec-a43e" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cc60-1f96-d1cf-1f2c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="954c-c26c-cbb9-a91a" name="Hellhound" hidden="false" targetId="b24a-d2f2-9e88-9ff7" type="profile"/>
+            <infoLink id="df6e-340f-d2bb-9959" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2527,14 +2590,9 @@
         <selectionEntry id="a975-68aa-1128-971e" name="Ogryns" page="0" hidden="false" collective="false" import="true" type="unit">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -2566,14 +2624,9 @@
         <selectionEntry id="35fc-f602-e323-ca2e" name="Ogryns" page="0" hidden="false" collective="false" import="true" type="unit">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -2588,7 +2641,7 @@
               </constraints>
               <infoLinks>
                 <infoLink id="afd8-8c2f-1c71-d039" hidden="false" targetId="a69b-e11e-9ab4-819b" type="profile"/>
-                <infoLink id="2c54-2e64-7430-3078" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+                <infoLink id="2c54-2e64-7430-3078" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="25.0"/>
@@ -2613,8 +2666,8 @@
                     <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="452f-a778-1dc7-0d16" hidden="false" targetId="8848-56f5-be05-288e" type="profile"/>
-                    <infoLink id="f9bc-1d62-e702-e636" hidden="false" targetId="e382-f48e-d56f-f48e" type="rule"/>
+                    <infoLink id="452f-a778-1dc7-0d16" name="Chimera" hidden="false" targetId="8848-56f5-be05-288e" type="profile"/>
+                    <infoLink id="f9bc-1d62-e702-e636" name="Transport (IG)" hidden="false" targetId="e382-f48e-d56f-f48e" type="rule"/>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="25.0"/>
@@ -2622,7 +2675,7 @@
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="da54-b2bc-c58a-52d0" hidden="false" collective="false" import="true" targetId="828e-24cb-4a24-459d" type="selectionEntry">
+                <entryLink id="da54-b2bc-c58a-52d0" name="2x Chimera" hidden="false" collective="false" import="true" targetId="828e-24cb-4a24-459d" type="selectionEntry">
                   <modifiers>
                     <modifier type="set" field="maxSelections" value="0.0">
                       <conditions>
@@ -2640,14 +2693,15 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="62d5-86e5-d184-34f6" hidden="false" collective="false" import="true" targetId="f423-cb2c-c9f7-f230" type="selectionEntry"/>
+        <entryLink id="62d5-86e5-d184-34f6" name="Tank Squadron" hidden="false" collective="false" import="true" targetId="f423-cb2c-c9f7-f230" type="selectionEntry"/>
         <entryLink id="f946-dfd0-5022-8c31" hidden="false" collective="false" import="true" targetId="7156-28ea-d8d9-ccd9" type="selectionEntry"/>
         <entryLink id="24b1-6ea2-4411-64a8" hidden="false" collective="false" import="true" targetId="cfa3-89df-9720-a00c" type="selectionEntry"/>
         <entryLink id="c03a-a455-94ea-c555" hidden="false" collective="false" import="true" targetId="a4e3-8687-0fb2-69d4" type="selectionEntry"/>
-        <entryLink id="76b0-533e-cf21-00dd" hidden="false" collective="false" import="true" targetId="39c4-1642-c596-4ef9" type="selectionEntry"/>
+        <entryLink id="76b0-533e-cf21-00dd" name="Hellhound Squadron" hidden="false" collective="false" import="true" targetId="39c4-1642-c596-4ef9" type="selectionEntry"/>
         <entryLink id="b1d7-9676-36f5-9a21" hidden="false" collective="false" import="true" targetId="884a-84a3-ce1f-fe31" type="selectionEntry"/>
         <entryLink id="c8a9-83d3-27ff-be0e" hidden="false" collective="false" import="true" targetId="03c7-2531-f6bd-61da" type="selectionEntry"/>
-        <entryLink id="24ed-99b3-eb2b-77d0" hidden="false" collective="false" import="true" targetId="b8fe-4701-1e6b-34d3" type="selectionEntry"/>
+        <entryLink id="24ed-99b3-eb2b-77d0" name="Fire Support Platoon" hidden="false" collective="false" import="true" targetId="b8fe-4701-1e6b-34d3" type="selectionEntry"/>
+        <entryLink id="ac9b-9e27-6bc1-e252" name="Hellhound Squadron" hidden="false" collective="false" import="true" targetId="98aa-a8a6-046f-7edc" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="58a1-9e73-601f-2a00" name="Transport" hidden="false" collective="false" import="true" defaultSelectionEntryId="8185-7e25-7c7e-cb27">
@@ -2839,11 +2893,11 @@ Fanatic #02
 Fanatic #13</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2017-01-03</description>
+      <description>netea-tournament-pack-2020-06-26</description>
     </rule>
     <rule id="f6dd-0527-e4ab-86d0" name="Strategy Rating &amp; Initiative (IG)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Formaciones de las Legiones de Titanes: 1+.  • Formaciones de la Guardia Imperial y la Armada Imperial: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Valores de Iniciativa: Formaciones de las Legiones de Titanes: 1+.  • Formaciones de la Guardia Imperial y la Armada Imperial: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -2938,7 +2992,7 @@ Valkyrie: 2 Stormtrooper units.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+">
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
@@ -3027,9 +3081,14 @@ Valkyrie: 2 Stormtrooper units.</description>
           </conditions>
         </modifier>
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Ignore Cover, Indirect Fire&lt;BR&gt;&lt;BR&gt;-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <characteristics>

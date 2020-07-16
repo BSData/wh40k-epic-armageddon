@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="39" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="33" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="40" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1643,13 +1643,18 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="0045-5023-6937-ee31" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
+            <infoLink id="0045-5023-6937-ee31" name="Bombard" hidden="false" targetId="fbe7-1b18-6aef-df6f" type="profile"/>
             <infoLink id="0f24-a389-b1fd-dc16" hidden="false" targetId="8ef3-5ed8-8173-4001" type="rule">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47ae-e006-d760-176d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </infoLink>
@@ -3842,6 +3847,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Kommissare: 0-1 Kommissar kann zu Grenadierzügen, Pfadfinder-Grenadierzügen, Pionierzügen und Todesreiter-Pfadfinderzügen hinzugefügt werden, für jeweils 50 Punkte.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>0-1 Commissar may be added to Grenadier Platoons, Scout Grenadier Platoons, Engineer Platoons and Death Riders Scout Platoons for 50pts each.</description>
     </rule>
@@ -3865,6 +3875,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Kommissare: Die Imperiale Armee darf einen Kommissarcharakter pro 500 Punkte in der Armee enthalten. Die Kommissare kosten keine Punkte. Kommissar-Einheiten können der Armee zu Beginn der Schlacht hinzugefügt werden, bevor eine der beiden Seiten aufgestellt wird. Wenn die Armee einen Oberbefehlshaber enthält, dann muss das erste Kommissar zu dieser Formation angebracht werden. Sie dürfen nicht mehr als einen Kommissar pro Formation angeben. Wenn Sie mehr Kommissare als Formationen haben, gehen alle Überschüsse verloren. Kommissare in einer Armee der Todeskorps von Krieg müssen einer Einheit aus der Kernformation zugeteilt werden; sie dürfen keinen Einheiten zugeteilt werden, die als Upgrades genommen wurden. Sie können keinen Kommissar zu einer imperialen Verbündetenformation hinzufügen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>An Imperial Guard army may include up to one Commissar Character for each full five hundred points. The Commissar characters are a free upgrade; however they must be appropriately modelled to be included in the army.
 If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost. 
@@ -3885,6 +3900,11 @@ Commissars in a Death Korps of Krieg Imperial Guard army must be attached to a u
         <modifier type="set" field="description" value="Commissaires: La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kommissare: Die Imperiale Armee darf einen Kommissarcharakter pro 500 Punkte oder einen Teil davon in der Armee enthalten. Die Kommissare kosten keine Punkte. Kommissar-Einheiten können der Armee zu Beginn der Schlacht hinzugefügt werden, bevor eine der beiden Seiten aufgestellt wird. Wenn die Armee einen Oberbefehlshaber enthält, dann muss das erste Kommissar zu dieser Formation angebracht werden. Sie dürfen nicht mehr als einen Kommissar pro Formation angeben. Sie können keinen Kommissar zu einer imperialen Verbündetenformation hinzufügen. Wenn Sie mehr Kommissare als Formationen haben, gehen alle Überschüsse verloren.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3911,6 +3931,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Hades: Beachten Sie, dass der Hades Breaching Drill keine Einheit ist und daher weder beschossen noch mit Treffern beschossen werden darf. Er ist in jeder Hinsicht lediglich eine Markierung. Es wird kein Blast-Marker erzeugt, wenn der Hades Breach Drill während des Spiels seine Elternformation hinterlässt.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Note that the Hades Breaching Drill is not a unit and so may not be shot at nor have hits applied to it. It is in all respects simply a marker. No Blast Marker is generated for its parent Hades Breach Drill leaving the formation behind during the game.</description>
     </rule>
@@ -3926,16 +3951,21 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Mossino-Kampagne: Angepasste Profil- und Punktwerte für die in der Belagerungsbeilage enthaltene Armeeliste.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Adjusted profile and point values for the army list featured in Siege.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2018-09-17
+      <description>netea-tournament-pack-2020-06-26
 siege #mossino campaign version 3</description>
     </rule>
     <rule id="4364-985f-fc65-7ace" name="Strategy Rating &amp; Initiative (DK)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Formaciones de las Legiones de Titanes: 1+.  • Resto de formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Valores de Iniciativa: Formaciones de las Legiones de Titanes: 1+.  • Resto de formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3980,12 +4010,17 @@ All other formations have an initiative rating of 2+.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Centaur: Beim Transport eines Artilleriemörser- oder Salvengeschütz wird die Geschwindigkeit der Einheit auf 20 cm reduziert.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>If transporting a Heavy Mortar or Quad Launcher the unit’s speed is reduced to 20cm.</description>
+      <description>If transporting a Heavy Mortar or Quad Launcher, the unit’s speed is reduced to 20cm.</description>
     </rule>
     <rule id="f4d5-7305-ab77-697e" name="Strategy Rating &amp; Initiative (DK)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 1.  • Formaciones de las Legiones de Titanes: 1+.  • Resto de formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 1.  • Valores de Iniciativa: Formaciones de las Legiones de Titanes: 1+.  • Resto de formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -4082,6 +4117,16 @@ All other formations have an initiative rating of 2+.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Verstärkte Positionen: Verstärkte Positionen müssen nach den Zielen, aber vor dem Einsatz von Raumfahrzeugen und Garnisonen eingerichtet werden. Die verstärkten Positionen können überall dort eingerichtet werden, wo ein Fahrzeug in der Tischhälfte der Spieler eingesetzt werden kann. Sie können eine Reihe von verstärkten Positionen nach Belieben aufteilen (wobei kein Abschnitt von Gräben und Minenfeldern kleiner als 5 cm x 2,5 cm sein darf), solange die Regeln für die Kohärenz der Formation eingehalten werden. Sie können z.B. Gräben in mehrere Linien aufteilen, solange es zwischen den verschiedenen Teilen der Stellung 5 cm lange &quot;Verbindungen&quot; gibt. Diese verstärkten Positionen zählen als eine Bewegung von Null. Verstärkte Positionen dürfen nicht transportiert werden.  • Einige Formationen in der Armee können mit einer Reihe von verstärkten Positionen ausgestattet sein; diese Befestigungen werden zur gleichen Zeit wie alle anderen Befestigungen in der Armee errichtet und folgen den gleichen Regeln. Nach ihrer Errichtung sind diese Befestigungen Gelände und nicht mehr Teil der Formation.  • Einmal errichtete verstärkte Positionen können von jeder Einheit genutzt werden, nicht nur von den Einheiten, für die sie gekauft wurden. Sie können auch von feindlichen Einheiten eingenommen und genutzt werden.  • Keine verstärkten Positionen blockieren die Sichtlinie.  • Bunker können maximal 6cm x 5cm groß sein. Gräben und Minenfelder können bis zu 50 cm x 2,5 cm groß sein.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Positions Fortifiées: Les positions fortifiées doivent être établies après les objectifs, mais avant le déploiement des vaisseaux spatiaux et des garnisons. Les positions fortifiées peuvent être installées partout où un véhicule peut se déployer dans la moitié de la table du joueur. Vous pouvez diviser un ensemble de positions fortifiées comme vous le souhaitez (bien qu&apos;aucune section de tranchée ou de champ de mines ne puisse être inférieure à 5 cm x 2,5 cm), à condition de respecter les règles de cohérence de la formation. Par exemple, vous pouvez diviser les tranchées en plusieurs lignes, à condition qu&apos;il y ait des &quot;liens&quot; de 5 cm entre les différentes parties de la position. Ces positions fortifiées comptent comme ayant un mouvement de zéro. Les positions fortifiées ne peuvent pas être transportées.  • Certaines formations de l&apos;armée peuvent être dotées d&apos;un ensemble de positions fortifiées ; ces fortifications sont mises en place en même temps que toutes les autres fortifications de l&apos;armée et suivent les mêmes règles. Une fois déployées, ces fortifications sont du terrain et ne font plus partie de la formation.  • Une fois que les positions fortifiées sont installées, elles peuvent être utilisées par n&apos;importe quelle unité, et pas seulement par les unités pour lesquelles elles ont été achetées. Elles peuvent également être capturées et utilisées par des unités ennemies.  • Aucune position fortifiée ne bloque la ligne de vue.  • Les bunkers peuvent avoir une taille maximale de 6 cm x 5 cm. Les tranchées et les champs de mines peuvent mesurer jusqu&apos;à 50 cm x 2,5 cm.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Fortified positions must be set up after objectives, but before spacecraft and garrisons are deployed. The fortified positions may be set up anywhere a vehicle may deploy in the Imperial Guards half of the table. You may split up a set of fortified positions as desired (although no section of trenches or minefield may be smaller than 5cm x 2.5cm), as long as the rules for formation coherency are adhered to. For example, you could split up trenches into several lines, as long as there are 5cm ‘links’ between the different parts of the position. These fortified positions count as having a move of zero. Fortified positions may not be transported.
 Some formations in the army may come with a set of fortified positions; these fortifications are set up at the same time as all other fortifications in the army and follow the same rules. Once deployed these fortifications are terrain and are no longer a part of the formation.
@@ -4144,6 +4189,11 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47ae-e006-d760-176d" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
@@ -4153,7 +4203,7 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Baneblade Battle Cannon&lt;BR&gt;&lt;BR&gt;Autocannon&lt;BR&gt;&lt;BR&gt;Demolisher Cannon&lt;BR&gt;&lt;BR&gt;3x Twin Heavy Bolters&lt;BR&gt;&lt;BR&gt;2x Lascannons</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP3+/AT3+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+&lt;BR&gt;&lt;BR&gt;AP3+/AT4+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;&lt;BR&gt;AT5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
@@ -4167,10 +4217,15 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Ignore Cover, Indirect Fire&lt;BR&gt;&lt;BR&gt;-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Ignore Cover, Indirect Fire, Slow Firing&lt;BR&gt;&lt;BR&gt;-">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47ae-e006-d760-176d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <characteristics>
@@ -4182,7 +4237,7 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Siege Mortar&lt;BR&gt;&lt;BR&gt;Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP&lt;BR&gt;&lt;BR&gt;AP5</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover, Indirect Fire, Slow Firing&lt;BR&gt;&lt;BR&gt;-</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover, Indirect Fire&lt;BR&gt;&lt;BR&gt;-</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
