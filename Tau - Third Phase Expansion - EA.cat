@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="eb70-6298-1b18-b83e" name="Tau: Third Phase Expansion" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="eb70-6298-1b18-b83e" name="Tau: Third Phase Expansion" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2232,7 +2232,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4075-1f6d-e72d-9503" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="b7b6-8f02-27c1-1b83" hidden="false" targetId="4a4c-3486-584e-388d" type="profile"/>
+        <infoLink id="b7b6-8f02-27c1-1b83" name="Kroot Hounds" hidden="false" targetId="4a4c-3486-584e-388d" type="profile"/>
         <infoLink id="c119-54f8-19ea-7acf" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
         <infoLink id="997a-ea0e-f00c-68ae" hidden="false" targetId="8b6a-4000-4679-235a" type="rule"/>
       </infoLinks>
@@ -2767,7 +2767,7 @@ Note: To avoid confusion, this file uses the modern rules for Markerlights and G
     </rule>
     <rule id="f284-0b20-ba26-4299" name="Strategy Rating &amp; Initiative (Tau)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Equipos de Armaduras de Combate Crisis y Naves de Despliegue Manta: 1+.  • Resto de formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Valores de Iniciativa: Equipos de Armaduras de Combate Crisis y Naves de Despliegue Manta: 1+.  • Resto de formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -2825,7 +2825,7 @@ Tiger Shark: 3 units of Gun Drones.</description>
     </rule>
     <rule id="dcab-abd6-06f1-a4f1" name="Strategy Rating &amp; Initiative (Tau)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Equipos de Armaduras de Combate Crisis: 1+.  • Resto de formaciones: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Valores de Iniciativa: Equipos de Armaduras de Combate Crisis: 1+.  • Resto de formaciones: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3385,6 +3385,19 @@ Tiger Shark: 3 units of Gun Drones.</description>
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="3+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <characteristics>
@@ -3418,7 +3431,7 @@ Tiger Shark: 3 units of Gun Drones.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;+1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout, Leader</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Leader, Scout</characteristic>
       </characteristics>
     </profile>
     <profile id="9357-ecf9-3b3f-527f" name="Krootox Herd" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
