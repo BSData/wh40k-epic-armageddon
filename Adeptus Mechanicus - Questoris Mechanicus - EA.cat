@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="27e4-8333-52a9-b618" name="Adeptus Mechanicus: Questoris Mechanicus" revision="25" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="27e4-8333-52a9-b618" name="Adeptus Mechanicus: Questoris Mechanicus" revision="26" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -494,7 +494,6 @@
     </selectionEntry>
     <selectionEntry id="d459-f80d-42aa-b250" name="Armiger" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink id="0c61-38c7-1509-6558" hidden="false" targetId="e551-c527-434e-59a5" primary="false"/>
         <categoryLink id="145a-3330-027e-5d4c" name="1 per Formation - Group A" hidden="false" targetId="1ba6-2328-676b-dfb0" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -920,16 +919,26 @@ Halve the number of extra hits to a Knight Lance that loses an assault, rounding
     </rule>
     <rule id="a6d0-548e-14dc-106c" name="Ion Shield (X)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Bouclier Ionique (X): Les Chevaliers sont protégés par un Bouclier Ionique. Cela leur permet de faire un jet de sauvegarde sur le nombre entre parenthèses quand ils sont touchés par des tirs à distance au lieu d&apos;utiliser leur valeur d&apos;armure.  - Aucun modificateur ne s&apos;applique jamais à ce jet de sauvegarde et il n’est pas affecté par les touches Macro-Arme, Lance et Tueur de Titans (Cependant, chaque point de dégâts d’une touche Tueur de Titans doit être sauvegardé séparément). Si l&apos;unité possède également une armure renforcée, elle est autorisée à relancer une sauvegarde échouée à l&apos;aide de sa valeur d&apos;armure, sauf si la touche est une Macro-Arme, une Lance ou un Tueur de Titans.  - Aucun de ces avantages ne s’applique aux unités participant à des tirs croisés, à des coups provenant de tirs à l’appui ou à des attaques CC (La sauvegarde bouclier ionique peut toujours être utilisée contre les attaques FF. Si nécessaire, lancez les dés CC et FF séparément lorsque vous attaquez des unités équipées de boucliers ioniques). - Les Boucliers Gantelets Ioniques, les Boucliers Éclater Ioniques et les Égées Ioniques augmentent le sauvegarde de bouclier ionique à 3+.">
+        <modifier type="set" field="description" value="Bouclier Ionique (X): Les Chevaliers sont protégés par un Bouclier Ionique. Cela leur permet de faire un jet de sauvegarde sur le nombre entre parenthèses quand ils sont touchés par des tirs à distance au lieu d&apos;utiliser leur valeur d&apos;armure.  • Aucun modificateur ne s&apos;applique jamais à ce jet de sauvegarde et il n’est pas affecté par les touches Macro-Arme, Lance et Tueur de Titans (Cependant, chaque point de dégâts d’une touche Tueur de Titans doit être sauvegardé séparément). Si l&apos;unité possède également une armure renforcée, elle est autorisée à relancer une sauvegarde échouée à l&apos;aide de sa valeur d&apos;armure, sauf si la touche est une Macro-Arme, une Lance ou un Tueur de Titans.  • Aucun de ces avantages ne s’applique aux unités participant à des tirs croisés, à des coups provenant de tirs à l’appui ou à des attaques CC (La sauvegarde bouclier ionique peut toujours être utilisée contre les attaques FF. Si nécessaire, lancez les dés CC et FF séparément lorsque vous attaquez des unités équipées de boucliers ioniques).  • Les Boucliers Gantelets Ioniques, les Boucliers Éclater Ioniques et les Égées Ioniques augmentent le sauvegarde de bouclier ionique à 3+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Escudo de Iones (X): Los caballeros utilizan los escudos de iones para desviar los ataques de disparo. Esto les permite hacer un lanzamiento de ahorro en el número entre paréntesis cuando son alcanzados por el fuego a distancia en lugar de usar su valor de armadura.  • No se aplica ningún modificador a esta tirada de salvamento y no se ve afectada por los impactos de las Macroarmas, Lanzas y el Matatitanes (Sin embargo, cada punto de daño de un impacto del Matatitanes  debe guardarse por separado). Si la unidad tiene una armadura reforzada también, se le permite volver a lanzar una salvada fallida usando su valor de armadura, a menos que el golpe haya sido con una Macro-Arma, Lanza o el Matatitán.  • Ninguno de estos beneficios se aplica a las unidades en un fuego cruzado, impactos de fuego de apoyo o ataques CC (la salvada del Escudo de Iones todavía puede ser usada contra ataques FF. Si es relevante, tira los dados CC y FF por separado al atacar unidades equipadas con Escudos Iónicos).  • Los escudos de guante de iones, los escudos de bengala iónicos y las aegises de iones aumentan el salvamento del escudo de iones a 3+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Ionenschilde (X): Knights verwenden Ionenschilde, um Schussangriffe abzuwehren. Dadurch können sie bei Fernkampfangriffen einen Rettungswurf auf die Zahl in Klammern ausführen, anstatt ihre Rüstung einzusetzen.  • Für diesen Rettungswurf gelten niemals Modifikatoren, und er ist von Makrowaffen-, Lanzen- und Titan-Killertreffern unbeeinflusst (allerdings muss jeder Schadenspunkt von einem Titan-Killertreffer separat Rettung erfahren). Wenn die Einheit auch über verstärkte Rüstung verfügt, darf sie eine fehlgeschlagene Rettung unter Verwendung ihres Rüstungswertes erneut würfeln, es sei denn, der Treffer war ein Makrowaffen-, Lanzen- oder Titan-Killer-Treffer.  • Keiner dieser Vorteile gilt für Einheiten im Kreuzfeuer, Treffer durch Unterstützungsfeuer oder CC-Angriffe (die Ionenschild-Rettung kann weiterhin gegen FF-Angriffe eingesetzt werden. Falls relevant, würfeln Sie bei Angriffen auf Einheiten, die mit Ionenschilden ausgerüstet sind, getrennt mit CC- und FF-Würfeln).  • Ionen-Gauntlet-Schilde, Ionische Flare-Schilde und Ionen-Aegisen erhöhen die Ionenschild-Rettung auf 3+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Knights make use of Ion Shields to deflect shooting attacks. This allows them to make a saving throw on the number within brackets when they are hit by ranged fire instead of using their armour value.
- - No modifiers ever apply to this saving throw and it is unaffected by Macro-Weapon, Lance and Titan Killer hits (However, each point of damage from a Titan Killer hit must be saved separately) If the unit has reinforced armour as well then it is allowed to re-roll a failed save using its armour value unless the hit was a Macro-Weapon, Lance or Titan killer.
- - None of these benefits apply to units in a crossfire, hits from supporting fire, or CC attacks (the Ion Shield save can still be used against FF attacks. If relevant, roll CC and FF dice separately when attacking units equipped with Ion Shields).
- - Ion Gauntlet Shields, Ionic Flare Shields and Ion Aegises increase the Ion Shield Save to 3+.</description>
+No modifiers ever apply to this saving throw and it is unaffected by Macro-Weapon, Lance and Titan Killer hits (However, each point of damage from a Titan Killer hit must be saved separately) If the unit has reinforced armour as well then it is allowed to re-roll a failed save using its armour value unless the hit was a Macro-Weapon, Lance or Titan killer.
+None of these benefits apply to units in a crossfire, hits from supporting fire, or CC attacks (the Ion Shield save can still be used against FF attacks. If relevant, roll CC and FF dice separately when attacking units equipped with Ion Shields).
+Ion Gauntlet Shields, Ionic Flare Shields and Ion Aegises increase the Ion Shield Save to 3+.</description>
     </rule>
     <rule id="4249-f9ca-92aa-be7b" name="Transport (QM)" hidden="false">
       <modifiers>
