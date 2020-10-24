@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4485-ac05-71d7-af77" name="Space Marines: Iron Hands" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4485-ac05-71d7-af77" name="Space Marines: Iron Hands" revision="32" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -126,6 +126,21 @@
         <entryLink id="c853-8601-f257-79d0" name="Venerable Dreadnoughts" hidden="false" collective="false" import="true" targetId="3c03-017f-dcda-c317" type="selectionEntryGroup"/>
         <entryLink id="3250-cd15-7fa2-d98c" name="APCs" hidden="false" collective="false" import="true" targetId="a84a-31e2-4375-5d7c" type="selectionEntryGroup"/>
         <entryLink id="c6d8-3c85-ccd6-3e29" name="Thunderfire Cannon" hidden="false" collective="false" import="true" targetId="26bb-5b62-c54b-5b76" type="selectionEntry"/>
+        <entryLink id="b661-1be0-4a15-1524" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="cdf6-1fd4-42bc-8c7d" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d5c-e6bc-54ab-1352" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="049f-4d7a-d4b2-ac4f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="250.0"/>
@@ -240,7 +255,7 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="0e13-ade1-0094-39f7" hidden="false" collective="false" import="true" targetId="846a-2709-2e0d-5b69" type="selectionEntry"/>
+            <entryLink id="0e13-ade1-0094-39f7" name="Hellfire Dreadnought" hidden="false" collective="false" import="true" targetId="846a-2709-2e0d-5b69" type="selectionEntry"/>
             <entryLink id="8e63-2f33-b89b-cb57" hidden="false" collective="false" import="true" targetId="0303-3b55-717f-93af" type="selectionEntry"/>
             <entryLink id="6652-cf9a-007f-8157" hidden="false" collective="false" import="true" targetId="fcce-24b0-14b2-3a60" type="selectionEntry"/>
             <entryLink id="7eaa-e7b0-6a3c-bcc2" name="Ironclad Dreadnought" hidden="false" collective="false" import="true" targetId="3a96-3056-351c-ad23" type="selectionEntry"/>
@@ -853,6 +868,21 @@
           </modifiers>
         </entryLink>
         <entryLink id="737e-d3cd-15e3-79ed" name="Thunderfire Cannon" hidden="false" collective="false" import="true" targetId="26bb-5b62-c54b-5b76" type="selectionEntry"/>
+        <entryLink id="db24-aad4-715f-f860" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="cdf6-1fd4-42bc-8c7d" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d5c-e6bc-54ab-1352" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="049f-4d7a-d4b2-ac4f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="275.0"/>
@@ -1299,17 +1329,22 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="c712-d90b-8c2d-b71a" name="Commander" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="0b55-68aa-9e93-ec8c" name="Drop Pods" hidden="false" collective="false" import="true" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+        <entryLink id="8804-4352-aa9c-73d8" name="APCs" hidden="false" collective="false" import="true" targetId="a84a-31e2-4375-5d7c" type="selectionEntryGroup"/>
+        <entryLink id="55d9-67c1-e883-dc55" name="Venerable Dreadnought" hidden="false" collective="false" import="true" targetId="049f-4d7a-d4b2-ac4f" type="selectionEntry"/>
+        <entryLink id="aa9a-6e48-0805-a3dd" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
           <modifiers>
-            <modifier type="set" field="maxSelections" value="0.0">
-              <conditions>
-                <condition field="selections" scope="ae2c-8088-795d-88c4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a84a-31e2-4375-5d7c" type="atLeast"/>
-              </conditions>
+            <modifier type="set" field="cdf6-1fd4-42bc-8c7d" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="049f-4d7a-d4b2-ac4f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="8804-4352-aa9c-73d8" name="APCs" hidden="false" collective="false" import="true" targetId="a84a-31e2-4375-5d7c" type="selectionEntryGroup"/>
-        <entryLink id="55d9-67c1-e883-dc55" name="Venerable Dreadnought++++++++++++++++++" hidden="false" collective="false" import="true" targetId="049f-4d7a-d4b2-ac4f" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150.0"/>
@@ -1878,8 +1913,16 @@
   </selectionEntries>
   <infoLinks>
     <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule"/>
-    <infoLink id="f668-2718-536a-3e9f" name="Iron Hands Transports" hidden="false" targetId="8174-3a2d-05dc-bf19" type="rule"/>
-    <infoLink id="8fd6-5cbc-2783-8188" hidden="false" targetId="d4d3-69f8-d169-0ec3" type="rule"/>
+    <infoLink id="f668-2718-536a-3e9f" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink id="8fd6-5cbc-2783-8188" name="Sons of Mars" hidden="false" targetId="d4d3-69f8-d169-0ec3" type="rule"/>
     <infoLink id="8f39-1af8-b89c-6f39" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1891,6 +1934,15 @@
     </infoLink>
     <infoLink id="9c13-65ed-8e5e-f0ef" hidden="false" targetId="a101-52fd-30a7-9ccf" type="rule"/>
     <infoLink id="f092-4187-57a7-05bf" name="Strategy Rating &amp; Initiative (IH)+++++++++" hidden="false" targetId="70b5-5e66-972e-aa41" type="rule"/>
+    <infoLink id="9189-c586-a154-6572" name="Space Marine Transports (F-ERC)" hidden="false" targetId="3cbb-2959-7c15-17b9" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="116b-cc79-dd96-6cf6" name="Battle Barge" page="0" hidden="false" collective="false" import="true" type="model">
@@ -1973,7 +2025,7 @@
         <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3041-d2ef-239c-70a2" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="48b1-7b50-38f3-82bb" hidden="false" targetId="010e-164f-1824-70eb" type="profile"/>
+        <infoLink id="48b1-7b50-38f3-82bb" name="Dreadnought (Hellfire)" hidden="false" targetId="010e-164f-1824-70eb" type="profile"/>
         <infoLink id="4be2-d125-801e-2b02" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
       </infoLinks>
       <costs>
@@ -2646,7 +2698,7 @@
       </constraints>
       <entryLinks>
         <entryLink id="b0c0-99aa-b61d-118e" name="Venerable Dreadnought" hidden="false" collective="false" import="true" targetId="54b9-c19a-f667-ba01" type="selectionEntry"/>
-        <entryLink id="e356-e4ab-20ed-a99f" name="Venerable Dreadnought++++++++++++++++++" hidden="false" collective="false" import="true" targetId="049f-4d7a-d4b2-ac4f" type="selectionEntry"/>
+        <entryLink id="e356-e4ab-20ed-a99f" name="Venerable Dreadnought" hidden="false" collective="false" import="true" targetId="049f-4d7a-d4b2-ac4f" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="0427-68f1-1fdf-338c" name="Support Squadron" hidden="false" collective="false" import="true">
@@ -2745,6 +2797,38 @@
         <entryLink id="1907-deee-dd7a-f857" name="Veteran Sergeant" hidden="false" collective="false" import="true" targetId="0d23-8b9e-386f-7463" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup id="c365-c2e4-f7c6-4076" name="Free Dreadnought" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7db9-dd59-fae5-962b" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cdf6-1fd4-42bc-8c7d" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="efc5-ff44-d9ef-09d3" name="Hellfire Dreadnought" page="0" hidden="false" collective="false" import="true" type="model">
+          <infoLinks>
+            <infoLink id="d93c-09f3-a838-6957" name="Dreadnought (Hellfire)" hidden="false" targetId="010e-164f-1824-70eb" type="profile"/>
+            <infoLink id="4a5e-c8c3-9a28-ac3b" name="Walker" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+            <infoLink id="9bad-4c54-9ad9-5a5c" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7252-238d-43c0-b42d" name="Tactical Dreadnought" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8940-30e2-04ec-3a76" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="97d1-d840-d9bf-2a7b" name="Dreadnought (Tactical)" hidden="false" targetId="4d37-22a0-7daa-e381" type="profile"/>
+            <infoLink id="9123-25b7-5b1d-ca37" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+            <infoLink id="b95d-f896-e2a9-8523" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+            <infoLink id="6ca8-837c-b08b-689f" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
@@ -2768,6 +2852,16 @@ Either Terminators or Morlocks should be deleted</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Biónicos: Las unidades con la habilidad especial de los biónicos tienen la salvación de su armadura aumentada a 3+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Bionics: Bei Einheiten mit der Spezialfähigkeit Bionics wird die Rüstungswert auf 3+ erhöht.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Units with the Bionics special ability have their armour saves increased to 3+.</description>
     </rule>
@@ -2781,6 +2875,16 @@ Either Terminators or Morlocks should be deleted</description>
         <modifier type="set" field="description" value="Culte de la Machine: Si tout Titan amicale ou un Dreadnought Vénérable Iron Hands est détruit, toutes les formations au sein de 30cm reçoivent 1 pion d&apos;impact.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Culto a la Máquina: Si Cualquier Titán amistoso o un Dreadnought Venerable de los Manos de Hierro es destruido, todas las formaciones dentro de los 30 cm. reciben un marcador de explosión.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kult der Maschine: Wenn irgendein Titan der eigenen Seite oder eine Ehrwürdiger Cybot der Iron Hands zerstört wird, erhalten alle Formationen im Umkreis von 30 cm eine Blast-Marker.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2803,14 +2907,24 @@ Fanatic #13</description>
     </rule>
     <rule id="d4d3-69f8-d169-0ec3" name="Sons of Mars" hidden="false">
       <modifiers>
+        <modifier type="set" field="description" value="Fils de Mars:Toutes les unités d’infanterie à l’exception des scouts bénéficient d’une sauvegarde invulnérable.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Hijos de Marte: Todas las unidades de Infantería, excepto los Exploradores, tienen una Salvación Invulnerable.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Fils de Mars:Toutes les unités d’infanterie à l’exception des scouts bénéficient d’une sauvegarde invulnérable.">
+        <modifier type="set" field="description" value="Söhne des Mars: Alle Infanterieeinheiten mit Ausnahme der Scouts haben eine Unverwundbar Rettung.">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2821,7 +2935,7 @@ Fanatic #13</description>
     </rule>
     <rule id="70b5-5e66-972e-aa41" name="Strategy Rating &amp; Initiative (IH)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Marines Espaciales y Legiones de Titanes: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Formaciones de Marines Espaciales y Legiones de Titanes: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -2874,25 +2988,21 @@ Fanatic #13</description>
       </modifiers>
       <description>The unit scatters D6cm in a random direction. If this move takes the titan into impassable terrain, or another unit it can’t move over or barge aside, then it stops immediately and takes another point of damage. All units it moves into or over suffer a hit on a roll of 6+.</description>
     </rule>
-    <rule id="8174-3a2d-05dc-bf19" name="Iron Hands Transports" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="Transports: Les Iron Hands sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhinos pour la transporter les formations comprennent la mention &quot;plus transports&quot; dans leur composition.  • Le nombre de Rhino sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  • Toutefois, prendre de Rhinos pour la formation n’est pas obligatoire si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhinos pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à la moitié de sa capacité de transport en cas de nombre impair de Razorbacks).  • En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par des modules d’atterrissage gratuitement ou par un Dreadnought Vénérable pour +25pts.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>The Space Marines are a highly mobile army. Because of this, the points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. Determine the number of Rhinos needed after all upgrades have been purchased. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along to cover any losses!
-Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having &quot;plus transport&quot; in the units section of the army list opposite.
-Also note that you don’t have to take Rhinos if you don’t want to. If you’d rather field the formation on foot instead, so it can act as a garrison for example, or be transported in a Thunderhawk Gunship, then you may do so.
-In addition, you may choose to replace a detachment’s Rhinos with Drop Pods. If you do this then the detachment will enter play in a Drop Pod using the rules for Planetfall (see Planetfall). Note that if you choose to do this you will also require at least one Space Marine Strike Cruiser or Battle Barge to deploy the drop pods from.
-Before each game, after the opposing army is known but before objectives are placed, the Space Marine player may choose which formations with the plus transport aspect are deployed in Rhinos, Drop Pods or on foot. If the formation has any units unable to deploy in Drop Pods then that option cannot be selected.</description>
-    </rule>
     <rule id="af7b-6bc3-5567-ad22" name="Techmarine" hidden="false">
       <modifiers>
         <modifier type="set" field="description" value="Techmarine: Un Techmarine permet aux Dreadnoughts Feu d&apos;Enfer, Tactiques, Razorbacks et Predators Destructors de la même formation d&apos;utiliser des armes Graviton.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Tecnomarine: Un Tecnomarine de los Manos de Hierro permite a los Dreadnoughts Fuego del Infierno, Tácticas, Razorbacks y Predator Destructors en la misma formación usar armas de Gravitones.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Techmarine: Ein Iron Hands-Techmarine erlaubt Hellfire-Cybots, Taktischen Trupps, Razorbacks und Predator Destruktoren in der gleichen Formation den Einsatz von Gravitations-Waffen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3013,6 +3123,18 @@ Before each game, after the opposing army is known but before objectives are pla
       </characteristics>
     </profile>
     <profile id="010e-164f-1824-70eb" name="Dreadnought (Hellfire)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Fearless">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3041,6 +3163,18 @@ Before each game, after the opposing army is known but before objectives are pla
       </characteristics>
     </profile>
     <profile id="4d37-22a0-7daa-e381" name="Dreadnought (Tactical)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Fearless">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="4+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>

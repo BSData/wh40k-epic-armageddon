@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f69-8bb9-b158-67b5" name="Imperial Guard: Penal Legion" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="33" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6f69-8bb9-b158-67b5" name="Imperial Guard: Penal Legion" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -487,7 +487,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="58df-e7d3-353f-772d" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="58b7-4f98-5513-4b25" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
+            <infoLink id="58b7-4f98-5513-4b25" name="Commissar" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
             <infoLink id="2b97-84c7-00a5-34d2" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
             <infoLink id="1e2f-a405-0f45-89de" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
             <infoLink id="2753-654a-9927-30b8" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
@@ -796,7 +796,7 @@
   </selectionEntries>
   <infoLinks>
     <infoLink id="61ab-00f3-d9df-6ab3" hidden="false" targetId="e717-020a-2898-e841" type="rule"/>
-    <infoLink id="af41-454c-2b30-306b" name="" hidden="false" targetId="f5ca-3c33-aa2a-0351" type="rule"/>
+    <infoLink id="af41-454c-2b30-306b" name="Forward Unto Death!" hidden="false" targetId="f5ca-3c33-aa2a-0351" type="rule"/>
     <infoLink id="4ff5-ee89-c6c4-26c8" name="" hidden="false" targetId="36a4-ad8a-0ffa-0e33" type="rule"/>
   </infoLinks>
   <sharedSelectionEntries>
@@ -812,23 +812,15 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4032-952e-3f0d-904e" name="Commissar" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="increment" field="d880-8f1e-adb8-1f64" value="1.0">
-          <repeats>
-            <repeat field="limit::points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="true"/>
-          </repeats>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="97b7-89b1-666f-ecac" type="min"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d880-8f1e-adb8-1f64" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="4aa5-0c9c-06e3-3378" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
-        <infoLink id="100d-4f5d-3126-00ae" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
-        <infoLink id="569d-860c-f6b5-fccd" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-        <infoLink id="2e03-b33f-fa45-ab8b" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
+        <infoLink id="4aa5-0c9c-06e3-3378" name="Commissar" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
+        <infoLink id="100d-4f5d-3126-00ae" name="Inspiring" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
+        <infoLink id="569d-860c-f6b5-fccd" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+        <infoLink id="2e03-b33f-fa45-ab8b" name="Leader" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="25.0"/>
@@ -1098,26 +1090,6 @@
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
       <description>none</description>
-    </rule>
-    <rule id="2e86-c893-2425-3cd9" name="Commissars" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="Comisarios: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto.  • Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones.  • No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Commissaires: La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Kommissare: Die Imperiale Armee darf einen Kommissarcharakter pro 500 Punkte oder einen Teil davon in der Armee enthalten. Die Kommissare kosten keine Punkte. Kommissar-Einheiten können der Armee zu Beginn der Schlacht hinzugefügt werden, bevor eine der beiden Seiten aufgestellt wird. Wenn die Armee einen Oberbefehlshaber enthält, dann muss das erste Kommissar zu dieser Formation angebracht werden. Sie dürfen nicht mehr als einen Kommissar pro Formation angeben. Sie können keinen Kommissar zu einer imperialen Verbündetenformation hinzufügen. Wenn Sie mehr Kommissare als Formationen haben, gehen alle Überschüsse verloren.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points. Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>none</description>

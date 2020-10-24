@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1873,7 +1873,15 @@
     </infoLink>
     <infoLink id="a8ce-7be2-2fe2-bf4b" name="Battlefortresses &amp; Gunfortresses" hidden="false" targetId="3a58-160c-8b1b-f962" type="rule"/>
     <infoLink id="27e7-9287-3eea-3bd8" hidden="false" targetId="63e9-7b1c-0361-3187" type="rule"/>
-    <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh!" hidden="false" targetId="a717-b0ae-1bf8-2c82" type="rule"/>
+    <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh! (F-ERC)" hidden="false" targetId="2b2d-29b7-2ced-78cc" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="d701-852c-5735-791c" name="Mekboy Big Boss" hidden="false" targetId="5f66-30af-dcad-bfef" type="rule"/>
     <infoLink id="a817-03d9-b09c-e3e3" name="Strategy Rating &amp; Initiative (GBM)" hidden="false" targetId="2c97-203f-e59a-2bcb" type="rule"/>
     <infoLink id="a390-226f-aa35-7f51" name="*We&apos;s Dead &apos;Ard!" hidden="false" targetId="988e-6c65-bdb5-d85f" type="rule"/>
@@ -3247,6 +3255,11 @@ One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Valores de Iniciativa: Todas las formaciones: 3+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Gargant Bigmob armies have a Strategy rating of 3. All formations have an initiative rating of 3+.</description>
     </rule>
@@ -3272,36 +3285,6 @@ A Kill Kroozer can transport the equivalent of 10 DC. A Battle Kroozer can carry
     </rule>
     <rule id="364f-4acb-9f26-4a97" name="Transport (GBM)" hidden="false">
       <description>see codex</description>
-    </rule>
-    <rule id="a717-b0ae-1bf8-2c82" name="Power of the Waaagh!" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="El Poder del ¡Waaaagh!: Las formaciones Orkas que declaren acciones Dobles o de Atacar, recibirán un +2 a su chequeo de acción. A los pilotoz Orkoz, de igual manera, les encanta acribillar cosas, y reciben un +1 para intentar acciones de Ataque a Tierra o Intercepción.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Il Potere della Waaagh!: Le formazioni di Orki che stanno provando ad ingaggiare o a far doppie mosse ricevono un modificatore +2 al loro tiro della prova di azione. Gli Orki aviatori similmente gradiscono l’occasione di sparare alle cose in alto, e ricevono un modificatore di +1 nel loro tiro della prova di azione quando cercano di portare a termine un’azione di intercettamento o di attacco a terra.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Pouvoir de la Waaagh: Les Orks ne sont pas de fins stratèges mais la perspective d&apos;une bonne bagarre les galvanisent toujours. Afin de représenter ceci, uneformation tentant une action d&apos;avance rapide ou d&apos;assaut reçoit toujours +2 à l&apos;iniative pour son test d&apos;action.  • Les formations aériennes, ont toujours +1 de bonus pour les tests d&apos;actions lorsqu&apos;elles tentent une Interception ou une Attaque au sol.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Macht der Waaagh!: Ork-Formationen, die versuchen, eine Engage- oder Double-Aktion auszuführen, erhalten einen +2-Modifikator für ihre Aktionstestwurf. Ork-Flyboyz erhalten einen +1-Modifikator für ihren Aktionstestwurf, wenn sie Abfang- oder Bodenangriffsaktionen ausführen.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Ork formations that are attempting to take an engage or double action receive a +2 modifier to their action test roll. Ork flyboyz similarly relish the chance to shoot things up, and receive a +1 modifier to their action test roll when attempting to carry out interception or ground attack actions.</description>
     </rule>
     <rule id="5f66-30af-dcad-bfef" name="Mekboy Big Boss" hidden="false">
       <modifiers>
@@ -3333,6 +3316,16 @@ A Kill Kroozer can transport the equivalent of 10 DC. A Battle Kroozer can carry
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Strategie und Initiative: Strategiewert 2.  • Alle Formationen haben die Initiativwert 3+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Valores de Iniciativa: Todas las formaciones: 3+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

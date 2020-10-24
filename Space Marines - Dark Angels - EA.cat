@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c7e-7e35-e2f4-8a4e" name="Space Marines: Dark Angels" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -347,7 +347,7 @@
         </entryLink>
         <entryLink id="a8a8-a5c6-e7c8-6079" hidden="false" collective="false" import="true" targetId="eadade8a-545f-ce5e-94ad-9bda51717b37" type="selectionEntry"/>
         <entryLink id="eff0-781e-d7e2-e4ef" hidden="false" collective="false" import="true" targetId="bf3c-ebe2-29c9-dc85" type="selectionEntryGroup"/>
-        <entryLink id="7823-d786-357c-34c1" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+        <entryLink id="7823-d786-357c-34c1" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="maxSelections" value="0.0">
               <conditions>
@@ -1174,17 +1174,31 @@
           <entryLinks>
             <entryLink id="586b-13f0-1970-49e5" hidden="false" collective="false" import="true" targetId="4e1f-46d7-c8f1-e11b" type="selectionEntry"/>
             <entryLink id="8765-3f67-5952-a795" hidden="false" collective="false" import="true" targetId="9137-5e3b-d46c-79a2" type="selectionEntry"/>
-            <entryLink id="adbe-5555-9998-a94d" hidden="false" collective="false" import="true" targetId="bd4a-d64e-f47f-c866" type="selectionEntry"/>
+            <entryLink id="adbe-5555-9998-a94d" name="Rhino" hidden="false" collective="false" import="true" targetId="bd4a-d64e-f47f-c866" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="9499-1863-79a5-8cbb" name="Commander" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="5a84-da56-2846-d28e" hidden="false" collective="false" import="true" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+        <entryLink id="5a84-da56-2846-d28e" name="Drop Pods" hidden="false" collective="false" import="true" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="maxSelections" value="0.0">
               <conditions>
                 <condition field="selections" scope="6946-a94f-6716-e1dc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d644-f8f3-5786-47de" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="9a90-cf43-a018-bbe9" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2073,7 +2087,15 @@
     </selectionEntry>
   </selectionEntries>
   <infoLinks>
-    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule"/>
+    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule"/>
     <infoLink id="f668-2718-536a-3e9f" hidden="false" targetId="cf55-3f29-d117-fd31" type="rule"/>
     <infoLink id="4d86-79d8-27c0-fbd3" name="Superior Tactics" hidden="false" targetId="902f-bafe-576b-3e21" type="rule">
@@ -2088,6 +2110,15 @@
     <infoLink id="74a6-924b-4297-7f10" hidden="false" targetId="a4a8-531b-887c-dfbe" type="rule"/>
     <infoLink id="3134-bc15-4d34-b175" name="Hunt for the Fallen (optional special victory condition)" hidden="false" targetId="d244-2edc-2042-f286" type="rule"/>
     <infoLink id="b90d-da65-4187-c883" name="Strategy Rating &amp; Initiative (DA)" hidden="false" targetId="ba70-202a-5010-9717" type="rule"/>
+    <infoLink id="e5f9-c7b1-7713-f6f9" name="Space Marine Transports (F-ERC)" hidden="false" targetId="3cbb-2959-7c15-17b9" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="116b-cc79-dd96-6cf6" name="Battle Barge" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2890,6 +2921,11 @@ Terminator squads have the Deathwing rule</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Deathwing: Formationen, die Deathwing enthalten, entfernen eine zusätzliche Blast-Marker, wenn sie sich versammeln oder neu gruppieren.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Formations containing any Deathwing remove one extra blast marker on rally or regroup.</description>
     </rule>
@@ -2919,6 +2955,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Die Jagd nach den Gefallenen (optionale besondere Siegbedingung): Darf nur verwendet werden, wenn die Armee der Dark Angels mindestens einen Absolutionspriester- und/oder einen Großmeister-Charakter in einer Ravenwing-Angriffsformation enthält.  • Vor dem Einsatz: Der Spieler der Dark Angels entscheidet, ob er die Siegesbedingung &quot;Jagd auf den Gefallenen&quot; verwendet. Wenn sie eingesetzt wird, wählt der Gegner eine seiner Formationen, die entweder mindestens eine Infanterieeinheit oder eine Charakteraufwertung hat, und benennt diese Formation als diejenige, die die Gefallenen enthält. Der Spieler der Dark Angels muss diese Formation vollständig zerstören, um die Siegesbedingung &quot;Jagd auf den Gefallenen&quot; zu erhalten. Wenn die Formation während und nach Runde 3 vom Tisch ist, gilt sie als zerstört. Ersetzt das Ziel &quot; Bricht ihren Geist&quot;.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>May only be used if the Dark Angels army contains at least one Interrogator-Chaplain and/or a Grand Master character in a Ravenwing Attack formation.
 Before deployment: The Dark Angels player decides whether to use the Hunt for the Fallen VC. If it is used, the opponent chooses one of his/her formations that has either at least one infantry unit or a character upgrade and nominates that formation as the one containing the Fallen. The Dark Angels player must destroy this formation completely to score the Hunt for the Fallen VC. If the formation is off the table during turn 3 and afterwards, it counts as destroyed. Replaces the Break Their Spirits (BTS) objective.</description>
@@ -2943,7 +2984,7 @@ Before deployment: The Dark Angels player decides whether to use the Hunt for th
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Todas las formaciones de Marines Espaciales: 1+. Legiones de Titanes: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Todas las formaciones de Marines Espaciales: 1+. Legiones de Titanes: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -2976,6 +3017,11 @@ Before deployment: The Dark Angels player decides whether to use the Hunt for th
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Legion der Sühne, Das Große Geheimnis: Eine Armee der Dark Angels darf sich niemals mit anderen Streitkräften des Imperiums verbünden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>A Dark Angels army may never ally itself with any other Forces of the Imperium.</description>
     </rule>
@@ -2994,6 +3040,11 @@ Before deployment: The Dark Angels player decides whether to use the Hunt for th
         <modifier type="set" field="description" value="Teletransporte Coordinado: Las formaciones que consisten exclusivamente en modelos con la regla del Teletransporte pueden establecerse en una nave espacial si ésta ha sido comprada. A partir de ahí, pueden teletransportarse normalmente, o pueden elegir realizar un Teletransporte Coordinado durante la activación de la nave espacial.  • Un Teletransporte Coordinado funciona como un Teletransporte ordinario, excepto que todos los modelos en la formación deben ser colocados de forma que se beneficien de la regla especial de Baliza de Teletransporte. Si no pueden beneficiarse del Baliza de Teletransporte, no pueden llevar a cabo un Teletransporte Coordinado, sino que deben esperar y teletransportarse normalmente en turnos posteriores. Los Telepuertos Coordinados ocurren después de que la Artillería, la Caída Orbital y el Deathwind hayan sido resueltos. Todos los Teletransportes Coordinados se cuentan como realizados simultáneamente, no uno después del otro.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Koordinierter Teleportieren: Formationen, die ausschließlich aus Modellen mit der Teleportieren-Regel bestehen, können in einem Raumschiff aufgestellt werden, wenn ein solches gekauft wurde. Von dort aus können sie entweder normal teleportieren, oder sie können während der Aktivierung des Raumschiffs einen Koordinierten Teleportieren wählen.  • Eine Koordinierte Teleportieren funktioniert wie eine gewöhnliche Teleportieren, mit der Ausnahme, dass alle Modelle in der Formation so platziert werden müssen, dass sie von der Sonderregel Teleport-Peilsender profitieren. Wenn sie nicht von Teleport-Peilsender profitieren können, können sie keine Koordinierte Teleportieren durchführen, sondern müssen warten und in späteren Runden normal teleportieren. Koordinierte Teleportieren finden statt, nachdem Sperrfeuer, Planetfall und Todeswind aufgelöst worden sind. Alle Koordinierten Teleportieren gelten als gleichzeitig stattfindend, nicht nacheinander.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3042,6 +3093,11 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Deathwing: Die Deathwing verliert für je 3 Treffer bei der Auflösung eines Angriffs eine zusätzliche Einheit, statt einer Einheit für 2 Treffer wie bei anderen Space Marines.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The Deathwing lose an additional unit for 3 hits when resolving an assault, instead of a unit for 2 hits as with other Space Marines.</description>
     </rule>
@@ -3060,6 +3116,11 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
         <modifier type="set" field="description" value="Baliza de Teletransporte: Los modelos de teletransporte pueden repetir los resultados del error de teletransporte de 1 si su base está a menos de 15 cm de una unidad no desmoralizada con la regla especial de Baliza de Teletransporte.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Teleport-Peilsender: Teleporting-Modelle dürfen Teleport-Missgeschick-Ergebnisse von 1 wieder werfen, wenn ihre Bases innerhalb von 15 cm von einer ungebrochenen Einheit liegt, für die die Sonderregel Teleport-Peilsender gilt.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3082,6 +3143,11 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Teleport-Peilsender: Ravenwing-Formationen können mit einem Teleport-Peilsender aufgerüstet werden. Eine Formation von Deathwing, die innerhalb von 15 cm von einer Einheit aus einer Formation mit dieser Aufrüstung teleportiert, kann ihren Teleportationswurf erneut würfeln.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Ravenwing formations can be upgraded with a Teleport Homer. A formation of Deathwing teleporting within 15cm of a unit from such a formation may re-roll its teleportation throw.</description>
     </rule>
@@ -3102,7 +3168,7 @@ A Coordinated Teleport functions like an ordinary Teleport except that all model
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Todas las formaciones: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Todas las formaciones: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>

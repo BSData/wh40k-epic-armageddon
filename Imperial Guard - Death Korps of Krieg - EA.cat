@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="41" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd67-0a74-1614-f112" name="Imperial Guard: Death Korps of Krieg" revision="42" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -735,7 +735,7 @@
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="2a8e-4afa-d117-49f5" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
+        <infoLink id="2a8e-4afa-d117-49f5" name="Fortified Positions (EpicUK)" hidden="false" targetId="6060-0611-11f0-f16c" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="b04e-2f4a-42ac-e1df" name="Bunker" page="0" hidden="false" collective="false" import="true" type="model">
@@ -1773,7 +1773,7 @@
               </constraints>
               <infoLinks>
                 <infoLink id="c17e-048e-ec2c-8c64" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
-                <infoLink id="b5a6-38a7-7c8d-0d39" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
+                <infoLink id="b5a6-38a7-7c8d-0d39" name="Fortified Positions (EpicUK)" hidden="false" targetId="6060-0611-11f0-f16c" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2542,9 +2542,17 @@
   <infoLinks>
     <infoLink id="61ab-00f3-d9df-6ab3" name="Strategy Rating &amp; Initiative (DK)" hidden="false" targetId="4364-985f-fc65-7ace" type="rule"/>
     <infoLink id="9114-6441-2fcf-3181" name="Commissars" hidden="false" targetId="e2d9-1df2-fc92-dd4c" type="rule"/>
-    <infoLink id="b857-ba8a-e09a-687e" hidden="false" targetId="2e86-c893-2425-3cd9" type="rule"/>
     <infoLink id="5d49-5758-24d1-1de0" hidden="false" targetId="24ed-2541-dcdd-0744" type="rule"/>
     <infoLink id="44fe-3158-ef79-2bac" name="Strategy Rating &amp; Initiative (DK)-----------" hidden="false" targetId="f4d5-7305-ab77-697e" type="rule"/>
+    <infoLink id="8470-c47b-8cd7-be36" name="Commissars (NetEA)" hidden="false" targetId="eac4-b26b-cc05-9bd5" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="0429-702b-bec2-19a9" name="3x Earthshaker Platform" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -2579,7 +2587,15 @@
       </constraints>
       <infoLinks>
         <infoLink id="322b-c03c-db90-a2ee" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
-        <infoLink id="cd97-dd57-4992-ef7d" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
+        <infoLink id="cd97-dd57-4992-ef7d" name="Fortified Positions (EpicUK)" hidden="false" targetId="6060-0611-11f0-f16c" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -3885,31 +3901,6 @@
 If the army includes a Supreme Commander then the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. If you have more Commissars than formations any excess are lost. 
 Commissars in a Death Korps of Krieg Imperial Guard army must be attached to a unit from the core formation; they may not be attached to any units taken as upgrades. They may also not be attached to Titan or Imperial Navy units.</description>
     </rule>
-    <rule id="2e86-c893-2425-3cd9" name="Commissars" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Comisarios de la Guardia Imperial: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto.  • Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones.  • No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Commissaires: La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Kommissare: Die Imperiale Armee darf einen Kommissarcharakter pro 500 Punkte oder einen Teil davon in der Armee enthalten. Die Kommissare kosten keine Punkte. Kommissar-Einheiten können der Armee zu Beginn der Schlacht hinzugefügt werden, bevor eine der beiden Seiten aufgestellt wird. Wenn die Armee einen Oberbefehlshaber enthält, dann muss das erste Kommissar zu dieser Formation angebracht werden. Sie dürfen nicht mehr als einen Kommissar pro Formation angeben. Sie können keinen Kommissar zu einer imperialen Verbündetenformation hinzufügen. Wenn Sie mehr Kommissare als Formationen haben, gehen alle Überschüsse verloren.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points. Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations. You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.</description>
-    </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>CodexImperialGuard #031119
 DeathKorpsQuickRef #V03112019</description>
@@ -4104,35 +4095,6 @@ All other formations have an initiative rating of 2+.</description>
         </modifier>
       </modifiers>
       <description>May not move, D3 units hit, further critical hits destroy the unit.</description>
-    </rule>
-    <rule id="ce30-b6d1-856a-669b" name="Fortified Positions" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Posiciones Fortificadas: Las posiciones fortificadas deben establecerse después de los objetivos, pero antes de que se desplieguen las naves espaciales y las guarniciones. Las posiciones fortificadas pueden establecerse en cualquier lugar donde un vehículo pueda desplegarse dentro de la parte de la tabla de la Guardia Imperial. Se puede dividir un conjunto de posiciones fortificadas como se desee (aunque ninguna sección de trincheras o campo de minas puede ser menor de 5cm x 2,5cm), siempre que se respeten las reglas de coherencia de la formación. Por ejemplo, se podrían dividir las zanjas en varias líneas, siempre y cuando haya 5cm de &quot;enlaces&quot; entre las diferentes partes de la posición. Estas posiciones fortificadas cuentan como si tuvieran un movimiento de cero. Las posiciones fortificadas no pueden ser transportadas.  • Algunas formaciones en el ejército pueden venir con un conjunto de posiciones fortificadas; estas fortificaciones se establecen al mismo tiempo que todas las demás fortificaciones del ejército y siguen las mismas reglas. Una vez desplegadas, estas fortificaciones son de terreno y ya no forman parte de la formación.  • Una vez que las posiciones fortificadas se establecen, pueden ser usadas por cualquier unidad, no sólo por las unidades para las que fueron compradas. También pueden ser capturadas y utilizadas por unidades enemigas.  • Las posiciones fortificadas no bloquean la línea de visión.  • Los búnkeres pueden tener un tamaño máximo de 6cm x 5cm. Las trincheras y los campos de minas pueden ser de hasta 50cm x 2,5cm.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Verstärkte Positionen: Verstärkte Positionen müssen nach den Zielen, aber vor dem Einsatz von Raumfahrzeugen und Garnisonen eingerichtet werden. Die verstärkten Positionen können überall dort eingerichtet werden, wo ein Fahrzeug in der Tischhälfte der Spieler eingesetzt werden kann. Sie können eine Reihe von verstärkten Positionen nach Belieben aufteilen (wobei kein Abschnitt von Gräben und Minenfeldern kleiner als 5 cm x 2,5 cm sein darf), solange die Regeln für die Kohärenz der Formation eingehalten werden. Sie können z.B. Gräben in mehrere Linien aufteilen, solange es zwischen den verschiedenen Teilen der Stellung 5 cm lange &quot;Verbindungen&quot; gibt. Diese verstärkten Positionen zählen als eine Bewegung von Null. Verstärkte Positionen dürfen nicht transportiert werden.  • Einige Formationen in der Armee können mit einer Reihe von verstärkten Positionen ausgestattet sein; diese Befestigungen werden zur gleichen Zeit wie alle anderen Befestigungen in der Armee errichtet und folgen den gleichen Regeln. Nach ihrer Errichtung sind diese Befestigungen Gelände und nicht mehr Teil der Formation.  • Einmal errichtete verstärkte Positionen können von jeder Einheit genutzt werden, nicht nur von den Einheiten, für die sie gekauft wurden. Sie können auch von feindlichen Einheiten eingenommen und genutzt werden.  • Keine verstärkten Positionen blockieren die Sichtlinie.  • Bunker können maximal 6cm x 5cm groß sein. Gräben und Minenfelder können bis zu 50 cm x 2,5 cm groß sein.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Positions Fortifiées: Les positions fortifiées doivent être établies après les objectifs, mais avant le déploiement des vaisseaux spatiaux et des garnisons. Les positions fortifiées peuvent être installées partout où un véhicule peut se déployer dans la moitié de la table du joueur. Vous pouvez diviser un ensemble de positions fortifiées comme vous le souhaitez (bien qu&apos;aucune section de tranchée ou de champ de mines ne puisse être inférieure à 5 cm x 2,5 cm), à condition de respecter les règles de cohérence de la formation. Par exemple, vous pouvez diviser les tranchées en plusieurs lignes, à condition qu&apos;il y ait des &quot;liens&quot; de 5 cm entre les différentes parties de la position. Ces positions fortifiées comptent comme ayant un mouvement de zéro. Les positions fortifiées ne peuvent pas être transportées.  • Certaines formations de l&apos;armée peuvent être dotées d&apos;un ensemble de positions fortifiées ; ces fortifications sont mises en place en même temps que toutes les autres fortifications de l&apos;armée et suivent les mêmes règles. Une fois déployées, ces fortifications sont du terrain et ne font plus partie de la formation.  • Une fois que les positions fortifiées sont installées, elles peuvent être utilisées par n&apos;importe quelle unité, et pas seulement par les unités pour lesquelles elles ont été achetées. Elles peuvent également être capturées et utilisées par des unités ennemies.  • Aucune position fortifiée ne bloque la ligne de vue.  • Les bunkers peuvent avoir une taille maximale de 6 cm x 5 cm. Les tranchées et les champs de mines peuvent mesurer jusqu&apos;à 50 cm x 2,5 cm.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Fortified positions must be set up after objectives, but before spacecraft and garrisons are deployed. The fortified positions may be set up anywhere a vehicle may deploy in the Imperial Guards half of the table. You may split up a set of fortified positions as desired (although no section of trenches or minefield may be smaller than 5cm x 2.5cm), as long as the rules for formation coherency are adhered to. For example, you could split up trenches into several lines, as long as there are 5cm ‘links’ between the different parts of the position. These fortified positions count as having a move of zero. Fortified positions may not be transported.
-Some formations in the army may come with a set of fortified positions; these fortifications are set up at the same time as all other fortifications in the army and follow the same rules. Once deployed these fortifications are terrain and are no longer a part of the formation.
-Once fortified positions are set up they may be used by any unit, not just the units they were purchased for. They may also be captured and used by enemy units.
-No fortified positions block line of sight.
-Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up to 50cm x 2.5cm.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

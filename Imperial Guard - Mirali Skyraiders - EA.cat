@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b8c0-21ba-3b84-1bdc" name="Imperial Guard: Mirali Skyraiders" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="33" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b8c0-21ba-3b84-1bdc" name="Imperial Guard: Mirali Skyraiders" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -538,6 +538,7 @@
   <infoLinks>
     <infoLink id="61ab-00f3-d9df-6ab3" hidden="false" targetId="e8f0-8c30-372a-2d80" type="rule"/>
     <infoLink id="a84d-a0aa-b857-f948" hidden="false" targetId="5fa1-1981-37e5-ef72" type="rule"/>
+    <infoLink id="40d4-9791-bab4-1510" name="Commissars (NetEA)" hidden="false" targetId="eac4-b26b-cc05-9bd5" type="rule"/>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="41fc-ba0f-1a83-fca4" name="Bunker" page="0" hidden="false" collective="false" import="true" type="model">
@@ -580,12 +581,11 @@
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="4aa5-0c9c-06e3-3378" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
+        <infoLink id="4aa5-0c9c-06e3-3378" name="Commissar" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
         <infoLink id="100d-4f5d-3126-00ae" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
         <infoLink id="bda9-9f51-1ad8-3ec3" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="569d-860c-f6b5-fccd" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+        <infoLink id="569d-860c-f6b5-fccd" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
         <infoLink id="2e03-b33f-fa45-ab8b" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-        <infoLink id="f0e9-ef5e-e43f-978a" name="Commissars" hidden="false" targetId="2e86-c893-2425-3cd9" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -891,28 +891,6 @@
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
       <description>none</description>
     </rule>
-    <rule id="2e86-c893-2425-3cd9" name="Commissars" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="Comisarios: Un ejército de la Guardia Imperial puede incluir un personaje Comisario por cada 500 puntos completos del ejército. Los Comisarios no cuestan ningún punto.  • Los Comisarios pueden ser añadidos al ejército al comienzo de la batalla, antes de que ningún bando inicie el despliegue. Si el ejército incluye un Comandante en Jefe, el primer Comisario debe ser añadido a la formación del Comandante en Jefe. Los demás Comisarios pueden añadirse a otras formaciones.  • No puedes incluir más de un Comisario en cada formación. No puedes añadir Comisarios a las formaciones de Aliados Imperiales. Si tienes más Comisarios que formaciones, el exceso se pierde.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Commissaires: La Garde Impériale gagner un personnage de Commissaire libre plus un personnage de Commissaire gratuit supplémentaire par 500 points du scénario. Si l&apos;armée comprend un commandant suprême alors le premier commissaire doit être joint à la formation du commandant suprême. Toute autre commissaire peut-être attaché à d&apos;autres formations. Vous ne pouvez pas inclure plus d&apos;un seul commissaire par formation.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Kommissare: Die Imperiale Armee darf einen Kommissarcharakter pro 500 Punkte oder einen Teil davon in der Armee enthalten. Die Kommissare kosten keine Punkte. Kommissar-Einheiten können der Armee zu Beginn der Schlacht hinzugefügt werden, bevor eine der beiden Seiten aufgestellt wird. Wenn die Armee einen Oberbefehlshaber enthält, dann muss das erste Kommissar zu dieser Formation angebracht werden. Sie dürfen nicht mehr als einen Kommissar pro Formation angeben. Sie können keinen Kommissar zu einer imperialen Verbündetenformation hinzufügen. Wenn Sie mehr Kommissare als Formationen haben, gehen alle Überschüsse verloren.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>An Imperial Guard army may include one Commissar character per 500 points, or part thereof, in the army. The Commissars do not cost any points.
-Commissar units may be added to the army at the start of the battle before either side sets up. If the army includes a Supreme Commander than the first Commissar must be attached to the Supreme Commander’s formation. Any further Commissars may be attached to any other formations.
-You may not include more than one Commissar per formation. You may not add a Commissar to an Imperial Ally formation. If you have more Commissars than formations any excess is lost.</description>
-    </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>none</description>
     </rule>
@@ -942,11 +920,11 @@ Fanatic #13</description>
       <description>Mirali Valkyries, Vendettas, Vultures, and Vulture Punishers lose Scout. However, Mirali Valkyries, Vendettas, Vultures, Vulture Punishers, and Vulture Slicks gain Planetfall.</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>Harakoni Warhawks v1.5</description>
+      <description>Mirali Skyraiders v2.0</description>
     </rule>
     <rule id="e8f0-8c30-372a-2d80" name="Strategy Rating &amp; Initiative (MS)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Formaciones de la Guardia Imperial y la Armada Imperial: 2+">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 2.  • Valores de Iniciativa: Todas las formaciones: 2+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>

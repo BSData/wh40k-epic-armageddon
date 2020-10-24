@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f97b-5995-9c84-d211" name="Space Marines: Codex Astartes" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f97b-5995-9c84-d211" name="Space Marines: Codex Astartes" revision="39" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -200,7 +200,7 @@
       <entryLinks>
         <entryLink id="8fada134-5f67-c6b2-8997-3355e3acb892" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
         <entryLink id="009405f2-3d81-f9ef-b5e6-7ccc295b4709" hidden="false" collective="false" import="true" targetId="2351-0e48-1b2a-b67f" type="selectionEntryGroup"/>
-        <entryLink id="f0ef-8df9-b92f-e4cb" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+        <entryLink id="f0ef-8df9-b92f-e4cb" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="maxSelections" value="0.0">
               <conditionGroups>
@@ -842,6 +842,15 @@
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="f370-7e2e-dcba-da5b" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1626,7 +1635,15 @@
     </selectionEntry>
   </selectionEntries>
   <infoLinks>
-    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule"/>
+    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule"/>
     <infoLink id="f668-2718-536a-3e9f" name="Strategy Rating &amp; Initiative (SM)" hidden="false" targetId="0949-313f-a827-1592" type="rule"/>
     <infoLink id="4d86-79d8-27c0-fbd3" name="Superior Tactics" hidden="false" targetId="902f-bafe-576b-3e21" type="rule">
@@ -1639,6 +1656,15 @@
       </modifiers>
     </infoLink>
     <infoLink id="f9c8-575a-14e1-e6c0" name="Strategy Rating &amp; Initiative (SM)" hidden="false" targetId="fc39-7aef-3f2a-65c9" type="rule"/>
+    <infoLink id="ee6f-c4b5-a341-7b4a" name="Space Marine Transports (F-ERC)" hidden="false" targetId="3cbb-2959-7c15-17b9" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="116b-cc79-dd96-6cf6" name="Battle Barge" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2020,17 +2046,9 @@
       <selectionEntries>
         <selectionEntry id="efc5-ff44-d9ef-09d3" name="Hellfire Dreadnought" page="0" hidden="false" collective="false" import="true" type="model">
           <infoLinks>
-            <infoLink id="0d8f-937b-15bc-a429" hidden="false" targetId="010e-164f-1824-70eb" type="profile"/>
-            <infoLink id="68f5-b967-9b55-6e8e" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
-            <infoLink id="7138-06dd-2b80-6daa" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="0d8f-937b-15bc-a429" name="Dreadnought (Hellfire)" hidden="false" targetId="010e-164f-1824-70eb" type="profile"/>
+            <infoLink id="68f5-b967-9b55-6e8e" name="Walker" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
+            <infoLink id="7138-06dd-2b80-6daa" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2041,18 +2059,10 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="3dfa-86ae-186b-9218" hidden="false" targetId="4d37-22a0-7daa-e381" type="profile"/>
+            <infoLink id="3dfa-86ae-186b-9218" name="Dreadnought (Tactical)" hidden="false" targetId="4d37-22a0-7daa-e381" type="profile"/>
             <infoLink id="554f-f738-f253-a0a3" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
             <infoLink id="aa92-31f6-9f2e-fa93" hidden="false" targetId="e5b7-a9df-191e-364d" type="rule"/>
-            <infoLink id="5459-1f3c-6fa8-eb45" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="5459-1f3c-6fa8-eb45" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2164,7 +2174,7 @@ Fanatic #13</description>
     </rule>
     <rule id="0949-313f-a827-1592" name="Strategy Rating &amp; Initiative (SM)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Marines Espaciales y Legiones de Titanes: 1+.  • Formaciones de la Armada Imperial: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Formaciones de Marines Espaciales y Legiones de Titanes: 1+.  • Formaciones de la Armada Imperial: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -2215,7 +2225,7 @@ Imperial Navy aircraft formations have Initiative Rating 2+.</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Todas las formaciones: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Todas las formaciones: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>

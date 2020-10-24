@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7ec0-1de8-6599-f141" name="Space Marines: Imperial Fists" revision="39" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -163,7 +163,15 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="5fc0-3d43-f393-c7a1" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
+        <infoLink id="5fc0-3d43-f393-c7a1" name="Fortified Positions (EpicUK)" hidden="false" targetId="6060-0611-11f0-f16c" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="86fc-54ee-4042-0d7b-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
@@ -596,7 +604,15 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="b0cb-e4e7-be01-654e" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
+        <infoLink id="b0cb-e4e7-be01-654e" name="Fortified Positions (EpicUK)" hidden="false" targetId="6060-0611-11f0-f16c" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3f7c-997b-0320-2be5-4f35-97c0-fae0-922d" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
@@ -1140,27 +1156,13 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ed2d-9074-716a-aca2" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="3deb-e778-56e7-4ee9" name="Drop Pods" hidden="false" collective="false" import="true" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
+        <entryLink id="ed2d-9074-716a-aca2" name="Commander" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
+        <entryLink id="d5ae-60d6-60a9-5428" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="maxSelections" value="0.0">
               <conditions>
-                <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="908a-c8c2-7461-43f1" type="atLeast"/>
+                <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
               </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="d5ae-60d6-60a9-5428" hidden="false" collective="false" import="true" targetId="c365-c2e4-f7c6-4076" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="maxSelections" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d5c-e6bc-54ab-1352" type="equalTo"/>
-                    <condition field="selections" scope="94f1-c6b8-827a-75f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd4a-d64e-f47f-c866" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -2206,13 +2208,22 @@
     </selectionEntry>
   </selectionEntries>
   <infoLinks>
-    <infoLink id="a2c6-a634-b834-32f5" hidden="false" targetId="4bc0-33ac-52e2-7655" type="rule"/>
+    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports (F-ERC)" hidden="false" targetId="3cbb-2959-7c15-17b9" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule"/>
     <infoLink id="f668-2718-536a-3e9f" hidden="false" targetId="f064-83f2-b1e4-5f5c" type="rule"/>
     <infoLink id="8fd6-5cbc-2783-8188" name="Masters of Siege (NetEA)" hidden="false" targetId="e3fc-0079-3b42-d97b" type="rule"/>
     <infoLink id="0e77-0960-2baf-016f" name="Masters of Siege" hidden="false" targetId="b41c-1140-d9f6-81a4" type="rule"/>
     <infoLink id="c2e9-9885-237d-1843" name="Strategy Rating &amp; Initiative (IF)" hidden="false" targetId="a2e9-cf57-facb-8228" type="rule"/>
     <infoLink id="b6fb-ee52-fa16-4a7c" name="Siege Masters" hidden="false" targetId="8807-90ba-ed5b-137e" type="rule"/>
+    <infoLink id="b996-24dd-292a-e729" name="Imperial Fists Transports" hidden="false" targetId="4bc0-33ac-52e2-7655" type="rule"/>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="ab1a-9437-92b2-bc3d" name="Land Raider Crusader and Land Raider Achilles" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2408,7 +2419,15 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="272f-9865-b156-ec29" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
+        <infoLink id="272f-9865-b156-ec29" name="Fortified Positions (EpicUK)" hidden="false" targetId="6060-0611-11f0-f16c" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="a759-a81b-7947-764b" name="Bunker" hidden="false" collective="false" import="true" type="model">
@@ -2746,7 +2765,15 @@
       </constraints>
       <infoLinks>
         <infoLink id="9750-fc37-e5d8-e4be" hidden="false" targetId="564b-2c97-d8c6-9d15" type="profile"/>
-        <infoLink id="4bb9-9249-4be1-9cf4" name="Fortified Positions" hidden="false" targetId="ce30-b6d1-856a-669b" type="rule"/>
+        <infoLink id="4bb9-9249-4be1-9cf4" name="Fortified Positions (EpicUK)" hidden="false" targetId="6060-0611-11f0-f16c" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -3255,7 +3282,7 @@ Fanatic #13</description>
     </rule>
     <rule id="4bc0-33ac-52e2-7655" name="Imperial Fists Transports" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Transports: Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhinos pour la transporter les formations comprennent la mention &quot;plus transports&quot; dans leur composition.  • Le nombre de Rhinos sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  • Toutefois, prendre de Rhinos pour la formation n’est pas obligatoire si vous ne le voulez pas. Si vous avez acheté des véhicules avec une capacité de transport pour la formation (comme des Razorbacks ou des Land Raiders), on considère qu’ils transportent au maximum de leurs capacités et que vous avez ensuite droit à assez de Rhinos pour transporter ce qu&apos;il reste de la formation (même si un Rhino ne se retrouve qu’à la moitié de sa capacité de transport en cas de nombre impair de Razorbacks).  • En outre, vous pouvez choisir de remplacer tous les Rhinos de la formation par un Dreadnought OU par des Modules d’atterrissage.">
+        <modifier type="set" field="description" value="Transports des Imperial Fists: Les Space Marines sont une armée très mobile. De ce fait, le coût en points d&apos;une formation comprend assez de Rhinos pour la transporter les formations comprennent la mention &quot;plus transports&quot; dans leur composition.  • Le nombre de Rhinos sera toujours égal au minimum nécessaire pour transporter la formation, vous ne pouvez pas en prendre davantage.  • Notez que de nombreuses formations ne reçoivent pas de Rhinos, généralement parce qu&apos;elles ne peuvent pas s&apos;y intégrer.  • Vous pouvez choisir de remplacer les Rhinos d&apos;un détachement par deux bunkers et 50 cm de tranchées ou de champs de mines avant chaque partie, une fois que l&apos;armée adverse est connue mais avant que les objectifs ne soient placés.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -3265,9 +3292,19 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Imperial Fists Transporte: Die Space Marines sind eine sehr mobile Armee. Die Punktekosten einer Abteilung umfassen normalerweise genug Rhinos, um sie zu transportieren, und alle Upgrades, die vorgenommen wurden. Die Anzahl der Rhinos ist immer das Minimum, das zum Tragen der Formation erforderlich ist. Sie können keine Extras mitnehmen.  • Beachten Sie, dass viele Formationen keine Rhinos erhalten, normalerweise, weil sie nicht in sie passen. Abteilungen, die mit Rhinosn geliefert werden, werden als &quot;plus Transport&quot; in der Armeeliste aufgeführt.  • Sie können sich dafür entscheiden, die Rhinos einer Abteilung vor jedem Spiel durch zwei Bunker und 50 cm Schützengräben oder Minenfelder zu ersetzen, nachdem die gegnerische Armee bekannt ist, aber bevor die Ziele gesetzt werden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The Space Marines are a highly mobile army. Because of this, the points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. Determine the number of Rhinos needed after all upgrades have been purchased. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along to cover any losses!
-Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having “plus transport” in the units section of the detachment list below.
+Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having “plus transport” in the units section of the detachment list.
 You may choose to replace a detachment’s Rhinos with two Bunkers and 50cm of Trenches or Minefields before each game, after the opposing army is known but before objectives are placed.</description>
     </rule>
     <rule id="e3fc-0079-3b42-d97b" name="Masters of Siege" hidden="false">
@@ -3282,6 +3319,16 @@ You may choose to replace a detachment’s Rhinos with two Bunkers and 50cm of T
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Maîtres de Siège: Une armée des Imperial Fists peut mettre en état d&apos;alerte trois formations en garnison au lieu de deux.  • Toutes les unités comptent comme ayant la règle spéciale du marcheur lorsqu&apos;elles effectuent un test de terrain dangereux pour entrer ou commencer à se déplacer sur des champs de mines qui ont été achetés dans le cadre de l&apos;armée.  • Toutes les unités d&apos;infanterie bénéficient de la première frappe lorsqu&apos;elles se trouvent dans des tranchées achetées par l&apos;armée.  • Toutes les unités d&apos;infanterie (dans les bunkers ?) obtiennent une sauvegarde de 4+ avec un blindage renforcé. Cela remplace à la fois leur sauvegarde normale et la sauvegarde 3+ de couverture de bunker. Cette sauvegarde est perdue si l&apos;unité subit une touche qui ignore les couverts.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Belagerungsmeister: Eine Armee der Imperial Fists kann mit drei statt zwei Garnisonsformationen zur Überwachung beginnen.  • Alle Einheiten zählen als Walker, wenn sie einen gefährlichen Geländetest machen, um Minenfelder, die als Teil der Armee erworben wurden, zu betreten oder sich auf ihnen zu bewegen.  • Alle Infanterieeinheiten erhalten den Erstschlag, wenn sie sich innerhalb von Schützengräben befinden, die als Teil der Armee erworben wurden.  • Alle Infanterieeinheiten (innerhalb von Bunkern?) erhalten eine Rettung 4+ mit verstärkter Panzerung. Dies ersetzt sowohl ihre reguläre Rettung als auch die Rettung mit 3+ Bunkerabdeckung. Diese Rettung geht verloren, wenn die Einheit einen Treffer erleidet, bei dem die Abdeckung ignoriert wird.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>An Imperial Fists army may start three garrisoned formations on overwatch instead of two.
 All units count as having walker when making a dangerous terrain test for entering or starting to move on minefields that have been purchased as part of the army.
@@ -3293,7 +3340,7 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
     </rule>
     <rule id="f064-83f2-b1e4-5f5c" name="Strategy Rating &amp; Initiative (IF)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Defensa Estática: 2+; Resto de formaciones: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Formaciones de Defensa Estática: 2+; Resto de formaciones: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3356,6 +3403,11 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Minenfeld: Feindliche Einheiten mit Sprungmodulen oder Antigravfahrzeug müssen gefährliche Tests für Minenfelder absolvieren. Feindliche Einheiten dürfen fehlgeschlagene Tests für gefährliches Gelände für Minenfelder nicht wiederholen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Enemy units with Jumps Packs or Skimmer must take dangerous tests for Minefields. Enemy units may not re-roll failed dangerous terrain tests for minefields.</description>
     </rule>
@@ -3411,6 +3463,11 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Belagerungsmeister: Taktische und Devastor-Formationen können auf Rhinos oder die freie Dreadnought verzichten und stattdessen 5 cm Gräben und Stacheldraht pro Einheit nehmen. Diese Formationen müssen klassisch (auch in der Garnison) eingesetzt werden. Außerdem können Sie für 50 Punkte die Gräben durch so viele Bunker ersetzen, wie Einheiten in der Formation vorhanden sind.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Tactical and devastator formations can leave rhinos or the dreadnought to take 5cm of trenches and barbed wire per unit. These formations will have to deploy classically (including in garrison). In addition, for 50pts, you can replace the trenches with as many bunkers as there are units in the formation.</description>
     </rule>
@@ -3431,7 +3488,7 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Todas las formaciones: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Todas las formaciones: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -3456,27 +3513,18 @@ All infantry units (within bunkers?) gain a 4+ save with reinforced armour. This
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Maîtres de Siège: L&apos;infanterie et les véhicules des Imperial Fists peuvent relancer les tests de terrain dangereux échoués lors de la traversée de champs de mines. Les unités d&apos;infanterie des Imperial Fists dans les tranchées obtiennent la capacité de première frappe. Les unités d&apos;infanterie des Imperial Fists dans les bunkers remplacent la sauvegarde de couverture habituelle de 3+ par une sauvegarde de couverture de blindage renforcée de 4+. Une armée des Imperial Fists peut commencer le jeu avec un maximum de trois formations en garnison en état d&apos;alerte dans le scénario du tournoi.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Belagerungsmeister: Imperial Fists Infanterie und Fahrzeuge können bei der Durchquerung von Minenfeldern fehlgeschlagene Tests in gefährlichem Gelände wiederholen. Imperial Fists Infanterieeinheiten innerhalb von Gräben erhalten die Erstschlagfähigkeit. Die Imperial Fists Infanterieeinheiten innerhalb von Bunkern ersetzen die 3+ Abdeckungsrettung des Bunkers durch eine 4+ verstärkte Rüstung Abdeckungsrettung. Eine Imperial-Faust-Armee kann das Spiel im Turnierszenario mit bis zu drei Garnisonformationen in Überwachen beginnen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Imperial Fists infantry and vehicles may re-roll failed dangerous terrain tests when traversing minefields. Imperial Fists infantry units within trenches gain the first strike ability. Imperial Fists infantry units within bunkers replace the bunkers 3+ cover save with a 4+ reinforced armour cover save. An Imperial Fists army may start the game with up to three garrisoned formations on overwatch in the tournament scenario.</description>
-    </rule>
-    <rule id="ce30-b6d1-856a-669b" name="Fortified Positions" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Posiciones Fortificadas: Las posiciones fortificadas deben establecerse después de los objetivos, pero antes de que se desplieguen las naves espaciales y las guarniciones. Las posiciones fortificadas pueden establecerse en cualquier lugar donde un vehículo pueda desplegarse dentro de la parte de la tabla de los Puños Imperiales. Se puede dividir un conjunto de posiciones fortificadas como se desee (aunque ninguna sección de trincheras o campo de minas puede ser menor de 5cm x 2,5cm), siempre que se respeten las reglas de coherencia de la formación. Por ejemplo, se podrían dividir las zanjas en varias líneas, siempre y cuando haya 5cm de &quot;enlaces&quot; entre las diferentes partes de la posición. Estas posiciones fortificadas cuentan como si tuvieran un movimiento de cero. Las posiciones fortificadas no pueden ser transportadas.  • Algunas formaciones en el ejército pueden venir con un conjunto de posiciones fortificadas; estas fortificaciones se establecen al mismo tiempo que todas las demás fortificaciones del ejército y siguen las mismas reglas. Una vez desplegadas, estas fortificaciones son de terreno y ya no forman parte de la formación.  • Una vez que las posiciones fortificadas se establecen, pueden ser usadas por cualquier unidad, no sólo por las unidades para las que fueron compradas. También pueden ser capturadas y utilizadas por unidades enemigas.  • Las posiciones fortificadas no bloquean la línea de visión.  • Los búnkeres pueden tener un tamaño máximo de 6cm x 5cm. Las trincheras y los campos de minas pueden ser de hasta 50cm x 2,5cm.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Fortified positions must be set up after objectives, but before spacecraft and garrisons are deployed. The fortified positions may be set up anywhere a vehicle may deploy in the Imperial Fists half of the table. You may split up a set of fortified positions as desired (although no section of trenches or minefield may be smaller than 5cm x 2.5cm), as long as the rules for formation coherency are adhered to. For example, you could split up trenches into several lines, as long as there are 5cm ‘links’ between the different parts of the position. These fortified positions count as having a move of zero. Fortified positions may not be transported.
-Some formations in the army may come with a set of fortified positions; these fortifications are set up at the same time as all other fortifications in the army and follow the same rules. Once deployed these fortifications are terrain and are no longer a part of the formation.
-Once fortified positions are set up they may be used by any unit, not just the units they were purchased for. They may also be captured and used by enemy units.
-No fortified positions block line of sight.
-Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up to 50cm x 2.5cm.</description>
     </rule>
     <rule id="cf80-c2d5-6a41-781a" name="Static Defence Platform" hidden="false">
       <modifiers>
@@ -3488,6 +3536,16 @@ Bunkers can be a maximum of 6cm x 5cm in size. Trenches and Minefields can be up
         <modifier type="set" field="description" value="Plataforma Estática de Defensa: &quot;Y no Conocerán el Miedo&quot; no se aplica a las plataformas de Hyperios  y Tarántulas.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Plate-forme de Défense Statique: &quot;Et Ils Ne Connaîtront Pas La Peur&quot; ne s&apos;applique pas aux plateformes Hyperios et Tarentules.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Statische Verteidigungsplattform: &quot;Sie Werden Keine Furcht Kennen&quot; gilt nicht für Hyperios- und Tarantula-Plattformen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

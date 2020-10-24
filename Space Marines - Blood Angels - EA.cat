@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="28f5-20e4-fddb-f224" name="Space Marines: Blood Angels" revision="36" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="28f5-20e4-fddb-f224" name="Space Marines: Blood Angels" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1687,21 +1687,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6bac-9919-912f-16a3" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="9987-1b4e-1e60-491e" hidden="false" collective="false" import="true" targetId="8d5c-e6bc-54ab-1352" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="maxSelections" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="fb1e-551f-f979-05d8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="adc4-875f-00a8-3f39" type="equalTo"/>
-                    <condition field="selections" scope="fb1e-551f-f979-05d8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d1c-34a4-a0ed-844c" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="6bac-9919-912f-16a3" name="Commander" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
         <entryLink id="3cde-e08f-2b8b-f878" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="adc4-875f-00a8-3f39" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -2885,7 +2871,15 @@
     </selectionEntry>
   </selectionEntries>
   <infoLinks>
-    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule"/>
+    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule"/>
     <infoLink id="f668-2718-536a-3e9f" name="Strategy Rating &amp; Initiative (BA)" hidden="false" targetId="5fc8-87db-e3c2-d886" type="rule"/>
     <infoLink id="4d86-79d8-27c0-fbd3" name="Superior Tactics" hidden="false" targetId="902f-bafe-576b-3e21" type="rule">
@@ -2899,6 +2893,15 @@
     </infoLink>
     <infoLink id="4f30-d913-1dc9-dbc8" name="Red Thirst" hidden="false" targetId="8a1a-16ab-c51e-ab38" type="rule"/>
     <infoLink id="aeb9-c041-4ffe-f62f" name="Strategy Rating &amp; Initiative (BA)" hidden="false" targetId="f40e-2083-1949-3dc7" type="rule"/>
+    <infoLink id="00a2-f7f3-f5b9-c8dc" name="Space Marine Transports (F-ERC)" hidden="false" targetId="3cbb-2959-7c15-17b9" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8e24-62e5-4ae7-2240" name="2x Rhino" hidden="false" collective="false" import="true" type="unit">
@@ -3966,7 +3969,7 @@ Fanatic #13</description>
     </rule>
     <rule id="5fc8-87db-e3c2-d886" name="Strategy Rating &amp; Initiative (BA)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Formaciones de Marines Espaciales y Legiones de Titanes: 1+.  • Formaciones de la Armada Imperial: 2+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Formaciones de Marines Espaciales y Legiones de Titanes: 1+.  • Formaciones de la Armada Imperial: 2+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -4099,7 +4102,7 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Todas las formaciones: 1+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 5.  • Valores de Iniciativa: Todas las formaciones: 1+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>

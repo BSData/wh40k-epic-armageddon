@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8861-bee9-f1ea-e105" name="Orks: Ghazghkull Mag Uruk Thraka&apos;s Ork War Horde" revision="34" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8861-bee9-f1ea-e105" name="Orks: Ghazghkull Mag Uruk Thraka&apos;s Ork War Horde" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1726,7 +1726,15 @@
         </modifier>
       </modifiers>
     </infoLink>
-    <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh!" hidden="false" targetId="a717-b0ae-1bf8-2c82" type="rule"/>
+    <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh! (F-ERC)" hidden="false" targetId="2b2d-29b7-2ced-78cc" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="0de2-1902-7731-d15d" name="Battlewagon" hidden="false" collective="false" import="true" type="model">
@@ -2243,7 +2251,7 @@ EpicUK: Alternatively a Gunfortress or Battlefortress may be given D3+1 powerfie
     </rule>
     <rule id="b7ab-6659-4911-254b" name="Strategy Rating &amp; Initiative (Ork)" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Todas las formaciones: 3+.">
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Valores de Iniciativa: Todas las formaciones: 3+.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -2283,36 +2291,6 @@ Gunfortress: up to 4 units of Boyz, Kommandos or Nobz. 1 unit transported may be
 Gunwagon: 1 unit of Boyz, Kommandos, Nobz or Big Gunz.
 Flakwagon: 1 unit of Boyz, Kommandos, Nobz or Big Gunz.
 Landa: up to 10 units of Boyz, Kommandos, Nobz, Stormboyz, Warbikes, Buggies/Wartraks, Skorchas, Deth Koptas, Killa Kans, Dreadnoughts. Light vehicles and Dreadnoughts count as two units. May carry 4 Grotz in addition to any other units.</description>
-    </rule>
-    <rule id="a717-b0ae-1bf8-2c82" name="Power of the Waaagh!" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="El Poder del ¡Waaaagh!: Las formaciones Orkas que declaren acciones Dobles o de Atacar, recibirán un +2 a su chequeo de acción. A los pilotoz Orkoz, de igual manera, les encanta acribillar cosas, y reciben un +1 para intentar acciones de Ataque a Tierra o Intercepción.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Il Potere della Waaagh!: Le formazioni di Orki che stanno provando ad ingaggiare o a far doppie mosse ricevono un modificatore +2 al loro tiro della prova di azione. Gli Orki aviatori similmente gradiscono l’occasione di sparare alle cose in alto, e ricevono un modificatore di +1 nel loro tiro della prova di azione quando cercano di portare a termine un’azione di intercettamento o di attacco a terra.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Pouvoir de la Waaagh: Les Orks ne sont pas de fins stratèges mais la perspective d&apos;une bonne bagarre les galvanisent toujours. Afin de représenter ceci, uneformation tentant une action d&apos;avance rapide ou d&apos;assaut reçoit toujours +2 à l&apos;iniative pour son test d&apos;action.  • Les formations aériennes, ont toujours +1 de bonus pour les tests d&apos;actions lorsqu&apos;elles tentent une Interception ou une Attaque au sol.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Macht der Waaagh!: Ork-Formationen, die versuchen, eine Engage- oder Double-Aktion auszuführen, erhalten einen +2-Modifikator für ihre Aktionstestwurf. Ork-Flyboyz erhalten einen +1-Modifikator für ihren Aktionstestwurf, wenn sie Abfang- oder Bodenangriffsaktionen ausführen.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>Ork formations that are attempting to take an engage or double action receive a +2 modifier to their action test roll. Ork flyboyz similarly relish the chance to shoot things up, and receive a +1 modifier to their action test roll when attempting to carry out interception or ground attack actions.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

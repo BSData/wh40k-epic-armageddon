@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6bc-68c1-7518-5853" name="Space Marines: Black Templars" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c6bc-68c1-7518-5853" name="Space Marines: Black Templars" revision="36" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -219,7 +219,7 @@
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="c5de-887b-a1b5-2e5d" hidden="false" targetId="dec4-9a82-bb94-a6ec" type="profile"/>
+            <infoLink id="c5de-887b-a1b5-2e5d" name="Neophytes - Novices" hidden="false" targetId="dec4-9a82-bb94-a6ec" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="25.0"/>
@@ -640,6 +640,14 @@
                     <condition field="selections" scope="7671fecc-f6c1-1353-8042-0fceed28ec79" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86c418d1-ee0e-e1d7-a358-a09c9d09138c" type="atLeast"/>
                     <condition field="selections" scope="7671fecc-f6c1-1353-8042-0fceed28ec79" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf3c-ebe2-29c9-dc85" type="atLeast"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                        <condition field="selections" scope="7671fecc-f6c1-1353-8042-0fceed28ec79" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="80ec-4b92-40fb-230c" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -2314,7 +2322,15 @@
     </selectionEntry>
   </selectionEntries>
   <infoLinks>
-    <infoLink id="a2c6-a634-b834-32f5" hidden="false" targetId="d02b-81af-eb18-623a" type="rule"/>
+    <infoLink id="a2c6-a634-b834-32f5" name="Space Marine Transports" hidden="false" targetId="d02b-81af-eb18-623a" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="4bc3-f4ff-f0b5-2624" name="They Shall Know No Fear" hidden="false" targetId="e3e4-1223-8850-d1ca" type="rule"/>
     <infoLink id="f668-2718-536a-3e9f" hidden="false" targetId="f826-c487-2781-a78f" type="rule"/>
     <infoLink id="4d86-79d8-27c0-fbd3" name="Superior Tactics" hidden="false" targetId="902f-bafe-576b-3e21" type="rule">
@@ -2332,6 +2348,15 @@
       </modifiers>
     </infoLink>
     <infoLink id="de62-d562-2394-11a2" hidden="false" targetId="4f85-d52b-afd3-4263" type="rule"/>
+    <infoLink id="5b9f-74dd-0f81-95dd" name="Space Marine Transports (F-ERC)" hidden="false" targetId="3cbb-2959-7c15-17b9" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="116b-cc79-dd96-6cf6" name="Battle Barge" page="0" hidden="false" collective="false" import="true" type="model">
