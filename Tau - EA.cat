@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1738-2794-14e7-e532" name="Tau" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1738-2794-14e7-e532" name="Tau" revision="31" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1995,6 +1995,16 @@ tau_troisième phase #Version F-ERC du 23 novembre 2009 (Dernière mise à jour 
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Drones: Las unidades con la regla especial de los Drones anotada en su perfil no generan un Marcador de Explosión cuando son destruidos, o cuando son alcanzados por armas de Disrupción. Cualquier otra regla que genere Marcadores de Explosión cuando se asignen impactos a estas unidades es ignorada.  • Los Drones de una formación no impiden que comience en la guarnición si tiene los requisitos previos para hacerlo.  • Una formación compuesta sólo por Drones no puede tener objetivos, aunque puede disputarlos.  • Nota: Las unidades de drones cuentan en el cálculo de las pérdidas al resolver un asalto.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Drohnen: Einheiten mit der in ihrem Profil vermerkten Drohnen-Sonderregel erzeugen keine Blast-Marker, wenn sie zerstört werden oder wenn sie von Unterbrechenwaffen getroffen werden. Jede andere Regel, die Blast-Markern erzeugt, wenn diesen Einheiten Treffer zugewiesen werden, wird ignoriert.  • Die Drohnen einer Formation hindern diese nicht daran, in der Garnison anzufangen, wenn sie die Voraussetzungen dafür hat.  • Eine Formation, die nur aus Drohnen besteht, kann keine Ziele halten, obwohl sie diese bestreiten kann.  • Hinweis: Drohneneinheiten zählen bei der Berechnung der Verluste bei der Auflösung eines Angriffs mit.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Units with the Drones special rule noted in their profile do not generate a Blast Marker when they are destroyed, or when they are hit by Disrupt weapons. Any other rule that generates Blast Markers when hits are allocated to these units are ignored.
 The Drones of a formation do not prevent it from starting in garrison if it has the prerequisites to do so.
@@ -2029,6 +2039,11 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Valores de Iniciativa: Equipos de XV8 Crisis, Formaciones de XV104 Cataclismo y Mantas: 1+.  • Resto de formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The Tau Empire has Strategy Rating 3. All T&apos;au Empire, Auxiliary and Air Caste formations have a 2+ initiative. Crisis Exo-Armour Cadres, Riptides Exo-Armour Formations and Mantas have an initiative of 1+.</description>
     </rule>
@@ -2039,14 +2054,34 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Deflectores: Los Deflectores otorgan una Salvación Invulnerable igual al valor que se muestra entre paréntesis. Por ejemplo: Deflectores (5+).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Tau Deflektorschilde: Deflektorschilde gewähren eine unverwundbare Rettung, die dem in Klammern angegebenen Wert entspricht. Z.B.: Deflektorschilde (5+).">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <description>Deflectors  grant an lnvulnerable Save equal to the value shown in brackets. Eg: Deflectors (5+).</description>
+      <description>Deflectors grant an lnvulnerable Save equal to the value shown in brackets. Eg: Deflectors (5+).</description>
     </rule>
     <rule id="58f3-6ece-c4ba-85a2" name="Jetpacks" hidden="false">
       <modifiers>
         <modifier type="set" field="description" value="Propulseurs: Les Propulseurs fonctionnent exactement comme les Réacteurs Dorsaux. (Les unités équipées de Réacteurs dorsaux peuvent ignorer les terrains dangereux et infranchissables lorsqu&apos;elles se déplacent (elles sautent par-dessus). Elles ne peuvent pas atterrir sur un terrain infranchissable et doivent effectuer un test de terrain dangereux si elles atterrissent dans un terrain dangereux. Les unités équipées de Réacteurs dorsaux peuvent aussi passer par-dessus des unités amies pendant leur mouvement, mais ne peuvent pas atterrir sur ces dernières. Elles sont affectées normalement par les zones de contrôle et les unités de l&apos;ennemi et ne peuvent pas se déplacer par-dessus des formations ennemies.)  • De plus, lorsqu’une formation exécute une action d’avance ou de d’avance rapide, ses unités ayant la règle spéciale Propulseurs notée dans leur profil peuvent choisir de tirer avant ou après l’un de ses mouvements. Exemple : Tir puis mouvement lors d’une action d’avance, mouvement puis tir puis mouvement pour une action d’avance rapide, etc…">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Retrocohetes o Retropropulsores T&apos;au: Los retrocohetes Tau siguen todas las reglas para los retrorreactores. (Algunas unidades poseen retrorreactores que les permiten recorrer cortas distancias volando por los aires, normalmente realizando series de largos “saltos”.   • Estas unidades pueden ignorar el terreno difícil o intransitable mientras mueven (saltan por encima de él). No pueden aterrizar en terreno intransitable, y tendrán que realizar un chequeo de terreno peligroso si aterrizan en terreno peligroso. También pueden ignorar a las unidades amigas mientras mueven (no pueden aterrizar sobre ellas), pero son afectadas por las zonas de control enemigas, y no pueden sobrevolar formaciones enemigas.)  • Además, cuando una formación realiza una acción de Avanzar o Doble, sus unidades con la regla de los retrocohetes anotada en su perfil pueden elegir disparar antes o después de uno de sus movimientos. Ejemplo: Disparar y luego mover durante un Avanzar, mover y luego disparar y luego mover para un Doble, etc...">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Flugmodule: Tau Flugmodule befolgen alle Regeln für Sprungmodule. (Einheiten, die mit Sprungmodule ausgestattet sind, können gefährliches oder unpassierbares Gelände ignorieren, wenn sie sich bewegen (sie springen darüber). Sie landen möglicherweise nicht auf unpassierbarem Gelände, und wenn sie in gefährlichem Gelände landen, müssen sie einen gefährlichen Gelände-Test machen. Einheiten, die mit Sprungmodule ausgestattet sind, können sich bei ihrer Bewegung auch über andere verbündete Einheiten bewegen, dürfen aber nicht darauf landen. Einheiten mit Sprungmodule sind normalerweise von gegnerischen Einheiten und Kontrollzonen betroffen und können nicht über gegnerische Formationen springen.)  • Wenn eine Formation eine Vorrücken- oder Doppelaktion ausführt, können ihre Einheiten mit der in ihrem Profil vermerkten Flugmodule-Regel außerdem wählen, ob sie vor oder nach einer ihrer Bewegungen schießen wollen. Beispiel: Schießen, dann Bewegung während eines Vorrückens, Bewegung, dann Schießen, dann Bewegung für eine Double-Aktion, usw ...">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2058,6 +2093,16 @@ In addition, when a formation performs an Advance or Double action, its units wi
         <modifier type="set" field="description" value="Tau Troisième Sphère: Affiche les unités de la liste d&apos;armée Tau troisième sphère, avec les règles spéciales mises à jour pour correspondre à la liste principale.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Tercera Esfera de Tau: Muestra las unidades de la lista del ejército de la Tercera Esfera de Tau, con las reglas especiales actualizadas para que coincidan con la lista maestra.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Tau Dritte Sphäre: Zeigt Einheiten aus der Armeeliste der Tau Dritte Sphäre an, wobei die Sonderregeln entsprechend der Hauptliste aktualisiert wurden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2091,6 +2136,11 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Apoyo Máquinas de Guerra: Aunque los Armaduras de Supremacía KX139 Ta&apos;unar son formaciones de apoyo, su coste adicional (mostrado entre paréntesis) es parte del 33% que puede ser gastado en formaciones de Casta del Aire. Para seleccionar cualquiera de ellos se debe añadir a la lista el &quot;Total de Puntos de Apoyo Máquinas de Guerra&quot; (War Engine Support Points Total). Sólo es necesario seleccionarlo una vez y su valor se actualizará automáticamente si se toman más unidades.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Although KX139 Ta&apos;unar Supremacy Battlesuits are Support Formations, their extra cost (shown in brackets) is part of the 33% which may be spent on Air Caste Formations. To select any of these the &quot;War Engine Support Points Total&quot; item must be added to the roster. It only needs to be selected once and will automatically update in value if further pods are taken.</description>
     </rule>
@@ -2111,6 +2161,11 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Estrategia e Iniciativa: Factor de Estrategia: 3.  • Valores de Iniciativa: Armaduras de Combate XV104 Cataclismo y Armaduras de Supremacía KX139 Ta&apos;unar: 1+.  • Resto de formaciones: 2+.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The Tau Third Phase army has Strategy Rating 3. Exo Armour Riptide and KX-139 formations have an Initiative rating of 1+, all other formations have an Initiative rating of 2+.</description>
     </rule>
@@ -2121,6 +2176,16 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Torpedos Gravíticos: Las naves de la Casta del Aire de T&apos;au están armadas con Torpedos Gravíticos. Estos son Municiones Guiadas disparadas desde la órbita, sobre objetivos designados por los Marcadores Telemétricos de las tropas de tierra. Una vez que la nave ha completado su activación y en cualquier momento durante el mismo turno, el fuego de Rayos Gravíticos puede ser disparado por unidades de una formación Tau que lleven Marcadores Telemétricos, asignando los impactos de la misma.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Lenkraketenbeschleuniger: Die Schiffe der Tau-Luftkaste sind mit Lenkraketenbeschleunigern bewaffnet. Dabei handelt es sich um Lenkraketen, die vom Orbit aus auf Ziele abgefeuert werden, die von den Zielmarkern der Bodentruppen bezeichnet werden. Nach Abschluss der Aktivierung des Schiffes und jederzeit während desselben Zuges kann der Beschuss mit Lenkraketenbeschleunigern durch Einheiten einer Tau-Formation, die Zielmarker tragen, ausgelöst werden, wobei die Treffer von ihnen zugewiesen werden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The ships of the T&apos;au Air Caste are armed with Gravitic Torpedoes. These are Guided Weapons fired from orbit, on targets designated by the Markerlights of ground troops. Once the ship has completed its activation and at any time during the same turn, Gravitic Torpedo fire may be triggered by units of a Tau formation carrying Markerlights, allocating the hits from it.</description>
     </rule>
@@ -2129,6 +2194,16 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
         <modifier type="set" field="description" value="Armes Guidées: Les armes guidées sont des armes disposant d&apos;un système de localisation, et un calculateur de trajectoire. Ces armes sont capables d&apos;atteindre une cible hors de ligne de vue, et ceci de façon autonome. Les armes ayant la note Arme guidée mentionnée dans leur profil s’utilisent selon cette règle spéciale.  • Une Armes guidée ne peut être employée que sur une unité sur laquelle a été infligé un Marquage de Désignateur laser. Une formation ne peut tirer qu’une fois par tour avec ses Armes guidées, qu&apos;elle ait déjà été activée ou non.  • Toutes les règles relatives au tir comme l’allocation des touches et le feu croisé s’appliquent à partir de la formation d’où partent les armes guidées.  • Lorsqu’elles tirent, les Armes guidées ne nécessitent pas de ligne de vue et ne sont jamais affectés par les modificateurs pour toucher dus à un ordre (+1 de tir soutenu ou -1 d&apos;avance rapide), ou de couverts.  • Cependant, une unité à couvert disposera toujours de sa sauvegarde de couvert, seul le modificateur pour toucher sera ignoré.  • Note: Les unités démoralisées, neutralisées ou ayant effectué un redéploiement ne peuvent pas utiliser leurs armes guidées.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Municiónes Guiadas: Las Municiones Guiadas son armas con un sistema de rastreo, y un calculador de trayectoria. Estas armas son capaces de alcanzar un objetivo fuera de la línea de visión, y lo hacen de forma independiente.   • Una Munición Guiada sólo puede ser usada en una unidad que haya sido marcada con un Marcador Telemétrico. Una formación sólo puede disparar una vez por turno con sus Municiones Guiadas, tanto si ya ha sido activada como si no.  • Todas las reglas de disparo como la asignación de impactos y el Fuego Cruzado se aplican desde la formación de la que parten las Municiones Guiadas.  • Al disparar, las Municiones Guiadas no requieren Línea de Visión y nunca se ven afectadas por los modificadores para golpear debido a una orden (+1 Fuego Sostenido o -1 Doble) o cobertura.  • Sin embargo, una unidad en la cobertura todavía tendrá su cobertura guardada, excepto que el modificador para impactar será ignorado.  • Nota: Las unidades que están Desmoralizadas, Acobardadas o han Marchado no pueden usar sus Municiones Guiadas.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Lenkraketen: Lenkraketen sind Waffen mit einem Verfolgungssystem und einem Flugbahnberechner. Diese Waffen sind in der Lage, ein Ziel außerhalb der Sichtlinie zu erreichen, und zwar unabhängig davon.   • Ein Lenkrate kann nur auf einer Einheit eingesetzt werden, die mit einem Zielmarkern markiert ist. Eine Formation kann mit ihren Lenkraketen nur einmal pro Zug feuern, unabhängig davon, ob sie bereits aktiviert wurde oder nicht.  • Alle Schießregeln wie Trefferzuweisung und Kreuzfeuer gelten ab der Formation, von der die Lenkraketen abgefeuert werden.  • Beim Abfeuern benötigen Lenkraketen keine Sichtlinie und werden niemals von Modifikatoren beeinflusst, die aufgrund eines Befehls (+1 Dauerfeuer oder -1 Double) oder einer Deckung zu treffen sind.  • Eine in Deckung befindliche Einheit hat jedoch weiterhin ihre Deckung gesichert, außer dass der zu treffende Modifikator ignoriert wird.  • Hinweis: Einheiten, die gebrochen oder unterdrückt sind oder marschiert sind, können ihre Lenkraketen nicht einsetzen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2144,6 +2219,16 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
         <modifier type="set" field="description" value="Désignateur Laser: Le Désignateur laser est un dispositif porté par des unités T’au ayant la règle spéciale Désignateur laser (x) notée dans leur profil. Un Désignateur laser possède une portée de 30 cm et est utilisé en même temps que les attaques de tir ou de fusillade, avant que les jets pour toucher ne soient effectués. Une unité neutralisée ne peut pas faire usage de son Désignateur laser.  • Lorsqu’il est utilisé contre une formation ennemie, chaque unité T’au (à portée et en ligne de vue d’unités de cette formation ennemie) possédant cette règle lui inflige un nombre de Marquages de Désignateur laser Désignateur Laser (2) infligera 2 Marquages de Désignateur laser à 30 cm sur une formation ennemie dont des unités sont à portée et en ligne de vue.  • Au cours de son activation, une formation T’au peut utiliser ses Désignateurs laser selon l’action qu’elle effectue:  • 1. Tir: Lors d&apos;un tir et pour chaque Marquage de Désignateur laser infligé par une formation Tau, le joueur Tau peut décider d’appliquer l’un des effets suivants :  • Faire tirer une arme guidée possédée par une unité à portée de tir, depuis n&apos;importe quelle formation n&apos;ayant pas tiré avec ses armes guidées ce tour-ci. Ces tirs d&apos;armes sont considérés comme étant effectués par la formation utilisant ses Désignateurs laser: Ils n&apos;infligent qu&apos;un pion impact à la formation ennemie visée, quel que soit le nombre de formations T’au impliquées.  • OU  • Donner un bonus de +1 au jet pour toucher d’un autre tir de la formation.  • 2. Assaut : Au cours de sa phase d’assaut et pour chaque Marquage de Désignateur laser infligé par sa formation, le joueur T’au peut décider d’appliquer l’effet suivant:  • Donner un bonus de +1 à un jet pour toucher d’une autre attaque de fusillade de la formation.  • Note: Chaque jet pour toucher ne peut bénéficier que d’un seul bonus de +1 au jet pour toucher grâce à un Désignateur laser.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Marcadores Telemétricos: El Marcador Telemétrico es un dispositivo que llevan las unidades T&apos;au con la regla especial del Marcador Telemétrico (x) anotada en su perfil. Un Marcador de Telemetría tiene un alcance de 30 cm y se utiliza en conjunción con ataques de disparos o de combate antes de que se realicen las tiradas para impactar.  Una unidad suprimida no puede hacer uso de su Marcador Telemétrico.  • Cuando se usa contra una formación enemiga, cada unidad T&apos;au (en el rango y línea de visión de las unidades de esa formación enemiga) con esta regla inflige un número de marcas de Marcador Telemétrico. El Marcador Telemétrico (2) infligirá 2 marcas de Marcador Telemétrico a 30 cm. sobre una formación enemiga cuyas unidades estén dentro del alcance y línea de visión.  • Durante su activación, una formación T&apos;au puede usar sus Marcadores Telemétricos según la acción que realice:  • 1. Disparo: Al disparar y por cada marca de Marcador Telemétrico infligido por una formación Tau, el jugador Tau puede decidir aplicar uno de los siguientes efectos:  • Disparar una Munición Guiada, por una unidad que esté al alcance, desde cualquier formación que no haya disparado con sus Municiones Guiadas este turno. Estos disparos se consideran realizados por la formación usando sus Marcadores Telemétricos: Sólo infligen un Marcador de Explosión a la formación enemiga objetivo, independientemente del número de formaciones T&apos;au involucradas.  • O  • Da un bono +1 en el tirar para impactar para otro tiro de la formación.  • 2. Asalto: Durante su fase de asalto y por cada marca de Marcador Telemétrico infligido por su formación, el jugador T&apos;au puede decidir aplicar el siguiente efecto:  • Dar un bono +1 en la tirada para otro ataque de tiroteo desde la formación.  • Nota: Cada tirada al blanco sólo puede beneficiarse de una única bonificación +1 concedida por un Marcador Telemétrico.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Zielmarkern: Das Zielmarkern ist ein Gerät, das von Tau-Einheiten mit der speziellen Regel Zielmarker (x) getragen wird, die in ihrem Profil vermerkt ist. Ein Zielmarker hat eine Reichweite von 30 cm und wird in Verbindung mit Schieß- oder Feuergefechtsangriffen verwendet, bevor Würfe zu einem Treffer ausgeführt werden. Eine unterdrückte Einheit kann ihr Zielmarker nicht benutzen.  • Wenn sie gegen eine gegnerische Formation eingesetzt wird, fügt jede Tau-Einheit (in Reichweite und Sichtlinie der Einheiten dieser gegnerischen Formation) mit dieser Regel eine Reihe von Markierungen zu. Zielmarker (2) fügt einer gegnerischen Formation, deren Einheiten sich in Reichweite und Sichtlinie befinden, 2 Markierungen in einer Entfernung von 30 cm zu.  • Während ihrer Aktivierung kann eine Tau-Formation ihre Zielmarkern je nach der von ihr ausgeführten Aktion einsetzen:  • (1) Schießen:Beim Schießen und für jede von einer Tau-Formation zugefügte Markierung kann sich der Tau-Spieler entscheiden, einen der folgenden Effekte anzuwenden:  • Eine Lenkrakete von einer Einheit in Reichweite abfeuern lassen, und zwar von jeder Formation, die in diesem Zug nicht mit ihren Lenkraketen gefeuert hat. Es wird davon ausgegangen, dass diese Schüsse von der Formation mit ihren Zielmarkern abgefeuert werden: Sie fügen der gegnerischen Formation nur einen Blast-marker zu, unabhängig von der Anzahl der beteiligten Tau-Formationen.  • ODER  • Geben Sie einen Bonus von +1 auf den Wurf-zu-Treffer für einen weiteren Schuss aus der Formation.  • 2. den Angriff: Während seiner Angriffsphase und für jede Markierung, die durch seine Formation zugefügt wird, kann der Tau-Spieler beschließen, den folgenden Effekt anzuwenden:  • Einen Bonus von +1 auf den Wurf-zu-Treffer für einen weiteren Feuergefechtsangriff aus der Formation geben.  • Anmerkung: Jeder Wurf-zu-Treffer kann nur von einem einzelnen +1 Bonus profitieren, der von einem Zielmarkern gewährt wird.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2163,6 +2248,16 @@ Orca: 12 of the following: Fire Warriors, Pathfinders, Stealth Suits, Broadside 
         <modifier type="set" field="description" value="Remora: Le remora ne peut pas cibler d’engins volants avec son designateur laser.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Rémora: No puede apuntar a los volantes con los Marcadores Telemétricos.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Remora: Darf mit seinem Zielmarker nicht auf Flieger zielen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

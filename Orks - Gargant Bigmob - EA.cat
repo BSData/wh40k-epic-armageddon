@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e7e4-8a71-3271-6d6f" name="Orks: Gargant Bigmob" revision="36" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2124,7 +2124,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="4b51-eb10-ab9a-42f0" hidden="false" targetId="7a1d-8588-29ae-b7d2" type="profile"/>
-        <infoLink id="0660-2ec7-dbdc-c1ed" hidden="false" targetId="9641-5d1a-2bc6-d87c" type="rule"/>
+        <infoLink id="0660-2ec7-dbdc-c1ed" name="Grot Pathfinders  • " hidden="false" targetId="9641-5d1a-2bc6-d87c" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -2945,7 +2945,7 @@
         <entryLink id="ad89-f8c3-6409-b07c" hidden="false" collective="false" import="true" targetId="afd6-1f56-e1df-4eb8" type="selectionEntry"/>
         <entryLink id="41ec-bd51-86f9-26fb" name="Extra Power Fields" hidden="false" collective="false" import="true" targetId="def5-6a77-ac51-82c9" type="selectionEntry"/>
         <entryLink id="cca7-7e0e-45fd-1fd2" hidden="false" collective="false" import="true" targetId="b758-e183-37e6-0614" type="selectionEntry"/>
-        <entryLink id="f449-2ae5-27df-96c5" hidden="false" collective="false" import="true" targetId="0487-eb26-9dc1-1c3f" type="selectionEntry"/>
+        <entryLink id="f449-2ae5-27df-96c5" name="Grot Pathfinders" hidden="false" collective="false" import="true" targetId="0487-eb26-9dc1-1c3f" type="selectionEntry"/>
         <entryLink id="8ec9-8f4a-81c6-8e84" hidden="false" collective="false" import="true" targetId="b60e-b764-b37d-88ef" type="selectionEntry"/>
         <entryLink id="0f20-d373-7a6b-a4e0" hidden="false" collective="false" import="true" targetId="65fc-5188-4f58-7ffe" type="selectionEntry"/>
         <entryLink id="383e-f8af-903e-6428" name="Flakk Gunz" hidden="false" collective="false" import="true" targetId="695d-f5c6-cde0-e5b9" type="selectionEntry"/>
@@ -3131,6 +3131,16 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Grot-Hacker: Wiederholungswurf ein Wurf-zu-Treffer pro Runde.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kanijo Hacker: Repetir tirada un tirar para impactar por turno.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Re-roll one roll-to-hit per turn.</description>
     </rule>
@@ -3141,6 +3151,16 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Spähergrot: Alle Megawummen in einer Einheit fügen ihrer Feuerkraft-Charakteristik AA5+ hinzu.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kanijoz Exploradorez: Añade un ataque AA5+ a todos los Kañonez en una unidad.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>Add an AA5+ attack to all Big Gunz in one unit.</description>
     </rule>
@@ -3148,16 +3168,6 @@
       <description>none
 Fanatic #02
 Fanatic #13</description>
-    </rule>
-    <rule id="a852-ab0a-fc5c-c85c" name="*Head of Mork/Gork" hidden="false">
-      <modifiers>
-        <modifier type="set" field="description" value="Tête de Mork/Gork: Toutes les formations non-Gargant moins de 15 cm du Gargant peuvent ajouter le DC du Gargant à la taille de leur formation lors de l&apos;utilisation du &quot;R&apos;mise en Bande&quot; règle spéciale.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>All non-Gargant formations within 15cm of the Gargant may add the DC of the Gargant to their formation size when using the &quot;Mob Rule&quot; special rule.</description>
     </rule>
     <rule id="fb7e-7dcf-821d-1022" name="Kustom Weapons and Upgrades" hidden="true">
       <modifiers>
@@ -3169,6 +3179,16 @@ Fanatic #13</description>
         <modifier type="set" field="description" value="Armes et Ekip&apos;ment Kustom: Chaque unité de Gargant ou Super Krabouillator peut choisir un ensemble d’armes dans les tableaux des Armes Kustom dans le respect des limitations de son profil.  Chaque unité doit posséder une combinaison d’armes distincte des autres unités de sa formation.  • Un ou plusieurs Ekip’ment Kustom peuvent être sélectionnés pour une unité de Gargant ou de Super Krabouillator. Un Ekip’ment Kustom ne peut être pris qu’une seule fois pour chaque unité.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kustom-Waffen und Aufmotzan: Jeder Gargant- oder Supastampfa-Mob kann aus der Kustom Waffen-Tabelle einen Satz Waffen auswählen, der den Beschränkungen seines Profils entspricht. Jede Einheit muss eine andere Waffenkombination haben als andere Einheiten in ihrer Aufstellung.  • Für einen Gargant- oder Supastampfa-Mob können ein oder mehrere Gegenstände der Kustom-Ausrüstung ausgewählt werden. Jedes Teil der Kustom-Ausrüstung darf für jede Einheit nur einmal mitgenommen werden.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Armas Perzonalizadas y Mejoras: Cada Gargante o peña de Zúper Pizoteadores puede elegir un conjunto de armas de la tabla de Armas Perzonalizadas, de acuerdo con las limitaciones de su perfil. Cada unidad debe tener una combinación de armas diferente de las otras unidades en su formación.  • Se pueden seleccionar una o más Mejoras Perzonalizadas para un Gargante o peña de Zúper Pizoteadores. Una Mejora Perzonalizada sólo puede ser tomada una vez por cada unidad.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3185,6 +3205,16 @@ One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Mekboy Big Boss: Die Armee erhält einen kostenlosen Mekboy Big Boss, der zu jeder Gargant oder Größer Gargant in der Armee hinzugefügt werden kann.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kaudillo Mekániko: El ejército recibe un Kaudillo Mekániko gratis que puede añadirse a cualquier Gargante o Gran Gargante del ejército.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3205,7 +3235,7 @@ One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Oddboyz: Rüstet Big Gun zu Soopagun oder Supa-Zzap Gun auf.">
+        <modifier type="set" field="description" value="Oddboyz: Rüstet Megawumme zu Soopagun oder Supa-Zzapwaffe auf.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
@@ -3233,6 +3263,11 @@ One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A
         <modifier type="set" field="description" value="Drängt sie fester, Jungs!: Wenn ein Gargant einen Aktionstest bestanden hat, der eine Bewegung zulässt, kann der Spieler jeder einzelnen Bewegung, die der Gargant als Teil dieser Aktion ausführt, +5 cm hinzufügen, wobei er für jeden hinzugefügten +5 cm einen kritischen Treffer erhält.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="¡Empújenlos Más Fuerte, Muchachoz!: Cuando un Gargante pasa una prueba de acción que permite el movimiento, el jugador puede optar por añadir +5cm a cada movimiento individual que el Gargante haga como parte de esa acción, recibiendo un daño crítico por cada +5cm añadido.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3275,6 +3310,16 @@ One or more Kustom Upgrades can be selected for a Gargant or Super Stompa mob. A
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="description" value="Tella Portaz: Die Tella Porta ermöglicht es, Einheiten in einem Raumschiff direkt auf das Schlachtfeld zu teleportieren. Diese Technologie wird (von den Orks) noch immer schlecht beherrscht, und es gelten verschiedene Regeln:  • Die Tella Porta kann nur verwendet werden, wenn der Orkspieler ein Raumschiff ausgewählt hat.  • Die Tella Porta kann nur auf einem Gargant Mob (jede Art von Gargant) verwendet werden.  • Die Planetfall-Regel wird anstelle der Teleport-Regel verwendet (heimlich gewählte Koordinaten, Aktivierung des Schiffes, Abweichung, usw. ...).  • Bei Ankunft auf dem Schlachtfeld würfeln Sie 1W6 pro DC-Punkt in der Formation. Bei einem Wurf von 1 erhält die Formation einen blast-marker. Zusätzliche Einheiten zählen als mit 1 DC-Punkt.  • Eine Killa-Klasse kann das Äquivalent von 10 DC transportieren. Eine Kampfkreuza kann das Äquivalent von 20 DC transportieren.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Llevalejoz: Los Llevalejoz permiten a las unidades de una nave espacial se teletransporten directamente al campo de batalla. Esta tecnología sigue siendo (para los Orkos) todavía poco dominada y se aplican varias reglas:  • Los Llevalejoz sólo pueden ser utilizados si el jugador Orko ha seleccionado una nave espacial.  • Los Llevalejoz sólo pueden ser usados en un Peña de Gargantes (cualquier tipo de Gargante).  • Se utiliza la regla de Caída Orbital en lugar de la regla del Teletransporte (coordenadas elegidas en secreto, activación de la nave, desviación, etc...).  • Al llegar al campo de batalla, tirar 1D6 por punto de factor de daños (FD) en la formación. En una tirada de 1 la formación recibe un marcador de explosión. Las unidades adicionales cuentan como si tuvieran 1 punto de FD.  • Un Krucero Matamuchoz puede transportar el equivalente a 10 FD. Un Krucero Matamáz puede transportar el equivalente a 20 FD.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <description>The Tellyporta allows units in a spaceship to be teleported directly onto the battlefield. This technology remains (for the Orks) still poorly mastered and several rules apply:
 The Tellyporta can be used only if the Ork player has selected a spacecraft.
@@ -3298,9 +3343,14 @@ A Kill Kroozer can transport the equivalent of 10 DC. A Battle Kroozer can carry
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Jede Gargant Big Mob-Armee muss einen Mekboy Big Boss kostenlos enthalten. Dieser Charakter muss dem teuersten Gargant der Armee hinzugefügt werden.">
+        <modifier type="set" field="description" value="Mekboy Big Boss: Jede Gargant Big Mob-Armee muss einen Mekboy Big Boss kostenlos enthalten. Dieser Charakter muss dem teuersten Gargant der Armee hinzugefügt werden.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kaudillo Mekániko: Cada ejército de la Gran Peña de Gargantes debe incluir un Kaudillo Mekániko gratis. Este personaje debe ser añadido al Gargante más caro del ejército.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3346,6 +3396,11 @@ A Kill Kroozer can transport the equivalent of 10 DC. A Battle Kroozer can carry
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="¡Estamos Muy Duros!: Para los propósitos de &quot;Cuanto Más Mejor&quot;, los Gargantes cuentan como 12 unidades y los Zúper Pizoteadores cuentan como 6 unidades.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
