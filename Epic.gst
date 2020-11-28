@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="36" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8f10-ee06-8dc1-beb6" name="Epic Armageddon" revision="37" battleScribeVersion="2.03" authorName="" authorContact="" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Our Repo describes over 333 factions, forces, chapters &amp; regiments (from the 400-plus currently available) as well as incorporating supplementary features like Riot or Minigeddon.
 
 Groups
@@ -2438,7 +2438,7 @@ If the test is passed then all three formations may take an engage action. Treat
     </rule>
     <rule id="8375-0b22-f332-1964" name="Critical Hit: Reactor Breach" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Le Réacteur se Fissure: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le unité explose et inflige une touche sur un 4+ aux unités à 5cm  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
+        <modifier type="set" field="description" value="Touche Critique: Le Réacteur se Fissure: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le unité explose et inflige une touche sur un 4+ aux unités à 5cm  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -2461,7 +2461,7 @@ If the test is passed then all three formations may take an engage action. Treat
     </rule>
     <rule id="b948-d82e-c6c7-83f3" name="Critical Hit: Reactor Cracked" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Le Réacteur se Fissure: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le réacteur explose, détruisant l’engin de guerre  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
+        <modifier type="set" field="description" value="Touche Critique: Le Réacteur se Fissure: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le réacteur explose, détruisant l’engin de guerre  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -2495,7 +2495,7 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 5+ (Rea
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Le Réacteur se Fissure: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le unité explose et inflige une touche sur un 5+ (Reaver, Ravager) ou 4+ (Warlord, Banelord) aux unités à 5cm  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
+        <modifier type="set" field="description" value="Touche Critique: Le Réacteur se Fissure: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le unité explose et inflige une touche sur un 5+ (Reaver, Ravager) ou 4+ (Warlord, Banelord) aux unités à 5cm  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -5120,7 +5120,7 @@ netea-tournament-pack-2017-03-21</description>
     </rule>
     <rule id="2be8-1e54-668e-4f6d" name="Critical Hit: Reactor Crack" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Fissure au Réacteur: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le réacteur explose, détruisant l’engin de guerre  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
+        <modifier type="set" field="description" value="Touche Critique: Fissure au Réacteur: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le réacteur explose, détruisant l’engin de guerre  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -5148,7 +5148,7 @@ netea-tournament-pack-2017-03-21</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Daño Crítico: Puede no Moverse: La unidad queda inmovilizada. Otro daño crítico la destruirá.">
+        <modifier type="set" field="description" value="Daño Crítico: Puede no Moverse: La unidad queda inmovilizada. Subsiguientes daños críticos producirán 1 punto de daño adicional.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
@@ -6546,6 +6546,26 @@ The number of Rhinos will always be equal to the minimum necessary to carry the 
 However, taking Rhinos is not compulsory if you don&apos;t want to. If you have purchased vehicles with a transport capacity for the formation (such as Land Raiders), they are considered to be transporting at their maximum capacity and you are then entitled to enough Rhinos to carry what&apos;s left (even if a Rhino is only at half of its transport capacity).
 In addition, you can choose to replace all Rhinos in the formation with a Dreadnought OR Drop Pods.
 If you choose Drop Pods, the formation will come into play using the Planetary Assault rules. A Strike Cruiser or Battle Barge will be required to deploy the Drop Pods.</description>
+    </rule>
+    <rule id="2983-b610-6b70-aa0f" name="Demolition Vehicle" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Véhicule de Démolition: Le socle est enlevé du jeu une fois qu&apos;il a détonné.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Sprengfahrzeug: Das Modell wird aus dem Spiel entfernt, sobald es explodiert.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Vehículo de Demolición: El modelo se retira del juego una vez que se detona.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Removed from play after it attacks.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
