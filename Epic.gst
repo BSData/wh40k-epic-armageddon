@@ -6567,6 +6567,26 @@ If you choose Drop Pods, the formation will come into play using the Planetary A
       </modifiers>
       <description>Removed from play after it attacks.</description>
     </rule>
+    <rule id="a8e1-f35d-6328-9908" name="Plague Towers (Upgrade)" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Tours de la Peste (Amélioration): La sélection des Tours de la Peste comme une amélioration utilise un emplacement de Formation de Soutien.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Seuchenfestungen (Aufrüstung): Die Auswahl von Seuchenfestungen als Aufrüstung verwendet einen Unterstützungsformations-Slot.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Torres de Plaga (Mejora): Al seleccionar Plague Towers como una mejora, se utiliza un espacio para Formaciones de Apoyo.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Selecting Plague Towers as an upgrade uses a Support Formation slot.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="e8b5-9aad-77fd-8ee7" name="Command Bunker" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
