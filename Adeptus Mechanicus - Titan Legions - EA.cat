@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c778-0b85-617e-8acb" name="Adeptus Mechanicus: Titan Legions" revision="42" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c778-0b85-617e-8acb" name="Adeptus Mechanicus: Titan Legions" revision="43" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -294,7 +294,7 @@
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
       </constraints>
       <infoLinks>
-        <infoLink id="6b48-e2df-b9d6-ccf3" hidden="false" targetId="1378-3416-3134-58ee" type="profile">
+        <infoLink id="6b48-e2df-b9d6-ccf3" name="Divisio Telepathica Psi-Titan" hidden="false" targetId="1378-3416-3134-58ee" type="profile">
           <modifiers>
             <modifier type="append" field="1160-63e7-57ca-722d" value="Turbo Laser Destructor&lt;BR&gt;">
               <repeats>
@@ -1743,11 +1743,20 @@
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="21f2-6345-fc68-b603" hidden="false" collective="false" import="true" targetId="aaee-be16-b440-d800" type="selectionEntry"/>
+                <entryLink id="21f2-6345-fc68-b603" name="Carapace Landing Platform" hidden="false" collective="false" import="true" targetId="aaee-be16-b440-d800" type="selectionEntry"/>
                 <entryLink id="2203-45bb-bcff-150e" hidden="false" collective="false" import="true" targetId="dad4-e6bf-d6c3-5954" type="selectionEntry"/>
-                <entryLink id="4815-94af-a6e3-99f6" hidden="false" collective="false" import="true" targetId="24fa-e273-9437-a0d5" type="selectionEntry"/>
+                <entryLink id="4815-94af-a6e3-99f6" name="Sacred Icon on Carapace" hidden="false" collective="false" import="true" targetId="24fa-e273-9437-a0d5" type="selectionEntry"/>
                 <entryLink id="f8f2-735c-018d-fab9" hidden="false" collective="false" import="true" targetId="2615-0974-ad93-a2eb" type="selectionEntry"/>
-                <entryLink id="dfbd-9708-2ecb-1c35" hidden="false" collective="false" import="true" targetId="5f28-7ed6-22fa-e196" type="selectionEntry"/>
+                <entryLink id="dfbd-9708-2ecb-1c35" name="Fire Control Centre" hidden="false" collective="false" import="true" targetId="5f28-7ed6-22fa-e196" type="selectionEntry"/>
+                <entryLink id="23b7-428b-00ab-5f5e" name="Multiple Rocket Launcher" hidden="false" collective="false" import="true" targetId="2012-ea97-3e39-632a" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -1761,7 +1770,7 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="4e1c-f7fb-b280-d536" hidden="false" collective="false" import="true" targetId="9f9a-0866-3056-30bc" type="selectionEntryGroup"/>
+            <entryLink id="4e1c-f7fb-b280-d536" name="Arm" hidden="false" collective="false" import="true" targetId="9f9a-0866-3056-30bc" type="selectionEntryGroup"/>
             <entryLink id="643f-314b-2153-2b6e" name="Support Weapons" hidden="false" collective="false" import="true" targetId="6faf-a2a2-6a5d-add6" type="selectionEntryGroup">
               <modifiers>
                 <modifier type="set" field="maxSelections" value="0.0">
@@ -1786,7 +1795,7 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="9d56-731b-8261-c60a" hidden="false" collective="false" import="true" targetId="13e3-6a2e-dd23-7ab1" type="selectionEntry"/>
+            <entryLink id="9d56-731b-8261-c60a" name="Apocalypse Missile Launcher" hidden="false" collective="false" import="true" targetId="13e3-6a2e-dd23-7ab1" type="selectionEntry"/>
             <entryLink id="12f5-9f4f-4126-3049" hidden="false" collective="false" import="true" targetId="b736-50c4-3a32-da81" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
@@ -1876,9 +1885,14 @@
             <entryLink id="38ef-aef2-e2b6-6f36" name="Gatling Blaster" hidden="false" collective="false" import="true" targetId="6082-4466-3998-fb59" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -1914,6 +1928,24 @@
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="f34e-8115-5d4e-44d2" name="Vulcan Mega-bolter" hidden="false" collective="false" import="true" targetId="2ec9-4f96-b122-b6b5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="b874-4425-ce8c-7242" name="Turbo-Laser Destructor" hidden="false" collective="false" import="true" targetId="4f6e-e34f-9154-79c6" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2065,6 +2097,7 @@
         <entryLink id="7f71-2a89-fc1b-dc8c" hidden="false" collective="false" import="true" targetId="3506-0c8c-4b47-2323" type="selectionEntry"/>
         <entryLink id="3f4d-7189-0120-ee06" hidden="false" collective="false" import="true" targetId="b655-6bfe-7439-2874" type="selectionEntry"/>
         <entryLink id="af67-6a13-f6fc-693a" hidden="false" collective="false" import="true" targetId="629c-5871-d077-1343" type="selectionEntry"/>
+        <entryLink id="d4d3-4232-2529-7e6f" name="Enhanced Auspex" hidden="false" collective="false" import="true" targetId="812b-1645-0120-56ec" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="650.0"/>
@@ -2426,6 +2459,16 @@
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c843-4145-c426-86aa" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Ursus Claw&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="4100-5bf4-2ef3-90ce" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a6e-f366-5cef-d003" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Natrix Shock Lance&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="4100-5bf4-2ef3-90ce" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea77-e8a8-fd14-6afc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink id="57d0-06d9-9f86-71e7" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
@@ -2518,8 +2561,8 @@
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
       </constraints>
       <entryLinks>
-        <entryLink id="0297-64e5-306c-e27c" hidden="false" collective="false" import="true" targetId="07d1-dab4-b612-8615" type="selectionEntry"/>
-        <entryLink id="d407-ab95-b947-f9af" hidden="false" collective="false" import="true" targetId="6349-9e90-d4ee-6861" type="selectionEntry"/>
+        <entryLink id="0297-64e5-306c-e27c" name="Warhound Scout Titan" hidden="false" collective="false" import="true" targetId="07d1-dab4-b612-8615" type="selectionEntry"/>
+        <entryLink id="d407-ab95-b947-f9af" name="Veteran Princeps" hidden="false" collective="false" import="true" targetId="6349-9e90-d4ee-6861" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="550.0"/>
@@ -2551,8 +2594,8 @@
         <categoryLink id="6755-cfcc-630b-5b62-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="20d6-64a4-3041-b67d" hidden="false" collective="false" import="true" targetId="07d1-dab4-b612-8615" type="selectionEntry"/>
-        <entryLink id="aea3-3c1d-6da4-514a" hidden="false" collective="false" import="true" targetId="6349-9e90-d4ee-6861" type="selectionEntry"/>
+        <entryLink id="20d6-64a4-3041-b67d" name="Warhound Scout Titan" hidden="false" collective="false" import="true" targetId="07d1-dab4-b612-8615" type="selectionEntry"/>
+        <entryLink id="aea3-3c1d-6da4-514a" name="Veteran Princeps" hidden="false" collective="false" import="true" targetId="6349-9e90-d4ee-6861" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="500.0"/>
@@ -2610,7 +2653,7 @@
     </selectionEntry>
     <selectionEntry id="ece065c8-b1c1-7fe2-5acb-be515ad4d127" name="Warlord Battle Titan" page="0" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="points" value="725">
+        <modifier type="set" field="points" value="725.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -2659,7 +2702,7 @@
             </modifier>
             <modifier type="append" field="1160-63e7-57ca-722d" value="Lasburner&lt;BR&gt;">
               <repeats>
-                <repeat field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aaee-be16-b440-d800" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c32-5eff-9bfc-e7e6" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="append" field="1160-63e7-57ca-722d" value="Inferno Gun&lt;BR&gt;">
@@ -2917,6 +2960,31 @@
                 <repeat field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef75-e8eb-e78a-8f27" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Gatling Blaster&lt;BR&gt;Gatling Blaster&lt;BR&gt;">
+              <conditions>
+                <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd21-f0b6-ed86-08e9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Vulcan Mega Bolter&lt;BR&gt;Vulcan Mega Bolter&lt;BR&gt;">
+              <conditions>
+                <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa12-133f-86f9-3f4d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Turbo Laser Destructor&lt;BR&gt;Turbo Laser Destructor&lt;BR&gt;">
+              <conditions>
+                <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ecf-8ba5-87aa-5b63" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Multiple Rocket Launcher&lt;BR&gt;Multiple Rocket Launcher&lt;BR&gt;">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da67-7885-8663-1001" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Arioch Power Claw&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="64d2-7456-7961-5c25" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink id="8018-9ec3-042b-d208" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
@@ -2932,14 +3000,24 @@
         <selectionEntryGroup id="92f0-7ffe-4012-fcda" name="Weapons" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="decrement" field="maxSelections" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb6b-b0b6-1ffb-c8fe" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb6b-b0b6-1ffb-c8fe" type="equalTo"/>
+                    <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4138-25ff-2121-dac5" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="decrement" field="minSelections" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb6b-b0b6-1ffb-c8fe" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb6b-b0b6-1ffb-c8fe" type="equalTo"/>
+                    <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4138-25ff-2121-dac5" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="decrement" field="minSelections" value="1.0">
               <conditionGroups>
@@ -2990,9 +3068,14 @@
             <selectionEntryGroup id="12cd-2ea9-db9a-5a60" name="Carapace" hidden="false" collective="false" import="true">
               <modifiers>
                 <modifier type="set" field="maxSelections" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb6b-b0b6-1ffb-c8fe" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb6b-b0b6-1ffb-c8fe" type="equalTo"/>
+                        <condition field="selections" scope="ece065c8-b1c1-7fe2-5acb-be515ad4d127" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4138-25ff-2121-dac5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -3061,9 +3144,9 @@
                         </modifier>
                       </modifiers>
                     </entryLink>
-                    <entryLink id="e22f-f565-4bf9-04c6" hidden="false" collective="false" import="true" targetId="9c5b-8bb0-ed3a-92d7" type="selectionEntry"/>
+                    <entryLink id="e22f-f565-4bf9-04c6" name="Warp Missile" hidden="false" collective="false" import="true" targetId="9c5b-8bb0-ed3a-92d7" type="selectionEntry"/>
                     <entryLink id="7034-06d3-2314-3a6c" hidden="false" collective="false" import="true" targetId="8447-c66d-1ee0-a0c5" type="selectionEntry"/>
-                    <entryLink id="f901-acf2-4384-7307" hidden="false" collective="false" import="true" targetId="0e13-1e9d-6960-6b42" type="selectionEntry">
+                    <entryLink id="f901-acf2-4384-7307" name="Harpoon Missile" hidden="false" collective="false" import="true" targetId="0e13-1e9d-6960-6b42" type="selectionEntry">
                       <modifiers>
                         <modifier type="set" field="hidden" value="true">
                           <conditions>
@@ -3074,23 +3157,51 @@
                     </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
+                <selectionEntryGroup id="4138-25ff-2121-dac5" name="Carapace Paired Weapons" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4362-8084-6be5-7d8d" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="6d74-a582-0547-a41c" name="2x Gatling Blaster" hidden="false" collective="false" import="true" targetId="bd21-f0b6-ed86-08e9" type="selectionEntry"/>
+                    <entryLink id="47fe-08ec-bd46-9bd1" name="2x Multiple Rocket Launcher" hidden="false" collective="false" import="true" targetId="da67-7885-8663-1001" type="selectionEntry"/>
+                    <entryLink id="6f19-dc57-8004-bbe0" name="2x Turbo-Laser Destructor" hidden="false" collective="false" import="true" targetId="0ecf-8ba5-87aa-5b63" type="selectionEntry"/>
+                    <entryLink id="a648-bdac-57ef-0c23" name="2x Vulcan Mega-bolter" hidden="false" collective="false" import="true" targetId="aa12-133f-86f9-3f4d" type="selectionEntry"/>
+                  </entryLinks>
+                </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink id="b906-56e9-c41e-d85f" name="Carapace Landing Platform" hidden="false" collective="false" import="true" targetId="aaee-be16-b440-d800" type="selectionEntry"/>
                 <entryLink id="83d6-3c17-5a30-2fc4" hidden="false" collective="false" import="true" targetId="dad4-e6bf-d6c3-5954" type="selectionEntry"/>
                 <entryLink id="1d49-0ea4-6b27-3a56" hidden="false" collective="false" import="true" targetId="24fa-e273-9437-a0d5" type="selectionEntry"/>
-                <entryLink id="a290-ae0f-81b2-2978" hidden="false" collective="false" import="true" targetId="eb6b-b0b6-1ffb-c8fe" type="selectionEntry"/>
+                <entryLink id="a290-ae0f-81b2-2978" name="Devotional Bell on Carapace" hidden="false" collective="false" import="true" targetId="eb6b-b0b6-1ffb-c8fe" type="selectionEntry"/>
                 <entryLink id="127d-67f7-5631-9fe2" hidden="false" collective="false" import="true" targetId="2615-0974-ad93-a2eb" type="selectionEntry">
                   <modifiers>
                     <modifier type="set" field="maxSelections" value="2.0"/>
                   </modifiers>
                 </entryLink>
-                <entryLink id="6707-6732-3b38-8dc6" hidden="false" collective="false" import="true" targetId="5f28-7ed6-22fa-e196" type="selectionEntry"/>
+                <entryLink id="6707-6732-3b38-8dc6" name="Fire Control Centre" hidden="false" collective="false" import="true" targetId="5f28-7ed6-22fa-e196" type="selectionEntry"/>
+                <entryLink id="e0e8-382b-7a07-e896" name="Multiple Rocket Launcher" hidden="false" collective="false" import="true" targetId="2012-ea97-3e39-632a" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" field="e3c5-8384-af4e-f0ed" value="-1.0"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="215e-9a1b-ffd1-ca2d" hidden="false" collective="false" import="true" targetId="1c32-5eff-9bfc-e7e6" type="selectionEntry">
+            <entryLink id="215e-9a1b-ffd1-ca2d" name="Lasburner" hidden="false" collective="false" import="true" targetId="1c32-5eff-9bfc-e7e6" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
@@ -3113,7 +3224,7 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="8916-4b73-43dd-4c63" hidden="false" collective="false" import="true" targetId="9f9a-0866-3056-30bc" type="selectionEntryGroup"/>
+            <entryLink id="8916-4b73-43dd-4c63" name="Arm" hidden="false" collective="false" import="true" targetId="9f9a-0866-3056-30bc" type="selectionEntryGroup"/>
             <entryLink id="a9d1-e775-765d-2650" name="Support Weapons" hidden="false" collective="false" import="true" targetId="6faf-a2a2-6a5d-add6" type="selectionEntryGroup">
               <modifiers>
                 <modifier type="set" field="maxSelections" value="1.0">
@@ -3139,7 +3250,7 @@
               </modifiers>
             </entryLink>
             <entryLink id="cc13-6f1b-7aae-c3af" hidden="false" collective="false" import="true" targetId="13e3-6a2e-dd23-7ab1" type="selectionEntry"/>
-            <entryLink id="c75f-2516-5065-0bd8" hidden="false" collective="false" import="true" targetId="b736-50c4-3a32-da81" type="selectionEntry">
+            <entryLink id="c75f-2516-5065-0bd8" name="Laser Blaster" hidden="false" collective="false" import="true" targetId="b736-50c4-3a32-da81" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -3166,7 +3277,7 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="c2c2-49bf-12ad-23ba" hidden="false" collective="false" import="true" targetId="c1d9-1be7-c8e5-9731" type="selectionEntryGroup">
+            <entryLink id="c2c2-49bf-12ad-23ba" name="Tactical Weapons" hidden="false" collective="false" import="true" targetId="c1d9-1be7-c8e5-9731" type="selectionEntryGroup">
               <modifiers>
                 <modifier type="set" field="minSelections" value="1.0">
                   <conditionGroups>
@@ -3224,9 +3335,14 @@
             <entryLink id="a40d-4b01-c8c3-e0b9" name="Gatling Blaster" hidden="false" collective="false" import="true" targetId="6082-4466-3998-fb59" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -3248,11 +3364,29 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="4c51-355f-2f29-73fb" hidden="false" collective="false" import="true" targetId="0e13-1e9d-6960-6b42" type="selectionEntry">
+            <entryLink id="4c51-355f-2f29-73fb" name="Harpoon Missile" hidden="false" collective="false" import="true" targetId="0e13-1e9d-6960-6b42" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="91b6-ca17-fb2a-b3e0" name="Vulcan Mega-bolter" hidden="false" collective="false" import="true" targetId="2ec9-4f96-b122-b6b5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="cc7b-df8b-bb16-48e4" name="Turbo-Laser Destructor" hidden="false" collective="false" import="true" targetId="4f6e-e34f-9154-79c6" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -3306,8 +3440,16 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a56c-81d1-c2f8-83c7" hidden="false" collective="false" import="true" targetId="6c7a-acbc-d2bf-c06f" type="selectionEntry"/>
-        <entryLink id="3c19-4a7c-1c4d-eef5" hidden="false" collective="false" import="true" targetId="6349-9e90-d4ee-6861" type="selectionEntry"/>
-        <entryLink id="fb06-72cb-338f-5b9d" hidden="false" collective="false" import="true" targetId="f060-0e33-010c-226a" type="selectionEntry"/>
+        <entryLink id="3c19-4a7c-1c4d-eef5" name="Veteran Princeps" hidden="false" collective="false" import="true" targetId="6349-9e90-d4ee-6861" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="points" value="25.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="fb06-72cb-338f-5b9d" name="Carapace Multilasers" hidden="false" collective="false" import="true" targetId="f060-0e33-010c-226a" type="selectionEntry"/>
         <entryLink id="0e9b-a937-57f7-4d04" hidden="false" collective="false" import="true" targetId="7c80-977d-45a5-9f1c" type="selectionEntry"/>
         <entryLink id="dde7-f86d-047b-d61c" hidden="false" collective="false" import="true" targetId="3198-9121-45be-735e" type="selectionEntry">
           <modifiers>
@@ -3318,7 +3460,7 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="a8d0-625d-16e9-2fde" hidden="false" collective="false" import="true" targetId="7d58-f865-5b01-fae6" type="selectionEntry">
+        <entryLink id="a8d0-625d-16e9-2fde" name="Surcharge" hidden="false" collective="false" import="true" targetId="7d58-f865-5b01-fae6" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="minSelections" value="1.0">
               <conditionGroups>
@@ -3390,7 +3532,8 @@
         <entryLink id="51c2-63df-b4ca-2a80" hidden="false" collective="false" import="true" targetId="c843-4145-c426-86aa" type="selectionEntry"/>
         <entryLink id="fcd0-d41d-7bdf-e644" name="Fire Control Centre" hidden="false" collective="false" import="true" targetId="3506-0c8c-4b47-2323" type="selectionEntry"/>
         <entryLink id="19bb-65a5-e3cf-177c" hidden="false" collective="false" import="true" targetId="b655-6bfe-7439-2874" type="selectionEntry"/>
-        <entryLink id="a6d9-3f81-1e0a-6588" hidden="false" collective="false" import="true" targetId="629c-5871-d077-1343" type="selectionEntry"/>
+        <entryLink id="a6d9-3f81-1e0a-6588" name="Rubble Claws" hidden="false" collective="false" import="true" targetId="629c-5871-d077-1343" type="selectionEntry"/>
+        <entryLink id="e4b6-7e9c-abc4-a972" name="Enhanced Auspex" hidden="false" collective="false" import="true" targetId="812b-1645-0120-56ec" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="850.0"/>
@@ -3482,7 +3625,7 @@
         <infoLink id="b9d0-c64d-9c95-0cf2" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="573f-c383-07b5-b62c" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
         <infoLink id="4b1f-697e-8bd7-23e5" name="Walker (Titan)" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
-        <infoLink id="7037-ff43-bc00-59eb" hidden="false" targetId="8375-0b22-f332-1964" type="rule"/>
+        <infoLink id="7037-ff43-bc00-59eb" name="Critical Hit: Reactor Breach" hidden="false" targetId="2e50-2dce-5d09-38ce" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="aed5-066c-9149-1bae" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="true"/>
@@ -3577,7 +3720,7 @@
         <infoLink id="d977-bc5a-d8d4-5ba7" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="9176-0a29-8c33-84d6" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
         <infoLink id="0d37-4744-1ebd-a171" name="Walker (Titan)" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
-        <infoLink id="5952-260c-9e14-f8d5" hidden="false" targetId="8375-0b22-f332-1964" type="rule"/>
+        <infoLink id="5952-260c-9e14-f8d5" name="Critical Hit: Reactor Breach" hidden="false" targetId="2e50-2dce-5d09-38ce" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b271-89fa-94ad-9a35" name="One Third - 33% - 1 per Formation" hidden="false" targetId="a09c-fd85-bc16-e6cc" primary="true"/>
@@ -3656,6 +3799,112 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="1250.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c471-c34b-6f31-8a1c" name="Warbringer Nemesis Titan" page="0" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="c79d-1161-d4c5-0cde" name="Warbringer Nemesis Titan" hidden="false" targetId="a96f-2dfe-a59b-a0e4" type="profile">
+          <modifiers>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Turbo Laser Destructor&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="c471-c34b-6f31-8a1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f6e-e34f-9154-79c6" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Titan Melta Cannon&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="c471-c34b-6f31-8a1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d17b-d9ed-4aae-5339" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Gatling Blaster&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="c471-c34b-6f31-8a1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6082-4466-3998-fb59" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Volcano Cannon&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="c471-c34b-6f31-8a1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3bd7-2380-5b33-d2fb" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="8b92-e22b-2f5d-7eef" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+        <infoLink id="012b-a0d3-f780-8fb4" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="e721-6794-6f33-21cd" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
+        <infoLink id="86fb-0eac-bf37-bb30" name="Walker (Titan)" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
+        <infoLink id="a025-c55e-8850-7f2f" name="Critical Hit: Reactor Breach" hidden="false" targetId="8375-0b22-f332-1964" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d643-c847-e202-b961" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b9cd-17e6-691e-e604" name="Anvillus-pattern Defence Battery" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="33c5-fa9f-97bb-4cf0" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="de31-4286-bfc1-dbc6" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="191d-007f-20f5-82d2" name="Anvillus-pattern Defence Battery" hidden="false" targetId="6b83-43c4-ea46-0261" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="967a-46f4-3273-3f5c" name="Nemesis Quake Canon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6cfe-fff6-5e6c-3931" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a03e-02fe-a6fa-e5a0" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="c11d-73a2-3ae1-9d51" name="Nemesis Quake Cannon" hidden="false" targetId="7474-3fd4-06f8-bd83" type="profile"/>
+            <infoLink id="88b7-fe9e-e363-e606" name="Indirect Fire" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
+            <infoLink id="3cde-b7e6-6e31-fe17" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="307f-7c24-60b1-e115" name="5x Void Shields" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c4e7-73d7-dab0-e45b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2d93-7f29-8966-3c7b" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0626-2ef3-0de2-23d8" name="Void Shields" hidden="false" targetId="3d96-4de0-7961-e199" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b4cc-ebf7-994f-e536" name="Arms" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e0c6-9a84-9da5-5e90" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="beb2-c852-083e-b762" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b6c6-cc44-511a-c29f" name="Gatling Blaster" hidden="false" collective="false" import="true" targetId="6082-4466-3998-fb59" type="selectionEntry"/>
+            <entryLink id="084f-6766-ea7b-5449" name="Turbo-Laser Destructor" hidden="false" collective="false" import="true" targetId="4f6e-e34f-9154-79c6" type="selectionEntry"/>
+            <entryLink id="8616-1377-80ed-5d75" name="Titan Melta Cannon" hidden="false" collective="false" import="true" targetId="d17b-d9ed-4aae-5339" type="selectionEntry"/>
+            <entryLink id="c4ee-79a5-6212-8313" name="Volcano Cannon" hidden="false" collective="false" import="true" targetId="3bd7-2380-5b33-d2fb" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="c318-9be2-242a-5c60" name="Legate" hidden="false" collective="false" import="true" targetId="6c7a-acbc-d2bf-c06f" type="selectionEntry"/>
+        <entryLink id="c159-4d01-a2d2-2f66" name="Veteran Princeps" hidden="false" collective="false" import="true" targetId="6349-9e90-d4ee-6861" type="selectionEntry"/>
+        <entryLink id="3e34-4194-7bf4-b58d" name="Enhanced Auspex" hidden="false" collective="false" import="true" targetId="812b-1645-0120-56ec" type="selectionEntry"/>
+        <entryLink id="cca3-4663-1d32-407d" hidden="false" collective="false" import="true" targetId="3198-9121-45be-735e" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="700.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3798,7 +4047,15 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="2be9-07da-11cc-34d9" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2be9-07da-11cc-34d9" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="b5ff-cb71-5001-a53f" hidden="false" targetId="3436-3207-e1f2-431e" type="profile"/>
         <infoLink id="0819-aae7-00e9-1f0a" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
@@ -3842,11 +4099,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="aaee-be16-b440-d800" name="Carapace Landing Platform" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="42a3-bbe0-f400-744c" hidden="false" targetId="5eaa-eab0-82a4-28bb" type="profile"/>
+        <infoLink id="42a3-bbe0-f400-744c" name="Carapace Landing Platform" hidden="false" targetId="5eaa-eab0-82a4-28bb" type="profile"/>
         <infoLink id="d7e2-0e84-4cc5-c7c2" name="Indirect Fire" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -3856,7 +4120,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="8c0f-5294-775b-6079" hidden="false" targetId="7f94-fe78-fa01-6f0b" type="rule">
+        <infoLink id="8c0f-5294-775b-6079" name="Carapace Landing Pad" hidden="false" targetId="7f94-fe78-fa01-6f0b" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -3990,9 +4254,21 @@
     <selectionEntry id="416a-9c54-b9e0-2df2" name="Corvus Assault Pod" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d0e275c-b822-7118-599b-eb1438150ffa" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
@@ -4053,7 +4329,15 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="c716-6bb1-2679-a95d" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c716-6bb1-2679-a95d" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="2cdb-0037-3dbd-eebc" hidden="false" targetId="5f59-2b5a-42b5-ff25" type="profile"/>
         <infoLink id="bfb6-1af5-74ee-07d8" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
@@ -4473,7 +4757,7 @@
     </selectionEntry>
     <selectionEntry id="c50b-edec-da7d-1c35" name="Light Rocket Launcher" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="f139-c07c-d315-f55b" hidden="false" targetId="1def-1ade-1d34-ca49" type="profile"/>
+        <infoLink id="f139-c07c-d315-f55b" name="Light Rocket Launcher" hidden="false" targetId="1def-1ade-1d34-ca49" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -4496,7 +4780,7 @@
     </selectionEntry>
     <selectionEntry id="b0d7-d2f0-da55-70e0" name="Light Vulcan Mega-bolter" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="4bc3-4e32-2322-7a11" hidden="false" targetId="0ee5-1b54-f05c-f5db" type="profile"/>
+        <infoLink id="4bc3-4e32-2322-7a11" name="Light Vulcan Mega-bolter" hidden="false" targetId="0ee5-1b54-f05c-f5db" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -4510,8 +4794,11 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e3c5-8384-af4e-f0ed" type="max"/>
+      </constraints>
       <infoLinks>
-        <infoLink id="5b00-2ed6-a17b-ff24" hidden="false" targetId="efd5-de7c-93ab-2af2" type="profile"/>
+        <infoLink id="5b00-2ed6-a17b-ff24" name="Multiple Rocket Launcher" hidden="false" targetId="efd5-de7c-93ab-2af2" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -4744,7 +5031,7 @@
         <infoLink id="6582-fbc8-0efa-3342" hidden="false" targetId="3436-3207-e1f2-431e" type="profile"/>
         <infoLink id="16bf-cee9-47f7-4390" hidden="false" targetId="0978-014a-9c52-c578" type="rule"/>
         <infoLink id="18b2-183e-21e6-cdf7" hidden="false" targetId="5f59-2b5a-42b5-ff25" type="profile"/>
-        <infoLink id="3efa-e0c5-a352-4fdc" hidden="false" targetId="263a-d87f-902a-a07a" type="profile"/>
+        <infoLink id="3efa-e0c5-a352-4fdc" name="Warp Missile" hidden="false" targetId="263a-d87f-902a-a07a" type="profile"/>
         <infoLink id="c4c2-7f0c-77c5-a407" hidden="false" targetId="b17c-8510-f6fc-c638" type="profile"/>
       </infoLinks>
       <costs>
@@ -4917,7 +5204,7 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="8ea1-5de2-6163-f254" hidden="false" targetId="4fff-4742-15ea-46ef" type="profile"/>
+        <infoLink id="8ea1-5de2-6163-f254" name="Trident" hidden="false" targetId="4fff-4742-15ea-46ef" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -5019,37 +5306,37 @@
     <selectionEntry id="2b65-11c8-e279-a913" name="Vortex Missile" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="points" value="75.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="points" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="7e70-4fb7-7a7e-c029" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7e70-4fb7-7a7e-c029" type="max"/>
+      </constraints>
       <infoLinks>
-        <infoLink id="565d-1b5e-36b3-9cfb" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="565d-1b5e-36b3-9cfb" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
         <infoLink id="f2b3-8d1e-9f1e-048a" hidden="false" targetId="257d-b3d4-07e2-322e" type="profile"/>
         <infoLink id="17a9-3918-559a-5036" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
         <infoLink id="36f3-0049-1566-d745" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2ec9-4f96-b122-b6b5" name="Vulcan Mega-bolter" hidden="false" collective="false" import="true" type="upgrade">
@@ -5130,6 +5417,16 @@
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c843-4145-c426-86aa" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Natrix Shock Lance&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="07d1-dab4-b612-8615" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea77-e8a8-fd14-6afc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="append" field="1160-63e7-57ca-722d" value="Ursus Claw&lt;BR&gt;">
+              <repeats>
+                <repeat field="selections" scope="07d1-dab4-b612-8615" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a6e-f366-5cef-d003" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink id="170c-3d68-683e-8b17" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
@@ -5153,7 +5450,7 @@
         <infoLink id="8933-d209-1b63-236b" name="Critical Hit: Reactor Damage" hidden="false" targetId="0227-88c5-529a-987e" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink id="822b-8ab1-f3be-d5a1" hidden="false" collective="false" import="true" targetId="4a78-cfab-c78d-f40e" type="selectionEntryGroup"/>
+        <entryLink id="822b-8ab1-f3be-d5a1" name="Scout Weapons" hidden="false" collective="false" import="true" targetId="4a78-cfab-c78d-f40e" type="selectionEntryGroup"/>
         <entryLink id="c7a9-02f0-f1ff-f2a3" hidden="false" collective="false" import="true" targetId="fb2d-6e5b-e818-d5da" type="selectionEntry"/>
         <entryLink id="a019-4a83-8c10-e079" hidden="false" collective="false" import="true" targetId="c843-4145-c426-86aa" type="selectionEntry"/>
         <entryLink id="c445-2682-b69a-eaba" hidden="false" collective="false" import="true" targetId="3506-0c8c-4b47-2323" type="selectionEntry"/>
@@ -5169,7 +5466,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="db26-b320-2a49-d46a" hidden="false" targetId="89db-9938-0c45-f530" type="profile">
+        <infoLink id="db26-b320-2a49-d46a" name="Warmonger Class Titan" hidden="false" targetId="89db-9938-0c45-f530" type="profile">
           <modifiers>
             <modifier type="append" field="1160-63e7-57ca-722d" value="Barrage Missiles&lt;BR&gt;">
               <conditions>
@@ -5341,24 +5638,42 @@
     </selectionEntry>
     <selectionEntry id="9c5b-8bb0-ed3a-92d7" name="Warp Missile" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="points" value="0.0">
+        <modifier type="set" field="daf7-9f21-2f5c-7325" value="-1.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4a4-fe99-ea84-0f1f" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="points" value="50.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="points" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="daf7-9f21-2f5c-7325" type="max"/>
+      </constraints>
       <infoLinks>
-        <infoLink id="5d3c-b87e-9d48-cb59" hidden="false" targetId="263a-d87f-902a-a07a" type="profile"/>
+        <infoLink id="5d3c-b87e-9d48-cb59" name="Warp Missile" hidden="false" targetId="263a-d87f-902a-a07a" type="profile"/>
         <infoLink id="db3c-983a-80a1-eb39" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -5444,34 +5759,185 @@
         <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4a6e-f366-5cef-d003" name="Ursus Claw" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="bbfd-adea-f78c-0b37" name="Ursus Claw" hidden="false" targetId="6889-fa4d-cf87-3b1a" type="profile"/>
+        <infoLink id="d583-c677-765e-f8f7" name="Titan Killer" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ea77-e8a8-fd14-6afc" name="Natrix Shock Lance" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="8806-29ea-5d20-b4d4" name="Natrix Shock Lance" hidden="false" targetId="5802-b270-729a-0cdf" type="profile"/>
+        <infoLink id="dc8e-e5a2-b572-b9a4" name="Lance" hidden="false" targetId="c8ed-51df-39d6-fe07" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0ecf-8ba5-87aa-5b63" name="2x Turbo-Laser Destructor" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="427e-1635-23d0-57d7" name="Turbo-Laser Destructor" hidden="false" targetId="48fa-5482-8024-4990" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aa12-133f-86f9-3f4d" name="2x Vulcan Mega-bolter" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="4af4-5860-3ff0-ddfa" name="Vulcan Mega-bolter" hidden="false" targetId="398f-d542-cf63-c2ff" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bd21-f0b6-ed86-08e9" name="2x Gatling Blaster" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="a08a-e70e-c59f-04bd" name="Gatling Blaster" hidden="false" targetId="1c8a-7951-5344-c9e0" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="da67-7885-8663-1001" name="2x Multiple Rocket Launcher" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="27d9-2f87-5603-e54c" name="Multiple Rocket Launcher" hidden="false" targetId="efd5-de7c-93ab-2af2" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="64d2-7456-7961-5c25" name="Arioch Power Claw" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d0e275c-b822-7118-599b-eb1438150ffa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="fd0e-a1a2-4ef8-d61d" name="Arioch Power Claw" hidden="false" targetId="b49a-e63a-17de-80e0" type="profile"/>
+        <infoLink id="7dd6-3193-2a1c-0368" name="Titan Killer" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="812b-1645-0120-56ec" name="Enhanced Auspex" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="70c0-f990-e528-5f78" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="a5a9-c91a-da97-48b5" name="Enhanced Auspex" hidden="false" targetId="a63e-095e-2244-f185" type="profile"/>
+        <infoLink id="0423-b262-4663-bd8b" name="Indirect Fire" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="9f9a-0866-3056-30bc" name="Arm" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="9f9a-0866-3056-30bc" name="Arms" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b599-28b1-5287-0e82" name="Arm Support Weapons" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink id="2ea9-a0dd-ab9c-fe78" name="Light Plasma Annihilator" hidden="false" collective="false" import="true" targetId="ef75-e8eb-e78a-8f27" type="selectionEntry"/>
+            <entryLink id="78b0-9252-7ee5-a494" name="Quake Cannon" hidden="false" collective="false" import="true" targetId="6c97-591d-ed5d-7b0f" type="selectionEntry"/>
+            <entryLink id="226b-69bb-c257-a2bc" name="Volcano Cannon" hidden="false" collective="false" import="true" targetId="3bd7-2380-5b33-d2fb" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="c788-e630-2a86-41e8" name="Titan Combat Weapon" hidden="false" collective="false" import="true" targetId="34f6-170f-74cd-82e0" type="selectionEntry"/>
-        <entryLink id="8ec0-a4cf-e459-d3d6" hidden="false" collective="false" import="true" targetId="416a-9c54-b9e0-2df2" type="selectionEntry"/>
-        <entryLink id="b1a7-0085-f2e7-b553" hidden="false" collective="false" import="true" targetId="d636-e3ab-499a-540a" type="selectionEntry"/>
-        <entryLink id="0580-2bfd-85fa-7670" hidden="false" collective="false" import="true" targetId="2faf-afea-61f1-321f" type="selectionEntry"/>
-        <entryLink id="2f4e-fae7-37d2-69c3" hidden="false" collective="false" import="true" targetId="58a8-f19e-8dea-48f6" type="selectionEntry"/>
-        <entryLink id="bf43-500f-c807-eff6" hidden="false" collective="false" import="true" targetId="41bd-bacc-9fc8-f22a" type="selectionEntry"/>
-        <entryLink id="ed78-f182-c470-c201" hidden="false" collective="false" import="true" targetId="d210-4aaa-fc57-1c49" type="selectionEntry"/>
-        <entryLink id="bb3a-d55c-3dd5-f3a5" hidden="false" collective="false" import="true" targetId="e827-3784-6ff7-08ae" type="selectionEntry"/>
-        <entryLink id="8b49-d329-037f-a14a" hidden="false" collective="false" import="true" targetId="993b-dbc0-6523-2616" type="selectionEntry"/>
-        <entryLink id="c5c5-00d7-f170-0ba9" hidden="false" collective="false" import="true" targetId="7254-8606-224a-a2d9" type="selectionEntry">
+        <entryLink id="8ec0-a4cf-e459-d3d6" name="Corvus Assault Pod" hidden="false" collective="false" import="true" targetId="416a-9c54-b9e0-2df2" type="selectionEntry"/>
+        <entryLink id="b1a7-0085-f2e7-b553" name="Titan Chainfist" hidden="false" collective="false" import="true" targetId="d636-e3ab-499a-540a" type="selectionEntry"/>
+        <entryLink id="0580-2bfd-85fa-7670" name="Demolisher Wrecking Ball" hidden="false" collective="false" import="true" targetId="2faf-afea-61f1-321f" type="selectionEntry"/>
+        <entryLink id="2f4e-fae7-37d2-69c3" name="Battle Claw" hidden="false" collective="false" import="true" targetId="58a8-f19e-8dea-48f6" type="selectionEntry"/>
+        <entryLink id="bf43-500f-c807-eff6" name="Power Ram" hidden="false" collective="false" import="true" targetId="41bd-bacc-9fc8-f22a" type="selectionEntry"/>
+        <entryLink id="ed78-f182-c470-c201" name="Power Saw" hidden="false" collective="false" import="true" targetId="d210-4aaa-fc57-1c49" type="selectionEntry"/>
+        <entryLink id="bb3a-d55c-3dd5-f3a5" name="Titan Power Fist" hidden="false" collective="false" import="true" targetId="e827-3784-6ff7-08ae" type="selectionEntry"/>
+        <entryLink id="8b49-d329-037f-a14a" name="Wrecker" hidden="false" collective="false" import="true" targetId="993b-dbc0-6523-2616" type="selectionEntry"/>
+        <entryLink id="c5c5-00d7-f170-0ba9" name="Trident" hidden="false" collective="false" import="true" targetId="7254-8606-224a-a2d9" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="68be-1f47-ec4f-b2e6" name="Arioch Power Claw" hidden="false" collective="false" import="true" targetId="64d2-7456-7961-5c25" type="selectionEntry"/>
+        <entryLink id="0813-6ef8-e529-a13b" name="Inferno Gun" hidden="false" collective="false" import="true" targetId="8e18-c31b-4917-2dc8" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3fa1-331c-3028-b538" name="Lasburner" hidden="false" collective="false" import="true" targetId="1c32-5eff-9bfc-e7e6" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="d98c-d922-34ab-c5c9" name="Titan Melta Cannon" hidden="false" collective="false" import="true" targetId="d17b-d9ed-4aae-5339" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3c7c-3be3-326a-5a35" name="Titan Plasma Cannon" hidden="false" collective="false" import="true" targetId="ddb0-7fb6-9af9-40ed" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5482,12 +5948,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <entryLinks>
         <entryLink id="ced4-2d2e-f573-f7a8" hidden="false" collective="false" import="true" targetId="b0d7-d2f0-da55-70e0" type="selectionEntry">
@@ -5501,12 +5961,17 @@
         </entryLink>
         <entryLink id="c7f1-30e7-9842-c06a" hidden="false" collective="false" import="true" targetId="e5d4-9c2d-ce6e-64a0" type="selectionEntry"/>
         <entryLink id="f86e-f234-793a-6273" name="Light Inferno Gun" hidden="false" collective="false" import="true" targetId="34a3-762c-6583-e475" type="selectionEntry"/>
-        <entryLink id="6224-fc38-99d4-6235" hidden="false" collective="false" import="true" targetId="c50b-edec-da7d-1c35" type="selectionEntry">
+        <entryLink id="6224-fc38-99d4-6235" name="Light Rocket Launcher" hidden="false" collective="false" import="true" targetId="c50b-edec-da7d-1c35" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -5520,49 +5985,47 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="3f66-4761-6d6e-b5c7" name="Natrix Shock Lance" hidden="false" collective="false" import="true" targetId="ea77-e8a8-fd14-6afc" type="selectionEntry"/>
+        <entryLink id="2abb-8bdf-2a67-f6bb" name="Ursus Claw" hidden="false" collective="false" import="true" targetId="4a6e-f366-5cef-d003" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="6faf-a2a2-6a5d-add6" name="Support Weapons" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="a72b-04fc-572e-c559" hidden="false" collective="false" import="true" targetId="6c97-591d-ed5d-7b0f" type="selectionEntry"/>
+        <entryLink id="a72b-04fc-572e-c559" name="Quake Cannon" hidden="false" collective="false" import="true" targetId="6c97-591d-ed5d-7b0f" type="selectionEntry"/>
         <entryLink id="64aa-a762-c0c2-7569" name="Volcano Cannon" hidden="false" collective="false" import="true" targetId="3bd7-2380-5b33-d2fb" type="selectionEntry"/>
-        <entryLink id="a6ba-2264-c021-af10" name="Plasma Destructor" hidden="false" collective="false" import="true" targetId="2f65-36ca-9640-04df" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="70af-c25d-7394-46a3" name="Warlord Plasma Annihilator" hidden="false" collective="false" import="true" targetId="ef75-e8eb-e78a-8f27" type="selectionEntry"/>
+        <entryLink id="a6ba-2264-c021-af10" name="Plasma Destructor" hidden="false" collective="false" import="true" targetId="2f65-36ca-9640-04df" type="selectionEntry"/>
+        <entryLink id="70af-c25d-7394-46a3" name="Light Plasma Annihilator" hidden="false" collective="false" import="true" targetId="ef75-e8eb-e78a-8f27" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="c1d9-1be7-c8e5-9731" name="Tactical Weapons" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="minInForce" value="1.0">
+        <modifier type="decrement" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0066-7dc2-b6a7-4b79" repeats="1" roundUp="false"/>
           </repeats>
@@ -5570,7 +6033,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="decrement" field="minInForce" value="1.0">
+        <modifier type="decrement" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f28-7ed6-22fa-e196" repeats="1" roundUp="false"/>
           </repeats>
@@ -5578,7 +6041,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="decrement" field="minInForce" value="1.0">
+        <modifier type="decrement" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aaee-be16-b440-d800" repeats="1" roundUp="false"/>
           </repeats>
@@ -5586,7 +6049,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="decrement" field="minInForce" value="1.0">
+        <modifier type="decrement" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24fa-e273-9437-a0d5" repeats="1" roundUp="false"/>
           </repeats>
@@ -5594,7 +6057,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="decrement" field="minInForce" value="1.0">
+        <modifier type="decrement" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3198-9121-45be-735e" repeats="1" roundUp="false"/>
           </repeats>
@@ -5602,7 +6065,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="decrement" field="minInForce" value="2.0">
+        <modifier type="decrement" field="dc94-4b19-6405-a7c9" value="2.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb6b-b0b6-1ffb-c8fe" repeats="1" roundUp="false"/>
           </repeats>
@@ -5610,7 +6073,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6faf-a2a2-6a5d-add6" repeats="1" roundUp="false"/>
           </repeats>
@@ -5618,7 +6081,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2b65-11c8-e279-a913" repeats="1" roundUp="false"/>
           </repeats>
@@ -5626,7 +6089,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c5b-8bb0-ed3a-92d7" repeats="1" roundUp="false"/>
           </repeats>
@@ -5634,7 +6097,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e13-1e9d-6960-6b42" repeats="1" roundUp="false"/>
           </repeats>
@@ -5642,7 +6105,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ed82-16e8-b329-0fd0" repeats="1" roundUp="false"/>
           </repeats>
@@ -5650,7 +6113,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f9a-0866-3056-30bc" repeats="1" roundUp="false"/>
           </repeats>
@@ -5658,7 +6121,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="026e-a132-0578-e059" repeats="1" roundUp="false"/>
           </repeats>
@@ -5666,7 +6129,7 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="minInForce" value="1.0">
+        <modifier type="increment" field="dc94-4b19-6405-a7c9" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c32-5eff-9bfc-e7e6" repeats="1" roundUp="false"/>
           </repeats>
@@ -5678,23 +6141,23 @@
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-        <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-        <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPoints" type="max"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc94-4b19-6405-a7c9" type="min"/>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a557-bbc6-6e2b-f988" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="8b93-2a62-b58f-73c7" hidden="false" collective="false" import="true" targetId="6082-4466-3998-fb59" type="selectionEntry"/>
-        <entryLink id="d307-e138-5a48-c75a" hidden="false" collective="false" import="true" targetId="8e18-c31b-4917-2dc8" type="selectionEntry"/>
-        <entryLink id="aa76-48be-f12f-fbc3" hidden="false" collective="false" import="true" targetId="2012-ea97-3e39-632a" type="selectionEntry"/>
-        <entryLink id="03f8-d9d3-413b-a786" hidden="false" collective="false" import="true" targetId="d17b-d9ed-4aae-5339" type="selectionEntry"/>
-        <entryLink id="b9d3-f22c-f37c-29ac" hidden="false" collective="false" import="true" targetId="ddb0-7fb6-9af9-40ed" type="selectionEntry"/>
-        <entryLink id="a6e9-9221-5369-9048" hidden="false" collective="false" import="true" targetId="4f6e-e34f-9154-79c6" type="selectionEntry"/>
-        <entryLink id="cfbc-3fe4-7c70-664d" hidden="false" collective="false" import="true" targetId="2ec9-4f96-b122-b6b5" type="selectionEntry"/>
+        <entryLink id="8b93-2a62-b58f-73c7" name="Gatling Blaster" hidden="false" collective="false" import="true" targetId="6082-4466-3998-fb59" type="selectionEntry"/>
+        <entryLink id="d307-e138-5a48-c75a" name="Inferno Gun" hidden="false" collective="false" import="true" targetId="8e18-c31b-4917-2dc8" type="selectionEntry"/>
+        <entryLink id="aa76-48be-f12f-fbc3" name="Multiple Rocket Launcher" hidden="false" collective="false" import="true" targetId="2012-ea97-3e39-632a" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="e3c5-8384-af4e-f0ed" value="-1.0"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="03f8-d9d3-413b-a786" name="Titan Melta Cannon" hidden="false" collective="false" import="true" targetId="d17b-d9ed-4aae-5339" type="selectionEntry"/>
+        <entryLink id="b9d3-f22c-f37c-29ac" name="Titan Plasma Cannon" hidden="false" collective="false" import="true" targetId="ddb0-7fb6-9af9-40ed" type="selectionEntry"/>
+        <entryLink id="a6e9-9221-5369-9048" name="Turbo-Laser Destructor" hidden="false" collective="false" import="true" targetId="4f6e-e34f-9154-79c6" type="selectionEntry"/>
+        <entryLink id="cfbc-3fe4-7c70-664d" name="Vulcan Mega-bolter" hidden="false" collective="false" import="true" targetId="2ec9-4f96-b122-b6b5" type="selectionEntry"/>
         <entryLink id="fd6a-844c-c88d-fb5e" hidden="false" collective="false" import="true" targetId="b736-50c4-3a32-da81" type="selectionEntry"/>
-        <entryLink id="1cdb-9272-372e-e9f0" hidden="false" collective="false" import="true" targetId="1c32-5eff-9bfc-e7e6" type="selectionEntry">
+        <entryLink id="1cdb-9272-372e-e9f0" name="Lasburner" hidden="false" collective="false" import="true" targetId="1c32-5eff-9bfc-e7e6" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -5761,7 +6224,7 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>AMTL 1.00 - FERC - 2019 #pg14 - Legio Titanicus</description>
+      <description>Codex AMTL V4.docx.pdf #pg14 - Legio Titanicus</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>CodexAMTL #121013
@@ -5909,7 +6372,7 @@ All formations have an initiative rating of 1+.</description>
     </rule>
     <rule id="7ed8-d644-46bf-e32b" name="Alliance: Mechanicum" hidden="false">
       <modifiers>
-        <modifier type="set" field="description" value="Alliance : Armée du Mechanicum: Un tiers des points d’une liste Legio Titanicus peut être sélectionné dans une des trois listes Chevalier ou Taghmata Omnissiah ou du Skitarius. Cette sélection doit respecter la structure de ces listes.">
+        <modifier type="set" field="description" value="Alliance : Armée du Mechanicum: Un quart des points d’une liste Legio Titanicus peut être sélectionné dans une des trois listes Chevalier ou Taghmata Omnissiah ou de l&apos;Adeptus Mechanicus. Cette sélection doit respecter la structure de ces listes.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -5919,18 +6382,18 @@ All formations have an initiative rating of 1+.</description>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Allianz: Mechanicum: Ein Drittel der Punkte in einer Legio Titanicus Liste kann aus einer der drei Chevalier-, Taghmata Omnissiah- oder Skitarius-Listen ausgewählt werden. Diese Auswahl muss die Struktur dieser Listen respektieren.">
+        <modifier type="set" field="description" value="Allianz: Mechanicum: Ein Viertel der Punkte in einer Legio Titanicus Liste kann aus einer der drei Chevalier-, Taghmata Omnissiah- oder Adeptus Mechanicus-Listen ausgewählt werden. Diese Auswahl muss die Struktur dieser Listen respektieren.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Alianza: Mechanicum: Un tercio de los puntos de una lista de Legio Titanicus puede ser seleccionado de una de las tres listas de Chevalier, Taghmata Omnissiah o Skitarius. Esta selección debe respetar la estructura de estas listas.">
+        <modifier type="set" field="description" value="Alianza: Mechanicum: Un cuarto de los puntos de una lista de Legio Titanicus puede ser seleccionado de una de las tres listas de Chevalier, Taghmata Omnissiah o Adeptus Mechanicus. Esta selección debe respetar la estructura de estas listas.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <description>One-third of the points in a Legio Titanicus list can be selected from one of the three Chevalier, Taghmata Omnissiah, or Skitarius lists. This selection must respect the structure of these lists.</description>
+      <description>One-quarter of the points in a Legio Titanicus list can be selected from one of the three Chevalier, Taghmata Omnissiah, or Adeptus Mechanicus lists. This selection must respect the structure of these lists.</description>
     </rule>
     <rule id="1c61-31c7-cdeb-ce4e" name="Fire Control Centre" hidden="false">
       <modifiers>
@@ -6056,6 +6519,29 @@ All formations have an initiative rating of 1+.</description>
 4–6: the breach has been repaired 
 If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (Warhound), or 5+ (Reaver), or 4+ (Warlord).</description>
     </rule>
+    <rule id="2e50-2dce-5d09-38ce" name="Critical Hit: Reactor Breach" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Touche Critique: Le Réacteur se Fissure: Lancez 1D6 à la fin de chaque tour pour chaque fissure.  •  1: le unité explose et inflige une touche sur un 5+ aux unités à 5cm  •  2-3: le unité perd 1 DC  •  4-6: la fissure est réparée.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Kritischer Treffer: Reaktorbruch: Wirf in der Endphase jeder Runde einen W6:  • 1: Die Einheit wird zerstört und alle Einheiten innerhalb von 5 cm werden bei einem Wurf von 5+ getroffen  • 2-3: Die Einheit erleidet einen weiteren Schadenspunkt  • 4–6: Die Verletzung wurde behoben.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Daño Crítico: Falla del Reactor: Tira 1D6 al comienzo de la Fase de Finalización por cada fuga del reactor que esté activa:  • 1: La unidad es destruida y todas las unidades a 5cm sufrirán un impacto con un 5+.  • 2-3: La reparación no es exitosa, y la fuga sigue activa.  • 4-6: La reparación es exitosa.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>Roll a D6 in the end phase of each turn: 
+1: the unit is destroyed and all units within 5cm suffer a hit on a roll of 5+
+2-3: the unit suffers one more point of damage
+4–6: the breach has been repaired.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="e88c-0ffd-be4f-50ed" name="Apocalypse Missile Launcher" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
@@ -6167,14 +6653,9 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
           </conditions>
         </modifier>
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="All barrage weapons gain indirect fire">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <characteristics>
@@ -6589,7 +7070,7 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">*</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">*</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">*</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Inspiring, Reinforced Armour, Transport, 8 Sh, Walker (Titan)</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Inspiring, Reinforced Armour, Transport, Walker (Titan), 8 Sh</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">12</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Breach</characteristic>
       </characteristics>
@@ -7134,10 +7615,10 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d"/>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">*</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">*</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">*</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Carapace has Fixed Forward Arc&lt;BR&gt;Arms have Forward Arc</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">* Carapace has Fixed Forward Arc, Arms have Forward Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Reinforced Armour, Walker (Titan), 4 Sh</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">6</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Damage</characteristic>
@@ -7482,11 +7963,6 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
     </profile>
     <profile id="257d-b3d4-07e2-322e" name="Vortex Missile" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
       <modifiers>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Indirect Fire, Single Shot, Titan Killer (D3)">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="MW3+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
@@ -7527,7 +8003,7 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
     </profile>
     <profile id="b309-f865-8c98-7194" name="Warhound Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Fixed Forward Arc">
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="* Fixed Forward Arc">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -7544,10 +8020,10 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d"/>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">*</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">*</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">*</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Forward Arc</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">* Forward Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Reinforced Armour, Walker (Titan), 2 Sh</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Staggering Blow</characteristic>
@@ -7560,10 +8036,10 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">2+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d"/>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">*</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">*</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">*</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Carapaces have Fixed Forward Arc&lt;BR&gt;Arms have Forward Arc</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">* Carapace has Fixed Forward Arc, Arms have Forward Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Reinforced Armour, Thick Rear Armour, Walker (Titan), 6 Sh</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">8</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Damage</characteristic>
@@ -7597,7 +8073,7 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">*</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">*</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">*</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Inspiring, Reinforced Armour, Transport, 8 Sh, Walker (Titan)</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Inspiring, Reinforced Armour, Transport, Walker (Titan), 8 Sh</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">12</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Breach</characteristic>
       </characteristics>
@@ -7618,7 +8094,7 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
       <characteristics>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">Unlimited</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW2+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Indirect Fire, Single Shot, Titan Killer (D3), Ignores Void Shields and Power Fields</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Indirect Fire, Single Shot, Titan Killer (D3), Ignores Shields</characteristic>
       </characteristics>
     </profile>
     <profile id="8b24-1826-e717-3b51" name="Weapon Head" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
@@ -7735,6 +8211,64 @@ If the unit is destroyed, all units within 5cm suffer a hit on a roll of 6+ (War
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">90cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">4x MW2+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Slow Firing</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a96f-2dfe-a59b-a0e4" name="Warbringer Nemesis Titan" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
+      <characteristics>
+        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
+        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
+        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Nemesis Quake Cannon&lt;BR&gt;2x Anvillus-pattern Defence Battery&lt;BR&gt;</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">*</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">*</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">* Arms have Forward Arc</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Reinforced Armour, Thick Rear Armour, Walker (Titan), 5 Sh</characteristic>
+        <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">7</characteristic>
+        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Reactor Breach</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6889-fa4d-cf87-3b1a" name="Ursus Claw" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;and (contact)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW4+&lt;BR&gt;and Assault Weapon</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;and +1A, Titan Killer, Ignores Shields</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="5802-b270-729a-0cdf" name="Natrix Shock Lance" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">25cm&lt;BR&gt;and (15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+&lt;BR&gt;and Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Disrupt&lt;BR&gt;and +1A, Lance, Ignores Shields</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b49a-e63a-17de-80e0" name="Arioch Power Claw" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;and 30cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapon&lt;BR&gt;and 2x AP3+/AT5+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">+3A, Titan Killer (D3)&lt;BR&gt;and -</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a63e-095e-2244-f185" name="Enhanced Auspex" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">-</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">-</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">All barrage weapons gain indirect fire, Counts as a tactical weapon</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7474-3fd4-06f8-bd83" name="Nemesis Quake Cannon" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">90cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">3BP</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Indirect Fire, Macro-weapon, Fixed Forward Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6b83-43c4-ea46-0261" name="Anvillus-pattern Defence Battery" hidden="false" typeId="ad2a5f9f-8689-4299-135d-1a5bf1d6c7b1" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2x AP3+/AT4+/AA5+</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"></characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

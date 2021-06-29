@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4a53-8627-6904-ae50" name="Imperial Guard: Baran Siegemasters" revision="36" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4a53-8627-6904-ae50" name="Imperial Guard: Baran Siegemasters" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -72,6 +72,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2623-cbda-0b2b-172b" name="Deathstrike Missile Battery" page="0" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="points" value="225.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
@@ -279,19 +286,14 @@
     </selectionEntry>
     <selectionEntry id="814e-897b-27a7-1c4c" name="Marauder Bomber Formation" page="0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="points" value="250.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="points" value="300.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -326,23 +328,18 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="ecce-f0d5-7e04-9a93" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
+        <entryLink id="ecce-f0d5-7e04-9a93" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="300.0"/>
+        <cost name="pts" typeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9872-2470-a109-8015" name="Rough Rider Platoon" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -688,16 +685,10 @@
     </selectionEntry>
     <selectionEntry id="34b5-64dc-d7ad-345c" name="Siegemaster Infantry Company" page="0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="points" value="175.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="points" value="125.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -706,25 +697,27 @@
       <entryLinks>
         <entryLink id="cb44-46e9-2630-24e3" hidden="false" collective="false" import="true" targetId="9b6f-302d-e715-b93d" type="selectionEntry"/>
         <entryLink id="fabc-d6aa-d2b4-7fc9" hidden="false" collective="false" import="true" targetId="89ff-c5eb-41fa-b0d7" type="selectionEntry"/>
-        <entryLink id="4f61-a9d0-b873-1dd9" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
+        <entryLink id="4f61-a9d0-b873-1dd9" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="minSelections" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="c34f-3ef6-4381-64b8" hidden="false" collective="false" import="true" targetId="40df-649a-b0e5-c3e6" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="125.0"/>
+        <cost name="pts" typeId="points" value="175.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1480-2a91-fb34-b5ea" name="Siegemaster Regimental HQ" page="0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="points" value="225.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="points" value="150.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -771,7 +764,7 @@
         <entryLink id="a6d1-9791-9b4a-af86" hidden="false" collective="false" import="true" targetId="40df-649a-b0e5-c3e6" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150.0"/>
+        <cost name="pts" typeId="points" value="225.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0028-dc5c-6716-b74d" name="Super-heavy Tank Platoon" hidden="false" collective="false" import="true" type="unit">
@@ -874,14 +867,9 @@
         <entryLink id="8714-9b06-f2d8-c616" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </entryLink>
@@ -1028,18 +1016,29 @@
           <repeats>
             <repeat field="limit::points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="true"/>
           </repeats>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
         </modifier>
         <modifier type="set" field="maxInForce" value="12.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="maxInForce" value="1.0">
+          <repeats>
+            <repeat field="limit::points" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="true"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="maxInForce" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e551-c527-434e-59a5" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1049,10 +1048,10 @@
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="4aa5-0c9c-06e3-3378" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
-        <infoLink id="100d-4f5d-3126-00ae" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
+        <infoLink id="4aa5-0c9c-06e3-3378" name="Commissar" hidden="false" targetId="6083-6b56-24ba-0e66" type="profile"/>
+        <infoLink id="100d-4f5d-3126-00ae" name="Inspiring" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
         <infoLink id="bda9-9f51-1ad8-3ec3" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="569d-860c-f6b5-fccd" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+        <infoLink id="569d-860c-f6b5-fccd" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
         <infoLink id="2e03-b33f-fa45-ab8b" name="Leader" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
       </infoLinks>
       <costs>
@@ -1384,26 +1383,27 @@
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Commissaires: Un commissaire peut être pris par tranche de 500pts, et être incorporés aux compagnies de Régiments de siège ou de formation support. Un Commissaire doit obligatoirement être rattaché au QG Régimentaire.">
+        <modifier type="set" field="description" value="Commissaires: Pour chaque Compagnie de Régiment de Siége qu&apos;inclut votre armée, un commissaire est automatiquement intégré dans la Compagnie : QG, Régimentaire, Compagnie.  • De plus, vous pouvez ajouter gratuitement un commissaire dans une formation de soutien pour chaque tranche (même incomplète) de 1 000 points dans votre armée hors appareils de la Navy. Une compagnie ou une formation ne peut avoir qu&apos;un seul Commissaire.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Comisarios: Se puede tomar un comisario por cada 500 puntos, y ser incorporado a los regimientos de la Compañía de Asedio o a las formaciones de apoyo. Un comisario debe ser incorporado al Cuartel General del Regimiento.">
+        <modifier type="set" field="description" value="Comisarios: Por cada Compañía del Regimiento de Asedio (Cuartel General del Regimiento, Compañía de Infantería) que incluya tu ejército, se integra automáticamente un Comisario en la Compañía.  • Además, puedes añadir un Comisario a una formación de apoyo (excepto la Armada) por cada 1000pts, o parte de ellos, del ejército. Una compañía o formación sólo puede tener un Comisario.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="Kommissare: Ein Kommissar kann pro 500 Punkte genommen und in die Regimenter oder Unterstützungsformationen der Belagerungskompanie aufgenommen werden. Ein Kommissar muss dem Regimentshauptquartier hinzugefügt werden.">
+        <modifier type="set" field="description" value="Kommissare: Für jede Belagerungsregimentskompanie (Regimentshauptquartier, Infanteriekompanie), die deine Armee enthält, wird automatisch ein Kommissar in die Kompanie integriert.  • Zusätzlich kannst du für je angefangene 1000pts in der Armee einen Kommissar zu einer Unterstützungsformation (außer Flotte) hinzufügen. Eine Kompanie oder Formation kann nur einen Kommissar haben.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <description>One Commissar can be taken per 500pts, and be incorporated into the Siege Company regiments or support formations. A Commissar must be attached to the Regimental HQ.</description>
+      <description>For each Siege Regiment Company (Regimental HQ, Infantry Company) your army includes, a Commissar is automatically integrated into the Company.
+In addition, you can add a Commissar to a support formation (except Navy) for every 1000pts, or part thereof, in the army. A company or formation can only have one Commissar.</description>
     </rule>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>FERC_Baran_17032013 #20 Janvier 2013</description>
+      <description>FERC_Baran_V1.00 2020 27052020 #Maîtres de siège de Baran – FERC – V1.0/2020 – 27/05/20201</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>CodexImperialGuard #031119
@@ -1425,7 +1425,7 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="description" value="QG Régimentaire: Lors des parties de type Grand Tournoi une armée de Maitres de Siège de Baran doit inclure un QG Régimentaire. L’adversaire obtiendra la condition de victoire « Briser leur Moral » en détruisant le QG régimentaire ou en détruisant la formation la plus cher de l’armée.">
+        <modifier type="set" field="description" value="QG Régimentaire: Lors des parties de type Grand Tournoi une armée de Maitres de Siège de Baran doit inclure un QG Régimentaire. L’adversaire obtiendra la condition de victoire « Briser leur Moral » en détruisant le QG régimentaire ou en détruisant la formation la plus chère de l’armée.">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
           </conditions>
@@ -1811,13 +1811,13 @@ Bruennhilde: 1 Blitzen AA Gun, Götterdämmerung Howitzer, Rapier Laser Destroye
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">6+</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Lascannon&lt;BR&gt;&lt;BR&gt;Bomb Racks</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AA5+&lt;BR&gt;&lt;BR&gt;AA5+&lt;BR&gt;&lt;BR&gt;AT4+/AA5+&lt;BR&gt;&lt;BR&gt;3BP</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">360°&lt;BR&gt;&lt;BR&gt;Fixed Rear Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Fixed Rear Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">2</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
