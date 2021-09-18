@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="907a-2d47-7095-fcda" name="Orks: Blood Axe Klan" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="907a-2d47-7095-fcda" name="Orks: Blood Axe Klan" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3705,8 +3705,25 @@
     <infoLink id="0e77-c345-9158-bd69" name="Ork Warlords (BAK)" hidden="false" targetId="3d0a-916d-d530-ec48" type="rule"/>
     <infoLink id="6805-c7cf-c6ce-eae4" hidden="false" targetId="b7ab-6659-4911-254b" type="rule"/>
     <infoLink id="b539-dbd6-b468-129f" hidden="false" targetId="41c6-7e91-3062-1ee6" type="rule"/>
-    <infoLink id="b979-5173-8495-ed86" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule"/>
+    <infoLink id="b979-5173-8495-ed86" name="Power of the Waaagh!" hidden="false" targetId="493f-82e2-f0f5-28d4" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="5853-8bab-b439-c372" name="Ork Warlords (BAK)" hidden="false" targetId="02aa-eac9-792d-066b" type="rule"/>
+    <infoLink id="873e-7e94-da1c-b0e3" name="Power of the Waaagh! (F-ERC)" hidden="false" targetId="2b2d-29b7-2ced-78cc" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f9c4-971a-683f-3c8f" name="Battlefortress" hidden="false" collective="false" import="true" type="model">
@@ -4132,7 +4149,6 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="69a8-a8cb-9ccc-18f0" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e285-fbc0-97a3-feb7" type="max"/>
       </constraints>
       <infoLinks>
