@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4eca-4ab4-dc7f-ac89" name="Chaos: Red Corsairs" revision="36" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4eca-4ab4-dc7f-ac89" name="Chaos: Red Corsairs" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -594,6 +594,27 @@
           <costs>
             <cost name="pts" typeId="points" value="50.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="a21b-d9a4-a98c-3386" name="Minor Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="168c-8a3f-d197-9337" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="168c-8a3f-d197-9337" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="cd88-2a38-8721-f868" hidden="false" targetId="1a98-ad7c-1a1e-3544" type="profile"/>
+            <infoLink id="ad48-b01b-37d0-bb73" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1629,7 +1650,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="530b-77e0-aecd-b957" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
+        <infoLink id="530b-77e0-aecd-b957" name="Daemonic Pact" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="25.0"/>

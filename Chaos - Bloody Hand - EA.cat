@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2f01-cbb0-0053-6b49" name="Chaos: Bloody Hand" revision="27" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2f01-cbb0-0053-6b49" name="Chaos: Bloody Hand" revision="28" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -186,11 +186,43 @@
           <infoLinks>
             <infoLink id="3209-c209-316c-89e5" hidden="false" targetId="a912-5d0e-cf56-396e" type="profile"/>
             <infoLink id="aae8-7369-c5fe-1931" hidden="false" targetId="7494-a357-69cf-21d9" type="profile"/>
-            <infoLink id="2267-8f5c-0226-44bd" hidden="false" targetId="c861-59d8-2225-cddd" type="profile"/>
+            <infoLink id="2267-8f5c-0226-44bd" name="Crones" hidden="false" targetId="c861-59d8-2225-cddd" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="25.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="12a3-7a96-384d-512f" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="1e0a-a7f4-542a-784c" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-8a84-f0a0-8c59" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="1e0a-a7f4-542a-784c" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eae5-102d-3060-85e6" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eae5-102d-3060-85e6" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-8a84-f0a0-8c59" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e0a-a7f4-542a-784c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="128a-2c2f-4d78-bb3e" hidden="false" targetId="a912-5d0e-cf56-396e" type="profile"/>
+            <infoLink id="0e7c-4592-3d43-2a6b" hidden="false" targetId="7494-a357-69cf-21d9" type="profile"/>
+            <infoLink id="7b17-b4e3-b2f1-7bd5" name="Crones" hidden="false" targetId="c861-59d8-2225-cddd" type="profile"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -562,24 +594,10 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="84ec-d19d-c865-1f77" name="Master Thaumaturge" page="0" hidden="false" collective="false" import="true" type="unit">
-              <infoLinks>
-                <infoLink id="84fe-1de2-7fb7-e6eb" hidden="false" targetId="befd-3132-98fa-0ec3" type="profile"/>
-                <infoLink id="d659-2315-26cc-48a7" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
-                <infoLink id="2edc-b938-3df7-b29b" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-                <infoLink id="fec6-e586-4b21-8ed7" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
-                <infoLink id="e849-ae9c-aefd-98c1" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-                <infoLink id="0f3f-0b88-01f7-b35e" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
-                <infoLink id="7ea7-381f-294b-90bd" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-                <infoLink id="493e-05bb-3b55-739d" hidden="false" targetId="8e84-4fd7-f0ce-b874" type="rule"/>
-                <infoLink id="c9eb-e748-3e35-3ded" hidden="false" targetId="6365-bf69-b24d-26de" type="rule"/>
-                <infoLink id="f38b-79e8-faeb-0995" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="50.0"/>
-              </costs>
-            </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink id="760c-2829-2499-c496" name="Master Thaumaturge" hidden="false" collective="false" import="true" targetId="4cf2-8a84-f0a0-8c59" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -677,6 +695,39 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="eae5-102d-3060-85e6" name="Gore Mage Coven" page="0" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bbe3-9656-8eb6-1d37" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="91df-b685-34fa-6a0e" hidden="false" targetId="8d1f-7b0c-3751-7177" type="profile"/>
+        <infoLink id="8c46-4ecc-dadc-27f5" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="f50c-f58b-c6c0-d4ec" hidden="false" targetId="8e84-4fd7-f0ce-b874" type="rule"/>
+        <infoLink id="d2e1-ead4-74d4-b6e3" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
+        <infoLink id="cdde-eb5c-c063-0485" name="Daemonic Pact" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
+        <infoLink id="7e94-d748-e261-4690" hidden="false" targetId="6365-bf69-b24d-26de" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4cf2-8a84-f0a0-8c59" name="Master Thaumaturge" page="0" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="7596-5a6d-ddfa-0b38" hidden="false" targetId="befd-3132-98fa-0ec3" type="profile"/>
+        <infoLink id="4477-e52d-4ceb-cbc7" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
+        <infoLink id="50a9-95f3-c92f-f65f" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+        <infoLink id="e9a8-065c-18a1-eba1" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
+        <infoLink id="7ebe-7f38-7b68-fb37" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
+        <infoLink id="209f-0004-46ce-6e08" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
+        <infoLink id="1e8e-7d73-1b45-9eea" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="a1b6-c4e1-aa0b-d510" name="Blood Symbiosis" hidden="false" targetId="8e84-4fd7-f0ce-b874" type="rule"/>
+        <infoLink id="9618-5f14-8662-30bc" hidden="false" targetId="6365-bf69-b24d-26de" type="rule"/>
+        <infoLink id="4553-dd4c-581b-eba2" name="Daemonic Pact" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3fd0-afc2-4a9a-a6a7" name="Upgrades" hidden="false" collective="false" import="true">
@@ -727,22 +778,6 @@
             <cost name="pts" typeId="points" value="125.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="564d-306c-1641-f331" name="Gore Mage Coven" page="0" hidden="false" collective="false" import="true" type="unit">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3f7a-c2ca-969d-1c8a" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b6c6-b1e1-5099-6da0" hidden="false" targetId="8d1f-7b0c-3751-7177" type="profile"/>
-            <infoLink id="f5ec-ab3b-1d41-159f" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-            <infoLink id="6348-1336-4c01-285d" hidden="false" targetId="8e84-4fd7-f0ce-b874" type="rule"/>
-            <infoLink id="7cb1-5995-29ca-0caf" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
-            <infoLink id="dc20-f137-c67d-b909" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
-            <infoLink id="aef5-4aa5-65bf-2ba5" hidden="false" targetId="6365-bf69-b24d-26de" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="12bc-88dc-aebe-ce02" name="Bloodied Sniper Support" page="0" hidden="false" collective="false" import="true" type="unit">
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8a6e-5104-3208-7134" type="max"/>
@@ -785,6 +820,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="bd3c-4c0a-f99d-de20" name="Gore Mage Coven" hidden="false" collective="false" import="true" targetId="eae5-102d-3060-85e6" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>

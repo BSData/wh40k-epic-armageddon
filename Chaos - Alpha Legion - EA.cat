@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6023-487f-b167-a1d8" name="Chaos: Alpha Legion" revision="40" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6023-487f-b167-a1d8" name="Chaos: Alpha Legion" revision="41" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -969,6 +969,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="53ab-b7f5-5b3e-d55a" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" targetId="f310-2841-0976-aa01" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -985,6 +986,7 @@
       <entryLinks>
         <entryLink id="3ccb-a94a-4e71-10de" name="Lesser Daemon" hidden="false" collective="false" import="true" targetId="0e12-42f5-7ace-4cd2" type="selectionEntry"/>
         <entryLink id="ef3b-df36-1ed7-c261" name="Greater Daemon" hidden="false" collective="false" import="true" targetId="e8c6-f75b-70a8-9d5c" type="selectionEntry"/>
+        <entryLink id="acc6-106d-fcf0-03bb" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" targetId="f310-2841-0976-aa01" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1996,7 +1998,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="449f-d087-a5c8-30b4" name="*Daemonic Pact" hidden="false" collective="false" import="true" targetId="b86f-11c6-8344-8a49" type="selectionEntry"/>
+        <entryLink id="449f-d087-a5c8-30b4" name="Daemonic Pact" hidden="false" collective="false" import="true" targetId="b86f-11c6-8344-8a49" type="selectionEntry"/>
         <entryLink id="b0d2-0f06-6275-ac77" name="Daemon Engine Formation" hidden="false" collective="false" import="true" targetId="dde0-71f2-7bd3-45b7" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -5245,6 +5247,40 @@
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="f310-2841-0976-aa01" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="ff3f-79ec-54da-ebb4" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff3f-79ec-54da-ebb4" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="1828-83cd-6766-9106" name="Lesser Daemon (-Uprising-)" hidden="false" targetId="1a98-ad7c-1a1e-3544" type="profile"/>
+        <infoLink id="fe63-1398-f266-26ab" name="Plaguebearers of Nurgle" hidden="false" targetId="c5cd-9f55-a3f1-ec34" type="profile"/>
+        <infoLink id="b392-d7d6-97aa-ad19" name="Plaguebearers of Nurgle" hidden="false" targetId="d328-8ad1-b444-8458" type="profile"/>
+        <infoLink id="a09a-84f7-fb96-edde" name="Flamers of Tzeentch" hidden="false" targetId="9bb6-8fc4-598d-f629" type="profile"/>
+        <infoLink id="0489-39f0-55ce-f5a6" name="Flamers of Tzeentch" hidden="false" targetId="631e-b820-4303-fc23" type="profile"/>
+        <infoLink id="24ad-c298-8f7e-f1fa" name="Flamers of Tzeentch" hidden="false" targetId="4f0e-fc23-c8f6-3007" type="profile"/>
+        <infoLink id="817a-b4f6-7e18-6f59" name="Daemonic Beasts" hidden="false" targetId="b00e-20a4-88b4-b7e3" type="profile"/>
+        <infoLink id="9a38-7219-fedd-dde9" name="Daemonettes of Slaanesh" hidden="false" targetId="34e4-46ce-dbc4-caad" type="profile"/>
+        <infoLink id="0aa5-617b-aa08-f0b9" name="Daemonettes of Slaanesh" hidden="false" targetId="e132-2f22-a60c-cdad" type="profile"/>
+        <infoLink id="023d-b868-35ee-287b" name="Bloodletters of Khorne" hidden="false" targetId="306d-2edc-24fc-2946" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

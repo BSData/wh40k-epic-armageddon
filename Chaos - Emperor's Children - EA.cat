@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dd98-b537-47f4-dc63" name="Chaos: Emperor&apos;s Children" revision="36" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dd98-b537-47f4-dc63" name="Chaos: Emperor&apos;s Children" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -825,15 +825,10 @@
       <selectionEntries>
         <selectionEntry id="b950-e78c-6843-0f7c" name="Lesser Daemon" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="points" value="15.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="points" value="20.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -843,28 +838,51 @@
             <infoLink id="d1f7-5fcf-9f7f-c998" hidden="false" targetId="2731-4d81-220c-a8c4" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3a7f-e73f-b5cf-d994" name="Greater Daemon" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="points" value="50.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="points" value="75.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
             <infoLink id="bc31-e3fd-8a35-bf3a" hidden="false" targetId="3e7e-4cdb-83c6-39b2" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="75.0"/>
+            <cost name="pts" typeId="points" value="50.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="96a4-5f68-e671-9526" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="9c72-876f-cdb8-c898" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c72-876f-cdb8-c898" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="28a3-bacb-1969-5b43" hidden="false" targetId="34e4-46ce-dbc4-caad" type="profile"/>
+            <infoLink id="66d6-9262-00a1-c6f5" hidden="false" targetId="b00e-20a4-88b4-b7e3" type="profile"/>
+            <infoLink id="71cb-a1e3-05b3-f745" hidden="false" targetId="d04c-9f7c-501f-595a" type="profile"/>
+            <infoLink id="518b-808e-7ccc-cb60" name="Steeds of Slaanesh" hidden="false" targetId="2731-4d81-220c-a8c4" type="profile"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>

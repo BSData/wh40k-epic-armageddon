@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4a7d-ce5e-88b6-3a18" name="Chaos: World Eaters" revision="35" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4a7d-ce5e-88b6-3a18" name="Chaos: World Eaters" revision="36" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -919,6 +919,45 @@
             <cost name="pts" typeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="a636-a6f3-c27b-0eed" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="bcb3-2c8b-829d-d356" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d140-c26b-ff7b-0a7a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="bcb3-2c8b-829d-d356" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d140-c26b-ff7b-0a7a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bcb3-2c8b-829d-d356" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="bfce-c934-e892-f3e6" hidden="false" targetId="4a22-5bcf-a6e1-93a5" type="profile"/>
+            <infoLink id="bbf3-16bc-38c3-256a" hidden="false" targetId="b00e-20a4-88b4-b7e3" type="profile"/>
+            <infoLink id="8445-086a-dd53-44d3" hidden="false" targetId="306d-2edc-24fc-2946" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1798,7 +1837,7 @@
       </selectionEntries>
       <entryLinks>
         <entryLink id="b53c-8fae-b44f-f029" hidden="false" collective="false" import="true" targetId="76d6-9ccb-ba4a-00a2" type="selectionEntryGroup"/>
-        <entryLink id="5c61-fd6a-6c32-ad70" hidden="false" collective="false" import="true" targetId="cfc7-168e-b862-b5e5" type="selectionEntry"/>
+        <entryLink id="5c61-fd6a-6c32-ad70" name="Daemonic Pact" hidden="false" collective="false" import="true" targetId="cfc7-168e-b862-b5e5" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
@@ -2854,21 +2893,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="9a05-3c53-4bfd-f767" hidden="false" targetId="9b7f-a16c-efaa-c053" type="rule"/>
-        <infoLink id="bb99-da40-8c88-618b" name="Daemonic Pact" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="bb99-da40-8c88-618b" name="Daemonic Pact" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>

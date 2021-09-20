@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b9e3-5bb7-e91e-666b" name="Chaos: Khorne Renegades" revision="29" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b9e3-5bb7-e91e-666b" name="Chaos: Khorne Renegades" revision="30" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -136,6 +136,27 @@
           <costs>
             <cost name="pts" typeId="points" value="20.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="32cb-3a47-8018-46cf" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="556c-1e02-c3e6-e131" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="556c-1e02-c3e6-e131" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e3a8-7756-bb9c-9cc2" hidden="false" targetId="4a22-5bcf-a6e1-93a5" type="profile"/>
+            <infoLink id="e030-4920-e1f6-a291" hidden="false" targetId="306d-2edc-24fc-2946" type="profile"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -784,7 +805,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="d6d2-518f-eae9-aeb0" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
+        <infoLink id="d6d2-518f-eae9-aeb0" name="Daemonic Pact" hidden="false" targetId="7ffb-9c3a-4d96-f940" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="25.0"/>

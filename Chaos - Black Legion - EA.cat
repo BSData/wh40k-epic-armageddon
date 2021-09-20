@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b051-f90a-50b1-7dfd" name="Chaos: Black Legion" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b051-f90a-50b1-7dfd" name="Chaos: Black Legion" revision="39" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1351,15 +1351,10 @@
       <selectionEntries>
         <selectionEntry id="b950-e78c-6843-0f7c" name="Lesser Daemon" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="points" value="15.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="points" value="20.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1371,7 +1366,7 @@
             <infoLink id="a3d7-6bd4-4314-ca5e" name="Plaguebearers of Nurgle" hidden="false" targetId="c5cd-9f55-a3f1-ec34" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3a7f-e73f-b5cf-d994" name="Greater Daemon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1396,6 +1391,36 @@
           <costs>
             <cost name="pts" typeId="points" value="100.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="7d97-39ac-5e50-408a" name="Lesser Daemon (via Daemonic Pact)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="increment" field="cd52-6405-2507-e4a9" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b86f-11c6-8344-8a49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd52-6405-2507-e4a9" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="46a0-8abd-947d-41d3" hidden="false" targetId="306d-2edc-24fc-2946" type="profile"/>
+            <infoLink id="a6a2-b1ed-f063-bc93" name="Flamers of Tzeentch" hidden="false" targetId="9bb6-8fc4-598d-f629" type="profile"/>
+            <infoLink id="a948-461f-cc62-d943" hidden="false" targetId="34e4-46ce-dbc4-caad" type="profile"/>
+            <infoLink id="6f6c-40ee-bab2-094c" name="Plaguebearers of Nurgle" hidden="false" targetId="d328-8ad1-b444-8458" type="profile"/>
+            <infoLink id="1cd3-4afc-3e42-da9f" hidden="false" targetId="b00e-20a4-88b4-b7e3" type="profile"/>
+            <infoLink id="7f7e-3c4c-b3c9-81cf" name="Plaguebearers of Nurgle" hidden="false" targetId="c5cd-9f55-a3f1-ec34" type="profile"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
