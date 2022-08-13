@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="eaee-1423-2991-3408" name="Chaos: Lost and the Damned, Stigmatus Covenant Cult" revision="40" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="eaee-1423-2991-3408" name="Chaos: Lost and the Damned, Stigmatus Covenant Cult" revision="41" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -124,7 +124,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="150.0"/>
+        <cost name="pts" typeId="points" value="225.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0ee7-1104-acb0-b736" name="Daemon Pool" hidden="false" collective="false" import="true" type="unit">
@@ -223,6 +223,9 @@
             <infoLink id="b588-755b-de2a-506c" hidden="false" targetId="b00e-20a4-88b4-b7e3" type="profile"/>
             <infoLink id="200f-10ff-60dd-1fa7" name="Flamers of Tzeentch" hidden="false" targetId="631e-b820-4303-fc23" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -432,7 +435,7 @@
                 <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="2f0d-e780-006c-e37a" hidden="false" targetId="74b3-c732-24af-4b45" type="profile"/>
+                <infoLink id="2f0d-e780-006c-e37a" name="Renegade Ogryn" hidden="false" targetId="74b3-c732-24af-4b45" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -443,7 +446,7 @@
                 <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="dd3c-6579-b83a-1df0" hidden="false" targetId="0a80-f986-1baf-939b" type="profile"/>
+                <infoLink id="dd3c-6579-b83a-1df0" name="Giant Mutants" hidden="false" targetId="0a80-f986-1baf-939b" type="profile"/>
                 <infoLink id="c333-e18c-31da-eaf7" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
               </infoLinks>
               <costs>
@@ -492,14 +495,37 @@
           </constraints>
           <entryLinks>
             <entryLink id="c278-e922-7811-69d7" name="Cultists" hidden="false" collective="false" import="true" targetId="a3b6-6a1a-69f6-dbd7" type="selectionEntry"/>
-            <entryLink id="1910-5311-522d-4b08" hidden="false" collective="false" import="true" targetId="0b5a-a1d0-2b2d-4444" type="selectionEntry"/>
+            <entryLink id="1910-5311-522d-4b08" name="Mutants" hidden="false" collective="false" import="true" targetId="0b5a-a1d0-2b2d-4444" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7895-fcbb-fcc4-9bff" hidden="false" collective="false" import="true" targetId="c8fb-4919-08c2-956e" type="selectionEntryGroup"/>
-        <entryLink id="0362-3b7c-eaa4-5c80" name="Upgrades" hidden="false" collective="false" import="true" targetId="58b4-456b-c222-5066" type="selectionEntryGroup"/>
-        <entryLink id="0f75-d4e3-5f72-1d93" hidden="false" collective="false" import="true" targetId="444f-1bd5-bc5c-8ab0" type="selectionEntryGroup"/>
+        <entryLink id="7895-fcbb-fcc4-9bff" name="Faction" hidden="false" collective="false" import="true" targetId="c8fb-4919-08c2-956e" type="selectionEntryGroup"/>
+        <entryLink id="0362-3b7c-eaa4-5c80" name="Upgrades" hidden="false" collective="false" import="true" targetId="58b4-456b-c222-5066" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="decrement" field="maxSelections" value="1.0">
+              <conditions>
+                <condition field="selections" scope="5374-e802-6c16-ba86" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87dc-983d-386e-a1b0" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0">
+              <conditions>
+                <condition field="selections" scope="5374-e802-6c16-ba86" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eadf-bd4f-96bc-69c6" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0">
+              <conditions>
+                <condition field="selections" scope="5374-e802-6c16-ba86" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="444f-1bd5-bc5c-8ab0" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0">
+              <conditions>
+                <condition field="selections" scope="5374-e802-6c16-ba86" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d394-dfc9-f161-e985" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="0f75-d4e3-5f72-1d93" name="Transport" hidden="false" collective="false" import="true" targetId="444f-1bd5-bc5c-8ab0" type="selectionEntryGroup"/>
         <entryLink id="7a08-bc94-1b1c-e6fb" name="Arch Heretic" hidden="false" collective="false" import="true" targetId="7dd2-258d-3884-a930" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="maxSelections" value="0.0">
@@ -931,9 +957,9 @@
           <infoLinks>
             <infoLink id="7390-a24a-36d4-bbc8" name="Plague Zombies" hidden="false" targetId="d266-6fb7-10ae-043a" type="profile"/>
             <infoLink id="ca53-286b-9e1f-cb86" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-            <infoLink id="8016-5596-f278-4d8f" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
+            <infoLink id="8016-5596-f278-4d8f" name="Infiltrators" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
             <infoLink id="e8b2-7e6e-5a45-890b" name="Infestation" hidden="false" targetId="6c81-26b9-07b4-02e1" type="rule"/>
-            <infoLink id="8f57-8454-962d-3516" name="Plague Zombies" hidden="false" targetId="3e29-dee0-69d8-f2c1" type="rule"/>
+            <infoLink id="8f57-8454-962d-3516" name="Animalistic" hidden="false" targetId="7242-606c-d04e-7af5" type="rule"/>
             <infoLink id="f222-9220-c39b-ba7f" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule"/>
           </infoLinks>
           <costs>
@@ -970,10 +996,10 @@
           <infoLinks>
             <infoLink id="5804-8e1a-3057-ecce" name="Plague Zombies" hidden="false" targetId="d266-6fb7-10ae-043a" type="profile"/>
             <infoLink id="b31b-f6b5-a2d6-d0cf" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-            <infoLink id="74ce-2a06-2cc7-6872" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
+            <infoLink id="74ce-2a06-2cc7-6872" name="Infiltrators" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
             <infoLink id="0ace-e4c5-61ca-cf19" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule"/>
             <infoLink id="79fe-c2fe-2f57-1c1b" name="Infestation" hidden="false" targetId="6c81-26b9-07b4-02e1" type="rule"/>
-            <infoLink id="04ed-bc95-a83f-cf72" name="Plague Zombies" hidden="false" targetId="3e29-dee0-69d8-f2c1" type="rule"/>
+            <infoLink id="04ed-bc95-a83f-cf72" name="Animalistic" hidden="false" targetId="7242-606c-d04e-7af5" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -1003,12 +1029,10 @@
           </constraints>
           <infoLinks>
             <infoLink id="ba5a-210a-fb75-f03a" name="Plague Zombies" hidden="false" targetId="d266-6fb7-10ae-043a" type="profile"/>
-            <infoLink id="9eb2-e977-1b8b-be78" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-            <infoLink id="bf32-8a95-9147-83a0" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
+            <infoLink id="bf32-8a95-9147-83a0" name="Infiltrators" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
             <infoLink id="64ab-9610-3881-59c6" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule"/>
-            <infoLink id="f9fb-7803-20dd-23d4" name="Plague Zombies" hidden="false" targetId="3e29-dee0-69d8-f2c1" type="rule"/>
+            <infoLink id="f9fb-7803-20dd-23d4" name="Animalistic" hidden="false" targetId="7242-606c-d04e-7af5" type="rule"/>
             <infoLink id="e2fc-569d-abfc-bc53" name="Infestation" hidden="false" targetId="6c81-26b9-07b4-02e1" type="rule"/>
-            <infoLink id="cfd4-38c7-452b-5852" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -1261,8 +1285,15 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="7dc4-3ba6-eebe-29fd" value="11.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eee5-25db-af9d-8cc8" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -1271,8 +1302,15 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="7dc4-3ba6-eebe-29fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d394-dfc9-f161-e985" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -1281,10 +1319,22 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="7dc4-3ba6-eebe-29fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="444f-1bd5-bc5c-8ab0" type="atLeast"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0">
+              <conditions>
+                <condition field="selections" scope="7dc4-3ba6-eebe-29fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eadf-bd4f-96bc-69c6" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </entryLink>
@@ -1443,17 +1493,17 @@
       <selectionEntries>
         <selectionEntry id="b537-d1c2-fb2e-fe0a" name="Firelord" page="0" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="c81d-4ddb-a879-456a" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
-            <infoLink id="3c21-8a08-f680-2077" hidden="false" targetId="5efb-53bc-3d66-458e" type="profile"/>
+            <infoLink id="3c21-8a08-f680-2077" name="Tzeentch Firelord" hidden="false" targetId="5efb-53bc-3d66-458e" type="profile"/>
             <infoLink id="b3ee-6f2a-74c2-5bde" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
             <infoLink id="53ae-b44c-2a5b-e87c" hidden="false" targetId="6241-7a63-2e4d-7c47" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="200.0"/>
+            <cost name="pts" typeId="points" value="150.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1708,7 +1758,7 @@
             <infoLink id="afc9-876c-a2fe-3113" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
             <infoLink id="8f5d-3658-c55a-53ac" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
             <infoLink id="6a83-3175-5a64-5191" hidden="false" targetId="9462-7ca6-19e1-a822" type="rule"/>
-            <infoLink id="1f25-8c4f-ece5-0faf" hidden="false" targetId="6f13-5a58-e548-771f" type="rule"/>
+            <infoLink id="1f25-8c4f-ece5-0faf" name="Critical Hit: Explosion" hidden="false" targetId="ca1b-6f85-9aa6-f529" type="rule"/>
             <infoLink id="00b1-1814-0abb-508e" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
             <infoLink id="cdf6-2f3e-1fb0-43e0" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
             <infoLink id="f76d-3a5d-4ce6-c492" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule"/>
@@ -1809,7 +1859,8 @@
           <infoLinks>
             <infoLink id="2d7d-7091-4278-2669" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
             <infoLink id="4c6a-f59f-f99f-1a91" name="Chaos Spawn" hidden="false" targetId="e811-23c7-bf8a-208b" type="profile"/>
-            <infoLink id="a917-f6c3-0613-b99d" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+            <infoLink id="a917-f6c3-0613-b99d" name="Animalistic" hidden="false" targetId="7242-606c-d04e-7af5" type="rule"/>
+            <infoLink id="bf7a-2ccb-0ad8-b99f" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="25.0"/>
@@ -2007,7 +2058,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="225.0"/>
+        <cost name="pts" typeId="points" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="19f0-41ce-25d1-3af5" name="-Faction-" hidden="false" collective="false" import="true" type="upgrade">
@@ -2471,7 +2522,15 @@
         </modifier>
       </modifiers>
     </infoLink>
-    <infoLink id="fd42-fddf-5971-29ba" name="Factions" hidden="false" targetId="c412-3011-0243-8d6a" type="rule"/>
+    <infoLink id="fd42-fddf-5971-29ba" name="Factions" hidden="false" targetId="c412-3011-0243-8d6a" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
     <infoLink id="5906-bf79-de69-01ac" name="Favour of the Gods - Fickle Masters" hidden="false" targetId="1fe8-33fd-f7d6-eeeb" type="rule">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -2483,6 +2542,7 @@
     </infoLink>
     <infoLink id="0ab0-5105-f7a3-d6bc" name="Strategy Rating &amp; Initiative (Latd)" hidden="false" targetId="ead6-4856-12b6-917e" type="rule"/>
     <infoLink id="2ea8-f135-c21e-e79d" name="Strategy Rating &amp; Initiative (Latdr)" hidden="false" targetId="99ec-1449-2175-e566" type="rule"/>
+    <infoLink id="cd73-da9e-b696-8541" name="Factions (F-ERC)" hidden="false" targetId="0cbe-a42d-f266-0240" type="rule"/>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7dd2-258d-3884-a930" name="Arch Heretic" hidden="false" collective="false" import="true" type="upgrade">
@@ -2513,10 +2573,10 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="3d62-53ef-0c0a-98f3" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
+        <infoLink id="3d62-53ef-0c0a-98f3" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
         <infoLink id="8b97-8820-51a9-02fe" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-        <infoLink id="7292-4396-d682-71a7" name="Daemonic Pact" hidden="false" targetId="9b7f-a16c-efaa-c053" type="rule"/>
-        <infoLink id="810b-978d-7aa0-4f0a" hidden="false" targetId="c99c-e6f7-7462-06b3" type="profile"/>
+        <infoLink id="7292-4396-d682-71a7" name="Summoning of Units" hidden="false" targetId="04d3-3951-4b6f-b140" type="rule"/>
+        <infoLink id="810b-978d-7aa0-4f0a" name="Champion of the Dark Gods" hidden="false" targetId="c99c-e6f7-7462-06b3" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
@@ -2922,6 +2982,15 @@
           </modifiers>
         </infoLink>
         <infoLink id="2d65-3080-df02-e17a" name="Critical Hit: Lord of Battles" hidden="false" targetId="a2c5-1d19-c2cb-952e" type="rule"/>
+        <infoLink id="8c47-cb1a-4853-0edb" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="400.0"/>
@@ -3053,7 +3122,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="acf7-5d55-5074-5dc4" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="673f-25b1-6a23-4a71" hidden="false" targetId="6ee2-c858-93de-9936" type="profile"/>
+        <infoLink id="673f-25b1-6a23-4a71" name="Demagogue" hidden="false" targetId="6ee2-c858-93de-9936" type="profile"/>
         <infoLink id="0662-e563-98a1-47e6" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
         <infoLink id="c131-35c5-2517-b4d1" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
         <infoLink id="ec12-fd03-21c2-842e" name="Augment Summoning" hidden="false" targetId="6365-bf69-b24d-26de" type="rule">
@@ -3099,34 +3168,22 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6936-ad75-cb8e-6acf" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="d550-e6a9-c8ba-ceca" hidden="false" targetId="7161-cb08-d522-51a6" type="profile"/>
+        <infoLink id="d550-e6a9-c8ba-ceca" name="Daemon Prince" hidden="false" targetId="7161-cb08-d522-51a6" type="profile"/>
         <infoLink id="6154-ccca-4e64-99b9" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="e5eb-4557-3e47-1b4f" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
+        <infoLink id="e5eb-4557-3e47-1b4f" name="Titan Killer" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </infoLink>
@@ -3135,6 +3192,33 @@
         <infoLink id="8534-9c85-2d02-b008" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
         <infoLink id="81cf-363f-e590-d2de" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="af4b-08b3-5a92-ee3b" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule"/>
+        <infoLink id="1eeb-bd18-58ea-9f98" name="Inspiring" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="3bd7-cbe9-e535-067f" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="8dd7-dc4b-927b-4f49" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink id="12c1-22a6-0699-79e5" name="Daemon Prince" hidden="false" collective="false" import="true" targetId="d394-dfc9-f161-e985" type="selectionEntry"/>
@@ -3149,33 +3233,21 @@
       </constraints>
       <infoLinks>
         <infoLink id="c036-3153-f267-c7cb" hidden="false" targetId="b761-3f74-4596-69f6" type="profile"/>
-        <infoLink id="2c5d-bf2f-c86a-03b3" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
+        <infoLink id="2c5d-bf2f-c86a-03b3" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="d1e1-fba1-705e-ed7f" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
+        <infoLink id="d1e1-fba1-705e-ed7f" name="Titan Killer" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </infoLink>
@@ -3185,6 +3257,33 @@
         <infoLink id="623b-6bc5-a98c-a664" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="71c9-193f-c69e-2099" hidden="false" targetId="737a-8e99-4ad3-8ec6" type="rule"/>
         <infoLink id="d418-c8ea-3d46-7071" hidden="false" targetId="e6dc-cd5e-1867-a27e" type="rule"/>
+        <infoLink id="b991-b246-588a-b4d2" name="Inspiring" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="c1f6-3918-736d-89dc" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="4ad4-274e-f65b-5acb" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink id="d1a9-7b76-f104-fc6c" name="Daemon Prince" hidden="false" collective="false" import="true" targetId="d394-dfc9-f161-e985" type="selectionEntry"/>
@@ -3241,8 +3340,7 @@
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7ef5-53ea-f698-abdd" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="5f18-994a-2c4d-77ad" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile"/>
-        <infoLink id="3f5b-4f0b-6435-2d34" hidden="false" targetId="ddbd-52ae-0f2e-44ed" type="rule"/>
+        <infoLink id="5f18-994a-2c4d-77ad" name="Thunderbolt Fighter" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -3352,7 +3450,15 @@
         <infoLink id="a667-9786-1dab-4bc9" name="Undivided Defiler" hidden="false" targetId="c75c-e0cc-9ccb-d750" type="profile"/>
         <infoLink id="faef-5719-fd12-9f6b" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
         <infoLink id="1fa9-09f6-efdf-2cd2" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="8393-c5a2-5ec6-ad73" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule"/>
+        <infoLink id="8393-c5a2-5ec6-ad73" name="Indirect Fire" hidden="false" targetId="d6ce-38cf-902a-bb17" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="a7c8-1775-a111-44db" name="Stigmatus Defiler" hidden="false" targetId="09a1-f1b4-523e-c58d" type="profile"/>
         <infoLink id="6b18-2c73-2215-1845" hidden="false" targetId="0a30-4366-6bfe-ef90" type="rule">
           <modifiers>
@@ -3541,7 +3647,7 @@
     </selectionEntry>
     <selectionEntry id="9b4e-88b2-dcd2-4404" name="Land Transporter" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="4af5-53ab-7a33-a579" hidden="false" targetId="431d-8eea-ae9c-ebdf" type="profile"/>
+        <infoLink id="4af5-53ab-7a33-a579" name="Land Transporter" hidden="false" targetId="431d-8eea-ae9c-ebdf" type="profile"/>
         <infoLink id="10b8-d3c6-7dae-4229" hidden="false" targetId="b405-0855-f430-5b52" type="rule"/>
       </infoLinks>
       <costs>
@@ -3567,11 +3673,11 @@
       </constraints>
       <infoLinks>
         <infoLink id="d0ab-9d0c-1daa-dc9b" name="Chaos Altar" hidden="false" targetId="895b-78b5-c9a0-4c24" type="profile"/>
-        <infoLink id="ffe1-e1e0-e38b-d512" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
+        <infoLink id="ffe1-e1e0-e38b-d512" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
         <infoLink id="9041-fc39-068a-ba66" hidden="false" targetId="bf30-c0f7-cae7-d46b" type="rule"/>
-        <infoLink id="5509-646c-4f18-de9a" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="5509-646c-4f18-de9a" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="00b7-4783-5cf4-1340" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
-        <infoLink id="4da9-d8e0-cb63-dfa3" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
+        <infoLink id="4da9-d8e0-cb63-dfa3" name="Inspiring" hidden="false" targetId="6c54-a523-bd4a-e54f" type="rule"/>
         <infoLink id="07a3-12ed-dc51-d2bf" name="Augment Summoning" hidden="false" targetId="6365-bf69-b24d-26de" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -3586,7 +3692,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="ab12-94ae-5ccf-78e2" hidden="false" targetId="c6c0-7295-0448-fccd" type="rule">
+        <infoLink id="ab12-94ae-5ccf-78e2" name="Daemonic Focus" hidden="false" targetId="c6c0-7295-0448-fccd" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -3595,7 +3701,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="c83a-2664-9013-e78a" name="Daemonic Pact" hidden="false" targetId="9b7f-a16c-efaa-c053" type="rule">
+        <infoLink id="c83a-2664-9013-e78a" name="Summoning of Units" hidden="false" targetId="04d3-3951-4b6f-b140" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -3622,7 +3728,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e6cd-38eb-acb1-9068" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="5dee-96f8-8bc4-92bd" hidden="false" targetId="e811-23c7-bf8a-208b" type="profile"/>
+        <infoLink id="5dee-96f8-8bc4-92bd" name="Chaos Spawn" hidden="false" targetId="e811-23c7-bf8a-208b" type="profile"/>
         <infoLink id="57e8-7706-f816-7794" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
         <infoLink id="533e-6347-99bc-f968" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
       </infoLinks>
@@ -3680,9 +3786,14 @@
     <selectionEntryGroup id="58b4-456b-c222-5066" name="Upgrades" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="maxSelections" value="-1.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3709,9 +3820,10 @@
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="8b1f-1e09-0fdb-c8c6" hidden="false" targetId="e811-23c7-bf8a-208b" type="profile"/>
+                <infoLink id="8b1f-1e09-0fdb-c8c6" name="Chaos Spawn" hidden="false" targetId="e811-23c7-bf8a-208b" type="profile"/>
                 <infoLink id="e6d8-6ee3-0416-9dde" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
-                <infoLink id="5af7-9ba3-6524-e31b" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+                <infoLink id="5af7-9ba3-6524-e31b" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
+                <infoLink id="2a58-f4b0-10c4-21bc" name="Animalistic" hidden="false" targetId="7242-606c-d04e-7af5" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="25.0"/>
@@ -3982,7 +4094,9 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>Chaos Égarés et Damnés 1.01 - FERC - 8 mai 2020 #8 mai 2020 - V1.01</description>
+      <description>Codex Égarés et Damnés.docx #EAFR - REV 1.1
+errata:
+Should Renegade Cavalry have: Infiltrators, Mounted, Scout?</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>EpicUKLatDCodex #111231</description>
@@ -4267,6 +4381,31 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
       </modifiers>
       <description>Replaces the unit in the formation that includes the Demagogue or Chaos Marine Aspiring Champion character with a Daemon Prince unit.</description>
     </rule>
+    <rule id="0cbe-a42d-f266-0240" name="Factions" hidden="false">
+      <modifiers>
+        <modifier type="set" field="description" value="Facciones: Un ejército de Los Perdidos y los Condenados pertenece a una facción que jura lealtad a uno de los Dioses del Caos (Khorne, Nurgle, Slaanesh o Tzeentch). Debes decidir a qué facción pertenece tu ejército al principio de la batalla y anotarlo en tu lista de ejército. No es posible formar alianzas entre los diferentes dioses. Sólo tendrás acceso a las formaciones de Demonios y Ingenios Demoníacos del dios elegido y a las del Caos Absoluto para construir tu ejército.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Factions: Une armée Egarés et Damnés appartient à une faction qui prête allégeance à l’un des Dieux du Chaos (Khorne, Nurgle , Slaanesh ou Tzeentch). Vous devez décider à quelle faction appartient votre armée au début de la bataille et le noter sur votre liste d’armée. Il est impossible de lier des alliances entre les différents dieux. Vous n&apos;aurez accès qu&apos;aux formations de Démons et de Machines Démons du Dieu choisi, et à celles du Chaos Universel pour constituer votre armée.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="description" value="Fraktionen: Eine Armee von Verlorene und Verdammte gehört einer Fraktion an, die einem der Chaosgötter (Khorne, Nurgle, Slaanesh oder Tzeentch) die Treue geschworen hat. Du musst dich zu Beginn der Schlacht entscheiden, zu welcher Fraktion deine Armee gehört, und dies auf deiner Armeeliste vermerken. Es ist nicht möglich, Allianzen zwischen den verschiedenen Göttern zu bilden. Du hast nur Zugang zu den Dämonen- und Dämonenmaschinenformationen des gewählten Gottes und denen des Ungeteilten Chaos, um deine Armee aufzubauen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>A Lost and the Damned army belongs to a faction that pledges allegiance to one of the Chaos Gods (Khorne, Nurgle, Slaanesh or Tzeentch). You must decide which faction your army belongs to at the beginning of the battle and note this on your army list. It is not possible to form alliances between the different gods. You will only have access to formations of Daemons and Daemon Engines of the chosen god and those of Chaos Undivided to build your army.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="b9cd-a6b0-01a5-7ede" name="Arch Heretic" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -4313,7 +4452,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
     </profile>
     <profile id="306d-2edc-24fc-2946" name="Bloodletters of Khorne" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Invulnerable Save">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Expendable, Invulnerable Save">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4420,12 +4559,12 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader, Daemonic Focus</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader, Daemonic Focus (2D3)</characteristic>
       </characteristics>
     </profile>
     <profile id="895b-78b5-c9a0-4c24" name="Chaos Altar" hidden="false" typeId="87ab-2658-3f0c-128d" typeName="War Engine">
       <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Reinforced Armour, Invulnerable Save, Fearless, Inspiring, Daemonic Focus">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Daemonic Focus (2D3), Fearless, Inspiring, Invulnerable Save, Reinforced Armour">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4472,6 +4611,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Bolters&lt;BR&gt;&lt;BR&gt;Grenade Launcher&lt;BR&gt;&lt;BR&gt;Daemon Weapon">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
@@ -4488,6 +4632,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
     </profile>
     <profile id="e811-23c7-bf8a-208b" name="Chaos Spawn" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Animalistic, Fearless, Invulnerable Save">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
         <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="4+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
@@ -4504,7 +4653,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">+D3A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Fearless</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Invulnerable Save</characteristic>
       </characteristics>
     </profile>
     <profile id="8848-56f5-be05-288e" name="Chimera" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -4533,7 +4682,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;AP6+">
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Firearms&lt;BR&gt;&lt;BR&gt;Heavy Stubber">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4547,6 +4696,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Small Arms&lt;BR&gt;&lt;BR&gt;AP6+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <characteristics>
@@ -4580,6 +4734,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Commander, Fearless, Inspiring, Invulnerable Save, Leader, Reinforced Armour, Teleport, Thick Rear Armour">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
@@ -4596,7 +4755,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
     </profile>
     <profile id="34e4-46ce-dbc4-caad" name="Daemonettes of Slaanesh" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="First Strike, Invulnerable Save">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Expendable, First Strike, Invulnerable Save">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4634,7 +4793,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">First Strike, Invulnerable Save, Summoning Cost (1), Expendable</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Expendable, First Strike, Invulnerable Save, Summoning Cost (1)</characteristic>
       </characteristics>
     </profile>
     <profile id="b00e-20a4-88b4-b7e3" name="Daemonic Beasts" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -4686,6 +4845,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Firearms&lt;BR&gt;&lt;BR&gt;Grenade Launcher&lt;BR&gt;&lt;BR&gt;Daemon Weapon&lt;BR&gt;&lt;BR&gt;Arcane Powers">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
@@ -4701,23 +4865,6 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
       </characteristics>
     </profile>
     <profile id="42bb-9639-9369-f2e0" name="Fire Support Squad" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;and">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;and (15cm)">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;and Small Arms">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -4823,7 +4970,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Expendable, Invulnerable Save</characteristic>
       </characteristics>
     </profile>
     <profile id="0a80-f986-1baf-939b" name="Giant Mutants" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -5127,7 +5274,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
     </profile>
     <profile id="cccd-3a40-dc54-1729" name="Khorne Daemon Assault Engine" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", Invulnerable Save">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Invulnerable Save, Reinforced Armour">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -5135,6 +5282,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", +1 to Engage action">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a8c-6d6d-2c86-8b33" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5168,7 +5320,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;Titan Killer, +3A&lt;BR&gt;&lt;BR&gt;-">
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Forward Arc&lt;BR&gt;&lt;BR&gt;Titan Killer, +3A&lt;BR&gt;&lt;BR&gt;-">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -5181,6 +5333,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", +1 to Engage action">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a8c-6d6d-2c86-8b33" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Invulnerable Save, Reinforced Armour, Thick Rear Armour">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5302,7 +5459,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Lascannon &lt;BR&gt;&lt;BR&gt;2x Plasma Cannon&lt;BR&gt;&lt;BR&gt;Demolisher Cannon&lt;BR&gt;and</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm &lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;and (15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT5+&lt;BR&gt;&lt;BR&gt;AP5+/AT5+&lt;BR&gt;&lt;BR&gt;MW4+&lt;BR&gt;and Small Arms</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>
@@ -5402,7 +5559,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter&lt;BR&gt;&lt;BR&gt;Twin Lascannon&lt;BR&gt;&lt;BR&gt;Bomb Racks</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AA5+&lt;BR&gt;&lt;BR&gt;AA5+&lt;BR&gt;&lt;BR&gt;AT4+/AA5+&lt;BR&gt;&lt;BR&gt;3BP</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">360°&lt;BR&gt;&lt;BR&gt;Fixed Rear Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">360°&lt;BR&gt;&lt;BR&gt;Rear Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">2</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Crash</characteristic>
@@ -5467,6 +5624,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="affeeb83-c6db-0a8c-e7ab-688f9a83d25c" value="5+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine</characteristic>
@@ -5485,7 +5647,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
     </profile>
     <profile id="d266-6fb7-10ae-043a" name="Plague Zombies" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Ignore Cover">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Animalistic, Infestation, Infiltrators, Teleport">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -5501,7 +5663,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Infestation, Infiltrators, Teleport, Plague Zombies</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Animalistic, Fearless, Infestation, Infiltrators, Teleport</characteristic>
       </characteristics>
     </profile>
     <profile id="d328-8ad1-b444-8458" name="Plaguebearers of Nurgle" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -5521,7 +5683,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Invulnerable Save">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Expendable, Invulnerable Save">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -5548,7 +5710,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Summoning Cost (1), Expendable</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Expendable, Invulnerable Save, Summoning Cost (1)</characteristic>
       </characteristics>
     </profile>
     <profile id="74b3-c732-24af-4b45" name="Renegade Ogryn" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -5562,7 +5724,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP6+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Strong enough to wield heavy stubber in same manner as other troops use pistols</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
     <profile id="80ac-a49f-e96e-341c" name="Rough Riders" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
@@ -5654,12 +5816,31 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a8c-6d6d-2c86-8b33" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Hellblades&lt;BR&gt;&lt;BR&gt;Lascannon&lt;BR&gt;&lt;BR&gt;Psycannon">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Titan Killer (D3), +2A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="Assault Weapon&lt;BR&gt;&lt;BR&gt;AT5+&lt;BR&gt;&lt;BR&gt;MW4+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="(contact)&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;45cm">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <characteristics>
@@ -5699,13 +5880,6 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
       </characteristics>
     </profile>
     <profile id="166b-0eb8-5cf4-483b" name="Thunderbolt Fighter" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Jink">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Fighter-bomber</characteristic>
@@ -5763,14 +5937,14 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">War Engine, Aircraft</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">Bomber</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
+        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">6+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Flame Cannon&lt;BR&gt;&lt;BR&gt;2x Lascannon&lt;BR&gt;&lt;BR&gt;Lascannon&lt;BR&gt;&lt;BR&gt;Firestorm Bombs</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT4+/AA4+&lt;BR&gt;&lt;BR&gt;AT5+/AA5+&lt;BR&gt;&lt;BR&gt;AT5+/AA5+&lt;BR&gt;&lt;BR&gt;D3+1BP</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Rear Arc&lt;BR&gt;&lt;BR&gt;Ignore Cover, Fixed Forward Arc</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Reinforced Armour</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Flame Cannon&lt;BR&gt;&lt;BR&gt;Twin Lascannon&lt;BR&gt;&lt;BR&gt;Firestorm Bombs</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;15cm</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT4+/AA4+&lt;BR&gt;&lt;BR&gt;AT4+&lt;BR&gt;&lt;BR&gt;D3+1BP</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover, Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover, Fixed Forward Arc</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">2</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Destroyed</characteristic>
       </characteristics>
@@ -5818,10 +5992,10 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Warp Flames of Tzeentch&lt;BR&gt;&lt;BR&gt;Arcane Cannons&lt;BR&gt;&lt;BR&gt;Beam of Power&lt;BR&gt;and</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;60cm&lt;BR&gt;and (15cm)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">3BP&lt;BR&gt;&lt;BR&gt;3x AP4+/AT4+&lt;BR&gt;&lt;BR&gt;MW3+&lt;BR&gt;and Small Arms</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer (D3), Ignore Cover&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">3x Arcane Cannons&lt;BR&gt;&lt;BR&gt;Beam of Power&lt;BR&gt;&lt;BR&gt;Warp Flames of Tzeentch&lt;BR&gt;and</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;60cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;and (15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT4+&lt;BR&gt;&lt;BR&gt;MW3+&lt;BR&gt;&lt;BR&gt;3BP&lt;BR&gt;and Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Titan Killer (D3), Ignore Cover&lt;BR&gt;and Macro-weapon, +1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Invulnerable Save, Reinforced Armour, Skimmer, Thick Rear Armour</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">6</characteristic>
         <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Warp Palace</characteristic>
@@ -5888,7 +6062,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Battle Cannon&lt;BR&gt;&lt;BR&gt;Twin Reaper Autocannon&lt;BR&gt;&lt;BR&gt;Heavy Flamer&lt;BR&gt;and&lt;BR&gt;&lt;BR&gt;Battle Claws</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Battle Cannon&lt;BR&gt;&lt;BR&gt;Defiler Reaper Autocannons&lt;BR&gt;&lt;BR&gt;Heavy Flamer&lt;BR&gt;and&lt;BR&gt;&lt;BR&gt;Battle Claws</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;15cm&lt;BR&gt;and (15cm)&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AT4+&lt;BR&gt;&lt;BR&gt;AP3+/AT5+&lt;BR&gt;&lt;BR&gt;AP4+&lt;BR&gt;and Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapon</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;or Ignore Cover, +1A&lt;BR&gt;&lt;BR&gt;Macro Weapon, +1A</characteristic>
@@ -5909,6 +6083,11 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
           </conditionGroups>
         </modifier>
         <modifier type="set" field="3755f816-2110-e470-2e5f-20ba636cb7f1" value="5+">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Commander, Fearless, Inspiring, Invulnerable Save, Jump Packs, Leader, Reinforced Armour, Teleport, Thick Rear Armour">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -5954,7 +6133,7 @@ Alternatively, a unit with Augmented Summoning may be sacrificed when their pare
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Ignore Cover&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Infiltrator, Invulnerable Save, Reinforced Armour, Walker (Titan)</characteristic>
         <characteristic name="DC" typeId="fb51-1ee4-ea0e-41eb">3</characteristic>
-        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Very Large Explosion</characteristic>
+        <characteristic name="Crit" typeId="3c70-22c1-1ecf-35c4">Explosion</characteristic>
       </characteristics>
     </profile>
     <profile id="1a72-f963-06fa-9023" name="Blight Drone" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">

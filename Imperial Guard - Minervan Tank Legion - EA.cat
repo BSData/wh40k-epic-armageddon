@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3625-0eb0-4157-8192" name="Imperial Guard: Minervan Tank Legion Armoured Regiment" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3625-0eb0-4157-8192" name="Imperial Guard: Minervan Tank Legion Armoured Regiment" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="37" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -140,21 +140,34 @@
       <categoryLinks>
         <categoryLink id="cc6b-6987-a510-1bef-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="2c21-9094-cfeb-3ebc" name="Medusa" page="0" hidden="false" collective="false" import="true" type="model">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e64e-9418-31e2-74b3" name="Artillery Pieces" hidden="false" collective="false" import="true" defaultSelectionEntryId="c57d-79f4-4273-a4be">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9eb3-6083-8190-ae98" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5584-d36a-81e4-038d" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="ba29-9025-f49e-26c8" hidden="false" targetId="3cae-16a4-cd6b-87dc" type="profile"/>
-            <infoLink id="be94-523a-45b4-8d9f" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="c57d-79f4-4273-a4be" name="3x Medusa" page="0" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="8be6-ddcb-6767-ce98" name="Medusa" hidden="false" targetId="3cae-16a4-cd6b-87dc" type="profile"/>
+                <infoLink id="0cad-38ce-3a3e-960b" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6c0a-3095-1948-09ca" name="6x Medusa" page="0" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="3750-d5d8-c6e4-bbf9" name="Medusa" hidden="false" targetId="3cae-16a4-cd6b-87dc" type="profile"/>
+                <infoLink id="fdc0-3299-56eb-0307" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="100.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="8d90-bec9-5fd3-c44f" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
       </entryLinks>
@@ -566,40 +579,69 @@
       <categoryLinks>
         <categoryLink id="62a9-5862-b820-1670-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0cf5-0643-13ba-ea29" name="add 4 Tanks" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f6ae-20fa-12d5-2ffc" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="145.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d8f8-a8e3-53b6-bd70" name="Tanks" hidden="false" collective="false" import="true" defaultSelectionEntryId="462c-3da6-a9f4-c82c">
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="10.0">
+              <conditions>
+                <condition field="selections" scope="62a9-5862-b820-1670" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cf5-0643-13ba-ea29" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="minSelections" value="10.0">
+              <conditions>
+                <condition field="selections" scope="62a9-5862-b820-1670" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cf5-0643-13ba-ea29" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="c939-88fe-8cec-5cff" name="Rare Tanks" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="maxSelections" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="62a9-5862-b820-1670" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cf5-0643-13ba-ea29" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <entryLinks>
                 <entryLink id="fc42-ad2e-f370-3926" name="Vanquisher" hidden="false" collective="false" import="true" targetId="a357-521e-c2c7-7f0f" type="selectionEntry"/>
-                <entryLink id="7eff-44f6-8a12-40ea" hidden="false" collective="false" import="true" targetId="f7c0-32aa-0714-58e9" type="selectionEntry"/>
-                <entryLink id="0220-9ff6-0da9-9ae8" hidden="false" collective="false" import="true" targetId="14c5-42c8-6841-f107" type="selectionEntry"/>
+                <entryLink id="7eff-44f6-8a12-40ea" name="Executioner" hidden="false" collective="false" import="true" targetId="f7c0-32aa-0714-58e9" type="selectionEntry"/>
+                <entryLink id="0220-9ff6-0da9-9ae8" name="Destroyer Tank Hunter" hidden="false" collective="false" import="true" targetId="14c5-42c8-6841-f107" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="462c-3da6-a9f4-c82c" hidden="false" collective="false" import="true" targetId="7e1b-e344-faa2-a4d8" type="selectionEntry"/>
-            <entryLink id="17b8-3d81-6f4f-3f82" hidden="false" collective="false" import="true" targetId="5c5c-4dca-4685-1962" type="selectionEntry"/>
-            <entryLink id="fdd3-6d1b-c123-c4cc" hidden="false" collective="false" import="true" targetId="772a-60f9-4e66-fe93" type="selectionEntry"/>
-            <entryLink id="8d31-32cb-6634-de38" hidden="false" collective="false" import="true" targetId="70f5-39f6-3f61-e544" type="selectionEntry"/>
-            <entryLink id="8257-0bf5-7bd4-a4ca" hidden="false" collective="false" import="true" targetId="8652-0971-9e04-9340" type="selectionEntry"/>
+            <entryLink id="462c-3da6-a9f4-c82c" name="Leman Russ" hidden="false" collective="false" import="true" targetId="7e1b-e344-faa2-a4d8" type="selectionEntry"/>
+            <entryLink id="17b8-3d81-6f4f-3f82" name="Demolisher" hidden="false" collective="false" import="true" targetId="5c5c-4dca-4685-1962" type="selectionEntry"/>
+            <entryLink id="fdd3-6d1b-c123-c4cc" name="Conqueror" hidden="false" collective="false" import="true" targetId="772a-60f9-4e66-fe93" type="selectionEntry"/>
+            <entryLink id="8d31-32cb-6634-de38" name="Exterminator" hidden="false" collective="false" import="true" targetId="70f5-39f6-3f61-e544" type="selectionEntry"/>
+            <entryLink id="8257-0bf5-7bd4-a4ca" name="Thunderer" hidden="false" collective="false" import="true" targetId="8652-0971-9e04-9340" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="b15a-d502-444b-c3ce" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
         <entryLink id="5e2d-a73f-1038-f754" name="Company Upgrades" hidden="false" collective="false" import="true" targetId="3e72-f1db-964b-13f4" type="selectionEntryGroup"/>
-        <entryLink id="565f-a2ba-394a-9b7c" hidden="false" collective="false" import="true" targetId="7897-7260-4ef3-6f6a" type="selectionEntry"/>
+        <entryLink id="565f-a2ba-394a-9b7c" name="Amphibious" hidden="false" collective="false" import="true" targetId="7897-7260-4ef3-6f6a" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="425.0"/>
+        <cost name="pts" typeId="points" value="280.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5249-4359-f242-ac75" name="Tank Company" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -647,44 +689,6 @@
         <entryLink id="e989-a1a7-7691-6315" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
         <entryLink id="db1d-ae70-44d0-b5b6" name="Company Upgrades" hidden="false" collective="false" import="true" targetId="3e72-f1db-964b-13f4" type="selectionEntryGroup"/>
         <entryLink id="5612-8c3b-99a4-11d1" name="Amphibious" hidden="false" collective="false" import="true" targetId="7897-7260-4ef3-6f6a" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="280.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e4a1-3bff-4a14-7dc7" name="Tank Platoon" page="0" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="e4a1-3bff-4a14-7dc7-2e76-3c1e-639f-a0a7" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="69ca-e950-e9c1-198c" name="Tanks" hidden="false" collective="false" import="true" defaultSelectionEntryId="991f-ab16-4a4b-051e">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="5229-eb43-3521-419e" name="Rare Tank" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="cd62-2a40-3bba-2477" hidden="false" collective="false" import="true" targetId="a357-521e-c2c7-7f0f" type="selectionEntry"/>
-                <entryLink id="ebf9-14c5-52b9-ed75" hidden="false" collective="false" import="true" targetId="f7c0-32aa-0714-58e9" type="selectionEntry"/>
-                <entryLink id="4b6f-c488-e9bb-e6ed" hidden="false" collective="false" import="true" targetId="14c5-42c8-6841-f107" type="selectionEntry"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink id="991f-ab16-4a4b-051e" hidden="false" collective="false" import="true" targetId="7e1b-e344-faa2-a4d8" type="selectionEntry"/>
-            <entryLink id="5978-0903-a54e-b5b2" hidden="false" collective="false" import="true" targetId="5c5c-4dca-4685-1962" type="selectionEntry"/>
-            <entryLink id="af01-1609-8d74-7b50" hidden="false" collective="false" import="true" targetId="772a-60f9-4e66-fe93" type="selectionEntry"/>
-            <entryLink id="d1d5-4ac4-155b-17e2" hidden="false" collective="false" import="true" targetId="70f5-39f6-3f61-e544" type="selectionEntry"/>
-            <entryLink id="8e14-8b76-ef40-11c9" hidden="false" collective="false" import="true" targetId="8652-0971-9e04-9340" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="e58c-776b-db84-2b6d" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="280.0"/>
@@ -902,6 +906,53 @@
         <cost name="pts" typeId="points" value="225.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2ca8-0217-9236-a508" name="Hellhound Platoon" page="0" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="675f-5992-a872-22da" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="eaff-2ce4-c48b-abcc" name="Hellhound" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0b18-cf5c-8db8-912b" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5249-3145-41c7-fed0" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="f323-353c-7730-d201" name="Hellhound" hidden="false" targetId="b24a-d2f2-9e88-9ff7" type="profile"/>
+            <infoLink id="8893-f7a5-0586-bc6a" name="Ignore Cover" hidden="false" targetId="5ece-1e53-bc04-0056" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="eb43-2724-4d0e-081d" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="250.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="487b-3b59-2cec-1625" name="Destroyer Squadron" page="0" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="87ca-168c-dd29-7883" hidden="false" targetId="2e76-3c1e-639f-a0a7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f43f-178c-3044-fa3d" name="Destroyer Tank Hunter" page="0" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8d3a-1a8c-8f7e-7567" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f09f-ddf3-9b9e-89ef" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="fd1b-0252-6c4b-35a7" name="Destroyer Tank Hunter" hidden="false" targetId="7404-d3f5-a269-f0a5" type="profile"/>
+            <infoLink id="b348-9827-7e1d-eeb6" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+            <infoLink id="ea69-c4b4-aa65-e825" name="Sniper" hidden="false" targetId="61e7-0cbb-6cc9-189d" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="505e-838b-c611-cc20" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="fb63-9f63-ac44-65ec" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry"/>
@@ -1004,12 +1055,12 @@
     </selectionEntry>
     <selectionEntry id="14c5-42c8-6841-f107" name="Destroyer Tank Hunter" page="0" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="12d4-f05a-33d1-221e" hidden="false" targetId="7404-d3f5-a269-f0a5" type="profile"/>
+        <infoLink id="12d4-f05a-33d1-221e" name="Destroyer Tank Hunter" hidden="false" targetId="7404-d3f5-a269-f0a5" type="profile"/>
         <infoLink id="26bb-b34b-bddc-deb0" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
-        <infoLink id="616a-37bf-d7fc-bf76" hidden="false" targetId="ff58-2b38-000d-c57b" type="rule"/>
+        <infoLink id="616a-37bf-d7fc-bf76" name="Sniper" hidden="false" targetId="61e7-0cbb-6cc9-189d" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="70.0"/>
+        <cost name="pts" typeId="points" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4a86-7376-5d23-e95d" name="EpicUK" hidden="true" collective="false" import="true" type="upgrade">
@@ -1404,7 +1455,7 @@ Fanatic #02
 Fanatic #13</description>
     </rule>
     <rule id="e630-5317-b90b-398f" name="NetEA" hidden="false">
-      <description>netea-tournament-pack-2020-06-26</description>
+      <description>netea-tournament-pack-2022-04-22</description>
     </rule>
     <rule id="0fd0-0a4c-691c-ee63" name="Strategy Rating &amp; Initiative (MTL)" hidden="false">
       <modifiers>
@@ -1574,7 +1625,7 @@ Valkyrie: 2 Infantry units without Jump Packs or Mounted.</description>
         <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Laser Destroyer</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">75cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AT4+</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Titan Killer</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Sniper</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour</characteristic>
       </characteristics>
     </profile>

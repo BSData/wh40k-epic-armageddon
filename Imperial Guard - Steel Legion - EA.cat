@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="06db-da51-9f9c-4399" name="Imperial Guard: Armageddon Steel Legion" revision="41" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="06db-da51-9f9c-4399" name="Imperial Guard: Armageddon Steel Legion" revision="42" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e6de-b411-49c2-a59c" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -673,8 +673,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -723,7 +722,6 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b56b-3825-52c1-28cc" type="instanceOf"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -1634,8 +1632,7 @@
           <selectionEntries>
             <selectionEntry id="4891-e1bd-9bd5-2bfb" name="2x Thunderbolt Fighter" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="c1be-34f5-212d-a906" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile"/>
-                <infoLink id="ed41-9f8e-1a48-018e" hidden="false" targetId="ddbd-52ae-0f2e-44ed" type="rule"/>
+                <infoLink id="c1be-34f5-212d-a906" name="Thunderbolt Fighter" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1653,8 +1650,7 @@
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minSelections" type="min"/>
               </constraints>
               <infoLinks>
-                <infoLink id="c170-c2be-2134-c7fa" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile"/>
-                <infoLink id="cfda-c3d9-f13c-a031" hidden="false" targetId="ddbd-52ae-0f2e-44ed" type="rule"/>
+                <infoLink id="c170-c2be-2134-c7fa" name="Thunderbolt Fighter" hidden="false" targetId="166b-0eb8-5cf4-483b" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="150.0"/>
@@ -1771,7 +1767,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="271c-473e-39e0-776d" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
+        <entryLink id="271c-473e-39e0-776d" name="Commissar" hidden="false" collective="false" import="true" targetId="4032-952e-3f0d-904e" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1941,7 +1937,15 @@
         </modifier>
       </modifiers>
     </infoLink>
-    <infoLink id="5d49-5758-24d1-1de0" name="Commissars" hidden="false" targetId="24ed-2541-dcdd-0744" type="rule"/>
+    <infoLink id="5d49-5758-24d1-1de0" name="Commissars (F-ERC)" hidden="false" targetId="7338-851b-bc75-8048" type="rule">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="828e-24cb-4a24-459d" name="2x Chimera" page="0" hidden="false" collective="false" import="true" type="model">
@@ -2793,34 +2797,8 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="24ed-2541-dcdd-0744" name="Commissars" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Commissaires: Pour chaque grande compagnie de la Garde qu&apos;inclut votre armée (QG Régimentaire, compagnie mécanisée, compagnie d&apos;infanterie, compagnie d&apos;artillerie, compagnie blindée, compagnie de blindés supers lourds) un commissaire est automatiquement intégré dans leur effectif. De plus vous pouvez ajouter un commissaire par tranche même incomplète de 1000 pts d’armée dans une formation d’appui.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Kommissare: Für jede größere Garde-Kompanie Ihrer Armee (Regimentshauptquartier, Mechanisierte Kompanie, Infanterie-Kompanie, Artillerie-Kompanie, Gepanzerte Kompanie, Superschwere Panzer-Kompanie) wird automatisch ein Kommissar in ihre Mannschaft integriert. Darüber hinaus können Sie einen Kommissar für jeden vollen 1000 Pkt in der Armee hinzufügen. Sie können keinen Kommissar zu einer imperialen Verbündetenformation hinzufügen.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="description" value="Comisarios: Para cada compañía de la Guardia Mayor incluida en su ejército (Cuartel General del Regimiento, Compañía Mecanizada, Compañía de Infantería, Compañía de Artillería, Compañía de Blindados, Compañía de Blindados Superpesados) un Comisario se integra automáticamente en su plantilla. Además, puedes añadir un comisario por cada 1000 puntos del ejército.  • No pueden ser asignados a formaciones de apoyo de Titanes o de la Armada Imperial.">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>For every major Guard company included in your army (Regimental HQ, Mechanised Company, Infantry Company, Artillery Company, Armoured Company, Super Heavy Armoured Company) a Commissar is automatically integrated into their manpower. In addition, you can add a Commissar for every 1000pts, or part thereof, in the army.
-They may not be attached to Titan or Imperial Navy support formations.</description>
-    </rule>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>ASTRA MILITARUM - FERC MASTER II - finale 1.0 #23/05/2018</description>
+      <description>Codex Légion d_Acier.docx #EAFR - REV 1.1</description>
     </rule>
     <rule id="d9bf-a5c0-86f1-9016" name="EpicUK" hidden="false">
       <description>CodexImperialGuard #031119
@@ -3268,6 +3246,28 @@ Valkyrie: 2 Stormtrooper units.</description>
       </characteristics>
     </profile>
     <profile id="ecad-5231-faed-29fe" name="Infantry" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Solo una unità ogni due ha un cannone automatico. Conta il numero di unità di fanteria che possono sparare alla stessa formazione bersaglio e dividi per due (arrotondando per eccesso) per trovare il numero di colpi di cannone automatico che puoi sparare.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5c97-ef8b-a229-1083" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Sólo una de cada dos unidades de la formación tiene un Cañón Automático.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3715-341b-881c-9c4c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Une unité sur deux, arrondi au supérieur, peut tirer à l&apos;autocanon.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="798a-d9b8-47b6-c74c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Jede zweite Einheit, aufgerundet, kann mit Autokanonen schießen.">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8220-3d37-43f7-71e8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3495,13 +3495,6 @@ Valkyrie: 2 Stormtrooper units.</description>
       </characteristics>
     </profile>
     <profile id="80ac-a49f-e96e-341c" name="Rough Riders" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="append" field="9be9-cd8c-f54b-69d7" value=", peuvent être Motos Impériales">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">20cm</characteristic>
@@ -3558,6 +3551,13 @@ Valkyrie: 2 Stormtrooper units.</description>
       </characteristics>
     </profile>
     <profile id="c8fc-cb97-45f9-e57d" name="Snipers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="name" value="Ratlings">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3572,6 +3572,13 @@ Valkyrie: 2 Stormtrooper units.</description>
       </characteristics>
     </profile>
     <profile id="5541-c431-80e7-293f" name="Storm Troopers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
+      <modifiers>
+        <modifier type="set" field="name" value="Tempestus Scions">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
@@ -3660,7 +3667,7 @@ Valkyrie: 2 Stormtrooper units.</description>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;&lt;BR&gt;30cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+/AA5+&lt;BR&gt;&lt;BR&gt;AP5+/AT6+/AA5+&lt;BR&gt;&lt;BR&gt;AT4+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jink</characteristic>
+        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"></characteristic>
       </characteristics>
     </profile>
     <profile id="d96c-c7ca-ac15-3bd9" name="Valkyrie" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">

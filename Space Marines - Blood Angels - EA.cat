@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="28f5-20e4-fddb-f224" name="Space Marines: Blood Angels" revision="37" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="28f5-20e4-fddb-f224" name="Space Marines: Blood Angels" revision="38" battleScribeVersion="2.03" authorUrl="http://battlescribedata.appspot.com/#/repo/wh40k-epic-armageddon" library="false" gameSystemId="8f10-ee06-8dc1-beb6" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5a05-95e5-0ba7-4228" name="-Community-" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -172,7 +172,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="3cb6-9482-207b-231d" hidden="false" targetId="8d88-e2c1-f4c4-9c02" type="profile"/>
+                <infoLink id="3cb6-9482-207b-231d" name="Tactical Assault" hidden="false" targetId="8d88-e2c1-f4c4-9c02" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -392,7 +392,7 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="4071-bc5b-df5d-6ae7" hidden="false" targetId="3038-b6aa-880c-4514" type="profile"/>
+            <infoLink id="4071-bc5b-df5d-6ae7" name="Caestus Assault Ram" hidden="false" targetId="3038-b6aa-880c-4514" type="profile"/>
             <infoLink id="79ba-9c04-16f4-5683" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule"/>
             <infoLink id="7415-d349-3be3-bcde" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
             <infoLink id="b093-4084-f27d-1816" hidden="false" targetId="3cc7-ce02-a9fb-e504" type="rule"/>
@@ -420,9 +420,14 @@
           </conditionGroups>
         </modifier>
         <modifier type="set" field="minInForce" value="1.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -456,7 +461,7 @@
                 <cost name="pts" typeId="points" value="300.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8118-6d2d-e845-98d0" name="4x Death Company w/ Jump Packs" hidden="false" collective="false" import="true" type="unit">
+            <selectionEntry id="8118-6d2d-e845-98d0" name="4x Death Company Assault Squad" hidden="false" collective="false" import="true" type="unit">
               <modifiers>
                 <modifier type="set" field="points" value="325">
                   <conditions>
@@ -465,7 +470,7 @@
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink id="517f-a099-963f-39bf" hidden="false" targetId="ddd3-9cc1-6732-2341" type="profile"/>
+                <infoLink id="517f-a099-963f-39bf" name="Death Company (Assault)" hidden="false" targetId="ddd3-9cc1-6732-2341" type="profile"/>
                 <infoLink id="f545-4fa2-d8fa-d3e8" hidden="false" targetId="e6dc-cd5e-1867-a27e" type="rule"/>
                 <infoLink id="308c-e076-d8b1-4098" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
                 <infoLink id="f757-d678-0386-5d79" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule">
@@ -477,7 +482,6 @@
                     </modifier>
                   </modifiers>
                 </infoLink>
-                <infoLink id="5f59-c432-c911-ca6c" name="Death Company (Assault)" hidden="false" targetId="ba31-0115-a204-d384" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="300.0"/>
@@ -492,7 +496,7 @@
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink id="a889-546f-bc3f-ee03" name="Death Company" hidden="false" targetId="6ada-78cf-4521-64f2" type="profile"/>
+                <infoLink id="a889-546f-bc3f-ee03" name="Death Company" hidden="false" targetId="7b48-a281-4586-4587" type="profile"/>
                 <infoLink id="c38b-b7c8-cde1-7229" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
               </infoLinks>
               <costs>
@@ -631,9 +635,9 @@
                 <cost name="pts" typeId="points" value="75.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7335-9155-7c1a-d69b" name="Death Company w/ Jump Packs" hidden="false" collective="false" import="true" type="unit">
+            <selectionEntry id="7335-9155-7c1a-d69b" name="Death Company Assault Squad" hidden="false" collective="false" import="true" type="unit">
               <infoLinks>
-                <infoLink id="4adc-e1c4-bed0-c2ac" hidden="false" targetId="ddd3-9cc1-6732-2341" type="profile"/>
+                <infoLink id="4adc-e1c4-bed0-c2ac" name="Death Company (Assault)" hidden="false" targetId="ddd3-9cc1-6732-2341" type="profile"/>
                 <infoLink id="0349-63dc-20af-c90c" hidden="false" targetId="e6dc-cd5e-1867-a27e" type="rule"/>
                 <infoLink id="794a-4e7f-0f53-39ae" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
                 <infoLink id="fa7b-3e2e-8199-caec" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
@@ -714,9 +718,9 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="74bb-37ef-c792-eccc" name="4x Death Company w/ Jump Packs" hidden="false" collective="false" import="true" type="unit">
+            <selectionEntry id="74bb-37ef-c792-eccc" name="4x Death Company Assault Squad" hidden="false" collective="false" import="true" type="unit">
               <infoLinks>
-                <infoLink id="4b11-e01d-4535-9b6b" hidden="false" targetId="ddd3-9cc1-6732-2341" type="profile"/>
+                <infoLink id="4b11-e01d-4535-9b6b" name="Death Company (Assault)" hidden="false" targetId="ddd3-9cc1-6732-2341" type="profile"/>
                 <infoLink id="3425-61ec-1dc7-64f3" hidden="false" targetId="e6dc-cd5e-1867-a27e" type="rule"/>
                 <infoLink id="8464-e66b-1cd8-1715" hidden="false" targetId="c328-149b-da04-62e7" type="rule"/>
                 <infoLink id="7f37-c13f-c167-4f60" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
@@ -1123,7 +1127,7 @@
       </modifiers>
       <infoLinks>
         <infoLink id="7802-7f2a-addf-46cf" name="Landing Craft" hidden="false" targetId="e1d5-7447-841f-991b" type="profile"/>
-        <infoLink id="7d44-24bb-34ec-a023" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule"/>
+        <infoLink id="7d44-24bb-34ec-a023" name="Planetfall" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule"/>
         <infoLink id="2906-4035-88b7-23ab" name="Fearless" hidden="false" targetId="c328-149b-da04-62e7" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -1133,9 +1137,9 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="94be-93ab-7c35-76c4" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
-        <infoLink id="613e-1a41-3b3a-c809" hidden="false" targetId="6c01-bdba-51ff-9f6a" type="rule"/>
-        <infoLink id="ad40-4743-30b2-3114" hidden="false" targetId="3cc7-ce02-a9fb-e504" type="rule"/>
+        <infoLink id="94be-93ab-7c35-76c4" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="613e-1a41-3b3a-c809" name="Critical Hit: Landing Craft" hidden="false" targetId="6c01-bdba-51ff-9f6a" type="rule"/>
+        <infoLink id="ad40-4743-30b2-3114" name="Transport (BA)" hidden="false" targetId="3cc7-ce02-a9fb-e504" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="30c9af6f-0db8-1beb-f2e8-4105ab03d695-e551-c527-434e-59a5" hidden="false" targetId="e551-c527-434e-59a5" primary="true"/>
@@ -1158,11 +1162,12 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="1708-fb56-ff8b-5f0b" name="*Landing Craft" hidden="false" targetId="e1d5-7447-841f-991b" type="profile"/>
+        <infoLink id="1708-fb56-ff8b-5f0b" name="Landing Craft" hidden="false" targetId="e1d5-7447-841f-991b" type="profile"/>
         <infoLink id="27b5-fd19-e06d-42ab" hidden="false" targetId="0c59-ec7b-3acd-ae86" type="rule"/>
-        <infoLink id="5674-866f-18e6-050f" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
+        <infoLink id="5674-866f-18e6-050f" name="Reinforced Armour" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="7946-fce1-547e-bda1" hidden="false" targetId="6c01-bdba-51ff-9f6a" type="rule"/>
         <infoLink id="b85e-d278-aca5-a1c0" hidden="false" targetId="3cc7-ce02-a9fb-e504" type="rule"/>
+        <infoLink id="2baa-3178-2b4f-b7ef" name="Thick Rear Armour" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="08b7-0892-4d1f-aa7e" name="New CategoryLink" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
@@ -1200,7 +1205,7 @@
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="89dc-bdea-9d1a-a158" hidden="false" targetId="bf0c-edd7-606c-3429" type="profile"/>
+            <infoLink id="89dc-bdea-9d1a-a158" name="Marauder Bomber" hidden="false" targetId="bf0c-edd7-606c-3429" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -1478,7 +1483,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="2eec-dc00-ee7f-0b85" hidden="false" targetId="291e-f62b-b30a-0d8a" type="profile"/>
+                <infoLink id="2eec-dc00-ee7f-0b85" name="Sanguinary Guard" hidden="false" targetId="291e-f62b-b30a-0d8a" type="profile"/>
                 <infoLink id="e99f-f6c6-fcac-b547" hidden="false" targetId="e6dc-cd5e-1867-a27e" type="rule"/>
                 <infoLink id="acc6-af75-5fa1-27b7" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
               </infoLinks>
@@ -1490,7 +1495,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7636-71e8-4fba-84a4" hidden="false" collective="false" import="true" targetId="05d89171-b83d-3303-dd0a-51f9a38a582a" type="selectionEntry">
+        <entryLink id="7636-71e8-4fba-84a4" name="Supreme Commander" hidden="false" collective="false" import="true" targetId="05d89171-b83d-3303-dd0a-51f9a38a582a" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="cd15-bd98-fc84-ea39" value="1">
               <conditions>
@@ -1643,17 +1648,9 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="3428-81c2-a7c6-6771" hidden="false" collective="false" import="true" targetId="4e1f-46d7-c8f1-e11b" type="selectionEntry"/>
-            <entryLink id="addb-a666-ff33-4d63" hidden="false" collective="false" import="true" targetId="9137-5e3b-d46c-79a2" type="selectionEntry"/>
-            <entryLink id="07bf-1075-0555-e2d9" hidden="false" collective="false" import="true" targetId="2d99-95f5-83af-7bd9" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="maxSelections" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="fb1e-551f-f979-05d8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="adc4-875f-00a8-3f39" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink id="3428-81c2-a7c6-6771" name="Razorback w/ Twin Heavy Bolter" hidden="false" collective="false" import="true" targetId="4e1f-46d7-c8f1-e11b" type="selectionEntry"/>
+            <entryLink id="addb-a666-ff33-4d63" name="Razorback w/ Twin Lascannon" hidden="false" collective="false" import="true" targetId="9137-5e3b-d46c-79a2" type="selectionEntry"/>
+            <entryLink id="07bf-1075-0555-e2d9" name="Rhino" hidden="false" collective="false" import="true" targetId="2d99-95f5-83af-7bd9" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="1fdc-74f0-e2a4-fc5a" name="Squads" hidden="false" collective="false" import="true" defaultSelectionEntryId="890b-b213-37a7-6788">
@@ -1688,7 +1685,6 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="6bac-9919-912f-16a3" name="Commander" hidden="false" collective="false" import="true" targetId="3a7b9a1a-f975-ad77-cb76-27f4743282d3" type="selectionEntryGroup"/>
-        <entryLink id="3cde-e08f-2b8b-f878" name="Free Dreadnought" hidden="false" collective="false" import="true" targetId="adc4-875f-00a8-3f39" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150.0"/>
@@ -1849,7 +1845,7 @@
         <cost name="pts" typeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d7a2-86ca-7453-eca5" name="Strike Cruiser" page="0" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="d7a2-86ca-7453-eca5" name="Orbital Support" page="0" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -1866,7 +1862,7 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f3c5-f0ea-0338-6ab4" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="d7a2-86ca-7453-eca5-7bf8-d208-dd76-9088" hidden="false" targetId="7bf8-d208-dd76-9088" primary="true"/>
+        <categoryLink id="85a8-d674-ba26-e2ba" name="New CategoryLink" hidden="false" targetId="4f35-97c0-fae0-922d" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="c3b8-56e9-4d63-c717" name="Spacecraft" hidden="false" collective="false" import="true" targetId="3f0f-69b7-eff7-69de" type="selectionEntryGroup"/>
@@ -3092,12 +3088,12 @@
         <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6283-0160-b449-048d" name="Land Raider Redeemer" page="0" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="6283-0160-b449-048d" name="*Land Raider Redeemer" page="0" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bab7-bda7-2237-44a6" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="a64b-f486-2ac1-cc7b" hidden="false" targetId="1608-d3e4-fde4-7abf" type="profile"/>
+        <infoLink id="a64b-f486-2ac1-cc7b" name="Land Raider Redeemer" hidden="false" targetId="1608-d3e4-fde4-7abf" type="profile"/>
         <infoLink id="6a2a-a653-a625-567a" hidden="false" targetId="3cc7-ce02-a9fb-e504" type="rule"/>
         <infoLink id="01ed-f919-b88a-684d" hidden="false" targetId="20f3-57c2-c88f-3cf8" type="rule"/>
         <infoLink id="285a-2e5b-f8b1-3476" hidden="false" targetId="cf8a-e7e4-96bf-db1b" type="rule"/>
@@ -3199,12 +3195,12 @@
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cd15-bd98-fc84-ea39" type="min"/>
       </constraints>
       <infoLinks>
-        <infoLink id="188b-455b-78c7-0ab0" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
-        <infoLink id="2a39-7be1-7561-91d9" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
-        <infoLink id="aceb-6712-efe2-ddde" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
-        <infoLink id="2222-9686-e389-6103" name="*Supreme Commander" hidden="false" targetId="f22a-34df-b3dd-b2b4" type="profile"/>
-        <infoLink id="b6a3-1405-67e2-d2d7" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
-        <infoLink id="0b1a-7a97-7b6a-5279" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
+        <infoLink id="188b-455b-78c7-0ab0" name="Invulnerable Save" hidden="false" targetId="4537-37b1-2468-901a" type="rule"/>
+        <infoLink id="2a39-7be1-7561-91d9" name="Leader" hidden="false" targetId="41f1-f905-05ae-7828" type="rule"/>
+        <infoLink id="aceb-6712-efe2-ddde" name="Supreme Commander" hidden="false" targetId="1512-ccaf-4038-276f" type="rule"/>
+        <infoLink id="2222-9686-e389-6103" name="Supreme Commander" hidden="false" targetId="f22a-34df-b3dd-b2b4" type="profile"/>
+        <infoLink id="b6a3-1405-67e2-d2d7" name="Macro-weapon" hidden="false" targetId="3513-6495-6d26-cb93" type="rule"/>
+        <infoLink id="0b1a-7a97-7b6a-5279" name="Commander" hidden="false" targetId="dac7-4499-b59f-ee4d" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
@@ -3741,7 +3737,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup id="5f13-6207-9360-000d" name="Land Raiders" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="e2f5-31b8-8252-0149" value="1">
+        <modifier type="set" field="e2f5-31b8-8252-0149" value="1.0">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3920,7 +3916,7 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ef57-e9ae-e813-7abe" name="F-ERC" hidden="false">
-      <description>Compendium Astartes 1.00  - FERC - 2019 #Compendium Index Astartes - Septembre 2019 - V 1.0</description>
+      <description>Codex Blood Angels.docx #EAFR - REV 1.0</description>
     </rule>
     <rule id="5064-fdd4-b104-73b9" name="Death Company" hidden="false">
       <modifiers>
@@ -4131,10 +4127,10 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">n/a</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">n/a</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">n/a</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Force Weapon&lt;BR&gt;&lt;BR&gt;Smite&lt;BR&gt;and</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(30cm)&lt;BR&gt;and (15cm)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;MW4+&lt;BR&gt;and Small Arms</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-&lt;BR&gt;and Macro-weapon, +1A</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Smite&lt;BR&gt;&lt;BR&gt;Force Weapon&lt;BR&gt;and</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(30cm)&lt;BR&gt;&lt;BR&gt;(contact)&lt;BR&gt;and (15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">MW4+&lt;BR&gt;&lt;BR&gt;Assault Weapons&lt;BR&gt;and Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A&lt;BR&gt;and Macro-weapon, +1A</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Invulnerable Save, Leader</characteristic>
       </characteristics>
     </profile>
@@ -4148,21 +4144,6 @@ Fanatic #13</description>
         <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="-&lt;BR&gt;&lt;BR&gt;+1A">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4182,30 +4163,35 @@ Fanatic #13</description>
     <profile id="8d88-e2c1-f4c4-9c02" name="Tactical Assault" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
+        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">-</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf"/>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d"/>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Chainswords</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
     </profile>
     <profile id="ab3f-5390-e599-540a" name="Attack Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="be964774-1659-c1e9-573f-be7c258d4b74" value="Infantry">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="118aae9d-af64-adcd-5622-4de4c3c5cb7a" value="30cm">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Mounted">
+        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4306,17 +4292,7 @@ Fanatic #13</description>
     </profile>
     <profile id="47eb-5f71-832d-a13e" name="Bike" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Bolters&lt;BR&gt;&lt;BR&gt;Chainsword">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4342,7 +4318,7 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">5+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Ram&lt;BR&gt;&lt;BR&gt;Magna Melta&lt;BR&gt;&lt;BR&gt;Firefury Missile Battery</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Caestus Ram&lt;BR&gt;&lt;BR&gt;Magna Melta&lt;BR&gt;&lt;BR&gt;Firefury Missile Launcher</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(contact)&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;Assault Weapons&lt;BR&gt;&lt;BR&gt;2BP</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Fixed Forward Arc, Macro-weapon&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc, One Shot</characteristic>
@@ -4381,7 +4357,7 @@ Fanatic #13</description>
     </profile>
     <profile id="7b48-a281-4586-4587" name="Death Company" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Bolters&lt;BR&gt;&lt;BR&gt;Chainswords">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4394,6 +4370,11 @@ Fanatic #13</description>
         <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="4+">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4417,7 +4398,7 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Fearless, Jump Packs">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4448,7 +4429,7 @@ Fanatic #13</description>
     </profile>
     <profile id="416f-bedf-27ed-4bde" name="Devastator" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x AP5+/AT5+">
+        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="2x AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Small Arms">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4458,7 +4439,7 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Weapons">
+        <modifier type="set" field="1160-63e7-57ca-722d" value="2x Heavy Weapons&lt;BR&gt;&lt;BR&gt;Bolters">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4469,9 +4450,14 @@ Fanatic #13</description>
           </conditions>
         </modifier>
         <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
           <conditions>
@@ -4618,7 +4604,7 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="0b1a118d-1f21-3fd1-9167-471a3032e35b" value="5+">
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Skyspear Missile Launcher">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4792,7 +4778,7 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Planetfall, Reinforced Armour, Transport">
+        <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Planetfall, Reinforced Armour, Thick Rear Armour, Transport">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -4994,21 +4980,6 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="1160-63e7-57ca-722d" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="-">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Armoured Vehicle</characteristic>
@@ -5030,10 +5001,10 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">3+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Master-crafted Weapons</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Glaive Encarmine&lt;BR&gt;&lt;BR&gt;Bolters</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Jump Packs</characteristic>
       </characteristics>
     </profile>
@@ -5044,7 +5015,7 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">6+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Vengeance Launcher&lt;BR&gt;&lt;BR&gt;2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Vengeance Missile Launcher&lt;BR&gt;&lt;BR&gt;2x Twin Lascannon&lt;BR&gt;&lt;BR&gt;Twin Heavy Bolter</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;45cm&lt;BR&gt;&lt;BR&gt;30cm</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">2BP&lt;BR&gt;&lt;BR&gt;AT4+/AA5+&lt;BR&gt;&lt;BR&gt;AP4+/AA5+</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc&lt;BR&gt;&lt;BR&gt;Fixed Forward Arc</characteristic>
@@ -5164,50 +5135,15 @@ Fanatic #13</description>
       </characteristics>
     </profile>
     <profile id="4bda-67e5-86bb-b58d" name="Tactical" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Bolters">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <characteristics>
         <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
         <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">4+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Missile Launcher</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Missile Launcher&lt;BR&gt;&lt;BR&gt;Bolters</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">45cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT6+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7"/>
       </characteristics>
@@ -5219,49 +5155,10 @@ Fanatic #13</description>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="append" field="b8cc-b32c-b8bd-ac4a" value="&lt;BR&gt;&lt;BR&gt;-">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Storm Bolters">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Fist&lt;BR&gt;&lt;BR&gt;Storm Bolters">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <characteristics>
@@ -5270,10 +5167,10 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">3+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">2x Assault Cannon&lt;BR&gt;&lt;BR&gt;Power Weapon&lt;BR&gt;&lt;BR&gt;Storm Bolters</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(contact)&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+/AT5+&lt;BR&gt;&lt;BR&gt;Assault Weapons&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
+        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">-&lt;BR&gt;&lt;BR&gt;Macro-weapon, +1A&lt;BR&gt;&lt;BR&gt;-</characteristic>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Reinforced Armour, Teleport, Thick Rear Armour</characteristic>
       </characteristics>
     </profile>
@@ -5508,7 +5405,7 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Flamers&lt;BR&gt;and&lt;BR&gt;&lt;BR&gt;Power Fist</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">MkI Flamers&lt;BR&gt;and&lt;BR&gt;&lt;BR&gt;Power Fists</characteristic>
         <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">15cm&lt;BR&gt;and (15cm)&lt;BR&gt;&lt;BR&gt;(contact)</characteristic>
         <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP4+&lt;BR&gt;and Small Arms&lt;BR&gt;&lt;BR&gt;Assault Weapons</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">Ignore Cover&lt;BR&gt;and Ignore Cover&lt;BR&gt;&lt;BR&gt;Macro-weapon, +2A</characteristic>
@@ -5543,82 +5440,12 @@ Fanatic #13</description>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Walker</characteristic>
       </characteristics>
     </profile>
-    <profile id="6ada-78cf-4521-64f2" name="Death Company" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">15cm</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Chainswords</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">+1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ba31-0115-a204-d384" name="Death Company (Assault)" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <characteristics>
-        <characteristic name="Type" typeId="be964774-1659-c1e9-573f-be7c258d4b74">Infantry</characteristic>
-        <characteristic name="Speed" typeId="118aae9d-af64-adcd-5622-4de4c3c5cb7a">30cm</characteristic>
-        <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">4+</characteristic>
-        <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">3+</characteristic>
-        <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Chainswords</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">(contact)</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">Assault Weapons</characteristic>
-        <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a">+1A</characteristic>
-        <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Fearless, Jump Packs</characteristic>
-      </characteristics>
-    </profile>
     <profile id="512c-7993-9558-3dfc" name="Scouts" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Shotguns">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Bolter&lt;BR&gt;&lt;BR&gt;Bolters">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <characteristics>
@@ -5627,54 +5454,26 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter&lt;BR&gt;&lt;BR&gt;Shotguns</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout</characteristic>
       </characteristics>
     </profile>
     <profile id="d1e0-a146-5371-f743" name="Scout Snipers" hidden="false" typeId="f68a073b-c562-ca93-961e-5cf373ae14cb" typeName="Unit">
       <modifiers>
-        <modifier type="append" field="1160-63e7-57ca-722d" value="&lt;BR&gt;&lt;BR&gt;Shotguns">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="f95f7011-da77-2eed-fd80-bca6fe0f1f7d" value="&lt;BR&gt;&lt;BR&gt;Small Arms">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="02c3b688-b804-6ce1-b101-b7f9436877bf" value="&lt;BR&gt;&lt;BR&gt;(15cm)">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a86-7376-5d23-e95d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5535-5d7a-519a-e9b4" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edea-8b4e-a6c5-af5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="9be9-cd8c-f54b-69d7" value="Infiltrators, Scout">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Sniper">
+        <modifier type="set" field="b8cc-b32c-b8bd-ac4a" value="Sniper&lt;BR&gt;&lt;BR&gt;-">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1160-63e7-57ca-722d" value="Heavy Bolter&lt;BR&gt;&lt;BR&gt;Bolters">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a9e-17ba-642a-dfd1" type="equalTo"/>
           </conditions>
@@ -5686,9 +5485,9 @@ Fanatic #13</description>
         <characteristic name="Armour" typeId="3755f816-2110-e470-2e5f-20ba636cb7f1">5+</characteristic>
         <characteristic name="CC" typeId="affeeb83-c6db-0a8c-e7ab-688f9a83d25c">4+</characteristic>
         <characteristic name="FF" typeId="0b1a118d-1f21-3fd1-9167-471a3032e35b">5+</characteristic>
-        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter</characteristic>
-        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm</characteristic>
-        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+</characteristic>
+        <characteristic name="Weapons" typeId="1160-63e7-57ca-722d">Heavy Bolter&lt;BR&gt;&lt;BR&gt;Shotguns</characteristic>
+        <characteristic name="Range" typeId="02c3b688-b804-6ce1-b101-b7f9436877bf">30cm&lt;BR&gt;&lt;BR&gt;(15cm)</characteristic>
+        <characteristic name="Firepower" typeId="f95f7011-da77-2eed-fd80-bca6fe0f1f7d">AP5+&lt;BR&gt;&lt;BR&gt;Small Arms</characteristic>
         <characteristic name="Notes" typeId="b8cc-b32c-b8bd-ac4a"/>
         <characteristic name="Unit Notes" typeId="9be9-cd8c-f54b-69d7">Infiltrators, Scout, Sniper</characteristic>
       </characteristics>
